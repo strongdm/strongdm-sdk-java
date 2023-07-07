@@ -186,6 +186,9 @@ public final class ActivityVerb {
   public static final String WORKFLOW_DESCRIPTION_UPDATED = "workflow description updated";
   public static final String WORKFLOW_AUTO_GRANT_UPDATED = "workflow auto grant updated";
   public static final String WORKFLOW_REQUIRES_REASON_UPDATED = "workflow requires reason updated";
+  public static final String WORKFLOW_ACCESS_RULES_UPDATED = "workflow access rules updated";
+  public static final String WORKFLOW_ACCESS_RULES_DELETED = "workflow access rules deleted";
+  public static final String WORKFLOW_ACCESS_RULES_CREATED = "workflow access rules created";
   public static final String ORG_VNM_SUBNET_UPDATED = "organization VNM subnet updated";
   public static final String ORG_VNM_RESOURCES_ALLOCATED =
       "organization resources allocated within VNM subnet";
@@ -201,4 +204,7 @@ public final class ActivityVerb {
   public static final String TOTP_ENROLLMENT_DELETED = "user reset their totp enrollment";
   public static final String SUSPENDED_USER_ENROLL_ATTEMPT_FROM_THE_UI =
       "attempt to enroll by a suspended user from the Admin UI";
+  public static final String RESOURCE_LOCKED = "user locked a resource";
+  public static final String RESOURCE_UNLOCKED = "user unlocked a resource";
+  public static final String RESOURCE_FORCE_UNLOCKED = "admin force-unlocked a resource";
 }

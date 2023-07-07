@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+import java.util.List;
+
 /** Gateway represents a StrongDM CLI installation running in gateway mode. */
 public class Gateway implements Node {
   private String bindAddress;
@@ -97,6 +99,40 @@ public class Gateway implements Node {
    */
   public void setLocation(String in) {
     this.location = in;
+  }
+
+  private List<NodeMaintenanceWindow> maintenanceWindows;
+  /**
+   * Maintenance Windows define when this node is allowed to restart. If a node is requested to
+   * restart, it will check each window to determine if any of them permit it to restart, and if any
+   * do, it will. This check is repeated per window until the restart is successfully completed.
+   *
+   * <p>If not set here, may be set on the command line or via an environment variable on the
+   * process itself; any server setting will take precedence over local settings. This setting is
+   * ineffective for nodes below version 38.44.0.
+   *
+   * <p>If this setting is not applied via this remote configuration or via local configuration, the
+   * default setting is used: always allow restarts if serving no connections, and allow a restart
+   * even if serving connections between 7-8 UTC, any day.
+   */
+  public List<NodeMaintenanceWindow> getMaintenanceWindows() {
+    return this.maintenanceWindows;
+  }
+  /**
+   * Maintenance Windows define when this node is allowed to restart. If a node is requested to
+   * restart, it will check each window to determine if any of them permit it to restart, and if any
+   * do, it will. This check is repeated per window until the restart is successfully completed.
+   *
+   * <p>If not set here, may be set on the command line or via an environment variable on the
+   * process itself; any server setting will take precedence over local settings. This setting is
+   * ineffective for nodes below version 38.44.0.
+   *
+   * <p>If this setting is not applied via this remote configuration or via local configuration, the
+   * default setting is used: always allow restarts if serving no connections, and allow a restart
+   * even if serving connections between 7-8 UTC, any day.
+   */
+  public void setMaintenanceWindows(List<NodeMaintenanceWindow> in) {
+    this.maintenanceWindows = in;
   }
 
   private String name;

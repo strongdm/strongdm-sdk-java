@@ -12209,6 +12209,95 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getConnectsToBytes();
+
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> 
+        getMaintenanceWindowsList();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index);
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    int getMaintenanceWindowsCount();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+        getMaintenanceWindowsOrBuilderList();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -12236,6 +12325,7 @@ public final class NodesPlumbing {
       version_ = "";
       uuid_ = "";
       connectsTo_ = "";
+      maintenanceWindows_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -12258,6 +12348,7 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12335,6 +12426,15 @@ public final class NodesPlumbing {
               connectsTo_ = s;
               break;
             }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                maintenanceWindows_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              maintenanceWindows_.add(
+                  input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12352,6 +12452,9 @@ public final class NodesPlumbing {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -12835,6 +12938,111 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int MAINTENANCE_WINDOWS_FIELD_NUMBER = 11;
+    private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_;
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> getMaintenanceWindowsList() {
+      return maintenanceWindows_;
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+        getMaintenanceWindowsOrBuilderList() {
+      return maintenanceWindows_;
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getMaintenanceWindowsCount() {
+      return maintenanceWindows_.size();
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index) {
+      return maintenanceWindows_.get(index);
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+        int index) {
+      return maintenanceWindows_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12879,6 +13087,9 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, connectsTo_);
       }
+      for (int i = 0; i < maintenanceWindows_.size(); i++) {
+        output.writeMessage(11, maintenanceWindows_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12919,6 +13130,10 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, connectsTo_);
       }
+      for (int i = 0; i < maintenanceWindows_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, maintenanceWindows_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12957,6 +13172,8 @@ public final class NodesPlumbing {
           .equals(other.getUuid())) return false;
       if (!getConnectsTo()
           .equals(other.getConnectsTo())) return false;
+      if (!getMaintenanceWindowsList()
+          .equals(other.getMaintenanceWindowsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12990,6 +13207,10 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getUuid().hashCode();
       hash = (37 * hash) + CONNECTS_TO_FIELD_NUMBER;
       hash = (53 * hash) + getConnectsTo().hashCode();
+      if (getMaintenanceWindowsCount() > 0) {
+        hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13122,6 +13343,7 @@ public final class NodesPlumbing {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getMaintenanceWindowsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -13151,6 +13373,12 @@ public final class NodesPlumbing {
 
         connectsTo_ = "";
 
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          maintenanceWindowsBuilder_.clear();
+        }
         return this;
       }
 
@@ -13177,6 +13405,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public com.strongdm.api.plumbing.NodesPlumbing.Relay buildPartial() {
         com.strongdm.api.plumbing.NodesPlumbing.Relay result = new com.strongdm.api.plumbing.NodesPlumbing.Relay(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
         result.state_ = state_;
@@ -13191,6 +13420,15 @@ public final class NodesPlumbing {
         result.version_ = version_;
         result.uuid_ = uuid_;
         result.connectsTo_ = connectsTo_;
+        if (maintenanceWindowsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.maintenanceWindows_ = maintenanceWindows_;
+        } else {
+          result.maintenanceWindows_ = maintenanceWindowsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -13278,6 +13516,32 @@ public final class NodesPlumbing {
           connectsTo_ = other.connectsTo_;
           onChanged();
         }
+        if (maintenanceWindowsBuilder_ == null) {
+          if (!other.maintenanceWindows_.isEmpty()) {
+            if (maintenanceWindows_.isEmpty()) {
+              maintenanceWindows_ = other.maintenanceWindows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMaintenanceWindowsIsMutable();
+              maintenanceWindows_.addAll(other.maintenanceWindows_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.maintenanceWindows_.isEmpty()) {
+            if (maintenanceWindowsBuilder_.isEmpty()) {
+              maintenanceWindowsBuilder_.dispose();
+              maintenanceWindowsBuilder_ = null;
+              maintenanceWindows_ = other.maintenanceWindows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              maintenanceWindowsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMaintenanceWindowsFieldBuilder() : null;
+            } else {
+              maintenanceWindowsBuilder_.addAllMessages(other.maintenanceWindows_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -13306,6 +13570,7 @@ public final class NodesPlumbing {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -14360,6 +14625,480 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_ =
+        java.util.Collections.emptyList();
+      private void ensureMaintenanceWindowsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          maintenanceWindows_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow>(maintenanceWindows_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> maintenanceWindowsBuilder_;
+
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> getMaintenanceWindowsList() {
+        if (maintenanceWindowsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(maintenanceWindows_);
+        } else {
+          return maintenanceWindowsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public int getMaintenanceWindowsCount() {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.size();
+        } else {
+          return maintenanceWindowsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.get(index);
+        } else {
+          return maintenanceWindowsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.set(index, value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(index, value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllMaintenanceWindows(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> values) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, maintenanceWindows_);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMaintenanceWindows() {
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeMaintenanceWindows(int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.remove(index);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder getMaintenanceWindowsBuilder(
+          int index) {
+        return getMaintenanceWindowsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+          int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.get(index);  } else {
+          return maintenanceWindowsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+           getMaintenanceWindowsOrBuilderList() {
+        if (maintenanceWindowsBuilder_ != null) {
+          return maintenanceWindowsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(maintenanceWindows_);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder addMaintenanceWindowsBuilder() {
+        return getMaintenanceWindowsFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder addMaintenanceWindowsBuilder(
+          int index) {
+        return getMaintenanceWindowsFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder> 
+           getMaintenanceWindowsBuilderList() {
+        return getMaintenanceWindowsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+          getMaintenanceWindowsFieldBuilder() {
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder>(
+                  maintenanceWindows_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindows_ = null;
+        }
+        return maintenanceWindowsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14677,6 +15416,95 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getConnectsToBytes();
+
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> 
+        getMaintenanceWindowsList();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index);
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    int getMaintenanceWindowsCount();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+        getMaintenanceWindowsOrBuilderList();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -14706,6 +15534,7 @@ public final class NodesPlumbing {
       version_ = "";
       uuid_ = "";
       connectsTo_ = "";
+      maintenanceWindows_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -14728,6 +15557,7 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14817,6 +15647,15 @@ public final class NodesPlumbing {
               connectsTo_ = s;
               break;
             }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                maintenanceWindows_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              maintenanceWindows_.add(
+                  input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -14834,6 +15673,9 @@ public final class NodesPlumbing {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -15409,6 +16251,111 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int MAINTENANCE_WINDOWS_FIELD_NUMBER = 13;
+    private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_;
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> getMaintenanceWindowsList() {
+      return maintenanceWindows_;
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+        getMaintenanceWindowsOrBuilderList() {
+      return maintenanceWindows_;
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getMaintenanceWindowsCount() {
+      return maintenanceWindows_.size();
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index) {
+      return maintenanceWindows_.get(index);
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+        int index) {
+      return maintenanceWindows_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15459,6 +16406,9 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, connectsTo_);
       }
+      for (int i = 0; i < maintenanceWindows_.size(); i++) {
+        output.writeMessage(13, maintenanceWindows_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15505,6 +16455,10 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, connectsTo_);
       }
+      for (int i = 0; i < maintenanceWindows_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, maintenanceWindows_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15547,6 +16501,8 @@ public final class NodesPlumbing {
           .equals(other.getUuid())) return false;
       if (!getConnectsTo()
           .equals(other.getConnectsTo())) return false;
+      if (!getMaintenanceWindowsList()
+          .equals(other.getMaintenanceWindowsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15584,6 +16540,10 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getUuid().hashCode();
       hash = (37 * hash) + CONNECTS_TO_FIELD_NUMBER;
       hash = (53 * hash) + getConnectsTo().hashCode();
+      if (getMaintenanceWindowsCount() > 0) {
+        hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15716,6 +16676,7 @@ public final class NodesPlumbing {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getMaintenanceWindowsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -15749,6 +16710,12 @@ public final class NodesPlumbing {
 
         connectsTo_ = "";
 
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          maintenanceWindowsBuilder_.clear();
+        }
         return this;
       }
 
@@ -15775,6 +16742,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public com.strongdm.api.plumbing.NodesPlumbing.Gateway buildPartial() {
         com.strongdm.api.plumbing.NodesPlumbing.Gateway result = new com.strongdm.api.plumbing.NodesPlumbing.Gateway(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
         result.state_ = state_;
@@ -15791,6 +16759,15 @@ public final class NodesPlumbing {
         result.version_ = version_;
         result.uuid_ = uuid_;
         result.connectsTo_ = connectsTo_;
+        if (maintenanceWindowsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.maintenanceWindows_ = maintenanceWindows_;
+        } else {
+          result.maintenanceWindows_ = maintenanceWindowsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -15886,6 +16863,32 @@ public final class NodesPlumbing {
           connectsTo_ = other.connectsTo_;
           onChanged();
         }
+        if (maintenanceWindowsBuilder_ == null) {
+          if (!other.maintenanceWindows_.isEmpty()) {
+            if (maintenanceWindows_.isEmpty()) {
+              maintenanceWindows_ = other.maintenanceWindows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMaintenanceWindowsIsMutable();
+              maintenanceWindows_.addAll(other.maintenanceWindows_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.maintenanceWindows_.isEmpty()) {
+            if (maintenanceWindowsBuilder_.isEmpty()) {
+              maintenanceWindowsBuilder_.dispose();
+              maintenanceWindowsBuilder_ = null;
+              maintenanceWindows_ = other.maintenanceWindows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              maintenanceWindowsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMaintenanceWindowsFieldBuilder() : null;
+            } else {
+              maintenanceWindowsBuilder_.addAllMessages(other.maintenanceWindows_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -15914,6 +16917,7 @@ public final class NodesPlumbing {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -17160,6 +18164,480 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_ =
+        java.util.Collections.emptyList();
+      private void ensureMaintenanceWindowsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          maintenanceWindows_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow>(maintenanceWindows_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> maintenanceWindowsBuilder_;
+
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> getMaintenanceWindowsList() {
+        if (maintenanceWindowsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(maintenanceWindows_);
+        } else {
+          return maintenanceWindowsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public int getMaintenanceWindowsCount() {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.size();
+        } else {
+          return maintenanceWindowsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.get(index);
+        } else {
+          return maintenanceWindowsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.set(index, value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(index, value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllMaintenanceWindows(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> values) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, maintenanceWindows_);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMaintenanceWindows() {
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeMaintenanceWindows(int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.remove(index);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder getMaintenanceWindowsBuilder(
+          int index) {
+        return getMaintenanceWindowsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+          int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.get(index);  } else {
+          return maintenanceWindowsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+           getMaintenanceWindowsOrBuilderList() {
+        if (maintenanceWindowsBuilder_ != null) {
+          return maintenanceWindowsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(maintenanceWindows_);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder addMaintenanceWindowsBuilder() {
+        return getMaintenanceWindowsFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder addMaintenanceWindowsBuilder(
+          int index) {
+        return getMaintenanceWindowsFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder> 
+           getMaintenanceWindowsBuilderList() {
+        return getMaintenanceWindowsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+          getMaintenanceWindowsFieldBuilder() {
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder>(
+                  maintenanceWindows_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindows_ = null;
+        }
+        return maintenanceWindowsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17208,6 +18686,768 @@ public final class NodesPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.plumbing.NodesPlumbing.Gateway getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NodeMaintenanceWindowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.NodeMaintenanceWindow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Cron job syntax for when this maintenance window is active. On this schedule, associated
+     * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+     * are represented in UTC.
+     * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+     * Saturday. Not all possible inputs are supported: the month and day of month selections
+     * must be '*'.
+     * </pre>
+     *
+     * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+     * @return The cronSchedule.
+     */
+    java.lang.String getCronSchedule();
+    /**
+     * <pre>
+     * Cron job syntax for when this maintenance window is active. On this schedule, associated
+     * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+     * are represented in UTC.
+     * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+     * Saturday. Not all possible inputs are supported: the month and day of month selections
+     * must be '*'.
+     * </pre>
+     *
+     * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for cronSchedule.
+     */
+    com.google.protobuf.ByteString
+        getCronScheduleBytes();
+
+    /**
+     * <pre>
+     * Require Idleness defines whether this window can sever live connections. If true,
+     * this window will not allow a node to be restarted unless it is serving no connections.
+     * If false, given a restart of the node has been requested (for an update, usually), the
+     * node will restart as soon as it enters an allowed day / hour combination. At least one
+     * maintenance window, out of all configured windows for a node, must have this as false.
+     * </pre>
+     *
+     * <code>bool require_idleness = 2 [(.v1.field_options) = { ... }</code>
+     * @return The requireIdleness.
+     */
+    boolean getRequireIdleness();
+  }
+  /**
+   * Protobuf type {@code v1.NodeMaintenanceWindow}
+   */
+  public static final class NodeMaintenanceWindow extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.NodeMaintenanceWindow)
+      NodeMaintenanceWindowOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NodeMaintenanceWindow.newBuilder() to construct.
+    private NodeMaintenanceWindow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NodeMaintenanceWindow() {
+      cronSchedule_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeMaintenanceWindow();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NodeMaintenanceWindow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cronSchedule_ = s;
+              break;
+            }
+            case 16: {
+
+              requireIdleness_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeMaintenanceWindow_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.class, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder.class);
+    }
+
+    public static final int CRON_SCHEDULE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cronSchedule_;
+    /**
+     * <pre>
+     * Cron job syntax for when this maintenance window is active. On this schedule, associated
+     * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+     * are represented in UTC.
+     * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+     * Saturday. Not all possible inputs are supported: the month and day of month selections
+     * must be '*'.
+     * </pre>
+     *
+     * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+     * @return The cronSchedule.
+     */
+    @java.lang.Override
+    public java.lang.String getCronSchedule() {
+      java.lang.Object ref = cronSchedule_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cronSchedule_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Cron job syntax for when this maintenance window is active. On this schedule, associated
+     * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+     * are represented in UTC.
+     * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+     * Saturday. Not all possible inputs are supported: the month and day of month selections
+     * must be '*'.
+     * </pre>
+     *
+     * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for cronSchedule.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCronScheduleBytes() {
+      java.lang.Object ref = cronSchedule_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cronSchedule_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUIRE_IDLENESS_FIELD_NUMBER = 2;
+    private boolean requireIdleness_;
+    /**
+     * <pre>
+     * Require Idleness defines whether this window can sever live connections. If true,
+     * this window will not allow a node to be restarted unless it is serving no connections.
+     * If false, given a restart of the node has been requested (for an update, usually), the
+     * node will restart as soon as it enters an allowed day / hour combination. At least one
+     * maintenance window, out of all configured windows for a node, must have this as false.
+     * </pre>
+     *
+     * <code>bool require_idleness = 2 [(.v1.field_options) = { ... }</code>
+     * @return The requireIdleness.
+     */
+    @java.lang.Override
+    public boolean getRequireIdleness() {
+      return requireIdleness_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronSchedule_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cronSchedule_);
+      }
+      if (requireIdleness_ != false) {
+        output.writeBool(2, requireIdleness_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronSchedule_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cronSchedule_);
+      }
+      if (requireIdleness_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, requireIdleness_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow other = (com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow) obj;
+
+      if (!getCronSchedule()
+          .equals(other.getCronSchedule())) return false;
+      if (getRequireIdleness()
+          != other.getRequireIdleness()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CRON_SCHEDULE_FIELD_NUMBER;
+      hash = (53 * hash) + getCronSchedule().hashCode();
+      hash = (37 * hash) + REQUIRE_IDLENESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRequireIdleness());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.NodeMaintenanceWindow}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.NodeMaintenanceWindow)
+        com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeMaintenanceWindow_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.class, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cronSchedule_ = "";
+
+        requireIdleness_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeMaintenanceWindow_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow build() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow buildPartial() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow result = new com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow(this);
+        result.cronSchedule_ = cronSchedule_;
+        result.requireIdleness_ = requireIdleness_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow) {
+          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow other) {
+        if (other == com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance()) return this;
+        if (!other.getCronSchedule().isEmpty()) {
+          cronSchedule_ = other.cronSchedule_;
+          onChanged();
+        }
+        if (other.getRequireIdleness() != false) {
+          setRequireIdleness(other.getRequireIdleness());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object cronSchedule_ = "";
+      /**
+       * <pre>
+       * Cron job syntax for when this maintenance window is active. On this schedule, associated
+       * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+       * are represented in UTC.
+       * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+       * Saturday. Not all possible inputs are supported: the month and day of month selections
+       * must be '*'.
+       * </pre>
+       *
+       * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+       * @return The cronSchedule.
+       */
+      public java.lang.String getCronSchedule() {
+        java.lang.Object ref = cronSchedule_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cronSchedule_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cron job syntax for when this maintenance window is active. On this schedule, associated
+       * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+       * are represented in UTC.
+       * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+       * Saturday. Not all possible inputs are supported: the month and day of month selections
+       * must be '*'.
+       * </pre>
+       *
+       * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for cronSchedule.
+       */
+      public com.google.protobuf.ByteString
+          getCronScheduleBytes() {
+        java.lang.Object ref = cronSchedule_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cronSchedule_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cron job syntax for when this maintenance window is active. On this schedule, associated
+       * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+       * are represented in UTC.
+       * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+       * Saturday. Not all possible inputs are supported: the month and day of month selections
+       * must be '*'.
+       * </pre>
+       *
+       * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The cronSchedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronSchedule(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cronSchedule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cron job syntax for when this maintenance window is active. On this schedule, associated
+       * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+       * are represented in UTC.
+       * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+       * Saturday. Not all possible inputs are supported: the month and day of month selections
+       * must be '*'.
+       * </pre>
+       *
+       * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCronSchedule() {
+        
+        cronSchedule_ = getDefaultInstance().getCronSchedule();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cron job syntax for when this maintenance window is active. On this schedule, associated
+       * nodes will restart if requested, provided other checks allow the restart to proceed. Times
+       * are represented in UTC.
+       * e.g. * 7 * * 0,6 to check for a restart at every minute from 7:00 to 8:00 UTC on Sunday and
+       * Saturday. Not all possible inputs are supported: the month and day of month selections
+       * must be '*'.
+       * </pre>
+       *
+       * <code>string cron_schedule = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for cronSchedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronScheduleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cronSchedule_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean requireIdleness_ ;
+      /**
+       * <pre>
+       * Require Idleness defines whether this window can sever live connections. If true,
+       * this window will not allow a node to be restarted unless it is serving no connections.
+       * If false, given a restart of the node has been requested (for an update, usually), the
+       * node will restart as soon as it enters an allowed day / hour combination. At least one
+       * maintenance window, out of all configured windows for a node, must have this as false.
+       * </pre>
+       *
+       * <code>bool require_idleness = 2 [(.v1.field_options) = { ... }</code>
+       * @return The requireIdleness.
+       */
+      @java.lang.Override
+      public boolean getRequireIdleness() {
+        return requireIdleness_;
+      }
+      /**
+       * <pre>
+       * Require Idleness defines whether this window can sever live connections. If true,
+       * this window will not allow a node to be restarted unless it is serving no connections.
+       * If false, given a restart of the node has been requested (for an update, usually), the
+       * node will restart as soon as it enters an allowed day / hour combination. At least one
+       * maintenance window, out of all configured windows for a node, must have this as false.
+       * </pre>
+       *
+       * <code>bool require_idleness = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The requireIdleness to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequireIdleness(boolean value) {
+        
+        requireIdleness_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Require Idleness defines whether this window can sever live connections. If true,
+       * this window will not allow a node to be restarted unless it is serving no connections.
+       * If false, given a restart of the node has been requested (for an update, usually), the
+       * node will restart as soon as it enters an allowed day / hour combination. At least one
+       * maintenance window, out of all configured windows for a node, must have this as false.
+       * </pre>
+       *
+       * <code>bool require_idleness = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequireIdleness() {
+        
+        requireIdleness_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.NodeMaintenanceWindow)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.NodeMaintenanceWindow)
+    private static final com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow();
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NodeMaintenanceWindow>
+        PARSER = new com.google.protobuf.AbstractParser<NodeMaintenanceWindow>() {
+      @java.lang.Override
+      public NodeMaintenanceWindow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NodeMaintenanceWindow(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NodeMaintenanceWindow> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NodeMaintenanceWindow> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17278,6 +19518,11 @@ public final class NodesPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Gateway_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_NodeMaintenanceWindow_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17330,7 +19575,7 @@ public final class NodesPlumbing {
       "\001(\0132\013.v1.GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_ex" +
       "amples/node_resource.txt\252\363\263\007 tf_examples" +
       "/node_data_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022" +
-      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\205\003\n\005Relay\022" +
+      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\373\003\n\005Relay\022" +
       "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
       "\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007" +
       "\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004" +
@@ -17340,34 +19585,45 @@ public final class NodesPlumbing {
       "\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n" +
       "\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007" +
       "\001\262\364\263\007\ngo_private\022\037\n\013connects_to\030\n \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\341\003\n\007Gateway\022\026\n\002id\030" +
-      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001" +
-      "\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016listen" +
-      "_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014" +
-      "bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001" +
-      "\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016" +
-      "gateway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006devi" +
-      "ce\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t " +
-      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001" +
-      "\230\364\263\007\001\262\364\263\007\ngo_private\022\037\n\013connects_to\030\014 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\356\003\n\005Nodes\022Z\n\006C" +
-      "reate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCr" +
-      "eateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v" +
-      "1/nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1." +
-      "NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016" +
-      "/v1/nodes/{id}\022^\n\006Update\022\025.v1.NodeUpdate" +
-      "Request\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363" +
-      "\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete" +
-      "\022\025.v1.NodeDeleteRequest\032\026.v1.NodeDeleteR" +
-      "esponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/n" +
-      "odes/{id}\022S\n\004List\022\023.v1.NodeListRequest\032\024" +
-      ".v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016" +
-      "\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002" +
-      "n-Ba\n\031com.strongdm.api.plumbingB\rNodesPl" +
-      "umbingZ5github.com/strongdm/strongdm-sdk" +
-      "-go/v3/internal/v1;v1b\006proto3"
+      "\370\263\007\005\260\363\263\007\001\022t\n\023maintenance_windows\030\013 \003(\0132\031" +
+      ".v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263" +
+      "\007-\302\364\263\007(\n\022terraform-provider\022\022maintenance" +
+      "_window:\n\372\370\263\007\005\250\363\263\007\001\"\327\004\n\007Gateway\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364" +
+      "\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016listen_a" +
+      "ddress\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bi" +
+      "nd_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"" +
+      "\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016ga" +
+      "teway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device" +
+      "\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362\370\263" +
+      "\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364" +
+      "\263\007\001\262\364\263\007\ngo_private\022\037\n\013connects_to\030\014 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022t\n\023maintenance_windows\030\r \003(\013" +
+      "2\031.v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312" +
+      "\363\263\007-\302\364\263\007(\n\022terraform-provider\022\022maintenan" +
+      "ce_window:\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n\025NodeMaintenanc" +
+      "eWindow\022!\n\rcron_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022$\n\020require_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001" +
+      ":T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-provid" +
+      "er\022\010TypeList\372\363\263\007\035nodeMaintenanceWindowEl" +
+      "emType2\356\003\n\005Nodes\022Z\n\006Create\022\025.v1.NodeCrea" +
+      "teRequest\032\026.v1.NodeCreateResponse\"!\202\371\263\007\t" +
+      "\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1" +
+      ".NodeGetRequest\032\023.v1.NodeGetResponse\"%\202\371" +
+      "\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006U" +
+      "pdate\022\025.v1.NodeUpdateRequest\032\026.v1.NodeUp" +
+      "dateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1" +
+      "/nodes/{id}\022a\n\006Delete\022\025.v1.NodeDeleteReq" +
+      "uest\032\026.v1.NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006" +
+      "delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023" +
+      ".v1.NodeListRequest\032\024.v1.NodeListRespons" +
+      "e\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263" +
+      "\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Ba\n\031com.strongdm." +
+      "api.plumbingB\rNodesPlumbingZ5github.com/" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17447,13 +19703,19 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", });
+        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", "MaintenanceWindows", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", "MaintenanceWindows", });
+    internal_static_v1_NodeMaintenanceWindow_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_NodeMaintenanceWindow_descriptor,
+        new java.lang.String[] { "CronSchedule", "RequireIdleness", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

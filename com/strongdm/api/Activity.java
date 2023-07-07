@@ -101,6 +101,22 @@ public class Activity {
     this.ipAddress = in;
   }
 
+  private String userAgent;
+  /**
+   * The User Agent present when this request was executed. Generally a client type and version like
+   * strongdm-cli/55.66.77
+   */
+  public String getUserAgent() {
+    return this.userAgent;
+  }
+  /**
+   * The User Agent present when this request was executed. Generally a client type and version like
+   * strongdm-cli/55.66.77
+   */
+  public void setUserAgent(String in) {
+    this.userAgent = in;
+  }
+
   private String verb;
   /** The kind of activity which has taken place. */
   public String getVerb() {

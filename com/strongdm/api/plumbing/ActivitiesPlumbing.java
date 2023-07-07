@@ -4639,6 +4639,28 @@ public final class ActivitiesPlumbing {
      * <code>.v1.ActivityActor actor = 7 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.ActivitiesPlumbing.ActivityActorOrBuilder getActorOrBuilder();
+
+    /**
+     * <pre>
+     * The User Agent present when this request was executed. Generally a client type and version
+     * like strongdm-cli/55.66.77
+     * </pre>
+     *
+     * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+     * @return The userAgent.
+     */
+    java.lang.String getUserAgent();
+    /**
+     * <pre>
+     * The User Agent present when this request was executed. Generally a client type and version
+     * like strongdm-cli/55.66.77
+     * </pre>
+     *
+     * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for userAgent.
+     */
+    com.google.protobuf.ByteString
+        getUserAgentBytes();
   }
   /**
    * <pre>
@@ -4663,6 +4685,7 @@ public final class ActivitiesPlumbing {
       description_ = "";
       entities_ = java.util.Collections.emptyList();
       ipAddress_ = "";
+      userAgent_ = "";
     }
 
     @java.lang.Override
@@ -4753,6 +4776,12 @@ public final class ActivitiesPlumbing {
                 actor_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userAgent_ = s;
               break;
             }
             default: {
@@ -5128,6 +5157,54 @@ public final class ActivitiesPlumbing {
       return getActor();
     }
 
+    public static final int USER_AGENT_FIELD_NUMBER = 8;
+    private volatile java.lang.Object userAgent_;
+    /**
+     * <pre>
+     * The User Agent present when this request was executed. Generally a client type and version
+     * like strongdm-cli/55.66.77
+     * </pre>
+     *
+     * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+     * @return The userAgent.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAgent() {
+      java.lang.Object ref = userAgent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAgent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The User Agent present when this request was executed. Generally a client type and version
+     * like strongdm-cli/55.66.77
+     * </pre>
+     *
+     * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for userAgent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAgentBytes() {
+      java.lang.Object ref = userAgent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAgent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5163,6 +5240,9 @@ public final class ActivitiesPlumbing {
       if (actor_ != null) {
         output.writeMessage(7, getActor());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAgent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, userAgent_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5195,6 +5275,9 @@ public final class ActivitiesPlumbing {
       if (actor_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getActor());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAgent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, userAgent_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5231,6 +5314,8 @@ public final class ActivitiesPlumbing {
         if (!getActor()
             .equals(other.getActor())) return false;
       }
+      if (!getUserAgent()
+          .equals(other.getUserAgent())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5262,6 +5347,8 @@ public final class ActivitiesPlumbing {
         hash = (37 * hash) + ACTOR_FIELD_NUMBER;
         hash = (53 * hash) + getActor().hashCode();
       }
+      hash = (37 * hash) + USER_AGENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAgent().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5427,6 +5514,8 @@ public final class ActivitiesPlumbing {
           actor_ = null;
           actorBuilder_ = null;
         }
+        userAgent_ = "";
+
         return this;
       }
 
@@ -5477,6 +5566,7 @@ public final class ActivitiesPlumbing {
         } else {
           result.actor_ = actorBuilder_.build();
         }
+        result.userAgent_ = userAgent_;
         onBuilt();
         return result;
       }
@@ -5572,6 +5662,10 @@ public final class ActivitiesPlumbing {
         }
         if (other.hasActor()) {
           mergeActor(other.getActor());
+        }
+        if (!other.getUserAgent().isEmpty()) {
+          userAgent_ = other.userAgent_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6661,6 +6755,107 @@ public final class ActivitiesPlumbing {
           actor_ = null;
         }
         return actorBuilder_;
+      }
+
+      private java.lang.Object userAgent_ = "";
+      /**
+       * <pre>
+       * The User Agent present when this request was executed. Generally a client type and version
+       * like strongdm-cli/55.66.77
+       * </pre>
+       *
+       * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+       * @return The userAgent.
+       */
+      public java.lang.String getUserAgent() {
+        java.lang.Object ref = userAgent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAgent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The User Agent present when this request was executed. Generally a client type and version
+       * like strongdm-cli/55.66.77
+       * </pre>
+       *
+       * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for userAgent.
+       */
+      public com.google.protobuf.ByteString
+          getUserAgentBytes() {
+        java.lang.Object ref = userAgent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAgent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The User Agent present when this request was executed. Generally a client type and version
+       * like strongdm-cli/55.66.77
+       * </pre>
+       *
+       * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The userAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAgent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userAgent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The User Agent present when this request was executed. Generally a client type and version
+       * like strongdm-cli/55.66.77
+       * </pre>
+       *
+       * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAgent() {
+        
+        userAgent_ = getDefaultInstance().getUserAgent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The User Agent present when this request was executed. Generally a client type and version
+       * like strongdm-cli/55.66.77
+       * </pre>
+       *
+       * <code>string user_agent = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for userAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAgentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userAgent_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9480,38 +9675,38 @@ public final class ActivitiesPlumbing {
       "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263" +
       "\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gatewa" +
       "y:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provi" +
-      "der\"\350\002\n\010Activity\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "der\"\210\003\n\010Activity\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
       "\022\030\n\004verb\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013descriptio" +
       "n\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022<\n\014completed_at\030\004 \001(" +
       "\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007" +
       "\001\0220\n\010entities\030\005 \003(\0132\022.v1.ActivityEntityB" +
       "\n\362\370\263\007\005\260\363\263\007\001\0227\n\nip_address\030\006 \001(\tB#\362\370\263\007\036\260\363" +
       "\263\007\001\312\363\263\007\024\302\364\263\007\017\n\002go\022\tIPAddress\022,\n\005actor\030\007 " +
-      "\001(\0132\021.v1.ActivityActorB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007" +
-      "\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pr" +
-      "ovider\"\314\001\n\016ActivityEntity\022\026\n\002id\030\001 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004n" +
-      "ame\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005email\030\004 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\037\n\013external_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terra" +
-      "form-provider\"\337\001\n\rActivityActor\022\026\n\002id\030\001 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005email\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\036\n\nfirst_name\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tla" +
-      "st_name\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\024activity_ex" +
-      "ternal_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372" +
-      "\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2" +
-      "\245\002\n\nActivities\022b\n\003Get\022\026.v1.ActivityGetRe" +
-      "quest\032\027.v1.ActivityGetResponse\"*\202\371\263\007\010\242\363\263" +
-      "\007\003get\202\371\263\007\030\252\363\263\007\023/v1/activities/{id}\022`\n\004Li" +
-      "st\022\027.v1.ActivityListRequest\032\030.v1.Activit" +
-      "yListResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v" +
-      "1/activities\032Q\312\371\263\007\r\302\371\263\007\010Activity\312\371\263\007\010\322\371\263" +
-      "\007\003at-\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!ter" +
-      "raform-providerB\216\001\n\031com.strongdm.api.plu" +
-      "mbingB\022ActivitiesPlumbingZ5github.com/st" +
-      "rongdm/strongdm-sdk-go/v3/internal/v1;v1" +
-      "\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provider" +
-      "b\006proto3"
+      "\001(\0132\021.v1.ActivityActorB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nus" +
+      "er_agent\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370" +
+      "\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\314" +
+      "\001\n\016ActivityEntity\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\030\n\004type\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004name\030\003 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005email\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\037\n\013external_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005" +
+      "\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pro" +
+      "vider\"\337\001\n\rActivityActor\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\031\n\005email\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nfi" +
+      "rst_name\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tlast_name\030" +
+      "\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\024activity_external_i" +
+      "d\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007" +
+      "\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\245\002\n\nActi" +
+      "vities\022b\n\003Get\022\026.v1.ActivityGetRequest\032\027." +
+      "v1.ActivityGetResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\030\252\363\263\007\023/v1/activities/{id}\022`\n\004List\022\027.v1." +
+      "ActivityListRequest\032\030.v1.ActivityListRes" +
+      "ponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/activi" +
+      "ties\032Q\312\371\263\007\r\302\371\263\007\010Activity\312\371\263\007\010\322\371\263\007\003at-\312\371\263" +
+      "\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-p" +
+      "roviderB\216\001\n\031com.strongdm.api.plumbingB\022A" +
+      "ctivitiesPlumbingZ5github.com/strongdm/s" +
+      "trongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264" +
+      "\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9549,7 +9744,7 @@ public final class ActivitiesPlumbing {
     internal_static_v1_Activity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Activity_descriptor,
-        new java.lang.String[] { "Id", "Verb", "Description", "CompletedAt", "Entities", "IpAddress", "Actor", });
+        new java.lang.String[] { "Id", "Verb", "Description", "CompletedAt", "Entities", "IpAddress", "Actor", "UserAgent", });
     internal_static_v1_ActivityEntity_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_v1_ActivityEntity_fieldAccessorTable = new

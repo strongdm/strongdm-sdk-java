@@ -289,6 +289,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AKS> convertRepeatedAKSToPorcelain(
       Collection<AKS> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AKS>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAKSToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -296,6 +299,9 @@ public class Plumbing {
 
   public static List<AKS> convertRepeatedAKSToPlumbing(
       Collection<com.strongdm.api.AKS> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AKS>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAKSToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -368,6 +374,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AKSBasicAuth> convertRepeatedAKSBasicAuthToPorcelain(
       Collection<AKSBasicAuth> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AKSBasicAuth>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAKSBasicAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -375,6 +384,9 @@ public class Plumbing {
 
   public static List<AKSBasicAuth> convertRepeatedAKSBasicAuthToPlumbing(
       Collection<com.strongdm.api.AKSBasicAuth> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AKSBasicAuth>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAKSBasicAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -453,6 +465,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AKSServiceAccount>
       convertRepeatedAKSServiceAccountToPorcelain(Collection<AKSServiceAccount> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AKSServiceAccount>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAKSServiceAccountToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -460,6 +475,9 @@ public class Plumbing {
 
   public static List<AKSServiceAccount> convertRepeatedAKSServiceAccountToPlumbing(
       Collection<com.strongdm.api.AKSServiceAccount> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AKSServiceAccount>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAKSServiceAccountToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -533,6 +551,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AKSServiceAccountUserImpersonation>
       convertRepeatedAKSServiceAccountUserImpersonationToPorcelain(
           Collection<AKSServiceAccountUserImpersonation> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AKSServiceAccountUserImpersonation>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAKSServiceAccountUserImpersonationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -541,6 +562,9 @@ public class Plumbing {
   public static List<AKSServiceAccountUserImpersonation>
       convertRepeatedAKSServiceAccountUserImpersonationToPlumbing(
           Collection<com.strongdm.api.AKSServiceAccountUserImpersonation> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AKSServiceAccountUserImpersonation>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAKSServiceAccountUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -617,6 +641,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AKSUserImpersonation>
       convertRepeatedAKSUserImpersonationToPorcelain(Collection<AKSUserImpersonation> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AKSUserImpersonation>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAKSUserImpersonationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -624,6 +651,9 @@ public class Plumbing {
 
   public static List<AKSUserImpersonation> convertRepeatedAKSUserImpersonationToPlumbing(
       Collection<com.strongdm.api.AKSUserImpersonation> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AKSUserImpersonation>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAKSUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -696,6 +726,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AWS> convertRepeatedAWSToPorcelain(
       Collection<AWS> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AWS>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAWSToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -703,6 +736,9 @@ public class Plumbing {
 
   public static List<AWS> convertRepeatedAWSToPlumbing(
       Collection<com.strongdm.api.AWS> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AWS>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAWSToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -781,6 +817,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AWSConsole> convertRepeatedAWSConsoleToPorcelain(
       Collection<AWSConsole> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AWSConsole>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAWSConsoleToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -788,6 +827,9 @@ public class Plumbing {
 
   public static List<AWSConsole> convertRepeatedAWSConsoleToPlumbing(
       Collection<com.strongdm.api.AWSConsole> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AWSConsole>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAWSConsoleToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -876,6 +918,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AWSConsoleStaticKeyPair>
       convertRepeatedAWSConsoleStaticKeyPairToPorcelain(
           Collection<AWSConsoleStaticKeyPair> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AWSConsoleStaticKeyPair>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAWSConsoleStaticKeyPairToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -883,6 +928,9 @@ public class Plumbing {
 
   public static List<AWSConsoleStaticKeyPair> convertRepeatedAWSConsoleStaticKeyPairToPlumbing(
       Collection<com.strongdm.api.AWSConsoleStaticKeyPair> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AWSConsoleStaticKeyPair>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAWSConsoleStaticKeyPairToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -919,6 +967,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AWSStore> convertRepeatedAWSStoreToPorcelain(
       Collection<AWSStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AWSStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAWSStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -926,6 +977,9 @@ public class Plumbing {
 
   public static List<AWSStore> convertRepeatedAWSStoreToPlumbing(
       Collection<com.strongdm.api.AWSStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AWSStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAWSStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -963,6 +1017,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Account> convertRepeatedAccountToPorcelain(
       Collection<Account> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Account>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -970,6 +1027,9 @@ public class Plumbing {
 
   public static List<Account> convertRepeatedAccountToPlumbing(
       Collection<com.strongdm.api.Account> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Account>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1004,6 +1064,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountAttachment>
       convertRepeatedAccountAttachmentToPorcelain(Collection<AccountAttachment> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountAttachment>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountAttachmentToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1011,6 +1074,9 @@ public class Plumbing {
 
   public static List<AccountAttachment> convertRepeatedAccountAttachmentToPlumbing(
       Collection<com.strongdm.api.AccountAttachment> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountAttachment>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountAttachmentToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1049,6 +1115,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountAttachmentCreateResponse>
       convertRepeatedAccountAttachmentCreateResponseToPorcelain(
           Collection<AccountAttachmentCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountAttachmentCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountAttachmentCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1057,6 +1126,9 @@ public class Plumbing {
   public static List<AccountAttachmentCreateResponse>
       convertRepeatedAccountAttachmentCreateResponseToPlumbing(
           Collection<com.strongdm.api.AccountAttachmentCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountAttachmentCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountAttachmentCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1089,6 +1161,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountAttachmentDeleteResponse>
       convertRepeatedAccountAttachmentDeleteResponseToPorcelain(
           Collection<AccountAttachmentDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountAttachmentDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountAttachmentDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1097,6 +1172,9 @@ public class Plumbing {
   public static List<AccountAttachmentDeleteResponse>
       convertRepeatedAccountAttachmentDeleteResponseToPlumbing(
           Collection<com.strongdm.api.AccountAttachmentDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountAttachmentDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountAttachmentDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1135,6 +1213,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountAttachmentGetResponse>
       convertRepeatedAccountAttachmentGetResponseToPorcelain(
           Collection<AccountAttachmentGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountAttachmentGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountAttachmentGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1143,6 +1224,9 @@ public class Plumbing {
   public static List<AccountAttachmentGetResponse>
       convertRepeatedAccountAttachmentGetResponseToPlumbing(
           Collection<com.strongdm.api.AccountAttachmentGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountAttachmentGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountAttachmentGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1185,6 +1269,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountAttachmentHistory>
       convertRepeatedAccountAttachmentHistoryToPorcelain(
           Collection<AccountAttachmentHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountAttachmentHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountAttachmentHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1192,6 +1279,9 @@ public class Plumbing {
 
   public static List<AccountAttachmentHistory> convertRepeatedAccountAttachmentHistoryToPlumbing(
       Collection<com.strongdm.api.AccountAttachmentHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountAttachmentHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountAttachmentHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1230,6 +1320,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountCreateResponse>
       convertRepeatedAccountCreateResponseToPorcelain(Collection<AccountCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1237,6 +1330,9 @@ public class Plumbing {
 
   public static List<AccountCreateResponse> convertRepeatedAccountCreateResponseToPlumbing(
       Collection<com.strongdm.api.AccountCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1267,6 +1363,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountDeleteResponse>
       convertRepeatedAccountDeleteResponseToPorcelain(Collection<AccountDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1274,6 +1373,9 @@ public class Plumbing {
 
   public static List<AccountDeleteResponse> convertRepeatedAccountDeleteResponseToPlumbing(
       Collection<com.strongdm.api.AccountDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1308,6 +1410,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountGetResponse>
       convertRepeatedAccountGetResponseToPorcelain(Collection<AccountGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1315,6 +1420,9 @@ public class Plumbing {
 
   public static List<AccountGetResponse> convertRepeatedAccountGetResponseToPlumbing(
       Collection<com.strongdm.api.AccountGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1357,6 +1465,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountGrant> convertRepeatedAccountGrantToPorcelain(
       Collection<AccountGrant> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGrant>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountGrantToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1364,6 +1475,9 @@ public class Plumbing {
 
   public static List<AccountGrant> convertRepeatedAccountGrantToPlumbing(
       Collection<com.strongdm.api.AccountGrant> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGrant>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountGrantToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1400,6 +1514,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountGrantCreateResponse>
       convertRepeatedAccountGrantCreateResponseToPorcelain(
           Collection<AccountGrantCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGrantCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountGrantCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1408,6 +1525,9 @@ public class Plumbing {
   public static List<AccountGrantCreateResponse>
       convertRepeatedAccountGrantCreateResponseToPlumbing(
           Collection<com.strongdm.api.AccountGrantCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGrantCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountGrantCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1440,6 +1560,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountGrantDeleteResponse>
       convertRepeatedAccountGrantDeleteResponseToPorcelain(
           Collection<AccountGrantDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGrantDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountGrantDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1448,6 +1571,9 @@ public class Plumbing {
   public static List<AccountGrantDeleteResponse>
       convertRepeatedAccountGrantDeleteResponseToPlumbing(
           Collection<com.strongdm.api.AccountGrantDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGrantDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountGrantDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1484,6 +1610,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountGrantGetResponse>
       convertRepeatedAccountGrantGetResponseToPorcelain(
           Collection<AccountGrantGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGrantGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountGrantGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1491,6 +1620,9 @@ public class Plumbing {
 
   public static List<AccountGrantGetResponse> convertRepeatedAccountGrantGetResponseToPlumbing(
       Collection<com.strongdm.api.AccountGrantGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGrantGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountGrantGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1529,6 +1661,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountGrantHistory>
       convertRepeatedAccountGrantHistoryToPorcelain(Collection<AccountGrantHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGrantHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountGrantHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1536,6 +1671,9 @@ public class Plumbing {
 
   public static List<AccountGrantHistory> convertRepeatedAccountGrantHistoryToPlumbing(
       Collection<com.strongdm.api.AccountGrantHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGrantHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountGrantHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1574,6 +1712,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountHistory> convertRepeatedAccountHistoryToPorcelain(
       Collection<AccountHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1581,6 +1722,9 @@ public class Plumbing {
 
   public static List<AccountHistory> convertRepeatedAccountHistoryToPlumbing(
       Collection<com.strongdm.api.AccountHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1623,6 +1767,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountPermission>
       convertRepeatedAccountPermissionToPorcelain(Collection<AccountPermission> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountPermission>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountPermissionToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1630,6 +1777,9 @@ public class Plumbing {
 
   public static List<AccountPermission> convertRepeatedAccountPermissionToPlumbing(
       Collection<com.strongdm.api.AccountPermission> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountPermission>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountPermissionToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1680,6 +1830,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountResource> convertRepeatedAccountResourceToPorcelain(
       Collection<AccountResource> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountResource>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountResourceToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1687,6 +1840,9 @@ public class Plumbing {
 
   public static List<AccountResource> convertRepeatedAccountResourceToPlumbing(
       Collection<com.strongdm.api.AccountResource> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountResource>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountResourceToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1729,6 +1885,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AccountResourceHistory>
       convertRepeatedAccountResourceHistoryToPorcelain(
           Collection<AccountResourceHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountResourceHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountResourceHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1736,6 +1895,9 @@ public class Plumbing {
 
   public static List<AccountResourceHistory> convertRepeatedAccountResourceHistoryToPlumbing(
       Collection<com.strongdm.api.AccountResourceHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountResourceHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountResourceHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1770,6 +1932,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AccountUpdateResponse>
       convertRepeatedAccountUpdateResponseToPorcelain(Collection<AccountUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountUpdateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAccountUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1777,6 +1942,9 @@ public class Plumbing {
 
   public static List<AccountUpdateResponse> convertRepeatedAccountUpdateResponseToPlumbing(
       Collection<com.strongdm.api.AccountUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountUpdateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAccountUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1791,6 +1959,7 @@ public class Plumbing {
         Plumbing.convertRepeatedActivityEntityToPorcelain(plumbing.getEntitiesList()));
     porcelain.setId((plumbing.getId()));
     porcelain.setIpAddress((plumbing.getIpAddress()));
+    porcelain.setUserAgent((plumbing.getUserAgent()));
     porcelain.setVerb((plumbing.getVerb()));
     return porcelain;
   }
@@ -1817,6 +1986,9 @@ public class Plumbing {
     if (porcelain.getIpAddress() != null) {
       builder.setIpAddress((porcelain.getIpAddress()));
     }
+    if (porcelain.getUserAgent() != null) {
+      builder.setUserAgent((porcelain.getUserAgent()));
+    }
     if (porcelain.getVerb() != null) {
       builder.setVerb((porcelain.getVerb()));
     }
@@ -1825,6 +1997,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Activity> convertRepeatedActivityToPorcelain(
       Collection<Activity> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Activity>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertActivityToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1832,6 +2007,9 @@ public class Plumbing {
 
   public static List<Activity> convertRepeatedActivityToPlumbing(
       Collection<com.strongdm.api.Activity> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Activity>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertActivityToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1874,6 +2052,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ActivityActor> convertRepeatedActivityActorToPorcelain(
       Collection<ActivityActor> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ActivityActor>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertActivityActorToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1881,6 +2062,9 @@ public class Plumbing {
 
   public static List<ActivityActor> convertRepeatedActivityActorToPlumbing(
       Collection<com.strongdm.api.ActivityActor> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ActivityActor>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertActivityActorToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1923,6 +2107,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ActivityEntity> convertRepeatedActivityEntityToPorcelain(
       Collection<ActivityEntity> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ActivityEntity>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertActivityEntityToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1930,6 +2117,9 @@ public class Plumbing {
 
   public static List<ActivityEntity> convertRepeatedActivityEntityToPlumbing(
       Collection<com.strongdm.api.ActivityEntity> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ActivityEntity>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertActivityEntityToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -1964,6 +2154,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ActivityGetResponse>
       convertRepeatedActivityGetResponseToPorcelain(Collection<ActivityGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ActivityGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertActivityGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -1971,6 +2164,9 @@ public class Plumbing {
 
   public static List<ActivityGetResponse> convertRepeatedActivityGetResponseToPlumbing(
       Collection<com.strongdm.api.ActivityGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ActivityGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertActivityGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2069,6 +2265,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AmazonEKS> convertRepeatedAmazonEKSToPorcelain(
       Collection<AmazonEKS> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AmazonEKS>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAmazonEKSToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2076,6 +2275,9 @@ public class Plumbing {
 
   public static List<AmazonEKS> convertRepeatedAmazonEKSToPlumbing(
       Collection<com.strongdm.api.AmazonEKS> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AmazonEKS>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAmazonEKSToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2170,6 +2372,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AmazonEKSInstanceProfile>
       convertRepeatedAmazonEKSInstanceProfileToPorcelain(
           Collection<AmazonEKSInstanceProfile> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AmazonEKSInstanceProfile>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAmazonEKSInstanceProfileToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2177,6 +2382,9 @@ public class Plumbing {
 
   public static List<AmazonEKSInstanceProfile> convertRepeatedAmazonEKSInstanceProfileToPlumbing(
       Collection<com.strongdm.api.AmazonEKSInstanceProfile> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AmazonEKSInstanceProfile>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAmazonEKSInstanceProfileToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2274,6 +2482,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AmazonEKSInstanceProfileUserImpersonation>
       convertRepeatedAmazonEKSInstanceProfileUserImpersonationToPorcelain(
           Collection<AmazonEKSInstanceProfileUserImpersonation> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AmazonEKSInstanceProfileUserImpersonation>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAmazonEKSInstanceProfileUserImpersonationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2282,6 +2493,9 @@ public class Plumbing {
   public static List<AmazonEKSInstanceProfileUserImpersonation>
       convertRepeatedAmazonEKSInstanceProfileUserImpersonationToPlumbing(
           Collection<com.strongdm.api.AmazonEKSInstanceProfileUserImpersonation> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AmazonEKSInstanceProfileUserImpersonation>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAmazonEKSInstanceProfileUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2374,6 +2588,9 @@ public class Plumbing {
   public static List<com.strongdm.api.AmazonEKSUserImpersonation>
       convertRepeatedAmazonEKSUserImpersonationToPorcelain(
           Collection<AmazonEKSUserImpersonation> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AmazonEKSUserImpersonation>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAmazonEKSUserImpersonationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2382,6 +2599,9 @@ public class Plumbing {
   public static List<AmazonEKSUserImpersonation>
       convertRepeatedAmazonEKSUserImpersonationToPlumbing(
           Collection<com.strongdm.api.AmazonEKSUserImpersonation> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AmazonEKSUserImpersonation>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAmazonEKSUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2458,6 +2678,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AmazonES> convertRepeatedAmazonESToPorcelain(
       Collection<AmazonES> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AmazonES>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAmazonESToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2465,6 +2688,9 @@ public class Plumbing {
 
   public static List<AmazonES> convertRepeatedAmazonESToPlumbing(
       Collection<com.strongdm.api.AmazonES> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AmazonES>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAmazonESToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2535,6 +2761,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AmazonMQAMQP091> convertRepeatedAmazonMQAMQP091ToPorcelain(
       Collection<AmazonMQAMQP091> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AmazonMQAMQP091>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAmazonMQAMQP091ToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2542,6 +2771,9 @@ public class Plumbing {
 
   public static List<AmazonMQAMQP091> convertRepeatedAmazonMQAMQP091ToPlumbing(
       Collection<com.strongdm.api.AmazonMQAMQP091> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AmazonMQAMQP091>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAmazonMQAMQP091ToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2618,6 +2850,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Athena> convertRepeatedAthenaToPorcelain(
       Collection<Athena> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Athena>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAthenaToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2625,6 +2860,9 @@ public class Plumbing {
 
   public static List<Athena> convertRepeatedAthenaToPlumbing(
       Collection<com.strongdm.api.Athena> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Athena>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAthenaToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2699,6 +2937,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AuroraMysql> convertRepeatedAuroraMysqlToPorcelain(
       Collection<AuroraMysql> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AuroraMysql>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAuroraMysqlToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2706,6 +2947,9 @@ public class Plumbing {
 
   public static List<AuroraMysql> convertRepeatedAuroraMysqlToPlumbing(
       Collection<com.strongdm.api.AuroraMysql> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AuroraMysql>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAuroraMysqlToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2780,6 +3024,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AuroraPostgres> convertRepeatedAuroraPostgresToPorcelain(
       Collection<AuroraPostgres> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AuroraPostgres>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAuroraPostgresToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2787,6 +3034,9 @@ public class Plumbing {
 
   public static List<AuroraPostgres> convertRepeatedAuroraPostgresToPlumbing(
       Collection<com.strongdm.api.AuroraPostgres> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AuroraPostgres>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAuroraPostgresToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2851,6 +3101,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Azure> convertRepeatedAzureToPorcelain(
       Collection<Azure> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Azure>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAzureToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2858,6 +3111,9 @@ public class Plumbing {
 
   public static List<Azure> convertRepeatedAzureToPlumbing(
       Collection<com.strongdm.api.Azure> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Azure>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAzureToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -2924,6 +3180,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AzureCertificate> convertRepeatedAzureCertificateToPorcelain(
       Collection<AzureCertificate> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzureCertificate>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAzureCertificateToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -2931,6 +3190,9 @@ public class Plumbing {
 
   public static List<AzureCertificate> convertRepeatedAzureCertificateToPlumbing(
       Collection<com.strongdm.api.AzureCertificate> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzureCertificate>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAzureCertificateToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3005,6 +3267,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AzureMysql> convertRepeatedAzureMysqlToPorcelain(
       Collection<AzureMysql> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzureMysql>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAzureMysqlToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3012,6 +3277,9 @@ public class Plumbing {
 
   public static List<AzureMysql> convertRepeatedAzureMysqlToPlumbing(
       Collection<com.strongdm.api.AzureMysql> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzureMysql>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAzureMysqlToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3086,6 +3354,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AzurePostgres> convertRepeatedAzurePostgresToPorcelain(
       Collection<AzurePostgres> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzurePostgres>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAzurePostgresToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3093,14 +3364,18 @@ public class Plumbing {
 
   public static List<AzurePostgres> convertRepeatedAzurePostgresToPlumbing(
       Collection<com.strongdm.api.AzurePostgres> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzurePostgres>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAzurePostgresToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.AzurePostgresFlexible convertAzurePostgresFlexibleToPorcelain(
-      AzurePostgresFlexible plumbing) {
-    com.strongdm.api.AzurePostgresFlexible porcelain = new com.strongdm.api.AzurePostgresFlexible();
+  public static com.strongdm.api.AzurePostgresManagedIdentity
+      convertAzurePostgresManagedIdentityToPorcelain(AzurePostgresManagedIdentity plumbing) {
+    com.strongdm.api.AzurePostgresManagedIdentity porcelain =
+        new com.strongdm.api.AzurePostgresManagedIdentity();
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setDatabase((plumbing.getDatabase()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
@@ -3115,16 +3390,17 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
 
-  public static AzurePostgresFlexible convertAzurePostgresFlexibleToPlumbing(
-      com.strongdm.api.AzurePostgresFlexible porcelain) {
+  public static AzurePostgresManagedIdentity convertAzurePostgresManagedIdentityToPlumbing(
+      com.strongdm.api.AzurePostgresManagedIdentity porcelain) {
     if (porcelain == null) {
       return null;
     }
-    AzurePostgresFlexible.Builder builder = AzurePostgresFlexible.newBuilder();
+    AzurePostgresManagedIdentity.Builder builder = AzurePostgresManagedIdentity.newBuilder();
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -3159,104 +3435,32 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
     return builder.build();
   }
 
-  public static List<com.strongdm.api.AzurePostgresFlexible>
-      convertRepeatedAzurePostgresFlexibleToPorcelain(Collection<AzurePostgresFlexible> plumbings) {
+  public static List<com.strongdm.api.AzurePostgresManagedIdentity>
+      convertRepeatedAzurePostgresManagedIdentityToPorcelain(
+          Collection<AzurePostgresManagedIdentity> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzurePostgresManagedIdentity>();
+    }
     return plumbings.stream()
-        .map(plumbing -> convertAzurePostgresFlexibleToPorcelain(plumbing))
+        .map(plumbing -> convertAzurePostgresManagedIdentityToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<AzurePostgresFlexible> convertRepeatedAzurePostgresFlexibleToPlumbing(
-      Collection<com.strongdm.api.AzurePostgresFlexible> porcelains) {
+  public static List<AzurePostgresManagedIdentity>
+      convertRepeatedAzurePostgresManagedIdentityToPlumbing(
+          Collection<com.strongdm.api.AzurePostgresManagedIdentity> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzurePostgresManagedIdentity>();
+    }
     return porcelains.stream()
-        .map(porcelain -> convertAzurePostgresFlexibleToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.AzurePostgresSingle convertAzurePostgresSingleToPorcelain(
-      AzurePostgresSingle plumbing) {
-    com.strongdm.api.AzurePostgresSingle porcelain = new com.strongdm.api.AzurePostgresSingle();
-    porcelain.setBindInterface((plumbing.getBindInterface()));
-    porcelain.setDatabase((plumbing.getDatabase()));
-    porcelain.setEgressFilter((plumbing.getEgressFilter()));
-    porcelain.setHealthy((plumbing.getHealthy()));
-    porcelain.setHostname((plumbing.getHostname()));
-    porcelain.setId((plumbing.getId()));
-    porcelain.setName((plumbing.getName()));
-    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
-    porcelain.setPassword((plumbing.getPassword()));
-    porcelain.setPort((plumbing.getPort()));
-    porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
-    porcelain.setSubdomain((plumbing.getSubdomain()));
-    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    porcelain.setUsername((plumbing.getUsername()));
-    return porcelain;
-  }
-
-  public static AzurePostgresSingle convertAzurePostgresSingleToPlumbing(
-      com.strongdm.api.AzurePostgresSingle porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    AzurePostgresSingle.Builder builder = AzurePostgresSingle.newBuilder();
-    if (porcelain.getBindInterface() != null) {
-      builder.setBindInterface((porcelain.getBindInterface()));
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase((porcelain.getDatabase()));
-    }
-    if (porcelain.getEgressFilter() != null) {
-      builder.setEgressFilter((porcelain.getEgressFilter()));
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname((porcelain.getHostname()));
-    }
-    if (porcelain.getId() != null) {
-      builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getName() != null) {
-      builder.setName((porcelain.getName()));
-    }
-    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
-    if (porcelain.getPassword() != null) {
-      builder.setPassword((porcelain.getPassword()));
-    }
-    builder.setPort(porcelain.getPort());
-    builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getSecretStoreId() != null) {
-      builder.setSecretStoreId((porcelain.getSecretStoreId()));
-    }
-    if (porcelain.getSubdomain() != null) {
-      builder.setSubdomain((porcelain.getSubdomain()));
-    }
-    if (porcelain.getTags() != null) {
-      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername((porcelain.getUsername()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.AzurePostgresSingle>
-      convertRepeatedAzurePostgresSingleToPorcelain(Collection<AzurePostgresSingle> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertAzurePostgresSingleToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<AzurePostgresSingle> convertRepeatedAzurePostgresSingleToPlumbing(
-      Collection<com.strongdm.api.AzurePostgresSingle> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertAzurePostgresSingleToPlumbing(porcelain))
+        .map(porcelain -> convertAzurePostgresManagedIdentityToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -3291,6 +3495,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.AzureStore> convertRepeatedAzureStoreToPorcelain(
       Collection<AzureStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzureStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertAzureStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3298,6 +3505,9 @@ public class Plumbing {
 
   public static List<AzureStore> convertRepeatedAzureStoreToPlumbing(
       Collection<com.strongdm.api.AzureStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzureStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertAzureStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3366,6 +3576,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.BigQuery> convertRepeatedBigQueryToPorcelain(
       Collection<BigQuery> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.BigQuery>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertBigQueryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3373,6 +3586,9 @@ public class Plumbing {
 
   public static List<BigQuery> convertRepeatedBigQueryToPlumbing(
       Collection<com.strongdm.api.BigQuery> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<BigQuery>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertBigQueryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3441,6 +3657,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Cassandra> convertRepeatedCassandraToPorcelain(
       Collection<Cassandra> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Cassandra>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertCassandraToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3448,6 +3667,9 @@ public class Plumbing {
 
   public static List<Cassandra> convertRepeatedCassandraToPlumbing(
       Collection<com.strongdm.api.Cassandra> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Cassandra>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertCassandraToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3520,6 +3742,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Citus> convertRepeatedCitusToPorcelain(
       Collection<Citus> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Citus>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertCitusToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3527,6 +3752,9 @@ public class Plumbing {
 
   public static List<Citus> convertRepeatedCitusToPlumbing(
       Collection<com.strongdm.api.Citus> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Citus>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertCitusToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3601,6 +3829,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Clustrix> convertRepeatedClustrixToPorcelain(
       Collection<Clustrix> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Clustrix>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertClustrixToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3608,6 +3839,9 @@ public class Plumbing {
 
   public static List<Clustrix> convertRepeatedClustrixToPlumbing(
       Collection<com.strongdm.api.Clustrix> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Clustrix>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertClustrixToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3680,6 +3914,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Cockroach> convertRepeatedCockroachToPorcelain(
       Collection<Cockroach> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Cockroach>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertCockroachToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3687,6 +3924,9 @@ public class Plumbing {
 
   public static List<Cockroach> convertRepeatedCockroachToPlumbing(
       Collection<com.strongdm.api.Cockroach> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Cockroach>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertCockroachToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3726,6 +3966,9 @@ public class Plumbing {
   public static List<com.strongdm.api.ControlPanelGetSSHCAPublicKeyResponse>
       convertRepeatedControlPanelGetSSHCAPublicKeyResponseToPorcelain(
           Collection<ControlPanelGetSSHCAPublicKeyResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ControlPanelGetSSHCAPublicKeyResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3734,6 +3977,9 @@ public class Plumbing {
   public static List<ControlPanelGetSSHCAPublicKeyResponse>
       convertRepeatedControlPanelGetSSHCAPublicKeyResponseToPlumbing(
           Collection<com.strongdm.api.ControlPanelGetSSHCAPublicKeyResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ControlPanelGetSSHCAPublicKeyResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertControlPanelGetSSHCAPublicKeyResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3768,6 +4014,9 @@ public class Plumbing {
   public static List<com.strongdm.api.ControlPanelVerifyJWTResponse>
       convertRepeatedControlPanelVerifyJWTResponseToPorcelain(
           Collection<ControlPanelVerifyJWTResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ControlPanelVerifyJWTResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertControlPanelVerifyJWTResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3776,6 +4025,9 @@ public class Plumbing {
   public static List<ControlPanelVerifyJWTResponse>
       convertRepeatedControlPanelVerifyJWTResponseToPlumbing(
           Collection<com.strongdm.api.ControlPanelVerifyJWTResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ControlPanelVerifyJWTResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertControlPanelVerifyJWTResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3800,6 +4052,9 @@ public class Plumbing {
   public static List<com.strongdm.api.CreateResponseMetadata>
       convertRepeatedCreateResponseMetadataToPorcelain(
           Collection<CreateResponseMetadata> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.CreateResponseMetadata>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertCreateResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3807,6 +4062,9 @@ public class Plumbing {
 
   public static List<CreateResponseMetadata> convertRepeatedCreateResponseMetadataToPlumbing(
       Collection<com.strongdm.api.CreateResponseMetadata> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<CreateResponseMetadata>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertCreateResponseMetadataToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3845,6 +4103,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.CyberarkConjurStore>
       convertRepeatedCyberarkConjurStoreToPorcelain(Collection<CyberarkConjurStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.CyberarkConjurStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertCyberarkConjurStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3852,6 +4113,9 @@ public class Plumbing {
 
   public static List<CyberarkConjurStore> convertRepeatedCyberarkConjurStoreToPlumbing(
       Collection<com.strongdm.api.CyberarkConjurStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<CyberarkConjurStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertCyberarkConjurStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3892,6 +4156,9 @@ public class Plumbing {
   public static List<com.strongdm.api.CyberarkPAMExperimentalStore>
       convertRepeatedCyberarkPAMExperimentalStoreToPorcelain(
           Collection<CyberarkPAMExperimentalStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.CyberarkPAMExperimentalStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertCyberarkPAMExperimentalStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3900,6 +4167,9 @@ public class Plumbing {
   public static List<CyberarkPAMExperimentalStore>
       convertRepeatedCyberarkPAMExperimentalStoreToPlumbing(
           Collection<com.strongdm.api.CyberarkPAMExperimentalStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<CyberarkPAMExperimentalStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertCyberarkPAMExperimentalStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -3938,6 +4208,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.CyberarkPAMStore> convertRepeatedCyberarkPAMStoreToPorcelain(
       Collection<CyberarkPAMStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.CyberarkPAMStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertCyberarkPAMStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -3945,6 +4218,9 @@ public class Plumbing {
 
   public static List<CyberarkPAMStore> convertRepeatedCyberarkPAMStoreToPlumbing(
       Collection<com.strongdm.api.CyberarkPAMStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<CyberarkPAMStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertCyberarkPAMStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4013,6 +4289,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.DB2I> convertRepeatedDB2IToPorcelain(
       Collection<DB2I> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DB2I>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDB2IToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4020,6 +4299,9 @@ public class Plumbing {
 
   public static List<DB2I> convertRepeatedDB2IToPlumbing(
       Collection<com.strongdm.api.DB2I> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DB2I>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDB2IToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4090,6 +4372,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.DB2LUW> convertRepeatedDB2LUWToPorcelain(
       Collection<DB2LUW> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DB2LUW>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDB2LUWToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4097,6 +4382,9 @@ public class Plumbing {
 
   public static List<DB2LUW> convertRepeatedDB2LUWToPlumbing(
       Collection<com.strongdm.api.DB2LUW> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DB2LUW>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDB2LUWToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4121,6 +4409,9 @@ public class Plumbing {
   public static List<com.strongdm.api.DeleteResponseMetadata>
       convertRepeatedDeleteResponseMetadataToPorcelain(
           Collection<DeleteResponseMetadata> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DeleteResponseMetadata>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDeleteResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4128,6 +4419,9 @@ public class Plumbing {
 
   public static List<DeleteResponseMetadata> convertRepeatedDeleteResponseMetadataToPlumbing(
       Collection<com.strongdm.api.DeleteResponseMetadata> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DeleteResponseMetadata>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDeleteResponseMetadataToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4170,6 +4464,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.DelineaStore> convertRepeatedDelineaStoreToPorcelain(
       Collection<DelineaStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DelineaStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDelineaStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4177,6 +4474,9 @@ public class Plumbing {
 
   public static List<DelineaStore> convertRepeatedDelineaStoreToPlumbing(
       Collection<com.strongdm.api.DelineaStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DelineaStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDelineaStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4249,6 +4549,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.DocumentDBHost> convertRepeatedDocumentDBHostToPorcelain(
       Collection<DocumentDBHost> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DocumentDBHost>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDocumentDBHostToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4256,6 +4559,9 @@ public class Plumbing {
 
   public static List<DocumentDBHost> convertRepeatedDocumentDBHostToPlumbing(
       Collection<com.strongdm.api.DocumentDBHost> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DocumentDBHost>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDocumentDBHostToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4332,6 +4638,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.DocumentDBReplicaSet>
       convertRepeatedDocumentDBReplicaSetToPorcelain(Collection<DocumentDBReplicaSet> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DocumentDBReplicaSet>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDocumentDBReplicaSetToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4339,6 +4648,9 @@ public class Plumbing {
 
   public static List<DocumentDBReplicaSet> convertRepeatedDocumentDBReplicaSetToPlumbing(
       Collection<com.strongdm.api.DocumentDBReplicaSet> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DocumentDBReplicaSet>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDocumentDBReplicaSetToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4405,6 +4717,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Druid> convertRepeatedDruidToPorcelain(
       Collection<Druid> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Druid>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDruidToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4412,6 +4727,9 @@ public class Plumbing {
 
   public static List<Druid> convertRepeatedDruidToPlumbing(
       Collection<com.strongdm.api.Druid> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Druid>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDruidToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4488,6 +4806,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.DynamoDB> convertRepeatedDynamoDBToPorcelain(
       Collection<DynamoDB> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DynamoDB>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertDynamoDBToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4495,6 +4816,9 @@ public class Plumbing {
 
   public static List<DynamoDB> convertRepeatedDynamoDBToPlumbing(
       Collection<com.strongdm.api.DynamoDB> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DynamoDB>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertDynamoDBToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4563,6 +4887,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Elastic> convertRepeatedElasticToPorcelain(
       Collection<Elastic> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Elastic>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertElasticToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4570,6 +4897,9 @@ public class Plumbing {
 
   public static List<Elastic> convertRepeatedElasticToPlumbing(
       Collection<com.strongdm.api.Elastic> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Elastic>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertElasticToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4640,6 +4970,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ElasticacheRedis> convertRepeatedElasticacheRedisToPorcelain(
       Collection<ElasticacheRedis> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ElasticacheRedis>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertElasticacheRedisToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4647,6 +4980,9 @@ public class Plumbing {
 
   public static List<ElasticacheRedis> convertRepeatedElasticacheRedisToPlumbing(
       Collection<com.strongdm.api.ElasticacheRedis> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ElasticacheRedis>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertElasticacheRedisToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4707,6 +5043,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.GCP> convertRepeatedGCPToPorcelain(
       Collection<GCP> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GCP>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertGCPToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4714,6 +5053,9 @@ public class Plumbing {
 
   public static List<GCP> convertRepeatedGCPToPlumbing(
       Collection<com.strongdm.api.GCP> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GCP>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertGCPToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4750,6 +5092,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.GCPStore> convertRepeatedGCPStoreToPorcelain(
       Collection<GCPStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GCPStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertGCPStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4757,6 +5102,9 @@ public class Plumbing {
 
   public static List<GCPStore> convertRepeatedGCPStoreToPlumbing(
       Collection<com.strongdm.api.GCPStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GCPStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertGCPStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4771,6 +5119,9 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setListenAddress((plumbing.getListenAddress()));
     porcelain.setLocation((plumbing.getLocation()));
+    porcelain.setMaintenanceWindows(
+        Plumbing.convertRepeatedNodeMaintenanceWindowToPorcelain(
+            plumbing.getMaintenanceWindowsList()));
     porcelain.setName((plumbing.getName()));
     porcelain.setState((plumbing.getState()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -4804,6 +5155,8 @@ public class Plumbing {
     if (porcelain.getLocation() != null) {
       builder.setLocation((porcelain.getLocation()));
     }
+    builder.addAllMaintenanceWindows(
+        Plumbing.convertRepeatedNodeMaintenanceWindowToPlumbing(porcelain.getMaintenanceWindows()));
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -4821,6 +5174,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Gateway> convertRepeatedGatewayToPorcelain(
       Collection<Gateway> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Gateway>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertGatewayToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4828,6 +5184,9 @@ public class Plumbing {
 
   public static List<Gateway> convertRepeatedGatewayToPlumbing(
       Collection<com.strongdm.api.Gateway> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Gateway>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertGatewayToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4850,6 +5209,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.GetResponseMetadata>
       convertRepeatedGetResponseMetadataToPorcelain(Collection<GetResponseMetadata> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GetResponseMetadata>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertGetResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4857,6 +5219,9 @@ public class Plumbing {
 
   public static List<GetResponseMetadata> convertRepeatedGetResponseMetadataToPlumbing(
       Collection<com.strongdm.api.GetResponseMetadata> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GetResponseMetadata>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertGetResponseMetadataToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -4933,6 +5298,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.GoogleGKE> convertRepeatedGoogleGKEToPorcelain(
       Collection<GoogleGKE> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GoogleGKE>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertGoogleGKEToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -4940,6 +5308,9 @@ public class Plumbing {
 
   public static List<GoogleGKE> convertRepeatedGoogleGKEToPlumbing(
       Collection<com.strongdm.api.GoogleGKE> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GoogleGKE>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertGoogleGKEToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5010,6 +5381,9 @@ public class Plumbing {
   public static List<com.strongdm.api.GoogleGKEUserImpersonation>
       convertRepeatedGoogleGKEUserImpersonationToPorcelain(
           Collection<GoogleGKEUserImpersonation> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GoogleGKEUserImpersonation>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertGoogleGKEUserImpersonationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5018,6 +5392,9 @@ public class Plumbing {
   public static List<GoogleGKEUserImpersonation>
       convertRepeatedGoogleGKEUserImpersonationToPlumbing(
           Collection<com.strongdm.api.GoogleGKEUserImpersonation> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GoogleGKEUserImpersonation>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertGoogleGKEUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5090,6 +5467,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Greenplum> convertRepeatedGreenplumToPorcelain(
       Collection<Greenplum> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Greenplum>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertGreenplumToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5097,6 +5477,9 @@ public class Plumbing {
 
   public static List<Greenplum> convertRepeatedGreenplumToPlumbing(
       Collection<com.strongdm.api.Greenplum> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Greenplum>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertGreenplumToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5171,6 +5554,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.HTTPAuth> convertRepeatedHTTPAuthToPorcelain(
       Collection<HTTPAuth> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.HTTPAuth>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertHTTPAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5178,6 +5564,9 @@ public class Plumbing {
 
   public static List<HTTPAuth> convertRepeatedHTTPAuthToPlumbing(
       Collection<com.strongdm.api.HTTPAuth> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<HTTPAuth>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertHTTPAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5258,6 +5647,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.HTTPBasicAuth> convertRepeatedHTTPBasicAuthToPorcelain(
       Collection<HTTPBasicAuth> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.HTTPBasicAuth>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertHTTPBasicAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5265,6 +5657,9 @@ public class Plumbing {
 
   public static List<HTTPBasicAuth> convertRepeatedHTTPBasicAuthToPlumbing(
       Collection<com.strongdm.api.HTTPBasicAuth> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<HTTPBasicAuth>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertHTTPBasicAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5335,6 +5730,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.HTTPNoAuth> convertRepeatedHTTPNoAuthToPorcelain(
       Collection<HTTPNoAuth> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.HTTPNoAuth>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertHTTPNoAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5342,6 +5740,9 @@ public class Plumbing {
 
   public static List<HTTPNoAuth> convertRepeatedHTTPNoAuthToPlumbing(
       Collection<com.strongdm.api.HTTPNoAuth> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<HTTPNoAuth>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertHTTPNoAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5426,6 +5827,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Kubernetes> convertRepeatedKubernetesToPorcelain(
       Collection<Kubernetes> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Kubernetes>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertKubernetesToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5433,6 +5837,9 @@ public class Plumbing {
 
   public static List<Kubernetes> convertRepeatedKubernetesToPlumbing(
       Collection<com.strongdm.api.Kubernetes> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Kubernetes>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertKubernetesToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5505,6 +5912,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.KubernetesBasicAuth>
       convertRepeatedKubernetesBasicAuthToPorcelain(Collection<KubernetesBasicAuth> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.KubernetesBasicAuth>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertKubernetesBasicAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5512,6 +5922,9 @@ public class Plumbing {
 
   public static List<KubernetesBasicAuth> convertRepeatedKubernetesBasicAuthToPlumbing(
       Collection<com.strongdm.api.KubernetesBasicAuth> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<KubernetesBasicAuth>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertKubernetesBasicAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5592,6 +6005,9 @@ public class Plumbing {
   public static List<com.strongdm.api.KubernetesServiceAccount>
       convertRepeatedKubernetesServiceAccountToPorcelain(
           Collection<KubernetesServiceAccount> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.KubernetesServiceAccount>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertKubernetesServiceAccountToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5599,6 +6015,9 @@ public class Plumbing {
 
   public static List<KubernetesServiceAccount> convertRepeatedKubernetesServiceAccountToPlumbing(
       Collection<com.strongdm.api.KubernetesServiceAccount> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<KubernetesServiceAccount>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertKubernetesServiceAccountToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5672,6 +6091,9 @@ public class Plumbing {
   public static List<com.strongdm.api.KubernetesServiceAccountUserImpersonation>
       convertRepeatedKubernetesServiceAccountUserImpersonationToPorcelain(
           Collection<KubernetesServiceAccountUserImpersonation> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.KubernetesServiceAccountUserImpersonation>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertKubernetesServiceAccountUserImpersonationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5680,6 +6102,9 @@ public class Plumbing {
   public static List<KubernetesServiceAccountUserImpersonation>
       convertRepeatedKubernetesServiceAccountUserImpersonationToPlumbing(
           Collection<com.strongdm.api.KubernetesServiceAccountUserImpersonation> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<KubernetesServiceAccountUserImpersonation>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertKubernetesServiceAccountUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5758,6 +6183,9 @@ public class Plumbing {
   public static List<com.strongdm.api.KubernetesUserImpersonation>
       convertRepeatedKubernetesUserImpersonationToPorcelain(
           Collection<KubernetesUserImpersonation> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.KubernetesUserImpersonation>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertKubernetesUserImpersonationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5766,6 +6194,9 @@ public class Plumbing {
   public static List<KubernetesUserImpersonation>
       convertRepeatedKubernetesUserImpersonationToPlumbing(
           Collection<com.strongdm.api.KubernetesUserImpersonation> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<KubernetesUserImpersonation>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertKubernetesUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5856,6 +6287,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.MTLSMysql> convertRepeatedMTLSMysqlToPorcelain(
       Collection<MTLSMysql> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MTLSMysql>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMTLSMysqlToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5863,6 +6297,9 @@ public class Plumbing {
 
   public static List<MTLSMysql> convertRepeatedMTLSMysqlToPlumbing(
       Collection<com.strongdm.api.MTLSMysql> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MTLSMysql>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMTLSMysqlToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -5953,6 +6390,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.MTLSPostgres> convertRepeatedMTLSPostgresToPorcelain(
       Collection<MTLSPostgres> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MTLSPostgres>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMTLSPostgresToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -5960,6 +6400,9 @@ public class Plumbing {
 
   public static List<MTLSPostgres> convertRepeatedMTLSPostgresToPlumbing(
       Collection<com.strongdm.api.MTLSPostgres> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MTLSPostgres>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMTLSPostgresToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6034,6 +6477,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Maria> convertRepeatedMariaToPorcelain(
       Collection<Maria> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Maria>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMariaToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6041,6 +6487,9 @@ public class Plumbing {
 
   public static List<Maria> convertRepeatedMariaToPlumbing(
       Collection<com.strongdm.api.Maria> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Maria>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMariaToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6099,6 +6548,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Memcached> convertRepeatedMemcachedToPorcelain(
       Collection<Memcached> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Memcached>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMemcachedToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6106,6 +6558,9 @@ public class Plumbing {
 
   public static List<Memcached> convertRepeatedMemcachedToPlumbing(
       Collection<com.strongdm.api.Memcached> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Memcached>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMemcachedToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6180,6 +6635,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Memsql> convertRepeatedMemsqlToPorcelain(
       Collection<Memsql> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Memsql>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMemsqlToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6187,6 +6645,9 @@ public class Plumbing {
 
   public static List<Memsql> convertRepeatedMemsqlToPlumbing(
       Collection<com.strongdm.api.Memsql> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Memsql>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMemsqlToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6259,6 +6720,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.MongoHost> convertRepeatedMongoHostToPorcelain(
       Collection<MongoHost> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MongoHost>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMongoHostToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6266,6 +6730,9 @@ public class Plumbing {
 
   public static List<MongoHost> convertRepeatedMongoHostToPlumbing(
       Collection<com.strongdm.api.MongoHost> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MongoHost>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMongoHostToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6344,6 +6811,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.MongoLegacyHost> convertRepeatedMongoLegacyHostToPorcelain(
       Collection<MongoLegacyHost> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MongoLegacyHost>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMongoLegacyHostToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6351,6 +6821,9 @@ public class Plumbing {
 
   public static List<MongoLegacyHost> convertRepeatedMongoLegacyHostToPlumbing(
       Collection<com.strongdm.api.MongoLegacyHost> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MongoLegacyHost>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMongoLegacyHostToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6431,6 +6904,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.MongoLegacyReplicaset>
       convertRepeatedMongoLegacyReplicasetToPorcelain(Collection<MongoLegacyReplicaset> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MongoLegacyReplicaset>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMongoLegacyReplicasetToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6438,6 +6914,9 @@ public class Plumbing {
 
   public static List<MongoLegacyReplicaset> convertRepeatedMongoLegacyReplicasetToPlumbing(
       Collection<com.strongdm.api.MongoLegacyReplicaset> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MongoLegacyReplicaset>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMongoLegacyReplicasetToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6518,6 +6997,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.MongoReplicaSet> convertRepeatedMongoReplicaSetToPorcelain(
       Collection<MongoReplicaSet> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MongoReplicaSet>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMongoReplicaSetToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6525,6 +7007,9 @@ public class Plumbing {
 
   public static List<MongoReplicaSet> convertRepeatedMongoReplicaSetToPlumbing(
       Collection<com.strongdm.api.MongoReplicaSet> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MongoReplicaSet>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMongoReplicaSetToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6597,6 +7082,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.MongoShardedCluster>
       convertRepeatedMongoShardedClusterToPorcelain(Collection<MongoShardedCluster> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MongoShardedCluster>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMongoShardedClusterToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6604,6 +7092,9 @@ public class Plumbing {
 
   public static List<MongoShardedCluster> convertRepeatedMongoShardedClusterToPlumbing(
       Collection<com.strongdm.api.MongoShardedCluster> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MongoShardedCluster>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMongoShardedClusterToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6678,6 +7169,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Mysql> convertRepeatedMysqlToPorcelain(
       Collection<Mysql> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Mysql>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertMysqlToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6685,6 +7179,9 @@ public class Plumbing {
 
   public static List<Mysql> convertRepeatedMysqlToPlumbing(
       Collection<com.strongdm.api.Mysql> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Mysql>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertMysqlToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6743,6 +7240,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Neptune> convertRepeatedNeptuneToPorcelain(
       Collection<Neptune> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Neptune>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNeptuneToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6750,6 +7250,9 @@ public class Plumbing {
 
   public static List<Neptune> convertRepeatedNeptuneToPlumbing(
       Collection<com.strongdm.api.Neptune> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Neptune>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNeptuneToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6828,6 +7331,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.NeptuneIAM> convertRepeatedNeptuneIAMToPorcelain(
       Collection<NeptuneIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NeptuneIAM>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNeptuneIAMToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6835,6 +7341,9 @@ public class Plumbing {
 
   public static List<NeptuneIAM> convertRepeatedNeptuneIAMToPlumbing(
       Collection<com.strongdm.api.NeptuneIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NeptuneIAM>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNeptuneIAMToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6872,6 +7381,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Node> convertRepeatedNodeToPorcelain(
       Collection<Node> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Node>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNodeToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6879,6 +7391,9 @@ public class Plumbing {
 
   public static List<Node> convertRepeatedNodeToPlumbing(
       Collection<com.strongdm.api.Node> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Node>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNodeToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6917,6 +7432,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.NodeCreateResponse>
       convertRepeatedNodeCreateResponseToPorcelain(Collection<NodeCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NodeCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNodeCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6924,6 +7442,9 @@ public class Plumbing {
 
   public static List<NodeCreateResponse> convertRepeatedNodeCreateResponseToPlumbing(
       Collection<com.strongdm.api.NodeCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NodeCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNodeCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6954,6 +7475,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.NodeDeleteResponse>
       convertRepeatedNodeDeleteResponseToPorcelain(Collection<NodeDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NodeDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNodeDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -6961,6 +7485,9 @@ public class Plumbing {
 
   public static List<NodeDeleteResponse> convertRepeatedNodeDeleteResponseToPlumbing(
       Collection<com.strongdm.api.NodeDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NodeDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNodeDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -6995,6 +7522,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.NodeGetResponse> convertRepeatedNodeGetResponseToPorcelain(
       Collection<NodeGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NodeGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNodeGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7002,6 +7532,9 @@ public class Plumbing {
 
   public static List<NodeGetResponse> convertRepeatedNodeGetResponseToPlumbing(
       Collection<com.strongdm.api.NodeGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NodeGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNodeGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7038,6 +7571,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.NodeHistory> convertRepeatedNodeHistoryToPorcelain(
       Collection<NodeHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NodeHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNodeHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7045,8 +7581,52 @@ public class Plumbing {
 
   public static List<NodeHistory> convertRepeatedNodeHistoryToPlumbing(
       Collection<com.strongdm.api.NodeHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NodeHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNodeHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.NodeMaintenanceWindow convertNodeMaintenanceWindowToPorcelain(
+      NodeMaintenanceWindow plumbing) {
+    com.strongdm.api.NodeMaintenanceWindow porcelain = new com.strongdm.api.NodeMaintenanceWindow();
+    porcelain.setCronSchedule((plumbing.getCronSchedule()));
+    porcelain.setRequireIdleness((plumbing.getRequireIdleness()));
+    return porcelain;
+  }
+
+  public static NodeMaintenanceWindow convertNodeMaintenanceWindowToPlumbing(
+      com.strongdm.api.NodeMaintenanceWindow porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    NodeMaintenanceWindow.Builder builder = NodeMaintenanceWindow.newBuilder();
+    if (porcelain.getCronSchedule() != null) {
+      builder.setCronSchedule((porcelain.getCronSchedule()));
+    }
+    builder.setRequireIdleness(porcelain.getRequireIdleness());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.NodeMaintenanceWindow>
+      convertRepeatedNodeMaintenanceWindowToPorcelain(Collection<NodeMaintenanceWindow> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NodeMaintenanceWindow>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertNodeMaintenanceWindowToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<NodeMaintenanceWindow> convertRepeatedNodeMaintenanceWindowToPlumbing(
+      Collection<com.strongdm.api.NodeMaintenanceWindow> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NodeMaintenanceWindow>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertNodeMaintenanceWindowToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -7079,6 +7659,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.NodeUpdateResponse>
       convertRepeatedNodeUpdateResponseToPorcelain(Collection<NodeUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NodeUpdateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertNodeUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7086,6 +7669,9 @@ public class Plumbing {
 
   public static List<NodeUpdateResponse> convertRepeatedNodeUpdateResponseToPlumbing(
       Collection<com.strongdm.api.NodeUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NodeUpdateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertNodeUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7158,6 +7744,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Oracle> convertRepeatedOracleToPorcelain(
       Collection<Oracle> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Oracle>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertOracleToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7165,6 +7754,9 @@ public class Plumbing {
 
   public static List<Oracle> convertRepeatedOracleToPlumbing(
       Collection<com.strongdm.api.Oracle> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Oracle>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertOracleToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7278,6 +7870,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Organization> convertRepeatedOrganizationToPorcelain(
       Collection<Organization> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Organization>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertOrganizationToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7285,6 +7880,9 @@ public class Plumbing {
 
   public static List<Organization> convertRepeatedOrganizationToPlumbing(
       Collection<com.strongdm.api.Organization> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Organization>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertOrganizationToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7321,6 +7919,9 @@ public class Plumbing {
   public static List<com.strongdm.api.OrganizationHistoryRecord>
       convertRepeatedOrganizationHistoryRecordToPorcelain(
           Collection<OrganizationHistoryRecord> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.OrganizationHistoryRecord>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertOrganizationHistoryRecordToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7328,6 +7929,9 @@ public class Plumbing {
 
   public static List<OrganizationHistoryRecord> convertRepeatedOrganizationHistoryRecordToPlumbing(
       Collection<com.strongdm.api.OrganizationHistoryRecord> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<OrganizationHistoryRecord>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertOrganizationHistoryRecordToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7400,6 +8004,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Postgres> convertRepeatedPostgresToPorcelain(
       Collection<Postgres> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Postgres>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertPostgresToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7407,6 +8014,9 @@ public class Plumbing {
 
   public static List<Postgres> convertRepeatedPostgresToPlumbing(
       Collection<com.strongdm.api.Postgres> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Postgres>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertPostgresToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7479,6 +8089,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Presto> convertRepeatedPrestoToPorcelain(
       Collection<Presto> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Presto>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertPrestoToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7486,6 +8099,9 @@ public class Plumbing {
 
   public static List<Presto> convertRepeatedPrestoToPlumbing(
       Collection<com.strongdm.api.Presto> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Presto>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertPrestoToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7592,6 +8208,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Query> convertRepeatedQueryToPorcelain(
       Collection<Query> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Query>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertQueryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7599,6 +8218,9 @@ public class Plumbing {
 
   public static List<Query> convertRepeatedQueryToPlumbing(
       Collection<com.strongdm.api.Query> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Query>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertQueryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7665,6 +8287,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.QueryCapture> convertRepeatedQueryCaptureToPorcelain(
       Collection<QueryCapture> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.QueryCapture>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertQueryCaptureToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7672,6 +8297,9 @@ public class Plumbing {
 
   public static List<QueryCapture> convertRepeatedQueryCaptureToPlumbing(
       Collection<com.strongdm.api.QueryCapture> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<QueryCapture>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertQueryCaptureToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7740,6 +8368,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RDP> convertRepeatedRDPToPorcelain(
       Collection<RDP> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RDP>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRDPToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7747,6 +8378,9 @@ public class Plumbing {
 
   public static List<RDP> convertRepeatedRDPToPlumbing(
       Collection<com.strongdm.api.RDP> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RDP>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRDPToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7817,6 +8451,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RabbitMQAMQP091> convertRepeatedRabbitMQAMQP091ToPorcelain(
       Collection<RabbitMQAMQP091> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RabbitMQAMQP091>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRabbitMQAMQP091ToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7824,6 +8461,9 @@ public class Plumbing {
 
   public static List<RabbitMQAMQP091> convertRepeatedRabbitMQAMQP091ToPlumbing(
       Collection<com.strongdm.api.RabbitMQAMQP091> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RabbitMQAMQP091>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRabbitMQAMQP091ToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7858,6 +8498,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RateLimitMetadata>
       convertRepeatedRateLimitMetadataToPorcelain(Collection<RateLimitMetadata> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RateLimitMetadata>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRateLimitMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7865,6 +8508,9 @@ public class Plumbing {
 
   public static List<RateLimitMetadata> convertRepeatedRateLimitMetadataToPlumbing(
       Collection<com.strongdm.api.RateLimitMetadata> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RateLimitMetadata>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRateLimitMetadataToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7923,6 +8569,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RawTCP> convertRepeatedRawTCPToPorcelain(
       Collection<RawTCP> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RawTCP>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRawTCPToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -7930,6 +8579,9 @@ public class Plumbing {
 
   public static List<RawTCP> convertRepeatedRawTCPToPlumbing(
       Collection<com.strongdm.api.RawTCP> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RawTCP>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRawTCPToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -7998,6 +8650,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Redis> convertRepeatedRedisToPorcelain(
       Collection<Redis> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Redis>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRedisToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8005,6 +8660,9 @@ public class Plumbing {
 
   public static List<Redis> convertRepeatedRedisToPlumbing(
       Collection<com.strongdm.api.Redis> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Redis>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRedisToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8077,6 +8735,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Redshift> convertRepeatedRedshiftToPorcelain(
       Collection<Redshift> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Redshift>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRedshiftToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8084,6 +8745,9 @@ public class Plumbing {
 
   public static List<Redshift> convertRepeatedRedshiftToPlumbing(
       Collection<com.strongdm.api.Redshift> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Redshift>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRedshiftToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8096,6 +8760,9 @@ public class Plumbing {
     porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     porcelain.setId((plumbing.getId()));
     porcelain.setLocation((plumbing.getLocation()));
+    porcelain.setMaintenanceWindows(
+        Plumbing.convertRepeatedNodeMaintenanceWindowToPorcelain(
+            plumbing.getMaintenanceWindowsList()));
     porcelain.setName((plumbing.getName()));
     porcelain.setState((plumbing.getState()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -8123,6 +8790,8 @@ public class Plumbing {
     if (porcelain.getLocation() != null) {
       builder.setLocation((porcelain.getLocation()));
     }
+    builder.addAllMaintenanceWindows(
+        Plumbing.convertRepeatedNodeMaintenanceWindowToPlumbing(porcelain.getMaintenanceWindows()));
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -8140,6 +8809,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Relay> convertRepeatedRelayToPorcelain(
       Collection<Relay> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Relay>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRelayToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8147,6 +8819,9 @@ public class Plumbing {
 
   public static List<Relay> convertRepeatedRelayToPlumbing(
       Collection<com.strongdm.api.Relay> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Relay>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRelayToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8185,6 +8860,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RemoteIdentity> convertRepeatedRemoteIdentityToPorcelain(
       Collection<RemoteIdentity> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentity>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8192,6 +8870,9 @@ public class Plumbing {
 
   public static List<RemoteIdentity> convertRepeatedRemoteIdentityToPlumbing(
       Collection<com.strongdm.api.RemoteIdentity> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentity>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8230,6 +8911,9 @@ public class Plumbing {
   public static List<com.strongdm.api.RemoteIdentityCreateResponse>
       convertRepeatedRemoteIdentityCreateResponseToPorcelain(
           Collection<RemoteIdentityCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8238,6 +8922,9 @@ public class Plumbing {
   public static List<RemoteIdentityCreateResponse>
       convertRepeatedRemoteIdentityCreateResponseToPlumbing(
           Collection<com.strongdm.api.RemoteIdentityCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8270,6 +8957,9 @@ public class Plumbing {
   public static List<com.strongdm.api.RemoteIdentityDeleteResponse>
       convertRepeatedRemoteIdentityDeleteResponseToPorcelain(
           Collection<RemoteIdentityDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8278,6 +8968,9 @@ public class Plumbing {
   public static List<RemoteIdentityDeleteResponse>
       convertRepeatedRemoteIdentityDeleteResponseToPlumbing(
           Collection<com.strongdm.api.RemoteIdentityDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8316,6 +9009,9 @@ public class Plumbing {
   public static List<com.strongdm.api.RemoteIdentityGetResponse>
       convertRepeatedRemoteIdentityGetResponseToPorcelain(
           Collection<RemoteIdentityGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8323,6 +9019,9 @@ public class Plumbing {
 
   public static List<RemoteIdentityGetResponse> convertRepeatedRemoteIdentityGetResponseToPlumbing(
       Collection<com.strongdm.api.RemoteIdentityGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8353,6 +9052,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RemoteIdentityGroup>
       convertRepeatedRemoteIdentityGroupToPorcelain(Collection<RemoteIdentityGroup> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityGroup>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityGroupToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8360,6 +9062,9 @@ public class Plumbing {
 
   public static List<RemoteIdentityGroup> convertRepeatedRemoteIdentityGroupToPlumbing(
       Collection<com.strongdm.api.RemoteIdentityGroup> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityGroup>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityGroupToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8398,6 +9103,9 @@ public class Plumbing {
   public static List<com.strongdm.api.RemoteIdentityGroupGetResponse>
       convertRepeatedRemoteIdentityGroupGetResponseToPorcelain(
           Collection<RemoteIdentityGroupGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityGroupGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityGroupGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8406,6 +9114,9 @@ public class Plumbing {
   public static List<RemoteIdentityGroupGetResponse>
       convertRepeatedRemoteIdentityGroupGetResponseToPlumbing(
           Collection<com.strongdm.api.RemoteIdentityGroupGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityGroupGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityGroupGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8448,6 +9159,9 @@ public class Plumbing {
   public static List<com.strongdm.api.RemoteIdentityGroupHistory>
       convertRepeatedRemoteIdentityGroupHistoryToPorcelain(
           Collection<RemoteIdentityGroupHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityGroupHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityGroupHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8456,6 +9170,9 @@ public class Plumbing {
   public static List<RemoteIdentityGroupHistory>
       convertRepeatedRemoteIdentityGroupHistoryToPlumbing(
           Collection<com.strongdm.api.RemoteIdentityGroupHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityGroupHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityGroupHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8496,6 +9213,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RemoteIdentityHistory>
       convertRepeatedRemoteIdentityHistoryToPorcelain(Collection<RemoteIdentityHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8503,6 +9223,9 @@ public class Plumbing {
 
   public static List<RemoteIdentityHistory> convertRepeatedRemoteIdentityHistoryToPlumbing(
       Collection<com.strongdm.api.RemoteIdentityHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8541,6 +9264,9 @@ public class Plumbing {
   public static List<com.strongdm.api.RemoteIdentityUpdateResponse>
       convertRepeatedRemoteIdentityUpdateResponseToPorcelain(
           Collection<RemoteIdentityUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RemoteIdentityUpdateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRemoteIdentityUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8549,6 +9275,9 @@ public class Plumbing {
   public static List<RemoteIdentityUpdateResponse>
       convertRepeatedRemoteIdentityUpdateResponseToPlumbing(
           Collection<com.strongdm.api.RemoteIdentityUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RemoteIdentityUpdateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8576,6 +9305,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ReplayChunk> convertRepeatedReplayChunkToPorcelain(
       Collection<ReplayChunk> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ReplayChunk>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertReplayChunkToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8583,6 +9315,9 @@ public class Plumbing {
 
   public static List<ReplayChunk> convertRepeatedReplayChunkToPlumbing(
       Collection<com.strongdm.api.ReplayChunk> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ReplayChunk>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertReplayChunkToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8613,6 +9348,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ReplayChunkEvent> convertRepeatedReplayChunkEventToPorcelain(
       Collection<ReplayChunkEvent> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ReplayChunkEvent>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertReplayChunkEventToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -8620,6 +9358,9 @@ public class Plumbing {
 
   public static List<ReplayChunkEvent> convertRepeatedReplayChunkEventToPlumbing(
       Collection<com.strongdm.api.ReplayChunkEvent> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ReplayChunkEvent>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertReplayChunkEventToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -8694,11 +9435,9 @@ public class Plumbing {
     if (plumbing.hasAzurePostgres()) {
       return convertAzurePostgresToPorcelain(plumbing.getAzurePostgres());
     }
-    if (plumbing.hasAzurePostgresFlexible()) {
-      return convertAzurePostgresFlexibleToPorcelain(plumbing.getAzurePostgresFlexible());
-    }
-    if (plumbing.hasAzurePostgresSingle()) {
-      return convertAzurePostgresSingleToPorcelain(plumbing.getAzurePostgresSingle());
+    if (plumbing.hasAzurePostgresManagedIdentity()) {
+      return convertAzurePostgresManagedIdentityToPorcelain(
+          plumbing.getAzurePostgresManagedIdentity());
     }
     if (plumbing.hasBigQuery()) {
       return convertBigQueryToPorcelain(plumbing.getBigQuery());
@@ -9009,17 +9748,11 @@ public class Plumbing {
           convertAzurePostgresToPlumbing((com.strongdm.api.AzurePostgres) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.AzurePostgresFlexible) {
+    if (porcelain instanceof com.strongdm.api.AzurePostgresManagedIdentity) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setAzurePostgresFlexible(
-          convertAzurePostgresFlexibleToPlumbing(
-              (com.strongdm.api.AzurePostgresFlexible) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.AzurePostgresSingle) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setAzurePostgresSingle(
-          convertAzurePostgresSingleToPlumbing((com.strongdm.api.AzurePostgresSingle) porcelain));
+      builder.setAzurePostgresManagedIdentity(
+          convertAzurePostgresManagedIdentityToPlumbing(
+              (com.strongdm.api.AzurePostgresManagedIdentity) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.BigQuery) {
@@ -9346,6 +10079,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Resource> convertRepeatedResourceToPorcelain(
       Collection<Resource> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Resource>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertResourceToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9353,6 +10089,9 @@ public class Plumbing {
 
   public static List<Resource> convertRepeatedResourceToPlumbing(
       Collection<com.strongdm.api.Resource> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Resource>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertResourceToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9389,6 +10128,9 @@ public class Plumbing {
   public static List<com.strongdm.api.ResourceCreateResponse>
       convertRepeatedResourceCreateResponseToPorcelain(
           Collection<ResourceCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertResourceCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9396,6 +10138,9 @@ public class Plumbing {
 
   public static List<ResourceCreateResponse> convertRepeatedResourceCreateResponseToPlumbing(
       Collection<com.strongdm.api.ResourceCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertResourceCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9428,6 +10173,9 @@ public class Plumbing {
   public static List<com.strongdm.api.ResourceDeleteResponse>
       convertRepeatedResourceDeleteResponseToPorcelain(
           Collection<ResourceDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertResourceDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9435,6 +10183,9 @@ public class Plumbing {
 
   public static List<ResourceDeleteResponse> convertRepeatedResourceDeleteResponseToPlumbing(
       Collection<com.strongdm.api.ResourceDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertResourceDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9469,6 +10220,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ResourceGetResponse>
       convertRepeatedResourceGetResponseToPorcelain(Collection<ResourceGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertResourceGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9476,6 +10230,9 @@ public class Plumbing {
 
   public static List<ResourceGetResponse> convertRepeatedResourceGetResponseToPlumbing(
       Collection<com.strongdm.api.ResourceGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertResourceGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9514,6 +10271,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.ResourceHistory> convertRepeatedResourceHistoryToPorcelain(
       Collection<ResourceHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertResourceHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9521,6 +10281,9 @@ public class Plumbing {
 
   public static List<ResourceHistory> convertRepeatedResourceHistoryToPlumbing(
       Collection<com.strongdm.api.ResourceHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertResourceHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9557,6 +10320,9 @@ public class Plumbing {
   public static List<com.strongdm.api.ResourceUpdateResponse>
       convertRepeatedResourceUpdateResponseToPorcelain(
           Collection<ResourceUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceUpdateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertResourceUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9564,6 +10330,9 @@ public class Plumbing {
 
   public static List<ResourceUpdateResponse> convertRepeatedResourceUpdateResponseToPlumbing(
       Collection<com.strongdm.api.ResourceUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceUpdateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertResourceUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9604,6 +10373,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Role> convertRepeatedRoleToPorcelain(
       Collection<Role> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Role>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9611,6 +10383,9 @@ public class Plumbing {
 
   public static List<Role> convertRepeatedRoleToPlumbing(
       Collection<com.strongdm.api.Role> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Role>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9645,6 +10420,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RoleCreateResponse>
       convertRepeatedRoleCreateResponseToPorcelain(Collection<RoleCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RoleCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9652,6 +10430,9 @@ public class Plumbing {
 
   public static List<RoleCreateResponse> convertRepeatedRoleCreateResponseToPlumbing(
       Collection<com.strongdm.api.RoleCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RoleCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9682,6 +10463,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RoleDeleteResponse>
       convertRepeatedRoleDeleteResponseToPorcelain(Collection<RoleDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RoleDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9689,6 +10473,9 @@ public class Plumbing {
 
   public static List<RoleDeleteResponse> convertRepeatedRoleDeleteResponseToPlumbing(
       Collection<com.strongdm.api.RoleDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RoleDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9723,6 +10510,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RoleGetResponse> convertRepeatedRoleGetResponseToPorcelain(
       Collection<RoleGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RoleGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9730,6 +10520,9 @@ public class Plumbing {
 
   public static List<RoleGetResponse> convertRepeatedRoleGetResponseToPlumbing(
       Collection<com.strongdm.api.RoleGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RoleGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9766,6 +10559,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RoleHistory> convertRepeatedRoleHistoryToPorcelain(
       Collection<RoleHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RoleHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9773,6 +10569,9 @@ public class Plumbing {
 
   public static List<RoleHistory> convertRepeatedRoleHistoryToPlumbing(
       Collection<com.strongdm.api.RoleHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RoleHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9807,6 +10606,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RoleResource> convertRepeatedRoleResourceToPorcelain(
       Collection<RoleResource> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RoleResource>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleResourceToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9814,6 +10616,9 @@ public class Plumbing {
 
   public static List<RoleResource> convertRepeatedRoleResourceToPlumbing(
       Collection<com.strongdm.api.RoleResource> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RoleResource>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleResourceToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9852,6 +10657,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RoleResourceHistory>
       convertRepeatedRoleResourceHistoryToPorcelain(Collection<RoleResourceHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RoleResourceHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleResourceHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9859,6 +10667,9 @@ public class Plumbing {
 
   public static List<RoleResourceHistory> convertRepeatedRoleResourceHistoryToPlumbing(
       Collection<com.strongdm.api.RoleResourceHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RoleResourceHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleResourceHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9893,6 +10704,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.RoleUpdateResponse>
       convertRepeatedRoleUpdateResponseToPorcelain(Collection<RoleUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RoleUpdateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertRoleUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9900,6 +10714,9 @@ public class Plumbing {
 
   public static List<RoleUpdateResponse> convertRepeatedRoleUpdateResponseToPlumbing(
       Collection<com.strongdm.api.RoleUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RoleUpdateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertRoleUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -9976,6 +10793,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SQLServer> convertRepeatedSQLServerToPorcelain(
       Collection<SQLServer> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SQLServer>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSQLServerToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -9983,6 +10803,9 @@ public class Plumbing {
 
   public static List<SQLServer> convertRepeatedSQLServerToPlumbing(
       Collection<com.strongdm.api.SQLServer> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SQLServer>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSQLServerToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10065,6 +10888,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SQLServerAzureAD> convertRepeatedSQLServerAzureADToPorcelain(
       Collection<SQLServerAzureAD> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SQLServerAzureAD>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSQLServerAzureADToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10072,6 +10898,9 @@ public class Plumbing {
 
   public static List<SQLServerAzureAD> convertRepeatedSQLServerAzureADToPlumbing(
       Collection<com.strongdm.api.SQLServerAzureAD> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SQLServerAzureAD>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSQLServerAzureADToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10162,6 +10991,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SQLServerKerberosAD>
       convertRepeatedSQLServerKerberosADToPorcelain(Collection<SQLServerKerberosAD> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SQLServerKerberosAD>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSQLServerKerberosADToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10169,6 +11001,9 @@ public class Plumbing {
 
   public static List<SQLServerKerberosAD> convertRepeatedSQLServerKerberosADToPlumbing(
       Collection<com.strongdm.api.SQLServerKerberosAD> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SQLServerKerberosAD>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSQLServerKerberosADToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10243,6 +11078,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SSH> convertRepeatedSSHToPorcelain(
       Collection<SSH> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SSH>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSSHToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10250,6 +11088,9 @@ public class Plumbing {
 
   public static List<SSH> convertRepeatedSSHToPlumbing(
       Collection<com.strongdm.api.SSH> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SSH>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSSHToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10330,6 +11171,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SSHCert> convertRepeatedSSHCertToPorcelain(
       Collection<SSHCert> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SSHCert>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSSHCertToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10337,6 +11181,9 @@ public class Plumbing {
 
   public static List<SSHCert> convertRepeatedSSHCertToPlumbing(
       Collection<com.strongdm.api.SSHCert> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SSHCert>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSSHCertToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10409,6 +11256,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SSHCustomerKey> convertRepeatedSSHCustomerKeyToPorcelain(
       Collection<SSHCustomerKey> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SSHCustomerKey>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSSHCustomerKeyToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10416,6 +11266,9 @@ public class Plumbing {
 
   public static List<SSHCustomerKey> convertRepeatedSSHCustomerKeyToPlumbing(
       Collection<com.strongdm.api.SSHCustomerKey> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SSHCustomerKey>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSSHCustomerKeyToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10524,6 +11377,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SecretStore> convertRepeatedSecretStoreToPorcelain(
       Collection<SecretStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSecretStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10531,6 +11387,9 @@ public class Plumbing {
 
   public static List<SecretStore> convertRepeatedSecretStoreToPlumbing(
       Collection<com.strongdm.api.SecretStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10567,6 +11426,9 @@ public class Plumbing {
   public static List<com.strongdm.api.SecretStoreCreateResponse>
       convertRepeatedSecretStoreCreateResponseToPorcelain(
           Collection<SecretStoreCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreCreateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSecretStoreCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10574,6 +11436,9 @@ public class Plumbing {
 
   public static List<SecretStoreCreateResponse> convertRepeatedSecretStoreCreateResponseToPlumbing(
       Collection<com.strongdm.api.SecretStoreCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreCreateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreCreateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10606,6 +11471,9 @@ public class Plumbing {
   public static List<com.strongdm.api.SecretStoreDeleteResponse>
       convertRepeatedSecretStoreDeleteResponseToPorcelain(
           Collection<SecretStoreDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreDeleteResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSecretStoreDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10613,6 +11481,9 @@ public class Plumbing {
 
   public static List<SecretStoreDeleteResponse> convertRepeatedSecretStoreDeleteResponseToPlumbing(
       Collection<com.strongdm.api.SecretStoreDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreDeleteResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreDeleteResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10649,6 +11520,9 @@ public class Plumbing {
   public static List<com.strongdm.api.SecretStoreGetResponse>
       convertRepeatedSecretStoreGetResponseToPorcelain(
           Collection<SecretStoreGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreGetResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSecretStoreGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10656,6 +11530,9 @@ public class Plumbing {
 
   public static List<SecretStoreGetResponse> convertRepeatedSecretStoreGetResponseToPlumbing(
       Collection<com.strongdm.api.SecretStoreGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreGetResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10694,6 +11571,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SecretStoreHistory>
       convertRepeatedSecretStoreHistoryToPorcelain(Collection<SecretStoreHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreHistory>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSecretStoreHistoryToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10701,6 +11581,9 @@ public class Plumbing {
 
   public static List<SecretStoreHistory> convertRepeatedSecretStoreHistoryToPlumbing(
       Collection<com.strongdm.api.SecretStoreHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreHistory>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10737,6 +11620,9 @@ public class Plumbing {
   public static List<com.strongdm.api.SecretStoreUpdateResponse>
       convertRepeatedSecretStoreUpdateResponseToPorcelain(
           Collection<SecretStoreUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreUpdateResponse>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSecretStoreUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10744,6 +11630,9 @@ public class Plumbing {
 
   public static List<SecretStoreUpdateResponse> convertRepeatedSecretStoreUpdateResponseToPlumbing(
       Collection<com.strongdm.api.SecretStoreUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreUpdateResponse>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10778,6 +11667,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Service> convertRepeatedServiceToPorcelain(
       Collection<Service> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Service>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertServiceToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10785,6 +11677,9 @@ public class Plumbing {
 
   public static List<Service> convertRepeatedServiceToPlumbing(
       Collection<com.strongdm.api.Service> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Service>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertServiceToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10859,6 +11754,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SingleStore> convertRepeatedSingleStoreToPorcelain(
       Collection<SingleStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SingleStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSingleStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10866,6 +11764,9 @@ public class Plumbing {
 
   public static List<SingleStore> convertRepeatedSingleStoreToPlumbing(
       Collection<com.strongdm.api.SingleStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SingleStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSingleStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -10938,6 +11839,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Snowflake> convertRepeatedSnowflakeToPorcelain(
       Collection<Snowflake> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Snowflake>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSnowflakeToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -10945,6 +11849,9 @@ public class Plumbing {
 
   public static List<Snowflake> convertRepeatedSnowflakeToPlumbing(
       Collection<com.strongdm.api.Snowflake> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Snowflake>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSnowflakeToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11005,6 +11912,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Snowsight> convertRepeatedSnowsightToPorcelain(
       Collection<Snowsight> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Snowsight>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSnowsightToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11012,6 +11922,9 @@ public class Plumbing {
 
   public static List<Snowsight> convertRepeatedSnowsightToPlumbing(
       Collection<com.strongdm.api.Snowsight> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Snowsight>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSnowsightToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11078,6 +11991,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Sybase> convertRepeatedSybaseToPorcelain(
       Collection<Sybase> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Sybase>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSybaseToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11085,6 +12001,9 @@ public class Plumbing {
 
   public static List<Sybase> convertRepeatedSybaseToPlumbing(
       Collection<com.strongdm.api.Sybase> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Sybase>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSybaseToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11151,6 +12070,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.SybaseIQ> convertRepeatedSybaseIQToPorcelain(
       Collection<SybaseIQ> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SybaseIQ>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertSybaseIQToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11158,6 +12080,9 @@ public class Plumbing {
 
   public static List<SybaseIQ> convertRepeatedSybaseIQToPlumbing(
       Collection<com.strongdm.api.SybaseIQ> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SybaseIQ>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertSybaseIQToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11186,6 +12111,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Tag> convertRepeatedTagToPorcelain(
       Collection<Tag> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Tag>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertTagToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11193,6 +12121,9 @@ public class Plumbing {
 
   public static List<Tag> convertRepeatedTagToPlumbing(
       Collection<com.strongdm.api.Tag> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Tag>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertTagToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11259,6 +12190,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Teradata> convertRepeatedTeradataToPorcelain(
       Collection<Teradata> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Teradata>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertTeradataToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11266,6 +12200,9 @@ public class Plumbing {
 
   public static List<Teradata> convertRepeatedTeradataToPlumbing(
       Collection<com.strongdm.api.Teradata> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Teradata>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertTeradataToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11336,6 +12273,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.Trino> convertRepeatedTrinoToPorcelain(
       Collection<Trino> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Trino>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertTrinoToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11343,6 +12283,9 @@ public class Plumbing {
 
   public static List<Trino> convertRepeatedTrinoToPlumbing(
       Collection<com.strongdm.api.Trino> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Trino>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertTrinoToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11367,6 +12310,9 @@ public class Plumbing {
   public static List<com.strongdm.api.UpdateResponseMetadata>
       convertRepeatedUpdateResponseMetadataToPorcelain(
           Collection<UpdateResponseMetadata> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.UpdateResponseMetadata>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertUpdateResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11374,6 +12320,9 @@ public class Plumbing {
 
   public static List<UpdateResponseMetadata> convertRepeatedUpdateResponseMetadataToPlumbing(
       Collection<com.strongdm.api.UpdateResponseMetadata> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<UpdateResponseMetadata>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertUpdateResponseMetadataToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11428,6 +12377,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.User> convertRepeatedUserToPorcelain(
       Collection<User> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.User>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertUserToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11435,6 +12387,9 @@ public class Plumbing {
 
   public static List<User> convertRepeatedUserToPlumbing(
       Collection<com.strongdm.api.User> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<User>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertUserToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11477,6 +12432,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.VaultAppRoleStore>
       convertRepeatedVaultAppRoleStoreToPorcelain(Collection<VaultAppRoleStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultAppRoleStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertVaultAppRoleStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11484,6 +12442,9 @@ public class Plumbing {
 
   public static List<VaultAppRoleStore> convertRepeatedVaultAppRoleStoreToPlumbing(
       Collection<com.strongdm.api.VaultAppRoleStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultAppRoleStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertVaultAppRoleStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11538,6 +12499,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.VaultTLSStore> convertRepeatedVaultTLSStoreToPorcelain(
       Collection<VaultTLSStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultTLSStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertVaultTLSStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11545,6 +12509,9 @@ public class Plumbing {
 
   public static List<VaultTLSStore> convertRepeatedVaultTLSStoreToPlumbing(
       Collection<com.strongdm.api.VaultTLSStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultTLSStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertVaultTLSStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
@@ -11587,6 +12554,9 @@ public class Plumbing {
 
   public static List<com.strongdm.api.VaultTokenStore> convertRepeatedVaultTokenStoreToPorcelain(
       Collection<VaultTokenStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultTokenStore>();
+    }
     return plumbings.stream()
         .map(plumbing -> convertVaultTokenStoreToPorcelain(plumbing))
         .collect(Collectors.toList());
@@ -11594,6 +12564,9 @@ public class Plumbing {
 
   public static List<VaultTokenStore> convertRepeatedVaultTokenStoreToPlumbing(
       Collection<com.strongdm.api.VaultTokenStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultTokenStore>();
+    }
     return porcelains.stream()
         .map(porcelain -> convertVaultTokenStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
