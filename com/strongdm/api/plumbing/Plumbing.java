@@ -8131,6 +8131,7 @@ public class Plumbing {
     porcelain.setResourceName((plumbing.getResourceName()));
     porcelain.setResourceTags(Plumbing.convertTagsToPorcelain(plumbing.getResourceTags()));
     porcelain.setResourceType((plumbing.getResourceType()));
+    porcelain.setSourceIp((plumbing.getSourceIp()));
     porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
     return porcelain;
   }
@@ -8199,6 +8200,9 @@ public class Plumbing {
     }
     if (porcelain.getResourceType() != null) {
       builder.setResourceType((porcelain.getResourceType()));
+    }
+    if (porcelain.getSourceIp() != null) {
+      builder.setSourceIp((porcelain.getSourceIp()));
     }
     if (porcelain.getTimestamp() != null) {
       builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));

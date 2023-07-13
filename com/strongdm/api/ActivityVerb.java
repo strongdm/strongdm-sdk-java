@@ -172,23 +172,6 @@ public final class ActivityVerb {
       "access request to resource granted";
   public static final String ACCESS_REQUEST_TO_RESOURCE_GRANTED_AUTOMATICALLY =
       "access request to resource granted automatically";
-  public static final String WORKFLOW_ADDED = "access workflow added";
-  public static final String WORKFLOW_DELETED = "access workflow deleted";
-  public static final String WORKFLOW_RESOURCE_ASSIGNED = "resource assigned to workflow";
-  public static final String WORKFLOW_RESOURCE_UNASSIGNED = "resource unassigned from workflow";
-  public static final String WORKFLOW_RESOURCE_MULTIPLE_ASSIGNED =
-      "multiple resources assigned to workflow";
-  public static final String WORKFLOW_RESOURCE_MULTIPLE_UNASSIGNED =
-      "multiple resources unassigned from workflow";
-  public static final String WORKFLOW_ROLES_UPDATED = "workflow roles updated";
-  public static final String WORKFLOW_APPROVERS_UPDATED = "workflow approvers updated";
-  public static final String WORKFLOW_NAME_UPDATED = "workflow name updated";
-  public static final String WORKFLOW_DESCRIPTION_UPDATED = "workflow description updated";
-  public static final String WORKFLOW_AUTO_GRANT_UPDATED = "workflow auto grant updated";
-  public static final String WORKFLOW_REQUIRES_REASON_UPDATED = "workflow requires reason updated";
-  public static final String WORKFLOW_ACCESS_RULES_UPDATED = "workflow access rules updated";
-  public static final String WORKFLOW_ACCESS_RULES_DELETED = "workflow access rules deleted";
-  public static final String WORKFLOW_ACCESS_RULES_CREATED = "workflow access rules created";
   public static final String ORG_VNM_SUBNET_UPDATED = "organization VNM subnet updated";
   public static final String ORG_VNM_RESOURCES_ALLOCATED =
       "organization resources allocated within VNM subnet";

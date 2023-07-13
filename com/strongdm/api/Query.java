@@ -333,6 +333,16 @@ public class Query {
     this.resourceType = in;
   }
 
+  private String sourceIp;
+  /** The IP address the Query was performed from, as detected at the ingress gateway. */
+  public String getSourceIp() {
+    return this.sourceIp;
+  }
+  /** The IP address the Query was performed from, as detected at the ingress gateway. */
+  public void setSourceIp(String in) {
+    this.sourceIp = in;
+  }
+
   private Date timestamp;
   /** The time at which the Query was started. */
   public Date getTimestamp() {

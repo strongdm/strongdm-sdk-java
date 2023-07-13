@@ -2871,6 +2871,26 @@ public final class QueriesPlumbing {
      * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder getCaptureOrBuilder();
+
+    /**
+     * <pre>
+     * The IP address the Query was performed from, as detected at the ingress gateway.
+     * </pre>
+     *
+     * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+     * @return The sourceIp.
+     */
+    java.lang.String getSourceIp();
+    /**
+     * <pre>
+     * The IP address the Query was performed from, as detected at the ingress gateway.
+     * </pre>
+     *
+     * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sourceIp.
+     */
+    com.google.protobuf.ByteString
+        getSourceIpBytes();
   }
   /**
    * <pre>
@@ -2908,6 +2928,7 @@ public final class QueriesPlumbing {
       accountLastName_ = "";
       accountEmail_ = "";
       queryKeyId_ = "";
+      sourceIp_ = "";
     }
 
     @java.lang.Override
@@ -3121,6 +3142,12 @@ public final class QueriesPlumbing {
                 capture_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sourceIp_ = s;
               break;
             }
             default: {
@@ -4148,6 +4175,52 @@ public final class QueriesPlumbing {
       return getCapture();
     }
 
+    public static final int SOURCE_IP_FIELD_NUMBER = 25;
+    private volatile java.lang.Object sourceIp_;
+    /**
+     * <pre>
+     * The IP address the Query was performed from, as detected at the ingress gateway.
+     * </pre>
+     *
+     * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+     * @return The sourceIp.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceIp() {
+      java.lang.Object ref = sourceIp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceIp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The IP address the Query was performed from, as detected at the ingress gateway.
+     * </pre>
+     *
+     * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sourceIp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceIpBytes() {
+      java.lang.Object ref = sourceIp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceIp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4233,6 +4306,9 @@ public final class QueriesPlumbing {
       }
       if (capture_ != null) {
         output.writeMessage(24, getCapture());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceIp_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, sourceIp_);
       }
       unknownFields.writeTo(output);
     }
@@ -4324,6 +4400,9 @@ public final class QueriesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(24, getCapture());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceIp_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, sourceIp_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4405,6 +4484,8 @@ public final class QueriesPlumbing {
         if (!getCapture()
             .equals(other.getCapture())) return false;
       }
+      if (!getSourceIp()
+          .equals(other.getSourceIp())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4479,6 +4560,8 @@ public final class QueriesPlumbing {
         hash = (37 * hash) + CAPTURE_FIELD_NUMBER;
         hash = (53 * hash) + getCapture().hashCode();
       }
+      hash = (37 * hash) + SOURCE_IP_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceIp().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4692,6 +4775,8 @@ public final class QueriesPlumbing {
           capture_ = null;
           captureBuilder_ = null;
         }
+        sourceIp_ = "";
+
         return this;
       }
 
@@ -4766,6 +4851,7 @@ public final class QueriesPlumbing {
         } else {
           result.capture_ = captureBuilder_.build();
         }
+        result.sourceIp_ = sourceIp_;
         onBuilt();
         return result;
       }
@@ -4900,6 +4986,10 @@ public final class QueriesPlumbing {
         }
         if (other.hasCapture()) {
           mergeCapture(other.getCapture());
+        }
+        if (!other.getSourceIp().isEmpty()) {
+          sourceIp_ = other.sourceIp_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7503,6 +7593,102 @@ public final class QueriesPlumbing {
           capture_ = null;
         }
         return captureBuilder_;
+      }
+
+      private java.lang.Object sourceIp_ = "";
+      /**
+       * <pre>
+       * The IP address the Query was performed from, as detected at the ingress gateway.
+       * </pre>
+       *
+       * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+       * @return The sourceIp.
+       */
+      public java.lang.String getSourceIp() {
+        java.lang.Object ref = sourceIp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceIp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The IP address the Query was performed from, as detected at the ingress gateway.
+       * </pre>
+       *
+       * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for sourceIp.
+       */
+      public com.google.protobuf.ByteString
+          getSourceIpBytes() {
+        java.lang.Object ref = sourceIp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceIp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The IP address the Query was performed from, as detected at the ingress gateway.
+       * </pre>
+       *
+       * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+       * @param value The sourceIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceIp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sourceIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The IP address the Query was performed from, as detected at the ingress gateway.
+       * </pre>
+       *
+       * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceIp() {
+        
+        sourceIp_ = getDefaultInstance().getSourceIp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The IP address the Query was performed from, as detected at the ingress gateway.
+       * </pre>
+       *
+       * <code>string source_ip = 25 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for sourceIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sourceIp_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10273,7 +10459,7 @@ java.lang.String defaultValue);
       "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362" +
       "\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gate" +
       "way:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pro" +
-      "vider\"\355\007\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "vider\"\244\010\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "\036\n\naccount_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resou" +
       "rce_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nquery_body\030\004" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030\005 \001(\0132\031.goo" +
@@ -10297,30 +10483,31 @@ java.lang.String defaultValue);
       "\007\ngo_private\022<\n\014completed_at\030\027 \001(\0132\032.goo" +
       "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022-\n\007ca" +
       "pture\030\030 \001(\0132\020.v1.QueryCaptureB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terra" +
-      "form-provider\"\253\004\n\014QueryCapture\022\031\n\005width\030" +
-      "\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006height\030\002 \001(\005B\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\033\n\007command\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\003en" +
-      "v\030\004 \003(\0132\031.v1.QueryCapture.EnvEntryB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022\030\n\004type\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tfile" +
-      "_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tfile_size\030\007 \001" +
-      "(\003B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016client_command\030\010 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022\027\n\003pod\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tc" +
-      "ontainer\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016request_me" +
-      "thod\030\013 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\013request_uri\030\014 " +
-      "\001(\tB$\362\370\263\007\037\260\363\263\007\001\312\363\263\007\025\302\364\263\007\020\n\002go\022\nRequestUR" +
-      "I\022 \n\014request_body\030\r \001(\014B\n\362\370\263\007\005\260\363\263\007\001\032*\n\010E" +
-      "nvEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:" +
-      "2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terrafo" +
-      "rm-provider2\245\001\n\007Queries\022W\n\004List\022\024.v1.Que" +
-      "ryListRequest\032\025.v1.QueryListResponse\"\"\202\371" +
-      "\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/queries\032A\312\371\263\007\n\302" +
-      "\371\263\007\005Query\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023" +
-      "!terraform-providerB\213\001\n\031com.strongdm.api" +
-      ".plumbingB\017QueriesPlumbingZ5github.com/s" +
-      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
-      "1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provide" +
-      "rb\006proto3"
+      "\001\0225\n\tsource_ip\030\031 \001(\tB\"\362\370\263\007\035\260\363\263\007\001\312\363\263\007\023\302\364\263" +
+      "\007\016\n\002go\022\010SourceIP:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372" +
+      "\370\263\007\030\322\363\263\007\023!terraform-provider\"\253\004\n\014QueryCa" +
+      "pture\022\031\n\005width\030\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006heig" +
+      "ht\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007command\030\003 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\0222\n\003env\030\004 \003(\0132\031.v1.QueryCapture" +
+      ".EnvEntryB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\005 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\035\n\tfile_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035" +
+      "\n\tfile_size\030\007 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016client_" +
+      "command\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\027\n\003pod\030\t \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\035\n\tcontainer\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\"\n\016request_method\030\013 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n" +
+      "\013request_uri\030\014 \001(\tB$\362\370\263\007\037\260\363\263\007\001\312\363\263\007\025\302\364\263\007\020" +
+      "\n\002go\022\nRequestURI\022 \n\014request_body\030\r \001(\014B\n" +
+      "\362\370\263\007\005\260\363\263\007\001\032*\n\010EnvEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263" +
+      "\007\030\322\363\263\007\023!terraform-provider2\245\001\n\007Queries\022W" +
+      "\n\004List\022\024.v1.QueryListRequest\032\025.v1.QueryL" +
+      "istResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/" +
+      "queries\032A\312\371\263\007\n\302\371\263\007\005Query\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312" +
+      "\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\213\001\n\031c" +
+      "om.strongdm.api.plumbingB\017QueriesPlumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!te" +
+      "rraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10348,7 +10535,7 @@ java.lang.String defaultValue);
     internal_static_v1_Query_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Query_descriptor,
-        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", "Capture", });
+        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", "Capture", "SourceIp", });
     internal_static_v1_QueryCapture_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_QueryCapture_fieldAccessorTable = new
