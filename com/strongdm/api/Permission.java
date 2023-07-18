@@ -26,6 +26,8 @@ public final class Permission {
   public static final String DEPRECATED_DATASOURCE_GRANT = "datasource:grant";
   public static final String DATASOURCE_DELETE = "datasource:delete";
   public static final String DATASOURCE_UPDATE = "datasource:update";
+  public static final String RESOURCE_LOCK_DELETE = "resourcelock:delete";
+  public static final String RESOURCE_LOCK_LIST = "resourcelock:list";
   public static final String SECRET_STORE_CREATE = "secretstore:create";
   public static final String SECRET_STORE_LIST = "secretstore:list";
   public static final String SECRET_STORE_DELETE = "secretstore:delete";

@@ -21,16 +21,6 @@ import java.util.List;
 
 /** Relay represents a StrongDM CLI installation running in relay mode. */
 public class Relay implements Node {
-  private String connectsTo;
-  /** ConnectsTo can be used to restrict the peering between relays and gateways. */
-  public String getConnectsTo() {
-    return this.connectsTo;
-  }
-  /** ConnectsTo can be used to restrict the peering between relays and gateways. */
-  public void setConnectsTo(String in) {
-    this.connectsTo = in;
-  }
-
   private String device;
   /** Device is a read only device name uploaded by the gateway process when it comes online. */
   public String getDevice() {

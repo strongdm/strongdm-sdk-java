@@ -12190,28 +12190,6 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-     * @return The connectsTo.
-     */
-    java.lang.String getConnectsTo();
-    /**
-     * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for connectsTo.
-     */
-    com.google.protobuf.ByteString
-        getConnectsToBytes();
-
-    /**
-     * <pre>
      * Maintenance Windows define when this node is allowed to restart. If a node
      * is requested to restart, it will check each window to determine if any of
      * them permit it to restart, and if any do, it will. This check is repeated
@@ -12324,7 +12302,6 @@ public final class NodesPlumbing {
       location_ = "";
       version_ = "";
       uuid_ = "";
-      connectsTo_ = "";
       maintenanceWindows_ = java.util.Collections.emptyList();
     }
 
@@ -12418,12 +12395,6 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               uuid_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              connectsTo_ = s;
               break;
             }
             case 90: {
@@ -12890,54 +12861,6 @@ public final class NodesPlumbing {
       }
     }
 
-    public static final int CONNECTS_TO_FIELD_NUMBER = 10;
-    private volatile java.lang.Object connectsTo_;
-    /**
-     * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-     * @return The connectsTo.
-     */
-    @java.lang.Override
-    public java.lang.String getConnectsTo() {
-      java.lang.Object ref = connectsTo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        connectsTo_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for connectsTo.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getConnectsToBytes() {
-      java.lang.Object ref = connectsTo_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        connectsTo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int MAINTENANCE_WINDOWS_FIELD_NUMBER = 11;
     private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_;
     /**
@@ -13084,9 +13007,6 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, uuid_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, connectsTo_);
-      }
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         output.writeMessage(11, maintenanceWindows_.get(i));
       }
@@ -13126,9 +13046,6 @@ public final class NodesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, uuid_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, connectsTo_);
       }
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -13170,8 +13087,6 @@ public final class NodesPlumbing {
           .equals(other.getVersion())) return false;
       if (!getUuid()
           .equals(other.getUuid())) return false;
-      if (!getConnectsTo()
-          .equals(other.getConnectsTo())) return false;
       if (!getMaintenanceWindowsList()
           .equals(other.getMaintenanceWindowsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -13205,8 +13120,6 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getVersion().hashCode();
       hash = (37 * hash) + UUID_FIELD_NUMBER;
       hash = (53 * hash) + getUuid().hashCode();
-      hash = (37 * hash) + CONNECTS_TO_FIELD_NUMBER;
-      hash = (53 * hash) + getConnectsTo().hashCode();
       if (getMaintenanceWindowsCount() > 0) {
         hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
@@ -13371,8 +13284,6 @@ public final class NodesPlumbing {
 
         uuid_ = "";
 
-        connectsTo_ = "";
-
         if (maintenanceWindowsBuilder_ == null) {
           maintenanceWindows_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -13419,7 +13330,6 @@ public final class NodesPlumbing {
         result.location_ = location_;
         result.version_ = version_;
         result.uuid_ = uuid_;
-        result.connectsTo_ = connectsTo_;
         if (maintenanceWindowsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
@@ -13510,10 +13420,6 @@ public final class NodesPlumbing {
         }
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (!other.getConnectsTo().isEmpty()) {
-          connectsTo_ = other.connectsTo_;
           onChanged();
         }
         if (maintenanceWindowsBuilder_ == null) {
@@ -14525,107 +14431,6 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private java.lang.Object connectsTo_ = "";
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-       * @return The connectsTo.
-       */
-      public java.lang.String getConnectsTo() {
-        java.lang.Object ref = connectsTo_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          connectsTo_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for connectsTo.
-       */
-      public com.google.protobuf.ByteString
-          getConnectsToBytes() {
-        java.lang.Object ref = connectsTo_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          connectsTo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-       * @param value The connectsTo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConnectsTo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        connectsTo_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConnectsTo() {
-        
-        connectsTo_ = getDefaultInstance().getConnectsTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for connectsTo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConnectsToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        connectsTo_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_ =
         java.util.Collections.emptyList();
       private void ensureMaintenanceWindowsIsMutable() {
@@ -15397,28 +15202,6 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-     * @return The connectsTo.
-     */
-    java.lang.String getConnectsTo();
-    /**
-     * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for connectsTo.
-     */
-    com.google.protobuf.ByteString
-        getConnectsToBytes();
-
-    /**
-     * <pre>
      * Maintenance Windows define when this node is allowed to restart. If a node
      * is requested to restart, it will check each window to determine if any of
      * them permit it to restart, and if any do, it will. This check is repeated
@@ -15533,7 +15316,6 @@ public final class NodesPlumbing {
       location_ = "";
       version_ = "";
       uuid_ = "";
-      connectsTo_ = "";
       maintenanceWindows_ = java.util.Collections.emptyList();
     }
 
@@ -15639,12 +15421,6 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               uuid_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              connectsTo_ = s;
               break;
             }
             case 106: {
@@ -16203,54 +15979,6 @@ public final class NodesPlumbing {
       }
     }
 
-    public static final int CONNECTS_TO_FIELD_NUMBER = 12;
-    private volatile java.lang.Object connectsTo_;
-    /**
-     * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-     * @return The connectsTo.
-     */
-    @java.lang.Override
-    public java.lang.String getConnectsTo() {
-      java.lang.Object ref = connectsTo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        connectsTo_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ConnectsTo can be used to restrict the peering between relays and
-     * gateways.
-     * </pre>
-     *
-     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for connectsTo.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getConnectsToBytes() {
-      java.lang.Object ref = connectsTo_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        connectsTo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int MAINTENANCE_WINDOWS_FIELD_NUMBER = 13;
     private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_;
     /**
@@ -16403,9 +16131,6 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, uuid_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, connectsTo_);
-      }
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         output.writeMessage(13, maintenanceWindows_.get(i));
       }
@@ -16452,9 +16177,6 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, uuid_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, connectsTo_);
-      }
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, maintenanceWindows_.get(i));
@@ -16499,8 +16221,6 @@ public final class NodesPlumbing {
           .equals(other.getVersion())) return false;
       if (!getUuid()
           .equals(other.getUuid())) return false;
-      if (!getConnectsTo()
-          .equals(other.getConnectsTo())) return false;
       if (!getMaintenanceWindowsList()
           .equals(other.getMaintenanceWindowsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -16538,8 +16258,6 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getVersion().hashCode();
       hash = (37 * hash) + UUID_FIELD_NUMBER;
       hash = (53 * hash) + getUuid().hashCode();
-      hash = (37 * hash) + CONNECTS_TO_FIELD_NUMBER;
-      hash = (53 * hash) + getConnectsTo().hashCode();
       if (getMaintenanceWindowsCount() > 0) {
         hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
@@ -16708,8 +16426,6 @@ public final class NodesPlumbing {
 
         uuid_ = "";
 
-        connectsTo_ = "";
-
         if (maintenanceWindowsBuilder_ == null) {
           maintenanceWindows_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -16758,7 +16474,6 @@ public final class NodesPlumbing {
         result.location_ = location_;
         result.version_ = version_;
         result.uuid_ = uuid_;
-        result.connectsTo_ = connectsTo_;
         if (maintenanceWindowsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
@@ -16857,10 +16572,6 @@ public final class NodesPlumbing {
         }
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (!other.getConnectsTo().isEmpty()) {
-          connectsTo_ = other.connectsTo_;
           onChanged();
         }
         if (maintenanceWindowsBuilder_ == null) {
@@ -18060,107 +17771,6 @@ public final class NodesPlumbing {
   checkByteStringIsUtf8(value);
         
         uuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object connectsTo_ = "";
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-       * @return The connectsTo.
-       */
-      public java.lang.String getConnectsTo() {
-        java.lang.Object ref = connectsTo_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          connectsTo_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for connectsTo.
-       */
-      public com.google.protobuf.ByteString
-          getConnectsToBytes() {
-        java.lang.Object ref = connectsTo_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          connectsTo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-       * @param value The connectsTo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConnectsTo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        connectsTo_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConnectsTo() {
-        
-        connectsTo_ = getDefaultInstance().getConnectsTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ConnectsTo can be used to restrict the peering between relays and
-       * gateways.
-       * </pre>
-       *
-       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for connectsTo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConnectsToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        connectsTo_ = value;
         onChanged();
         return this;
       }
@@ -19575,7 +19185,7 @@ public final class NodesPlumbing {
       "\001(\0132\013.v1.GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_ex" +
       "amples/node_resource.txt\252\363\263\007 tf_examples" +
       "/node_data_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022" +
-      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\373\003\n\005Relay\022" +
+      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\332\003\n\005Relay\022" +
       "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
       "\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007" +
       "\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004" +
@@ -19584,46 +19194,44 @@ public final class NodesPlumbing {
       " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\007 \001(\tB" +
       "\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n" +
       "\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007" +
-      "\001\262\364\263\007\ngo_private\022\037\n\013connects_to\030\n \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022t\n\023maintenance_windows\030\013 \003(\0132\031" +
-      ".v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263" +
-      "\007-\302\364\263\007(\n\022terraform-provider\022\022maintenance" +
-      "_window:\n\372\370\263\007\005\250\363\263\007\001\"\327\004\n\007Gateway\022\026\n\002id\030\001 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
-      "\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364" +
-      "\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016listen_a" +
-      "ddress\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bi" +
-      "nd_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"" +
-      "\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016ga" +
-      "teway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device" +
-      "\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t \001(" +
-      "\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362\370\263" +
-      "\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364" +
-      "\263\007\001\262\364\263\007\ngo_private\022\037\n\013connects_to\030\014 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022t\n\023maintenance_windows\030\r \003(\013" +
-      "2\031.v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312" +
-      "\363\263\007-\302\364\263\007(\n\022terraform-provider\022\022maintenan" +
-      "ce_window:\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n\025NodeMaintenanc" +
-      "eWindow\022!\n\rcron_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022$\n\020require_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001" +
-      ":T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-provid" +
-      "er\022\010TypeList\372\363\263\007\035nodeMaintenanceWindowEl" +
-      "emType2\356\003\n\005Nodes\022Z\n\006Create\022\025.v1.NodeCrea" +
-      "teRequest\032\026.v1.NodeCreateResponse\"!\202\371\263\007\t" +
-      "\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1" +
-      ".NodeGetRequest\032\023.v1.NodeGetResponse\"%\202\371" +
-      "\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006U" +
-      "pdate\022\025.v1.NodeUpdateRequest\032\026.v1.NodeUp" +
-      "dateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1" +
-      "/nodes/{id}\022a\n\006Delete\022\025.v1.NodeDeleteReq" +
-      "uest\032\026.v1.NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006" +
-      "delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023" +
-      ".v1.NodeListRequest\032\024.v1.NodeListRespons" +
-      "e\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263" +
-      "\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Ba\n\031com.strongdm." +
-      "api.plumbingB\rNodesPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
-      "v1b\006proto3"
+      "\001\262\364\263\007\ngo_private\022t\n\023maintenance_windows\030" +
+      "\013 \003(\0132\031.v1.NodeMaintenanceWindowB<\362\370\263\0077\260" +
+      "\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-provider\022\022main" +
+      "tenance_window:\n\372\370\263\007\005\250\363\263\007\001\"\266\004\n\007Gateway\022\026" +
+      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
+      "\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001" +
+      "\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016l" +
+      "isten_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007" +
+      "\001\022*\n\014bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001" +
+      "\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\"\n\016gateway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n" +
+      "\006device\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010locati" +
+      "on\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001" +
+      "(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031" +
+      "\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023maintenance" +
+      "_windows\030\r \003(\0132\031.v1.NodeMaintenanceWindo" +
+      "wB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-provi" +
+      "der\022\022maintenance_window:\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n\025" +
+      "NodeMaintenanceWindow\022!\n\rcron_schedule\030\001" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_idleness\030\002 \001" +
+      "(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022te" +
+      "rraform-provider\022\010TypeList\372\363\263\007\035nodeMaint" +
+      "enanceWindowElemType2\356\003\n\005Nodes\022Z\n\006Create" +
+      "\022\025.v1.NodeCreateRequest\032\026.v1.NodeCreateR" +
+      "esponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nod" +
+      "es\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeG" +
+      "etResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/n" +
+      "odes/{id}\022^\n\006Update\022\025.v1.NodeUpdateReque" +
+      "st\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363\263\007\003pu" +
+      "t\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete\022\025.v1" +
+      ".NodeDeleteRequest\032\026.v1.NodeDeleteRespon" +
+      "se\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/" +
+      "{id}\022S\n\004List\022\023.v1.NodeListRequest\032\024.v1.N" +
+      "odeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t" +
+      "/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Ba\n" +
+      "\031com.strongdm.api.plumbingB\rNodesPlumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19703,13 +19311,13 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", "MaintenanceWindows", });
+        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", "MaintenanceWindows", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", });
     internal_static_v1_NodeMaintenanceWindow_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable = new

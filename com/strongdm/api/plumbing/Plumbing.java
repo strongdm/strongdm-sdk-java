@@ -5113,7 +5113,6 @@ public class Plumbing {
   public static com.strongdm.api.Gateway convertGatewayToPorcelain(Gateway plumbing) {
     com.strongdm.api.Gateway porcelain = new com.strongdm.api.Gateway();
     porcelain.setBindAddress((plumbing.getBindAddress()));
-    porcelain.setConnectsTo((plumbing.getConnectsTo()));
     porcelain.setDevice((plumbing.getDevice()));
     porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     porcelain.setId((plumbing.getId()));
@@ -5136,9 +5135,6 @@ public class Plumbing {
     Gateway.Builder builder = Gateway.newBuilder();
     if (porcelain.getBindAddress() != null) {
       builder.setBindAddress((porcelain.getBindAddress()));
-    }
-    if (porcelain.getConnectsTo() != null) {
-      builder.setConnectsTo((porcelain.getConnectsTo()));
     }
     if (porcelain.getDevice() != null) {
       builder.setDevice((porcelain.getDevice()));
@@ -8759,7 +8755,6 @@ public class Plumbing {
 
   public static com.strongdm.api.Relay convertRelayToPorcelain(Relay plumbing) {
     com.strongdm.api.Relay porcelain = new com.strongdm.api.Relay();
-    porcelain.setConnectsTo((plumbing.getConnectsTo()));
     porcelain.setDevice((plumbing.getDevice()));
     porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     porcelain.setId((plumbing.getId()));
@@ -8779,9 +8774,6 @@ public class Plumbing {
       return null;
     }
     Relay.Builder builder = Relay.newBuilder();
-    if (porcelain.getConnectsTo() != null) {
-      builder.setConnectsTo((porcelain.getConnectsTo()));
-    }
     if (porcelain.getDevice() != null) {
       builder.setDevice((porcelain.getDevice()));
     }
