@@ -31,4 +31,7 @@ public final class ActivityEntityType {
   public static final String WORKFLOW = "workflow";
   public static final String NODE = "node";
   public static final String PEERING_GROUP = "peering_group";
+  public static final String PEERING_GROUP_NODE = "peering_group_node";
+  public static final String PEERING_GROUP_RESOURCE = "peering_group_resource";
+  public static final String PEERING_GROUP_PEER = "peering_group_peer";
 }

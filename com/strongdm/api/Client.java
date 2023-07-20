@@ -169,6 +169,43 @@ public class Client {
     return this.organizationHistory;
   }
 
+  protected final PeeringGroupNodes peeringGroupNodes;
+
+  /**
+   * PeeringGroupNodes provides the building blocks necessary to obtain attach a node to a peering
+   * group.
+   */
+  public PeeringGroupNodes peeringGroupNodes() {
+    return this.peeringGroupNodes;
+  }
+
+  protected final PeeringGroupPeers peeringGroupPeers;
+
+  /** PeeringGroupPeers provides the building blocks necessary to link two peering groups. */
+  public PeeringGroupPeers peeringGroupPeers() {
+    return this.peeringGroupPeers;
+  }
+
+  protected final PeeringGroupResources peeringGroupResources;
+
+  /**
+   * PeeringGroupResources provides the building blocks necessary to obtain attach a resource to a
+   * peering group.
+   */
+  public PeeringGroupResources peeringGroupResources() {
+    return this.peeringGroupResources;
+  }
+
+  protected final PeeringGroups peeringGroups;
+
+  /**
+   * PeeringGroups provides the building blocks necessary to obtain explicit network topology and
+   * routing.
+   */
+  public PeeringGroups peeringGroups() {
+    return this.peeringGroups;
+  }
+
   protected final Queries queries;
 
   /**
@@ -316,6 +353,10 @@ public class Client {
     this.nodes = new Nodes(this.channel, this);
     this.nodesHistory = new NodesHistory(this.channel, this);
     this.organizationHistory = new OrganizationHistory(this.channel, this);
+    this.peeringGroupNodes = new PeeringGroupNodes(this.channel, this);
+    this.peeringGroupPeers = new PeeringGroupPeers(this.channel, this);
+    this.peeringGroupResources = new PeeringGroupResources(this.channel, this);
+    this.peeringGroups = new PeeringGroups(this.channel, this);
     this.queries = new Queries(this.channel, this);
     this.remoteIdentities = new RemoteIdentities(this.channel, this);
     this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);
@@ -365,6 +406,10 @@ public class Client {
       this.nodes = new Nodes(this.channel, this);
       this.nodesHistory = new NodesHistory(this.channel, this);
       this.organizationHistory = new OrganizationHistory(this.channel, this);
+      this.peeringGroupNodes = new PeeringGroupNodes(this.channel, this);
+      this.peeringGroupPeers = new PeeringGroupPeers(this.channel, this);
+      this.peeringGroupResources = new PeeringGroupResources(this.channel, this);
+      this.peeringGroups = new PeeringGroups(this.channel, this);
       this.queries = new Queries(this.channel, this);
       this.remoteIdentities = new RemoteIdentities(this.channel, this);
       this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);

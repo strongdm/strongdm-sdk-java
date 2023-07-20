@@ -45,6 +45,10 @@ import com.strongdm.api.plumbing.DriversPlumbing.*;
 import com.strongdm.api.plumbing.NodesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.NodesPlumbing.*;
 import com.strongdm.api.plumbing.OrganizationHistoryPlumbing.*;
+import com.strongdm.api.plumbing.PeeringGroupNodesPlumbing.*;
+import com.strongdm.api.plumbing.PeeringGroupPeersPlumbing.*;
+import com.strongdm.api.plumbing.PeeringGroupResourcesPlumbing.*;
+import com.strongdm.api.plumbing.PeeringGroupsPlumbing.*;
 import com.strongdm.api.plumbing.QueriesPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentitiesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentitiesPlumbing.*;
@@ -7930,6 +7934,791 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertOrganizationHistoryRecordToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroup convertPeeringGroupToPorcelain(
+      PeeringGroup plumbing) {
+    com.strongdm.api.PeeringGroup porcelain = new com.strongdm.api.PeeringGroup();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    return porcelain;
+  }
+
+  public static PeeringGroup convertPeeringGroupToPlumbing(
+      com.strongdm.api.PeeringGroup porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroup.Builder builder = PeeringGroup.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroup> convertRepeatedPeeringGroupToPorcelain(
+      Collection<PeeringGroup> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroup>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroup> convertRepeatedPeeringGroupToPlumbing(
+      Collection<com.strongdm.api.PeeringGroup> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroup>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupCreateResponse
+      convertPeeringGroupCreateResponseToPorcelain(PeeringGroupCreateResponse plumbing) {
+    com.strongdm.api.PeeringGroupCreateResponse porcelain =
+        new com.strongdm.api.PeeringGroupCreateResponse();
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroup(Plumbing.convertPeeringGroupToPorcelain(plumbing.getPeeringGroup()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupCreateResponse convertPeeringGroupCreateResponseToPlumbing(
+      com.strongdm.api.PeeringGroupCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupCreateResponse.Builder builder = PeeringGroupCreateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroup() != null) {
+      builder.setPeeringGroup(Plumbing.convertPeeringGroupToPlumbing(porcelain.getPeeringGroup()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupCreateResponse>
+      convertRepeatedPeeringGroupCreateResponseToPorcelain(
+          Collection<PeeringGroupCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupCreateResponse>
+      convertRepeatedPeeringGroupCreateResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupDeleteResponse
+      convertPeeringGroupDeleteResponseToPorcelain(PeeringGroupDeleteResponse plumbing) {
+    com.strongdm.api.PeeringGroupDeleteResponse porcelain =
+        new com.strongdm.api.PeeringGroupDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupDeleteResponse convertPeeringGroupDeleteResponseToPlumbing(
+      com.strongdm.api.PeeringGroupDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupDeleteResponse.Builder builder = PeeringGroupDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupDeleteResponse>
+      convertRepeatedPeeringGroupDeleteResponseToPorcelain(
+          Collection<PeeringGroupDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupDeleteResponse>
+      convertRepeatedPeeringGroupDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupGetResponse convertPeeringGroupGetResponseToPorcelain(
+      PeeringGroupGetResponse plumbing) {
+    com.strongdm.api.PeeringGroupGetResponse porcelain =
+        new com.strongdm.api.PeeringGroupGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroup(Plumbing.convertPeeringGroupToPorcelain(plumbing.getPeeringGroup()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupGetResponse convertPeeringGroupGetResponseToPlumbing(
+      com.strongdm.api.PeeringGroupGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupGetResponse.Builder builder = PeeringGroupGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroup() != null) {
+      builder.setPeeringGroup(Plumbing.convertPeeringGroupToPlumbing(porcelain.getPeeringGroup()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupGetResponse>
+      convertRepeatedPeeringGroupGetResponseToPorcelain(
+          Collection<PeeringGroupGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupGetResponse> convertRepeatedPeeringGroupGetResponseToPlumbing(
+      Collection<com.strongdm.api.PeeringGroupGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupNode convertPeeringGroupNodeToPorcelain(
+      PeeringGroupNode plumbing) {
+    com.strongdm.api.PeeringGroupNode porcelain = new com.strongdm.api.PeeringGroupNode();
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setNodeId((plumbing.getNodeId()));
+    return porcelain;
+  }
+
+  public static PeeringGroupNode convertPeeringGroupNodeToPlumbing(
+      com.strongdm.api.PeeringGroupNode porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupNode.Builder builder = PeeringGroupNode.newBuilder();
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getNodeId() != null) {
+      builder.setNodeId((porcelain.getNodeId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupNode> convertRepeatedPeeringGroupNodeToPorcelain(
+      Collection<PeeringGroupNode> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupNode>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupNodeToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupNode> convertRepeatedPeeringGroupNodeToPlumbing(
+      Collection<com.strongdm.api.PeeringGroupNode> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupNode>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupNodeToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupNodeCreateResponse
+      convertPeeringGroupNodeCreateResponseToPorcelain(PeeringGroupNodeCreateResponse plumbing) {
+    com.strongdm.api.PeeringGroupNodeCreateResponse porcelain =
+        new com.strongdm.api.PeeringGroupNodeCreateResponse();
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroupNode(
+        Plumbing.convertPeeringGroupNodeToPorcelain(plumbing.getPeeringGroupNode()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupNodeCreateResponse convertPeeringGroupNodeCreateResponseToPlumbing(
+      com.strongdm.api.PeeringGroupNodeCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupNodeCreateResponse.Builder builder = PeeringGroupNodeCreateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroupNode() != null) {
+      builder.setPeeringGroupNode(
+          Plumbing.convertPeeringGroupNodeToPlumbing(porcelain.getPeeringGroupNode()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupNodeCreateResponse>
+      convertRepeatedPeeringGroupNodeCreateResponseToPorcelain(
+          Collection<PeeringGroupNodeCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupNodeCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupNodeCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupNodeCreateResponse>
+      convertRepeatedPeeringGroupNodeCreateResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupNodeCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupNodeCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupNodeCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupNodeDeleteResponse
+      convertPeeringGroupNodeDeleteResponseToPorcelain(PeeringGroupNodeDeleteResponse plumbing) {
+    com.strongdm.api.PeeringGroupNodeDeleteResponse porcelain =
+        new com.strongdm.api.PeeringGroupNodeDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupNodeDeleteResponse convertPeeringGroupNodeDeleteResponseToPlumbing(
+      com.strongdm.api.PeeringGroupNodeDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupNodeDeleteResponse.Builder builder = PeeringGroupNodeDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupNodeDeleteResponse>
+      convertRepeatedPeeringGroupNodeDeleteResponseToPorcelain(
+          Collection<PeeringGroupNodeDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupNodeDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupNodeDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupNodeDeleteResponse>
+      convertRepeatedPeeringGroupNodeDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupNodeDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupNodeDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupNodeDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupNodeGetResponse
+      convertPeeringGroupNodeGetResponseToPorcelain(PeeringGroupNodeGetResponse plumbing) {
+    com.strongdm.api.PeeringGroupNodeGetResponse porcelain =
+        new com.strongdm.api.PeeringGroupNodeGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroupNode(
+        Plumbing.convertPeeringGroupNodeToPorcelain(plumbing.getPeeringGroupNode()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupNodeGetResponse convertPeeringGroupNodeGetResponseToPlumbing(
+      com.strongdm.api.PeeringGroupNodeGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupNodeGetResponse.Builder builder = PeeringGroupNodeGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroupNode() != null) {
+      builder.setPeeringGroupNode(
+          Plumbing.convertPeeringGroupNodeToPlumbing(porcelain.getPeeringGroupNode()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupNodeGetResponse>
+      convertRepeatedPeeringGroupNodeGetResponseToPorcelain(
+          Collection<PeeringGroupNodeGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupNodeGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupNodeGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupNodeGetResponse>
+      convertRepeatedPeeringGroupNodeGetResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupNodeGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupNodeGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupNodeGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupPeer convertPeeringGroupPeerToPorcelain(
+      PeeringGroupPeer plumbing) {
+    com.strongdm.api.PeeringGroupPeer porcelain = new com.strongdm.api.PeeringGroupPeer();
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setPeersWithGroupId((plumbing.getPeersWithGroupId()));
+    return porcelain;
+  }
+
+  public static PeeringGroupPeer convertPeeringGroupPeerToPlumbing(
+      com.strongdm.api.PeeringGroupPeer porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupPeer.Builder builder = PeeringGroupPeer.newBuilder();
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getPeersWithGroupId() != null) {
+      builder.setPeersWithGroupId((porcelain.getPeersWithGroupId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupPeer> convertRepeatedPeeringGroupPeerToPorcelain(
+      Collection<PeeringGroupPeer> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupPeer>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupPeerToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupPeer> convertRepeatedPeeringGroupPeerToPlumbing(
+      Collection<com.strongdm.api.PeeringGroupPeer> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupPeer>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupPeerToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupPeerCreateResponse
+      convertPeeringGroupPeerCreateResponseToPorcelain(PeeringGroupPeerCreateResponse plumbing) {
+    com.strongdm.api.PeeringGroupPeerCreateResponse porcelain =
+        new com.strongdm.api.PeeringGroupPeerCreateResponse();
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroupPeer(
+        Plumbing.convertPeeringGroupPeerToPorcelain(plumbing.getPeeringGroupPeer()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupPeerCreateResponse convertPeeringGroupPeerCreateResponseToPlumbing(
+      com.strongdm.api.PeeringGroupPeerCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupPeerCreateResponse.Builder builder = PeeringGroupPeerCreateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroupPeer() != null) {
+      builder.setPeeringGroupPeer(
+          Plumbing.convertPeeringGroupPeerToPlumbing(porcelain.getPeeringGroupPeer()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupPeerCreateResponse>
+      convertRepeatedPeeringGroupPeerCreateResponseToPorcelain(
+          Collection<PeeringGroupPeerCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupPeerCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupPeerCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupPeerCreateResponse>
+      convertRepeatedPeeringGroupPeerCreateResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupPeerCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupPeerCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupPeerCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupPeerDeleteResponse
+      convertPeeringGroupPeerDeleteResponseToPorcelain(PeeringGroupPeerDeleteResponse plumbing) {
+    com.strongdm.api.PeeringGroupPeerDeleteResponse porcelain =
+        new com.strongdm.api.PeeringGroupPeerDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupPeerDeleteResponse convertPeeringGroupPeerDeleteResponseToPlumbing(
+      com.strongdm.api.PeeringGroupPeerDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupPeerDeleteResponse.Builder builder = PeeringGroupPeerDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupPeerDeleteResponse>
+      convertRepeatedPeeringGroupPeerDeleteResponseToPorcelain(
+          Collection<PeeringGroupPeerDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupPeerDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupPeerDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupPeerDeleteResponse>
+      convertRepeatedPeeringGroupPeerDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupPeerDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupPeerDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupPeerDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupPeerGetResponse
+      convertPeeringGroupPeerGetResponseToPorcelain(PeeringGroupPeerGetResponse plumbing) {
+    com.strongdm.api.PeeringGroupPeerGetResponse porcelain =
+        new com.strongdm.api.PeeringGroupPeerGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroupPeer(
+        Plumbing.convertPeeringGroupPeerToPorcelain(plumbing.getPeeringGroupPeer()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupPeerGetResponse convertPeeringGroupPeerGetResponseToPlumbing(
+      com.strongdm.api.PeeringGroupPeerGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupPeerGetResponse.Builder builder = PeeringGroupPeerGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroupPeer() != null) {
+      builder.setPeeringGroupPeer(
+          Plumbing.convertPeeringGroupPeerToPlumbing(porcelain.getPeeringGroupPeer()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupPeerGetResponse>
+      convertRepeatedPeeringGroupPeerGetResponseToPorcelain(
+          Collection<PeeringGroupPeerGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupPeerGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupPeerGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupPeerGetResponse>
+      convertRepeatedPeeringGroupPeerGetResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupPeerGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupPeerGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupPeerGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupResource convertPeeringGroupResourceToPorcelain(
+      PeeringGroupResource plumbing) {
+    com.strongdm.api.PeeringGroupResource porcelain = new com.strongdm.api.PeeringGroupResource();
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    return porcelain;
+  }
+
+  public static PeeringGroupResource convertPeeringGroupResourceToPlumbing(
+      com.strongdm.api.PeeringGroupResource porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupResource.Builder builder = PeeringGroupResource.newBuilder();
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getResourceId() != null) {
+      builder.setResourceId((porcelain.getResourceId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupResource>
+      convertRepeatedPeeringGroupResourceToPorcelain(Collection<PeeringGroupResource> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupResource>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupResourceToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupResource> convertRepeatedPeeringGroupResourceToPlumbing(
+      Collection<com.strongdm.api.PeeringGroupResource> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupResource>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupResourceToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupResourceCreateResponse
+      convertPeeringGroupResourceCreateResponseToPorcelain(
+          PeeringGroupResourceCreateResponse plumbing) {
+    com.strongdm.api.PeeringGroupResourceCreateResponse porcelain =
+        new com.strongdm.api.PeeringGroupResourceCreateResponse();
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroupResource(
+        Plumbing.convertPeeringGroupResourceToPorcelain(plumbing.getPeeringGroupResource()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupResourceCreateResponse
+      convertPeeringGroupResourceCreateResponseToPlumbing(
+          com.strongdm.api.PeeringGroupResourceCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupResourceCreateResponse.Builder builder =
+        PeeringGroupResourceCreateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroupResource() != null) {
+      builder.setPeeringGroupResource(
+          Plumbing.convertPeeringGroupResourceToPlumbing(porcelain.getPeeringGroupResource()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupResourceCreateResponse>
+      convertRepeatedPeeringGroupResourceCreateResponseToPorcelain(
+          Collection<PeeringGroupResourceCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupResourceCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupResourceCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupResourceCreateResponse>
+      convertRepeatedPeeringGroupResourceCreateResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupResourceCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupResourceCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupResourceCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupResourceDeleteResponse
+      convertPeeringGroupResourceDeleteResponseToPorcelain(
+          PeeringGroupResourceDeleteResponse plumbing) {
+    com.strongdm.api.PeeringGroupResourceDeleteResponse porcelain =
+        new com.strongdm.api.PeeringGroupResourceDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupResourceDeleteResponse
+      convertPeeringGroupResourceDeleteResponseToPlumbing(
+          com.strongdm.api.PeeringGroupResourceDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupResourceDeleteResponse.Builder builder =
+        PeeringGroupResourceDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupResourceDeleteResponse>
+      convertRepeatedPeeringGroupResourceDeleteResponseToPorcelain(
+          Collection<PeeringGroupResourceDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupResourceDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupResourceDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupResourceDeleteResponse>
+      convertRepeatedPeeringGroupResourceDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupResourceDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupResourceDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupResourceDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PeeringGroupResourceGetResponse
+      convertPeeringGroupResourceGetResponseToPorcelain(PeeringGroupResourceGetResponse plumbing) {
+    com.strongdm.api.PeeringGroupResourceGetResponse porcelain =
+        new com.strongdm.api.PeeringGroupResourceGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPeeringGroupResource(
+        Plumbing.convertPeeringGroupResourceToPorcelain(plumbing.getPeeringGroupResource()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PeeringGroupResourceGetResponse convertPeeringGroupResourceGetResponseToPlumbing(
+      com.strongdm.api.PeeringGroupResourceGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PeeringGroupResourceGetResponse.Builder builder = PeeringGroupResourceGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPeeringGroupResource() != null) {
+      builder.setPeeringGroupResource(
+          Plumbing.convertPeeringGroupResourceToPlumbing(porcelain.getPeeringGroupResource()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PeeringGroupResourceGetResponse>
+      convertRepeatedPeeringGroupResourceGetResponseToPorcelain(
+          Collection<PeeringGroupResourceGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PeeringGroupResourceGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPeeringGroupResourceGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PeeringGroupResourceGetResponse>
+      convertRepeatedPeeringGroupResourceGetResponseToPlumbing(
+          Collection<com.strongdm.api.PeeringGroupResourceGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PeeringGroupResourceGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPeeringGroupResourceGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
