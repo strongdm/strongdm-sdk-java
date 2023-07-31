@@ -104,6 +104,16 @@ public class GoogleGKEUserImpersonation implements Resource {
     this.name = in;
   }
 
+  private int portOverride;
+  /** The local port used by clients to connect to this resource. */
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+  /** The local port used by clients to connect to this resource. */
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {

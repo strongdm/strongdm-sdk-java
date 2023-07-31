@@ -104,6 +104,16 @@ public class GoogleGKE implements Resource {
     this.name = in;
   }
 
+  private int portOverride;
+  /** The local port used by clients to connect to this resource. */
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+  /** The local port used by clients to connect to this resource. */
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
   private String remoteIdentityGroupId;
   /** The ID of the remote identity group to use for remote identity connections. */
   public String getRemoteIdentityGroupId() {

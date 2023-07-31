@@ -5237,6 +5237,7 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
     porcelain.setRemoteIdentityHealthcheckUsername(
         (plumbing.getRemoteIdentityHealthcheckUsername()));
@@ -5274,6 +5275,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRemoteIdentityGroupId() != null) {
       builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
     }
@@ -5328,6 +5330,7 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setServiceAccountKey((plumbing.getServiceAccountKey()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
@@ -5363,6 +5366,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
