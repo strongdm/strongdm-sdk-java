@@ -30,6 +30,9 @@ import com.strongdm.api.RateLimitException;
 import com.strongdm.api.RpcException;
 import com.strongdm.api.TimeoutException;
 import com.strongdm.api.UnknownException;
+import com.strongdm.api.plumbing.AccessRequestEventsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.AccessRequestsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.AccessRequestsPlumbing.*;
 import com.strongdm.api.plumbing.AccountAttachmentsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.AccountAttachmentsPlumbing.*;
 import com.strongdm.api.plumbing.AccountGrantsHistoryPlumbing.*;
@@ -66,6 +69,11 @@ import com.strongdm.api.plumbing.SecretStoresPlumbing.*;
 import com.strongdm.api.plumbing.SecretStoresTypesPlumbing.*;
 import com.strongdm.api.plumbing.Spec.*;
 import com.strongdm.api.plumbing.TagsPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowApproversHistoryPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowAssignmentsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowRolesHistoryPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowsPlumbing.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -986,6 +994,244 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertAWSStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccessRequest convertAccessRequestToPorcelain(
+      AccessRequest plumbing) {
+    com.strongdm.api.AccessRequest porcelain = new com.strongdm.api.AccessRequest();
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setGrantId((plumbing.getGrantId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setReason((plumbing.getReason()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    porcelain.setStartFrom(Plumbing.convertTimestampToPorcelain(plumbing.getStartFrom()));
+    porcelain.setStatus((plumbing.getStatus()));
+    porcelain.setStatusAt(Plumbing.convertTimestampToPorcelain(plumbing.getStatusAt()));
+    porcelain.setValidUntil(Plumbing.convertTimestampToPorcelain(plumbing.getValidUntil()));
+    porcelain.setWorkflowId((plumbing.getWorkflowId()));
+    return porcelain;
+  }
+
+  public static AccessRequest convertAccessRequestToPlumbing(
+      com.strongdm.api.AccessRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccessRequest.Builder builder = AccessRequest.newBuilder();
+    if (porcelain.getAccountId() != null) {
+      builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getGrantId() != null) {
+      builder.setGrantId((porcelain.getGrantId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getReason() != null) {
+      builder.setReason((porcelain.getReason()));
+    }
+    if (porcelain.getResourceId() != null) {
+      builder.setResourceId((porcelain.getResourceId()));
+    }
+    if (porcelain.getStartFrom() != null) {
+      builder.setStartFrom(Plumbing.convertTimestampToPlumbing(porcelain.getStartFrom()));
+    }
+    if (porcelain.getStatus() != null) {
+      builder.setStatus((porcelain.getStatus()));
+    }
+    if (porcelain.getStatusAt() != null) {
+      builder.setStatusAt(Plumbing.convertTimestampToPlumbing(porcelain.getStatusAt()));
+    }
+    if (porcelain.getValidUntil() != null) {
+      builder.setValidUntil(Plumbing.convertTimestampToPlumbing(porcelain.getValidUntil()));
+    }
+    if (porcelain.getWorkflowId() != null) {
+      builder.setWorkflowId((porcelain.getWorkflowId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccessRequest> convertRepeatedAccessRequestToPorcelain(
+      Collection<AccessRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccessRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccessRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccessRequest> convertRepeatedAccessRequestToPlumbing(
+      Collection<com.strongdm.api.AccessRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccessRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccessRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccessRequestEvent convertAccessRequestEventToPorcelain(
+      AccessRequestEvent plumbing) {
+    com.strongdm.api.AccessRequestEvent porcelain = new com.strongdm.api.AccessRequestEvent();
+    porcelain.setActorId((plumbing.getActorId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setMetadata((plumbing.getMetadata()));
+    porcelain.setRequestId((plumbing.getRequestId()));
+    porcelain.setType((plumbing.getType()));
+    return porcelain;
+  }
+
+  public static AccessRequestEvent convertAccessRequestEventToPlumbing(
+      com.strongdm.api.AccessRequestEvent porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccessRequestEvent.Builder builder = AccessRequestEvent.newBuilder();
+    if (porcelain.getActorId() != null) {
+      builder.setActorId((porcelain.getActorId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getMetadata() != null) {
+      builder.setMetadata((porcelain.getMetadata()));
+    }
+    if (porcelain.getRequestId() != null) {
+      builder.setRequestId((porcelain.getRequestId()));
+    }
+    if (porcelain.getType() != null) {
+      builder.setType((porcelain.getType()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccessRequestEvent>
+      convertRepeatedAccessRequestEventToPorcelain(Collection<AccessRequestEvent> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccessRequestEvent>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccessRequestEventToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccessRequestEvent> convertRepeatedAccessRequestEventToPlumbing(
+      Collection<com.strongdm.api.AccessRequestEvent> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccessRequestEvent>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccessRequestEventToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccessRequestEventHistory
+      convertAccessRequestEventHistoryToPorcelain(AccessRequestEventHistory plumbing) {
+    com.strongdm.api.AccessRequestEventHistory porcelain =
+        new com.strongdm.api.AccessRequestEventHistory();
+    porcelain.setAccessRequestEvent(
+        Plumbing.convertAccessRequestEventToPorcelain(plumbing.getAccessRequestEvent()));
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static AccessRequestEventHistory convertAccessRequestEventHistoryToPlumbing(
+      com.strongdm.api.AccessRequestEventHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccessRequestEventHistory.Builder builder = AccessRequestEventHistory.newBuilder();
+    if (porcelain.getAccessRequestEvent() != null) {
+      builder.setAccessRequestEvent(
+          Plumbing.convertAccessRequestEventToPlumbing(porcelain.getAccessRequestEvent()));
+    }
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccessRequestEventHistory>
+      convertRepeatedAccessRequestEventHistoryToPorcelain(
+          Collection<AccessRequestEventHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccessRequestEventHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccessRequestEventHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccessRequestEventHistory> convertRepeatedAccessRequestEventHistoryToPlumbing(
+      Collection<com.strongdm.api.AccessRequestEventHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccessRequestEventHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccessRequestEventHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccessRequestHistory convertAccessRequestHistoryToPorcelain(
+      AccessRequestHistory plumbing) {
+    com.strongdm.api.AccessRequestHistory porcelain = new com.strongdm.api.AccessRequestHistory();
+    porcelain.setAccessRequest(
+        Plumbing.convertAccessRequestToPorcelain(plumbing.getAccessRequest()));
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static AccessRequestHistory convertAccessRequestHistoryToPlumbing(
+      com.strongdm.api.AccessRequestHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccessRequestHistory.Builder builder = AccessRequestHistory.newBuilder();
+    if (porcelain.getAccessRequest() != null) {
+      builder.setAccessRequest(
+          Plumbing.convertAccessRequestToPlumbing(porcelain.getAccessRequest()));
+    }
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccessRequestHistory>
+      convertRepeatedAccessRequestHistoryToPorcelain(Collection<AccessRequestHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccessRequestHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccessRequestHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccessRequestHistory> convertRepeatedAccessRequestHistoryToPlumbing(
+      Collection<com.strongdm.api.AccessRequestHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccessRequestHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccessRequestHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -13358,6 +13604,402 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertVaultTokenStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.Workflow convertWorkflowToPorcelain(Workflow plumbing) {
+    com.strongdm.api.Workflow porcelain = new com.strongdm.api.Workflow();
+    porcelain.setAccessRules(Plumbing.convertAccessRulesToPorcelain(plumbing.getAccessRules()));
+    porcelain.setAutoGrant((plumbing.getAutoGrant()));
+    porcelain.setDescription((plumbing.getDescription()));
+    porcelain.setEnabled((plumbing.getEnabled()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setWeight((plumbing.getWeight()));
+    return porcelain;
+  }
+
+  public static Workflow convertWorkflowToPlumbing(com.strongdm.api.Workflow porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Workflow.Builder builder = Workflow.newBuilder();
+    if (porcelain.getAccessRules() != null) {
+      builder.setAccessRules(Plumbing.convertAccessRulesToPlumbing(porcelain.getAccessRules()));
+    }
+    builder.setAutoGrant(porcelain.getAutoGrant());
+    if (porcelain.getDescription() != null) {
+      builder.setDescription((porcelain.getDescription()));
+    }
+    builder.setEnabled(porcelain.getEnabled());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setWeight(porcelain.getWeight());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Workflow> convertRepeatedWorkflowToPorcelain(
+      Collection<Workflow> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Workflow>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Workflow> convertRepeatedWorkflowToPlumbing(
+      Collection<com.strongdm.api.Workflow> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Workflow>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApprover convertWorkflowApproverToPorcelain(
+      WorkflowApprover plumbing) {
+    com.strongdm.api.WorkflowApprover porcelain = new com.strongdm.api.WorkflowApprover();
+    porcelain.setApproverId((plumbing.getApproverId()));
+    porcelain.setWorkflowId((plumbing.getWorkflowId()));
+    return porcelain;
+  }
+
+  public static WorkflowApprover convertWorkflowApproverToPlumbing(
+      com.strongdm.api.WorkflowApprover porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApprover.Builder builder = WorkflowApprover.newBuilder();
+    if (porcelain.getApproverId() != null) {
+      builder.setApproverId((porcelain.getApproverId()));
+    }
+    if (porcelain.getWorkflowId() != null) {
+      builder.setWorkflowId((porcelain.getWorkflowId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApprover> convertRepeatedWorkflowApproverToPorcelain(
+      Collection<WorkflowApprover> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApprover>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproverToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApprover> convertRepeatedWorkflowApproverToPlumbing(
+      Collection<com.strongdm.api.WorkflowApprover> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApprover>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproverToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproverHistory convertWorkflowApproverHistoryToPorcelain(
+      WorkflowApproverHistory plumbing) {
+    com.strongdm.api.WorkflowApproverHistory porcelain =
+        new com.strongdm.api.WorkflowApproverHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    porcelain.setWorkflowApprover(
+        Plumbing.convertWorkflowApproverToPorcelain(plumbing.getWorkflowApprover()));
+    return porcelain;
+  }
+
+  public static WorkflowApproverHistory convertWorkflowApproverHistoryToPlumbing(
+      com.strongdm.api.WorkflowApproverHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproverHistory.Builder builder = WorkflowApproverHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    if (porcelain.getWorkflowApprover() != null) {
+      builder.setWorkflowApprover(
+          Plumbing.convertWorkflowApproverToPlumbing(porcelain.getWorkflowApprover()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproverHistory>
+      convertRepeatedWorkflowApproverHistoryToPorcelain(
+          Collection<WorkflowApproverHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproverHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproverHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproverHistory> convertRepeatedWorkflowApproverHistoryToPlumbing(
+      Collection<com.strongdm.api.WorkflowApproverHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproverHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproverHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowAssignment convertWorkflowAssignmentToPorcelain(
+      WorkflowAssignment plumbing) {
+    com.strongdm.api.WorkflowAssignment porcelain = new com.strongdm.api.WorkflowAssignment();
+    porcelain.setResourceId((plumbing.getResourceId()));
+    porcelain.setWorkflowId((plumbing.getWorkflowId()));
+    return porcelain;
+  }
+
+  public static WorkflowAssignment convertWorkflowAssignmentToPlumbing(
+      com.strongdm.api.WorkflowAssignment porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowAssignment.Builder builder = WorkflowAssignment.newBuilder();
+    if (porcelain.getResourceId() != null) {
+      builder.setResourceId((porcelain.getResourceId()));
+    }
+    if (porcelain.getWorkflowId() != null) {
+      builder.setWorkflowId((porcelain.getWorkflowId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowAssignment>
+      convertRepeatedWorkflowAssignmentToPorcelain(Collection<WorkflowAssignment> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowAssignment>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowAssignmentToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowAssignment> convertRepeatedWorkflowAssignmentToPlumbing(
+      Collection<com.strongdm.api.WorkflowAssignment> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowAssignment>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowAssignmentToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowAssignmentHistory
+      convertWorkflowAssignmentHistoryToPorcelain(WorkflowAssignmentHistory plumbing) {
+    com.strongdm.api.WorkflowAssignmentHistory porcelain =
+        new com.strongdm.api.WorkflowAssignmentHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    porcelain.setWorkflowAssignment(
+        Plumbing.convertWorkflowAssignmentToPorcelain(plumbing.getWorkflowAssignment()));
+    return porcelain;
+  }
+
+  public static WorkflowAssignmentHistory convertWorkflowAssignmentHistoryToPlumbing(
+      com.strongdm.api.WorkflowAssignmentHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowAssignmentHistory.Builder builder = WorkflowAssignmentHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    if (porcelain.getWorkflowAssignment() != null) {
+      builder.setWorkflowAssignment(
+          Plumbing.convertWorkflowAssignmentToPlumbing(porcelain.getWorkflowAssignment()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowAssignmentHistory>
+      convertRepeatedWorkflowAssignmentHistoryToPorcelain(
+          Collection<WorkflowAssignmentHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowAssignmentHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowAssignmentHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowAssignmentHistory> convertRepeatedWorkflowAssignmentHistoryToPlumbing(
+      Collection<com.strongdm.api.WorkflowAssignmentHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowAssignmentHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowAssignmentHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowHistory convertWorkflowHistoryToPorcelain(
+      WorkflowHistory plumbing) {
+    com.strongdm.api.WorkflowHistory porcelain = new com.strongdm.api.WorkflowHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    porcelain.setWorkflow(Plumbing.convertWorkflowToPorcelain(plumbing.getWorkflow()));
+    return porcelain;
+  }
+
+  public static WorkflowHistory convertWorkflowHistoryToPlumbing(
+      com.strongdm.api.WorkflowHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowHistory.Builder builder = WorkflowHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    if (porcelain.getWorkflow() != null) {
+      builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(porcelain.getWorkflow()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowHistory> convertRepeatedWorkflowHistoryToPorcelain(
+      Collection<WorkflowHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowHistory> convertRepeatedWorkflowHistoryToPlumbing(
+      Collection<com.strongdm.api.WorkflowHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRole convertWorkflowRoleToPorcelain(
+      WorkflowRole plumbing) {
+    com.strongdm.api.WorkflowRole porcelain = new com.strongdm.api.WorkflowRole();
+    porcelain.setRoleId((plumbing.getRoleId()));
+    porcelain.setWorkflowId((plumbing.getWorkflowId()));
+    return porcelain;
+  }
+
+  public static WorkflowRole convertWorkflowRoleToPlumbing(
+      com.strongdm.api.WorkflowRole porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRole.Builder builder = WorkflowRole.newBuilder();
+    if (porcelain.getRoleId() != null) {
+      builder.setRoleId((porcelain.getRoleId()));
+    }
+    if (porcelain.getWorkflowId() != null) {
+      builder.setWorkflowId((porcelain.getWorkflowId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRole> convertRepeatedWorkflowRoleToPorcelain(
+      Collection<WorkflowRole> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRole>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRoleToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRole> convertRepeatedWorkflowRoleToPlumbing(
+      Collection<com.strongdm.api.WorkflowRole> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRole>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRoleToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRoleHistory convertWorkflowRoleHistoryToPorcelain(
+      WorkflowRoleHistory plumbing) {
+    com.strongdm.api.WorkflowRoleHistory porcelain = new com.strongdm.api.WorkflowRoleHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    porcelain.setWorkflowRole(Plumbing.convertWorkflowRoleToPorcelain(plumbing.getWorkflowRole()));
+    return porcelain;
+  }
+
+  public static WorkflowRoleHistory convertWorkflowRoleHistoryToPlumbing(
+      com.strongdm.api.WorkflowRoleHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRoleHistory.Builder builder = WorkflowRoleHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    if (porcelain.getWorkflowRole() != null) {
+      builder.setWorkflowRole(Plumbing.convertWorkflowRoleToPlumbing(porcelain.getWorkflowRole()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRoleHistory>
+      convertRepeatedWorkflowRoleHistoryToPorcelain(Collection<WorkflowRoleHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRoleHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRoleHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRoleHistory> convertRepeatedWorkflowRoleHistoryToPlumbing(
+      Collection<com.strongdm.api.WorkflowRoleHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRoleHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRoleHistoryToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

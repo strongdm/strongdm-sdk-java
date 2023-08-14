@@ -24,6 +24,10 @@ public class SnapshotClient {
   protected SnapshotClient(Client parent) {
     this.parent = parent;
   }
+  /** AccessRequests are requests for access to a resource that may match a Workflow. */
+  public SnapshotAccessRequests accessRequests() {
+    return this.parent.accessRequests;
+  }
   /** AccountAttachments assign an account to a role. */
   public SnapshotAccountAttachments accountAttachments() {
     return this.parent.accountAttachments;
@@ -130,5 +134,14 @@ public class SnapshotClient {
   /** SecretStores are servers where resource secrets (passwords, keys) are stored. */
   public SnapshotSecretStores secretStores() {
     return this.parent.secretStores;
+  }
+  /**
+   * Workflows are the collection of rules that define the resources to which access can be
+   * requested, the users that can request that access, and the mechanism for approving those
+   * requests which can either but automatic approval or a set of users authorized to approve the
+   * requests.
+   */
+  public SnapshotWorkflows workflows() {
+    return this.parent.workflows;
   }
 }

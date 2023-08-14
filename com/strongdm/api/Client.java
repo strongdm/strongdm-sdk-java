@@ -49,6 +49,29 @@ public class Client {
   private int baseRetryDelay;
   private int maxRetryDelay;
   protected Date snapshotDate;
+  protected final AccessRequests accessRequests;
+
+  /** AccessRequests are requests for access to a resource that may match a Workflow. */
+  public AccessRequests accessRequests() {
+    return this.accessRequests;
+  }
+
+  protected final AccessRequestEventsHistory accessRequestEventsHistory;
+
+  /**
+   * AccessRequestEventsHistory provides records of all changes to the state of an AccessRequest.
+   */
+  public AccessRequestEventsHistory accessRequestEventsHistory() {
+    return this.accessRequestEventsHistory;
+  }
+
+  protected final AccessRequestsHistory accessRequestsHistory;
+
+  /** AccessRequestsHistory provides records of all changes to the state of an AccessRequest. */
+  public AccessRequestsHistory accessRequestsHistory() {
+    return this.accessRequestsHistory;
+  }
+
   protected final AccountAttachments accountAttachments;
 
   /** AccountAttachments assign an account to a role. */
@@ -325,6 +348,51 @@ public class Client {
   public SecretStoresHistory secretStoresHistory() {
     return this.secretStoresHistory;
   }
+
+  protected final Workflows workflows;
+
+  /**
+   * Workflows are the collection of rules that define the resources to which access can be
+   * requested, the users that can request that access, and the mechanism for approving those
+   * requests which can either but automatic approval or a set of users authorized to approve the
+   * requests.
+   */
+  public Workflows workflows() {
+    return this.workflows;
+  }
+
+  protected final WorkflowApproversHistory workflowApproversHistory;
+
+  /**
+   * WorkflowApproversHistory provides records of all changes to the state of a WorkflowApprover.
+   */
+  public WorkflowApproversHistory workflowApproversHistory() {
+    return this.workflowApproversHistory;
+  }
+
+  protected final WorkflowAssignmentsHistory workflowAssignmentsHistory;
+
+  /**
+   * WorkflowAssignmentsHistory provides records of all changes to the state of a
+   * WorkflowAssignment.
+   */
+  public WorkflowAssignmentsHistory workflowAssignmentsHistory() {
+    return this.workflowAssignmentsHistory;
+  }
+
+  protected final WorkflowRolesHistory workflowRolesHistory;
+
+  /** WorkflowRolesHistory provides records of all changes to the state of a WorkflowRole */
+  public WorkflowRolesHistory workflowRolesHistory() {
+    return this.workflowRolesHistory;
+  }
+
+  protected final WorkflowsHistory workflowsHistory;
+
+  /** WorkflowsHistory provides records of all changes to the state of a Workflow. */
+  public WorkflowsHistory workflowsHistory() {
+    return this.workflowsHistory;
+  }
   /** Creates a new strongDM API client. */
   public Client(String apiAccessKey, String apiSecretKey) throws RpcException {
     this(apiAccessKey, apiSecretKey, new ClientOptions());
@@ -339,6 +407,9 @@ public class Client {
     this.exposeRateLimitErrors = client.exposeRateLimitErrors;
     this.channel = client.channel;
     this.snapshotDate = client.snapshotDate;
+    this.accessRequests = new AccessRequests(this.channel, this);
+    this.accessRequestEventsHistory = new AccessRequestEventsHistory(this.channel, this);
+    this.accessRequestsHistory = new AccessRequestsHistory(this.channel, this);
     this.accountAttachments = new AccountAttachments(this.channel, this);
     this.accountAttachmentsHistory = new AccountAttachmentsHistory(this.channel, this);
     this.accountGrants = new AccountGrants(this.channel, this);
@@ -371,6 +442,11 @@ public class Client {
     this.rolesHistory = new RolesHistory(this.channel, this);
     this.secretStores = new SecretStores(this.channel, this);
     this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
+    this.workflows = new Workflows(this.channel, this);
+    this.workflowApproversHistory = new WorkflowApproversHistory(this.channel, this);
+    this.workflowAssignmentsHistory = new WorkflowAssignmentsHistory(this.channel, this);
+    this.workflowRolesHistory = new WorkflowRolesHistory(this.channel, this);
+    this.workflowsHistory = new WorkflowsHistory(this.channel, this);
     this.testOptions = client.testOptions;
   }
 
@@ -392,6 +468,9 @@ public class Client {
         builder = builder.useTransportSecurity().sslContext(GrpcSslContexts.forClient().build());
       }
       this.channel = builder.build();
+      this.accessRequests = new AccessRequests(this.channel, this);
+      this.accessRequestEventsHistory = new AccessRequestEventsHistory(this.channel, this);
+      this.accessRequestsHistory = new AccessRequestsHistory(this.channel, this);
       this.accountAttachments = new AccountAttachments(this.channel, this);
       this.accountAttachmentsHistory = new AccountAttachmentsHistory(this.channel, this);
       this.accountGrants = new AccountGrants(this.channel, this);
@@ -424,6 +503,11 @@ public class Client {
       this.rolesHistory = new RolesHistory(this.channel, this);
       this.secretStores = new SecretStores(this.channel, this);
       this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
+      this.workflows = new Workflows(this.channel, this);
+      this.workflowApproversHistory = new WorkflowApproversHistory(this.channel, this);
+      this.workflowAssignmentsHistory = new WorkflowAssignmentsHistory(this.channel, this);
+      this.workflowRolesHistory = new WorkflowRolesHistory(this.channel, this);
+      this.workflowsHistory = new WorkflowsHistory(this.channel, this);
     } catch (Exception e) {
       throw Plumbing.convertExceptionToPorcelain(e);
     }
