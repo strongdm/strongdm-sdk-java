@@ -981,6 +981,33 @@ public final class AccessRequestsPlumbing {
      */
     com.strongdm.api.plumbing.AccessRequestsPlumbing.AccessRequestOrBuilder getAccessRequestsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
    * <pre>
@@ -1053,6 +1080,19 @@ public final class AccessRequestsPlumbing {
               }
               accessRequests_.add(
                   input.readMessage(com.strongdm.api.plumbing.AccessRequestsPlumbing.AccessRequest.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1190,6 +1230,44 @@ public final class AccessRequestsPlumbing {
       return accessRequests_.get(index);
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1210,6 +1288,9 @@ public final class AccessRequestsPlumbing {
       for (int i = 0; i < accessRequests_.size(); i++) {
         output.writeMessage(2, accessRequests_.get(i));
       }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1226,6 +1307,10 @@ public final class AccessRequestsPlumbing {
       for (int i = 0; i < accessRequests_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, accessRequests_.get(i));
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1249,6 +1334,11 @@ public final class AccessRequestsPlumbing {
       }
       if (!getAccessRequestsList()
           .equals(other.getAccessRequestsList())) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1267,6 +1357,10 @@ public final class AccessRequestsPlumbing {
       if (getAccessRequestsCount() > 0) {
         hash = (37 * hash) + ACCESS_REQUESTS_FIELD_NUMBER;
         hash = (53 * hash) + getAccessRequestsList().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1418,6 +1512,12 @@ public final class AccessRequestsPlumbing {
         } else {
           accessRequestsBuilder_.clear();
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -1458,6 +1558,11 @@ public final class AccessRequestsPlumbing {
           result.accessRequests_ = accessRequests_;
         } else {
           result.accessRequests_ = accessRequestsBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1535,6 +1640,9 @@ public final class AccessRequestsPlumbing {
               accessRequestsBuilder_.addAllMessages(other.accessRequests_);
             }
           }
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2031,6 +2139,161 @@ public final class AccessRequestsPlumbing {
           accessRequests_ = null;
         }
         return accessRequestsBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6010,36 +6273,40 @@ public final class AccessRequestsPlumbing {
     java.lang.String[] descriptorData = {
       "\n\025access_requests.proto\022\002v1\032\037google/prot" +
       "obuf/timestamp.proto\032\roptions.proto\032\nspe" +
-      "c.proto\"x\n\030AccessRequestListRequest\022%\n\004m" +
+      "c.proto\"i\n\030AccessRequestListRequest\022%\n\004m" +
       "eta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fi" +
-      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ng" +
-      "o_private\"\226\001\n\031AccessRequestListResponse\022" +
-      "&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\022" +
-      "6\n\017access_requests\030\002 \003(\0132\021.v1.AccessRequ" +
-      "estB\n\362\370\263\007\005\270\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priva" +
-      "te\"\257\003\n\rAccessRequest\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
-      "\007\001\022\032\n\006reason\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013workfl" +
-      "ow_id\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccount_id\030\005 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\006 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022@\n\013v" +
-      "alid_until\030\007 \001(\0132\032.google.protobuf.Times" +
-      "tampB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006status\030\010 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\0229\n\tstatus_at\030\t \001(\0132\032.google.pr" +
-      "otobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010grant_id" +
-      "\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\264\001\n" +
-      "\022AccessRequestEvent\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\036\n\nrequest_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010a" +
-      "ctor_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\004 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*2\247\001\n\016AccessRequests\022o" +
-      "\n\004List\022\034.v1.AccessRequestListRequest\032\035.v" +
-      "1.AccessRequestListResponse\"*\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007\030\252\363\263\007\023/v1/access-requests\032$\312\371\263\007\022\302\371" +
-      "\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003aq-Bj\n\031com.str" +
-      "ongdm.api.plumbingB\026AccessRequestsPlumbi" +
-      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
-      "v3/internal/v1;v1b\006proto3"
+      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\311\001\n\031A" +
+      "ccessRequestListResponse\022&\n\004meta\030\001 \001(\0132\030" +
+      ".v1.ListResponseMetadata\0226\n\017access_reque" +
+      "sts\030\002 \003(\0132\021.v1.AccessRequestB\n\362\370\263\007\005\270\363\263\007\001" +
+      "\022@\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
+      "ataB\025\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*:\n\372\370\263\007\005\250\363\263\007\001\"\257" +
+      "\003\n\rAccessRequest\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032" +
+      "\n\006reason\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013workflow_i" +
+      "d\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccount_id\030\005 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\006 \001(\0132\032.google" +
+      ".protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022@\n\013valid" +
+      "_until\030\007 \001(\0132\032.google.protobuf.Timestamp" +
+      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006status\030\010 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\0229\n\tstatus_at\030\t \001(\0132\032.google.protob" +
+      "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010grant_id\030\n \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\264\001\n\022Acc" +
+      "essRequestEvent\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\036\n\nrequest_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010actor" +
+      "_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372" +
+      "\370\263\007\013\250\363\263\007\001\322\363\263\007\001*2\367\001\n\016AccessRequests\022o\n\004Li" +
+      "st\022\034.v1.AccessRequestListRequest\032\035.v1.Ac" +
+      "cessRequestListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371" +
+      "\263\007\030\252\363\263\007\023/v1/access-requests\032t\312\371\263\007\022\302\371\263\007\rA" +
+      "ccessRequest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007" +
+      "\030\312\371\263\007\023!terraform-provider\312\371\263\007\006\312\371\263\007\001*\312\371\263\007" +
+      "\030\312\371\263\007\023!terraform-providerB\222\001\n\031com.strong" +
+      "dm.api.plumbingB\026AccessRequestsPlumbingZ" +
+      "5github.com/strongdm/strongdm-sdk-go/v3/" +
+      "internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terr" +
+      "aform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6059,7 +6326,7 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_AccessRequestListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequestListResponse_descriptor,
-        new java.lang.String[] { "Meta", "AccessRequests", });
+        new java.lang.String[] { "Meta", "AccessRequests", "RateLimit", });
     internal_static_v1_AccessRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_AccessRequest_fieldAccessorTable = new
@@ -6075,6 +6342,7 @@ public final class AccessRequestsPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);
