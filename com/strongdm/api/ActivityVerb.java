@@ -122,6 +122,7 @@ public final class ActivityVerb {
   public static final String RELAY_UPDATED_NAME = "relay name updated";
   public static final String RELAY_DELETED = "relay deleted";
   public static final String ORG_PUBLIC_KEY_UPDATED = "public key updated";
+  public static final String ORG_DISCARD_REPLAYS_UPDATED = "discard replays updated";
   public static final String ORG_ENFORCE_PORT_OVERRIDES_UPDATED =
       "port override enforcement updated";
   public static final String ORG_SERVICE_AUTO_CONNECT_UPDATED =

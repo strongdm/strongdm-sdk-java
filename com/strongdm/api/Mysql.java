@@ -35,17 +35,11 @@ public class Mysql implements Resource {
   }
 
   private String database;
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
+  /** The database for healthchecks. Does not affect client requests. */
   public String getDatabase() {
     return this.database;
   }
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
+  /** The database for healthchecks. Does not affect client requests. */
   public void setDatabase(String in) {
     this.database = in;
   }
