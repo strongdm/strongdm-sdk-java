@@ -11841,6 +11841,7 @@ public class Plumbing {
 
   public static com.strongdm.api.SQLServer convertSQLServerToPorcelain(SQLServer plumbing) {
     com.strongdm.api.SQLServer porcelain = new com.strongdm.api.SQLServer();
+    porcelain.setAllowDeprecatedEncryption((plumbing.getAllowDeprecatedEncryption()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setDatabase((plumbing.getDatabase()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
@@ -11865,6 +11866,7 @@ public class Plumbing {
       return null;
     }
     SQLServer.Builder builder = SQLServer.newBuilder();
+    builder.setAllowDeprecatedEncryption(porcelain.getAllowDeprecatedEncryption());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -11931,6 +11933,7 @@ public class Plumbing {
   public static com.strongdm.api.SQLServerAzureAD convertSQLServerAzureADToPorcelain(
       SQLServerAzureAD plumbing) {
     com.strongdm.api.SQLServerAzureAD porcelain = new com.strongdm.api.SQLServerAzureAD();
+    porcelain.setAllowDeprecatedEncryption((plumbing.getAllowDeprecatedEncryption()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setClientId((plumbing.getClientId()));
     porcelain.setDatabase((plumbing.getDatabase()));
@@ -11957,6 +11960,7 @@ public class Plumbing {
       return null;
     }
     SQLServerAzureAD.Builder builder = SQLServerAzureAD.newBuilder();
+    builder.setAllowDeprecatedEncryption(porcelain.getAllowDeprecatedEncryption());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -12026,6 +12030,7 @@ public class Plumbing {
   public static com.strongdm.api.SQLServerKerberosAD convertSQLServerKerberosADToPorcelain(
       SQLServerKerberosAD plumbing) {
     com.strongdm.api.SQLServerKerberosAD porcelain = new com.strongdm.api.SQLServerKerberosAD();
+    porcelain.setAllowDeprecatedEncryption((plumbing.getAllowDeprecatedEncryption()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setDatabase((plumbing.getDatabase()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
@@ -12054,6 +12059,7 @@ public class Plumbing {
       return null;
     }
     SQLServerKerberosAD.Builder builder = SQLServerKerberosAD.newBuilder();
+    builder.setAllowDeprecatedEncryption(porcelain.getAllowDeprecatedEncryption());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }

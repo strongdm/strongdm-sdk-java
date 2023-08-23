@@ -18,6 +18,22 @@
 package com.strongdm.api;
 
 public class SQLServer implements Resource {
+  private boolean allowDeprecatedEncryption;
+  /**
+   * Whether to allow deprecated encryption protocols to be used for this resource. For example, TLS
+   * 1.0.
+   */
+  public boolean getAllowDeprecatedEncryption() {
+    return this.allowDeprecatedEncryption;
+  }
+  /**
+   * Whether to allow deprecated encryption protocols to be used for this resource. For example, TLS
+   * 1.0.
+   */
+  public void setAllowDeprecatedEncryption(boolean in) {
+    this.allowDeprecatedEncryption = in;
+  }
+
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for

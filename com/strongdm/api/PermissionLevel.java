@@ -24,6 +24,7 @@ public final class PermissionLevel {
   public static final String DATABASE_ADMIN = "database-admin";
   public static final String TEAM_LEADER = "multi-team-leader";
   public static final String USER = "user";
+  public static final String READ_ONLY_ADMIN = "read-only-admin";
   public static final String RELAY = "relay";
   public static final String ADMIN_TOKEN = "admin-token";
   public static final String SCIM_TOKEN = "scim-token";
