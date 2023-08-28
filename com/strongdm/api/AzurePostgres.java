@@ -194,11 +194,19 @@ public class AzurePostgres implements Resource {
   }
 
   private String username;
-  /** The username to authenticate with. */
+  /**
+   * The username to authenticate with. For Azure Postgres, this also will include the hostname of
+   * the target server for Azure Single Server compatibility. For Flexible servers, use the normal
+   * Postgres type.
+   */
   public String getUsername() {
     return this.username;
   }
-  /** The username to authenticate with. */
+  /**
+   * The username to authenticate with. For Azure Postgres, this also will include the hostname of
+   * the target server for Azure Single Server compatibility. For Flexible servers, use the normal
+   * Postgres type.
+   */
   public void setUsername(String in) {
     this.username = in;
   }
