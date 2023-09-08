@@ -174,6 +174,9 @@ public final class ActivitiesGrpc {
     /**
      * <pre>
      * List gets a list of Activities matching a given set of criteria.
+     * The 'before' and 'after' filters can be used to control the time
+     * range of the output activities. If not provided, one week of back
+     * of activities will be returned.
      * </pre>
      */
     public void list(com.strongdm.api.plumbing.ActivitiesPlumbing.ActivityListRequest request,
@@ -234,6 +237,9 @@ public final class ActivitiesGrpc {
     /**
      * <pre>
      * List gets a list of Activities matching a given set of criteria.
+     * The 'before' and 'after' filters can be used to control the time
+     * range of the output activities. If not provided, one week of back
+     * of activities will be returned.
      * </pre>
      */
     public void list(com.strongdm.api.plumbing.ActivitiesPlumbing.ActivityListRequest request,
@@ -275,6 +281,9 @@ public final class ActivitiesGrpc {
     /**
      * <pre>
      * List gets a list of Activities matching a given set of criteria.
+     * The 'before' and 'after' filters can be used to control the time
+     * range of the output activities. If not provided, one week of back
+     * of activities will be returned.
      * </pre>
      */
     public com.strongdm.api.plumbing.ActivitiesPlumbing.ActivityListResponse list(com.strongdm.api.plumbing.ActivitiesPlumbing.ActivityListRequest request) {
@@ -316,6 +325,9 @@ public final class ActivitiesGrpc {
     /**
      * <pre>
      * List gets a list of Activities matching a given set of criteria.
+     * The 'before' and 'after' filters can be used to control the time
+     * range of the output activities. If not provided, one week of back
+     * of activities will be returned.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ActivitiesPlumbing.ActivityListResponse> list(

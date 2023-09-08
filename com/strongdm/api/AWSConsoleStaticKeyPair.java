@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * AWSConsoleStaticKeyPair is currently unstable, and its API may change, or it may be removed,
- * without a major version bump.
- */
 public class AWSConsoleStaticKeyPair implements Resource {
   private String accessKey;
   /** The Access Key ID to authenticate with. */

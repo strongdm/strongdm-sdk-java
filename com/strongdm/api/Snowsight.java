@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * Snowsight is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class Snowsight implements Resource {
   private String bindInterface;
   /**

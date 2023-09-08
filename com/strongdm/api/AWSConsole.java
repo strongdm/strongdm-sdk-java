@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * AWSConsole is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class AWSConsole implements Resource {
   private String bindInterface;
   /**
