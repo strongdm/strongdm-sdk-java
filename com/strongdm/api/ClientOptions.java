@@ -43,6 +43,12 @@ public class ClientOptions {
     return this.exposeRateLimitErrors;
   }
 
+  private int pageLimit = 50;
+
+  public int getPageLimit() {
+    return this.pageLimit;
+  }
+
   public ClientOptions() {
     this.host = "api.strongdm.com";
     this.port = 443;
@@ -83,6 +89,17 @@ public class ClientOptions {
   public ClientOptions withRateLimitRetries(boolean enabled) {
     ClientOptions c = this.copy();
     c.exposeRateLimitErrors = !enabled;
+    return c;
+  }
+
+  // withPageLimit will set the page limit used for list commands i.e. the number of results
+  // that list calls will return per request to the StrongDM control plane. The interface for
+  // listing does not directly expose this limit, but it may be useful to manipulate it to reduce
+  // network callouts, or optimize clients if expecting few results. If not provided, the default
+  // is 50.
+  public ClientOptions withPageLimit(int limit) {
+    ClientOptions c = this.copy();
+    c.pageLimit = limit;
     return c;
   }
 }

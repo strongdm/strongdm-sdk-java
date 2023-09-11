@@ -58,9 +58,8 @@ public class WorkflowsHistory {
         WorkflowsHistoryPlumbing.WorkflowHistoryListRequest.newBuilder();
     builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
-    Object pageSizeOption = this.parent.testOptions.get("PageSize");
-    if (pageSizeOption instanceof Integer) {
-      metaBuilder.setLimit((int) pageSizeOption);
+    if (this.parent.pageLimit > 0) {
+      metaBuilder.setLimit(this.parent.pageLimit);
     }
     if (this.parent.snapshotDate != null) {
       metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));

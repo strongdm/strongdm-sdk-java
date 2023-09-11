@@ -44,6 +44,7 @@ public class Client {
   private final int defaultMaxRetryDelay = 300000; // 300 seconds
 
   private boolean exposeRateLimitErrors;
+  protected int pageLimit = 50;
 
   private int maxRetries;
   private int baseRetryDelay;
@@ -405,6 +406,7 @@ public class Client {
     this.baseRetryDelay = client.defaultBaseRetryDelay;
     this.maxRetryDelay = client.defaultMaxRetryDelay;
     this.exposeRateLimitErrors = client.exposeRateLimitErrors;
+    this.pageLimit = client.pageLimit;
     this.channel = client.channel;
     this.snapshotDate = client.snapshotDate;
     this.accessRequests = new AccessRequests(this.channel, this);
@@ -458,6 +460,7 @@ public class Client {
     this.maxRetries = this.defaultMaxRetries;
     this.baseRetryDelay = this.defaultBaseRetryDelay;
     this.maxRetryDelay = this.defaultMaxRetryDelay;
+    this.pageLimit = options.getPageLimit();
     this.exposeRateLimitErrors = options.getExposeRateLimitErrors();
     try {
       NettyChannelBuilder builder =
