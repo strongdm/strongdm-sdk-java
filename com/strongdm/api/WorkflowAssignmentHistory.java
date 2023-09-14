@@ -20,43 +20,41 @@ package com.strongdm.api;
 import java.util.Date;
 
 /**
- * WorkflowAssignmentHistory records the state of a WorkflowAssignment at a given point in time,
- * where every change (create, update and delete) to a WorkflowAssignment produces an
- * WorkflowAssignmentHistory record.
+ * WorkflowAssignmentsHistory provides records of all changes to the state of a WorkflowAssignment.
  */
 public class WorkflowAssignmentHistory {
   private String activityId;
   /**
-   * The unique identifier of the Activity that produced this change to the Workflow. May be empty
-   * for some system-initiated updates.
+   * The unique identifier of the Activity that produced this change to the WorkflowAssignment. May
+   * be empty for some system-initiated updates.
    */
   public String getActivityId() {
     return this.activityId;
   }
   /**
-   * The unique identifier of the Activity that produced this change to the Workflow. May be empty
-   * for some system-initiated updates.
+   * The unique identifier of the Activity that produced this change to the WorkflowAssignment. May
+   * be empty for some system-initiated updates.
    */
   public void setActivityId(String in) {
     this.activityId = in;
   }
 
   private Date deletedAt;
-  /** If this Workflow was deleted, the time it was deleted. */
+  /** If this WorkflowAssignment was deleted, the time it was deleted. */
   public Date getDeletedAt() {
     return this.deletedAt;
   }
-  /** If this Workflow was deleted, the time it was deleted. */
+  /** If this WorkflowAssignment was deleted, the time it was deleted. */
   public void setDeletedAt(Date in) {
     this.deletedAt = in;
   }
 
   private Date timestamp;
-  /** The time at which the Workflow state was recorded. */
+  /** The time at which the WorkflowAssignment state was recorded. */
   public Date getTimestamp() {
     return this.timestamp;
   }
-  /** The time at which the Workflow state was recorded. */
+  /** The time at which the WorkflowAssignment state was recorded. */
   public void setTimestamp(Date in) {
     this.timestamp = in;
   }

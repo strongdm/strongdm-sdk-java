@@ -2356,7 +2356,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
 
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2366,7 +2366,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     java.lang.String getActivityId();
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2378,7 +2378,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
 
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowAssignment state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2387,7 +2387,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     boolean hasTimestamp();
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowAssignment state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2396,7 +2396,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     com.google.protobuf.Timestamp getTimestamp();
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowAssignment state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2420,7 +2420,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
      * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
      * @return The workflowAssignment.
      */
-    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment getWorkflowAssignment();
+    com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment getWorkflowAssignment();
     /**
      * <pre>
      * The complete WorkflowAssignment state at this time.
@@ -2428,11 +2428,11 @@ public final class WorkflowAssignmentsHistoryPlumbing {
      *
      * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignmentOrBuilder getWorkflowAssignmentOrBuilder();
+    com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignmentOrBuilder getWorkflowAssignmentOrBuilder();
 
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowAssignment was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2441,7 +2441,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     boolean hasDeletedAt();
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowAssignment was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2450,7 +2450,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     com.google.protobuf.Timestamp getDeletedAt();
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowAssignment was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2459,9 +2459,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
   }
   /**
    * <pre>
-   * WorkflowAssignmentHistory records the state of a WorkflowAssignment at a given point in time,
-   * where every change (create, update and delete) to a WorkflowAssignment produces an
-   * WorkflowAssignmentHistory record.
+   * WorkflowAssignmentsHistory provides records of all changes to the state of a WorkflowAssignment.
    * </pre>
    *
    * Protobuf type {@code v1.WorkflowAssignmentHistory}
@@ -2529,11 +2527,11 @@ public final class WorkflowAssignmentsHistoryPlumbing {
               break;
             }
             case 26: {
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder subBuilder = null;
+              com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.Builder subBuilder = null;
               if (workflowAssignment_ != null) {
                 subBuilder = workflowAssignment_.toBuilder();
               }
-              workflowAssignment_ = input.readMessage(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.parser(), extensionRegistry);
+              workflowAssignment_ = input.readMessage(com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(workflowAssignment_);
                 workflowAssignment_ = subBuilder.buildPartial();
@@ -2592,7 +2590,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     private volatile java.lang.Object activityId_;
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2614,7 +2612,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     }
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2640,7 +2638,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowAssignment state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2652,7 +2650,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     }
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowAssignment state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2664,7 +2662,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     }
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowAssignment state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2675,7 +2673,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     }
 
     public static final int WORKFLOW_ASSIGNMENT_FIELD_NUMBER = 3;
-    private com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment workflowAssignment_;
+    private com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment workflowAssignment_;
     /**
      * <pre>
      * The complete WorkflowAssignment state at this time.
@@ -2697,8 +2695,8 @@ public final class WorkflowAssignmentsHistoryPlumbing {
      * @return The workflowAssignment.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment getWorkflowAssignment() {
-      return workflowAssignment_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.getDefaultInstance() : workflowAssignment_;
+    public com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment getWorkflowAssignment() {
+      return workflowAssignment_ == null ? com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.getDefaultInstance() : workflowAssignment_;
     }
     /**
      * <pre>
@@ -2708,7 +2706,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
      * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignmentOrBuilder getWorkflowAssignmentOrBuilder() {
+    public com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignmentOrBuilder getWorkflowAssignmentOrBuilder() {
       return getWorkflowAssignment();
     }
 
@@ -2716,7 +2714,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     private com.google.protobuf.Timestamp deletedAt_;
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowAssignment was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2728,7 +2726,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     }
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowAssignment was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2740,7 +2738,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     }
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowAssignment was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2954,9 +2952,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     }
     /**
      * <pre>
-     * WorkflowAssignmentHistory records the state of a WorkflowAssignment at a given point in time,
-     * where every change (create, update and delete) to a WorkflowAssignment produces an
-     * WorkflowAssignmentHistory record.
+     * WorkflowAssignmentsHistory provides records of all changes to the state of a WorkflowAssignment.
      * </pre>
      *
      * Protobuf type {@code v1.WorkflowAssignmentHistory}
@@ -3151,7 +3147,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       private java.lang.Object activityId_ = "";
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3172,7 +3168,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3194,7 +3190,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3214,7 +3210,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3229,7 +3225,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowAssignment.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3254,7 +3250,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3265,7 +3261,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3280,7 +3276,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3300,7 +3296,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3318,7 +3314,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3340,7 +3336,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3358,7 +3354,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3370,7 +3366,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3385,7 +3381,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowAssignment state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3404,9 +3400,9 @@ public final class WorkflowAssignmentsHistoryPlumbing {
         return timestampBuilder_;
       }
 
-      private com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment workflowAssignment_;
+      private com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment workflowAssignment_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignmentOrBuilder> workflowAssignmentBuilder_;
+          com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment, com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.Builder, com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignmentOrBuilder> workflowAssignmentBuilder_;
       /**
        * <pre>
        * The complete WorkflowAssignment state at this time.
@@ -3426,9 +3422,9 @@ public final class WorkflowAssignmentsHistoryPlumbing {
        * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
        * @return The workflowAssignment.
        */
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment getWorkflowAssignment() {
+      public com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment getWorkflowAssignment() {
         if (workflowAssignmentBuilder_ == null) {
-          return workflowAssignment_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.getDefaultInstance() : workflowAssignment_;
+          return workflowAssignment_ == null ? com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.getDefaultInstance() : workflowAssignment_;
         } else {
           return workflowAssignmentBuilder_.getMessage();
         }
@@ -3440,7 +3436,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
        *
        * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setWorkflowAssignment(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment value) {
+      public Builder setWorkflowAssignment(com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment value) {
         if (workflowAssignmentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3461,7 +3457,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
        * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setWorkflowAssignment(
-          com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder builderForValue) {
+          com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.Builder builderForValue) {
         if (workflowAssignmentBuilder_ == null) {
           workflowAssignment_ = builderForValue.build();
           onChanged();
@@ -3478,11 +3474,11 @@ public final class WorkflowAssignmentsHistoryPlumbing {
        *
        * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeWorkflowAssignment(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment value) {
+      public Builder mergeWorkflowAssignment(com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment value) {
         if (workflowAssignmentBuilder_ == null) {
           if (workflowAssignment_ != null) {
             workflowAssignment_ =
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.newBuilder(workflowAssignment_).mergeFrom(value).buildPartial();
+              com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.newBuilder(workflowAssignment_).mergeFrom(value).buildPartial();
           } else {
             workflowAssignment_ = value;
           }
@@ -3518,7 +3514,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
        *
        * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder getWorkflowAssignmentBuilder() {
+      public com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.Builder getWorkflowAssignmentBuilder() {
         
         onChanged();
         return getWorkflowAssignmentFieldBuilder().getBuilder();
@@ -3530,12 +3526,12 @@ public final class WorkflowAssignmentsHistoryPlumbing {
        *
        * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignmentOrBuilder getWorkflowAssignmentOrBuilder() {
+      public com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignmentOrBuilder getWorkflowAssignmentOrBuilder() {
         if (workflowAssignmentBuilder_ != null) {
           return workflowAssignmentBuilder_.getMessageOrBuilder();
         } else {
           return workflowAssignment_ == null ?
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.getDefaultInstance() : workflowAssignment_;
+              com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.getDefaultInstance() : workflowAssignment_;
         }
       }
       /**
@@ -3546,11 +3542,11 @@ public final class WorkflowAssignmentsHistoryPlumbing {
        * <code>.v1.WorkflowAssignment workflow_assignment = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignmentOrBuilder> 
+          com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment, com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.Builder, com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignmentOrBuilder> 
           getWorkflowAssignmentFieldBuilder() {
         if (workflowAssignmentBuilder_ == null) {
           workflowAssignmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignmentOrBuilder>(
+              com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment, com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignment.Builder, com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.WorkflowAssignmentOrBuilder>(
                   getWorkflowAssignment(),
                   getParentForChildren(),
                   isClean());
@@ -3564,7 +3560,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deletedAtBuilder_;
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3575,7 +3571,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3590,7 +3586,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3610,7 +3606,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3628,7 +3624,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3650,7 +3646,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3668,7 +3664,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3680,7 +3676,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3695,7 +3691,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowAssignment was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3791,44 +3787,44 @@ public final class WorkflowAssignmentsHistoryPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\"workflow_assignments_history.proto\022\002v1" +
-      "\032\037google/protobuf/timestamp.proto\032\017workf" +
-      "lows.proto\032\roptions.proto\032\nspec.proto\"\224\001" +
-      "\n%WorkflowAssignmentsHistoryListRequest\022" +
-      "%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032" +
-      "\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372" +
-      "\370\263\007\030\322\363\263\007\023!terraform-provider\"\217\002\n&Workflo" +
-      "wAssignmentsHistoryListResponse\022&\n\004meta\030" +
-      "\001 \001(\0132\030.v1.ListResponseMetadata\022:\n\007histo" +
-      "ry\030\002 \003(\0132\035.v1.WorkflowAssignmentHistoryB" +
-      "\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
-      "eLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
-      "\007\022\262\364\263\007\r!json_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363" +
-      "\263\007\023!terraform-provider\"\250\002\n\031WorkflowAssig" +
-      "nmentHistory\022\037\n\013activity_id\030\001 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.google.protob" +
-      "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022?\n\023workflow_ass" +
-      "ignment\030\003 \001(\0132\026.v1.WorkflowAssignmentB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google.p" +
-      "rotobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
-      "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r2\215\002\n\032WorkflowAssignmentsHistory\022\227\001\n\004Lis" +
-      "t\022).v1.WorkflowAssignmentsHistoryListReq" +
-      "uest\032*.v1.WorkflowAssignmentsHistoryList" +
-      "Response\"8\202\371\263\007\010\242\363\263\007\003get\202\371\263\007&\252\363\263\007!/v1/wor" +
-      "kflows-assignments-history\032U\312\371\263\007\036\302\371\263\007\031Wo" +
-      "rkflowAssignmentHistory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371" +
-      "\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\236\001\n\031co" +
-      "m.strongdm.api.plumbingB\"WorkflowAssignm" +
-      "entsHistoryPlumbingZ5github.com/strongdm" +
-      "/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242" +
-      "\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006prot" +
-      "o3"
+      "\032\037google/protobuf/timestamp.proto\032\032workf" +
+      "low_assignments.proto\032\roptions.proto\032\nsp" +
+      "ec.proto\"\224\001\n%WorkflowAssignmentsHistoryL" +
+      "istRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListReques" +
+      "tMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372" +
+      "\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"" +
+      "\217\002\n&WorkflowAssignmentsHistoryListRespon" +
+      "se\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetada" +
+      "ta\022:\n\007history\030\002 \003(\0132\035.v1.WorkflowAssignm" +
+      "entHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001" +
+      "(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:(\372\370\263\007\006\322\363" +
+      "\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\250\002\n\031Wo" +
+      "rkflowAssignmentHistory\022\037\n\013activity_id\030\001" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022?\n\023w" +
+      "orkflow_assignment\030\003 \001(\0132\026.v1.WorkflowAs" +
+      "signmentB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\013" +
+      "2\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001" +
+      ":2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraf" +
+      "orm-provider2\214\002\n\032WorkflowAssignmentsHist" +
+      "ory\022\226\001\n\004List\022).v1.WorkflowAssignmentsHis" +
+      "toryListRequest\032*.v1.WorkflowAssignments" +
+      "HistoryListResponse\"7\202\371\263\007\010\242\363\263\007\003get\202\371\263\007%\252" +
+      "\363\263\007 /v1/workflow-assignments-history\032U\312\371" +
+      "\263\007\036\302\371\263\007\031WorkflowAssignmentHistory\312\371\263\007\005\330\371" +
+      "\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
+      "derB\236\001\n\031com.strongdm.api.plumbingB\"Workf" +
+      "lowAssignmentsHistoryPlumbingZ5github.co" +
+      "m/strongdm/strongdm-sdk-go/v3/internal/v" +
+      "1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-prov" +
+      "iderb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.strongdm.api.plumbing.WorkflowsPlumbing.getDescriptor(),
+          com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.getDescriptor(),
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
         });
@@ -3860,7 +3856,7 @@ public final class WorkflowAssignmentsHistoryPlumbing {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.strongdm.api.plumbing.WorkflowsPlumbing.getDescriptor();
+    com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.getDescriptor();
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();
   }

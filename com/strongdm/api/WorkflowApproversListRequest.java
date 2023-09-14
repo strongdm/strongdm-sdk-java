@@ -17,8 +17,10 @@
 
 package com.strongdm.api;
 
-/** WorkflowListRequest specifies criteria for retrieving a list of Workflow records */
-public class WorkflowListRequest {
+/**
+ * WorkflowApproversListRequest specifies criteria for retrieving a list of WorkflowApprover records
+ */
+public class WorkflowApproversListRequest {
   private String filter;
   /** A human-readable filter query string. */
   public String getFilter() {

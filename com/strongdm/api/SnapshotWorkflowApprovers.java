@@ -17,12 +17,12 @@
 package com.strongdm.api;
 
 /**
- * A SnapshotWorkflows exposes the read only methods of the Workflows service for historical
- * queries.
+ * A SnapshotWorkflowApprovers exposes the read only methods of the WorkflowApprovers service for
+ * historical queries.
  */
-public interface SnapshotWorkflows {
-  /** Get reads one workflow by ID. */
-  public WorkflowGetResponse get(String id) throws RpcException;
-  /** Lists existing workflows. */
-  public Iterable<Workflow> list(String filter, Object... args) throws RpcException;
+public interface SnapshotWorkflowApprovers {
+  /** Get reads one workflow approver by ID. */
+  public WorkflowApproverGetResponse get(String id) throws RpcException;
+  /** Lists existing workflow approvers. */
+  public Iterable<WorkflowApprover> list(String filter, Object... args) throws RpcException;
 }

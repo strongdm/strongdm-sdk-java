@@ -135,10 +135,28 @@ public class SnapshotClient {
   public SnapshotSecretStores secretStores() {
     return this.parent.secretStores;
   }
+  /** WorkflowApprovers is an account with the ability to approve requests bound to a workflow. */
+  public SnapshotWorkflowApprovers workflowApprovers() {
+    return this.parent.workflowApprovers;
+  }
+  /**
+   * WorkflowAssignments links a Resource to a Workflow. The assigned resources are those that a
+   * user can request access to via the workflow.
+   */
+  public SnapshotWorkflowAssignments workflowAssignments() {
+    return this.parent.workflowAssignments;
+  }
+  /**
+   * WorkflowRole links a role to a workflow. The linked roles indicate which roles a user must be a
+   * part of to request access to a resource via the workflow.
+   */
+  public SnapshotWorkflowRoles workflowRoles() {
+    return this.parent.workflowRoles;
+  }
   /**
    * Workflows are the collection of rules that define the resources to which access can be
    * requested, the users that can request that access, and the mechanism for approving those
-   * requests which can either but automatic approval or a set of users authorized to approve the
+   * requests which can either be automatic approval or a set of users authorized to approve the
    * requests.
    */
   public SnapshotWorkflows workflows() {

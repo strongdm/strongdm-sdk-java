@@ -29,6 +29,16 @@ public class WorkflowApprover {
     this.approverId = in;
   }
 
+  private String id;
+  /** Unique identifier of the WorkflowApprover. */
+  public String getId() {
+    return this.id;
+  }
+  /** Unique identifier of the WorkflowApprover. */
+  public void setId(String in) {
+    this.id = in;
+  }
+
   private String workflowId;
   /** The workflow id. */
   public String getWorkflowId() {

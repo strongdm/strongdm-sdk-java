@@ -20,6 +20,7 @@ package com.strongdm.api;
 import com.strongdm.api.plumbing.PageIterator;
 import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import com.strongdm.api.plumbing.WorkflowsGrpc;
 import com.strongdm.api.plumbing.WorkflowsPlumbing;
@@ -32,7 +33,7 @@ import java.util.function.Supplier;
 /**
  * Workflows are the collection of rules that define the resources to which access can be requested,
  * the users that can request that access, and the mechanism for approving those requests which can
- * either but automatic approval or a set of users authorized to approve the requests.
+ * either be automatic approval or a set of users authorized to approve the requests.
  */
 public class Workflows implements SnapshotWorkflows {
   private final WorkflowsGrpc.WorkflowsBlockingStub stub;
@@ -55,6 +56,115 @@ public class Workflows implements SnapshotWorkflows {
    */
   public Workflows withDeadlineAfter(long duration, TimeUnit units) {
     return new Workflows(this.stub.withDeadlineAfter(duration, units), this.parent);
+  }
+  /** Create creates a new workflow and requires a name for the workflow. */
+  public WorkflowCreateResponse create(Workflow workflow) throws RpcException {
+    WorkflowsPlumbing.WorkflowCreateRequest.Builder builder =
+        WorkflowsPlumbing.WorkflowCreateRequest.newBuilder();
+    builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(workflow));
+    WorkflowsPlumbing.WorkflowCreateRequest req = builder.build();
+    WorkflowsPlumbing.WorkflowCreateResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Workflows.Create", req))
+                .create(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertWorkflowCreateResponseToPorcelain(plumbingResponse);
+  }
+  /** Get reads one workflow by ID. */
+  public WorkflowGetResponse get(String id) throws RpcException {
+    WorkflowsPlumbing.WorkflowGetRequest.Builder builder =
+        WorkflowsPlumbing.WorkflowGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
+    builder.setId((id));
+    WorkflowsPlumbing.WorkflowGetRequest req = builder.build();
+    WorkflowsPlumbing.WorkflowGetResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Workflows.Get", req))
+                .get(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertWorkflowGetResponseToPorcelain(plumbingResponse);
+  }
+  /** Delete deletes an existing workflow. */
+  public WorkflowDeleteResponse delete(String id) throws RpcException {
+    WorkflowsPlumbing.WorkflowDeleteRequest.Builder builder =
+        WorkflowsPlumbing.WorkflowDeleteRequest.newBuilder();
+    builder.setId((id));
+    WorkflowsPlumbing.WorkflowDeleteRequest req = builder.build();
+    WorkflowsPlumbing.WorkflowDeleteResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Workflows.Delete", req))
+                .delete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertWorkflowDeleteResponseToPorcelain(plumbingResponse);
+  }
+  /** Update updates an existing workflow. */
+  public WorkflowUpdateResponse update(Workflow workflow) throws RpcException {
+    WorkflowsPlumbing.WorkflowUpdateRequest.Builder builder =
+        WorkflowsPlumbing.WorkflowUpdateRequest.newBuilder();
+    builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(workflow));
+    WorkflowsPlumbing.WorkflowUpdateRequest req = builder.build();
+    WorkflowsPlumbing.WorkflowUpdateResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Workflows.Update", req))
+                .update(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertWorkflowUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Lists existing workflows. */
   public Iterable<Workflow> list(String filter, Object... args) throws RpcException {

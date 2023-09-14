@@ -17,7 +17,10 @@
 
 package com.strongdm.api;
 
-/** WorkflowAssignment links a Resource to a Workflow. */
+/**
+ * WorkflowAssignment links a Resource to a Workflow. The assigned resources are those that a user
+ * can request access to via the workflow.
+ */
 public class WorkflowAssignment {
   private String resourceId;
   /** The resource id. */

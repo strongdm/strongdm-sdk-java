@@ -82,7 +82,7 @@ public final class WorkflowApproversHistoryPlumbing {
   /**
    * <pre>
    * WorkflowApproversHistoryListRequest specifies criteria for retrieving a list of
-   * WorkflowApproversHistory records.
+   * WorkflowApproverHistory records.
    * </pre>
    *
    * Protobuf type {@code v1.WorkflowApproversHistoryListRequest}
@@ -440,7 +440,7 @@ public final class WorkflowApproversHistoryPlumbing {
     /**
      * <pre>
      * WorkflowApproversHistoryListRequest specifies criteria for retrieving a list of
-     * WorkflowApproversHistory records.
+     * WorkflowApproverHistory records.
      * </pre>
      *
      * Protobuf type {@code v1.WorkflowApproversHistoryListRequest}
@@ -1011,7 +1011,7 @@ public final class WorkflowApproversHistoryPlumbing {
   }
   /**
    * <pre>
-   * WorkflowApproversHistoryListResponse returns a list of WorkflowApproversHistory records that meet
+   * WorkflowApproversHistoryListResponse returns a list of WorkflowApproverHistory records that meet
    * the criteria of a WorkflowApproversHistoryListRequest.
    * </pre>
    *
@@ -1460,7 +1460,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
     /**
      * <pre>
-     * WorkflowApproversHistoryListResponse returns a list of WorkflowApproversHistory records that meet
+     * WorkflowApproversHistoryListResponse returns a list of WorkflowApproverHistory records that meet
      * the criteria of a WorkflowApproversHistoryListRequest.
      * </pre>
      *
@@ -2356,7 +2356,7 @@ public final class WorkflowApproversHistoryPlumbing {
 
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowApprover.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2366,7 +2366,7 @@ public final class WorkflowApproversHistoryPlumbing {
     java.lang.String getActivityId();
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowApprover.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2378,7 +2378,7 @@ public final class WorkflowApproversHistoryPlumbing {
 
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowApprover state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2387,7 +2387,7 @@ public final class WorkflowApproversHistoryPlumbing {
     boolean hasTimestamp();
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowApprover state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2396,7 +2396,7 @@ public final class WorkflowApproversHistoryPlumbing {
     com.google.protobuf.Timestamp getTimestamp();
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowApprover state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2420,7 +2420,7 @@ public final class WorkflowApproversHistoryPlumbing {
      * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
      * @return The workflowApprover.
      */
-    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover getWorkflowApprover();
+    com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover getWorkflowApprover();
     /**
      * <pre>
      * The complete WorkflowApprover state at this time.
@@ -2428,11 +2428,11 @@ public final class WorkflowApproversHistoryPlumbing {
      *
      * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApproverOrBuilder getWorkflowApproverOrBuilder();
+    com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApproverOrBuilder getWorkflowApproverOrBuilder();
 
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowApprover was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2441,7 +2441,7 @@ public final class WorkflowApproversHistoryPlumbing {
     boolean hasDeletedAt();
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowApprover was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2450,7 +2450,7 @@ public final class WorkflowApproversHistoryPlumbing {
     com.google.protobuf.Timestamp getDeletedAt();
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowApprover was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2459,9 +2459,7 @@ public final class WorkflowApproversHistoryPlumbing {
   }
   /**
    * <pre>
-   * WorkflowApproverHistory records the state of a WorkflowApprover at a given point in time,
-   * where every change (create, update and delete) to a WorkflowApprover produces an
-   * WorkflowApproverHistory record.
+   * WorkflowApproverHistory provides records of all changes to the state of a WorkflowApprover.
    * </pre>
    *
    * Protobuf type {@code v1.WorkflowApproverHistory}
@@ -2529,11 +2527,11 @@ public final class WorkflowApproversHistoryPlumbing {
               break;
             }
             case 26: {
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder subBuilder = null;
+              com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.Builder subBuilder = null;
               if (workflowApprover_ != null) {
                 subBuilder = workflowApprover_.toBuilder();
               }
-              workflowApprover_ = input.readMessage(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.parser(), extensionRegistry);
+              workflowApprover_ = input.readMessage(com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(workflowApprover_);
                 workflowApprover_ = subBuilder.buildPartial();
@@ -2592,7 +2590,7 @@ public final class WorkflowApproversHistoryPlumbing {
     private volatile java.lang.Object activityId_;
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowApprover.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2614,7 +2612,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
     /**
      * <pre>
-     * The unique identifier of the Activity that produced this change to the Workflow.
+     * The unique identifier of the Activity that produced this change to the WorkflowApprover.
      * May be empty for some system-initiated updates.
      * </pre>
      *
@@ -2640,7 +2638,7 @@ public final class WorkflowApproversHistoryPlumbing {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowApprover state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2652,7 +2650,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowApprover state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2664,7 +2662,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
     /**
      * <pre>
-     * The time at which the Workflow state was recorded.
+     * The time at which the WorkflowApprover state was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -2675,7 +2673,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
 
     public static final int WORKFLOW_APPROVER_FIELD_NUMBER = 3;
-    private com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover workflowApprover_;
+    private com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover workflowApprover_;
     /**
      * <pre>
      * The complete WorkflowApprover state at this time.
@@ -2697,8 +2695,8 @@ public final class WorkflowApproversHistoryPlumbing {
      * @return The workflowApprover.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover getWorkflowApprover() {
-      return workflowApprover_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.getDefaultInstance() : workflowApprover_;
+    public com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover getWorkflowApprover() {
+      return workflowApprover_ == null ? com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.getDefaultInstance() : workflowApprover_;
     }
     /**
      * <pre>
@@ -2708,7 +2706,7 @@ public final class WorkflowApproversHistoryPlumbing {
      * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApproverOrBuilder getWorkflowApproverOrBuilder() {
+    public com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApproverOrBuilder getWorkflowApproverOrBuilder() {
       return getWorkflowApprover();
     }
 
@@ -2716,7 +2714,7 @@ public final class WorkflowApproversHistoryPlumbing {
     private com.google.protobuf.Timestamp deletedAt_;
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowApprover was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2728,7 +2726,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowApprover was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2740,7 +2738,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
     /**
      * <pre>
-     * If this Workflow was deleted, the time it was deleted.
+     * If this WorkflowApprover was deleted, the time it was deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -2954,9 +2952,7 @@ public final class WorkflowApproversHistoryPlumbing {
     }
     /**
      * <pre>
-     * WorkflowApproverHistory records the state of a WorkflowApprover at a given point in time,
-     * where every change (create, update and delete) to a WorkflowApprover produces an
-     * WorkflowApproverHistory record.
+     * WorkflowApproverHistory provides records of all changes to the state of a WorkflowApprover.
      * </pre>
      *
      * Protobuf type {@code v1.WorkflowApproverHistory}
@@ -3151,7 +3147,7 @@ public final class WorkflowApproversHistoryPlumbing {
       private java.lang.Object activityId_ = "";
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowApprover.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3172,7 +3168,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowApprover.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3194,7 +3190,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowApprover.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3214,7 +3210,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowApprover.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3229,7 +3225,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the Activity that produced this change to the Workflow.
+       * The unique identifier of the Activity that produced this change to the WorkflowApprover.
        * May be empty for some system-initiated updates.
        * </pre>
        *
@@ -3254,7 +3250,7 @@ public final class WorkflowApproversHistoryPlumbing {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3265,7 +3261,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3280,7 +3276,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3300,7 +3296,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3318,7 +3314,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3340,7 +3336,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3358,7 +3354,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3370,7 +3366,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3385,7 +3381,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Workflow state was recorded.
+       * The time at which the WorkflowApprover state was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2 [(.v1.field_options) = { ... }</code>
@@ -3404,9 +3400,9 @@ public final class WorkflowApproversHistoryPlumbing {
         return timestampBuilder_;
       }
 
-      private com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover workflowApprover_;
+      private com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover workflowApprover_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApproverOrBuilder> workflowApproverBuilder_;
+          com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover, com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.Builder, com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApproverOrBuilder> workflowApproverBuilder_;
       /**
        * <pre>
        * The complete WorkflowApprover state at this time.
@@ -3426,9 +3422,9 @@ public final class WorkflowApproversHistoryPlumbing {
        * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
        * @return The workflowApprover.
        */
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover getWorkflowApprover() {
+      public com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover getWorkflowApprover() {
         if (workflowApproverBuilder_ == null) {
-          return workflowApprover_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.getDefaultInstance() : workflowApprover_;
+          return workflowApprover_ == null ? com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.getDefaultInstance() : workflowApprover_;
         } else {
           return workflowApproverBuilder_.getMessage();
         }
@@ -3440,7 +3436,7 @@ public final class WorkflowApproversHistoryPlumbing {
        *
        * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setWorkflowApprover(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover value) {
+      public Builder setWorkflowApprover(com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover value) {
         if (workflowApproverBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3461,7 +3457,7 @@ public final class WorkflowApproversHistoryPlumbing {
        * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setWorkflowApprover(
-          com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder builderForValue) {
+          com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.Builder builderForValue) {
         if (workflowApproverBuilder_ == null) {
           workflowApprover_ = builderForValue.build();
           onChanged();
@@ -3478,11 +3474,11 @@ public final class WorkflowApproversHistoryPlumbing {
        *
        * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeWorkflowApprover(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover value) {
+      public Builder mergeWorkflowApprover(com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover value) {
         if (workflowApproverBuilder_ == null) {
           if (workflowApprover_ != null) {
             workflowApprover_ =
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.newBuilder(workflowApprover_).mergeFrom(value).buildPartial();
+              com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.newBuilder(workflowApprover_).mergeFrom(value).buildPartial();
           } else {
             workflowApprover_ = value;
           }
@@ -3518,7 +3514,7 @@ public final class WorkflowApproversHistoryPlumbing {
        *
        * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder getWorkflowApproverBuilder() {
+      public com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.Builder getWorkflowApproverBuilder() {
         
         onChanged();
         return getWorkflowApproverFieldBuilder().getBuilder();
@@ -3530,12 +3526,12 @@ public final class WorkflowApproversHistoryPlumbing {
        *
        * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApproverOrBuilder getWorkflowApproverOrBuilder() {
+      public com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApproverOrBuilder getWorkflowApproverOrBuilder() {
         if (workflowApproverBuilder_ != null) {
           return workflowApproverBuilder_.getMessageOrBuilder();
         } else {
           return workflowApprover_ == null ?
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.getDefaultInstance() : workflowApprover_;
+              com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.getDefaultInstance() : workflowApprover_;
         }
       }
       /**
@@ -3546,11 +3542,11 @@ public final class WorkflowApproversHistoryPlumbing {
        * <code>.v1.WorkflowApprover workflow_approver = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApproverOrBuilder> 
+          com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover, com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.Builder, com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApproverOrBuilder> 
           getWorkflowApproverFieldBuilder() {
         if (workflowApproverBuilder_ == null) {
           workflowApproverBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApproverOrBuilder>(
+              com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover, com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover.Builder, com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApproverOrBuilder>(
                   getWorkflowApprover(),
                   getParentForChildren(),
                   isClean());
@@ -3564,7 +3560,7 @@ public final class WorkflowApproversHistoryPlumbing {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deletedAtBuilder_;
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3575,7 +3571,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3590,7 +3586,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3610,7 +3606,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3628,7 +3624,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3650,7 +3646,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3668,7 +3664,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3680,7 +3676,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3695,7 +3691,7 @@ public final class WorkflowApproversHistoryPlumbing {
       }
       /**
        * <pre>
-       * If this Workflow was deleted, the time it was deleted.
+       * If this WorkflowApprover was deleted, the time it was deleted.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp deleted_at = 4 [(.v1.field_options) = { ... }</code>
@@ -3791,43 +3787,43 @@ public final class WorkflowApproversHistoryPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n workflow_approvers_history.proto\022\002v1\032\037" +
-      "google/protobuf/timestamp.proto\032\017workflo" +
-      "ws.proto\032\roptions.proto\032\nspec.proto\"\222\001\n#" +
-      "WorkflowApproversHistoryListRequest\022%\n\004m" +
-      "eta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fi" +
-      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030" +
-      "\322\363\263\007\023!terraform-provider\"\213\002\n$WorkflowApp" +
-      "roversHistoryListResponse\022&\n\004meta\030\001 \001(\0132" +
-      "\030.v1.ListResponseMetadata\0228\n\007history\030\002 \003" +
-      "(\0132\033.v1.WorkflowApproverHistoryB\n\362\370\263\007\005\270\363" +
-      "\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
-      "tadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!" +
-      "json_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terr" +
-      "aform-provider\"\242\002\n\027WorkflowApproverHisto" +
-      "ry\022\037\n\013activity_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\tt" +
-      "imestamp\030\002 \001(\0132\032.google.protobuf.Timesta" +
-      "mpB\n\362\370\263\007\005\260\363\263\007\001\022;\n\021workflow_approver\030\003 \001(" +
-      "\0132\024.v1.WorkflowApproverB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nd" +
-      "eleted_at\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "ampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370" +
-      "\263\007\030\322\363\263\007\023!terraform-provider2\203\002\n\030Workflow" +
-      "ApproversHistory\022\221\001\n\004List\022\'.v1.WorkflowA" +
-      "pproversHistoryListRequest\032(.v1.Workflow" +
-      "ApproversHistoryListResponse\"6\202\371\263\007\010\242\363\263\007\003" +
-      "get\202\371\263\007$\252\363\263\007\037/v1/workflows-approvers-his" +
-      "tory\032S\312\371\263\007\034\302\371\263\007\027WorkflowApproverHistory\312" +
-      "\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform" +
-      "-providerB\234\001\n\031com.strongdm.api.plumbingB" +
-      " WorkflowApproversHistoryPlumbingZ5githu" +
-      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
-      "al/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-" +
-      "providerb\006proto3"
+      "google/protobuf/timestamp.proto\032\030workflo" +
+      "w_approvers.proto\032\roptions.proto\032\nspec.p" +
+      "roto\"\222\001\n#WorkflowApproversHistoryListReq" +
+      "uest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetad" +
+      "ata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363" +
+      "\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\213\002\n$Wo" +
+      "rkflowApproversHistoryListResponse\022&\n\004me" +
+      "ta\030\001 \001(\0132\030.v1.ListResponseMetadata\0228\n\007hi" +
+      "story\030\002 \003(\0132\033.v1.WorkflowApproverHistory" +
+      "B\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
+      "\263\007\022\262\364\263\007\r!json_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322" +
+      "\363\263\007\023!terraform-provider\"\242\002\n\027WorkflowAppr" +
+      "overHistory\022\037\n\013activity_id\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.google.protobu" +
+      "f.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022;\n\021workflow_appr" +
+      "over\030\003 \001(\0132\024.v1.WorkflowApproverB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google.protob" +
+      "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
+      "\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\202\002\n" +
+      "\030WorkflowApproversHistory\022\220\001\n\004List\022\'.v1." +
+      "WorkflowApproversHistoryListRequest\032(.v1" +
+      ".WorkflowApproversHistoryListResponse\"5\202" +
+      "\371\263\007\010\242\363\263\007\003get\202\371\263\007#\252\363\263\007\036/v1/workflow-appro" +
+      "vers-history\032S\312\371\263\007\034\302\371\263\007\027WorkflowApprover" +
+      "History\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!t" +
+      "erraform-providerB\234\001\n\031com.strongdm.api.p" +
+      "lumbingB WorkflowApproversHistoryPlumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!te" +
+      "rraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.strongdm.api.plumbing.WorkflowsPlumbing.getDescriptor(),
+          com.strongdm.api.plumbing.WorkflowApproversPlumbing.getDescriptor(),
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
         });
@@ -3859,7 +3855,7 @@ public final class WorkflowApproversHistoryPlumbing {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.strongdm.api.plumbing.WorkflowsPlumbing.getDescriptor();
+    com.strongdm.api.plumbing.WorkflowApproversPlumbing.getDescriptor();
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();
   }

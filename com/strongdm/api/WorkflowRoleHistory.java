@@ -19,22 +19,19 @@ package com.strongdm.api;
 
 import java.util.Date;
 
-/**
- * WorkflowRolesHistory records the state of a Workflow at a given point in time, where every change
- * (create, update and delete) to a WorkflowRole produces a WorkflowRoleHistory record.
- */
+/** WorkflowRolesHistory provides records of all changes to the state of a WorkflowRole */
 public class WorkflowRoleHistory {
   private String activityId;
   /**
-   * The unique identifier of the Activity that produced this change to the Workflow. May be empty
-   * for some system-initiated updates.
+   * The unique identifier of the Activity that produced this change to the WorkflowRole. May be
+   * empty for some system-initiated updates.
    */
   public String getActivityId() {
     return this.activityId;
   }
   /**
-   * The unique identifier of the Activity that produced this change to the Workflow. May be empty
-   * for some system-initiated updates.
+   * The unique identifier of the Activity that produced this change to the WorkflowRole. May be
+   * empty for some system-initiated updates.
    */
   public void setActivityId(String in) {
     this.activityId = in;
@@ -51,11 +48,11 @@ public class WorkflowRoleHistory {
   }
 
   private Date timestamp;
-  /** The time at which the Workflow state was recorded. */
+  /** The time at which the WorkflowRole state was recorded. */
   public Date getTimestamp() {
     return this.timestamp;
   }
-  /** The time at which the Workflow state was recorded. */
+  /** The time at which the WorkflowRole state was recorded. */
   public void setTimestamp(Date in) {
     this.timestamp = in;
   }

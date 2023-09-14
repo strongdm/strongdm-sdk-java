@@ -63,7 +63,8 @@ public class Workflow {
   /**
    * Optional enabled state for workflow. This setting may be overridden by the system if the
    * workflow doesn't meet the requirements to be enabled or if other conditions prevent enabling
-   * the workflow.
+   * the workflow. The requirements to enable a workflow are that the workflow must be either set up
+   * for with auto grant enabled or have one or more WorkflowApprovers created for the workflow.
    */
   public boolean getEnabled() {
     return this.enabled;
@@ -71,7 +72,8 @@ public class Workflow {
   /**
    * Optional enabled state for workflow. This setting may be overridden by the system if the
    * workflow doesn't meet the requirements to be enabled or if other conditions prevent enabling
-   * the workflow.
+   * the workflow. The requirements to enable a workflow are that the workflow must be either set up
+   * for with auto grant enabled or have one or more WorkflowApprovers created for the workflow.
    */
   public void setEnabled(boolean in) {
     this.enabled = in;

@@ -28,6 +28,8465 @@ public final class WorkflowsPlumbing {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface WorkflowCreateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowCreateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Parameters to define the new Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    boolean hasWorkflow();
+    /**
+     * <pre>
+     * Parameters to define the new Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow();
+    /**
+     * <pre>
+     * Parameters to define the new Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder();
+  }
+  /**
+   * <pre>
+   * WorkflowCreateRequest specifies the name and optionally the description of a new
+   * workflow to be created.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowCreateRequest}
+   */
+  public static final class WorkflowCreateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowCreateRequest)
+      WorkflowCreateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowCreateRequest.newBuilder() to construct.
+    private WorkflowCreateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowCreateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowCreateRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowCreateRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder subBuilder = null;
+              if (workflow_ != null) {
+                subBuilder = workflow_.toBuilder();
+              }
+              workflow_ = input.readMessage(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(workflow_);
+                workflow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int WORKFLOW_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+    /**
+     * <pre>
+     * Parameters to define the new Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkflow() {
+      return workflow_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters to define the new Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+      return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+    }
+    /**
+     * <pre>
+     * Parameters to define the new Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+      return getWorkflow();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (workflow_ != null) {
+        output.writeMessage(2, getWorkflow());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (workflow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getWorkflow());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasWorkflow() != other.hasWorkflow()) return false;
+      if (hasWorkflow()) {
+        if (!getWorkflow()
+            .equals(other.getWorkflow())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasWorkflow()) {
+        hash = (37 * hash) + WORKFLOW_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkflow().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowCreateRequest specifies the name and optionally the description of a new
+     * workflow to be created.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowCreateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowCreateRequest)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (workflowBuilder_ == null) {
+          result.workflow_ = workflow_;
+        } else {
+          result.workflow_ = workflowBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasWorkflow()) {
+          mergeWorkflow(other.getWorkflow());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> workflowBuilder_;
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the workflow field is set.
+       */
+      public boolean hasWorkflow() {
+        return workflowBuilder_ != null || workflow_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return The workflow.
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+        if (workflowBuilder_ == null) {
+          return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        } else {
+          return workflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workflow_ = value;
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder builderForValue) {
+        if (workflowBuilder_ == null) {
+          workflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (workflow_ != null) {
+            workflow_ =
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.newBuilder(workflow_).mergeFrom(value).buildPartial();
+          } else {
+            workflow_ = value;
+          }
+          onChanged();
+        } else {
+          workflowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearWorkflow() {
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+          onChanged();
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder getWorkflowBuilder() {
+        
+        onChanged();
+        return getWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+        if (workflowBuilder_ != null) {
+          return workflowBuilder_.getMessageOrBuilder();
+        } else {
+          return workflow_ == null ?
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to define the new Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> 
+          getWorkflowFieldBuilder() {
+        if (workflowBuilder_ == null) {
+          workflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder>(
+                  getWorkflow(),
+                  getParentForChildren(),
+                  isClean());
+          workflow_ = null;
+        }
+        return workflowBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowCreateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowCreateRequest)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowCreateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowCreateRequest>() {
+      @java.lang.Override
+      public WorkflowCreateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowCreateRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowCreateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowCreateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkflowCreateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowCreateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The created workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    boolean hasWorkflow();
+    /**
+     * <pre>
+     * The created workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow();
+    /**
+     * <pre>
+     * The created workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * WorkflowCreateResponse reports how the Workflow was created in the system.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowCreateResponse}
+   */
+  public static final class WorkflowCreateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowCreateResponse)
+      WorkflowCreateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowCreateResponse.newBuilder() to construct.
+    private WorkflowCreateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowCreateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowCreateResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowCreateResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder subBuilder = null;
+              if (workflow_ != null) {
+                subBuilder = workflow_.toBuilder();
+              }
+              workflow_ = input.readMessage(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(workflow_);
+                workflow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int WORKFLOW_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+    /**
+     * <pre>
+     * The created workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkflow() {
+      return workflow_ != null;
+    }
+    /**
+     * <pre>
+     * The created workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+      return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+    }
+    /**
+     * <pre>
+     * The created workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+      return getWorkflow();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (workflow_ != null) {
+        output.writeMessage(2, getWorkflow());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (workflow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getWorkflow());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasWorkflow() != other.hasWorkflow()) return false;
+      if (hasWorkflow()) {
+        if (!getWorkflow()
+            .equals(other.getWorkflow())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasWorkflow()) {
+        hash = (37 * hash) + WORKFLOW_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkflow().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowCreateResponse reports how the Workflow was created in the system.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowCreateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowCreateResponse)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowCreateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (workflowBuilder_ == null) {
+          result.workflow_ = workflow_;
+        } else {
+          result.workflow_ = workflowBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasWorkflow()) {
+          mergeWorkflow(other.getWorkflow());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> workflowBuilder_;
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the workflow field is set.
+       */
+      public boolean hasWorkflow() {
+        return workflowBuilder_ != null || workflow_ != null;
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return The workflow.
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+        if (workflowBuilder_ == null) {
+          return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        } else {
+          return workflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workflow_ = value;
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder builderForValue) {
+        if (workflowBuilder_ == null) {
+          workflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (workflow_ != null) {
+            workflow_ =
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.newBuilder(workflow_).mergeFrom(value).buildPartial();
+          } else {
+            workflow_ = value;
+          }
+          onChanged();
+        } else {
+          workflowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearWorkflow() {
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+          onChanged();
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder getWorkflowBuilder() {
+        
+        onChanged();
+        return getWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+        if (workflowBuilder_ != null) {
+          return workflowBuilder_.getMessageOrBuilder();
+        } else {
+          return workflow_ == null ?
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        }
+      }
+      /**
+       * <pre>
+       * The created workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> 
+          getWorkflowFieldBuilder() {
+        if (workflowBuilder_ == null) {
+          workflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder>(
+                  getWorkflow(),
+                  getParentForChildren(),
+                  isClean());
+          workflow_ = null;
+        }
+        return workflowBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowCreateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowCreateResponse)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowCreateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowCreateResponse>() {
+      @java.lang.Override
+      public WorkflowCreateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowCreateResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowCreateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowCreateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowCreateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkflowGetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowGetRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.GetRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The unique identifier of the Workflow to retrieve.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The unique identifier of the Workflow to retrieve.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * WorkflowGetRequest specifies which Workflow to retrieve.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowGetRequest}
+   */
+  public static final class WorkflowGetRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowGetRequest)
+      WorkflowGetRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowGetRequest.newBuilder() to construct.
+    private WorkflowGetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowGetRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowGetRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowGetRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.GetRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.GetRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The unique identifier of the Workflow to retrieve.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier of the Workflow to retrieve.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowGetRequest specifies which Workflow to retrieve.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowGetRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowGetRequest)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        id_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.GetRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetRequestMetadata, com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.GetRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.GetRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.GetRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetRequestMetadata, com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata, com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The unique identifier of the Workflow to retrieve.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Workflow to retrieve.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Workflow to retrieve.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Workflow to retrieve.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Workflow to retrieve.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowGetRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowGetRequest)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowGetRequest>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowGetRequest>() {
+      @java.lang.Override
+      public WorkflowGetRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowGetRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowGetRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowGetRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkflowGetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowGetResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.GetResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The requested Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    boolean hasWorkflow();
+    /**
+     * <pre>
+     * The requested Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow();
+    /**
+     * <pre>
+     * The requested Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * WorkflowGetResponse returns a requested Workflow.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowGetResponse}
+   */
+  public static final class WorkflowGetResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowGetResponse)
+      WorkflowGetResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowGetResponse.newBuilder() to construct.
+    private WorkflowGetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowGetResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowGetResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowGetResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.GetResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder subBuilder = null;
+              if (workflow_ != null) {
+                subBuilder = workflow_.toBuilder();
+              }
+              workflow_ = input.readMessage(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(workflow_);
+                workflow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.GetResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int WORKFLOW_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+    /**
+     * <pre>
+     * The requested Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkflow() {
+      return workflow_ != null;
+    }
+    /**
+     * <pre>
+     * The requested Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+      return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+    }
+    /**
+     * <pre>
+     * The requested Workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+      return getWorkflow();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (workflow_ != null) {
+        output.writeMessage(2, getWorkflow());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (workflow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getWorkflow());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasWorkflow() != other.hasWorkflow()) return false;
+      if (hasWorkflow()) {
+        if (!getWorkflow()
+            .equals(other.getWorkflow())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasWorkflow()) {
+        hash = (37 * hash) + WORKFLOW_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkflow().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowGetResponse returns a requested Workflow.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowGetResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowGetResponse)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowGetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (workflowBuilder_ == null) {
+          result.workflow_ = workflow_;
+        } else {
+          result.workflow_ = workflowBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasWorkflow()) {
+          mergeWorkflow(other.getWorkflow());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.GetResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetResponseMetadata, com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.GetResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.GetResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.GetResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetResponseMetadata, com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata, com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> workflowBuilder_;
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the workflow field is set.
+       */
+      public boolean hasWorkflow() {
+        return workflowBuilder_ != null || workflow_ != null;
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return The workflow.
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+        if (workflowBuilder_ == null) {
+          return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        } else {
+          return workflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workflow_ = value;
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder builderForValue) {
+        if (workflowBuilder_ == null) {
+          workflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (workflow_ != null) {
+            workflow_ =
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.newBuilder(workflow_).mergeFrom(value).buildPartial();
+          } else {
+            workflow_ = value;
+          }
+          onChanged();
+        } else {
+          workflowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearWorkflow() {
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+          onChanged();
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder getWorkflowBuilder() {
+        
+        onChanged();
+        return getWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+        if (workflowBuilder_ != null) {
+          return workflowBuilder_.getMessageOrBuilder();
+        } else {
+          return workflow_ == null ?
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        }
+      }
+      /**
+       * <pre>
+       * The requested Workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> 
+          getWorkflowFieldBuilder() {
+        if (workflowBuilder_ == null) {
+          workflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder>(
+                  getWorkflow(),
+                  getParentForChildren(),
+                  isClean());
+          workflow_ = null;
+        }
+        return workflowBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowGetResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowGetResponse)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowGetResponse>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowGetResponse>() {
+      @java.lang.Override
+      public WorkflowGetResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowGetResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowGetResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowGetResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowGetResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkflowUpdateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowUpdateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    boolean hasWorkflow();
+    /**
+     * <pre>
+     * The workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow();
+    /**
+     * <pre>
+     * The workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder();
+  }
+  /**
+   * <pre>
+   * WorkflowUpdateRequest identifies a Workflow by ID and provides fields to update on
+   * that Workflow record.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowUpdateRequest}
+   */
+  public static final class WorkflowUpdateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowUpdateRequest)
+      WorkflowUpdateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowUpdateRequest.newBuilder() to construct.
+    private WorkflowUpdateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowUpdateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowUpdateRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowUpdateRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder subBuilder = null;
+              if (workflow_ != null) {
+                subBuilder = workflow_.toBuilder();
+              }
+              workflow_ = input.readMessage(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(workflow_);
+                workflow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.UpdateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int WORKFLOW_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+    /**
+     * <pre>
+     * The workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkflow() {
+      return workflow_ != null;
+    }
+    /**
+     * <pre>
+     * The workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+      return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+    }
+    /**
+     * <pre>
+     * The workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+      return getWorkflow();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (workflow_ != null) {
+        output.writeMessage(2, getWorkflow());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (workflow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getWorkflow());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasWorkflow() != other.hasWorkflow()) return false;
+      if (hasWorkflow()) {
+        if (!getWorkflow()
+            .equals(other.getWorkflow())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasWorkflow()) {
+        hash = (37 * hash) + WORKFLOW_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkflow().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowUpdateRequest identifies a Workflow by ID and provides fields to update on
+     * that Workflow record.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowUpdateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowUpdateRequest)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (workflowBuilder_ == null) {
+          result.workflow_ = workflow_;
+        } else {
+          result.workflow_ = workflowBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasWorkflow()) {
+          mergeWorkflow(other.getWorkflow());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.UpdateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> workflowBuilder_;
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the workflow field is set.
+       */
+      public boolean hasWorkflow() {
+        return workflowBuilder_ != null || workflow_ != null;
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return The workflow.
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+        if (workflowBuilder_ == null) {
+          return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        } else {
+          return workflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workflow_ = value;
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder builderForValue) {
+        if (workflowBuilder_ == null) {
+          workflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (workflow_ != null) {
+            workflow_ =
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.newBuilder(workflow_).mergeFrom(value).buildPartial();
+          } else {
+            workflow_ = value;
+          }
+          onChanged();
+        } else {
+          workflowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearWorkflow() {
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+          onChanged();
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder getWorkflowBuilder() {
+        
+        onChanged();
+        return getWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+        if (workflowBuilder_ != null) {
+          return workflowBuilder_.getMessageOrBuilder();
+        } else {
+          return workflow_ == null ?
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        }
+      }
+      /**
+       * <pre>
+       * The workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> 
+          getWorkflowFieldBuilder() {
+        if (workflowBuilder_ == null) {
+          workflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder>(
+                  getWorkflow(),
+                  getParentForChildren(),
+                  isClean());
+          workflow_ = null;
+        }
+        return workflowBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowUpdateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowUpdateRequest)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowUpdateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowUpdateRequest>() {
+      @java.lang.Override
+      public WorkflowUpdateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowUpdateRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowUpdateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowUpdateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkflowUpdateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowUpdateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The updated workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    boolean hasWorkflow();
+    /**
+     * <pre>
+     * The updated workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow();
+    /**
+     * <pre>
+     * The updated workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * WorkflowUpdateResponse returns the fields of a Workflow after it has been updated by
+   * a WorkflowUpdateRequest.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowUpdateResponse}
+   */
+  public static final class WorkflowUpdateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowUpdateResponse)
+      WorkflowUpdateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowUpdateResponse.newBuilder() to construct.
+    private WorkflowUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowUpdateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowUpdateResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowUpdateResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder subBuilder = null;
+              if (workflow_ != null) {
+                subBuilder = workflow_.toBuilder();
+              }
+              workflow_ = input.readMessage(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(workflow_);
+                workflow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.UpdateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int WORKFLOW_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+    /**
+     * <pre>
+     * The updated workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the workflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkflow() {
+      return workflow_ != null;
+    }
+    /**
+     * <pre>
+     * The updated workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     * @return The workflow.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+      return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+    }
+    /**
+     * <pre>
+     * The updated workflow.
+     * </pre>
+     *
+     * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+      return getWorkflow();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (workflow_ != null) {
+        output.writeMessage(2, getWorkflow());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (workflow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getWorkflow());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasWorkflow() != other.hasWorkflow()) return false;
+      if (hasWorkflow()) {
+        if (!getWorkflow()
+            .equals(other.getWorkflow())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasWorkflow()) {
+        hash = (37 * hash) + WORKFLOW_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkflow().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowUpdateResponse returns the fields of a Workflow after it has been updated by
+     * a WorkflowUpdateRequest.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowUpdateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowUpdateResponse)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowUpdateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (workflowBuilder_ == null) {
+          result.workflow_ = workflow_;
+        } else {
+          result.workflow_ = workflowBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasWorkflow()) {
+          mergeWorkflow(other.getWorkflow());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.UpdateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow workflow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> workflowBuilder_;
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the workflow field is set.
+       */
+      public boolean hasWorkflow() {
+        return workflowBuilder_ != null || workflow_ != null;
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       * @return The workflow.
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow getWorkflow() {
+        if (workflowBuilder_ == null) {
+          return workflow_ == null ? com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        } else {
+          return workflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workflow_ = value;
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setWorkflow(
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder builderForValue) {
+        if (workflowBuilder_ == null) {
+          workflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          workflowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeWorkflow(com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow value) {
+        if (workflowBuilder_ == null) {
+          if (workflow_ != null) {
+            workflow_ =
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.newBuilder(workflow_).mergeFrom(value).buildPartial();
+          } else {
+            workflow_ = value;
+          }
+          onChanged();
+        } else {
+          workflowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearWorkflow() {
+        if (workflowBuilder_ == null) {
+          workflow_ = null;
+          onChanged();
+        } else {
+          workflow_ = null;
+          workflowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder getWorkflowBuilder() {
+        
+        onChanged();
+        return getWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder getWorkflowOrBuilder() {
+        if (workflowBuilder_ != null) {
+          return workflowBuilder_.getMessageOrBuilder();
+        } else {
+          return workflow_ == null ?
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.getDefaultInstance() : workflow_;
+        }
+      }
+      /**
+       * <pre>
+       * The updated workflow.
+       * </pre>
+       *
+       * <code>.v1.Workflow workflow = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder> 
+          getWorkflowFieldBuilder() {
+        if (workflowBuilder_ == null) {
+          workflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow, com.strongdm.api.plumbing.WorkflowsPlumbing.Workflow.Builder, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowOrBuilder>(
+                  getWorkflow(),
+                  getParentForChildren(),
+                  isClean());
+          workflow_ = null;
+        }
+        return workflowBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowUpdateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowUpdateResponse)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowUpdateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowUpdateResponse>() {
+      @java.lang.Override
+      public WorkflowUpdateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowUpdateResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowUpdateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowUpdateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowUpdateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkflowDeleteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowDeleteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.DeleteRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Id of the Workflow to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Id of the Workflow to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * WorkflowDeleteRequest specifies the id of a workflow to be deleted.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowDeleteRequest}
+   */
+  public static final class WorkflowDeleteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowDeleteRequest)
+      WorkflowDeleteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowDeleteRequest.newBuilder() to construct.
+    private WorkflowDeleteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowDeleteRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowDeleteRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowDeleteRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.DeleteRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Id of the Workflow to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the Workflow to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowDeleteRequest specifies the id of a workflow to be deleted.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowDeleteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowDeleteRequest)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        id_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.DeleteRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.DeleteRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.DeleteRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Id of the Workflow to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the Workflow to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the Workflow to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the Workflow to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the Workflow to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowDeleteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowDeleteRequest)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowDeleteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowDeleteRequest>() {
+      @java.lang.Override
+      public WorkflowDeleteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowDeleteRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowDeleteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowDeleteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkflowDeleteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.WorkflowDeleteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.DeleteResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The deleted workflow id.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The deleted workflow id.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * WorkflowDeleteResponse returns information about a Workflow that was deleted.
+   * </pre>
+   *
+   * Protobuf type {@code v1.WorkflowDeleteResponse}
+   */
+  public static final class WorkflowDeleteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.WorkflowDeleteResponse)
+      WorkflowDeleteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowDeleteResponse.newBuilder() to construct.
+    private WorkflowDeleteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowDeleteResponse() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowDeleteResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowDeleteResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.DeleteResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The deleted workflow id.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The deleted workflow id.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WorkflowDeleteResponse returns information about a Workflow that was deleted.
+     * </pre>
+     *
+     * Protobuf type {@code v1.WorkflowDeleteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.WorkflowDeleteResponse)
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        id_ = "";
+
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowDeleteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse build() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse buildPartial() {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.id_ = id_;
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse other) {
+        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.DeleteResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.DeleteResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.DeleteResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The deleted workflow id.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The deleted workflow id.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The deleted workflow id.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The deleted workflow id.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The deleted workflow id.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.WorkflowDeleteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.WorkflowDeleteResponse)
+    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse();
+    }
+
+    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowDeleteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowDeleteResponse>() {
+      @java.lang.Override
+      public WorkflowDeleteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowDeleteResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowDeleteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowDeleteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowDeleteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface WorkflowListRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.WorkflowListRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2438,7 +10897,9 @@ public final class WorkflowsPlumbing {
      * <pre>
      * Optional enabled state for workflow. This setting may be overridden by the system if
      * the workflow doesn't meet the requirements to be enabled or if other conditions prevent
-     * enabling the workflow.
+     * enabling the workflow. The requirements to enable a workflow are that the workflow must be
+     * either set up for with auto grant enabled or have one or more WorkflowApprovers created for
+     * the workflow.
      * </pre>
      *
      * <code>bool enabled = 6 [(.v1.field_options) = { ... }</code>
@@ -2784,7 +11245,9 @@ public final class WorkflowsPlumbing {
      * <pre>
      * Optional enabled state for workflow. This setting may be overridden by the system if
      * the workflow doesn't meet the requirements to be enabled or if other conditions prevent
-     * enabling the workflow.
+     * enabling the workflow. The requirements to enable a workflow are that the workflow must be
+     * either set up for with auto grant enabled or have one or more WorkflowApprovers created for
+     * the workflow.
      * </pre>
      *
      * <code>bool enabled = 6 [(.v1.field_options) = { ... }</code>
@@ -3667,7 +12130,9 @@ public final class WorkflowsPlumbing {
        * <pre>
        * Optional enabled state for workflow. This setting may be overridden by the system if
        * the workflow doesn't meet the requirements to be enabled or if other conditions prevent
-       * enabling the workflow.
+       * enabling the workflow. The requirements to enable a workflow are that the workflow must be
+       * either set up for with auto grant enabled or have one or more WorkflowApprovers created for
+       * the workflow.
        * </pre>
        *
        * <code>bool enabled = 6 [(.v1.field_options) = { ... }</code>
@@ -3681,7 +12146,9 @@ public final class WorkflowsPlumbing {
        * <pre>
        * Optional enabled state for workflow. This setting may be overridden by the system if
        * the workflow doesn't meet the requirements to be enabled or if other conditions prevent
-       * enabling the workflow.
+       * enabling the workflow. The requirements to enable a workflow are that the workflow must be
+       * either set up for with auto grant enabled or have one or more WorkflowApprovers created for
+       * the workflow.
        * </pre>
        *
        * <code>bool enabled = 6 [(.v1.field_options) = { ... }</code>
@@ -3698,7 +12165,9 @@ public final class WorkflowsPlumbing {
        * <pre>
        * Optional enabled state for workflow. This setting may be overridden by the system if
        * the workflow doesn't meet the requirements to be enabled or if other conditions prevent
-       * enabling the workflow.
+       * enabling the workflow. The requirements to enable a workflow are that the workflow must be
+       * either set up for with auto grant enabled or have one or more WorkflowApprovers created for
+       * the workflow.
        * </pre>
        *
        * <code>bool enabled = 6 [(.v1.field_options) = { ... }</code>
@@ -3905,2406 +12374,46 @@ public final class WorkflowsPlumbing {
 
   }
 
-  public interface WorkflowRoleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.WorkflowRole)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The workflowId.
-     */
-    java.lang.String getWorkflowId();
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for workflowId.
-     */
-    com.google.protobuf.ByteString
-        getWorkflowIdBytes();
-
-    /**
-     * <pre>
-     * The role id.
-     * </pre>
-     *
-     * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The roleId.
-     */
-    java.lang.String getRoleId();
-    /**
-     * <pre>
-     * The role id.
-     * </pre>
-     *
-     * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for roleId.
-     */
-    com.google.protobuf.ByteString
-        getRoleIdBytes();
-  }
-  /**
-   * <pre>
-   * WorkflowRole links a Role to a Workflow.
-   * </pre>
-   *
-   * Protobuf type {@code v1.WorkflowRole}
-   */
-  public static final class WorkflowRole extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.WorkflowRole)
-      WorkflowRoleOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use WorkflowRole.newBuilder() to construct.
-    private WorkflowRole(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private WorkflowRole() {
-      workflowId_ = "";
-      roleId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new WorkflowRole();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private WorkflowRole(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              workflowId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              roleId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowRole_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowRole_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole.Builder.class);
-    }
-
-    public static final int WORKFLOW_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object workflowId_;
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The workflowId.
-     */
-    @java.lang.Override
-    public java.lang.String getWorkflowId() {
-      java.lang.Object ref = workflowId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        workflowId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for workflowId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getWorkflowIdBytes() {
-      java.lang.Object ref = workflowId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        workflowId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ROLE_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object roleId_;
-    /**
-     * <pre>
-     * The role id.
-     * </pre>
-     *
-     * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The roleId.
-     */
-    @java.lang.Override
-    public java.lang.String getRoleId() {
-      java.lang.Object ref = roleId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        roleId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The role id.
-     * </pre>
-     *
-     * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for roleId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRoleIdBytes() {
-      java.lang.Object ref = roleId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        roleId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, workflowId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, roleId_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, workflowId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, roleId_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole) obj;
-
-      if (!getWorkflowId()
-          .equals(other.getWorkflowId())) return false;
-      if (!getRoleId()
-          .equals(other.getRoleId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WORKFLOW_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getWorkflowId().hashCode();
-      hash = (37 * hash) + ROLE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getRoleId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * WorkflowRole links a Role to a Workflow.
-     * </pre>
-     *
-     * Protobuf type {@code v1.WorkflowRole}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.WorkflowRole)
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRoleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowRole_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowRole_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        workflowId_ = "";
-
-        roleId_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowRole_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole build() {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole buildPartial() {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole(this);
-        result.workflowId_ = workflowId_;
-        result.roleId_ = roleId_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole) {
-          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole other) {
-        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole.getDefaultInstance()) return this;
-        if (!other.getWorkflowId().isEmpty()) {
-          workflowId_ = other.workflowId_;
-          onChanged();
-        }
-        if (!other.getRoleId().isEmpty()) {
-          roleId_ = other.roleId_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object workflowId_ = "";
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return The workflowId.
-       */
-      public java.lang.String getWorkflowId() {
-        java.lang.Object ref = workflowId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          workflowId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for workflowId.
-       */
-      public com.google.protobuf.ByteString
-          getWorkflowIdBytes() {
-        java.lang.Object ref = workflowId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          workflowId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The workflowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkflowId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        workflowId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWorkflowId() {
-        
-        workflowId_ = getDefaultInstance().getWorkflowId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for workflowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkflowIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        workflowId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object roleId_ = "";
-      /**
-       * <pre>
-       * The role id.
-       * </pre>
-       *
-       * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The roleId.
-       */
-      public java.lang.String getRoleId() {
-        java.lang.Object ref = roleId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          roleId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The role id.
-       * </pre>
-       *
-       * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for roleId.
-       */
-      public com.google.protobuf.ByteString
-          getRoleIdBytes() {
-        java.lang.Object ref = roleId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          roleId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The role id.
-       * </pre>
-       *
-       * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The roleId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRoleId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        roleId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The role id.
-       * </pre>
-       *
-       * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRoleId() {
-        
-        roleId_ = getDefaultInstance().getRoleId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The role id.
-       * </pre>
-       *
-       * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for roleId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRoleIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        roleId_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.WorkflowRole)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.WorkflowRole)
-    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole();
-    }
-
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<WorkflowRole>
-        PARSER = new com.google.protobuf.AbstractParser<WorkflowRole>() {
-      @java.lang.Override
-      public WorkflowRole parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WorkflowRole(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<WorkflowRole> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<WorkflowRole> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowRole getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface WorkflowApproverOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.WorkflowApprover)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The workflowId.
-     */
-    java.lang.String getWorkflowId();
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for workflowId.
-     */
-    com.google.protobuf.ByteString
-        getWorkflowIdBytes();
-
-    /**
-     * <pre>
-     * The approver id.
-     * </pre>
-     *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The approverId.
-     */
-    java.lang.String getApproverId();
-    /**
-     * <pre>
-     * The approver id.
-     * </pre>
-     *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for approverId.
-     */
-    com.google.protobuf.ByteString
-        getApproverIdBytes();
-  }
-  /**
-   * <pre>
-   * WorkflowApprover is an account with the ability to approve requests bound to a workflow.
-   * </pre>
-   *
-   * Protobuf type {@code v1.WorkflowApprover}
-   */
-  public static final class WorkflowApprover extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.WorkflowApprover)
-      WorkflowApproverOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use WorkflowApprover.newBuilder() to construct.
-    private WorkflowApprover(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private WorkflowApprover() {
-      workflowId_ = "";
-      approverId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new WorkflowApprover();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private WorkflowApprover(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              workflowId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              approverId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowApprover_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowApprover_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder.class);
-    }
-
-    public static final int WORKFLOW_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object workflowId_;
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The workflowId.
-     */
-    @java.lang.Override
-    public java.lang.String getWorkflowId() {
-      java.lang.Object ref = workflowId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        workflowId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for workflowId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getWorkflowIdBytes() {
-      java.lang.Object ref = workflowId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        workflowId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int APPROVER_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object approverId_;
-    /**
-     * <pre>
-     * The approver id.
-     * </pre>
-     *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The approverId.
-     */
-    @java.lang.Override
-    public java.lang.String getApproverId() {
-      java.lang.Object ref = approverId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        approverId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The approver id.
-     * </pre>
-     *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for approverId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getApproverIdBytes() {
-      java.lang.Object ref = approverId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        approverId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, workflowId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approverId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, approverId_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, workflowId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approverId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, approverId_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover) obj;
-
-      if (!getWorkflowId()
-          .equals(other.getWorkflowId())) return false;
-      if (!getApproverId()
-          .equals(other.getApproverId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WORKFLOW_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getWorkflowId().hashCode();
-      hash = (37 * hash) + APPROVER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getApproverId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * WorkflowApprover is an account with the ability to approve requests bound to a workflow.
-     * </pre>
-     *
-     * Protobuf type {@code v1.WorkflowApprover}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.WorkflowApprover)
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApproverOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowApprover_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowApprover_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        workflowId_ = "";
-
-        approverId_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowApprover_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover build() {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover buildPartial() {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover(this);
-        result.workflowId_ = workflowId_;
-        result.approverId_ = approverId_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover) {
-          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover other) {
-        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover.getDefaultInstance()) return this;
-        if (!other.getWorkflowId().isEmpty()) {
-          workflowId_ = other.workflowId_;
-          onChanged();
-        }
-        if (!other.getApproverId().isEmpty()) {
-          approverId_ = other.approverId_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object workflowId_ = "";
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return The workflowId.
-       */
-      public java.lang.String getWorkflowId() {
-        java.lang.Object ref = workflowId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          workflowId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for workflowId.
-       */
-      public com.google.protobuf.ByteString
-          getWorkflowIdBytes() {
-        java.lang.Object ref = workflowId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          workflowId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The workflowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkflowId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        workflowId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWorkflowId() {
-        
-        workflowId_ = getDefaultInstance().getWorkflowId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for workflowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkflowIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        workflowId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object approverId_ = "";
-      /**
-       * <pre>
-       * The approver id.
-       * </pre>
-       *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The approverId.
-       */
-      public java.lang.String getApproverId() {
-        java.lang.Object ref = approverId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          approverId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The approver id.
-       * </pre>
-       *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for approverId.
-       */
-      public com.google.protobuf.ByteString
-          getApproverIdBytes() {
-        java.lang.Object ref = approverId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          approverId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The approver id.
-       * </pre>
-       *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The approverId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setApproverId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        approverId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The approver id.
-       * </pre>
-       *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearApproverId() {
-        
-        approverId_ = getDefaultInstance().getApproverId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The approver id.
-       * </pre>
-       *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for approverId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setApproverIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        approverId_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.WorkflowApprover)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.WorkflowApprover)
-    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover();
-    }
-
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<WorkflowApprover>
-        PARSER = new com.google.protobuf.AbstractParser<WorkflowApprover>() {
-      @java.lang.Override
-      public WorkflowApprover parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WorkflowApprover(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<WorkflowApprover> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<WorkflowApprover> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowApprover getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface WorkflowAssignmentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.WorkflowAssignment)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The workflowId.
-     */
-    java.lang.String getWorkflowId();
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for workflowId.
-     */
-    com.google.protobuf.ByteString
-        getWorkflowIdBytes();
-
-    /**
-     * <pre>
-     * The resource id.
-     * </pre>
-     *
-     * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The resourceId.
-     */
-    java.lang.String getResourceId();
-    /**
-     * <pre>
-     * The resource id.
-     * </pre>
-     *
-     * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for resourceId.
-     */
-    com.google.protobuf.ByteString
-        getResourceIdBytes();
-  }
-  /**
-   * <pre>
-   * WorkflowAssignment links a Resource to a Workflow.
-   * </pre>
-   *
-   * Protobuf type {@code v1.WorkflowAssignment}
-   */
-  public static final class WorkflowAssignment extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.WorkflowAssignment)
-      WorkflowAssignmentOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use WorkflowAssignment.newBuilder() to construct.
-    private WorkflowAssignment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private WorkflowAssignment() {
-      workflowId_ = "";
-      resourceId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new WorkflowAssignment();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private WorkflowAssignment(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              workflowId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              resourceId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowAssignment_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowAssignment_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder.class);
-    }
-
-    public static final int WORKFLOW_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object workflowId_;
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The workflowId.
-     */
-    @java.lang.Override
-    public java.lang.String getWorkflowId() {
-      java.lang.Object ref = workflowId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        workflowId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The workflow id.
-     * </pre>
-     *
-     * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for workflowId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getWorkflowIdBytes() {
-      java.lang.Object ref = workflowId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        workflowId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RESOURCE_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object resourceId_;
-    /**
-     * <pre>
-     * The resource id.
-     * </pre>
-     *
-     * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The resourceId.
-     */
-    @java.lang.Override
-    public java.lang.String getResourceId() {
-      java.lang.Object ref = resourceId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        resourceId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The resource id.
-     * </pre>
-     *
-     * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for resourceId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getResourceIdBytes() {
-      java.lang.Object ref = resourceId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        resourceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, workflowId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, resourceId_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, workflowId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, resourceId_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment other = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment) obj;
-
-      if (!getWorkflowId()
-          .equals(other.getWorkflowId())) return false;
-      if (!getResourceId()
-          .equals(other.getResourceId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WORKFLOW_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getWorkflowId().hashCode();
-      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getResourceId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * WorkflowAssignment links a Resource to a Workflow.
-     * </pre>
-     *
-     * Protobuf type {@code v1.WorkflowAssignment}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.WorkflowAssignment)
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignmentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowAssignment_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowAssignment_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.class, com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        workflowId_ = "";
-
-        resourceId_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.internal_static_v1_WorkflowAssignment_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment build() {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment buildPartial() {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment result = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment(this);
-        result.workflowId_ = workflowId_;
-        result.resourceId_ = resourceId_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment) {
-          return mergeFrom((com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment other) {
-        if (other == com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment.getDefaultInstance()) return this;
-        if (!other.getWorkflowId().isEmpty()) {
-          workflowId_ = other.workflowId_;
-          onChanged();
-        }
-        if (!other.getResourceId().isEmpty()) {
-          resourceId_ = other.resourceId_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object workflowId_ = "";
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return The workflowId.
-       */
-      public java.lang.String getWorkflowId() {
-        java.lang.Object ref = workflowId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          workflowId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for workflowId.
-       */
-      public com.google.protobuf.ByteString
-          getWorkflowIdBytes() {
-        java.lang.Object ref = workflowId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          workflowId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The workflowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkflowId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        workflowId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWorkflowId() {
-        
-        workflowId_ = getDefaultInstance().getWorkflowId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The workflow id.
-       * </pre>
-       *
-       * <code>string workflow_id = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for workflowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkflowIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        workflowId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object resourceId_ = "";
-      /**
-       * <pre>
-       * The resource id.
-       * </pre>
-       *
-       * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The resourceId.
-       */
-      public java.lang.String getResourceId() {
-        java.lang.Object ref = resourceId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          resourceId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The resource id.
-       * </pre>
-       *
-       * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for resourceId.
-       */
-      public com.google.protobuf.ByteString
-          getResourceIdBytes() {
-        java.lang.Object ref = resourceId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          resourceId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The resource id.
-       * </pre>
-       *
-       * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The resourceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResourceId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        resourceId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The resource id.
-       * </pre>
-       *
-       * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResourceId() {
-        
-        resourceId_ = getDefaultInstance().getResourceId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The resource id.
-       * </pre>
-       *
-       * <code>string resource_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for resourceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResourceIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        resourceId_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.WorkflowAssignment)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.WorkflowAssignment)
-    private static final com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment();
-    }
-
-    public static com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<WorkflowAssignment>
-        PARSER = new com.google.protobuf.AbstractParser<WorkflowAssignment>() {
-      @java.lang.Override
-      public WorkflowAssignment parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WorkflowAssignment(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<WorkflowAssignment> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<WorkflowAssignment> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.plumbing.WorkflowsPlumbing.WorkflowAssignment getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowCreateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowCreateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowCreateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowCreateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowGetRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowGetRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowGetResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowGetResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowUpdateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowUpdateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowUpdateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowUpdateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowDeleteRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowDeleteRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_WorkflowDeleteResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_WorkflowDeleteResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_WorkflowListRequest_descriptor;
   private static final 
@@ -6320,21 +12429,6 @@ public final class WorkflowsPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Workflow_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_WorkflowRole_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_WorkflowRole_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_WorkflowApprover_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_WorkflowApprover_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_WorkflowAssignment_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_WorkflowAssignment_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6345,43 +12439,74 @@ public final class WorkflowsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\017workflows.proto\022\002v1\032\roptions.proto\032\nsp" +
-      "ec.proto\"d\n\023WorkflowListRequest\022%\n\004meta\030" +
-      "\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filter" +
-      "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\271\001\n\024Workf" +
-      "lowListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
-      "esponseMetadata\022+\n\tworkflows\030\002 \003(\0132\014.v1." +
-      "WorkflowB\n\362\370\263\007\005\270\363\263\007\001\022@\n\nrate_limit\030\003 \001(\013" +
-      "2\025.v1.RateLimitMetadataB\025\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006" +
-      "\262\364\263\007\001*:\n\372\370\263\007\005\250\363\263\007\001\"\366\003\n\010Workflow\022\026\n\002id\030\001 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
-      "\001\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\032\n\006weight\030\004 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nauto_gran" +
-      "t\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabled\030\006 \001(\010B\n\362\370" +
-      "\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030\007 \001(\010B\031\362\370\263\007\024" +
-      "\260\363\263\007\001\262\364\263\007\ngo_private\022\362\001\n\014access_rules\030\010 " +
-      "\001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules" +
-      "\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022" +
-      "\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013AccessR" +
-      "ules\362\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014" +
-      "json_gateway\022\022models.AccessRules\272\364\263\007\027acc" +
-      "essRulesDiffSuppress\320\364\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263" +
-      "\007\001*\"h\n\014WorkflowRole\022$\n\013workflow_id\030\002 \001(\t" +
-      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022 \n\007role_id\030\003 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\300\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"p\n\020Workflo" +
-      "wApprover\022$\n\013workflow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263" +
-      "\007\001\300\363\263\007\001\022$\n\013approver_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\300\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"l\n\022WorkflowAssig" +
-      "nment\022$\n\013workflow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
-      "\263\007\001\022$\n\013resource_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007" +
-      "\001:\n\372\370\263\007\005\250\363\263\007\0012\265\001\n\tWorkflows\022_\n\004List\022\027.v1" +
-      ".WorkflowListRequest\032\030.v1.WorkflowListRe" +
-      "sponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v1/workf" +
-      "lows\032G\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007\010\322\371\263\007\003aw-\312\371\263" +
-      "\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\215\001" +
-      "\n\031com.strongdm.api.plumbingB\021WorkflowsPl" +
-      "umbingZ5github.com/strongdm/strongdm-sdk" +
-      "-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264" +
-      "\007\023!terraform-providerb\006proto3"
+      "ec.proto\"l\n\025WorkflowCreateRequest\022\'\n\004met" +
+      "a\030\001 \001(\0132\031.v1.CreateRequestMetadata\022*\n\010wo" +
+      "rkflow\030\002 \001(\0132\014.v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\"\323" +
+      "\001\n\026WorkflowCreateResponse\022(\n\004meta\030\001 \001(\0132" +
+      "\032.v1.CreateResponseMetadata\022*\n\010workflow\030" +
+      "\002 \001(\0132\014.v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_" +
+      "limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway" +
+      ":\n\372\370\263\007\005\250\363\263\007\001\"R\n\022WorkflowGetRequest\022$\n\004me" +
+      "ta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\331\001\n\023WorkflowGetResponse" +
+      "\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022*\n\010workflow\030\002 \001(\0132\014.v1.Workf" +
+      "lowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1" +
+      ".RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001" +
+      "*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"l\n\025" +
+      "WorkflowUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
+      ".UpdateRequestMetadata\022*\n\010workflow\030\002 \001(\013" +
+      "2\014.v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\"\323\001\n\026WorkflowU" +
+      "pdateResponse\022(\n\004meta\030\001 \001(\0132\032.v1.UpdateR" +
+      "esponseMetadata\022*\n\010workflow\030\002 \001(\0132\014.v1.W" +
+      "orkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132" +
+      "\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262" +
+      "\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001" +
+      "\"X\n\025WorkflowDeleteRequest\022\'\n\004meta\030\001 \001(\0132" +
+      "\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\"\277\001\n\026WorkflowDeleteResponse\022(\n" +
+      "\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadata\022" +
+      "\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 " +
+      "\001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250" +
+      "\363\263\007\001\"X\n\023WorkflowListRequest\022%\n\004meta\030\001 \001(" +
+      "\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\"\320\001\n\024WorkflowListResponse\022" +
+      "&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\022" +
+      "+\n\tworkflows\030\002 \003(\0132\014.v1.WorkflowB\n\362\370\263\007\005\270" +
+      "\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
+      "etadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r" +
+      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\366\003\n\010Workflow\022\026" +
+      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
+      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\032\n\006weight\030\004 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nau" +
+      "to_grant\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabled\030\006 " +
+      "\001(\010B\n\362\370\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030\007 \001(\010" +
+      "B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022\362\001\n\014access_r" +
+      "ules\030\010 \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014acces" +
+      "s_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_p" +
+      "rivate\022\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013" +
+      "AccessRules\362\363\263\007\030\n\004java\022\020List<AccessRule>" +
+      "\362\363\263\007\"\n\014json_gateway\022\022models.AccessRules\272" +
+      "\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001:\020\372\370\263\007\013\250" +
+      "\363\263\007\001\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Create\022\031.v1." +
+      "WorkflowCreateRequest\032\032.v1.WorkflowCreat" +
+      "eResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/w" +
+      "orkflows\022`\n\003Get\022\026.v1.WorkflowGetRequest\032" +
+      "\027.v1.WorkflowGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202" +
+      "\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006Delete\022\031.v" +
+      "1.WorkflowDeleteRequest\032\032.v1.WorkflowDel" +
+      "eteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\022\252\363\263\007\r/" +
+      "v1/workflows\022e\n\006Update\022\031.v1.WorkflowUpda" +
+      "teRequest\032\032.v1.WorkflowUpdateResponse\"$\202" +
+      "\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflows\022_\n\004L" +
+      "ist\022\027.v1.WorkflowListRequest\032\030.v1.Workfl" +
+      "owListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/" +
+      "v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007\010\322\371\263" +
+      "\007\003aw-Be\n\031com.strongdm.api.plumbingB\021Work" +
+      "flowsPlumbingZ5github.com/strongdm/stron" +
+      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6389,46 +12514,75 @@ public final class WorkflowsPlumbing {
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
         });
-    internal_static_v1_WorkflowListRequest_descriptor =
+    internal_static_v1_WorkflowCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_v1_WorkflowCreateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowCreateRequest_descriptor,
+        new java.lang.String[] { "Meta", "Workflow", });
+    internal_static_v1_WorkflowCreateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_v1_WorkflowCreateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowCreateResponse_descriptor,
+        new java.lang.String[] { "Meta", "Workflow", "RateLimit", });
+    internal_static_v1_WorkflowGetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_WorkflowGetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowGetRequest_descriptor,
+        new java.lang.String[] { "Meta", "Id", });
+    internal_static_v1_WorkflowGetResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_WorkflowGetResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowGetResponse_descriptor,
+        new java.lang.String[] { "Meta", "Workflow", "RateLimit", });
+    internal_static_v1_WorkflowUpdateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_WorkflowUpdateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowUpdateRequest_descriptor,
+        new java.lang.String[] { "Meta", "Workflow", });
+    internal_static_v1_WorkflowUpdateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_WorkflowUpdateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowUpdateResponse_descriptor,
+        new java.lang.String[] { "Meta", "Workflow", "RateLimit", });
+    internal_static_v1_WorkflowDeleteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_WorkflowDeleteRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowDeleteRequest_descriptor,
+        new java.lang.String[] { "Meta", "Id", });
+    internal_static_v1_WorkflowDeleteResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_v1_WorkflowDeleteResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_WorkflowDeleteResponse_descriptor,
+        new java.lang.String[] { "Meta", "Id", "RateLimit", });
+    internal_static_v1_WorkflowListRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_v1_WorkflowListRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_WorkflowListRequest_descriptor,
         new java.lang.String[] { "Meta", "Filter", });
     internal_static_v1_WorkflowListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_v1_WorkflowListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_WorkflowListResponse_descriptor,
         new java.lang.String[] { "Meta", "Workflows", "RateLimit", });
     internal_static_v1_Workflow_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_v1_Workflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Workflow_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Weight", "AutoGrant", "Enabled", "RequiresReason", "AccessRules", });
-    internal_static_v1_WorkflowRole_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_v1_WorkflowRole_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_WorkflowRole_descriptor,
-        new java.lang.String[] { "WorkflowId", "RoleId", });
-    internal_static_v1_WorkflowApprover_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_v1_WorkflowApprover_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_WorkflowApprover_descriptor,
-        new java.lang.String[] { "WorkflowId", "ApproverId", });
-    internal_static_v1_WorkflowAssignment_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_v1_WorkflowAssignment_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_WorkflowAssignment_descriptor,
-        new java.lang.String[] { "WorkflowId", "ResourceId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
-    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

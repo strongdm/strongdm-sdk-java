@@ -17,8 +17,21 @@
 
 package com.strongdm.api;
 
-/** WorkflowRole links a Role to a Workflow. */
+/**
+ * WorkflowRole links a role to a workflow. The linked roles indicate which roles a user must be a
+ * part of to request access to a resource via the workflow.
+ */
 public class WorkflowRole {
+  private String id;
+  /** Unique identifier of the WorkflowRole. */
+  public String getId() {
+    return this.id;
+  }
+  /** Unique identifier of the WorkflowRole. */
+  public void setId(String in) {
+    this.id = in;
+  }
+
   private String roleId;
   /** The role id. */
   public String getRoleId() {

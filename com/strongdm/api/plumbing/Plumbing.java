@@ -70,8 +70,11 @@ import com.strongdm.api.plumbing.SecretStoresTypesPlumbing.*;
 import com.strongdm.api.plumbing.Spec.*;
 import com.strongdm.api.plumbing.TagsPlumbing.*;
 import com.strongdm.api.plumbing.WorkflowApproversHistoryPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowApproversPlumbing.*;
 import com.strongdm.api.plumbing.WorkflowAssignmentsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowAssignmentsPlumbing.*;
 import com.strongdm.api.plumbing.WorkflowRolesHistoryPlumbing.*;
+import com.strongdm.api.plumbing.WorkflowRolesPlumbing.*;
 import com.strongdm.api.plumbing.WorkflowsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.WorkflowsPlumbing.*;
 import java.util.ArrayList;
@@ -13756,6 +13759,7 @@ public class Plumbing {
       WorkflowApprover plumbing) {
     com.strongdm.api.WorkflowApprover porcelain = new com.strongdm.api.WorkflowApprover();
     porcelain.setApproverId((plumbing.getApproverId()));
+    porcelain.setId((plumbing.getId()));
     porcelain.setWorkflowId((plumbing.getWorkflowId()));
     return porcelain;
   }
@@ -13768,6 +13772,9 @@ public class Plumbing {
     WorkflowApprover.Builder builder = WorkflowApprover.newBuilder();
     if (porcelain.getApproverId() != null) {
       builder.setApproverId((porcelain.getApproverId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
     }
     if (porcelain.getWorkflowId() != null) {
       builder.setWorkflowId((porcelain.getWorkflowId()));
@@ -13792,6 +13799,58 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertWorkflowApproverToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproverGetResponse
+      convertWorkflowApproverGetResponseToPorcelain(WorkflowApproverGetResponse plumbing) {
+    com.strongdm.api.WorkflowApproverGetResponse porcelain =
+        new com.strongdm.api.WorkflowApproverGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setWorkflowApprover(
+        Plumbing.convertWorkflowApproverToPorcelain(plumbing.getWorkflowApprover()));
+    return porcelain;
+  }
+
+  public static WorkflowApproverGetResponse convertWorkflowApproverGetResponseToPlumbing(
+      com.strongdm.api.WorkflowApproverGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproverGetResponse.Builder builder = WorkflowApproverGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getWorkflowApprover() != null) {
+      builder.setWorkflowApprover(
+          Plumbing.convertWorkflowApproverToPlumbing(porcelain.getWorkflowApprover()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproverGetResponse>
+      convertRepeatedWorkflowApproverGetResponseToPorcelain(
+          Collection<WorkflowApproverGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproverGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproverGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproverGetResponse>
+      convertRepeatedWorkflowApproverGetResponseToPlumbing(
+          Collection<com.strongdm.api.WorkflowApproverGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproverGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproverGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -13847,6 +13906,266 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertWorkflowApproverHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproversCreateRequest
+      convertWorkflowApproversCreateRequestToPorcelain(WorkflowApproversCreateRequest plumbing) {
+    com.strongdm.api.WorkflowApproversCreateRequest porcelain =
+        new com.strongdm.api.WorkflowApproversCreateRequest();
+    porcelain.setWorkflowApprover(
+        Plumbing.convertWorkflowApproverToPorcelain(plumbing.getWorkflowApprover()));
+    return porcelain;
+  }
+
+  public static WorkflowApproversCreateRequest convertWorkflowApproversCreateRequestToPlumbing(
+      com.strongdm.api.WorkflowApproversCreateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproversCreateRequest.Builder builder = WorkflowApproversCreateRequest.newBuilder();
+    if (porcelain.getWorkflowApprover() != null) {
+      builder.setWorkflowApprover(
+          Plumbing.convertWorkflowApproverToPlumbing(porcelain.getWorkflowApprover()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproversCreateRequest>
+      convertRepeatedWorkflowApproversCreateRequestToPorcelain(
+          Collection<WorkflowApproversCreateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproversCreateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproversCreateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproversCreateRequest>
+      convertRepeatedWorkflowApproversCreateRequestToPlumbing(
+          Collection<com.strongdm.api.WorkflowApproversCreateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproversCreateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproversCreateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproversCreateResponse
+      convertWorkflowApproversCreateResponseToPorcelain(WorkflowApproversCreateResponse plumbing) {
+    com.strongdm.api.WorkflowApproversCreateResponse porcelain =
+        new com.strongdm.api.WorkflowApproversCreateResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setWorkflowApprover(
+        Plumbing.convertWorkflowApproverToPorcelain(plumbing.getWorkflowApprover()));
+    return porcelain;
+  }
+
+  public static WorkflowApproversCreateResponse convertWorkflowApproversCreateResponseToPlumbing(
+      com.strongdm.api.WorkflowApproversCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproversCreateResponse.Builder builder = WorkflowApproversCreateResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getWorkflowApprover() != null) {
+      builder.setWorkflowApprover(
+          Plumbing.convertWorkflowApproverToPlumbing(porcelain.getWorkflowApprover()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproversCreateResponse>
+      convertRepeatedWorkflowApproversCreateResponseToPorcelain(
+          Collection<WorkflowApproversCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproversCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproversCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproversCreateResponse>
+      convertRepeatedWorkflowApproversCreateResponseToPlumbing(
+          Collection<com.strongdm.api.WorkflowApproversCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproversCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproversCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproversDeleteRequest
+      convertWorkflowApproversDeleteRequestToPorcelain(WorkflowApproversDeleteRequest plumbing) {
+    com.strongdm.api.WorkflowApproversDeleteRequest porcelain =
+        new com.strongdm.api.WorkflowApproversDeleteRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static WorkflowApproversDeleteRequest convertWorkflowApproversDeleteRequestToPlumbing(
+      com.strongdm.api.WorkflowApproversDeleteRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproversDeleteRequest.Builder builder = WorkflowApproversDeleteRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproversDeleteRequest>
+      convertRepeatedWorkflowApproversDeleteRequestToPorcelain(
+          Collection<WorkflowApproversDeleteRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproversDeleteRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproversDeleteRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproversDeleteRequest>
+      convertRepeatedWorkflowApproversDeleteRequestToPlumbing(
+          Collection<com.strongdm.api.WorkflowApproversDeleteRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproversDeleteRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproversDeleteRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproversDeleteResponse
+      convertWorkflowApproversDeleteResponseToPorcelain(WorkflowApproversDeleteResponse plumbing) {
+    com.strongdm.api.WorkflowApproversDeleteResponse porcelain =
+        new com.strongdm.api.WorkflowApproversDeleteResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static WorkflowApproversDeleteResponse convertWorkflowApproversDeleteResponseToPlumbing(
+      com.strongdm.api.WorkflowApproversDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproversDeleteResponse.Builder builder = WorkflowApproversDeleteResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproversDeleteResponse>
+      convertRepeatedWorkflowApproversDeleteResponseToPorcelain(
+          Collection<WorkflowApproversDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproversDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproversDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproversDeleteResponse>
+      convertRepeatedWorkflowApproversDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.WorkflowApproversDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproversDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproversDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproversListRequest
+      convertWorkflowApproversListRequestToPorcelain(WorkflowApproversListRequest plumbing) {
+    com.strongdm.api.WorkflowApproversListRequest porcelain =
+        new com.strongdm.api.WorkflowApproversListRequest();
+    porcelain.setFilter((plumbing.getFilter()));
+    return porcelain;
+  }
+
+  public static WorkflowApproversListRequest convertWorkflowApproversListRequestToPlumbing(
+      com.strongdm.api.WorkflowApproversListRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproversListRequest.Builder builder = WorkflowApproversListRequest.newBuilder();
+    if (porcelain.getFilter() != null) {
+      builder.setFilter((porcelain.getFilter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproversListRequest>
+      convertRepeatedWorkflowApproversListRequestToPorcelain(
+          Collection<WorkflowApproversListRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproversListRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproversListRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproversListRequest>
+      convertRepeatedWorkflowApproversListRequestToPlumbing(
+          Collection<com.strongdm.api.WorkflowApproversListRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproversListRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproversListRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowApproversListResponse
+      convertWorkflowApproversListResponseToPorcelain(WorkflowApproversListResponse plumbing) {
+    com.strongdm.api.WorkflowApproversListResponse porcelain =
+        new com.strongdm.api.WorkflowApproversListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static WorkflowApproversListResponse convertWorkflowApproversListResponseToPlumbing(
+      com.strongdm.api.WorkflowApproversListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowApproversListResponse.Builder builder = WorkflowApproversListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowApproversListResponse>
+      convertRepeatedWorkflowApproversListResponseToPorcelain(
+          Collection<WorkflowApproversListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowApproversListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowApproversListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowApproversListResponse>
+      convertRepeatedWorkflowApproversListResponseToPlumbing(
+          Collection<com.strongdm.api.WorkflowApproversListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowApproversListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowApproversListResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -13948,6 +14267,227 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.WorkflowAssignmentsListRequest
+      convertWorkflowAssignmentsListRequestToPorcelain(WorkflowAssignmentsListRequest plumbing) {
+    com.strongdm.api.WorkflowAssignmentsListRequest porcelain =
+        new com.strongdm.api.WorkflowAssignmentsListRequest();
+    porcelain.setFilter((plumbing.getFilter()));
+    return porcelain;
+  }
+
+  public static WorkflowAssignmentsListRequest convertWorkflowAssignmentsListRequestToPlumbing(
+      com.strongdm.api.WorkflowAssignmentsListRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowAssignmentsListRequest.Builder builder = WorkflowAssignmentsListRequest.newBuilder();
+    if (porcelain.getFilter() != null) {
+      builder.setFilter((porcelain.getFilter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowAssignmentsListRequest>
+      convertRepeatedWorkflowAssignmentsListRequestToPorcelain(
+          Collection<WorkflowAssignmentsListRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowAssignmentsListRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowAssignmentsListRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowAssignmentsListRequest>
+      convertRepeatedWorkflowAssignmentsListRequestToPlumbing(
+          Collection<com.strongdm.api.WorkflowAssignmentsListRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowAssignmentsListRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowAssignmentsListRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowAssignmentsListResponse
+      convertWorkflowAssignmentsListResponseToPorcelain(WorkflowAssignmentsListResponse plumbing) {
+    com.strongdm.api.WorkflowAssignmentsListResponse porcelain =
+        new com.strongdm.api.WorkflowAssignmentsListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static WorkflowAssignmentsListResponse convertWorkflowAssignmentsListResponseToPlumbing(
+      com.strongdm.api.WorkflowAssignmentsListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowAssignmentsListResponse.Builder builder = WorkflowAssignmentsListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowAssignmentsListResponse>
+      convertRepeatedWorkflowAssignmentsListResponseToPorcelain(
+          Collection<WorkflowAssignmentsListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowAssignmentsListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowAssignmentsListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowAssignmentsListResponse>
+      convertRepeatedWorkflowAssignmentsListResponseToPlumbing(
+          Collection<com.strongdm.api.WorkflowAssignmentsListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowAssignmentsListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowAssignmentsListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowCreateResponse convertWorkflowCreateResponseToPorcelain(
+      WorkflowCreateResponse plumbing) {
+    com.strongdm.api.WorkflowCreateResponse porcelain =
+        new com.strongdm.api.WorkflowCreateResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setWorkflow(Plumbing.convertWorkflowToPorcelain(plumbing.getWorkflow()));
+    return porcelain;
+  }
+
+  public static WorkflowCreateResponse convertWorkflowCreateResponseToPlumbing(
+      com.strongdm.api.WorkflowCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowCreateResponse.Builder builder = WorkflowCreateResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getWorkflow() != null) {
+      builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(porcelain.getWorkflow()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowCreateResponse>
+      convertRepeatedWorkflowCreateResponseToPorcelain(
+          Collection<WorkflowCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowCreateResponse> convertRepeatedWorkflowCreateResponseToPlumbing(
+      Collection<com.strongdm.api.WorkflowCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowDeleteResponse convertWorkflowDeleteResponseToPorcelain(
+      WorkflowDeleteResponse plumbing) {
+    com.strongdm.api.WorkflowDeleteResponse porcelain =
+        new com.strongdm.api.WorkflowDeleteResponse();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static WorkflowDeleteResponse convertWorkflowDeleteResponseToPlumbing(
+      com.strongdm.api.WorkflowDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowDeleteResponse.Builder builder = WorkflowDeleteResponse.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowDeleteResponse>
+      convertRepeatedWorkflowDeleteResponseToPorcelain(
+          Collection<WorkflowDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowDeleteResponse> convertRepeatedWorkflowDeleteResponseToPlumbing(
+      Collection<com.strongdm.api.WorkflowDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowGetResponse convertWorkflowGetResponseToPorcelain(
+      WorkflowGetResponse plumbing) {
+    com.strongdm.api.WorkflowGetResponse porcelain = new com.strongdm.api.WorkflowGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setWorkflow(Plumbing.convertWorkflowToPorcelain(plumbing.getWorkflow()));
+    return porcelain;
+  }
+
+  public static WorkflowGetResponse convertWorkflowGetResponseToPlumbing(
+      com.strongdm.api.WorkflowGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowGetResponse.Builder builder = WorkflowGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getWorkflow() != null) {
+      builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(porcelain.getWorkflow()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowGetResponse>
+      convertRepeatedWorkflowGetResponseToPorcelain(Collection<WorkflowGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowGetResponse> convertRepeatedWorkflowGetResponseToPlumbing(
+      Collection<com.strongdm.api.WorkflowGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.WorkflowHistory convertWorkflowHistoryToPorcelain(
       WorkflowHistory plumbing) {
     com.strongdm.api.WorkflowHistory porcelain = new com.strongdm.api.WorkflowHistory();
@@ -13999,45 +14539,6 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.WorkflowListRequest convertWorkflowListRequestToPorcelain(
-      WorkflowListRequest plumbing) {
-    com.strongdm.api.WorkflowListRequest porcelain = new com.strongdm.api.WorkflowListRequest();
-    porcelain.setFilter((plumbing.getFilter()));
-    return porcelain;
-  }
-
-  public static WorkflowListRequest convertWorkflowListRequestToPlumbing(
-      com.strongdm.api.WorkflowListRequest porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    WorkflowListRequest.Builder builder = WorkflowListRequest.newBuilder();
-    if (porcelain.getFilter() != null) {
-      builder.setFilter((porcelain.getFilter()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.WorkflowListRequest>
-      convertRepeatedWorkflowListRequestToPorcelain(Collection<WorkflowListRequest> plumbings) {
-    if (plumbings == null) {
-      return new ArrayList<com.strongdm.api.WorkflowListRequest>();
-    }
-    return plumbings.stream()
-        .map(plumbing -> convertWorkflowListRequestToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<WorkflowListRequest> convertRepeatedWorkflowListRequestToPlumbing(
-      Collection<com.strongdm.api.WorkflowListRequest> porcelains) {
-    if (porcelains == null) {
-      return new ArrayList<WorkflowListRequest>();
-    }
-    return porcelains.stream()
-        .map(porcelain -> convertWorkflowListRequestToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
   public static com.strongdm.api.WorkflowListResponse convertWorkflowListResponseToPorcelain(
       WorkflowListResponse plumbing) {
     com.strongdm.api.WorkflowListResponse porcelain = new com.strongdm.api.WorkflowListResponse();
@@ -14080,6 +14581,7 @@ public class Plumbing {
   public static com.strongdm.api.WorkflowRole convertWorkflowRoleToPorcelain(
       WorkflowRole plumbing) {
     com.strongdm.api.WorkflowRole porcelain = new com.strongdm.api.WorkflowRole();
+    porcelain.setId((plumbing.getId()));
     porcelain.setRoleId((plumbing.getRoleId()));
     porcelain.setWorkflowId((plumbing.getWorkflowId()));
     return porcelain;
@@ -14091,6 +14593,9 @@ public class Plumbing {
       return null;
     }
     WorkflowRole.Builder builder = WorkflowRole.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
     if (porcelain.getRoleId() != null) {
       builder.setRoleId((porcelain.getRoleId()));
     }
@@ -14117,6 +14622,55 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertWorkflowRoleToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRoleGetResponse convertWorkflowRoleGetResponseToPorcelain(
+      WorkflowRoleGetResponse plumbing) {
+    com.strongdm.api.WorkflowRoleGetResponse porcelain =
+        new com.strongdm.api.WorkflowRoleGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setWorkflowRole(Plumbing.convertWorkflowRoleToPorcelain(plumbing.getWorkflowRole()));
+    return porcelain;
+  }
+
+  public static WorkflowRoleGetResponse convertWorkflowRoleGetResponseToPlumbing(
+      com.strongdm.api.WorkflowRoleGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRoleGetResponse.Builder builder = WorkflowRoleGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getWorkflowRole() != null) {
+      builder.setWorkflowRole(Plumbing.convertWorkflowRoleToPlumbing(porcelain.getWorkflowRole()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRoleGetResponse>
+      convertRepeatedWorkflowRoleGetResponseToPorcelain(
+          Collection<WorkflowRoleGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRoleGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRoleGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRoleGetResponse> convertRepeatedWorkflowRoleGetResponseToPlumbing(
+      Collection<com.strongdm.api.WorkflowRoleGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRoleGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRoleGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -14168,6 +14722,305 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertWorkflowRoleHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRolesCreateRequest
+      convertWorkflowRolesCreateRequestToPorcelain(WorkflowRolesCreateRequest plumbing) {
+    com.strongdm.api.WorkflowRolesCreateRequest porcelain =
+        new com.strongdm.api.WorkflowRolesCreateRequest();
+    porcelain.setWorkflowRole(Plumbing.convertWorkflowRoleToPorcelain(plumbing.getWorkflowRole()));
+    return porcelain;
+  }
+
+  public static WorkflowRolesCreateRequest convertWorkflowRolesCreateRequestToPlumbing(
+      com.strongdm.api.WorkflowRolesCreateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRolesCreateRequest.Builder builder = WorkflowRolesCreateRequest.newBuilder();
+    if (porcelain.getWorkflowRole() != null) {
+      builder.setWorkflowRole(Plumbing.convertWorkflowRoleToPlumbing(porcelain.getWorkflowRole()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRolesCreateRequest>
+      convertRepeatedWorkflowRolesCreateRequestToPorcelain(
+          Collection<WorkflowRolesCreateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRolesCreateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRolesCreateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRolesCreateRequest>
+      convertRepeatedWorkflowRolesCreateRequestToPlumbing(
+          Collection<com.strongdm.api.WorkflowRolesCreateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRolesCreateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRolesCreateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRolesCreateResponse
+      convertWorkflowRolesCreateResponseToPorcelain(WorkflowRolesCreateResponse plumbing) {
+    com.strongdm.api.WorkflowRolesCreateResponse porcelain =
+        new com.strongdm.api.WorkflowRolesCreateResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setWorkflowRole(Plumbing.convertWorkflowRoleToPorcelain(plumbing.getWorkflowRole()));
+    return porcelain;
+  }
+
+  public static WorkflowRolesCreateResponse convertWorkflowRolesCreateResponseToPlumbing(
+      com.strongdm.api.WorkflowRolesCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRolesCreateResponse.Builder builder = WorkflowRolesCreateResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getWorkflowRole() != null) {
+      builder.setWorkflowRole(Plumbing.convertWorkflowRoleToPlumbing(porcelain.getWorkflowRole()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRolesCreateResponse>
+      convertRepeatedWorkflowRolesCreateResponseToPorcelain(
+          Collection<WorkflowRolesCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRolesCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRolesCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRolesCreateResponse>
+      convertRepeatedWorkflowRolesCreateResponseToPlumbing(
+          Collection<com.strongdm.api.WorkflowRolesCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRolesCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRolesCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRolesDeleteRequest
+      convertWorkflowRolesDeleteRequestToPorcelain(WorkflowRolesDeleteRequest plumbing) {
+    com.strongdm.api.WorkflowRolesDeleteRequest porcelain =
+        new com.strongdm.api.WorkflowRolesDeleteRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static WorkflowRolesDeleteRequest convertWorkflowRolesDeleteRequestToPlumbing(
+      com.strongdm.api.WorkflowRolesDeleteRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRolesDeleteRequest.Builder builder = WorkflowRolesDeleteRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRolesDeleteRequest>
+      convertRepeatedWorkflowRolesDeleteRequestToPorcelain(
+          Collection<WorkflowRolesDeleteRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRolesDeleteRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRolesDeleteRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRolesDeleteRequest>
+      convertRepeatedWorkflowRolesDeleteRequestToPlumbing(
+          Collection<com.strongdm.api.WorkflowRolesDeleteRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRolesDeleteRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRolesDeleteRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRolesDeleteResponse
+      convertWorkflowRolesDeleteResponseToPorcelain(WorkflowRolesDeleteResponse plumbing) {
+    com.strongdm.api.WorkflowRolesDeleteResponse porcelain =
+        new com.strongdm.api.WorkflowRolesDeleteResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static WorkflowRolesDeleteResponse convertWorkflowRolesDeleteResponseToPlumbing(
+      com.strongdm.api.WorkflowRolesDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRolesDeleteResponse.Builder builder = WorkflowRolesDeleteResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRolesDeleteResponse>
+      convertRepeatedWorkflowRolesDeleteResponseToPorcelain(
+          Collection<WorkflowRolesDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRolesDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRolesDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRolesDeleteResponse>
+      convertRepeatedWorkflowRolesDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.WorkflowRolesDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRolesDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRolesDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRolesListRequest
+      convertWorkflowRolesListRequestToPorcelain(WorkflowRolesListRequest plumbing) {
+    com.strongdm.api.WorkflowRolesListRequest porcelain =
+        new com.strongdm.api.WorkflowRolesListRequest();
+    porcelain.setFilter((plumbing.getFilter()));
+    return porcelain;
+  }
+
+  public static WorkflowRolesListRequest convertWorkflowRolesListRequestToPlumbing(
+      com.strongdm.api.WorkflowRolesListRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRolesListRequest.Builder builder = WorkflowRolesListRequest.newBuilder();
+    if (porcelain.getFilter() != null) {
+      builder.setFilter((porcelain.getFilter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRolesListRequest>
+      convertRepeatedWorkflowRolesListRequestToPorcelain(
+          Collection<WorkflowRolesListRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRolesListRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRolesListRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRolesListRequest> convertRepeatedWorkflowRolesListRequestToPlumbing(
+      Collection<com.strongdm.api.WorkflowRolesListRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRolesListRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRolesListRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowRolesListResponse
+      convertWorkflowRolesListResponseToPorcelain(WorkflowRolesListResponse plumbing) {
+    com.strongdm.api.WorkflowRolesListResponse porcelain =
+        new com.strongdm.api.WorkflowRolesListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static WorkflowRolesListResponse convertWorkflowRolesListResponseToPlumbing(
+      com.strongdm.api.WorkflowRolesListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowRolesListResponse.Builder builder = WorkflowRolesListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowRolesListResponse>
+      convertRepeatedWorkflowRolesListResponseToPorcelain(
+          Collection<WorkflowRolesListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowRolesListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowRolesListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowRolesListResponse> convertRepeatedWorkflowRolesListResponseToPlumbing(
+      Collection<com.strongdm.api.WorkflowRolesListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowRolesListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowRolesListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.WorkflowUpdateResponse convertWorkflowUpdateResponseToPorcelain(
+      WorkflowUpdateResponse plumbing) {
+    com.strongdm.api.WorkflowUpdateResponse porcelain =
+        new com.strongdm.api.WorkflowUpdateResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setWorkflow(Plumbing.convertWorkflowToPorcelain(plumbing.getWorkflow()));
+    return porcelain;
+  }
+
+  public static WorkflowUpdateResponse convertWorkflowUpdateResponseToPlumbing(
+      com.strongdm.api.WorkflowUpdateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    WorkflowUpdateResponse.Builder builder = WorkflowUpdateResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getWorkflow() != null) {
+      builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(porcelain.getWorkflow()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.WorkflowUpdateResponse>
+      convertRepeatedWorkflowUpdateResponseToPorcelain(
+          Collection<WorkflowUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.WorkflowUpdateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertWorkflowUpdateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<WorkflowUpdateResponse> convertRepeatedWorkflowUpdateResponseToPlumbing(
+      Collection<com.strongdm.api.WorkflowUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<WorkflowUpdateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertWorkflowUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

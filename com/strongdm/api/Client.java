@@ -350,16 +350,11 @@ public class Client {
     return this.secretStoresHistory;
   }
 
-  protected final Workflows workflows;
+  protected final WorkflowApprovers workflowApprovers;
 
-  /**
-   * Workflows are the collection of rules that define the resources to which access can be
-   * requested, the users that can request that access, and the mechanism for approving those
-   * requests which can either but automatic approval or a set of users authorized to approve the
-   * requests.
-   */
-  public Workflows workflows() {
-    return this.workflows;
+  /** WorkflowApprovers is an account with the ability to approve requests bound to a workflow. */
+  public WorkflowApprovers workflowApprovers() {
+    return this.workflowApprovers;
   }
 
   protected final WorkflowApproversHistory workflowApproversHistory;
@@ -369,6 +364,16 @@ public class Client {
    */
   public WorkflowApproversHistory workflowApproversHistory() {
     return this.workflowApproversHistory;
+  }
+
+  protected final WorkflowAssignments workflowAssignments;
+
+  /**
+   * WorkflowAssignments links a Resource to a Workflow. The assigned resources are those that a
+   * user can request access to via the workflow.
+   */
+  public WorkflowAssignments workflowAssignments() {
+    return this.workflowAssignments;
   }
 
   protected final WorkflowAssignmentsHistory workflowAssignmentsHistory;
@@ -381,11 +386,33 @@ public class Client {
     return this.workflowAssignmentsHistory;
   }
 
+  protected final WorkflowRoles workflowRoles;
+
+  /**
+   * WorkflowRole links a role to a workflow. The linked roles indicate which roles a user must be a
+   * part of to request access to a resource via the workflow.
+   */
+  public WorkflowRoles workflowRoles() {
+    return this.workflowRoles;
+  }
+
   protected final WorkflowRolesHistory workflowRolesHistory;
 
   /** WorkflowRolesHistory provides records of all changes to the state of a WorkflowRole */
   public WorkflowRolesHistory workflowRolesHistory() {
     return this.workflowRolesHistory;
+  }
+
+  protected final Workflows workflows;
+
+  /**
+   * Workflows are the collection of rules that define the resources to which access can be
+   * requested, the users that can request that access, and the mechanism for approving those
+   * requests which can either be automatic approval or a set of users authorized to approve the
+   * requests.
+   */
+  public Workflows workflows() {
+    return this.workflows;
   }
 
   protected final WorkflowsHistory workflowsHistory;
@@ -444,10 +471,13 @@ public class Client {
     this.rolesHistory = new RolesHistory(this.channel, this);
     this.secretStores = new SecretStores(this.channel, this);
     this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
-    this.workflows = new Workflows(this.channel, this);
+    this.workflowApprovers = new WorkflowApprovers(this.channel, this);
     this.workflowApproversHistory = new WorkflowApproversHistory(this.channel, this);
+    this.workflowAssignments = new WorkflowAssignments(this.channel, this);
     this.workflowAssignmentsHistory = new WorkflowAssignmentsHistory(this.channel, this);
+    this.workflowRoles = new WorkflowRoles(this.channel, this);
     this.workflowRolesHistory = new WorkflowRolesHistory(this.channel, this);
+    this.workflows = new Workflows(this.channel, this);
     this.workflowsHistory = new WorkflowsHistory(this.channel, this);
     this.testOptions = client.testOptions;
   }
@@ -506,10 +536,13 @@ public class Client {
       this.rolesHistory = new RolesHistory(this.channel, this);
       this.secretStores = new SecretStores(this.channel, this);
       this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
-      this.workflows = new Workflows(this.channel, this);
+      this.workflowApprovers = new WorkflowApprovers(this.channel, this);
       this.workflowApproversHistory = new WorkflowApproversHistory(this.channel, this);
+      this.workflowAssignments = new WorkflowAssignments(this.channel, this);
       this.workflowAssignmentsHistory = new WorkflowAssignmentsHistory(this.channel, this);
+      this.workflowRoles = new WorkflowRoles(this.channel, this);
       this.workflowRolesHistory = new WorkflowRolesHistory(this.channel, this);
+      this.workflows = new Workflows(this.channel, this);
       this.workflowsHistory = new WorkflowsHistory(this.channel, this);
     } catch (Exception e) {
       throw Plumbing.convertExceptionToPorcelain(e);
