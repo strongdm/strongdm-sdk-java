@@ -3377,6 +3377,93 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AuroraPostgresIAM convertAuroraPostgresIAMToPorcelain(
+      AuroraPostgresIAM plumbing) {
+    com.strongdm.api.AuroraPostgresIAM porcelain = new com.strongdm.api.AuroraPostgresIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static AuroraPostgresIAM convertAuroraPostgresIAMToPlumbing(
+      com.strongdm.api.AuroraPostgresIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AuroraPostgresIAM.Builder builder = AuroraPostgresIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AuroraPostgresIAM>
+      convertRepeatedAuroraPostgresIAMToPorcelain(Collection<AuroraPostgresIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AuroraPostgresIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAuroraPostgresIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AuroraPostgresIAM> convertRepeatedAuroraPostgresIAMToPlumbing(
+      Collection<com.strongdm.api.AuroraPostgresIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AuroraPostgresIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAuroraPostgresIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Azure convertAzureToPorcelain(Azure plumbing) {
     com.strongdm.api.Azure porcelain = new com.strongdm.api.Azure();
     porcelain.setAppId((plumbing.getAppId()));
@@ -9512,6 +9599,93 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.RDSPostgresIAM convertRDSPostgresIAMToPorcelain(
+      RDSPostgresIAM plumbing) {
+    com.strongdm.api.RDSPostgresIAM porcelain = new com.strongdm.api.RDSPostgresIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static RDSPostgresIAM convertRDSPostgresIAMToPlumbing(
+      com.strongdm.api.RDSPostgresIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RDSPostgresIAM.Builder builder = RDSPostgresIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.RDSPostgresIAM> convertRepeatedRDSPostgresIAMToPorcelain(
+      Collection<RDSPostgresIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RDSPostgresIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertRDSPostgresIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RDSPostgresIAM> convertRepeatedRDSPostgresIAMToPlumbing(
+      Collection<com.strongdm.api.RDSPostgresIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RDSPostgresIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertRDSPostgresIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.RabbitMQAMQP091 convertRabbitMQAMQP091ToPorcelain(
       RabbitMQAMQP091 plumbing) {
     com.strongdm.api.RabbitMQAMQP091 porcelain = new com.strongdm.api.RabbitMQAMQP091();
@@ -10536,6 +10710,9 @@ public class Plumbing {
     if (plumbing.hasAuroraPostgres()) {
       return convertAuroraPostgresToPorcelain(plumbing.getAuroraPostgres());
     }
+    if (plumbing.hasAuroraPostgresIam()) {
+      return convertAuroraPostgresIAMToPorcelain(plumbing.getAuroraPostgresIam());
+    }
     if (plumbing.hasAws()) {
       return convertAWSToPorcelain(plumbing.getAws());
     }
@@ -10695,6 +10872,9 @@ public class Plumbing {
     if (plumbing.hasRdp()) {
       return convertRDPToPorcelain(plumbing.getRdp());
     }
+    if (plumbing.hasRdsPostgresIam()) {
+      return convertRDSPostgresIAMToPorcelain(plumbing.getRdsPostgresIam());
+    }
     if (plumbing.hasRedis()) {
       return convertRedisToPorcelain(plumbing.getRedis());
     }
@@ -10829,6 +11009,12 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAuroraPostgres(
           convertAuroraPostgresToPlumbing((com.strongdm.api.AuroraPostgres) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AuroraPostgresIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAuroraPostgresIam(
+          convertAuroraPostgresIAMToPlumbing((com.strongdm.api.AuroraPostgresIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AWS) {
@@ -11115,6 +11301,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.RDP) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setRdp(convertRDPToPlumbing((com.strongdm.api.RDP) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.RDSPostgresIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setRdsPostgresIam(
+          convertRDSPostgresIAMToPlumbing((com.strongdm.api.RDSPostgresIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Redis) {
