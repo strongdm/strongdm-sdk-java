@@ -1075,6 +1075,57 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AccessRequestConfig convertAccessRequestConfigToPorcelain(
+      AccessRequestConfig plumbing) {
+    com.strongdm.api.AccessRequestConfig porcelain = new com.strongdm.api.AccessRequestConfig();
+    porcelain.setDuration((plumbing.getDuration()));
+    porcelain.setReason((plumbing.getReason()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    porcelain.setStartFrom(Plumbing.convertTimestampToPorcelain(plumbing.getStartFrom()));
+    return porcelain;
+  }
+
+  public static AccessRequestConfig convertAccessRequestConfigToPlumbing(
+      com.strongdm.api.AccessRequestConfig porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccessRequestConfig.Builder builder = AccessRequestConfig.newBuilder();
+    if (porcelain.getDuration() != null) {
+      builder.setDuration((porcelain.getDuration()));
+    }
+    if (porcelain.getReason() != null) {
+      builder.setReason((porcelain.getReason()));
+    }
+    if (porcelain.getResourceId() != null) {
+      builder.setResourceId((porcelain.getResourceId()));
+    }
+    if (porcelain.getStartFrom() != null) {
+      builder.setStartFrom(Plumbing.convertTimestampToPlumbing(porcelain.getStartFrom()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccessRequestConfig>
+      convertRepeatedAccessRequestConfigToPorcelain(Collection<AccessRequestConfig> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccessRequestConfig>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccessRequestConfigToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccessRequestConfig> convertRepeatedAccessRequestConfigToPlumbing(
+      Collection<com.strongdm.api.AccessRequestConfig> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccessRequestConfig>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccessRequestConfigToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AccessRequestEvent convertAccessRequestEventToPorcelain(
       AccessRequestEvent plumbing) {
     com.strongdm.api.AccessRequestEvent porcelain = new com.strongdm.api.AccessRequestEvent();
@@ -10659,6 +10710,67 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertReplayChunkEventToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.RequestableResource convertRequestableResourceToPorcelain(
+      RequestableResource plumbing) {
+    com.strongdm.api.RequestableResource porcelain = new com.strongdm.api.RequestableResource();
+    porcelain.setAccess((plumbing.getAccess()));
+    porcelain.setAuthentication((plumbing.getAuthentication()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setType((plumbing.getType()));
+    return porcelain;
+  }
+
+  public static RequestableResource convertRequestableResourceToPlumbing(
+      com.strongdm.api.RequestableResource porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RequestableResource.Builder builder = RequestableResource.newBuilder();
+    if (porcelain.getAccess() != null) {
+      builder.setAccess((porcelain.getAccess()));
+    }
+    if (porcelain.getAuthentication() != null) {
+      builder.setAuthentication((porcelain.getAuthentication()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getType() != null) {
+      builder.setType((porcelain.getType()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.RequestableResource>
+      convertRepeatedRequestableResourceToPorcelain(Collection<RequestableResource> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RequestableResource>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertRequestableResourceToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RequestableResource> convertRepeatedRequestableResourceToPlumbing(
+      Collection<com.strongdm.api.RequestableResource> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RequestableResource>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertRequestableResourceToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

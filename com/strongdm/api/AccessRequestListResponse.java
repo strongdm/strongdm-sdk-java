@@ -17,7 +17,10 @@
 
 package com.strongdm.api;
 
-/** AccessRequestListResponse reports how the Workflow was created in the system. */
+/**
+ * AccessRequestListResponse returns a list of access requests records that meet the criteria of a
+ * AccessRequestListRequest.
+ */
 public class AccessRequestListResponse {
   private RateLimitMetadata rateLimit;
   /** Rate limit information. */

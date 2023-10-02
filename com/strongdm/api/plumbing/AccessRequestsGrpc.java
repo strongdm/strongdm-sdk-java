@@ -128,7 +128,7 @@ public final class AccessRequestsGrpc {
 
     /**
      * <pre>
-     * Lists existing workflows.
+     * Lists existing access requests.
      * </pre>
      */
     public void list(com.strongdm.api.plumbing.AccessRequestsPlumbing.AccessRequestListRequest request,
@@ -168,7 +168,7 @@ public final class AccessRequestsGrpc {
 
     /**
      * <pre>
-     * Lists existing workflows.
+     * Lists existing access requests.
      * </pre>
      */
     public void list(com.strongdm.api.plumbing.AccessRequestsPlumbing.AccessRequestListRequest request,
@@ -197,7 +197,7 @@ public final class AccessRequestsGrpc {
 
     /**
      * <pre>
-     * Lists existing workflows.
+     * Lists existing access requests.
      * </pre>
      */
     public com.strongdm.api.plumbing.AccessRequestsPlumbing.AccessRequestListResponse list(com.strongdm.api.plumbing.AccessRequestsPlumbing.AccessRequestListRequest request) {
@@ -225,7 +225,7 @@ public final class AccessRequestsGrpc {
 
     /**
      * <pre>
-     * Lists existing workflows.
+     * Lists existing access requests.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.AccessRequestsPlumbing.AccessRequestListResponse> list(

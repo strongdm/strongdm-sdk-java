@@ -21,6 +21,6 @@ package com.strongdm.api;
  * historical queries.
  */
 public interface SnapshotAccessRequests {
-  /** Lists existing workflows. */
+  /** Lists existing access requests. */
   public Iterable<AccessRequest> list(String filter, Object... args) throws RpcException;
 }

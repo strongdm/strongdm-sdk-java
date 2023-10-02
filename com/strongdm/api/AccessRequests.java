@@ -52,7 +52,7 @@ public class AccessRequests implements SnapshotAccessRequests {
   public AccessRequests withDeadlineAfter(long duration, TimeUnit units) {
     return new AccessRequests(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  /** Lists existing workflows. */
+  /** Lists existing access requests. */
   public Iterable<AccessRequest> list(String filter, Object... args) throws RpcException {
     AccessRequestsPlumbing.AccessRequestListRequest.Builder builder =
         AccessRequestsPlumbing.AccessRequestListRequest.newBuilder();
