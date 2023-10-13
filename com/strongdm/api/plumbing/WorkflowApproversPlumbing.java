@@ -9523,28 +9523,31 @@ public final class WorkflowApproversPlumbing {
       "rovers\030\002 \003(\0132\024.v1.WorkflowApproverB\n\362\370\263\007" +
       "\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimi" +
       "tMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263" +
-      "\007\r!json_gateway:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\210\001\n\020Wo" +
+      "\007\r!json_gateway:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\356\001\n\020Wo" +
       "rkflowApprover\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
       "\n\013workflow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022$\n\013" +
-      "approver_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:\020\372\370\263\007" +
-      "\013\250\363\263\007\001\322\363\263\007\001*2\275\004\n\021WorkflowApprovers\022\201\001\n\006C" +
-      "reate\022\".v1.WorkflowApproversCreateReques" +
-      "t\032#.v1.WorkflowApproversCreateResponse\"." +
-      "\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1/workflow-app" +
-      "rovers\022y\n\003Get\022\036.v1.WorkflowApproverGetRe" +
-      "quest\032\037.v1.WorkflowApproverGetResponse\"1" +
-      "\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/workflow-appr" +
-      "over/{id}\022\203\001\n\006Delete\022\".v1.WorkflowApprov" +
-      "ersDeleteRequest\032#.v1.WorkflowApproversD" +
-      "eleteResponse\"0\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007" +
-      "\026/v1/workflow-approvers\022z\n\004List\022 .v1.Wor" +
-      "kflowApproversListRequest\032!.v1.WorkflowA" +
-      "pproversListResponse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033" +
-      "\252\363\263\007\026/v1/workflow-approvers\032\'\312\371\263\007\025\302\371\263\007\020W" +
-      "orkflowApprover\312\371\263\007\010\322\371\263\007\003nt-Bm\n\031com.stro" +
-      "ngdm.api.plumbingB\031WorkflowApproversPlum" +
-      "bingZ5github.com/strongdm/strongdm-sdk-g" +
-      "o/v3/internal/v1;v1b\006proto3"
+      "approver_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:v\372\370\263\007" +
+      "q\250\363\263\007\001\302\363\263\007a\242\363\263\007*tf_examples/workflow_app" +
+      "rover_resource.txt\252\363\263\007-tf_examples/workf" +
+      "low_approver_data_source.txt\322\363\263\007\001*2\275\004\n\021W" +
+      "orkflowApprovers\022\201\001\n\006Create\022\".v1.Workflo" +
+      "wApproversCreateRequest\032#.v1.WorkflowApp" +
+      "roversCreateResponse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007" +
+      "\033\252\363\263\007\026/v1/workflow-approvers\022y\n\003Get\022\036.v1" +
+      ".WorkflowApproverGetRequest\032\037.v1.Workflo" +
+      "wApproverGetResponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037" +
+      "\252\363\263\007\032/v1/workflow-approver/{id}\022\203\001\n\006Dele" +
+      "te\022\".v1.WorkflowApproversDeleteRequest\032#" +
+      ".v1.WorkflowApproversDeleteResponse\"0\202\371\263" +
+      "\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1/workflow-appr" +
+      "overs\022z\n\004List\022 .v1.WorkflowApproversList" +
+      "Request\032!.v1.WorkflowApproversListRespon" +
+      "se\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/workflow-" +
+      "approvers\032\'\312\371\263\007\025\302\371\263\007\020WorkflowApprover\312\371\263" +
+      "\007\010\322\371\263\007\003nt-Bm\n\031com.strongdm.api.plumbingB" +
+      "\031WorkflowApproversPlumbingZ5github.com/s" +
+      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

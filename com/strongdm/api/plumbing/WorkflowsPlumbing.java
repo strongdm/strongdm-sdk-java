@@ -12477,7 +12477,7 @@ public final class WorkflowsPlumbing {
       "+\n\tworkflows\030\002 \003(\0132\014.v1.WorkflowB\n\362\370\263\007\005\270" +
       "\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
       "etadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r" +
-      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\366\003\n\010Workflow\022\026" +
+      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\312\004\n\010Workflow\022\026" +
       "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
       "\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007" +
       "\005\260\363\263\007\001\022\032\n\006weight\030\004 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nau" +
@@ -12489,24 +12489,26 @@ public final class WorkflowsPlumbing {
       "rivate\022\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013" +
       "AccessRules\362\363\263\007\030\n\004java\022\020List<AccessRule>" +
       "\362\363\263\007\"\n\014json_gateway\022\022models.AccessRules\272" +
-      "\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001:\020\372\370\263\007\013\250" +
-      "\363\263\007\001\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Create\022\031.v1." +
-      "WorkflowCreateRequest\032\032.v1.WorkflowCreat" +
-      "eResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/w" +
-      "orkflows\022`\n\003Get\022\026.v1.WorkflowGetRequest\032" +
-      "\027.v1.WorkflowGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006Delete\022\031.v" +
-      "1.WorkflowDeleteRequest\032\032.v1.WorkflowDel" +
-      "eteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\022\252\363\263\007\r/" +
-      "v1/workflows\022e\n\006Update\022\031.v1.WorkflowUpda" +
-      "teRequest\032\032.v1.WorkflowUpdateResponse\"$\202" +
-      "\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflows\022_\n\004L" +
-      "ist\022\027.v1.WorkflowListRequest\032\030.v1.Workfl" +
-      "owListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/" +
-      "v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007\010\322\371\263" +
-      "\007\003aw-Be\n\031com.strongdm.api.plumbingB\021Work" +
-      "flowsPlumbingZ5github.com/strongdm/stron" +
-      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001:d\372\370\263\007_\250" +
+      "\363\263\007\001\302\363\263\007O\242\363\263\007!tf_examples/workflow_resou" +
+      "rce.txt\252\363\263\007$tf_examples/workflow_data_so" +
+      "urce.txt\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Create\022\031" +
+      ".v1.WorkflowCreateRequest\032\032.v1.WorkflowC" +
+      "reateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/" +
+      "v1/workflows\022`\n\003Get\022\026.v1.WorkflowGetRequ" +
+      "est\032\027.v1.WorkflowGetResponse\"(\202\371\263\007\010\242\363\263\007\003" +
+      "get\202\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006Delete" +
+      "\022\031.v1.WorkflowDeleteRequest\032\032.v1.Workflo" +
+      "wDeleteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\022\252\363" +
+      "\263\007\r/v1/workflows\022e\n\006Update\022\031.v1.Workflow" +
+      "UpdateRequest\032\032.v1.WorkflowUpdateRespons" +
+      "e\"$\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflows\022" +
+      "_\n\004List\022\027.v1.WorkflowListRequest\032\030.v1.Wo" +
+      "rkflowListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363" +
+      "\263\007\r/v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007" +
+      "\010\322\371\263\007\003aw-Be\n\031com.strongdm.api.plumbingB\021" +
+      "WorkflowsPlumbingZ5github.com/strongdm/s" +
+      "trongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

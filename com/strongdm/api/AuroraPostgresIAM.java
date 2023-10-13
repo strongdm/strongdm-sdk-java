@@ -152,6 +152,22 @@ public class AuroraPostgresIAM implements Resource {
     this.region = in;
   }
 
+  private String roleAssumptionArn;
+  /**
+   * If provided, the gateway/relay will try to assume this role instead of the underlying compute's
+   * role.
+   */
+  public String getRoleAssumptionArn() {
+    return this.roleAssumptionArn;
+  }
+  /**
+   * If provided, the gateway/relay will try to assume this role instead of the underlying compute's
+   * role.
+   */
+  public void setRoleAssumptionArn(String in) {
+    this.roleAssumptionArn = in;
+  }
+
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {

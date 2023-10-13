@@ -9523,26 +9523,29 @@ public final class WorkflowRolesPlumbing {
       "\n\rworkflow_role\030\002 \003(\0132\020.v1.WorkflowRoleB" +
       "\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
       "eLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
-      "\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\200\001\n\014Wor" +
+      "\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\336\001\n\014Wor" +
       "kflowRole\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\013wor" +
       "kflow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022 \n\007role_" +
-      "id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263" +
-      "\007\001*2\203\004\n\rWorkflowRoles\022u\n\006Create\022\036.v1.Wor" +
-      "kflowRolesCreateRequest\032\037.v1.WorkflowRol" +
-      "esCreateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263" +
-      "\007\022/v1/workflow-roles\022m\n\003Get\022\032.v1.Workflo" +
-      "wRoleGetRequest\032\033.v1.WorkflowRoleGetResp" +
-      "onse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/workflo" +
-      "w-role/{id}\022w\n\006Delete\022\036.v1.WorkflowRoles" +
-      "DeleteRequest\032\037.v1.WorkflowRolesDeleteRe" +
-      "sponse\",\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\027\252\363\263\007\022/v1/wo" +
-      "rkflow-roles\022n\n\004List\022\034.v1.WorkflowRolesL" +
-      "istRequest\032\035.v1.WorkflowRolesListRespons" +
-      "e\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/workflow-r" +
-      "oles\032#\312\371\263\007\021\302\371\263\007\014WorkflowRole\312\371\263\007\010\322\371\263\007\003wr" +
-      "-Bi\n\031com.strongdm.api.plumbingB\025Workflow" +
-      "RolesPlumbingZ5github.com/strongdm/stron" +
-      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\302\363\263" +
+      "\007Y\242\363\263\007&tf_examples/workflow_role_resourc" +
+      "e.txt\252\363\263\007)tf_examples/workflow_role_data" +
+      "_source.txt\322\363\263\007\001*2\203\004\n\rWorkflowRoles\022u\n\006C" +
+      "reate\022\036.v1.WorkflowRolesCreateRequest\032\037." +
+      "v1.WorkflowRolesCreateResponse\"*\202\371\263\007\t\242\363\263" +
+      "\007\004post\202\371\263\007\027\252\363\263\007\022/v1/workflow-roles\022m\n\003Ge" +
+      "t\022\032.v1.WorkflowRoleGetRequest\032\033.v1.Workf" +
+      "lowRoleGetResponse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363" +
+      "\263\007\026/v1/workflow-role/{id}\022w\n\006Delete\022\036.v1" +
+      ".WorkflowRolesDeleteRequest\032\037.v1.Workflo" +
+      "wRolesDeleteResponse\",\202\371\263\007\013\242\363\263\007\006delete\202\371" +
+      "\263\007\027\252\363\263\007\022/v1/workflow-roles\022n\n\004List\022\034.v1." +
+      "WorkflowRolesListRequest\032\035.v1.WorkflowRo" +
+      "lesListResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022" +
+      "/v1/workflow-roles\032#\312\371\263\007\021\302\371\263\007\014WorkflowRo" +
+      "le\312\371\263\007\010\322\371\263\007\003wr-Bi\n\031com.strongdm.api.plum" +
+      "bingB\025WorkflowRolesPlumbingZ5github.com/" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

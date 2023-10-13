@@ -28,6 +28,7 @@ public final class PermissionLevel {
   public static final String RELAY = "relay";
   public static final String ADMIN_TOKEN = "admin-token";
   public static final String SCIM_TOKEN = "scim-token";
+  public static final String SERVICE_NOW_TOKEN = "servicenow-token";
   public static final String SERVICE = "service";
   public static final String SUSPENDED = "suspended";
   public static final String EMPTY = "";
