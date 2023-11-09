@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * RDSPostgresIAM is currently unstable, and its API may change, or it may be removed, without a
- * major version bump.
- */
 public class RDSPostgresIAM implements Resource {
   private String bindInterface;
   /**

@@ -12477,38 +12477,39 @@ public final class WorkflowsPlumbing {
       "+\n\tworkflows\030\002 \003(\0132\014.v1.WorkflowB\n\362\370\263\007\005\270" +
       "\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
       "etadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r" +
-      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\312\004\n\010Workflow\022\026" +
+      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\317\004\n\010Workflow\022\026" +
       "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
       "\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022\032\n\006weight\030\004 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nau" +
-      "to_grant\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabled\030\006 " +
-      "\001(\010B\n\362\370\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030\007 \001(\010" +
-      "B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022\362\001\n\014access_r" +
-      "ules\030\010 \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014acces" +
-      "s_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_p" +
-      "rivate\022\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013" +
-      "AccessRules\362\363\263\007\030\n\004java\022\020List<AccessRule>" +
-      "\362\363\263\007\"\n\014json_gateway\022\022models.AccessRules\272" +
-      "\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001:d\372\370\263\007_\250" +
-      "\363\263\007\001\302\363\263\007O\242\363\263\007!tf_examples/workflow_resou" +
-      "rce.txt\252\363\263\007$tf_examples/workflow_data_so" +
-      "urce.txt\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Create\022\031" +
-      ".v1.WorkflowCreateRequest\032\032.v1.WorkflowC" +
-      "reateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/" +
-      "v1/workflows\022`\n\003Get\022\026.v1.WorkflowGetRequ" +
-      "est\032\027.v1.WorkflowGetResponse\"(\202\371\263\007\010\242\363\263\007\003" +
-      "get\202\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006Delete" +
-      "\022\031.v1.WorkflowDeleteRequest\032\032.v1.Workflo" +
-      "wDeleteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\022\252\363" +
-      "\263\007\r/v1/workflows\022e\n\006Update\022\031.v1.Workflow" +
-      "UpdateRequest\032\032.v1.WorkflowUpdateRespons" +
-      "e\"$\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflows\022" +
-      "_\n\004List\022\027.v1.WorkflowListRequest\032\030.v1.Wo" +
-      "rkflowListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363" +
-      "\263\007\r/v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007" +
-      "\010\322\371\263\007\003aw-Be\n\031com.strongdm.api.plumbingB\021" +
-      "WorkflowsPlumbingZ5github.com/strongdm/s" +
-      "trongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\005\260\363\263\007\001\022\037\n\006weight\030\004 \001(\003B\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022" +
+      "\036\n\nauto_grant\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabl" +
+      "ed\030\006 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030" +
+      "\007 \001(\010B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022\362\001\n\014acc" +
+      "ess_rules\030\010 \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014" +
+      "access_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n" +
+      "\ngo_private\022\013AccessRules\362\363\263\007\033\n\014go_terraf" +
+      "orm\022\013AccessRules\362\363\263\007\030\n\004java\022\020List<Access" +
+      "Rule>\362\363\263\007\"\n\014json_gateway\022\022models.AccessR" +
+      "ules\272\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001:d\372" +
+      "\370\263\007_\250\363\263\007\001\302\363\263\007O\242\363\263\007!tf_examples/workflow_" +
+      "resource.txt\252\363\263\007$tf_examples/workflow_da" +
+      "ta_source.txt\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Cre" +
+      "ate\022\031.v1.WorkflowCreateRequest\032\032.v1.Work" +
+      "flowCreateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252" +
+      "\363\263\007\r/v1/workflows\022`\n\003Get\022\026.v1.WorkflowGe" +
+      "tRequest\032\027.v1.WorkflowGetResponse\"(\202\371\263\007\010" +
+      "\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006D" +
+      "elete\022\031.v1.WorkflowDeleteRequest\032\032.v1.Wo" +
+      "rkflowDeleteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371" +
+      "\263\007\022\252\363\263\007\r/v1/workflows\022e\n\006Update\022\031.v1.Wor" +
+      "kflowUpdateRequest\032\032.v1.WorkflowUpdateRe" +
+      "sponse\"$\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workf" +
+      "lows\022_\n\004List\022\027.v1.WorkflowListRequest\032\030." +
+      "v1.WorkflowListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371" +
+      "\263\007\022\252\363\263\007\r/v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflo" +
+      "w\312\371\263\007\010\322\371\263\007\003aw-Be\n\031com.strongdm.api.plumb" +
+      "ingB\021WorkflowsPlumbingZ5github.com/stron" +
+      "gdm/strongdm-sdk-go/v3/internal/v1;v1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

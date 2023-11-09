@@ -12276,6 +12276,33 @@ public final class NodesPlumbing {
      */
     com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+     * @return Whether the discoveryConfig field is set.
+     */
+    boolean hasDiscoveryConfig();
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+     * @return The discoveryConfig.
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig();
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder();
   }
   /**
    * <pre>
@@ -12404,6 +12431,19 @@ public final class NodesPlumbing {
               }
               maintenanceWindows_.add(
                   input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.parser(), extensionRegistry));
+              break;
+            }
+            case 98: {
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder subBuilder = null;
+              if (discoveryConfig_ != null) {
+                subBuilder = discoveryConfig_.toBuilder();
+              }
+              discoveryConfig_ = input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(discoveryConfig_);
+                discoveryConfig_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -12966,6 +13006,44 @@ public final class NodesPlumbing {
       return maintenanceWindows_.get(index);
     }
 
+    public static final int DISCOVERY_CONFIG_FIELD_NUMBER = 12;
+    private com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig discoveryConfig_;
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+     * @return Whether the discoveryConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscoveryConfig() {
+      return discoveryConfig_ != null;
+    }
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+     * @return The discoveryConfig.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig() {
+      return discoveryConfig_ == null ? com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+    }
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder() {
+      return getDiscoveryConfig();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13010,6 +13088,9 @@ public final class NodesPlumbing {
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         output.writeMessage(11, maintenanceWindows_.get(i));
       }
+      if (discoveryConfig_ != null) {
+        output.writeMessage(12, getDiscoveryConfig());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13051,6 +13132,10 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, maintenanceWindows_.get(i));
       }
+      if (discoveryConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getDiscoveryConfig());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13089,6 +13174,11 @@ public final class NodesPlumbing {
           .equals(other.getUuid())) return false;
       if (!getMaintenanceWindowsList()
           .equals(other.getMaintenanceWindowsList())) return false;
+      if (hasDiscoveryConfig() != other.hasDiscoveryConfig()) return false;
+      if (hasDiscoveryConfig()) {
+        if (!getDiscoveryConfig()
+            .equals(other.getDiscoveryConfig())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13123,6 +13213,10 @@ public final class NodesPlumbing {
       if (getMaintenanceWindowsCount() > 0) {
         hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
+      }
+      if (hasDiscoveryConfig()) {
+        hash = (37 * hash) + DISCOVERY_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscoveryConfig().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13290,6 +13384,12 @@ public final class NodesPlumbing {
         } else {
           maintenanceWindowsBuilder_.clear();
         }
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = null;
+        } else {
+          discoveryConfig_ = null;
+          discoveryConfigBuilder_ = null;
+        }
         return this;
       }
 
@@ -13338,6 +13438,11 @@ public final class NodesPlumbing {
           result.maintenanceWindows_ = maintenanceWindows_;
         } else {
           result.maintenanceWindows_ = maintenanceWindowsBuilder_.build();
+        }
+        if (discoveryConfigBuilder_ == null) {
+          result.discoveryConfig_ = discoveryConfig_;
+        } else {
+          result.discoveryConfig_ = discoveryConfigBuilder_.build();
         }
         onBuilt();
         return result;
@@ -13447,6 +13552,9 @@ public final class NodesPlumbing {
               maintenanceWindowsBuilder_.addAllMessages(other.maintenanceWindows_);
             }
           }
+        }
+        if (other.hasDiscoveryConfig()) {
+          mergeDiscoveryConfig(other.getDiscoveryConfig());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14904,6 +15012,161 @@ public final class NodesPlumbing {
         }
         return maintenanceWindowsBuilder_;
       }
+
+      private com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig discoveryConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder> discoveryConfigBuilder_;
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       * @return Whether the discoveryConfig field is set.
+       */
+      public boolean hasDiscoveryConfig() {
+        return discoveryConfigBuilder_ != null || discoveryConfig_ != null;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       * @return The discoveryConfig.
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig() {
+        if (discoveryConfigBuilder_ == null) {
+          return discoveryConfig_ == null ? com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+        } else {
+          return discoveryConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDiscoveryConfig(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig value) {
+        if (discoveryConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          discoveryConfig_ = value;
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDiscoveryConfig(
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder builderForValue) {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeDiscoveryConfig(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig value) {
+        if (discoveryConfigBuilder_ == null) {
+          if (discoveryConfig_ != null) {
+            discoveryConfig_ =
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.newBuilder(discoveryConfig_).mergeFrom(value).buildPartial();
+          } else {
+            discoveryConfig_ = value;
+          }
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearDiscoveryConfig() {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = null;
+          onChanged();
+        } else {
+          discoveryConfig_ = null;
+          discoveryConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder getDiscoveryConfigBuilder() {
+        
+        onChanged();
+        return getDiscoveryConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder() {
+        if (discoveryConfigBuilder_ != null) {
+          return discoveryConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return discoveryConfig_ == null ?
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 12 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder> 
+          getDiscoveryConfigFieldBuilder() {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder>(
+                  getDiscoveryConfig(),
+                  getParentForChildren(),
+                  isClean());
+          discoveryConfig_ = null;
+        }
+        return discoveryConfigBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15288,6 +15551,33 @@ public final class NodesPlumbing {
      */
     com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+     * @return Whether the discoveryConfig field is set.
+     */
+    boolean hasDiscoveryConfig();
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+     * @return The discoveryConfig.
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig();
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder();
   }
   /**
    * <pre>
@@ -15430,6 +15720,19 @@ public final class NodesPlumbing {
               }
               maintenanceWindows_.add(
                   input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.parser(), extensionRegistry));
+              break;
+            }
+            case 114: {
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder subBuilder = null;
+              if (discoveryConfig_ != null) {
+                subBuilder = discoveryConfig_.toBuilder();
+              }
+              discoveryConfig_ = input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(discoveryConfig_);
+                discoveryConfig_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -16084,6 +16387,44 @@ public final class NodesPlumbing {
       return maintenanceWindows_.get(index);
     }
 
+    public static final int DISCOVERY_CONFIG_FIELD_NUMBER = 14;
+    private com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig discoveryConfig_;
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+     * @return Whether the discoveryConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscoveryConfig() {
+      return discoveryConfig_ != null;
+    }
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+     * @return The discoveryConfig.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig() {
+      return discoveryConfig_ == null ? com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+    }
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder() {
+      return getDiscoveryConfig();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16134,6 +16475,9 @@ public final class NodesPlumbing {
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         output.writeMessage(13, maintenanceWindows_.get(i));
       }
+      if (discoveryConfig_ != null) {
+        output.writeMessage(14, getDiscoveryConfig());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16181,6 +16525,10 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, maintenanceWindows_.get(i));
       }
+      if (discoveryConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getDiscoveryConfig());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16223,6 +16571,11 @@ public final class NodesPlumbing {
           .equals(other.getUuid())) return false;
       if (!getMaintenanceWindowsList()
           .equals(other.getMaintenanceWindowsList())) return false;
+      if (hasDiscoveryConfig() != other.hasDiscoveryConfig()) return false;
+      if (hasDiscoveryConfig()) {
+        if (!getDiscoveryConfig()
+            .equals(other.getDiscoveryConfig())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16261,6 +16614,10 @@ public final class NodesPlumbing {
       if (getMaintenanceWindowsCount() > 0) {
         hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
+      }
+      if (hasDiscoveryConfig()) {
+        hash = (37 * hash) + DISCOVERY_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscoveryConfig().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -16432,6 +16789,12 @@ public final class NodesPlumbing {
         } else {
           maintenanceWindowsBuilder_.clear();
         }
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = null;
+        } else {
+          discoveryConfig_ = null;
+          discoveryConfigBuilder_ = null;
+        }
         return this;
       }
 
@@ -16482,6 +16845,11 @@ public final class NodesPlumbing {
           result.maintenanceWindows_ = maintenanceWindows_;
         } else {
           result.maintenanceWindows_ = maintenanceWindowsBuilder_.build();
+        }
+        if (discoveryConfigBuilder_ == null) {
+          result.discoveryConfig_ = discoveryConfig_;
+        } else {
+          result.discoveryConfig_ = discoveryConfigBuilder_.build();
         }
         onBuilt();
         return result;
@@ -16599,6 +16967,9 @@ public final class NodesPlumbing {
               maintenanceWindowsBuilder_.addAllMessages(other.maintenanceWindows_);
             }
           }
+        }
+        if (other.hasDiscoveryConfig()) {
+          mergeDiscoveryConfig(other.getDiscoveryConfig());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -18248,6 +18619,161 @@ public final class NodesPlumbing {
         }
         return maintenanceWindowsBuilder_;
       }
+
+      private com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig discoveryConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder> discoveryConfigBuilder_;
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       * @return Whether the discoveryConfig field is set.
+       */
+      public boolean hasDiscoveryConfig() {
+        return discoveryConfigBuilder_ != null || discoveryConfig_ != null;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       * @return The discoveryConfig.
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig() {
+        if (discoveryConfigBuilder_ == null) {
+          return discoveryConfig_ == null ? com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+        } else {
+          return discoveryConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDiscoveryConfig(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig value) {
+        if (discoveryConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          discoveryConfig_ = value;
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDiscoveryConfig(
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder builderForValue) {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeDiscoveryConfig(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig value) {
+        if (discoveryConfigBuilder_ == null) {
+          if (discoveryConfig_ != null) {
+            discoveryConfig_ =
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.newBuilder(discoveryConfig_).mergeFrom(value).buildPartial();
+          } else {
+            discoveryConfig_ = value;
+          }
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearDiscoveryConfig() {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = null;
+          onChanged();
+        } else {
+          discoveryConfig_ = null;
+          discoveryConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder getDiscoveryConfigBuilder() {
+        
+        onChanged();
+        return getDiscoveryConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder() {
+        if (discoveryConfigBuilder_ != null) {
+          return discoveryConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return discoveryConfig_ == null ?
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 14 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder> 
+          getDiscoveryConfigFieldBuilder() {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder>(
+                  getDiscoveryConfig(),
+                  getParentForChildren(),
+                  isClean());
+          discoveryConfig_ = null;
+        }
+        return discoveryConfigBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19063,6 +19589,1932 @@ public final class NodesPlumbing {
 
   }
 
+  public interface NodeDiscoveryConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.NodeDiscoveryConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enabled defines whether the attached node performs any discovery.
+     * </pre>
+     *
+     * <code>bool enabled = 1 [(.v1.field_options) = { ... }</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Period defines how often this node will perform discovery. In addition,
+     * notes perform discovery on startup if enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the period field is set.
+     */
+    boolean hasPeriod();
+    /**
+     * <pre>
+     * Period defines how often this node will perform discovery. In addition,
+     * notes perform discovery on startup if enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+     * @return The period.
+     */
+    com.google.protobuf.Duration getPeriod();
+    /**
+     * <pre>
+     * Period defines how often this node will perform discovery. In addition,
+     * notes perform discovery on startup if enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig> 
+        getEnabledTypesList();
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig getEnabledTypes(int index);
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    int getEnabledTypesCount();
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder> 
+        getEnabledTypesOrBuilderList();
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder getEnabledTypesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * NodeDiscoveryConfig defines remote entity discovery executed by the associated node.
+   * </pre>
+   *
+   * Protobuf type {@code v1.NodeDiscoveryConfig}
+   */
+  public static final class NodeDiscoveryConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.NodeDiscoveryConfig)
+      NodeDiscoveryConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NodeDiscoveryConfig.newBuilder() to construct.
+    private NodeDiscoveryConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NodeDiscoveryConfig() {
+      enabledTypes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeDiscoveryConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NodeDiscoveryConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (period_ != null) {
+                subBuilder = period_.toBuilder();
+              }
+              period_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(period_);
+                period_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                enabledTypes_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              enabledTypes_.add(
+                  input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          enabledTypes_ = java.util.Collections.unmodifiableList(enabledTypes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.class, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Enabled defines whether the attached node performs any discovery.
+     * </pre>
+     *
+     * <code>bool enabled = 1 [(.v1.field_options) = { ... }</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int PERIOD_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration period_;
+    /**
+     * <pre>
+     * Period defines how often this node will perform discovery. In addition,
+     * notes perform discovery on startup if enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the period field is set.
+     */
+    @java.lang.Override
+    public boolean hasPeriod() {
+      return period_ != null;
+    }
+    /**
+     * <pre>
+     * Period defines how often this node will perform discovery. In addition,
+     * notes perform discovery on startup if enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+     * @return The period.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getPeriod() {
+      return period_ == null ? com.google.protobuf.Duration.getDefaultInstance() : period_;
+    }
+    /**
+     * <pre>
+     * Period defines how often this node will perform discovery. In addition,
+     * notes perform discovery on startup if enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getPeriodOrBuilder() {
+      return getPeriod();
+    }
+
+    public static final int ENABLEDTYPES_FIELD_NUMBER = 3;
+    private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig> enabledTypes_;
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig> getEnabledTypesList() {
+      return enabledTypes_;
+    }
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder> 
+        getEnabledTypesOrBuilderList() {
+      return enabledTypes_;
+    }
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getEnabledTypesCount() {
+      return enabledTypes_.size();
+    }
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig getEnabledTypes(int index) {
+      return enabledTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * Enabled types are the set of types this configuration allow. Ineffective
+     * if enabled is not set to true.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder getEnabledTypesOrBuilder(
+        int index) {
+      return enabledTypes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      if (period_ != null) {
+        output.writeMessage(2, getPeriod());
+      }
+      for (int i = 0; i < enabledTypes_.size(); i++) {
+        output.writeMessage(3, enabledTypes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      if (period_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPeriod());
+      }
+      for (int i = 0; i < enabledTypes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, enabledTypes_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig other = (com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (hasPeriod() != other.hasPeriod()) return false;
+      if (hasPeriod()) {
+        if (!getPeriod()
+            .equals(other.getPeriod())) return false;
+      }
+      if (!getEnabledTypesList()
+          .equals(other.getEnabledTypesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      if (hasPeriod()) {
+        hash = (37 * hash) + PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getPeriod().hashCode();
+      }
+      if (getEnabledTypesCount() > 0) {
+        hash = (37 * hash) + ENABLEDTYPES_FIELD_NUMBER;
+        hash = (53 * hash) + getEnabledTypesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * NodeDiscoveryConfig defines remote entity discovery executed by the associated node.
+     * </pre>
+     *
+     * Protobuf type {@code v1.NodeDiscoveryConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.NodeDiscoveryConfig)
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.class, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEnabledTypesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        if (periodBuilder_ == null) {
+          period_ = null;
+        } else {
+          period_ = null;
+          periodBuilder_ = null;
+        }
+        if (enabledTypesBuilder_ == null) {
+          enabledTypes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          enabledTypesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig build() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig buildPartial() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig result = new com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig(this);
+        int from_bitField0_ = bitField0_;
+        result.enabled_ = enabled_;
+        if (periodBuilder_ == null) {
+          result.period_ = period_;
+        } else {
+          result.period_ = periodBuilder_.build();
+        }
+        if (enabledTypesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            enabledTypes_ = java.util.Collections.unmodifiableList(enabledTypes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.enabledTypes_ = enabledTypes_;
+        } else {
+          result.enabledTypes_ = enabledTypesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig) {
+          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig other) {
+        if (other == com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.hasPeriod()) {
+          mergePeriod(other.getPeriod());
+        }
+        if (enabledTypesBuilder_ == null) {
+          if (!other.enabledTypes_.isEmpty()) {
+            if (enabledTypes_.isEmpty()) {
+              enabledTypes_ = other.enabledTypes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEnabledTypesIsMutable();
+              enabledTypes_.addAll(other.enabledTypes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.enabledTypes_.isEmpty()) {
+            if (enabledTypesBuilder_.isEmpty()) {
+              enabledTypesBuilder_.dispose();
+              enabledTypesBuilder_ = null;
+              enabledTypes_ = other.enabledTypes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              enabledTypesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEnabledTypesFieldBuilder() : null;
+            } else {
+              enabledTypesBuilder_.addAllMessages(other.enabledTypes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Enabled defines whether the attached node performs any discovery.
+       * </pre>
+       *
+       * <code>bool enabled = 1 [(.v1.field_options) = { ... }</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Enabled defines whether the attached node performs any discovery.
+       * </pre>
+       *
+       * <code>bool enabled = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled defines whether the attached node performs any discovery.
+       * </pre>
+       *
+       * <code>bool enabled = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration period_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> periodBuilder_;
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the period field is set.
+       */
+      public boolean hasPeriod() {
+        return periodBuilder_ != null || period_ != null;
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       * @return The period.
+       */
+      public com.google.protobuf.Duration getPeriod() {
+        if (periodBuilder_ == null) {
+          return period_ == null ? com.google.protobuf.Duration.getDefaultInstance() : period_;
+        } else {
+          return periodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPeriod(com.google.protobuf.Duration value) {
+        if (periodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          period_ = value;
+          onChanged();
+        } else {
+          periodBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (periodBuilder_ == null) {
+          period_ = builderForValue.build();
+          onChanged();
+        } else {
+          periodBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergePeriod(com.google.protobuf.Duration value) {
+        if (periodBuilder_ == null) {
+          if (period_ != null) {
+            period_ =
+              com.google.protobuf.Duration.newBuilder(period_).mergeFrom(value).buildPartial();
+          } else {
+            period_ = value;
+          }
+          onChanged();
+        } else {
+          periodBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearPeriod() {
+        if (periodBuilder_ == null) {
+          period_ = null;
+          onChanged();
+        } else {
+          period_ = null;
+          periodBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getPeriodBuilder() {
+        
+        onChanged();
+        return getPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getPeriodOrBuilder() {
+        if (periodBuilder_ != null) {
+          return periodBuilder_.getMessageOrBuilder();
+        } else {
+          return period_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : period_;
+        }
+      }
+      /**
+       * <pre>
+       * Period defines how often this node will perform discovery. In addition,
+       * notes perform discovery on startup if enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration period = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getPeriodFieldBuilder() {
+        if (periodBuilder_ == null) {
+          periodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          period_ = null;
+        }
+        return periodBuilder_;
+      }
+
+      private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig> enabledTypes_ =
+        java.util.Collections.emptyList();
+      private void ensureEnabledTypesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          enabledTypes_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig>(enabledTypes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder> enabledTypesBuilder_;
+
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig> getEnabledTypesList() {
+        if (enabledTypesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(enabledTypes_);
+        } else {
+          return enabledTypesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public int getEnabledTypesCount() {
+        if (enabledTypesBuilder_ == null) {
+          return enabledTypes_.size();
+        } else {
+          return enabledTypesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig getEnabledTypes(int index) {
+        if (enabledTypesBuilder_ == null) {
+          return enabledTypes_.get(index);
+        } else {
+          return enabledTypesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setEnabledTypes(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig value) {
+        if (enabledTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEnabledTypesIsMutable();
+          enabledTypes_.set(index, value);
+          onChanged();
+        } else {
+          enabledTypesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setEnabledTypes(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder builderForValue) {
+        if (enabledTypesBuilder_ == null) {
+          ensureEnabledTypesIsMutable();
+          enabledTypes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          enabledTypesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addEnabledTypes(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig value) {
+        if (enabledTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEnabledTypesIsMutable();
+          enabledTypes_.add(value);
+          onChanged();
+        } else {
+          enabledTypesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addEnabledTypes(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig value) {
+        if (enabledTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEnabledTypesIsMutable();
+          enabledTypes_.add(index, value);
+          onChanged();
+        } else {
+          enabledTypesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addEnabledTypes(
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder builderForValue) {
+        if (enabledTypesBuilder_ == null) {
+          ensureEnabledTypesIsMutable();
+          enabledTypes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          enabledTypesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addEnabledTypes(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder builderForValue) {
+        if (enabledTypesBuilder_ == null) {
+          ensureEnabledTypesIsMutable();
+          enabledTypes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          enabledTypesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllEnabledTypes(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig> values) {
+        if (enabledTypesBuilder_ == null) {
+          ensureEnabledTypesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, enabledTypes_);
+          onChanged();
+        } else {
+          enabledTypesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearEnabledTypes() {
+        if (enabledTypesBuilder_ == null) {
+          enabledTypes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          enabledTypesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeEnabledTypes(int index) {
+        if (enabledTypesBuilder_ == null) {
+          ensureEnabledTypesIsMutable();
+          enabledTypes_.remove(index);
+          onChanged();
+        } else {
+          enabledTypesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder getEnabledTypesBuilder(
+          int index) {
+        return getEnabledTypesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder getEnabledTypesOrBuilder(
+          int index) {
+        if (enabledTypesBuilder_ == null) {
+          return enabledTypes_.get(index);  } else {
+          return enabledTypesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder> 
+           getEnabledTypesOrBuilderList() {
+        if (enabledTypesBuilder_ != null) {
+          return enabledTypesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(enabledTypes_);
+        }
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder addEnabledTypesBuilder() {
+        return getEnabledTypesFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder addEnabledTypesBuilder(
+          int index) {
+        return getEnabledTypesFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Enabled types are the set of types this configuration allow. Ineffective
+       * if enabled is not set to true.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeDiscoveryTypeConfig enabledTypes = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder> 
+           getEnabledTypesBuilderList() {
+        return getEnabledTypesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder> 
+          getEnabledTypesFieldBuilder() {
+        if (enabledTypesBuilder_ == null) {
+          enabledTypesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder>(
+                  enabledTypes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          enabledTypes_ = null;
+        }
+        return enabledTypesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.NodeDiscoveryConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.NodeDiscoveryConfig)
+    private static final com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig();
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NodeDiscoveryConfig>
+        PARSER = new com.google.protobuf.AbstractParser<NodeDiscoveryConfig>() {
+      @java.lang.Override
+      public NodeDiscoveryConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NodeDiscoveryConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NodeDiscoveryConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NodeDiscoveryConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NodeDiscoveryTypeConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.NodeDiscoveryTypeConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Type defines what type this config should apply to.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * Type defines what type this config should apply to.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+  }
+  /**
+   * <pre>
+   * NodeDiscoveryTypeConfig configures an individual vertical of entity discovery.
+   * </pre>
+   *
+   * Protobuf type {@code v1.NodeDiscoveryTypeConfig}
+   */
+  public static final class NodeDiscoveryTypeConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.NodeDiscoveryTypeConfig)
+      NodeDiscoveryTypeConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NodeDiscoveryTypeConfig.newBuilder() to construct.
+    private NodeDiscoveryTypeConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NodeDiscoveryTypeConfig() {
+      type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeDiscoveryTypeConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NodeDiscoveryTypeConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryTypeConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryTypeConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.class, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * Type defines what type this config should apply to.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Type defines what type this config should apply to.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig other = (com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * NodeDiscoveryTypeConfig configures an individual vertical of entity discovery.
+     * </pre>
+     *
+     * Protobuf type {@code v1.NodeDiscoveryTypeConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.NodeDiscoveryTypeConfig)
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryTypeConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryTypeConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.class, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        type_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeDiscoveryTypeConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig build() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig buildPartial() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig result = new com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig(this);
+        result.type_ = type_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig) {
+          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig other) {
+        if (other == com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * Type defines what type this config should apply to.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Type defines what type this config should apply to.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Type defines what type this config should apply to.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type defines what type this config should apply to.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type defines what type this config should apply to.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.NodeDiscoveryTypeConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.NodeDiscoveryTypeConfig)
+    private static final com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig();
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NodeDiscoveryTypeConfig>
+        PARSER = new com.google.protobuf.AbstractParser<NodeDiscoveryTypeConfig>() {
+      @java.lang.Override
+      public NodeDiscoveryTypeConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NodeDiscoveryTypeConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NodeDiscoveryTypeConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NodeDiscoveryTypeConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryTypeConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_NodeCreateRequest_descriptor;
   private static final 
@@ -19133,6 +21585,16 @@ public final class NodesPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_NodeDiscoveryConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_NodeDiscoveryConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_NodeDiscoveryTypeConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_NodeDiscoveryTypeConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19142,100 +21604,113 @@ public final class NodesPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013nodes.proto\022\002v1\032\roptions.proto\032\nspec.p" +
-      "roto\032\ntags.proto\"`\n\021NodeCreateRequest\022\'\n" +
-      "\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022\"" +
-      "\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\363\001\n\022N" +
-      "odeCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cre" +
-      "ateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030" +
-      "\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005token\030\003 \001" +
-      "(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\022W\n\nrate_limit\030\004 \001(\0132" +
+      "\n\013nodes.proto\022\002v1\032\036google/protobuf/durat" +
+      "ion.proto\032\roptions.proto\032\nspec.proto\032\nta" +
+      "gs.proto\"`\n\021NodeCreateRequest\022\'\n\004meta\030\001 " +
+      "\001(\0132\031.v1.CreateRequestMetadata\022\"\n\004node\030\002" +
+      " \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\363\001\n\022NodeCreat" +
+      "eResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateRespo" +
+      "nseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010." +
+      "v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005token\030\003 \001(\tB\017\362\370\263\007" +
+      "\n\260\363\263\007\001\360\363\263\007\001\022W\n\nrate_limit\030\004 \001(\0132\025.v1.Rat" +
+      "eLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
+      "\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016Node" +
+      "GetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequest" +
+      "Metadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\315\001\n\017Nod" +
+      "eGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRespo" +
+      "nseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010." +
+      "v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132" +
       "\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262" +
       "\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001" +
-      "\"N\n\016NodeGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.Ge" +
-      "tRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\"\315\001\n\017NodeGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1." +
-      "GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030" +
-      "\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limi" +
-      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370" +
-      "\263\007\005\250\363\263\007\001\"l\n\021NodeUpdateRequest\022\'\n\004meta\030\001 " +
-      "\001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002 \001" +
-      "(\t\022\"\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\323" +
-      "\001\n\022NodeUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1" +
-      ".UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004n" +
-      "ode\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_" +
-      "limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteRequest\022\'\n\004met" +
-      "a\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002id" +
-      "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\257\001\n\022NodeDeleteRespons" +
-      "e\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\002 \001(\0132\025.v1" +
-      ".RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001" +
-      "*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017" +
-      "NodeListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListR" +
-      "equestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\270\001\n\020NodeListResponse\022&\n\004meta\030\001 \001(\0132\030." +
-      "v1.ListResponseMetadata\022#\n\005nodes\030\002 \003(\0132\010" +
-      ".v1.NodeB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\013" +
-      "2\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006" +
-      "\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\305\001\n\004Node\022\032" +
-      "\n\005relay\030\001 \001(\0132\t.v1.RelayH\000\022\036\n\007gateway\030\002 " +
-      "\001(\0132\013.v1.GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_ex" +
-      "amples/node_resource.txt\252\363\263\007 tf_examples" +
-      "/node_data_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022" +
-      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\332\003\n\005Relay\022" +
-      "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007" +
-      "\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004" +
-      "tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gate" +
-      "way_filter\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\006" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\007 \001(\tB" +
-      "\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007" +
-      "\001\262\364\263\007\ngo_private\022t\n\023maintenance_windows\030" +
-      "\013 \003(\0132\031.v1.NodeMaintenanceWindowB<\362\370\263\0077\260" +
-      "\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-provider\022\022main" +
-      "tenance_window:\n\372\370\263\007\005\250\363\263\007\001\"\266\004\n\007Gateway\022\026" +
-      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
-      "\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001" +
-      "\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016l" +
-      "isten_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007" +
-      "\001\022*\n\014bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001" +
-      "\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022\"\n\016gateway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n" +
-      "\006device\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010locati" +
-      "on\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001" +
-      "(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031" +
-      "\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023maintenance" +
-      "_windows\030\r \003(\0132\031.v1.NodeMaintenanceWindo" +
-      "wB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-provi" +
-      "der\022\022maintenance_window:\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n\025" +
-      "NodeMaintenanceWindow\022!\n\rcron_schedule\030\001" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_idleness\030\002 \001" +
-      "(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022te" +
-      "rraform-provider\022\010TypeList\372\363\263\007\035nodeMaint" +
-      "enanceWindowElemType2\356\003\n\005Nodes\022Z\n\006Create" +
-      "\022\025.v1.NodeCreateRequest\032\026.v1.NodeCreateR" +
-      "esponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nod" +
-      "es\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeG" +
-      "etResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/n" +
-      "odes/{id}\022^\n\006Update\022\025.v1.NodeUpdateReque" +
-      "st\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363\263\007\003pu" +
-      "t\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete\022\025.v1" +
-      ".NodeDeleteRequest\032\026.v1.NodeDeleteRespon" +
-      "se\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/" +
-      "{id}\022S\n\004List\022\023.v1.NodeListRequest\032\024.v1.N" +
-      "odeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t" +
-      "/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Ba\n" +
-      "\031com.strongdm.api.plumbingB\rNodesPlumbin" +
-      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
-      "3/internal/v1;v1b\006proto3"
+      "\"l\n\021NodeUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
+      ".UpdateRequestMetadata\022\n\n\002id\030\002 \001(\t\022\"\n\004no" +
+      "de\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\323\001\n\022NodeU" +
+      "pdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateR" +
+      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(" +
+      "\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 " +
+      "\001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250" +
+      "\363\263\007\001\"T\n\021NodeDeleteRequest\022\'\n\004meta\030\001 \001(\0132" +
+      "\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\"\257\001\n\022NodeDeleteResponse\0224\n\004met" +
+      "a\030\001 \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022W\n\nrate_limit\030\002 \001(\0132\025.v1.RateLim" +
+      "itMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364" +
+      "\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeList" +
+      "Request\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMe" +
+      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\270\001\n\020N" +
+      "odeListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
+      "esponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.Node" +
+      "B\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
+      "\263\007\022\262\364\263\007\r!json_gateway\"\305\001\n\004Node\022\032\n\005relay\030" +
+      "\001 \001(\0132\t.v1.RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v1" +
+      ".GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_examples/n" +
+      "ode_resource.txt\252\363\263\007 tf_examples/node_da" +
+      "ta_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022\034\252\370\263\007\t\252\370" +
+      "\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\250\004\n\005Relay\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364" +
+      "\263\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004tags\030\004 \001" +
+      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filt" +
+      "er\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\006 \001(\tB\017\362\370" +
+      "\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\007 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263" +
+      "\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo" +
+      "_private\022t\n\023maintenance_windows\030\013 \003(\0132\031." +
+      "v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007" +
+      "-\302\364\263\007(\n\022terraform-provider\022\022maintenance_" +
+      "window\022L\n\020discovery_config\030\014 \001(\0132\027.v1.No" +
+      "deDiscoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_pri" +
+      "vate:\n\372\370\263\007\005\250\363\263\007\001\"\204\005\n\007Gateway\022\026\n\002id\030\001 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364" +
+      "\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001" +
+      "*\262\364\263\007\023!terraform-provider\022,\n\016listen_addr" +
+      "ess\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_" +
+      "address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004t" +
+      "ags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gatew" +
+      "ay_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\010 " +
+      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t \001(\tB\017" +
+      "\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001" +
+      "\262\364\263\007\ngo_private\022t\n\023maintenance_windows\030\r" +
+      " \003(\0132\031.v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363" +
+      "\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-provider\022\022maint" +
+      "enance_window\022L\n\020discovery_config\030\016 \001(\0132" +
+      "\027.v1.NodeDiscoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007" +
+      "\ngo_private:\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n\025NodeMaintena" +
+      "nceWindow\022!\n\rcron_schedule\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022$\n\020require_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263" +
+      "\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-prov" +
+      "ider\022\010TypeList\372\363\263\007\035nodeMaintenanceWindow" +
+      "ElemType\"\303\001\n\023NodeDiscoveryConfig\022\033\n\007enab" +
+      "led\030\001 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\0225\n\006period\030\002 \001(\0132\031." +
+      "google.protobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014" +
+      "enabledTypes\030\003 \003(\0132\033.v1.NodeDiscoveryTyp" +
+      "eConfigB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
+      "rivate\"N\n\027NodeDiscoveryTypeConfig\022\030\n\004typ" +
+      "e\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
+      "rivate2\356\003\n\005Nodes\022Z\n\006Create\022\025.v1.NodeCrea" +
+      "teRequest\032\026.v1.NodeCreateResponse\"!\202\371\263\007\t" +
+      "\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1" +
+      ".NodeGetRequest\032\023.v1.NodeGetResponse\"%\202\371" +
+      "\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006U" +
+      "pdate\022\025.v1.NodeUpdateRequest\032\026.v1.NodeUp" +
+      "dateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1" +
+      "/nodes/{id}\022a\n\006Delete\022\025.v1.NodeDeleteReq" +
+      "uest\032\026.v1.NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006" +
+      "delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023" +
+      ".v1.NodeListRequest\032\024.v1.NodeListRespons" +
+      "e\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263" +
+      "\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Ba\n\031com.strongdm." +
+      "api.plumbingB\rNodesPlumbingZ5github.com/" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
           com.strongdm.api.plumbing.TagsPlumbing.getDescriptor(),
@@ -19311,19 +21786,31 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", });
+        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", "DiscoveryConfig", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", "DiscoveryConfig", });
     internal_static_v1_NodeMaintenanceWindow_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeMaintenanceWindow_descriptor,
         new java.lang.String[] { "CronSchedule", "RequireIdleness", });
+    internal_static_v1_NodeDiscoveryConfig_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_v1_NodeDiscoveryConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_NodeDiscoveryConfig_descriptor,
+        new java.lang.String[] { "Enabled", "Period", "EnabledTypes", });
+    internal_static_v1_NodeDiscoveryTypeConfig_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_v1_NodeDiscoveryTypeConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_NodeDiscoveryTypeConfig_descriptor,
+        new java.lang.String[] { "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
@@ -19333,6 +21820,7 @@ public final class NodesPlumbing {
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DurationProto.getDescriptor();
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();
     com.strongdm.api.plumbing.TagsPlumbing.getDescriptor();

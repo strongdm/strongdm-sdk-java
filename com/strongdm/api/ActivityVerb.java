@@ -133,6 +133,7 @@ public final class ActivityVerb {
   public static final String ORG_SETTING_UPDATED = "organization setting updated";
   public static final String ORG_LOG_SYNC_SETTING_UPDATED =
       "organization log stream setting updated";
+  public static final String ORG_WORKFLOW_SETTING_UPDATED = "organization workflow setting updated";
   public static final String ORG_CREATED = "organization created";
   public static final String ORG_SCIM_PROVISIONING_UPDATED = "SCIM provider set";
   public static final String ORG_SCIM_PROVISIONING_DELETED = "SCIM provider deleted";
@@ -191,4 +192,8 @@ public final class ActivityVerb {
   public static final String RESOURCE_LOCKED = "user locked a resource";
   public static final String RESOURCE_UNLOCKED = "user unlocked a resource";
   public static final String RESOURCE_FORCE_UNLOCKED = "admin force-unlocked a resource";
+  public static final String ORG_INTEGRATION_INSTALLED = "org integration installed";
+  public static final String USER_INTEGRATION_AUTHORIZED = "user authorized integration";
+  public static final String ORG_INTEGRATION_UNINSTALLED = "org integration uninstalled";
+  public static final String USER_INTEGRATION_DEAUTHORIZED = "user deauthorized integration";
 }
