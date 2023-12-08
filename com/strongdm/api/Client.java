@@ -352,7 +352,10 @@ public class Client {
 
   protected final WorkflowApprovers workflowApprovers;
 
-  /** WorkflowApprovers is an account with the ability to approve requests bound to a workflow. */
+  /**
+   * WorkflowApprovers is an account or a role with the ability to approve requests bound to a
+   * workflow.
+   */
   public WorkflowApprovers workflowApprovers() {
     return this.workflowApprovers;
   }

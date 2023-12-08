@@ -30,7 +30,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-/** WorkflowApprovers is an account with the ability to approve requests bound to a workflow. */
+/**
+ * WorkflowApprovers is an account or a role with the ability to approve requests bound to a
+ * workflow.
+ */
 public class WorkflowApprovers implements SnapshotWorkflowApprovers {
   private final WorkflowApproversGrpc.WorkflowApproversBlockingStub stub;
   private final Client parent;

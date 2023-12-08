@@ -17,16 +17,19 @@
 
 package com.strongdm.api;
 
-/** WorkflowApprover is an account with the ability to approve requests bound to a workflow. */
+/**
+ * WorkflowApprover is an account or a role with the ability to approve requests bound to a
+ * workflow.
+ */
 public class WorkflowApprover {
-  private String approverId;
-  /** The approver id. */
-  public String getApproverId() {
-    return this.approverId;
+  private String accountId;
+  /** The approver account id. */
+  public String getAccountId() {
+    return this.accountId;
   }
-  /** The approver id. */
-  public void setApproverId(String in) {
-    this.approverId = in;
+  /** The approver account id. */
+  public void setAccountId(String in) {
+    this.accountId = in;
   }
 
   private String id;
@@ -37,6 +40,16 @@ public class WorkflowApprover {
   /** Unique identifier of the WorkflowApprover. */
   public void setId(String in) {
     this.id = in;
+  }
+
+  private String roleId;
+  /** The approver role id */
+  public String getRoleId() {
+    return this.roleId;
+  }
+  /** The approver role id */
+  public void setRoleId(String in) {
+    this.roleId = in;
   }
 
   private String workflowId;

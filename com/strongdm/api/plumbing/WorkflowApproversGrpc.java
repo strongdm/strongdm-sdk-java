@@ -31,7 +31,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * WorkflowApprovers is an account with the ability to approve requests bound to a workflow.
+ * WorkflowApprovers is an account or a role with the ability to approve requests bound to a workflow.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -214,7 +214,7 @@ public final class WorkflowApproversGrpc {
 
   /**
    * <pre>
-   * WorkflowApprovers is an account with the ability to approve requests bound to a workflow.
+   * WorkflowApprovers is an account or a role with the ability to approve requests bound to a workflow.
    * </pre>
    */
   public static abstract class WorkflowApproversImplBase implements io.grpc.BindableService {
@@ -295,7 +295,7 @@ public final class WorkflowApproversGrpc {
 
   /**
    * <pre>
-   * WorkflowApprovers is an account with the ability to approve requests bound to a workflow.
+   * WorkflowApprovers is an account or a role with the ability to approve requests bound to a workflow.
    * </pre>
    */
   public static final class WorkflowApproversStub extends io.grpc.stub.AbstractAsyncStub<WorkflowApproversStub> {
@@ -357,7 +357,7 @@ public final class WorkflowApproversGrpc {
 
   /**
    * <pre>
-   * WorkflowApprovers is an account with the ability to approve requests bound to a workflow.
+   * WorkflowApprovers is an account or a role with the ability to approve requests bound to a workflow.
    * </pre>
    */
   public static final class WorkflowApproversBlockingStub extends io.grpc.stub.AbstractBlockingStub<WorkflowApproversBlockingStub> {
@@ -415,7 +415,7 @@ public final class WorkflowApproversGrpc {
 
   /**
    * <pre>
-   * WorkflowApprovers is an account with the ability to approve requests bound to a workflow.
+   * WorkflowApprovers is an account or a role with the ability to approve requests bound to a workflow.
    * </pre>
    */
   public static final class WorkflowApproversFutureStub extends io.grpc.stub.AbstractFutureStub<WorkflowApproversFutureStub> {

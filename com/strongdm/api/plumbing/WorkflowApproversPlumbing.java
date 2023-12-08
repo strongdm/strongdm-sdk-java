@@ -7038,7 +7038,7 @@ public final class WorkflowApproversPlumbing {
 
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7047,7 +7047,7 @@ public final class WorkflowApproversPlumbing {
         getWorkflowApproversList();
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7055,7 +7055,7 @@ public final class WorkflowApproversPlumbing {
     com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover getWorkflowApprovers(int index);
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7063,7 +7063,7 @@ public final class WorkflowApproversPlumbing {
     int getWorkflowApproversCount();
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7072,7 +7072,7 @@ public final class WorkflowApproversPlumbing {
         getWorkflowApproversOrBuilderList();
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7273,7 +7273,7 @@ public final class WorkflowApproversPlumbing {
     private java.util.List<com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover> workflowApprovers_;
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7284,7 +7284,7 @@ public final class WorkflowApproversPlumbing {
     }
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7296,7 +7296,7 @@ public final class WorkflowApproversPlumbing {
     }
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7307,7 +7307,7 @@ public final class WorkflowApproversPlumbing {
     }
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7318,7 +7318,7 @@ public final class WorkflowApproversPlumbing {
     }
     /**
      * <pre>
-     * The matching workflows.
+     * The matching workflow approvers.
      * </pre>
      *
      * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7943,7 +7943,7 @@ public final class WorkflowApproversPlumbing {
 
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7957,7 +7957,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7971,7 +7971,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -7985,7 +7985,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8006,7 +8006,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8024,7 +8024,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8044,7 +8044,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8065,7 +8065,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8083,7 +8083,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8101,7 +8101,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8120,7 +8120,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8137,7 +8137,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8154,7 +8154,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8165,7 +8165,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8179,7 +8179,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8194,7 +8194,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8205,7 +8205,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8217,7 +8217,7 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The matching workflows.
+       * The matching workflow approvers.
        * </pre>
        *
        * <code>repeated .v1.WorkflowApprover workflow_approvers = 2 [(.v1.field_options) = { ... }</code>
@@ -8494,27 +8494,47 @@ public final class WorkflowApproversPlumbing {
 
     /**
      * <pre>
-     * The approver id.
+     * The approver account id.
      * </pre>
      *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The approverId.
+     * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+     * @return The accountId.
      */
-    java.lang.String getApproverId();
+    java.lang.String getAccountId();
     /**
      * <pre>
-     * The approver id.
+     * The approver account id.
      * </pre>
      *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for approverId.
+     * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accountId.
      */
     com.google.protobuf.ByteString
-        getApproverIdBytes();
+        getAccountIdBytes();
+
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+     * @return The roleId.
+     */
+    java.lang.String getRoleId();
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for roleId.
+     */
+    com.google.protobuf.ByteString
+        getRoleIdBytes();
   }
   /**
    * <pre>
-   * WorkflowApprover is an account with the ability to approve requests bound to a workflow.
+   * WorkflowApprover is an account or a role with the ability to approve requests bound to a workflow.
    * </pre>
    *
    * Protobuf type {@code v1.WorkflowApprover}
@@ -8531,7 +8551,8 @@ public final class WorkflowApproversPlumbing {
     private WorkflowApprover() {
       id_ = "";
       workflowId_ = "";
-      approverId_ = "";
+      accountId_ = "";
+      roleId_ = "";
     }
 
     @java.lang.Override
@@ -8579,7 +8600,13 @@ public final class WorkflowApproversPlumbing {
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              approverId_ = s;
+              accountId_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              roleId_ = s;
               break;
             }
             default: {
@@ -8708,46 +8735,92 @@ public final class WorkflowApproversPlumbing {
       }
     }
 
-    public static final int APPROVER_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object approverId_;
+    public static final int ACCOUNT_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object accountId_;
     /**
      * <pre>
-     * The approver id.
+     * The approver account id.
      * </pre>
      *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The approverId.
+     * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+     * @return The accountId.
      */
     @java.lang.Override
-    public java.lang.String getApproverId() {
-      java.lang.Object ref = approverId_;
+    public java.lang.String getAccountId() {
+      java.lang.Object ref = accountId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        approverId_ = s;
+        accountId_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * The approver id.
+     * The approver account id.
      * </pre>
      *
-     * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for approverId.
+     * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accountId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getApproverIdBytes() {
-      java.lang.Object ref = approverId_;
+        getAccountIdBytes() {
+      java.lang.Object ref = accountId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        approverId_ = b;
+        accountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROLE_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object roleId_;
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+     * @return The roleId.
+     */
+    @java.lang.Override
+    public java.lang.String getRoleId() {
+      java.lang.Object ref = roleId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roleId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for roleId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoleIdBytes() {
+      java.lang.Object ref = roleId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roleId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -8774,8 +8847,11 @@ public final class WorkflowApproversPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, workflowId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approverId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, approverId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, accountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, roleId_);
       }
       unknownFields.writeTo(output);
     }
@@ -8792,8 +8868,11 @@ public final class WorkflowApproversPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, workflowId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approverId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, approverId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, accountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, roleId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8814,8 +8893,10 @@ public final class WorkflowApproversPlumbing {
           .equals(other.getId())) return false;
       if (!getWorkflowId()
           .equals(other.getWorkflowId())) return false;
-      if (!getApproverId()
-          .equals(other.getApproverId())) return false;
+      if (!getAccountId()
+          .equals(other.getAccountId())) return false;
+      if (!getRoleId()
+          .equals(other.getRoleId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8831,8 +8912,10 @@ public final class WorkflowApproversPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + WORKFLOW_ID_FIELD_NUMBER;
       hash = (53 * hash) + getWorkflowId().hashCode();
-      hash = (37 * hash) + APPROVER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getApproverId().hashCode();
+      hash = (37 * hash) + ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountId().hashCode();
+      hash = (37 * hash) + ROLE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRoleId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8930,7 +9013,7 @@ public final class WorkflowApproversPlumbing {
     }
     /**
      * <pre>
-     * WorkflowApprover is an account with the ability to approve requests bound to a workflow.
+     * WorkflowApprover is an account or a role with the ability to approve requests bound to a workflow.
      * </pre>
      *
      * Protobuf type {@code v1.WorkflowApprover}
@@ -8974,7 +9057,9 @@ public final class WorkflowApproversPlumbing {
 
         workflowId_ = "";
 
-        approverId_ = "";
+        accountId_ = "";
+
+        roleId_ = "";
 
         return this;
       }
@@ -9004,7 +9089,8 @@ public final class WorkflowApproversPlumbing {
         com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover result = new com.strongdm.api.plumbing.WorkflowApproversPlumbing.WorkflowApprover(this);
         result.id_ = id_;
         result.workflowId_ = workflowId_;
-        result.approverId_ = approverId_;
+        result.accountId_ = accountId_;
+        result.roleId_ = roleId_;
         onBuilt();
         return result;
       }
@@ -9061,8 +9147,12 @@ public final class WorkflowApproversPlumbing {
           workflowId_ = other.workflowId_;
           onChanged();
         }
-        if (!other.getApproverId().isEmpty()) {
-          approverId_ = other.approverId_;
+        if (!other.getAccountId().isEmpty()) {
+          accountId_ = other.accountId_;
+          onChanged();
+        }
+        if (!other.getRoleId().isEmpty()) {
+          roleId_ = other.roleId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -9286,22 +9376,22 @@ public final class WorkflowApproversPlumbing {
         return this;
       }
 
-      private java.lang.Object approverId_ = "";
+      private java.lang.Object accountId_ = "";
       /**
        * <pre>
-       * The approver id.
+       * The approver account id.
        * </pre>
        *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The approverId.
+       * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+       * @return The accountId.
        */
-      public java.lang.String getApproverId() {
-        java.lang.Object ref = approverId_;
+      public java.lang.String getAccountId() {
+        java.lang.Object ref = accountId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          approverId_ = s;
+          accountId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9309,20 +9399,20 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The approver id.
+       * The approver account id.
        * </pre>
        *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for approverId.
+       * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accountId.
        */
       public com.google.protobuf.ByteString
-          getApproverIdBytes() {
-        java.lang.Object ref = approverId_;
+          getAccountIdBytes() {
+        java.lang.Object ref = accountId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          approverId_ = b;
+          accountId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -9330,54 +9420,150 @@ public final class WorkflowApproversPlumbing {
       }
       /**
        * <pre>
-       * The approver id.
+       * The approver account id.
        * </pre>
        *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The approverId to set.
+       * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The accountId to set.
        * @return This builder for chaining.
        */
-      public Builder setApproverId(
+      public Builder setAccountId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        approverId_ = value;
+        accountId_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The approver id.
+       * The approver account id.
        * </pre>
        *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearApproverId() {
+      public Builder clearAccountId() {
         
-        approverId_ = getDefaultInstance().getApproverId();
+        accountId_ = getDefaultInstance().getAccountId();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The approver id.
+       * The approver account id.
        * </pre>
        *
-       * <code>string approver_id = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for approverId to set.
+       * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accountId to set.
        * @return This builder for chaining.
        */
-      public Builder setApproverIdBytes(
+      public Builder setAccountIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        approverId_ = value;
+        accountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object roleId_ = "";
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+       * @return The roleId.
+       */
+      public java.lang.String getRoleId() {
+        java.lang.Object ref = roleId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roleId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for roleId.
+       */
+      public com.google.protobuf.ByteString
+          getRoleIdBytes() {
+        java.lang.Object ref = roleId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roleId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The roleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        roleId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoleId() {
+        
+        roleId_ = getDefaultInstance().getRoleId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for roleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        roleId_ = value;
         onChanged();
         return this;
       }
@@ -9523,31 +9709,31 @@ public final class WorkflowApproversPlumbing {
       "rovers\030\002 \003(\0132\024.v1.WorkflowApproverB\n\362\370\263\007" +
       "\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimi" +
       "tMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263" +
-      "\007\r!json_gateway:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\356\001\n\020Wo" +
+      "\007\r!json_gateway:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\205\002\n\020Wo" +
       "rkflowApprover\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
-      "\n\013workflow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022$\n\013" +
-      "approver_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:v\372\370\263\007" +
-      "q\250\363\263\007\001\302\363\263\007a\242\363\263\007*tf_examples/workflow_app" +
-      "rover_resource.txt\252\363\263\007-tf_examples/workf" +
-      "low_approver_data_source.txt\322\363\263\007\001*2\275\004\n\021W" +
-      "orkflowApprovers\022\201\001\n\006Create\022\".v1.Workflo" +
-      "wApproversCreateRequest\032#.v1.WorkflowApp" +
-      "roversCreateResponse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007" +
-      "\033\252\363\263\007\026/v1/workflow-approvers\022y\n\003Get\022\036.v1" +
-      ".WorkflowApproverGetRequest\032\037.v1.Workflo" +
-      "wApproverGetResponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037" +
-      "\252\363\263\007\032/v1/workflow-approver/{id}\022\203\001\n\006Dele" +
-      "te\022\".v1.WorkflowApproversDeleteRequest\032#" +
-      ".v1.WorkflowApproversDeleteResponse\"0\202\371\263" +
-      "\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1/workflow-appr" +
-      "overs\022z\n\004List\022 .v1.WorkflowApproversList" +
-      "Request\032!.v1.WorkflowApproversListRespon" +
-      "se\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/workflow-" +
-      "approvers\032\'\312\371\263\007\025\302\371\263\007\020WorkflowApprover\312\371\263" +
-      "\007\010\322\371\263\007\003nt-Bm\n\031com.strongdm.api.plumbingB" +
-      "\031WorkflowApproversPlumbingZ5github.com/s" +
-      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
-      "1b\006proto3"
+      "\n\013workflow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\036\n\n" +
+      "account_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030" +
+      "\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\302\363\263\007a\242\363\263\007*t" +
+      "f_examples/workflow_approver_resource.tx" +
+      "t\252\363\263\007-tf_examples/workflow_approver_data" +
+      "_source.txt\322\363\263\007\001*2\275\004\n\021WorkflowApprovers\022" +
+      "\201\001\n\006Create\022\".v1.WorkflowApproversCreateR" +
+      "equest\032#.v1.WorkflowApproversCreateRespo" +
+      "nse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1/workflo" +
+      "w-approvers\022y\n\003Get\022\036.v1.WorkflowApprover" +
+      "GetRequest\032\037.v1.WorkflowApproverGetRespo" +
+      "nse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/workflow" +
+      "-approver/{id}\022\203\001\n\006Delete\022\".v1.WorkflowA" +
+      "pproversDeleteRequest\032#.v1.WorkflowAppro" +
+      "versDeleteResponse\"0\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
+      "\033\252\363\263\007\026/v1/workflow-approvers\022z\n\004List\022 .v" +
+      "1.WorkflowApproversListRequest\032!.v1.Work" +
+      "flowApproversListResponse\"-\202\371\263\007\010\242\363\263\007\003get" +
+      "\202\371\263\007\033\252\363\263\007\026/v1/workflow-approvers\032\'\312\371\263\007\025\302" +
+      "\371\263\007\020WorkflowApprover\312\371\263\007\010\322\371\263\007\003nt-Bm\n\031com" +
+      ".strongdm.api.plumbingB\031WorkflowApprover" +
+      "sPlumbingZ5github.com/strongdm/strongdm-" +
+      "sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9608,7 +9794,7 @@ public final class WorkflowApproversPlumbing {
     internal_static_v1_WorkflowApprover_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_WorkflowApprover_descriptor,
-        new java.lang.String[] { "Id", "WorkflowId", "ApproverId", });
+        new java.lang.String[] { "Id", "WorkflowId", "AccountId", "RoleId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

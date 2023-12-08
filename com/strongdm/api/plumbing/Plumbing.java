@@ -14070,8 +14070,9 @@ public class Plumbing {
   public static com.strongdm.api.WorkflowApprover convertWorkflowApproverToPorcelain(
       WorkflowApprover plumbing) {
     com.strongdm.api.WorkflowApprover porcelain = new com.strongdm.api.WorkflowApprover();
-    porcelain.setApproverId((plumbing.getApproverId()));
+    porcelain.setAccountId((plumbing.getAccountId()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setRoleId((plumbing.getRoleId()));
     porcelain.setWorkflowId((plumbing.getWorkflowId()));
     return porcelain;
   }
@@ -14082,11 +14083,14 @@ public class Plumbing {
       return null;
     }
     WorkflowApprover.Builder builder = WorkflowApprover.newBuilder();
-    if (porcelain.getApproverId() != null) {
-      builder.setApproverId((porcelain.getApproverId()));
+    if (porcelain.getAccountId() != null) {
+      builder.setAccountId((porcelain.getAccountId()));
     }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getRoleId() != null) {
+      builder.setRoleId((porcelain.getRoleId()));
     }
     if (porcelain.getWorkflowId() != null) {
       builder.setWorkflowId((porcelain.getWorkflowId()));
