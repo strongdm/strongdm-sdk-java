@@ -13143,6 +13143,1839 @@ public final class ResourcesPlumbing {
 
   }
 
+  public interface ResourceHealthcheckRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ResourceHealthcheckRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The unique identifier of the Resource to healthcheck.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The unique identifier of the Resource to healthcheck.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * ResourceHealthcheckRequest specifies requesting a healthcheck for a given resource by ID.
+   * </pre>
+   *
+   * Protobuf type {@code v1.ResourceHealthcheckRequest}
+   */
+  public static final class ResourceHealthcheckRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ResourceHealthcheckRequest)
+      ResourceHealthcheckRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceHealthcheckRequest.newBuilder() to construct.
+    private ResourceHealthcheckRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceHealthcheckRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceHealthcheckRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResourceHealthcheckRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.class, com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.UpdateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The unique identifier of the Resource to healthcheck.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier of the Resource to healthcheck.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest other = (com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ResourceHealthcheckRequest specifies requesting a healthcheck for a given resource by ID.
+     * </pre>
+     *
+     * Protobuf type {@code v1.ResourceHealthcheckRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ResourceHealthcheckRequest)
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.class, com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        id_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest build() {
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest buildPartial() {
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest result = new com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest other) {
+        if (other == com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.UpdateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The unique identifier of the Resource to healthcheck.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Resource to healthcheck.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Resource to healthcheck.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Resource to healthcheck.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the Resource to healthcheck.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ResourceHealthcheckRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ResourceHealthcheckRequest)
+    private static final com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest();
+    }
+
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceHealthcheckRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceHealthcheckRequest>() {
+      @java.lang.Override
+      public ResourceHealthcheckRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResourceHealthcheckRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceHealthcheckRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceHealthcheckRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResourceHealthcheckResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ResourceHealthcheckResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * ResourceHealthcheckResponse reports any metadata concerning a healthcheck response.
+   * Healthchecks are non blocking, and this contains no non-metadata.
+   * </pre>
+   *
+   * Protobuf type {@code v1.ResourceHealthcheckResponse}
+   */
+  public static final class ResourceHealthcheckResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ResourceHealthcheckResponse)
+      ResourceHealthcheckResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceHealthcheckResponse.newBuilder() to construct.
+    private ResourceHealthcheckResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceHealthcheckResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceHealthcheckResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResourceHealthcheckResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.class, com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.UpdateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(2, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse other = (com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ResourceHealthcheckResponse reports any metadata concerning a healthcheck response.
+     * Healthchecks are non blocking, and this contains no non-metadata.
+     * </pre>
+     *
+     * Protobuf type {@code v1.ResourceHealthcheckResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ResourceHealthcheckResponse)
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.class, com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.internal_static_v1_ResourceHealthcheckResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse build() {
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse buildPartial() {
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse result = new com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse other) {
+        if (other == com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.UpdateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ResourceHealthcheckResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ResourceHealthcheckResponse)
+    private static final com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse();
+    }
+
+    public static com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceHealthcheckResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceHealthcheckResponse>() {
+      @java.lang.Override
+      public ResourceHealthcheckResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResourceHealthcheckResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceHealthcheckResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceHealthcheckResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_ResourceCreateRequest_descriptor;
   private static final 
@@ -13203,6 +15036,16 @@ public final class ResourcesPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_EnumerateTagsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_ResourceHealthcheckRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ResourceHealthcheckRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_ResourceHealthcheckResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ResourceHealthcheckResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13259,27 +15102,38 @@ public final class ResourcesPlumbing {
       ".ListResponseMetadata\022$\n\007matches\030\002 \003(\0132\007" +
       ".v1.TagB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132" +
       "\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262" +
-      "\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway2\245\005\n\tResourc" +
-      "es\022p\n\rEnumerateTags\022\030.v1.EnumerateTagsRe" +
-      "quest\032\031.v1.EnumerateTagsResponse\"*\202\371\263\007\010\242" +
-      "\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/resources/tags/\022f\n\006" +
-      "Create\022\031.v1.ResourceCreateRequest\032\032.v1.R" +
-      "esourceCreateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263" +
-      "\007\022\252\363\263\007\r/v1/resources\022a\n\003Get\022\026.v1.Resourc" +
-      "eGetRequest\032\027.v1.ResourceGetResponse\")\202\371" +
-      "\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/resources/{id}\022" +
-      "j\n\006Update\022\031.v1.ResourceUpdateRequest\032\032.v" +
-      "1.ResourceUpdateResponse\")\202\371\263\007\010\242\363\263\007\003put\202" +
-      "\371\263\007\027\252\363\263\007\022/v1/resources/{id}\022m\n\006Delete\022\031." +
-      "v1.ResourceDeleteRequest\032\032.v1.ResourceDe" +
-      "leteResponse\",\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\027\252\363\263\007\022" +
-      "/v1/resources/{id}\022_\n\004List\022\027.v1.Resource" +
-      "ListRequest\032\030.v1.ResourceListResponse\"$\202" +
-      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v1/resources\032\037\312\371\263" +
-      "\007\r\302\371\263\007\010Resource\312\371\263\007\010\322\371\263\007\003rs-Be\n\031com.stro" +
-      "ngdm.api.plumbingB\021ResourcesPlumbingZ5gi" +
-      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
-      "ernal/v1;v1b\006proto3"
+      "\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"i\n\032Resource" +
+      "HealthcheckRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Up" +
+      "dateRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\270\001\n\033ResourceHealthcheckR" +
+      "esponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateRespons" +
+      "eMetadataB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\002 \001(" +
+      "\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263" +
+      "\007\0012\255\006\n\tResources\022p\n\rEnumerateTags\022\030.v1.E" +
+      "numerateTagsRequest\032\031.v1.EnumerateTagsRe" +
+      "sponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/resou" +
+      "rces/tags/\022f\n\006Create\022\031.v1.ResourceCreate" +
+      "Request\032\032.v1.ResourceCreateResponse\"%\202\371\263" +
+      "\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/resources\022a\n\003Ge" +
+      "t\022\026.v1.ResourceGetRequest\032\027.v1.ResourceG" +
+      "etResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/r" +
+      "esources/{id}\022j\n\006Update\022\031.v1.ResourceUpd" +
+      "ateRequest\032\032.v1.ResourceUpdateResponse\")" +
+      "\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\027\252\363\263\007\022/v1/resources/{id" +
+      "}\022m\n\006Delete\022\031.v1.ResourceDeleteRequest\032\032" +
+      ".v1.ResourceDeleteResponse\",\202\371\263\007\013\242\363\263\007\006de" +
+      "lete\202\371\263\007\027\252\363\263\007\022/v1/resources/{id}\022_\n\004List" +
+      "\022\027.v1.ResourceListRequest\032\030.v1.ResourceL" +
+      "istResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v1/" +
+      "resources\022\205\001\n\013Healthcheck\022\036.v1.ResourceH" +
+      "ealthcheckRequest\032\037.v1.ResourceHealthche" +
+      "ckResponse\"5\202\371\263\007\010\242\363\263\007\003put\202\371\263\007#\252\363\263\007\036/v1/r" +
+      "esources/{id}/healthcheck\032\037\312\371\263\007\r\302\371\263\007\010Res" +
+      "ource\312\371\263\007\010\322\371\263\007\003rs-Be\n\031com.strongdm.api.p" +
+      "lumbingB\021ResourcesPlumbingZ5github.com/s" +
+      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13361,6 +15215,18 @@ public final class ResourcesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_EnumerateTagsResponse_descriptor,
         new java.lang.String[] { "Meta", "Matches", "RateLimit", });
+    internal_static_v1_ResourceHealthcheckRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_v1_ResourceHealthcheckRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ResourceHealthcheckRequest_descriptor,
+        new java.lang.String[] { "Meta", "Id", });
+    internal_static_v1_ResourceHealthcheckResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_v1_ResourceHealthcheckResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ResourceHealthcheckResponse_descriptor,
+        new java.lang.String[] { "Meta", "RateLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

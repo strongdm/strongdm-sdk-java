@@ -11672,6 +11672,94 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.ResourceHealthcheckRequest
+      convertResourceHealthcheckRequestToPorcelain(ResourceHealthcheckRequest plumbing) {
+    com.strongdm.api.ResourceHealthcheckRequest porcelain =
+        new com.strongdm.api.ResourceHealthcheckRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static ResourceHealthcheckRequest convertResourceHealthcheckRequestToPlumbing(
+      com.strongdm.api.ResourceHealthcheckRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ResourceHealthcheckRequest.Builder builder = ResourceHealthcheckRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ResourceHealthcheckRequest>
+      convertRepeatedResourceHealthcheckRequestToPorcelain(
+          Collection<ResourceHealthcheckRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceHealthcheckRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertResourceHealthcheckRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ResourceHealthcheckRequest>
+      convertRepeatedResourceHealthcheckRequestToPlumbing(
+          Collection<com.strongdm.api.ResourceHealthcheckRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceHealthcheckRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertResourceHealthcheckRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ResourceHealthcheckResponse
+      convertResourceHealthcheckResponseToPorcelain(ResourceHealthcheckResponse plumbing) {
+    com.strongdm.api.ResourceHealthcheckResponse porcelain =
+        new com.strongdm.api.ResourceHealthcheckResponse();
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ResourceHealthcheckResponse convertResourceHealthcheckResponseToPlumbing(
+      com.strongdm.api.ResourceHealthcheckResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ResourceHealthcheckResponse.Builder builder = ResourceHealthcheckResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertUpdateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ResourceHealthcheckResponse>
+      convertRepeatedResourceHealthcheckResponseToPorcelain(
+          Collection<ResourceHealthcheckResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceHealthcheckResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertResourceHealthcheckResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ResourceHealthcheckResponse>
+      convertRepeatedResourceHealthcheckResponseToPlumbing(
+          Collection<com.strongdm.api.ResourceHealthcheckResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceHealthcheckResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertResourceHealthcheckResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.ResourceHistory convertResourceHistoryToPorcelain(
       ResourceHistory plumbing) {
     com.strongdm.api.ResourceHistory porcelain = new com.strongdm.api.ResourceHistory();

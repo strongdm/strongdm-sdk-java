@@ -270,4 +270,34 @@ public class Resources implements SnapshotResources {
 
     return () -> iterator;
   }
+  /**
+   * Healthcheck triggers a remote healthcheck. It may take minutes to propagate across a large
+   * network of Nodes. The call will return immediately, and the updated health of the Resource can
+   * be retrieved via Get or List.
+   */
+  public ResourceHealthcheckResponse healthcheck(String id) throws RpcException {
+    ResourcesPlumbing.ResourceHealthcheckRequest.Builder builder =
+        ResourcesPlumbing.ResourceHealthcheckRequest.newBuilder();
+    builder.setId((id));
+    ResourcesPlumbing.ResourceHealthcheckRequest req = builder.build();
+    ResourcesPlumbing.ResourceHealthcheckResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Resources.Healthcheck", req))
+                .healthcheck(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertResourceHealthcheckResponseToPorcelain(plumbingResponse);
+  }
 }

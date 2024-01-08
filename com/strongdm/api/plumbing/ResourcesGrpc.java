@@ -231,6 +231,37 @@ public final class ResourcesGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest,
+      com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse> getHealthcheckMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Healthcheck",
+      requestType = com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.class,
+      responseType = com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest,
+      com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse> getHealthcheckMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest, com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse> getHealthcheckMethod;
+    if ((getHealthcheckMethod = ResourcesGrpc.getHealthcheckMethod) == null) {
+      synchronized (ResourcesGrpc.class) {
+        if ((getHealthcheckMethod = ResourcesGrpc.getHealthcheckMethod) == null) {
+          ResourcesGrpc.getHealthcheckMethod = getHealthcheckMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest, com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Healthcheck"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourcesMethodDescriptorSupplier("Healthcheck"))
+              .build();
+        }
+      }
+    }
+    return getHealthcheckMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -343,6 +374,18 @@ public final class ResourcesGrpc {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Healthcheck triggers a remote healthcheck. It may take minutes to propagate across a
+     * large network of Nodes. The call will return immediately, and the updated health of the
+     * Resource can be retrieved via Get or List.
+     * </pre>
+     */
+    public void healthcheck(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getHealthcheckMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -387,6 +430,13 @@ public final class ResourcesGrpc {
                 com.strongdm.api.plumbing.ResourcesPlumbing.ResourceListRequest,
                 com.strongdm.api.plumbing.ResourcesPlumbing.ResourceListResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getHealthcheckMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest,
+                com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse>(
+                  this, METHODID_HEALTHCHECK)))
           .build();
     }
   }
@@ -474,6 +524,19 @@ public final class ResourcesGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Healthcheck triggers a remote healthcheck. It may take minutes to propagate across a
+     * large network of Nodes. The call will return immediately, and the updated health of the
+     * Resource can be retrieved via Get or List.
+     * </pre>
+     */
+    public void healthcheck(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getHealthcheckMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -552,6 +615,18 @@ public final class ResourcesGrpc {
     public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceListResponse list(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceListRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Healthcheck triggers a remote healthcheck. It may take minutes to propagate across a
+     * large network of Nodes. The call will return immediately, and the updated health of the
+     * Resource can be retrieved via Get or List.
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse healthcheck(com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getHealthcheckMethod(), getCallOptions(), request);
     }
   }
 
@@ -638,6 +713,19 @@ public final class ResourcesGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Healthcheck triggers a remote healthcheck. It may take minutes to propagate across a
+     * large network of Nodes. The call will return immediately, and the updated health of the
+     * Resource can be retrieved via Get or List.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse> healthcheck(
+        com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getHealthcheckMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ENUMERATE_TAGS = 0;
@@ -646,6 +734,7 @@ public final class ResourcesGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_LIST = 5;
+  private static final int METHODID_HEALTHCHECK = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -687,6 +776,10 @@ public final class ResourcesGrpc {
         case METHODID_LIST:
           serviceImpl.list((com.strongdm.api.plumbing.ResourcesPlumbing.ResourceListRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceListResponse>) responseObserver);
+          break;
+        case METHODID_HEALTHCHECK:
+          serviceImpl.healthcheck((com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ResourcesPlumbing.ResourceHealthcheckResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -755,6 +848,7 @@ public final class ResourcesGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListMethod())
+              .addMethod(getHealthcheckMethod())
               .build();
         }
       }
