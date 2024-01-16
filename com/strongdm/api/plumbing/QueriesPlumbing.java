@@ -2891,6 +2891,66 @@ public final class QueriesPlumbing {
      */
     com.google.protobuf.ByteString
         getSourceIpBytes();
+
+    /**
+     * <pre>
+     * The authentication of the account associated with this query.
+     * </pre>
+     *
+     * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The authenticationId.
+     */
+    java.lang.String getAuthenticationId();
+    /**
+     * <pre>
+     * The authentication of the account associated with this query.
+     * </pre>
+     *
+     * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for authenticationId.
+     */
+    com.google.protobuf.ByteString
+        getAuthenticationIdBytes();
+
+    /**
+     * <pre>
+     * The target destination of the query, in host:port format.
+     * </pre>
+     *
+     * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+     * @return The target.
+     */
+    java.lang.String getTarget();
+    /**
+     * <pre>
+     * The target destination of the query, in host:port format.
+     * </pre>
+     *
+     * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for target.
+     */
+    com.google.protobuf.ByteString
+        getTargetBytes();
+
+    /**
+     * <pre>
+     * Authorization metadata associated with this query.
+     * </pre>
+     *
+     * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+     * @return The authzJson.
+     */
+    java.lang.String getAuthzJson();
+    /**
+     * <pre>
+     * Authorization metadata associated with this query.
+     * </pre>
+     *
+     * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for authzJson.
+     */
+    com.google.protobuf.ByteString
+        getAuthzJsonBytes();
   }
   /**
    * <pre>
@@ -2929,6 +2989,9 @@ public final class QueriesPlumbing {
       accountEmail_ = "";
       queryKeyId_ = "";
       sourceIp_ = "";
+      authenticationId_ = "";
+      target_ = "";
+      authzJson_ = "";
     }
 
     @java.lang.Override
@@ -3148,6 +3211,24 @@ public final class QueriesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               sourceIp_ = s;
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authenticationId_ = s;
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              target_ = s;
+              break;
+            }
+            case 226: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authzJson_ = s;
               break;
             }
             default: {
@@ -4221,6 +4302,144 @@ public final class QueriesPlumbing {
       }
     }
 
+    public static final int AUTHENTICATION_ID_FIELD_NUMBER = 26;
+    private volatile java.lang.Object authenticationId_;
+    /**
+     * <pre>
+     * The authentication of the account associated with this query.
+     * </pre>
+     *
+     * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The authenticationId.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthenticationId() {
+      java.lang.Object ref = authenticationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authenticationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The authentication of the account associated with this query.
+     * </pre>
+     *
+     * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for authenticationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthenticationIdBytes() {
+      java.lang.Object ref = authenticationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authenticationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGET_FIELD_NUMBER = 27;
+    private volatile java.lang.Object target_;
+    /**
+     * <pre>
+     * The target destination of the query, in host:port format.
+     * </pre>
+     *
+     * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+     * @return The target.
+     */
+    @java.lang.Override
+    public java.lang.String getTarget() {
+      java.lang.Object ref = target_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        target_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The target destination of the query, in host:port format.
+     * </pre>
+     *
+     * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for target.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTargetBytes() {
+      java.lang.Object ref = target_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        target_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHZJSON_FIELD_NUMBER = 28;
+    private volatile java.lang.Object authzJson_;
+    /**
+     * <pre>
+     * Authorization metadata associated with this query.
+     * </pre>
+     *
+     * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+     * @return The authzJson.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthzJson() {
+      java.lang.Object ref = authzJson_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authzJson_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Authorization metadata associated with this query.
+     * </pre>
+     *
+     * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for authzJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthzJsonBytes() {
+      java.lang.Object ref = authzJson_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authzJson_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4309,6 +4528,15 @@ public final class QueriesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceIp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 25, sourceIp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authenticationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, authenticationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(target_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, target_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authzJson_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, authzJson_);
       }
       unknownFields.writeTo(output);
     }
@@ -4403,6 +4631,15 @@ public final class QueriesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceIp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, sourceIp_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authenticationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, authenticationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(target_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, target_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authzJson_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, authzJson_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4486,6 +4723,12 @@ public final class QueriesPlumbing {
       }
       if (!getSourceIp()
           .equals(other.getSourceIp())) return false;
+      if (!getAuthenticationId()
+          .equals(other.getAuthenticationId())) return false;
+      if (!getTarget()
+          .equals(other.getTarget())) return false;
+      if (!getAuthzJson()
+          .equals(other.getAuthzJson())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4562,6 +4805,12 @@ public final class QueriesPlumbing {
       }
       hash = (37 * hash) + SOURCE_IP_FIELD_NUMBER;
       hash = (53 * hash) + getSourceIp().hashCode();
+      hash = (37 * hash) + AUTHENTICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthenticationId().hashCode();
+      hash = (37 * hash) + TARGET_FIELD_NUMBER;
+      hash = (53 * hash) + getTarget().hashCode();
+      hash = (37 * hash) + AUTHZJSON_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthzJson().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4777,6 +5026,12 @@ public final class QueriesPlumbing {
         }
         sourceIp_ = "";
 
+        authenticationId_ = "";
+
+        target_ = "";
+
+        authzJson_ = "";
+
         return this;
       }
 
@@ -4852,6 +5107,9 @@ public final class QueriesPlumbing {
           result.capture_ = captureBuilder_.build();
         }
         result.sourceIp_ = sourceIp_;
+        result.authenticationId_ = authenticationId_;
+        result.target_ = target_;
+        result.authzJson_ = authzJson_;
         onBuilt();
         return result;
       }
@@ -4989,6 +5247,18 @@ public final class QueriesPlumbing {
         }
         if (!other.getSourceIp().isEmpty()) {
           sourceIp_ = other.sourceIp_;
+          onChanged();
+        }
+        if (!other.getAuthenticationId().isEmpty()) {
+          authenticationId_ = other.authenticationId_;
+          onChanged();
+        }
+        if (!other.getTarget().isEmpty()) {
+          target_ = other.target_;
+          onChanged();
+        }
+        if (!other.getAuthzJson().isEmpty()) {
+          authzJson_ = other.authzJson_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -7687,6 +7957,294 @@ public final class QueriesPlumbing {
   checkByteStringIsUtf8(value);
         
         sourceIp_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authenticationId_ = "";
+      /**
+       * <pre>
+       * The authentication of the account associated with this query.
+       * </pre>
+       *
+       * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+       * @return The authenticationId.
+       */
+      public java.lang.String getAuthenticationId() {
+        java.lang.Object ref = authenticationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authenticationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The authentication of the account associated with this query.
+       * </pre>
+       *
+       * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for authenticationId.
+       */
+      public com.google.protobuf.ByteString
+          getAuthenticationIdBytes() {
+        java.lang.Object ref = authenticationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authenticationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The authentication of the account associated with this query.
+       * </pre>
+       *
+       * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The authenticationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthenticationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        authenticationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The authentication of the account associated with this query.
+       * </pre>
+       *
+       * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthenticationId() {
+        
+        authenticationId_ = getDefaultInstance().getAuthenticationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The authentication of the account associated with this query.
+       * </pre>
+       *
+       * <code>string authentication_id = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for authenticationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthenticationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        authenticationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object target_ = "";
+      /**
+       * <pre>
+       * The target destination of the query, in host:port format.
+       * </pre>
+       *
+       * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+       * @return The target.
+       */
+      public java.lang.String getTarget() {
+        java.lang.Object ref = target_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          target_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The target destination of the query, in host:port format.
+       * </pre>
+       *
+       * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for target.
+       */
+      public com.google.protobuf.ByteString
+          getTargetBytes() {
+        java.lang.Object ref = target_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          target_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The target destination of the query, in host:port format.
+       * </pre>
+       *
+       * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+       * @param value The target to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTarget(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        target_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The target destination of the query, in host:port format.
+       * </pre>
+       *
+       * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTarget() {
+        
+        target_ = getDefaultInstance().getTarget();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The target destination of the query, in host:port format.
+       * </pre>
+       *
+       * <code>string target = 27 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for target to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        target_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authzJson_ = "";
+      /**
+       * <pre>
+       * Authorization metadata associated with this query.
+       * </pre>
+       *
+       * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+       * @return The authzJson.
+       */
+      public java.lang.String getAuthzJson() {
+        java.lang.Object ref = authzJson_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authzJson_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authorization metadata associated with this query.
+       * </pre>
+       *
+       * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for authzJson.
+       */
+      public com.google.protobuf.ByteString
+          getAuthzJsonBytes() {
+        java.lang.Object ref = authzJson_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authzJson_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authorization metadata associated with this query.
+       * </pre>
+       *
+       * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+       * @param value The authzJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthzJson(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        authzJson_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authorization metadata associated with this query.
+       * </pre>
+       *
+       * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthzJson() {
+        
+        authzJson_ = getDefaultInstance().getAuthzJson();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authorization metadata associated with this query.
+       * </pre>
+       *
+       * <code>string authzJson = 28 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for authzJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthzJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        authzJson_ = value;
         onChanged();
         return this;
       }
@@ -10459,7 +11017,7 @@ java.lang.String defaultValue);
       "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362" +
       "\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gate" +
       "way:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pro" +
-      "vider\"\244\010\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "vider\"\314\t\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "\036\n\naccount_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resou" +
       "rce_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nquery_body\030\004" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030\005 \001(\0132\031.goo" +
@@ -10484,30 +11042,34 @@ java.lang.String defaultValue);
       "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022-\n\007ca" +
       "pture\030\030 \001(\0132\020.v1.QueryCaptureB\n\362\370\263\007\005\260\363\263\007" +
       "\001\0225\n\tsource_ip\030\031 \001(\tB\"\362\370\263\007\035\260\363\263\007\001\312\363\263\007\023\302\364\263" +
-      "\007\016\n\002go\022\010SourceIP:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372" +
-      "\370\263\007\030\322\363\263\007\023!terraform-provider\"\253\004\n\014QueryCa" +
-      "pture\022\031\n\005width\030\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006heig" +
-      "ht\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007command\030\003 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\0222\n\003env\030\004 \003(\0132\031.v1.QueryCapture" +
-      ".EnvEntryB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\005 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022\035\n\tfile_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035" +
-      "\n\tfile_size\030\007 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016client_" +
-      "command\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\027\n\003pod\030\t \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022\035\n\tcontainer\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022\"\n\016request_method\030\013 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n" +
-      "\013request_uri\030\014 \001(\tB$\362\370\263\007\037\260\363\263\007\001\312\363\263\007\025\302\364\263\007\020" +
-      "\n\002go\022\nRequestURI\022 \n\014request_body\030\r \001(\014B\n" +
-      "\362\370\263\007\005\260\363\263\007\001\032*\n\010EnvEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263" +
-      "\007\030\322\363\263\007\023!terraform-provider2\245\001\n\007Queries\022W" +
-      "\n\004List\022\024.v1.QueryListRequest\032\025.v1.QueryL" +
-      "istResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/" +
-      "queries\032A\312\371\263\007\n\302\371\263\007\005Query\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312" +
-      "\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\213\001\n\031c" +
-      "om.strongdm.api.plumbingB\017QueriesPlumbin" +
-      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
-      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!te" +
-      "rraform-providerb\006proto3"
+      "\007\016\n\002go\022\010SourceIP\0224\n\021authentication_id\030\032 " +
+      "\001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022)\n\006target" +
+      "\030\033 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022E\n\taut" +
+      "hzJson\030\034 \001(\tB2\362\370\263\007-\260\363\263\007\001\312\363\263\007\024\302\364\263\007\017\n\002go\022\t" +
+      "AuthzJSON\262\364\263\007\ngo_private:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
+      "\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\253\004\n" +
+      "\014QueryCapture\022\031\n\005width\030\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\032\n\006height\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007command\030" +
+      "\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\003env\030\004 \003(\0132\031.v1.Quer" +
+      "yCapture.EnvEntryB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\005 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tfile_name\030\006 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\tfile_size\030\007 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\"\n" +
+      "\016client_command\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\027\n\003pod" +
+      "\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tcontainer\030\n \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\"\n\016request_method\030\013 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\0229\n\013request_uri\030\014 \001(\tB$\362\370\263\007\037\260\363\263\007\001\312\363" +
+      "\263\007\025\302\364\263\007\020\n\002go\022\nRequestURI\022 \n\014request_body" +
+      "\030\r \001(\014B\n\362\370\263\007\005\260\363\263\007\001\032*\n\010EnvEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322" +
+      "\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\245\001\n\007Q" +
+      "ueries\022W\n\004List\022\024.v1.QueryListRequest\032\025.v" +
+      "1.QueryListResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252" +
+      "\363\263\007\013/v1/queries\032A\312\371\263\007\n\302\371\263\007\005Query\312\371\263\007\005\330\371\263" +
+      "\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provid" +
+      "erB\213\001\n\031com.strongdm.api.plumbingB\017Querie" +
+      "sPlumbingZ5github.com/strongdm/strongdm-" +
+      "sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030" +
+      "\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10535,7 +11097,7 @@ java.lang.String defaultValue);
     internal_static_v1_Query_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Query_descriptor,
-        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", "Capture", "SourceIp", });
+        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", "Capture", "SourceIp", "AuthenticationId", "Target", "AuthzJson", });
     internal_static_v1_QueryCapture_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_QueryCapture_fieldAccessorTable = new

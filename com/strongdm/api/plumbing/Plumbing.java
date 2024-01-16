@@ -4409,6 +4409,59 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.ControlPanelGetRDPCAPublicKeyResponse
+      convertControlPanelGetRDPCAPublicKeyResponseToPorcelain(
+          ControlPanelGetRDPCAPublicKeyResponse plumbing) {
+    com.strongdm.api.ControlPanelGetRDPCAPublicKeyResponse porcelain =
+        new com.strongdm.api.ControlPanelGetRDPCAPublicKeyResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPublicKey((plumbing.getPublicKey()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ControlPanelGetRDPCAPublicKeyResponse
+      convertControlPanelGetRDPCAPublicKeyResponseToPlumbing(
+          com.strongdm.api.ControlPanelGetRDPCAPublicKeyResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ControlPanelGetRDPCAPublicKeyResponse.Builder builder =
+        ControlPanelGetRDPCAPublicKeyResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey((porcelain.getPublicKey()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ControlPanelGetRDPCAPublicKeyResponse>
+      convertRepeatedControlPanelGetRDPCAPublicKeyResponseToPorcelain(
+          Collection<ControlPanelGetRDPCAPublicKeyResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ControlPanelGetRDPCAPublicKeyResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertControlPanelGetRDPCAPublicKeyResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ControlPanelGetRDPCAPublicKeyResponse>
+      convertRepeatedControlPanelGetRDPCAPublicKeyResponseToPlumbing(
+          Collection<com.strongdm.api.ControlPanelGetRDPCAPublicKeyResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ControlPanelGetRDPCAPublicKeyResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertControlPanelGetRDPCAPublicKeyResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.ControlPanelGetSSHCAPublicKeyResponse
       convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(
           ControlPanelGetSSHCAPublicKeyResponse plumbing) {

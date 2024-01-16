@@ -75,6 +75,37 @@ public final class ControlPanelGrpc {
     return getGetSSHCAPublicKeyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest,
+      com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse> getGetRDPCAPublicKeyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRDPCAPublicKey",
+      requestType = com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest.class,
+      responseType = com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest,
+      com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse> getGetRDPCAPublicKeyMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse> getGetRDPCAPublicKeyMethod;
+    if ((getGetRDPCAPublicKeyMethod = ControlPanelGrpc.getGetRDPCAPublicKeyMethod) == null) {
+      synchronized (ControlPanelGrpc.class) {
+        if ((getGetRDPCAPublicKeyMethod = ControlPanelGrpc.getGetRDPCAPublicKeyMethod) == null) {
+          ControlPanelGrpc.getGetRDPCAPublicKeyMethod = getGetRDPCAPublicKeyMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRDPCAPublicKey"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ControlPanelMethodDescriptorSupplier("GetRDPCAPublicKey"))
+              .build();
+        }
+      }
+    }
+    return getGetRDPCAPublicKeyMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest,
       com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> getVerifyJWTMethod;
 
@@ -169,6 +200,16 @@ public final class ControlPanelGrpc {
 
     /**
      * <pre>
+     * GetRDPCAPublicKey retrieves the RDP CA public key.
+     * </pre>
+     */
+    public void getRDPCAPublicKey(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetRDPCAPublicKeyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
      * </pre>
      */
@@ -186,6 +227,13 @@ public final class ControlPanelGrpc {
                 com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest,
                 com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse>(
                   this, METHODID_GET_SSHCAPUBLIC_KEY)))
+          .addMethod(
+            getGetRDPCAPublicKeyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest,
+                com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse>(
+                  this, METHODID_GET_RDPCAPUBLIC_KEY)))
           .addMethod(
             getVerifyJWTMethod(),
             asyncUnaryCall(
@@ -223,6 +271,17 @@ public final class ControlPanelGrpc {
         io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetSSHCAPublicKeyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetRDPCAPublicKey retrieves the RDP CA public key.
+     * </pre>
+     */
+    public void getRDPCAPublicKey(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetRDPCAPublicKeyMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -266,6 +325,16 @@ public final class ControlPanelGrpc {
 
     /**
      * <pre>
+     * GetRDPCAPublicKey retrieves the RDP CA public key.
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse getRDPCAPublicKey(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetRDPCAPublicKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
      * </pre>
      */
@@ -305,6 +374,17 @@ public final class ControlPanelGrpc {
 
     /**
      * <pre>
+     * GetRDPCAPublicKey retrieves the RDP CA public key.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse> getRDPCAPublicKey(
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetRDPCAPublicKeyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
      * </pre>
      */
@@ -316,7 +396,8 @@ public final class ControlPanelGrpc {
   }
 
   private static final int METHODID_GET_SSHCAPUBLIC_KEY = 0;
-  private static final int METHODID_VERIFY_JWT = 1;
+  private static final int METHODID_GET_RDPCAPUBLIC_KEY = 1;
+  private static final int METHODID_VERIFY_JWT = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -338,6 +419,10 @@ public final class ControlPanelGrpc {
         case METHODID_GET_SSHCAPUBLIC_KEY:
           serviceImpl.getSSHCAPublicKey((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse>) responseObserver);
+          break;
+        case METHODID_GET_RDPCAPUBLIC_KEY:
+          serviceImpl.getRDPCAPublicKey((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse>) responseObserver);
           break;
         case METHODID_VERIFY_JWT:
           serviceImpl.verifyJWT((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest) request,
@@ -405,6 +490,7 @@ public final class ControlPanelGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ControlPanelFileDescriptorSupplier())
               .addMethod(getGetSSHCAPublicKeyMethod())
+              .addMethod(getGetRDPCAPublicKeyMethod())
               .addMethod(getVerifyJWTMethod())
               .build();
         }
