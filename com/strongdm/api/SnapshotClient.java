@@ -72,31 +72,6 @@ public class SnapshotClient {
     return this.parent.nodes;
   }
   /**
-   * PeeringGroupNodes provides the building blocks necessary to obtain attach a node to a peering
-   * group.
-   */
-  public SnapshotPeeringGroupNodes peeringGroupNodes() {
-    return this.parent.peeringGroupNodes;
-  }
-  /** PeeringGroupPeers provides the building blocks necessary to link two peering groups. */
-  public SnapshotPeeringGroupPeers peeringGroupPeers() {
-    return this.parent.peeringGroupPeers;
-  }
-  /**
-   * PeeringGroupResources provides the building blocks necessary to obtain attach a resource to a
-   * peering group.
-   */
-  public SnapshotPeeringGroupResources peeringGroupResources() {
-    return this.parent.peeringGroupResources;
-  }
-  /**
-   * PeeringGroups provides the building blocks necessary to obtain explicit network topology and
-   * routing.
-   */
-  public SnapshotPeeringGroups peeringGroups() {
-    return this.parent.peeringGroups;
-  }
-  /**
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to
    * connect to that resource.
    */

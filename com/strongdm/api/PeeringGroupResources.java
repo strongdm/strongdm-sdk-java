@@ -34,7 +34,7 @@ import java.util.function.Supplier;
  * PeeringGroupResources provides the building blocks necessary to obtain attach a resource to a
  * peering group.
  */
-public class PeeringGroupResources implements SnapshotPeeringGroupResources {
+public class PeeringGroupResources {
   private final PeeringGroupResourcesGrpc.PeeringGroupResourcesBlockingStub stub;
   private final Client parent;
 

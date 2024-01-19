@@ -9523,8 +9523,8 @@ public final class PeeringGroupResourcesPlumbing {
       "*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\203\001\n\024PeeringGrou" +
       "pResource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\013res" +
       "ource_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022!\n\010group" +
-      "_id\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\375" +
-      "\004\n\025PeeringGroupResources\022\212\001\n\006Create\022%.v1" +
+      "_id\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\207" +
+      "\005\n\025PeeringGroupResources\022\212\001\n\006Create\022%.v1" +
       ".PeeringGroupResourceCreateRequest\032&.v1." +
       "PeeringGroupResourceCreateResponse\"1\202\371\263\007" +
       "\t\242\363\263\007\004post\202\371\263\007\036\252\363\263\007\031/v1/peeringGroupReso" +
@@ -9538,12 +9538,12 @@ public final class PeeringGroupResourcesPlumbing {
       "rces/{id}\022\203\001\n\004List\022#.v1.PeeringGroupReso" +
       "urceListRequest\032$.v1.PeeringGroupResourc" +
       "eListResponse\"0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v" +
-      "1/peeringGroupResources\0325\312\371\263\007\031\302\371\263\007\024Peeri" +
-      "ngGroupResource\312\371\263\007\010\322\371\263\007\003gr-\312\371\263\007\005\340\371\263\007\001Bq" +
-      "\n\031com.strongdm.api.plumbingB\035PeeringGrou" +
-      "pResourcesPlumbingZ5github.com/strongdm/" +
-      "strongdm-sdk-go/v3/internal/v1;v1b\006proto" +
-      "3"
+      "1/peeringGroupResources\032?\312\371\263\007\031\302\371\263\007\024Peeri" +
+      "ngGroupResource\312\371\263\007\010\322\371\263\007\003gr-\312\371\263\007\005\340\371\263\007\001\312\371" +
+      "\263\007\005\330\371\263\007\001Bq\n\031com.strongdm.api.plumbingB\035P" +
+      "eeringGroupResourcesPlumbingZ5github.com" +
+      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
+      ";v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -9522,7 +9522,7 @@ public final class PeeringGroupNodesPlumbing {
       "PeeringGroupNode\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
       "\022 \n\007node_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022!\n\010gr" +
       "oup_id\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001:\n\372\370\263\007\005\250\363\263\007" +
-      "\0012\302\004\n\021PeeringGroupNodes\022~\n\006Create\022!.v1.P" +
+      "\0012\314\004\n\021PeeringGroupNodes\022~\n\006Create\022!.v1.P" +
       "eeringGroupNodeCreateRequest\032\".v1.Peerin" +
       "gGroupNodeCreateResponse\"-\202\371\263\007\t\242\363\263\007\004post" +
       "\202\371\263\007\032\252\363\263\007\025/v1/peeringGroupNodes\022\205\001\n\006Dele" +
@@ -9535,11 +9535,11 @@ public final class PeeringGroupNodesPlumbing {
       "Nodes/{id}\022w\n\004List\022\037.v1.PeeringGroupNode" +
       "ListRequest\032 .v1.PeeringGroupNodeListRes" +
       "ponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\032\252\363\263\007\025/v1/peerin" +
-      "gGroupNodes\0321\312\371\263\007\025\302\371\263\007\020PeeringGroupNode\312" +
-      "\371\263\007\010\322\371\263\007\003gn-\312\371\263\007\005\340\371\263\007\001Bm\n\031com.strongdm.a" +
-      "pi.plumbingB\031PeeringGroupNodesPlumbingZ5" +
-      "github.com/strongdm/strongdm-sdk-go/v3/i" +
-      "nternal/v1;v1b\006proto3"
+      "gGroupNodes\032;\312\371\263\007\025\302\371\263\007\020PeeringGroupNode\312" +
+      "\371\263\007\010\322\371\263\007\003gn-\312\371\263\007\005\340\371\263\007\001\312\371\263\007\005\330\371\263\007\001Bm\n\031com." +
+      "strongdm.api.plumbingB\031PeeringGroupNodes" +
+      "PlumbingZ5github.com/strongdm/strongdm-s" +
+      "dk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -31,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /** PeeringGroupPeers provides the building blocks necessary to link two peering groups. */
-public class PeeringGroupPeers implements SnapshotPeeringGroupPeers {
+public class PeeringGroupPeers {
   private final PeeringGroupPeersGrpc.PeeringGroupPeersBlockingStub stub;
   private final Client parent;
 

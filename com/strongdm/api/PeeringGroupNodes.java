@@ -34,7 +34,7 @@ import java.util.function.Supplier;
  * PeeringGroupNodes provides the building blocks necessary to obtain attach a node to a peering
  * group.
  */
-public class PeeringGroupNodes implements SnapshotPeeringGroupNodes {
+public class PeeringGroupNodes {
   private final PeeringGroupNodesGrpc.PeeringGroupNodesBlockingStub stub;
   private final Client parent;
 

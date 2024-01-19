@@ -34,7 +34,7 @@ import java.util.function.Supplier;
  * PeeringGroups provides the building blocks necessary to obtain explicit network topology and
  * routing.
  */
-public class PeeringGroups implements SnapshotPeeringGroups {
+public class PeeringGroups {
   private final PeeringGroupsGrpc.PeeringGroupsBlockingStub stub;
   private final Client parent;
 
