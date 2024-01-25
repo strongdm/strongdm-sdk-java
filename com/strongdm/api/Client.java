@@ -336,6 +336,13 @@ public class Client {
     return this.rolesHistory;
   }
 
+  protected final SecretStoreHealths secretStoreHealths;
+
+  /** SecretStoreHealths exposes health states for secret stores. */
+  public SecretStoreHealths secretStoreHealths() {
+    return this.secretStoreHealths;
+  }
+
   protected final SecretStores secretStores;
 
   /** SecretStores are servers where resource secrets (passwords, keys) are stored. */
@@ -472,6 +479,7 @@ public class Client {
     this.roleResourcesHistory = new RoleResourcesHistory(this.channel, this);
     this.roles = new Roles(this.channel, this);
     this.rolesHistory = new RolesHistory(this.channel, this);
+    this.secretStoreHealths = new SecretStoreHealths(this.channel, this);
     this.secretStores = new SecretStores(this.channel, this);
     this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
     this.workflowApprovers = new WorkflowApprovers(this.channel, this);
@@ -537,6 +545,7 @@ public class Client {
       this.roleResourcesHistory = new RoleResourcesHistory(this.channel, this);
       this.roles = new Roles(this.channel, this);
       this.rolesHistory = new RolesHistory(this.channel, this);
+      this.secretStoreHealths = new SecretStoreHealths(this.channel, this);
       this.secretStores = new SecretStores(this.channel, this);
       this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
       this.workflowApprovers = new WorkflowApprovers(this.channel, this);

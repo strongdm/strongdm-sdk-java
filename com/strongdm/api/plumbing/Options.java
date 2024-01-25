@@ -2067,6 +2067,47 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getDeprecationDateBytes();
+
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return A list containing the targets.
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
   }
   /**
    * Protobuf type {@code v1.MethodOptions}
@@ -2084,6 +2125,7 @@ public final class Options {
       method_ = "";
       url_ = "";
       deprecationDate_ = "";
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -2106,6 +2148,7 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2134,6 +2177,15 @@ public final class Options {
               deprecationDate_ = s;
               break;
             }
+            case 15531210: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2151,6 +2203,9 @@ public final class Options {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2306,6 +2361,57 @@ public final class Options {
       }
     }
 
+    public static final int TARGETS_FIELD_NUMBER = 1941401;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return A list containing the targets.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <pre>
+     * targets indicates that the method should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2329,6 +2435,9 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deprecationDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941302, deprecationDate_);
       }
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941401, targets_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2346,6 +2455,14 @@ public final class Options {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deprecationDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941302, deprecationDate_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2368,6 +2485,8 @@ public final class Options {
           .equals(other.getUrl())) return false;
       if (!getDeprecationDate()
           .equals(other.getDeprecationDate())) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2385,6 +2504,10 @@ public final class Options {
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + DEPRECATION_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getDeprecationDate().hashCode();
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2524,6 +2647,8 @@ public final class Options {
 
         deprecationDate_ = "";
 
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -2550,9 +2675,15 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.plumbing.Options.MethodOptions buildPartial() {
         com.strongdm.api.plumbing.Options.MethodOptions result = new com.strongdm.api.plumbing.Options.MethodOptions(this);
+        int from_bitField0_ = bitField0_;
         result.method_ = method_;
         result.url_ = url_;
         result.deprecationDate_ = deprecationDate_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
         onBuilt();
         return result;
       }
@@ -2613,6 +2744,16 @@ public final class Options {
           deprecationDate_ = other.deprecationDate_;
           onChanged();
         }
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2641,6 +2782,7 @@ public final class Options {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object method_ = "";
       /**
@@ -2926,6 +3068,152 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         deprecationDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param value The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the method should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
         onChanged();
         return this;
       }
@@ -11015,62 +11303,63 @@ java.lang.String defaultValue);
       "refix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t\022#\n\031disa" +
       "ble_snapshot_vertical\030\233\277v \001(\010\022\035\n\023skip_cl" +
       "i_generation\030\234\277v \001(\010:\027\372\370\263\007\022\322\363\263\007\r!json_ga" +
-      "teway\"e\n\rMethodOptions\022\020\n\006method\030\264\276v \001(\t" +
+      "teway\"x\n\rMethodOptions\022\020\n\006method\030\264\276v \001(\t" +
       "\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecation_date\030\266\276v " +
-      "\001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\315\001\n\016Message" +
-      "Options\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276" +
-      "v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022\021\n\007target" +
-      "s\030\272\276v \003(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1" +
-      ".TerraformDocs\022#\n\006custom\030\271\276v \001(\0132\021.v1.Cu" +
-      "stomOptions:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"@\n\014" +
-      "OneofOptions\022\027\n\rcommon_fields\030\205\277v \003(\t:\027\372" +
-      "\370\263\007\022\322\363\263\007\r!json_gateway\"\217\004\n\014FieldOptions\022" +
-      "\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010" +
-      "\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001" +
-      "(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris_credential" +
-      "\030\304\276v \001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023terraform" +
-      "_force_new\030\274\276v \001(\010\022\035\n\023terraform_sensitiv" +
-      "e\030\276\276v \001(\010\022&\n\034terraform_diff_suppress_fun" +
-      "c\030\307\276v \001(\t\022\034\n\022terraform_computed\030\312\276v \001(\010\022" +
-      "#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOptions\022D\n\022" +
-      "read_only_override\030\300\276v \003(\0132&.v1.FieldOpt" +
-      "ions.ReadOnlyOverrideEntry\022\023\n\tcondition\030" +
-      "\313\276v \001(\t\022\025\n\013expect_file\030\314\276v \001(\010\0327\n\025ReadOn" +
-      "lyOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\217\005\n\rCus" +
-      "tomOptions\022\023\n\tconverter\030\275\276v \001(\t\022O\n\027porce" +
-      "lain_type_override\030\276\276v \003(\0132,.v1.CustomOp" +
-      "tions.PorcelainTypeOverrideEntry\022O\n\027porc" +
-      "elain_name_override\030\310\276v \003(\0132,.v1.CustomO" +
-      "ptions.PorcelainNameOverrideEntry\022B\n\020com" +
-      "ment_override\030\323\276v \003(\0132&.v1.CustomOptions" +
-      ".CommentOverrideEntry\022H\n\023deprecated_over" +
-      "ride\030\300\276v \003(\0132).v1.CustomOptions.Deprecat" +
-      "edOverrideEntry\022\035\n\023terraform_elem_type\030\277" +
-      "\276v \001(\t\022\022\n\010unstable\030\301\276v \001(\010\032<\n\032PorcelainT" +
-      "ypeOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\032<\n\032PorcelainNameOverrideEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024Commen" +
-      "tOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\0329\n\027DeprecatedOverrideEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!js" +
-      "on_gateway\"m\n\rTerraformDocs\022\037\n\025resource_" +
-      "example_path\030\264\276v \001(\t\022\"\n\030data_source_exam" +
-      "ple_path\030\265\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gatewa" +
-      "y:E\n\014file_options\022\034.google.protobuf.File" +
-      "Options\030\250\302v \001(\0132\017.v1.FileOptions:N\n\017serv" +
-      "ice_options\022\037.google.protobuf.ServiceOpt" +
-      "ions\030\231\277v \001(\0132\022.v1.ServiceOptions:K\n\016meth" +
-      "od_options\022\036.google.protobuf.MethodOptio" +
-      "ns\030\220\277v \001(\0132\021.v1.MethodOptions:N\n\017message" +
-      "_options\022\037.google.protobuf.MessageOption" +
-      "s\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_o" +
-      "ptions\022\035.google.protobuf.OneofOptions\030\205\277" +
-      "v \001(\0132\020.v1.OneofOptions:H\n\rfield_options" +
-      "\022\035.google.protobuf.FieldOptions\030\216\277v \001(\0132" +
-      "\020.v1.FieldOptionsBR\n\031com.strongdm.api.pl" +
-      "umbingZ5github.com/strongdm/strongdm-sdk" +
-      "-go/v3/internal/v1;v1b\006proto3"
+      "\001(\t\022\021\n\007targets\030\231\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_" +
+      "gateway\"\315\001\n\016MessageOptions\022\023\n\tporcelain\030" +
+      "\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_fiel" +
+      "d\030\267\276v \001(\t\022\021\n\007targets\030\272\276v \003(\t\022+\n\016terrafor" +
+      "m_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\022#\n\006cus" +
+      "tom\030\271\276v \001(\0132\021.v1.CustomOptions:\027\372\370\263\007\022\322\363\263" +
+      "\007\r!json_gateway\"@\n\014OneofOptions\022\027\n\rcommo" +
+      "n_fields\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gatewa" +
+      "y\"\217\004\n\014FieldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022" +
+      "\022\n\010iterable\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022" +
+      "\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001" +
+      "(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\021\n\007targets\030\306" +
+      "\276v \003(\t\022\035\n\023terraform_force_new\030\274\276v \001(\010\022\035\n" +
+      "\023terraform_sensitive\030\276\276v \001(\010\022&\n\034terrafor" +
+      "m_diff_suppress_func\030\307\276v \001(\t\022\034\n\022terrafor" +
+      "m_computed\030\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v" +
+      "1.CustomOptions\022D\n\022read_only_override\030\300\276" +
+      "v \003(\0132&.v1.FieldOptions.ReadOnlyOverride" +
+      "Entry\022\023\n\tcondition\030\313\276v \001(\t\022\025\n\013expect_fil" +
+      "e\030\314\276v \001(\010\0327\n\025ReadOnlyOverrideEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!j" +
+      "son_gateway\"\217\005\n\rCustomOptions\022\023\n\tconvert" +
+      "er\030\275\276v \001(\t\022O\n\027porcelain_type_override\030\276\276" +
+      "v \003(\0132,.v1.CustomOptions.PorcelainTypeOv" +
+      "errideEntry\022O\n\027porcelain_name_override\030\310" +
+      "\276v \003(\0132,.v1.CustomOptions.PorcelainNameO" +
+      "verrideEntry\022B\n\020comment_override\030\323\276v \003(\013" +
+      "2&.v1.CustomOptions.CommentOverrideEntry" +
+      "\022H\n\023deprecated_override\030\300\276v \003(\0132).v1.Cus" +
+      "tomOptions.DeprecatedOverrideEntry\022\035\n\023te" +
+      "rraform_elem_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276" +
+      "v \001(\010\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032Porcelain" +
+      "NameOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedO" +
+      "verrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010" +
+      ":\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\rTerrafo" +
+      "rmDocs\022\037\n\025resource_example_path\030\264\276v \001(\t\022" +
+      "\"\n\030data_source_example_path\030\265\276v \001(\t:\027\372\370\263" +
+      "\007\022\322\363\263\007\r!json_gateway:E\n\014file_options\022\034.g" +
+      "oogle.protobuf.FileOptions\030\250\302v \001(\0132\017.v1." +
+      "FileOptions:N\n\017service_options\022\037.google." +
+      "protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Ser" +
+      "viceOptions:K\n\016method_options\022\036.google.p" +
+      "rotobuf.MethodOptions\030\220\277v \001(\0132\021.v1.Metho" +
+      "dOptions:N\n\017message_options\022\037.google.pro" +
+      "tobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Messag" +
+      "eOptions:H\n\roneof_options\022\035.google.proto" +
+      "buf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptio" +
+      "ns:H\n\rfield_options\022\035.google.protobuf.Fi" +
+      "eldOptions\030\216\277v \001(\0132\020.v1.FieldOptionsBR\n\031" +
+      "com.strongdm.api.plumbingZ5github.com/st" +
+      "rongdm/strongdm-sdk-go/v3/internal/v1;v1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11094,7 +11383,7 @@ java.lang.String defaultValue);
     internal_static_v1_MethodOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MethodOptions_descriptor,
-        new java.lang.String[] { "Method", "Url", "DeprecationDate", });
+        new java.lang.String[] { "Method", "Url", "DeprecationDate", "Targets", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new

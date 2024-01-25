@@ -64,6 +64,7 @@ import com.strongdm.api.plumbing.RoleResourcesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.RoleResourcesPlumbing.*;
 import com.strongdm.api.plumbing.RolesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.RolesPlumbing.*;
+import com.strongdm.api.plumbing.SecretStoreHealthsPlumbing.*;
 import com.strongdm.api.plumbing.SecretStoresHistoryPlumbing.*;
 import com.strongdm.api.plumbing.SecretStoresPlumbing.*;
 import com.strongdm.api.plumbing.SecretStoresTypesPlumbing.*;
@@ -13116,6 +13117,155 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.SecretStoreHealth convertSecretStoreHealthToPorcelain(
+      SecretStoreHealth plumbing) {
+    com.strongdm.api.SecretStoreHealth porcelain = new com.strongdm.api.SecretStoreHealth();
+    porcelain.setChangedAt(Plumbing.convertTimestampToPorcelain(plumbing.getChangedAt()));
+    porcelain.setCheckedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCheckedAt()));
+    porcelain.setError((plumbing.getError()));
+    porcelain.setFlags((plumbing.getFlagsList()));
+    porcelain.setNodeId((plumbing.getNodeId()));
+    porcelain.setReachability((plumbing.getReachability()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setStatus((plumbing.getStatus()));
+    return porcelain;
+  }
+
+  public static SecretStoreHealth convertSecretStoreHealthToPlumbing(
+      com.strongdm.api.SecretStoreHealth porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SecretStoreHealth.Builder builder = SecretStoreHealth.newBuilder();
+    if (porcelain.getChangedAt() != null) {
+      builder.setChangedAt(Plumbing.convertTimestampToPlumbing(porcelain.getChangedAt()));
+    }
+    if (porcelain.getCheckedAt() != null) {
+      builder.setCheckedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCheckedAt()));
+    }
+    if (porcelain.getError() != null) {
+      builder.setError((porcelain.getError()));
+    }
+    builder.addAllFlags((porcelain.getFlags()));
+    if (porcelain.getNodeId() != null) {
+      builder.setNodeId((porcelain.getNodeId()));
+    }
+    if (porcelain.getReachability() != null) {
+      builder.setReachability((porcelain.getReachability()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getStatus() != null) {
+      builder.setStatus((porcelain.getStatus()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.SecretStoreHealth>
+      convertRepeatedSecretStoreHealthToPorcelain(Collection<SecretStoreHealth> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreHealth>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertSecretStoreHealthToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SecretStoreHealth> convertRepeatedSecretStoreHealthToPlumbing(
+      Collection<com.strongdm.api.SecretStoreHealth> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreHealth>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertSecretStoreHealthToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.SecretStoreHealthListResponse
+      convertSecretStoreHealthListResponseToPorcelain(SecretStoreHealthListResponse plumbing) {
+    com.strongdm.api.SecretStoreHealthListResponse porcelain =
+        new com.strongdm.api.SecretStoreHealthListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static SecretStoreHealthListResponse convertSecretStoreHealthListResponseToPlumbing(
+      com.strongdm.api.SecretStoreHealthListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SecretStoreHealthListResponse.Builder builder = SecretStoreHealthListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.SecretStoreHealthListResponse>
+      convertRepeatedSecretStoreHealthListResponseToPorcelain(
+          Collection<SecretStoreHealthListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreHealthListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertSecretStoreHealthListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SecretStoreHealthListResponse>
+      convertRepeatedSecretStoreHealthListResponseToPlumbing(
+          Collection<com.strongdm.api.SecretStoreHealthListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreHealthListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertSecretStoreHealthListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.SecretStoreHealthcheckResponse
+      convertSecretStoreHealthcheckResponseToPorcelain(SecretStoreHealthcheckResponse plumbing) {
+    com.strongdm.api.SecretStoreHealthcheckResponse porcelain =
+        new com.strongdm.api.SecretStoreHealthcheckResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static SecretStoreHealthcheckResponse convertSecretStoreHealthcheckResponseToPlumbing(
+      com.strongdm.api.SecretStoreHealthcheckResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SecretStoreHealthcheckResponse.Builder builder = SecretStoreHealthcheckResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.SecretStoreHealthcheckResponse>
+      convertRepeatedSecretStoreHealthcheckResponseToPorcelain(
+          Collection<SecretStoreHealthcheckResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SecretStoreHealthcheckResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertSecretStoreHealthcheckResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SecretStoreHealthcheckResponse>
+      convertRepeatedSecretStoreHealthcheckResponseToPlumbing(
+          Collection<com.strongdm.api.SecretStoreHealthcheckResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SecretStoreHealthcheckResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertSecretStoreHealthcheckResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
