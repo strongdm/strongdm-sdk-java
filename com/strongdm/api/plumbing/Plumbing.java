@@ -12884,11 +12884,29 @@ public class Plumbing {
     if (plumbing.hasVaultAppRole()) {
       return convertVaultAppRoleStoreToPorcelain(plumbing.getVaultAppRole());
     }
+    if (plumbing.hasVaultAppRoleCertSsh()) {
+      return convertVaultAppRoleCertSSHStoreToPorcelain(plumbing.getVaultAppRoleCertSsh());
+    }
+    if (plumbing.hasVaultAppRoleCertX509()) {
+      return convertVaultAppRoleCertX509StoreToPorcelain(plumbing.getVaultAppRoleCertX509());
+    }
     if (plumbing.hasVaultTls()) {
       return convertVaultTLSStoreToPorcelain(plumbing.getVaultTls());
     }
+    if (plumbing.hasVaultTlsCertSsh()) {
+      return convertVaultTLSCertSSHStoreToPorcelain(plumbing.getVaultTlsCertSsh());
+    }
+    if (plumbing.hasVaultTlsCertX509()) {
+      return convertVaultTLSCertX509StoreToPorcelain(plumbing.getVaultTlsCertX509());
+    }
     if (plumbing.hasVaultToken()) {
       return convertVaultTokenStoreToPorcelain(plumbing.getVaultToken());
+    }
+    if (plumbing.hasVaultTokenCertSsh()) {
+      return convertVaultTokenCertSSHStoreToPorcelain(plumbing.getVaultTokenCertSsh());
+    }
+    if (plumbing.hasVaultTokenCertX509()) {
+      return convertVaultTokenCertX509StoreToPorcelain(plumbing.getVaultTokenCertX509());
     }
     throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
@@ -12942,16 +12960,57 @@ public class Plumbing {
           convertVaultAppRoleStoreToPlumbing((com.strongdm.api.VaultAppRoleStore) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.VaultAppRoleCertSSHStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultAppRoleCertSsh(
+          convertVaultAppRoleCertSSHStoreToPlumbing(
+              (com.strongdm.api.VaultAppRoleCertSSHStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.VaultAppRoleCertX509Store) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultAppRoleCertX509(
+          convertVaultAppRoleCertX509StoreToPlumbing(
+              (com.strongdm.api.VaultAppRoleCertX509Store) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.VaultTLSStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setVaultTls(
           convertVaultTLSStoreToPlumbing((com.strongdm.api.VaultTLSStore) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.VaultTLSCertSSHStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultTlsCertSsh(
+          convertVaultTLSCertSSHStoreToPlumbing((com.strongdm.api.VaultTLSCertSSHStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.VaultTLSCertX509Store) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultTlsCertX509(
+          convertVaultTLSCertX509StoreToPlumbing(
+              (com.strongdm.api.VaultTLSCertX509Store) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.VaultTokenStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setVaultToken(
           convertVaultTokenStoreToPlumbing((com.strongdm.api.VaultTokenStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.VaultTokenCertSSHStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultTokenCertSsh(
+          convertVaultTokenCertSSHStoreToPlumbing(
+              (com.strongdm.api.VaultTokenCertSSHStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.VaultTokenCertX509Store) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultTokenCertX509(
+          convertVaultTokenCertX509StoreToPlumbing(
+              (com.strongdm.api.VaultTokenCertX509Store) porcelain));
       return builder.build();
     }
     return null;
@@ -14126,6 +14185,136 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.VaultAppRoleCertSSHStore
+      convertVaultAppRoleCertSSHStoreToPorcelain(VaultAppRoleCertSSHStore plumbing) {
+    com.strongdm.api.VaultAppRoleCertSSHStore porcelain =
+        new com.strongdm.api.VaultAppRoleCertSSHStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setSigningRole((plumbing.getSigningRole()));
+    porcelain.setSshMountPoint((plumbing.getSshMountPoint()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultAppRoleCertSSHStore convertVaultAppRoleCertSSHStoreToPlumbing(
+      com.strongdm.api.VaultAppRoleCertSSHStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultAppRoleCertSSHStore.Builder builder = VaultAppRoleCertSSHStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getSigningRole() != null) {
+      builder.setSigningRole((porcelain.getSigningRole()));
+    }
+    if (porcelain.getSshMountPoint() != null) {
+      builder.setSshMountPoint((porcelain.getSshMountPoint()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultAppRoleCertSSHStore>
+      convertRepeatedVaultAppRoleCertSSHStoreToPorcelain(
+          Collection<VaultAppRoleCertSSHStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultAppRoleCertSSHStore>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultAppRoleCertSSHStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultAppRoleCertSSHStore> convertRepeatedVaultAppRoleCertSSHStoreToPlumbing(
+      Collection<com.strongdm.api.VaultAppRoleCertSSHStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultAppRoleCertSSHStore>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultAppRoleCertSSHStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.VaultAppRoleCertX509Store
+      convertVaultAppRoleCertX509StoreToPorcelain(VaultAppRoleCertX509Store plumbing) {
+    com.strongdm.api.VaultAppRoleCertX509Store porcelain =
+        new com.strongdm.api.VaultAppRoleCertX509Store();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setPkiMountPoint((plumbing.getPkiMountPoint()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setSigningRole((plumbing.getSigningRole()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultAppRoleCertX509Store convertVaultAppRoleCertX509StoreToPlumbing(
+      com.strongdm.api.VaultAppRoleCertX509Store porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultAppRoleCertX509Store.Builder builder = VaultAppRoleCertX509Store.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getPkiMountPoint() != null) {
+      builder.setPkiMountPoint((porcelain.getPkiMountPoint()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getSigningRole() != null) {
+      builder.setSigningRole((porcelain.getSigningRole()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultAppRoleCertX509Store>
+      convertRepeatedVaultAppRoleCertX509StoreToPorcelain(
+          Collection<VaultAppRoleCertX509Store> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultAppRoleCertX509Store>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultAppRoleCertX509StoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultAppRoleCertX509Store> convertRepeatedVaultAppRoleCertX509StoreToPlumbing(
+      Collection<com.strongdm.api.VaultAppRoleCertX509Store> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultAppRoleCertX509Store>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultAppRoleCertX509StoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.VaultAppRoleStore convertVaultAppRoleStoreToPorcelain(
       VaultAppRoleStore plumbing) {
     com.strongdm.api.VaultAppRoleStore porcelain = new com.strongdm.api.VaultAppRoleStore();
@@ -14178,6 +14367,156 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertVaultAppRoleStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.VaultTLSCertSSHStore convertVaultTLSCertSSHStoreToPorcelain(
+      VaultTLSCertSSHStore plumbing) {
+    com.strongdm.api.VaultTLSCertSSHStore porcelain = new com.strongdm.api.VaultTLSCertSSHStore();
+    porcelain.setCACertPath((plumbing.getCACertPath()));
+    porcelain.setClientCertPath((plumbing.getClientCertPath()));
+    porcelain.setClientKeyPath((plumbing.getClientKeyPath()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setSigningRole((plumbing.getSigningRole()));
+    porcelain.setSshMountPoint((plumbing.getSshMountPoint()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultTLSCertSSHStore convertVaultTLSCertSSHStoreToPlumbing(
+      com.strongdm.api.VaultTLSCertSSHStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultTLSCertSSHStore.Builder builder = VaultTLSCertSSHStore.newBuilder();
+    if (porcelain.getCACertPath() != null) {
+      builder.setCACertPath((porcelain.getCACertPath()));
+    }
+    if (porcelain.getClientCertPath() != null) {
+      builder.setClientCertPath((porcelain.getClientCertPath()));
+    }
+    if (porcelain.getClientKeyPath() != null) {
+      builder.setClientKeyPath((porcelain.getClientKeyPath()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getSigningRole() != null) {
+      builder.setSigningRole((porcelain.getSigningRole()));
+    }
+    if (porcelain.getSshMountPoint() != null) {
+      builder.setSshMountPoint((porcelain.getSshMountPoint()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultTLSCertSSHStore>
+      convertRepeatedVaultTLSCertSSHStoreToPorcelain(Collection<VaultTLSCertSSHStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultTLSCertSSHStore>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultTLSCertSSHStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultTLSCertSSHStore> convertRepeatedVaultTLSCertSSHStoreToPlumbing(
+      Collection<com.strongdm.api.VaultTLSCertSSHStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultTLSCertSSHStore>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultTLSCertSSHStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.VaultTLSCertX509Store convertVaultTLSCertX509StoreToPorcelain(
+      VaultTLSCertX509Store plumbing) {
+    com.strongdm.api.VaultTLSCertX509Store porcelain = new com.strongdm.api.VaultTLSCertX509Store();
+    porcelain.setCACertPath((plumbing.getCACertPath()));
+    porcelain.setClientCertPath((plumbing.getClientCertPath()));
+    porcelain.setClientKeyPath((plumbing.getClientKeyPath()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setPkiMountPoint((plumbing.getPkiMountPoint()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setSigningRole((plumbing.getSigningRole()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultTLSCertX509Store convertVaultTLSCertX509StoreToPlumbing(
+      com.strongdm.api.VaultTLSCertX509Store porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultTLSCertX509Store.Builder builder = VaultTLSCertX509Store.newBuilder();
+    if (porcelain.getCACertPath() != null) {
+      builder.setCACertPath((porcelain.getCACertPath()));
+    }
+    if (porcelain.getClientCertPath() != null) {
+      builder.setClientCertPath((porcelain.getClientCertPath()));
+    }
+    if (porcelain.getClientKeyPath() != null) {
+      builder.setClientKeyPath((porcelain.getClientKeyPath()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getPkiMountPoint() != null) {
+      builder.setPkiMountPoint((porcelain.getPkiMountPoint()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getSigningRole() != null) {
+      builder.setSigningRole((porcelain.getSigningRole()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultTLSCertX509Store>
+      convertRepeatedVaultTLSCertX509StoreToPorcelain(Collection<VaultTLSCertX509Store> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultTLSCertX509Store>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultTLSCertX509StoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultTLSCertX509Store> convertRepeatedVaultTLSCertX509StoreToPlumbing(
+      Collection<com.strongdm.api.VaultTLSCertX509Store> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultTLSCertX509Store>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultTLSCertX509StoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -14245,6 +14584,136 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertVaultTLSStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.VaultTokenCertSSHStore convertVaultTokenCertSSHStoreToPorcelain(
+      VaultTokenCertSSHStore plumbing) {
+    com.strongdm.api.VaultTokenCertSSHStore porcelain =
+        new com.strongdm.api.VaultTokenCertSSHStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setSigningRole((plumbing.getSigningRole()));
+    porcelain.setSshMountPoint((plumbing.getSshMountPoint()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultTokenCertSSHStore convertVaultTokenCertSSHStoreToPlumbing(
+      com.strongdm.api.VaultTokenCertSSHStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultTokenCertSSHStore.Builder builder = VaultTokenCertSSHStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getSigningRole() != null) {
+      builder.setSigningRole((porcelain.getSigningRole()));
+    }
+    if (porcelain.getSshMountPoint() != null) {
+      builder.setSshMountPoint((porcelain.getSshMountPoint()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultTokenCertSSHStore>
+      convertRepeatedVaultTokenCertSSHStoreToPorcelain(
+          Collection<VaultTokenCertSSHStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultTokenCertSSHStore>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultTokenCertSSHStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultTokenCertSSHStore> convertRepeatedVaultTokenCertSSHStoreToPlumbing(
+      Collection<com.strongdm.api.VaultTokenCertSSHStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultTokenCertSSHStore>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultTokenCertSSHStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.VaultTokenCertX509Store convertVaultTokenCertX509StoreToPorcelain(
+      VaultTokenCertX509Store plumbing) {
+    com.strongdm.api.VaultTokenCertX509Store porcelain =
+        new com.strongdm.api.VaultTokenCertX509Store();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setPkiMountPoint((plumbing.getPkiMountPoint()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setSigningRole((plumbing.getSigningRole()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultTokenCertX509Store convertVaultTokenCertX509StoreToPlumbing(
+      com.strongdm.api.VaultTokenCertX509Store porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultTokenCertX509Store.Builder builder = VaultTokenCertX509Store.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getPkiMountPoint() != null) {
+      builder.setPkiMountPoint((porcelain.getPkiMountPoint()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getSigningRole() != null) {
+      builder.setSigningRole((porcelain.getSigningRole()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultTokenCertX509Store>
+      convertRepeatedVaultTokenCertX509StoreToPorcelain(
+          Collection<VaultTokenCertX509Store> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultTokenCertX509Store>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultTokenCertX509StoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultTokenCertX509Store> convertRepeatedVaultTokenCertX509StoreToPlumbing(
+      Collection<com.strongdm.api.VaultTokenCertX509Store> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultTokenCertX509Store>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultTokenCertX509StoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
