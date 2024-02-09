@@ -9708,6 +9708,91 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.RDPCert convertRDPCertToPorcelain(RDPCert plumbing) {
+    com.strongdm.api.RDPCert porcelain = new com.strongdm.api.RDPCert();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static RDPCert convertRDPCertToPlumbing(com.strongdm.api.RDPCert porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RDPCert.Builder builder = RDPCert.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.RDPCert> convertRepeatedRDPCertToPorcelain(
+      Collection<RDPCert> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RDPCert>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertRDPCertToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RDPCert> convertRepeatedRDPCertToPlumbing(
+      Collection<com.strongdm.api.RDPCert> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RDPCert>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertRDPCertToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.RDSPostgresIAM convertRDSPostgresIAMToPorcelain(
       RDSPostgresIAM plumbing) {
     com.strongdm.api.RDSPostgresIAM porcelain = new com.strongdm.api.RDSPostgresIAM();
@@ -11046,6 +11131,9 @@ public class Plumbing {
     if (plumbing.hasRdp()) {
       return convertRDPToPorcelain(plumbing.getRdp());
     }
+    if (plumbing.hasRdpCert()) {
+      return convertRDPCertToPorcelain(plumbing.getRdpCert());
+    }
     if (plumbing.hasRdsPostgresIam()) {
       return convertRDSPostgresIAMToPorcelain(plumbing.getRdsPostgresIam());
     }
@@ -11475,6 +11563,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.RDP) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setRdp(convertRDPToPlumbing((com.strongdm.api.RDP) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.RDPCert) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setRdpCert(convertRDPCertToPlumbing((com.strongdm.api.RDPCert) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.RDSPostgresIAM) {
