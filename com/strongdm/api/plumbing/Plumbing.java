@@ -5592,6 +5592,69 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.GCPCertX509Store convertGCPCertX509StoreToPorcelain(
+      GCPCertX509Store plumbing) {
+    com.strongdm.api.GCPCertX509Store porcelain = new com.strongdm.api.GCPCertX509Store();
+    porcelain.setCaID((plumbing.getCaID()));
+    porcelain.setCaPoolID((plumbing.getCaPoolID()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setLocation((plumbing.getLocation()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setProjectID((plumbing.getProjectID()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static GCPCertX509Store convertGCPCertX509StoreToPlumbing(
+      com.strongdm.api.GCPCertX509Store porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GCPCertX509Store.Builder builder = GCPCertX509Store.newBuilder();
+    if (porcelain.getCaID() != null) {
+      builder.setCaID((porcelain.getCaID()));
+    }
+    if (porcelain.getCaPoolID() != null) {
+      builder.setCaPoolID((porcelain.getCaPoolID()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getLocation() != null) {
+      builder.setLocation((porcelain.getLocation()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getProjectID() != null) {
+      builder.setProjectID((porcelain.getProjectID()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GCPCertX509Store> convertRepeatedGCPCertX509StoreToPorcelain(
+      Collection<GCPCertX509Store> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GCPCertX509Store>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGCPCertX509StoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GCPCertX509Store> convertRepeatedGCPCertX509StoreToPlumbing(
+      Collection<com.strongdm.api.GCPCertX509Store> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GCPCertX509Store>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGCPCertX509StoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.GCPStore convertGCPStoreToPorcelain(GCPStore plumbing) {
     com.strongdm.api.GCPStore porcelain = new com.strongdm.api.GCPStore();
     porcelain.setId((plumbing.getId()));
@@ -12974,6 +13037,9 @@ public class Plumbing {
     if (plumbing.hasGcp()) {
       return convertGCPStoreToPorcelain(plumbing.getGcp());
     }
+    if (plumbing.hasGcpCertX509()) {
+      return convertGCPCertX509StoreToPorcelain(plumbing.getGcpCertX509());
+    }
     if (plumbing.hasVaultAppRole()) {
       return convertVaultAppRoleStoreToPorcelain(plumbing.getVaultAppRole());
     }
@@ -13045,6 +13111,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.GCPStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setGcp(convertGCPStoreToPlumbing((com.strongdm.api.GCPStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.GCPCertX509Store) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setGcpCertX509(
+          convertGCPCertX509StoreToPlumbing((com.strongdm.api.GCPCertX509Store) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.VaultAppRoleStore) {
