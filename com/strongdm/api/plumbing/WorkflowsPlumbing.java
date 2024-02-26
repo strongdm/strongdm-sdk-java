@@ -10937,6 +10937,26 @@ public final class WorkflowsPlumbing {
      */
     com.google.protobuf.ByteString
         getAccessRulesBytes();
+
+    /**
+     * <pre>
+     * Optional approval flow ID identifies an approval flow that linked to the workflow
+     * </pre>
+     *
+     * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+     * @return The approvalFlowId.
+     */
+    java.lang.String getApprovalFlowId();
+    /**
+     * <pre>
+     * Optional approval flow ID identifies an approval flow that linked to the workflow
+     * </pre>
+     *
+     * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for approvalFlowId.
+     */
+    com.google.protobuf.ByteString
+        getApprovalFlowIdBytes();
   }
   /**
    * <pre>
@@ -10961,6 +10981,7 @@ public final class WorkflowsPlumbing {
       name_ = "";
       description_ = "";
       accessRules_ = "";
+      approvalFlowId_ = "";
     }
 
     @java.lang.Override
@@ -11035,6 +11056,12 @@ public final class WorkflowsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               accessRules_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              approvalFlowId_ = s;
               break;
             }
             default: {
@@ -11320,6 +11347,52 @@ public final class WorkflowsPlumbing {
       }
     }
 
+    public static final int APPROVAL_FLOW_ID_FIELD_NUMBER = 9;
+    private volatile java.lang.Object approvalFlowId_;
+    /**
+     * <pre>
+     * Optional approval flow ID identifies an approval flow that linked to the workflow
+     * </pre>
+     *
+     * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+     * @return The approvalFlowId.
+     */
+    @java.lang.Override
+    public java.lang.String getApprovalFlowId() {
+      java.lang.Object ref = approvalFlowId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        approvalFlowId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional approval flow ID identifies an approval flow that linked to the workflow
+     * </pre>
+     *
+     * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for approvalFlowId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApprovalFlowIdBytes() {
+      java.lang.Object ref = approvalFlowId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        approvalFlowId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11358,6 +11431,9 @@ public final class WorkflowsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRules_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, accessRules_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalFlowId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, approvalFlowId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11395,6 +11471,9 @@ public final class WorkflowsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRules_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, accessRules_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalFlowId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, approvalFlowId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11426,6 +11505,8 @@ public final class WorkflowsPlumbing {
           != other.getRequiresReason()) return false;
       if (!getAccessRules()
           .equals(other.getAccessRules())) return false;
+      if (!getApprovalFlowId()
+          .equals(other.getApprovalFlowId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11457,6 +11538,8 @@ public final class WorkflowsPlumbing {
           getRequiresReason());
       hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
       hash = (53 * hash) + getAccessRules().hashCode();
+      hash = (37 * hash) + APPROVAL_FLOW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApprovalFlowId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11612,6 +11695,8 @@ public final class WorkflowsPlumbing {
 
         accessRules_ = "";
 
+        approvalFlowId_ = "";
+
         return this;
       }
 
@@ -11646,6 +11731,7 @@ public final class WorkflowsPlumbing {
         result.enabled_ = enabled_;
         result.requiresReason_ = requiresReason_;
         result.accessRules_ = accessRules_;
+        result.approvalFlowId_ = approvalFlowId_;
         onBuilt();
         return result;
       }
@@ -11720,6 +11806,10 @@ public final class WorkflowsPlumbing {
         }
         if (!other.getAccessRules().isEmpty()) {
           accessRules_ = other.accessRules_;
+          onChanged();
+        }
+        if (!other.getApprovalFlowId().isEmpty()) {
+          approvalFlowId_ = other.approvalFlowId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -12321,6 +12411,102 @@ public final class WorkflowsPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object approvalFlowId_ = "";
+      /**
+       * <pre>
+       * Optional approval flow ID identifies an approval flow that linked to the workflow
+       * </pre>
+       *
+       * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+       * @return The approvalFlowId.
+       */
+      public java.lang.String getApprovalFlowId() {
+        java.lang.Object ref = approvalFlowId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          approvalFlowId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional approval flow ID identifies an approval flow that linked to the workflow
+       * </pre>
+       *
+       * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for approvalFlowId.
+       */
+      public com.google.protobuf.ByteString
+          getApprovalFlowIdBytes() {
+        java.lang.Object ref = approvalFlowId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          approvalFlowId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional approval flow ID identifies an approval flow that linked to the workflow
+       * </pre>
+       *
+       * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The approvalFlowId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprovalFlowId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        approvalFlowId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional approval flow ID identifies an approval flow that linked to the workflow
+       * </pre>
+       *
+       * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApprovalFlowId() {
+        
+        approvalFlowId_ = getDefaultInstance().getApprovalFlowId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional approval flow ID identifies an approval flow that linked to the workflow
+       * </pre>
+       *
+       * <code>string approval_flow_id = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for approvalFlowId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprovalFlowIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        approvalFlowId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12477,7 +12663,7 @@ public final class WorkflowsPlumbing {
       "+\n\tworkflows\030\002 \003(\0132\014.v1.WorkflowB\n\362\370\263\007\005\270" +
       "\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
       "etadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r" +
-      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\317\004\n\010Workflow\022\026" +
+      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\365\004\n\010Workflow\022\026" +
       "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
       "\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007" +
       "\005\260\363\263\007\001\022\037\n\006weight\030\004 \001(\003B\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022" +
@@ -12489,27 +12675,28 @@ public final class WorkflowsPlumbing {
       "\ngo_private\022\013AccessRules\362\363\263\007\033\n\014go_terraf" +
       "orm\022\013AccessRules\362\363\263\007\030\n\004java\022\020List<Access" +
       "Rule>\362\363\263\007\"\n\014json_gateway\022\022models.AccessR" +
-      "ules\272\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001:d\372" +
-      "\370\263\007_\250\363\263\007\001\302\363\263\007O\242\363\263\007!tf_examples/workflow_" +
-      "resource.txt\252\363\263\007$tf_examples/workflow_da" +
-      "ta_source.txt\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Cre" +
-      "ate\022\031.v1.WorkflowCreateRequest\032\032.v1.Work" +
-      "flowCreateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252" +
-      "\363\263\007\r/v1/workflows\022`\n\003Get\022\026.v1.WorkflowGe" +
-      "tRequest\032\027.v1.WorkflowGetResponse\"(\202\371\263\007\010" +
-      "\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006D" +
-      "elete\022\031.v1.WorkflowDeleteRequest\032\032.v1.Wo" +
-      "rkflowDeleteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371" +
-      "\263\007\022\252\363\263\007\r/v1/workflows\022e\n\006Update\022\031.v1.Wor" +
-      "kflowUpdateRequest\032\032.v1.WorkflowUpdateRe" +
-      "sponse\"$\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workf" +
-      "lows\022_\n\004List\022\027.v1.WorkflowListRequest\032\030." +
-      "v1.WorkflowListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371" +
-      "\263\007\022\252\363\263\007\r/v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflo" +
-      "w\312\371\263\007\010\322\371\263\007\003aw-Be\n\031com.strongdm.api.plumb" +
-      "ingB\021WorkflowsPlumbingZ5github.com/stron" +
-      "gdm/strongdm-sdk-go/v3/internal/v1;v1b\006p" +
-      "roto3"
+      "ules\272\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001\022$\n" +
+      "\020approval_flow_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263" +
+      "\007_\250\363\263\007\001\302\363\263\007O\242\363\263\007!tf_examples/workflow_re" +
+      "source.txt\252\363\263\007$tf_examples/workflow_data" +
+      "_source.txt\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Creat" +
+      "e\022\031.v1.WorkflowCreateRequest\032\032.v1.Workfl" +
+      "owCreateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263" +
+      "\007\r/v1/workflows\022`\n\003Get\022\026.v1.WorkflowGetR" +
+      "equest\032\027.v1.WorkflowGetResponse\"(\202\371\263\007\010\242\363" +
+      "\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006Del" +
+      "ete\022\031.v1.WorkflowDeleteRequest\032\032.v1.Work" +
+      "flowDeleteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
+      "\022\252\363\263\007\r/v1/workflows\022e\n\006Update\022\031.v1.Workf" +
+      "lowUpdateRequest\032\032.v1.WorkflowUpdateResp" +
+      "onse\"$\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflo" +
+      "ws\022_\n\004List\022\027.v1.WorkflowListRequest\032\030.v1" +
+      ".WorkflowListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
+      "\022\252\363\263\007\r/v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflow\312" +
+      "\371\263\007\010\322\371\263\007\003aw-Be\n\031com.strongdm.api.plumbin" +
+      "gB\021WorkflowsPlumbingZ5github.com/strongd" +
+      "m/strongdm-sdk-go/v3/internal/v1;v1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12582,7 +12769,7 @@ public final class WorkflowsPlumbing {
     internal_static_v1_Workflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Workflow_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "Weight", "AutoGrant", "Enabled", "RequiresReason", "AccessRules", });
+        new java.lang.String[] { "Id", "Name", "Description", "Weight", "AutoGrant", "Enabled", "RequiresReason", "AccessRules", "ApprovalFlowId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

@@ -39,6 +39,16 @@ public class Workflow {
     this.accessRules = in;
   }
 
+  private String approvalFlowId;
+  /** Optional approval flow ID identifies an approval flow that linked to the workflow */
+  public String getApprovalFlowId() {
+    return this.approvalFlowId;
+  }
+  /** Optional approval flow ID identifies an approval flow that linked to the workflow */
+  public void setApprovalFlowId(String in) {
+    this.approvalFlowId = in;
+  }
+
   private boolean autoGrant;
   /** Optional auto grant setting to automatically approve requests or not, defaults to false. */
   public boolean getAutoGrant() {

@@ -14940,6 +14940,7 @@ public class Plumbing {
   public static com.strongdm.api.Workflow convertWorkflowToPorcelain(Workflow plumbing) {
     com.strongdm.api.Workflow porcelain = new com.strongdm.api.Workflow();
     porcelain.setAccessRules(Plumbing.convertAccessRulesToPorcelain(plumbing.getAccessRules()));
+    porcelain.setApprovalFlowId((plumbing.getApprovalFlowId()));
     porcelain.setAutoGrant((plumbing.getAutoGrant()));
     porcelain.setDescription((plumbing.getDescription()));
     porcelain.setEnabled((plumbing.getEnabled()));
@@ -14956,6 +14957,9 @@ public class Plumbing {
     Workflow.Builder builder = Workflow.newBuilder();
     if (porcelain.getAccessRules() != null) {
       builder.setAccessRules(Plumbing.convertAccessRulesToPlumbing(porcelain.getAccessRules()));
+    }
+    if (porcelain.getApprovalFlowId() != null) {
+      builder.setApprovalFlowId((porcelain.getApprovalFlowId()));
     }
     builder.setAutoGrant(porcelain.getAutoGrant());
     if (porcelain.getDescription() != null) {
