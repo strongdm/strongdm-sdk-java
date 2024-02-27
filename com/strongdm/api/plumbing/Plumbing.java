@@ -760,6 +760,73 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AWSCertX509Store convertAWSCertX509StoreToPorcelain(
+      AWSCertX509Store plumbing) {
+    com.strongdm.api.AWSCertX509Store porcelain = new com.strongdm.api.AWSCertX509Store();
+    porcelain.setCaArn((plumbing.getCaArn()));
+    porcelain.setCertificateTemplateArn((plumbing.getCertificateTemplateArn()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setSigningAlgo((plumbing.getSigningAlgo()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AWSCertX509Store convertAWSCertX509StoreToPlumbing(
+      com.strongdm.api.AWSCertX509Store porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWSCertX509Store.Builder builder = AWSCertX509Store.newBuilder();
+    if (porcelain.getCaArn() != null) {
+      builder.setCaArn((porcelain.getCaArn()));
+    }
+    if (porcelain.getCertificateTemplateArn() != null) {
+      builder.setCertificateTemplateArn((porcelain.getCertificateTemplateArn()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIssuedCertTTLMinutes() != null) {
+      builder.setIssuedCertTTLMinutes((porcelain.getIssuedCertTTLMinutes()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getSigningAlgo() != null) {
+      builder.setSigningAlgo((porcelain.getSigningAlgo()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AWSCertX509Store> convertRepeatedAWSCertX509StoreToPorcelain(
+      Collection<AWSCertX509Store> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AWSCertX509Store>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAWSCertX509StoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWSCertX509Store> convertRepeatedAWSCertX509StoreToPlumbing(
+      Collection<com.strongdm.api.AWSCertX509Store> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AWSCertX509Store>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAWSCertX509StoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AWSConsole convertAWSConsoleToPorcelain(AWSConsole plumbing) {
     com.strongdm.api.AWSConsole porcelain = new com.strongdm.api.AWSConsole();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -13019,6 +13086,9 @@ public class Plumbing {
     if (plumbing.hasAws()) {
       return convertAWSStoreToPorcelain(plumbing.getAws());
     }
+    if (plumbing.hasAwsCertX509()) {
+      return convertAWSCertX509StoreToPorcelain(plumbing.getAwsCertX509());
+    }
     if (plumbing.hasAzure()) {
       return convertAzureStoreToPorcelain(plumbing.getAzure());
     }
@@ -13077,6 +13147,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.AWSStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setAws(convertAWSStoreToPlumbing((com.strongdm.api.AWSStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AWSCertX509Store) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setAwsCertX509(
+          convertAWSCertX509StoreToPlumbing((com.strongdm.api.AWSCertX509Store) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AzureStore) {
