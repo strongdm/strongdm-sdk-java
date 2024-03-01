@@ -126,6 +126,16 @@ public class Query {
     this.capture = in;
   }
 
+  private String clientIp;
+  /** The IP address the Query was performed from, as detected at the StrongDM control plane. */
+  public String getClientIp() {
+    return this.clientIp;
+  }
+  /** The IP address the Query was performed from, as detected at the StrongDM control plane. */
+  public void setClientIp(String in) {
+    this.clientIp = in;
+  }
+
   private Date completedAt;
   /**
    * The time at which the Query was completed. Empty if this record indicates the start of a

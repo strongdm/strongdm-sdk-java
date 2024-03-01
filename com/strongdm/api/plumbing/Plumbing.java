@@ -9561,6 +9561,7 @@ public class Plumbing {
     porcelain.setAccountLastName((plumbing.getAccountLastName()));
     porcelain.setAccountTags(Plumbing.convertTagsToPorcelain(plumbing.getAccountTags()));
     porcelain.setCapture(Plumbing.convertQueryCaptureToPorcelain(plumbing.getCapture()));
+    porcelain.setClientIp((plumbing.getClientIp()));
     porcelain.setCompletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCompletedAt()));
     porcelain.setDuration(Plumbing.convertDurationToPorcelain(plumbing.getDuration()));
     porcelain.setEgressNodeId((plumbing.getEgressNodeId()));
@@ -9604,6 +9605,9 @@ public class Plumbing {
     }
     if (porcelain.getCapture() != null) {
       builder.setCapture(Plumbing.convertQueryCaptureToPlumbing(porcelain.getCapture()));
+    }
+    if (porcelain.getClientIp() != null) {
+      builder.setClientIp((porcelain.getClientIp()));
     }
     if (porcelain.getCompletedAt() != null) {
       builder.setCompletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCompletedAt()));
