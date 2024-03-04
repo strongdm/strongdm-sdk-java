@@ -61,6 +61,21 @@ public class SnapshotClient {
   public SnapshotAccounts accounts() {
     return this.parent.accounts;
   }
+  /** ApprovalWorkflowApprovers link approval workflow approvers to an ApprovalWorkflowStep */
+  public SnapshotApprovalWorkflowApprovers approvalWorkflowApprovers() {
+    return this.parent.approvalWorkflowApprovers;
+  }
+  /** ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow */
+  public SnapshotApprovalWorkflowSteps approvalWorkflowSteps() {
+    return this.parent.approvalWorkflowSteps;
+  }
+  /**
+   * ApprovalWorkflows are the mechanism by which requests for access can be viewed by authorized
+   * approvers and be approved or denied.
+   */
+  public SnapshotApprovalWorkflows approvalWorkflows() {
+    return this.parent.approvalWorkflows;
+  }
   /**
    * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
    * There are two types of nodes: - **Gateways** are the entry points into network. They listen for

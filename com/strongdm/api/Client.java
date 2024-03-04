@@ -159,6 +159,54 @@ public class Client {
     return this.activities;
   }
 
+  protected final ApprovalWorkflowApprovers approvalWorkflowApprovers;
+
+  /** ApprovalWorkflowApprovers link approval workflow approvers to an ApprovalWorkflowStep */
+  public ApprovalWorkflowApprovers approvalWorkflowApprovers() {
+    return this.approvalWorkflowApprovers;
+  }
+
+  protected final ApprovalWorkflowApproversHistory approvalWorkflowApproversHistory;
+
+  /**
+   * ApprovalWorkflowApproversHistory records all changes to the state of an
+   * ApprovalWorkflowApprover.
+   */
+  public ApprovalWorkflowApproversHistory approvalWorkflowApproversHistory() {
+    return this.approvalWorkflowApproversHistory;
+  }
+
+  protected final ApprovalWorkflowSteps approvalWorkflowSteps;
+
+  /** ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow */
+  public ApprovalWorkflowSteps approvalWorkflowSteps() {
+    return this.approvalWorkflowSteps;
+  }
+
+  protected final ApprovalWorkflowStepsHistory approvalWorkflowStepsHistory;
+
+  /** ApprovalWorkflowStepsHistory records all changes to the state of an ApprovalWorkflowStep. */
+  public ApprovalWorkflowStepsHistory approvalWorkflowStepsHistory() {
+    return this.approvalWorkflowStepsHistory;
+  }
+
+  protected final ApprovalWorkflows approvalWorkflows;
+
+  /**
+   * ApprovalWorkflows are the mechanism by which requests for access can be viewed by authorized
+   * approvers and be approved or denied.
+   */
+  public ApprovalWorkflows approvalWorkflows() {
+    return this.approvalWorkflows;
+  }
+
+  protected final ApprovalWorkflowsHistory approvalWorkflowsHistory;
+
+  /** ApprovalWorkflowsHistory records all changes to the state of an ApprovalWorkflow. */
+  public ApprovalWorkflowsHistory approvalWorkflowsHistory() {
+    return this.approvalWorkflowsHistory;
+  }
+
   protected final ControlPanel controlPanel;
 
   /** ControlPanel contains all administrative controls. */
@@ -459,6 +507,13 @@ public class Client {
     this.accounts = new Accounts(this.channel, this);
     this.accountsHistory = new AccountsHistory(this.channel, this);
     this.activities = new Activities(this.channel, this);
+    this.approvalWorkflowApprovers = new ApprovalWorkflowApprovers(this.channel, this);
+    this.approvalWorkflowApproversHistory =
+        new ApprovalWorkflowApproversHistory(this.channel, this);
+    this.approvalWorkflowSteps = new ApprovalWorkflowSteps(this.channel, this);
+    this.approvalWorkflowStepsHistory = new ApprovalWorkflowStepsHistory(this.channel, this);
+    this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
+    this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
     this.controlPanel = new ControlPanel(this.channel, this);
     this.nodes = new Nodes(this.channel, this);
     this.nodesHistory = new NodesHistory(this.channel, this);
@@ -525,6 +580,13 @@ public class Client {
       this.accounts = new Accounts(this.channel, this);
       this.accountsHistory = new AccountsHistory(this.channel, this);
       this.activities = new Activities(this.channel, this);
+      this.approvalWorkflowApprovers = new ApprovalWorkflowApprovers(this.channel, this);
+      this.approvalWorkflowApproversHistory =
+          new ApprovalWorkflowApproversHistory(this.channel, this);
+      this.approvalWorkflowSteps = new ApprovalWorkflowSteps(this.channel, this);
+      this.approvalWorkflowStepsHistory = new ApprovalWorkflowStepsHistory(this.channel, this);
+      this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
+      this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
       this.nodesHistory = new NodesHistory(this.channel, this);
