@@ -2404,6 +2404,57 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.ActiveDirectoryStore convertActiveDirectoryStoreToPorcelain(
+      ActiveDirectoryStore plumbing) {
+    com.strongdm.api.ActiveDirectoryStore porcelain = new com.strongdm.api.ActiveDirectoryStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static ActiveDirectoryStore convertActiveDirectoryStoreToPlumbing(
+      com.strongdm.api.ActiveDirectoryStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ActiveDirectoryStore.Builder builder = ActiveDirectoryStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ActiveDirectoryStore>
+      convertRepeatedActiveDirectoryStoreToPorcelain(Collection<ActiveDirectoryStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ActiveDirectoryStore>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertActiveDirectoryStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ActiveDirectoryStore> convertRepeatedActiveDirectoryStoreToPlumbing(
+      Collection<com.strongdm.api.ActiveDirectoryStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ActiveDirectoryStore>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertActiveDirectoryStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Activity convertActivityToPorcelain(Activity plumbing) {
     com.strongdm.api.Activity porcelain = new com.strongdm.api.Activity();
     porcelain.setActor(Plumbing.convertActivityActorToPorcelain(plumbing.getActor()));
@@ -13087,6 +13138,9 @@ public class Plumbing {
     if (plumbing == null) {
       return null;
     }
+    if (plumbing.hasActiveDirectory()) {
+      return convertActiveDirectoryStoreToPorcelain(plumbing.getActiveDirectory());
+    }
     if (plumbing.hasAws()) {
       return convertAWSStoreToPorcelain(plumbing.getAws());
     }
@@ -13147,6 +13201,12 @@ public class Plumbing {
   public static SecretStore convertSecretStoreToPlumbing(com.strongdm.api.SecretStore porcelain) {
     if (porcelain == null) {
       return null;
+    }
+    if (porcelain instanceof com.strongdm.api.ActiveDirectoryStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setActiveDirectory(
+          convertActiveDirectoryStoreToPlumbing((com.strongdm.api.ActiveDirectoryStore) porcelain));
+      return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AWSStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
