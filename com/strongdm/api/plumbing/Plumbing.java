@@ -795,9 +795,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
-    if (porcelain.getIssuedCertTTLMinutes() != null) {
-      builder.setIssuedCertTTLMinutes((porcelain.getIssuedCertTTLMinutes()));
-    }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -6678,6 +6676,7 @@ public class Plumbing {
     porcelain.setCaID((plumbing.getCaID()));
     porcelain.setCaPoolID((plumbing.getCaPoolID()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
     porcelain.setLocation((plumbing.getLocation()));
     porcelain.setName((plumbing.getName()));
     porcelain.setProjectID((plumbing.getProjectID()));
@@ -6700,6 +6699,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getLocation() != null) {
       builder.setLocation((porcelain.getLocation()));
     }
@@ -15457,6 +15457,7 @@ public class Plumbing {
     com.strongdm.api.VaultAppRoleCertSSHStore porcelain =
         new com.strongdm.api.VaultAppRoleCertSSHStore();
     porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
     porcelain.setName((plumbing.getName()));
     porcelain.setNamespace((plumbing.getNamespace()));
     porcelain.setServerAddress((plumbing.getServerAddress()));
@@ -15475,6 +15476,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -15522,6 +15524,7 @@ public class Plumbing {
     com.strongdm.api.VaultAppRoleCertX509Store porcelain =
         new com.strongdm.api.VaultAppRoleCertX509Store();
     porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
     porcelain.setName((plumbing.getName()));
     porcelain.setNamespace((plumbing.getNamespace()));
     porcelain.setPkiMountPoint((plumbing.getPkiMountPoint()));
@@ -15540,6 +15543,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -15644,6 +15648,7 @@ public class Plumbing {
     porcelain.setClientCertPath((plumbing.getClientCertPath()));
     porcelain.setClientKeyPath((plumbing.getClientKeyPath()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
     porcelain.setName((plumbing.getName()));
     porcelain.setNamespace((plumbing.getNamespace()));
     porcelain.setServerAddress((plumbing.getServerAddress()));
@@ -15671,6 +15676,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -15719,6 +15725,7 @@ public class Plumbing {
     porcelain.setClientCertPath((plumbing.getClientCertPath()));
     porcelain.setClientKeyPath((plumbing.getClientKeyPath()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
     porcelain.setName((plumbing.getName()));
     porcelain.setNamespace((plumbing.getNamespace()));
     porcelain.setPkiMountPoint((plumbing.getPkiMountPoint()));
@@ -15746,6 +15753,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -15859,6 +15867,7 @@ public class Plumbing {
     com.strongdm.api.VaultTokenCertSSHStore porcelain =
         new com.strongdm.api.VaultTokenCertSSHStore();
     porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
     porcelain.setName((plumbing.getName()));
     porcelain.setNamespace((plumbing.getNamespace()));
     porcelain.setServerAddress((plumbing.getServerAddress()));
@@ -15877,6 +15886,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -15924,6 +15934,7 @@ public class Plumbing {
     com.strongdm.api.VaultTokenCertX509Store porcelain =
         new com.strongdm.api.VaultTokenCertX509Store();
     porcelain.setId((plumbing.getId()));
+    porcelain.setIssuedCertTTLMinutes((plumbing.getIssuedCertTTLMinutes()));
     porcelain.setName((plumbing.getName()));
     porcelain.setNamespace((plumbing.getNamespace()));
     porcelain.setPkiMountPoint((plumbing.getPkiMountPoint()));
@@ -15942,6 +15953,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setIssuedCertTTLMinutes(porcelain.getIssuedCertTTLMinutes());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }

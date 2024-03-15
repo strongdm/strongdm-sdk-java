@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * AWSCertX509Store is currently unstable, and its API may change, or it may be removed, without a
- * major version bump.
- */
 public class AWSCertX509Store implements SecretStore {
   private String caArn;
   /** The ARN of the CA in AWS Private CA */
@@ -58,19 +54,13 @@ public class AWSCertX509Store implements SecretStore {
     this.id = in;
   }
 
-  private String issuedCertTtlMinutes;
-  /**
-   * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours).
-   * Defaults to 8 hours if not provided.
-   */
-  public String getIssuedCertTTLMinutes() {
+  private int issuedCertTtlMinutes;
+  /** The lifetime of certificates issued by this CA represented in minutes. */
+  public int getIssuedCertTTLMinutes() {
     return this.issuedCertTtlMinutes;
   }
-  /**
-   * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours).
-   * Defaults to 8 hours if not provided.
-   */
-  public void setIssuedCertTTLMinutes(String in) {
+  /** The lifetime of certificates issued by this CA represented in minutes. */
+  public void setIssuedCertTTLMinutes(int in) {
     this.issuedCertTtlMinutes = in;
   }
 

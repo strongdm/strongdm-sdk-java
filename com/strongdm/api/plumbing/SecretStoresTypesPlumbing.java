@@ -6226,23 +6226,13 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
-     * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
+     * The lifetime of certificates issued by this CA represented in minutes.
      * </pre>
      *
-     * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+     * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
      * @return The issuedCertTTLMinutes.
      */
-    java.lang.String getIssuedCertTTLMinutes();
-    /**
-     * <pre>
-     * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
-     * </pre>
-     *
-     * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for issuedCertTTLMinutes.
-     */
-    com.google.protobuf.ByteString
-        getIssuedCertTTLMinutesBytes();
+    int getIssuedCertTTLMinutes();
 
     /**
      * <pre>
@@ -6328,7 +6318,6 @@ public final class SecretStoresTypesPlumbing {
       name_ = "";
       caArn_ = "";
       certificateTemplateArn_ = "";
-      issuedCertTTLMinutes_ = "";
       region_ = "";
       signingAlgo_ = "";
     }
@@ -6412,10 +6401,9 @@ public final class SecretStoresTypesPlumbing {
               certificateTemplateArn_ = s;
               break;
             }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 64: {
 
-              issuedCertTTLMinutes_ = s;
+              issuedCertTTLMinutes_ = input.readInt32();
               break;
             }
             default: {
@@ -6637,49 +6625,18 @@ public final class SecretStoresTypesPlumbing {
     }
 
     public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 8;
-    private volatile java.lang.Object issuedCertTTLMinutes_;
+    private int issuedCertTTLMinutes_;
     /**
      * <pre>
-     * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
+     * The lifetime of certificates issued by this CA represented in minutes.
      * </pre>
      *
-     * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+     * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
      * @return The issuedCertTTLMinutes.
      */
     @java.lang.Override
-    public java.lang.String getIssuedCertTTLMinutes() {
-      java.lang.Object ref = issuedCertTTLMinutes_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        issuedCertTTLMinutes_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
-     * </pre>
-     *
-     * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for issuedCertTTLMinutes.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIssuedCertTTLMinutesBytes() {
-      java.lang.Object ref = issuedCertTTLMinutes_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        issuedCertTTLMinutes_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
     }
 
     public static final int REGION_FIELD_NUMBER = 3;
@@ -6847,8 +6804,8 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateTemplateArn_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, certificateTemplateArn_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuedCertTTLMinutes_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, issuedCertTTLMinutes_);
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(8, issuedCertTTLMinutes_);
       }
       unknownFields.writeTo(output);
     }
@@ -6881,8 +6838,9 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateTemplateArn_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, certificateTemplateArn_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuedCertTTLMinutes_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, issuedCertTTLMinutes_);
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, issuedCertTTLMinutes_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6907,8 +6865,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getCaArn())) return false;
       if (!getCertificateTemplateArn()
           .equals(other.getCertificateTemplateArn())) return false;
-      if (!getIssuedCertTTLMinutes()
-          .equals(other.getIssuedCertTTLMinutes())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getRegion()
           .equals(other.getRegion())) return false;
       if (!getSigningAlgo()
@@ -6938,7 +6896,7 @@ public final class SecretStoresTypesPlumbing {
       hash = (37 * hash) + CERTIFICATETEMPLATEARN_FIELD_NUMBER;
       hash = (53 * hash) + getCertificateTemplateArn().hashCode();
       hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
-      hash = (53 * hash) + getIssuedCertTTLMinutes().hashCode();
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + REGION_FIELD_NUMBER;
       hash = (53 * hash) + getRegion().hashCode();
       hash = (37 * hash) + SIGNINGALGO_FIELD_NUMBER;
@@ -7088,7 +7046,7 @@ public final class SecretStoresTypesPlumbing {
 
         certificateTemplateArn_ = "";
 
-        issuedCertTTLMinutes_ = "";
+        issuedCertTTLMinutes_ = 0;
 
         region_ = "";
 
@@ -7202,9 +7160,8 @@ public final class SecretStoresTypesPlumbing {
           certificateTemplateArn_ = other.certificateTemplateArn_;
           onChanged();
         }
-        if (!other.getIssuedCertTTLMinutes().isEmpty()) {
-          issuedCertTTLMinutes_ = other.issuedCertTTLMinutes_;
-          onChanged();
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getRegion().isEmpty()) {
           region_ = other.region_;
@@ -7630,98 +7587,45 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
 
-      private java.lang.Object issuedCertTTLMinutes_ = "";
+      private int issuedCertTTLMinutes_ ;
       /**
        * <pre>
-       * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
+       * The lifetime of certificates issued by this CA represented in minutes.
        * </pre>
        *
-       * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+       * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
        * @return The issuedCertTTLMinutes.
        */
-      public java.lang.String getIssuedCertTTLMinutes() {
-        java.lang.Object ref = issuedCertTTLMinutes_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          issuedCertTTLMinutes_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
       }
       /**
        * <pre>
-       * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
+       * The lifetime of certificates issued by this CA represented in minutes.
        * </pre>
        *
-       * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for issuedCertTTLMinutes.
-       */
-      public com.google.protobuf.ByteString
-          getIssuedCertTTLMinutesBytes() {
-        java.lang.Object ref = issuedCertTTLMinutes_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          issuedCertTTLMinutes_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
-       * </pre>
-       *
-       * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+       * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
        * @param value The issuedCertTTLMinutes to set.
        * @return This builder for chaining.
        */
-      public Builder setIssuedCertTTLMinutes(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
         issuedCertTTLMinutes_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
+       * The lifetime of certificates issued by this CA represented in minutes.
        * </pre>
        *
-       * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+       * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuedCertTTLMinutes() {
         
-        issuedCertTTLMinutes_ = getDefaultInstance().getIssuedCertTTLMinutes();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The lifetime of certificates issued by this CA represented in minutes e.g. 600 (for 10 hours). Defaults to 8 hours if not provided.
-       * </pre>
-       *
-       * <code>string issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for issuedCertTTLMinutes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIssuedCertTTLMinutesBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        issuedCertTTLMinutes_ = value;
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -8171,7 +8075,7 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
-     * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+     * Hostname of server that is hosting NDES (Network Device Enrollment Services).
      * Often this is the same host as Active Directory Certificate Services
      * </pre>
      *
@@ -8181,7 +8085,7 @@ public final class SecretStoresTypesPlumbing {
     java.lang.String getServerAddress();
     /**
      * <pre>
-     * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+     * Hostname of server that is hosting NDES (Network Device Enrollment Services).
      * Often this is the same host as Active Directory Certificate Services
      * </pre>
      *
@@ -8427,7 +8331,7 @@ public final class SecretStoresTypesPlumbing {
     private volatile java.lang.Object serverAddress_;
     /**
      * <pre>
-     * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+     * Hostname of server that is hosting NDES (Network Device Enrollment Services).
      * Often this is the same host as Active Directory Certificate Services
      * </pre>
      *
@@ -8449,7 +8353,7 @@ public final class SecretStoresTypesPlumbing {
     }
     /**
      * <pre>
-     * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+     * Hostname of server that is hosting NDES (Network Device Enrollment Services).
      * Often this is the same host as Active Directory Certificate Services
      * </pre>
      *
@@ -9070,7 +8974,7 @@ public final class SecretStoresTypesPlumbing {
       private java.lang.Object serverAddress_ = "";
       /**
        * <pre>
-       * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+       * Hostname of server that is hosting NDES (Network Device Enrollment Services).
        * Often this is the same host as Active Directory Certificate Services
        * </pre>
        *
@@ -9091,7 +8995,7 @@ public final class SecretStoresTypesPlumbing {
       }
       /**
        * <pre>
-       * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+       * Hostname of server that is hosting NDES (Network Device Enrollment Services).
        * Often this is the same host as Active Directory Certificate Services
        * </pre>
        *
@@ -9113,7 +9017,7 @@ public final class SecretStoresTypesPlumbing {
       }
       /**
        * <pre>
-       * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+       * Hostname of server that is hosting NDES (Network Device Enrollment Services).
        * Often this is the same host as Active Directory Certificate Services
        * </pre>
        *
@@ -9133,7 +9037,7 @@ public final class SecretStoresTypesPlumbing {
       }
       /**
        * <pre>
-       * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+       * Hostname of server that is hosting NDES (Network Device Enrollment Services).
        * Often this is the same host as Active Directory Certificate Services
        * </pre>
        *
@@ -9148,7 +9052,7 @@ public final class SecretStoresTypesPlumbing {
       }
       /**
        * <pre>
-       * Hostname of server that is hosting NDES (Network Device Enrollment Services). 
+       * Hostname of server that is hosting NDES (Network Device Enrollment Services).
        * Often this is the same host as Active Directory Certificate Services
        * </pre>
        *
@@ -17093,6 +16997,16 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 7 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
      * The Region for the CA in GCP format e.g. us-west1
      * </pre>
      *
@@ -17243,6 +17157,11 @@ public final class SecretStoresTypesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               caID_ = s;
+              break;
+            }
+            case 56: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
               break;
             }
             case 262170: {
@@ -17476,6 +17395,21 @@ public final class SecretStoresTypesPlumbing {
       }
     }
 
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 7;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 7 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
+    }
+
     public static final int LOCATION_FIELD_NUMBER = 4;
     private volatile java.lang.Object location_;
     /**
@@ -17638,6 +17572,9 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caID_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, caID_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(7, issuedCertTTLMinutes_);
+      }
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
@@ -17668,6 +17605,10 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caID_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, caID_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, issuedCertTTLMinutes_);
+      }
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
@@ -17695,6 +17636,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getCaID())) return false;
       if (!getCaPoolID()
           .equals(other.getCaPoolID())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getLocation()
           .equals(other.getLocation())) return false;
       if (!getProjectID()
@@ -17723,6 +17666,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getCaID().hashCode();
       hash = (37 * hash) + CAPOOLID_FIELD_NUMBER;
       hash = (53 * hash) + getCaPoolID().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + LOCATION_FIELD_NUMBER;
       hash = (53 * hash) + getLocation().hashCode();
       hash = (37 * hash) + PROJECTID_FIELD_NUMBER;
@@ -17872,6 +17817,8 @@ public final class SecretStoresTypesPlumbing {
 
         caPoolID_ = "";
 
+        issuedCertTTLMinutes_ = 0;
+
         location_ = "";
 
         projectID_ = "";
@@ -17912,6 +17859,7 @@ public final class SecretStoresTypesPlumbing {
         result.name_ = name_;
         result.caID_ = caID_;
         result.caPoolID_ = caPoolID_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
         result.location_ = location_;
         result.projectID_ = projectID_;
         if (tagsBuilder_ == null) {
@@ -17982,6 +17930,9 @@ public final class SecretStoresTypesPlumbing {
         if (!other.getCaPoolID().isEmpty()) {
           caPoolID_ = other.caPoolID_;
           onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getLocation().isEmpty()) {
           location_ = other.location_;
@@ -18403,6 +18354,49 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         caPoolID_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 7 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -20279,6 +20273,16 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
      * The namespace to make requests within
      * </pre>
      *
@@ -20484,6 +20488,11 @@ public final class SecretStoresTypesPlumbing {
 
               break;
             }
+            case 72: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -20608,6 +20617,21 @@ public final class SecretStoresTypesPlumbing {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 9;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
     }
 
     public static final int NAMESPACE_FIELD_NUMBER = 5;
@@ -20867,6 +20891,9 @@ public final class SecretStoresTypesPlumbing {
       if (tags_ != null) {
         output.writeMessage(8, getTags());
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(9, issuedCertTTLMinutes_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -20898,6 +20925,10 @@ public final class SecretStoresTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getTags());
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, issuedCertTTLMinutes_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -20917,6 +20948,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getNamespace()
           .equals(other.getNamespace())) return false;
       if (!getServerAddress()
@@ -20945,6 +20978,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
       hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
@@ -21094,6 +21129,8 @@ public final class SecretStoresTypesPlumbing {
 
         name_ = "";
 
+        issuedCertTTLMinutes_ = 0;
+
         namespace_ = "";
 
         serverAddress_ = "";
@@ -21136,6 +21173,7 @@ public final class SecretStoresTypesPlumbing {
         com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAppRoleCertSSHStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAppRoleCertSSHStore(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
         result.namespace_ = namespace_;
         result.serverAddress_ = serverAddress_;
         result.signingRole_ = signingRole_;
@@ -21200,6 +21238,9 @@ public final class SecretStoresTypesPlumbing {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
@@ -21437,6 +21478,49 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -22078,6 +22162,16 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
      * The namespace to make requests within
      * </pre>
      *
@@ -22283,6 +22377,11 @@ public final class SecretStoresTypesPlumbing {
 
               break;
             }
+            case 72: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -22407,6 +22506,21 @@ public final class SecretStoresTypesPlumbing {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 9;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
     }
 
     public static final int NAMESPACE_FIELD_NUMBER = 5;
@@ -22666,6 +22780,9 @@ public final class SecretStoresTypesPlumbing {
       if (tags_ != null) {
         output.writeMessage(8, getTags());
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(9, issuedCertTTLMinutes_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -22697,6 +22814,10 @@ public final class SecretStoresTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getTags());
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, issuedCertTTLMinutes_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -22716,6 +22837,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getNamespace()
           .equals(other.getNamespace())) return false;
       if (!getPkiMountPoint()
@@ -22744,6 +22867,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
       hash = (37 * hash) + PKI_MOUNT_POINT_FIELD_NUMBER;
@@ -22893,6 +23018,8 @@ public final class SecretStoresTypesPlumbing {
 
         name_ = "";
 
+        issuedCertTTLMinutes_ = 0;
+
         namespace_ = "";
 
         pkiMountPoint_ = "";
@@ -22935,6 +23062,7 @@ public final class SecretStoresTypesPlumbing {
         com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAppRoleCertX509Store result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAppRoleCertX509Store(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
         result.namespace_ = namespace_;
         result.pkiMountPoint_ = pkiMountPoint_;
         result.serverAddress_ = serverAddress_;
@@ -22999,6 +23127,9 @@ public final class SecretStoresTypesPlumbing {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
@@ -23236,6 +23367,49 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -25922,6 +26096,16 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
      * The namespace to make requests within
      * </pre>
      *
@@ -26146,6 +26330,11 @@ public final class SecretStoresTypesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               signingRole_ = s;
+              break;
+            }
+            case 88: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
               break;
             }
             default: {
@@ -26410,6 +26599,21 @@ public final class SecretStoresTypesPlumbing {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 11;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
     }
 
     public static final int NAMESPACE_FIELD_NUMBER = 8;
@@ -26678,6 +26882,9 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(11, issuedCertTTLMinutes_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -26718,6 +26925,10 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, issuedCertTTLMinutes_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -26743,6 +26954,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getClientCertPath())) return false;
       if (!getClientKeyPath()
           .equals(other.getClientKeyPath())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getNamespace()
           .equals(other.getNamespace())) return false;
       if (!getServerAddress()
@@ -26777,6 +26990,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getClientCertPath().hashCode();
       hash = (37 * hash) + CLIENT_KEY_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getClientKeyPath().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
       hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
@@ -26932,6 +27147,8 @@ public final class SecretStoresTypesPlumbing {
 
         clientKeyPath_ = "";
 
+        issuedCertTTLMinutes_ = 0;
+
         namespace_ = "";
 
         serverAddress_ = "";
@@ -26977,6 +27194,7 @@ public final class SecretStoresTypesPlumbing {
         result.cACertPath_ = cACertPath_;
         result.clientCertPath_ = clientCertPath_;
         result.clientKeyPath_ = clientKeyPath_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
         result.namespace_ = namespace_;
         result.serverAddress_ = serverAddress_;
         result.signingRole_ = signingRole_;
@@ -27053,6 +27271,9 @@ public final class SecretStoresTypesPlumbing {
         if (!other.getClientKeyPath().isEmpty()) {
           clientKeyPath_ = other.clientKeyPath_;
           onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
@@ -27578,6 +27799,49 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         clientKeyPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -28279,6 +28543,16 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
      * The namespace to make requests within
      * </pre>
      *
@@ -28503,6 +28777,11 @@ public final class SecretStoresTypesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               signingRole_ = s;
+              break;
+            }
+            case 88: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
               break;
             }
             default: {
@@ -28767,6 +29046,21 @@ public final class SecretStoresTypesPlumbing {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 11;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
     }
 
     public static final int NAMESPACE_FIELD_NUMBER = 8;
@@ -29035,6 +29329,9 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(11, issuedCertTTLMinutes_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -29075,6 +29372,10 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, issuedCertTTLMinutes_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -29100,6 +29401,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getClientCertPath())) return false;
       if (!getClientKeyPath()
           .equals(other.getClientKeyPath())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getNamespace()
           .equals(other.getNamespace())) return false;
       if (!getPkiMountPoint()
@@ -29134,6 +29437,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getClientCertPath().hashCode();
       hash = (37 * hash) + CLIENT_KEY_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getClientKeyPath().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
       hash = (37 * hash) + PKI_MOUNT_POINT_FIELD_NUMBER;
@@ -29289,6 +29594,8 @@ public final class SecretStoresTypesPlumbing {
 
         clientKeyPath_ = "";
 
+        issuedCertTTLMinutes_ = 0;
+
         namespace_ = "";
 
         pkiMountPoint_ = "";
@@ -29334,6 +29641,7 @@ public final class SecretStoresTypesPlumbing {
         result.cACertPath_ = cACertPath_;
         result.clientCertPath_ = clientCertPath_;
         result.clientKeyPath_ = clientKeyPath_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
         result.namespace_ = namespace_;
         result.pkiMountPoint_ = pkiMountPoint_;
         result.serverAddress_ = serverAddress_;
@@ -29410,6 +29718,9 @@ public final class SecretStoresTypesPlumbing {
         if (!other.getClientKeyPath().isEmpty()) {
           clientKeyPath_ = other.clientKeyPath_;
           onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
@@ -29935,6 +30246,49 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         clientKeyPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -32003,6 +32357,16 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
      * The namespace to make requests within
      * </pre>
      *
@@ -32208,6 +32572,11 @@ public final class SecretStoresTypesPlumbing {
               signingRole_ = s;
               break;
             }
+            case 72: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -32332,6 +32701,21 @@ public final class SecretStoresTypesPlumbing {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 9;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
     }
 
     public static final int NAMESPACE_FIELD_NUMBER = 5;
@@ -32591,6 +32975,9 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(9, issuedCertTTLMinutes_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -32622,6 +33009,10 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, issuedCertTTLMinutes_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -32641,6 +33032,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getNamespace()
           .equals(other.getNamespace())) return false;
       if (!getServerAddress()
@@ -32669,6 +33062,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
       hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
@@ -32818,6 +33213,8 @@ public final class SecretStoresTypesPlumbing {
 
         name_ = "";
 
+        issuedCertTTLMinutes_ = 0;
+
         namespace_ = "";
 
         serverAddress_ = "";
@@ -32860,6 +33257,7 @@ public final class SecretStoresTypesPlumbing {
         com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultTokenCertSSHStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultTokenCertSSHStore(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
         result.namespace_ = namespace_;
         result.serverAddress_ = serverAddress_;
         result.signingRole_ = signingRole_;
@@ -32924,6 +33322,9 @@ public final class SecretStoresTypesPlumbing {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
@@ -33161,6 +33562,49 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -33802,6 +34246,16 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
      * The namespace to make requests within
      * </pre>
      *
@@ -34007,6 +34461,11 @@ public final class SecretStoresTypesPlumbing {
               signingRole_ = s;
               break;
             }
+            case 64: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -34131,6 +34590,21 @@ public final class SecretStoresTypesPlumbing {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 8;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
     }
 
     public static final int NAMESPACE_FIELD_NUMBER = 5;
@@ -34390,6 +34864,9 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(8, issuedCertTTLMinutes_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -34421,6 +34898,10 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, signingRole_);
       }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, issuedCertTTLMinutes_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -34440,6 +34921,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
       if (!getNamespace()
           .equals(other.getNamespace())) return false;
       if (!getPkiMountPoint()
@@ -34468,6 +34951,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
       hash = (37 * hash) + PKI_MOUNT_POINT_FIELD_NUMBER;
@@ -34617,6 +35102,8 @@ public final class SecretStoresTypesPlumbing {
 
         name_ = "";
 
+        issuedCertTTLMinutes_ = 0;
+
         namespace_ = "";
 
         pkiMountPoint_ = "";
@@ -34659,6 +35146,7 @@ public final class SecretStoresTypesPlumbing {
         com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultTokenCertX509Store result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultTokenCertX509Store(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
         result.namespace_ = namespace_;
         result.pkiMountPoint_ = pkiMountPoint_;
         result.serverAddress_ = serverAddress_;
@@ -34723,6 +35211,9 @@ public final class SecretStoresTypesPlumbing {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
@@ -34960,6 +35451,49 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
         onChanged();
         return this;
       }
@@ -35729,210 +36263,226 @@ public final class SecretStoresTypesPlumbing {
       "\005caArn\030\005 \001(\tB.\362\370\263\007)\260\363\263\007\001\300\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n" +
       "\014json_gateway\022\005caArn\022_\n\026certificateTempl" +
       "ateArn\030\007 \001(\tB?\362\370\263\007:\260\363\263\007\001\300\363\263\007\001\312\363\263\007+\302\364\263\007&\n" +
-      "\014json_gateway\022\026certificateTemplateArn\022V\n" +
-      "\024issuedCertTTLMinutes\030\010 \001(\tB8\362\370\263\0073\260\363\263\007\001\312" +
-      "\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMi" +
-      "nutes\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\033\302\364\263\007\026\n\014json_gateway\022\006region\022I\n\013signin" +
-      "gAlgo\030\006 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014" +
-      "json_gateway\022\013signingAlgo\022\"\n\004tags\030\004 \001(\0132" +
-      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:s\372\370\263\007n\250\363\263\007\001\312\363\263\007d\210\364" +
-      "\263\007\001\302\364\263\007\022\n\003cli\022\013awsCertX509\302\364\263\007\033\n\014json_ga" +
+      "\014json_gateway\022\026certificateTemplateArn\022[\n" +
+      "\024issuedCertTTLMinutes\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001\300" +
+      "\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCert" +
+      "TtlMinutes\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006region\022I\n\013s" +
+      "igningAlgo\030\006 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364" +
+      "\263\007\033\n\014json_gateway\022\013signingAlgo\022\"\n\004tags\030\004" +
+      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\312\363" +
+      "\263\007_\302\364\263\007\022\n\003cli\022\013awsCertX509\302\364\263\007\033\n\014json_ga" +
       "teway\022\013awsCertX509\302\364\263\007#\n\022terraform-provi" +
-      "der\022\raws_cert_x509\"\230\002\n\024ActiveDirectorySt" +
+      "der\022\raws_cert_x509\"\223\002\n\024ActiveDirectorySt" +
       "ore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(" +
       "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022N\n\016server_address\030\003 \001" +
       "(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gate" +
       "way\022\rserverAddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
-      "TagsB\n\362\370\263\007\005\260\363\263\007\001:S\372\370\263\007N\250\363\263\007\001\312\363\263\007D\210\364\263\007\001\302\364" +
-      "\263\007\026\n\003cli\022\017activeDirectory\302\364\263\007\037\n\014json_gat" +
-      "eway\022\017activeDirectory\"\353\001\n\nAzureStore\022\026\n\002" +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001:N\372\370\263\007I\250\363\263\007\001\312\363\263\007?\302\364\263\007\026\n\003" +
+      "cli\022\017activeDirectory\302\364\263\007\037\n\014json_gateway\022" +
+      "\017activeDirectory\"\353\001\n\nAzureStore\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\300\363\263\007\001\022D\n\tvault_uri\030\003 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultUri\022$\n\004" +
+      "tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001::\372\370\263\007" +
+      "5\250\363\263\007\001\312\363\263\007+\302\364\263\007\014\n\003cli\022\005azure\302\364\263\007\025\n\014json_" +
+      "gateway\022\005azure\"\253\002\n\023CyberarkConjurStore\022\026" +
+      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
+      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007" +
+      "\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$" +
+      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:v\372\370" +
+      "\263\007q\250\363\263\007\001\312\363\263\007g\302\364\263\007\025\n\003cli\022\016cyberarkConjur\302" +
+      "\364\263\007\036\n\014json_gateway\022\016cyberarkConjur\302\364\263\007%\n" +
+      "\022terraform-provider\022\017cyberark_conjur\"\237\002\n" +
+      "\020CyberarkPAMStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appU" +
+      "RL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014jso" +
+      "n_gateway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263\007\001\312\363\263\007^\302\364\263\007\022\n\003c" +
+      "li\022\013cyberarkPAM\302\364\263\007\033\n\014json_gateway\022\013cybe" +
+      "rarkPAM\302\364\263\007\"\n\022terraform-provider\022\014cybera" +
+      "rk_pam\"\330\002\n\034CyberarkPAMExperimentalStore\022" +
+      "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
+      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022" +
+      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\231\001" +
+      "\372\370\263\007\223\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263\007\036\n\003cli\022\027cybera" +
+      "rkPAMExperimental\302\364\263\007\'\n\014json_gateway\022\027cy" +
+      "berarkPAMExperimental\302\364\263\007/\n\022terraform-pr" +
+      "ovider\022\031cyberark_pam_experimental\"\263\002\n\014De" +
+      "lineaStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
+      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022A\n\nserver_url\030" +
+      "\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatewa" +
+      "y\022\tserverUrl\022C\n\013tenant_name\030\004 \001(\tB.\362\370\263\007)" +
+      "\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ntenantNam" +
+      "e\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:" +
+      ">\372\370\263\0079\250\363\263\007\001\312\363\263\007/\302\364\263\007\016\n\003cli\022\007delinea\302\364\263\007\027" +
+      "\n\014json_gateway\022\007delinea\"\346\001\n\010GCPStore\022\026\n\002" +
       "id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\300\363\263\007\001\022D\n\tvault_uri\030\003 \001(\tB1\362\370\263\007,\260\363\263" +
-      "\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultUr" +
-      "i\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:" +
-      ":\372\370\263\0075\250\363\263\007\001\312\363\263\007+\302\364\263\007\014\n\003cli\022\005azure\302\364\263\007\025\n\014" +
-      "json_gateway\022\005azure\"\253\002\n\023CyberarkConjurSt" +
-      "ore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(" +
-      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007" +
-      "*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006app" +
-      "Url\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007g\302\364\263\007\025\n\003cli\022\016cyberarkCo" +
-      "njur\302\364\263\007\036\n\014json_gateway\022\016cyberarkConjur\302" +
-      "\364\263\007%\n\022terraform-provider\022\017cyberark_conju" +
-      "r\"\237\002\n\020CyberarkPAMStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n" +
-      "\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026" +
-      "\n\014json_gateway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010" +
-      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263\007\001\312\363\263\007^\302\364\263" +
-      "\007\022\n\003cli\022\013cyberarkPAM\302\364\263\007\033\n\014json_gateway\022" +
-      "\013cyberarkPAM\302\364\263\007\"\n\022terraform-provider\022\014c" +
-      "yberark_pam\"\330\002\n\034CyberarkPAMExperimentalS" +
-      "tore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001" +
-      "(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263" +
-      "\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006ap" +
-      "pUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\231\001\372\370\263\007\223\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263\007\036\n\003cli\022\027c" +
-      "yberarkPAMExperimental\302\364\263\007\'\n\014json_gatewa" +
-      "y\022\027cyberarkPAMExperimental\302\364\263\007/\n\022terrafo" +
-      "rm-provider\022\031cyberark_pam_experimental\"\263" +
-      "\002\n\014DelineaStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022A\n\nserver" +
-      "_url\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_g" +
-      "ateway\022\tserverUrl\022C\n\013tenant_name\030\004 \001(\tB." +
-      "\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ntena" +
-      "ntName\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:>\372\370\263\0079\250\363\263\007\001\312\363\263\007/\302\364\263\007\016\n\003cli\022\007delinea" +
-      "\302\364\263\007\027\n\014json_gateway\022\007delinea\"\346\001\n\010GCPStor" +
-      "e\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB" +
-      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022E\n\tprojectID\030\003 \001(\tB2\362\370\263" +
-      "\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tpr" +
-      "ojectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:6\372\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cli\022\003gcp\302\364\263" +
-      "\007\023\n\014json_gateway\022\003gcp\"\305\003\n\020GCPCertX509Sto" +
-      "re\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\t" +
-      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\0226\n\004caID\030\006 \001(\tB(\362\370\263\007#\260\363" +
-      "\263\007\001\312\363\263\007\031\302\364\263\007\024\n\014json_gateway\022\004caId\022C\n\010caP" +
-      "oolID\030\005 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014" +
-      "json_gateway\022\010caPoolId\022C\n\010location\030\004 \001(\t" +
-      "B1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gatewa" +
-      "y\022\010location\022E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-\260\363\263" +
+      "\n\260\363\263\007\001\300\363\263\007\001\022E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-\260\363\263" +
       "\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tproject" +
       "Id\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
-      ":K\372\370\263\007F\250\363\263\007\001\312\363\263\007<\210\364\263\007\001\302\364\263\007\022\n\003cli\022\013gcpCer" +
-      "tX509\302\364\263\007\033\n\014json_gateway\022\013gcpCertX509\"\362\002" +
-      "\n\021VaultAppRoleStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tna" +
-      "mespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014jso" +
+      ":6\372\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cli\022\003gcp\302\364\263\007\023\n\014j" +
+      "son_gateway\022\003gcp\"\235\004\n\020GCPCertX509Store\022\026\n" +
+      "\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263" +
+      "\007\n\260\363\263\007\001\300\363\263\007\001\0226\n\004caID\030\006 \001(\tB(\362\370\263\007#\260\363\263\007\001\312\363" +
+      "\263\007\031\302\364\263\007\024\n\014json_gateway\022\004caId\022C\n\010caPoolID" +
+      "\030\005 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_" +
+      "gateway\022\010caPoolId\022[\n\024issuedCertTTLMinute" +
+      "s\030\007 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json" +
+      "_gateway\022\024issuedCertTtlMinutes\022C\n\010locati" +
+      "on\030\004 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014jso" +
+      "n_gateway\022\010location\022E\n\tprojectID\030\003 \001(\tB2" +
+      "\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022" +
+      "\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001:F\372\370\263\007A\250\363\263\007\001\312\363\263\0077\302\364\263\007\022\n\003cli\022\013gcp" +
+      "CertX509\302\364\263\007\033\n\014json_gateway\022\013gcpCertX509" +
+      "\"\362\002\n\021VaultAppRoleStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n" +
+      "\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014" +
+      "json_gateway\022\tnamespace\022N\n\016server_addres" +
+      "s\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json" +
+      "_gateway\022\rserverAddress\022\"\n\004tags\030\010 \001(\0132\010." +
+      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001\312\363\263\007a\302\364\263\007" +
+      "\023\n\003cli\022\014vaultAppRole\302\364\263\007\034\n\014json_gateway\022" +
+      "\014vaultAppRole\302\364\263\007#\n\022terraform-provider\022\r" +
+      "vault_approle\"\214\005\n\030VaultAppRoleCertSSHSto" +
+      "re\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\t" +
+      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinute" +
+      "s\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json" +
+      "_gateway\022\024issuedCertTtlMinutes\022@\n\tnamesp" +
+      "ace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_ga" +
+      "teway\022\tnamespace\022N\n\016server_address\030\003 \001(\t" +
+      "B6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatewa" +
+      "y\022\rserverAddress\022J\n\014signing_role\030\007 \001(\tB4" +
+      "\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022" +
+      "\013signingRole\022O\n\017ssh_mount_point\030\006 \001(\tB6\362" +
+      "\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\r" +
+      "sshMountPoint\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\210\001\372\370\263\007\202\001\250\363\263\007\001\312\363\263\007x\302\364\263\007\032\n\003cli\022\023" +
+      "vaultAppRoleCertSSH\302\364\263\007#\n\014json_gateway\022\023" +
+      "vaultAppRoleCertSSH\302\364\263\007,\n\022terraform-prov" +
+      "ider\022\026vault_approle_cert_ssh\"\220\005\n\031VaultAp" +
+      "pRoleCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024iss" +
+      "uedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlM" +
+      "inutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263" +
+      "\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022O\n\017pki_" +
+      "mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302" +
+      "\364\263\007\035\n\014json_gateway\022\rpkiMountPoint\022N\n\016ser" +
+      "ver_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302" +
+      "\364\263\007\035\n\014json_gateway\022\rserverAddress\022J\n\014sig" +
+      "ning_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263" +
+      "\007\033\n\014json_gateway\022\013signingRole\022\"\n\004tags\030\010 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\213\001\372\370\263\007\205\001\250\363\263\007\001\312" +
+      "\363\263\007{\302\364\263\007\033\n\003cli\022\024vaultAppRoleCertX509\302\364\263\007" +
+      "$\n\014json_gateway\022\024vaultAppRoleCertX509\302\364\263" +
+      "\007-\n\022terraform-provider\022\027vault_approle_ce" +
+      "rt_x509\"\314\004\n\rVaultTLSStore\022\026\n\002id\030\001 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
+      "\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302" +
+      "\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020client" +
+      "_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364" +
+      "\263\007\036\n\014json_gateway\022\016clientCertPath\022O\n\017cli" +
+      "ent_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"" +
+      "\302\364\263\007\035\n\014json_gateway\022\rclientKeyPath\022@\n\tna" +
+      "mespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014jso" +
       "n_gateway\022\tnamespace\022N\n\016server_address\030\003" +
       " \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_ga" +
-      "teway\022\rserverAddress\022\"\n\004tags\030\010 \001(\0132\010.v1." +
-      "TagsB\n\362\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001\312\363\263\007a\302\364\263\007\023\n\003" +
-      "cli\022\014vaultAppRole\302\364\263\007\034\n\014json_gateway\022\014va" +
-      "ultAppRole\302\364\263\007#\n\022terraform-provider\022\rvau" +
-      "lt_approle\"\264\004\n\030VaultAppRoleCertSSHStore\022" +
-      "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(" +
-      "\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace" +
-      "\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress" +
-      "\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312" +
-      "\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017" +
-      "ssh_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n" +
-      "\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\215\001\372\370\263\007" +
-      "\207\001\250\363\263\007\001\312\363\263\007}\210\364\263\007\001\302\364\263\007\032\n\003cli\022\023vaultAppRol" +
-      "eCertSSH\302\364\263\007#\n\014json_gateway\022\023vaultAppRol" +
-      "eCertSSH\302\364\263\007,\n\022terraform-provider\022\026vault" +
-      "_approle_cert_ssh\"\271\004\n\031VaultAppRoleCertX5" +
-      "09Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030" +
-      "\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(" +
-      "\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tn" +
-      "amespace\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071" +
-      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiM" +
-      "ountPoint\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071" +
-      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserv" +
-      "erAddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363" +
-      "\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signin" +
-      "gRole\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:\221\001\372\370\263\007\213\001\250\363\263\007\001\312\363\263\007\200\001\210\364\263\007\001\302\364\263\007\033\n\003cli\022\024va" +
-      "ultAppRoleCertX509\302\364\263\007$\n\014json_gateway\022\024v" +
-      "aultAppRoleCertX509\302\364\263\007-\n\022terraform-prov" +
-      "ider\022\027vault_approle_cert_x509\"\314\004\n\rVaultT" +
-      "LSStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030" +
-      "\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004" +
-      " \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway" +
-      "\022\ncaCertPath\022Q\n\020client_cert_path\030\005 \001(\tB7" +
-      "\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022" +
-      "\016clientCertPath\022O\n\017client_key_path\030\006 \001(\t" +
-      "B6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatewa" +
-      "y\022\rclientKeyPath\022@\n\tnamespace\030\010 \001(\tB-\362\370\263" +
-      "\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespa" +
-      "ce\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
-      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddre" +
-      "ss\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:d" +
-      "\372\370\263\007_\250\363\263\007\001\312\363\263\007U\302\364\263\007\017\n\003cli\022\010vaultTLS\302\364\263\007\030" +
-      "\n\014json_gateway\022\010vaultTLS\302\364\263\007\037\n\022terraform" +
-      "-provider\022\tvault_tls\"\215\006\n\024VaultTLSCertSSH" +
-      "Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
-      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001" +
-      "(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\n" +
-      "caCertPath\022Q\n\020client_cert_path\030\005 \001(\tB7\362\370" +
-      "\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016c" +
-      "lientCertPath\022O\n\017client_key_path\030\006 \001(\tB6" +
-      "\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022" +
-      "\rclientKeyPath\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(" +
-      "\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace" +
-      "\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress" +
-      "\022J\n\014signing_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312" +
-      "\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017" +
-      "ssh_mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n" +
-      "\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\200\001\372\370\263\007" +
-      "{\250\363\263\007\001\312\363\263\007q\210\364\263\007\001\302\364\263\007\026\n\003cli\022\017vaultTLSCert" +
-      "SSH\302\364\263\007\037\n\014json_gateway\022\017vaultTLSCertSSH\302" +
-      "\364\263\007(\n\022terraform-provider\022\022vault_tls_cert" +
-      "_ssh\"\221\006\n\025VaultTLSCertX509Store\022\026\n\002id\030\001 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312" +
-      "\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020c" +
-      "lient_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCertPath\022O" +
-      "\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001" +
-      "\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyPath\022" +
-      "@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031" +
-      "\n\014json_gateway\022\tnamespace\022O\n\017pki_mount_p" +
-      "oint\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rpkiMountPoint\022N\n\016server_add" +
-      "ress\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rserverAddress\022J\n\014signing_ro" +
-      "le\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014jso" +
-      "n_gateway\022\013signingRole\022\"\n\004tags\030\007 \001(\0132\010.v" +
-      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\203\001\372\370\263\007~\250\363\263\007\001\312\363\263\007t\210\364\263\007" +
-      "\001\302\364\263\007\027\n\003cli\022\020vaultTLSCertX509\302\364\263\007 \n\014json" +
-      "_gateway\022\020vaultTLSCertX509\302\364\263\007)\n\022terrafo" +
-      "rm-provider\022\023vault_tls_cert_x509\"\352\002\n\017Vau" +
-      "ltTokenStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
-      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace" +
-      "\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatew" +
-      "ay\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6\362" +
-      "\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\r" +
-      "serverAddress\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cli\022\nva" +
-      "ultToken\302\364\263\007\032\n\014json_gateway\022\nvaultToken\302" +
-      "\364\263\007!\n\022terraform-provider\022\013vault_token\"\254\004" +
-      "\n\026VaultTokenCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
-      "@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031" +
-      "\n\014json_gateway\022\tnamespace\022N\n\016server_addr" +
-      "ess\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014js" +
-      "on_gateway\022\rserverAddress\022J\n\014signing_rol" +
-      "e\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json" +
-      "_gateway\022\013signingRole\022O\n\017ssh_mount_point" +
-      "\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_" +
-      "gateway\022\rsshMountPoint\022\"\n\004tags\030\004 \001(\0132\010.v" +
-      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\207\001\372\370\263\007\201\001\250\363\263\007\001\312\363\263\007w\210\364\263" +
-      "\007\001\302\364\263\007\030\n\003cli\022\021vaultTokenCertSSH\302\364\263\007!\n\014js" +
-      "on_gateway\022\021vaultTokenCertSSH\302\364\263\007*\n\022terr" +
-      "aform-provider\022\024vault_token_cert_ssh\"\260\004\n" +
-      "\027VaultTokenCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
-      "@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031" +
-      "\n\014json_gateway\022\tnamespace\022O\n\017pki_mount_p" +
-      "oint\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rpkiMountPoint\022N\n\016server_add" +
-      "ress\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rserverAddress\022J\n\014signing_ro" +
-      "le\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014jso" +
-      "n_gateway\022\013signingRole\022\"\n\004tags\030\004 \001(\0132\010.v" +
-      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\212\001\372\370\263\007\204\001\250\363\263\007\001\312\363\263\007z\210\364\263" +
-      "\007\001\302\364\263\007\031\n\003cli\022\022vaultTokenCertX509\302\364\263\007\"\n\014j" +
-      "son_gateway\022\022vaultTokenCertX509\302\364\263\007+\n\022te" +
-      "rraform-provider\022\025vault_token_cert_x509B" +
-      "m\n\031com.strongdm.api.plumbingB\031SecretStor" +
-      "esTypesPlumbingZ5github.com/strongdm/str" +
-      "ongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "teway\022\rserverAddress\022\"\n\004tags\030\007 \001(\0132\010.v1." +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\312\363\263\007U\302\364\263\007\017\n\003" +
+      "cli\022\010vaultTLS\302\364\263\007\030\n\014json_gateway\022\010vaultT" +
+      "LS\302\364\263\007\037\n\022terraform-provider\022\tvault_tls\"\344" +
+      "\006\n\024VaultTLSCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D" +
+      "\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263" +
+      "\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020client_c" +
+      "ert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007" +
+      "\036\n\014json_gateway\022\016clientCertPath\022O\n\017clien" +
+      "t_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364" +
+      "\263\007\035\n\014json_gateway\022\rclientKeyPath\022[\n\024issu" +
+      "edCertTTLMinutes\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMi" +
+      "nutes\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007" +
+      "\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016serve" +
+      "r_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
+      "\007\035\n\014json_gateway\022\rserverAddress\022J\n\014signi" +
+      "ng_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033" +
+      "\n\014json_gateway\022\013signingRole\022O\n\017ssh_mount" +
+      "_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n" +
+      "\014json_gateway\022\rsshMountPoint\022\"\n\004tags\030\007 \001" +
+      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:{\372\370\263\007v\250\363\263\007\001\312\363\263\007" +
+      "l\302\364\263\007\026\n\003cli\022\017vaultTLSCertSSH\302\364\263\007\037\n\014json_" +
+      "gateway\022\017vaultTLSCertSSH\302\364\263\007(\n\022terraform" +
+      "-provider\022\022vault_tls_cert_ssh\"\350\006\n\025VaultT" +
+      "LSCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cer" +
+      "t_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json" +
+      "_gateway\022\ncaCertPath\022Q\n\020client_cert_path" +
+      "\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_" +
+      "gateway\022\016clientCertPath\022O\n\017client_key_pa" +
+      "th\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014jso" +
+      "n_gateway\022\rclientKeyPath\022[\n\024issuedCertTT" +
+      "LMinutes\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007" +
+      "$\n\014json_gateway\022\024issuedCertTtlMinutes\022@\n" +
+      "\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014" +
+      "json_gateway\022\tnamespace\022O\n\017pki_mount_poi" +
+      "nt\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014jso" +
+      "n_gateway\022\rpkiMountPoint\022N\n\016server_addre" +
+      "ss\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014jso" +
+      "n_gateway\022\rserverAddress\022J\n\014signing_role" +
+      "\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_" +
+      "gateway\022\013signingRole\022\"\n\004tags\030\007 \001(\0132\010.v1." +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001:~\372\370\263\007y\250\363\263\007\001\312\363\263\007o\302\364\263\007\027\n\003" +
+      "cli\022\020vaultTLSCertX509\302\364\263\007 \n\014json_gateway" +
+      "\022\020vaultTLSCertX509\302\364\263\007)\n\022terraform-provi" +
+      "der\022\023vault_tls_cert_x509\"\352\002\n\017VaultTokenS" +
+      "tore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001" +
+      "(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-" +
+      "\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tname" +
+      "space\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007" +
+      "\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAd" +
+      "dress\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
+      "\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cli\022\nvaultToken" +
+      "\302\364\263\007\032\n\014json_gateway\022\nvaultToken\302\364\263\007!\n\022te" +
+      "rraform-provider\022\013vault_token\"\203\005\n\026VaultT" +
+      "okenCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issue" +
+      "dCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363" +
+      "\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMin" +
+      "utes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036" +
+      "\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016server" +
+      "_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007" +
+      "\035\n\014json_gateway\022\rserverAddress\022J\n\014signin" +
+      "g_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n" +
+      "\014json_gateway\022\013signingRole\022O\n\017ssh_mount_" +
+      "point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014" +
+      "json_gateway\022\rsshMountPoint\022\"\n\004tags\030\004 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\201\001\372\370\263\007|\250\363\263\007\001\312\363\263\007" +
+      "r\302\364\263\007\030\n\003cli\022\021vaultTokenCertSSH\302\364\263\007!\n\014jso" +
+      "n_gateway\022\021vaultTokenCertSSH\302\364\263\007*\n\022terra" +
+      "form-provider\022\024vault_token_cert_ssh\"\207\005\n\027" +
+      "VaultTokenCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[" +
+      "\n\024issuedCertTTLMinutes\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001" +
+      "\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCer" +
+      "tTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263" +
+      "\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022O\n" +
+      "\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMountPoint\022N" +
+      "\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022J" +
+      "\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022\"\n\004ta" +
+      "gs\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\204\001\372\370\263\007\177\250\363" +
+      "\263\007\001\312\363\263\007u\302\364\263\007\031\n\003cli\022\022vaultTokenCertX509\302\364" +
+      "\263\007\"\n\014json_gateway\022\022vaultTokenCertX509\302\364\263" +
+      "\007+\n\022terraform-provider\022\025vault_token_cert" +
+      "_x509Bm\n\031com.strongdm.api.plumbingB\031Secr" +
+      "etStoresTypesPlumbingZ5github.com/strong" +
+      "dm/strongdm-sdk-go/v3/internal/v1;v1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36005,7 +36555,7 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_GCPCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GCPCertX509Store_descriptor,
-        new java.lang.String[] { "Id", "Name", "CaID", "CaPoolID", "Location", "ProjectID", "Tags", });
+        new java.lang.String[] { "Id", "Name", "CaID", "CaPoolID", "IssuedCertTTLMinutes", "Location", "ProjectID", "Tags", });
     internal_static_v1_VaultAppRoleStore_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_v1_VaultAppRoleStore_fieldAccessorTable = new
@@ -36017,13 +36567,13 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_VaultAppRoleCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertSSHStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultAppRoleCertX509Store_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_v1_VaultAppRoleCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertX509Store_descriptor,
-        new java.lang.String[] { "Id", "Name", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTLSStore_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_v1_VaultTLSStore_fieldAccessorTable = new
@@ -36035,13 +36585,13 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_VaultTLSCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertSSHStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
+        new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTLSCertX509Store_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_v1_VaultTLSCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertX509Store_descriptor,
-        new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
+        new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTokenStore_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_v1_VaultTokenStore_fieldAccessorTable = new
@@ -36053,13 +36603,13 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_VaultTokenCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertSSHStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTokenCertX509Store_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_v1_VaultTokenCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertX509Store_descriptor,
-        new java.lang.String[] { "Id", "Name", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

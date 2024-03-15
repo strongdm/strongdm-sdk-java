@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * GCPCertX509Store is currently unstable, and its API may change, or it may be removed, without a
- * major version bump.
- */
 public class GCPCertX509Store implements SecretStore {
   private String caId;
   /** The ID of the target CA */
@@ -50,6 +46,16 @@ public class GCPCertX509Store implements SecretStore {
   /** Unique identifier of the SecretStore. */
   public void setId(String in) {
     this.id = in;
+  }
+
+  private int issuedCertTtlMinutes;
+  /** The lifetime of certificates issued by this CA represented in minutes. */
+  public int getIssuedCertTTLMinutes() {
+    return this.issuedCertTtlMinutes;
+  }
+  /** The lifetime of certificates issued by this CA represented in minutes. */
+  public void setIssuedCertTTLMinutes(int in) {
+    this.issuedCertTtlMinutes = in;
   }
 
   private String location;

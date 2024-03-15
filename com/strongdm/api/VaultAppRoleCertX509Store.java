@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * VaultAppRoleCertX509Store is currently unstable, and its API may change, or it may be removed,
- * without a major version bump.
- */
 public class VaultAppRoleCertX509Store implements SecretStore {
   private String id;
   /** Unique identifier of the SecretStore. */
@@ -30,6 +26,16 @@ public class VaultAppRoleCertX509Store implements SecretStore {
   /** Unique identifier of the SecretStore. */
   public void setId(String in) {
     this.id = in;
+  }
+
+  private int issuedCertTtlMinutes;
+  /** The lifetime of certificates issued by this CA in minutes. Recommended value is 5. */
+  public int getIssuedCertTTLMinutes() {
+    return this.issuedCertTtlMinutes;
+  }
+  /** The lifetime of certificates issued by this CA in minutes. Recommended value is 5. */
+  public void setIssuedCertTTLMinutes(int in) {
+    this.issuedCertTtlMinutes = in;
   }
 
   private String name;
