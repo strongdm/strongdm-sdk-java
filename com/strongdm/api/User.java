@@ -88,21 +88,21 @@ public class User implements Account {
   }
 
   private String permissionLevel;
-  /** PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user. */
+  /** PermissionLevel is the user's permission level e.g. admin, DBA, user. */
   public String getPermissionLevel() {
     return this.permissionLevel;
   }
-  /** PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user. */
+  /** PermissionLevel is the user's permission level e.g. admin, DBA, user. */
   public void setPermissionLevel(String in) {
     this.permissionLevel = in;
   }
 
   private boolean suspended;
-  /** The User's suspended state. */
+  /** Suspended is a read only field for the User's suspended state. */
   public boolean getSuspended() {
     return this.suspended;
   }
-  /** The User's suspended state. */
+  /** Suspended is a read only field for the User's suspended state. */
   public void setSuspended(boolean in) {
     this.suspended = in;
   }

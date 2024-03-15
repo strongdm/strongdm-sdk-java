@@ -11025,32 +11025,32 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.v1.Relay relay = 1;</code>
+     * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the relay field is set.
      */
     boolean hasRelay();
     /**
-     * <code>.v1.Relay relay = 1;</code>
+     * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
      * @return The relay.
      */
     com.strongdm.api.plumbing.NodesPlumbing.Relay getRelay();
     /**
-     * <code>.v1.Relay relay = 1;</code>
+     * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.NodesPlumbing.RelayOrBuilder getRelayOrBuilder();
 
     /**
-     * <code>.v1.Gateway gateway = 2;</code>
+     * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the gateway field is set.
      */
     boolean hasGateway();
     /**
-     * <code>.v1.Gateway gateway = 2;</code>
+     * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
      * @return The gateway.
      */
     com.strongdm.api.plumbing.NodesPlumbing.Gateway getGateway();
     /**
-     * <code>.v1.Gateway gateway = 2;</code>
+     * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.NodesPlumbing.GatewayOrBuilder getGatewayOrBuilder();
 
@@ -11213,7 +11213,7 @@ public final class NodesPlumbing {
 
     public static final int RELAY_FIELD_NUMBER = 1;
     /**
-     * <code>.v1.Relay relay = 1;</code>
+     * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the relay field is set.
      */
     @java.lang.Override
@@ -11221,7 +11221,7 @@ public final class NodesPlumbing {
       return nodeCase_ == 1;
     }
     /**
-     * <code>.v1.Relay relay = 1;</code>
+     * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
      * @return The relay.
      */
     @java.lang.Override
@@ -11232,7 +11232,7 @@ public final class NodesPlumbing {
       return com.strongdm.api.plumbing.NodesPlumbing.Relay.getDefaultInstance();
     }
     /**
-     * <code>.v1.Relay relay = 1;</code>
+     * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.NodesPlumbing.RelayOrBuilder getRelayOrBuilder() {
@@ -11244,7 +11244,7 @@ public final class NodesPlumbing {
 
     public static final int GATEWAY_FIELD_NUMBER = 2;
     /**
-     * <code>.v1.Gateway gateway = 2;</code>
+     * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the gateway field is set.
      */
     @java.lang.Override
@@ -11252,7 +11252,7 @@ public final class NodesPlumbing {
       return nodeCase_ == 2;
     }
     /**
-     * <code>.v1.Gateway gateway = 2;</code>
+     * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
      * @return The gateway.
      */
     @java.lang.Override
@@ -11263,7 +11263,7 @@ public final class NodesPlumbing {
       return com.strongdm.api.plumbing.NodesPlumbing.Gateway.getDefaultInstance();
     }
     /**
-     * <code>.v1.Gateway gateway = 2;</code>
+     * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.NodesPlumbing.GatewayOrBuilder getGatewayOrBuilder() {
@@ -11652,7 +11652,7 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.NodesPlumbing.Relay, com.strongdm.api.plumbing.NodesPlumbing.Relay.Builder, com.strongdm.api.plumbing.NodesPlumbing.RelayOrBuilder> relayBuilder_;
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        * @return Whether the relay field is set.
        */
       @java.lang.Override
@@ -11660,7 +11660,7 @@ public final class NodesPlumbing {
         return nodeCase_ == 1;
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        * @return The relay.
        */
       @java.lang.Override
@@ -11678,7 +11678,7 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRelay(com.strongdm.api.plumbing.NodesPlumbing.Relay value) {
         if (relayBuilder_ == null) {
@@ -11694,7 +11694,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRelay(
           com.strongdm.api.plumbing.NodesPlumbing.Relay.Builder builderForValue) {
@@ -11708,7 +11708,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeRelay(com.strongdm.api.plumbing.NodesPlumbing.Relay value) {
         if (relayBuilder_ == null) {
@@ -11731,7 +11731,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearRelay() {
         if (relayBuilder_ == null) {
@@ -11750,13 +11750,13 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.NodesPlumbing.Relay.Builder getRelayBuilder() {
         return getRelayFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
       public com.strongdm.api.plumbing.NodesPlumbing.RelayOrBuilder getRelayOrBuilder() {
@@ -11770,7 +11770,7 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>.v1.Relay relay = 1;</code>
+       * <code>.v1.Relay relay = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.NodesPlumbing.Relay, com.strongdm.api.plumbing.NodesPlumbing.Relay.Builder, com.strongdm.api.plumbing.NodesPlumbing.RelayOrBuilder> 
@@ -11794,7 +11794,7 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.NodesPlumbing.Gateway, com.strongdm.api.plumbing.NodesPlumbing.Gateway.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayOrBuilder> gatewayBuilder_;
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the gateway field is set.
        */
       @java.lang.Override
@@ -11802,7 +11802,7 @@ public final class NodesPlumbing {
         return nodeCase_ == 2;
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        * @return The gateway.
        */
       @java.lang.Override
@@ -11820,7 +11820,7 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setGateway(com.strongdm.api.plumbing.NodesPlumbing.Gateway value) {
         if (gatewayBuilder_ == null) {
@@ -11836,7 +11836,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setGateway(
           com.strongdm.api.plumbing.NodesPlumbing.Gateway.Builder builderForValue) {
@@ -11850,7 +11850,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeGateway(com.strongdm.api.plumbing.NodesPlumbing.Gateway value) {
         if (gatewayBuilder_ == null) {
@@ -11873,7 +11873,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearGateway() {
         if (gatewayBuilder_ == null) {
@@ -11892,13 +11892,13 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.NodesPlumbing.Gateway.Builder getGatewayBuilder() {
         return getGatewayFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
       public com.strongdm.api.plumbing.NodesPlumbing.GatewayOrBuilder getGatewayOrBuilder() {
@@ -11912,7 +11912,7 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>.v1.Gateway gateway = 2;</code>
+       * <code>.v1.Gateway gateway = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.NodesPlumbing.Gateway, com.strongdm.api.plumbing.NodesPlumbing.Gateway.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayOrBuilder> 
@@ -21643,69 +21643,69 @@ public final class NodesPlumbing {
       "esponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.Node" +
       "B\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
       "teLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
-      "\263\007\022\262\364\263\007\r!json_gateway\"\305\001\n\004Node\022\032\n\005relay\030" +
-      "\001 \001(\0132\t.v1.RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v1" +
-      ".GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_examples/n" +
-      "ode_resource.txt\252\363\263\007 tf_examples/node_da" +
-      "ta_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022\034\252\370\263\007\t\252\370" +
-      "\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\250\004\n\005Relay\022\026\n\002id\030\001 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
-      "\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364" +
-      "\263\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004tags\030\004 \001" +
-      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filt" +
-      "er\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\006 \001(\tB\017\362\370" +
-      "\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\007 \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263" +
-      "\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo" +
-      "_private\022t\n\023maintenance_windows\030\013 \003(\0132\031." +
-      "v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007" +
-      "-\302\364\263\007(\n\022terraform-provider\022\022maintenance_" +
-      "window\022L\n\020discovery_config\030\014 \001(\0132\027.v1.No" +
-      "deDiscoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_pri" +
-      "vate:\n\372\370\263\007\005\250\363\263\007\001\"\204\005\n\007Gateway\022\026\n\002id\030\001 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364" +
-      "\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001" +
-      "*\262\364\263\007\023!terraform-provider\022,\n\016listen_addr" +
-      "ess\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_" +
-      "address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004t" +
-      "ags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gatew" +
-      "ay_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\010 " +
-      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t \001(\tB\017" +
-      "\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001" +
-      "\262\364\263\007\ngo_private\022t\n\023maintenance_windows\030\r" +
-      " \003(\0132\031.v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363" +
-      "\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-provider\022\022maint" +
-      "enance_window\022L\n\020discovery_config\030\016 \001(\0132" +
-      "\027.v1.NodeDiscoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007" +
-      "\ngo_private:\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n\025NodeMaintena" +
-      "nceWindow\022!\n\rcron_schedule\030\001 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\020require_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263" +
-      "\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-prov" +
-      "ider\022\010TypeList\372\363\263\007\035nodeMaintenanceWindow" +
-      "ElemType\"\303\001\n\023NodeDiscoveryConfig\022\033\n\007enab" +
-      "led\030\001 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\0225\n\006period\030\002 \001(\0132\031." +
-      "google.protobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014" +
-      "enabledTypes\030\003 \003(\0132\033.v1.NodeDiscoveryTyp" +
-      "eConfigB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
-      "rivate\"N\n\027NodeDiscoveryTypeConfig\022\030\n\004typ" +
-      "e\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
-      "rivate2\356\003\n\005Nodes\022Z\n\006Create\022\025.v1.NodeCrea" +
-      "teRequest\032\026.v1.NodeCreateResponse\"!\202\371\263\007\t" +
-      "\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1" +
-      ".NodeGetRequest\032\023.v1.NodeGetResponse\"%\202\371" +
-      "\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006U" +
-      "pdate\022\025.v1.NodeUpdateRequest\032\026.v1.NodeUp" +
-      "dateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1" +
-      "/nodes/{id}\022a\n\006Delete\022\025.v1.NodeDeleteReq" +
-      "uest\032\026.v1.NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006" +
-      "delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023" +
-      ".v1.NodeListRequest\032\024.v1.NodeListRespons" +
-      "e\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263" +
-      "\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Ba\n\031com.strongdm." +
-      "api.plumbingB\rNodesPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
-      "v1b\006proto3"
+      "\263\007\022\262\364\263\007\r!json_gateway\"\335\001\n\004Node\022&\n\005relay\030" +
+      "\001 \001(\0132\t.v1.RelayB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007gatewa" +
+      "y\030\002 \001(\0132\013.v1.GatewayB\n\362\370\263\007\005\260\363\263\007\001H\000:[\372\370\263\007" +
+      "L\302\363\263\007G\242\363\263\007\035tf_examples/node_resource.txt" +
+      "\252\363\263\007 tf_examples/node_data_source.txt\372\370\263" +
+      "\007\005\250\363\263\007\001B$\n\004node\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007" +
+      "\004name\"\250\004\n\005Relay\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030" +
+      "\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraf" +
+      "orm-provider\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\005 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\037\n\006device\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n" +
+      "\010location\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007vers" +
+      "ion\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\t" +
+      "B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023main" +
+      "tenance_windows\030\013 \003(\0132\031.v1.NodeMaintenan" +
+      "ceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terrafor" +
+      "m-provider\022\022maintenance_window\022L\n\020discov" +
+      "ery_config\030\014 \001(\0132\027.v1.NodeDiscoveryConfi" +
+      "gB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007\001" +
+      "\"\204\005\n\007Gateway\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
+      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001" +
+      "(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform" +
+      "-provider\022,\n\016listen_address\030\004 \001(\tB\024\362\370\263\007\017" +
+      "\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_address\030\005 \001(\tB\024\362" +
+      "\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\007 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230" +
+      "\364\263\007\001\022!\n\010location\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022" +
+      " \n\007version\030\n \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uui" +
+      "d\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022" +
+      "t\n\023maintenance_windows\030\r \003(\0132\031.v1.NodeMa" +
+      "intenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022t" +
+      "erraform-provider\022\022maintenance_window\022L\n" +
+      "\020discovery_config\030\016 \001(\0132\027.v1.NodeDiscove" +
+      "ryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263" +
+      "\007\005\250\363\263\007\001\"\266\001\n\025NodeMaintenanceWindow\022!\n\rcro" +
+      "n_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_" +
+      "idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363" +
+      "\263\007E\362\363\263\007\036\n\022terraform-provider\022\010TypeList\372\363" +
+      "\263\007\035nodeMaintenanceWindowElemType\"\303\001\n\023Nod" +
+      "eDiscoveryConfig\022\033\n\007enabled\030\001 \001(\010B\n\362\370\263\007\005" +
+      "\260\363\263\007\001\0225\n\006period\030\002 \001(\0132\031.google.protobuf." +
+      "DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014enabledTypes\030\003 \003" +
+      "(\0132\033.v1.NodeDiscoveryTypeConfigB\n\362\370\263\007\005\260\363" +
+      "\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"N\n\027NodeDi" +
+      "scoveryTypeConfig\022\030\n\004type\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\356\003\n\005Nodes" +
+      "\022Z\n\006Create\022\025.v1.NodeCreateRequest\032\026.v1.N" +
+      "odeCreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363" +
+      "\263\007\t/v1/nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032" +
+      "\023.v1.NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023" +
+      "\252\363\263\007\016/v1/nodes/{id}\022^\n\006Update\022\025.v1.NodeU" +
+      "pdateRequest\032\026.v1.NodeUpdateResponse\"%\202\371" +
+      "\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006D" +
+      "elete\022\025.v1.NodeDeleteRequest\032\026.v1.NodeDe" +
+      "leteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016" +
+      "/v1/nodes/{id}\022S\n\004List\022\023.v1.NodeListRequ" +
+      "est\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get" +
+      "\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007" +
+      "\322\371\263\007\002n-Ba\n\031com.strongdm.api.plumbingB\rNo" +
+      "desPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

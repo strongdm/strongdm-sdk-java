@@ -15393,8 +15393,8 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setLastName((plumbing.getLastName()));
     porcelain.setManagedBy((plumbing.getManagedBy()));
-    porcelain.setPermissionLevel((plumbing.getPermissionLevel()));
-    porcelain.setSuspended((plumbing.getSuspended()));
+    porcelain.setPermissionLevel((plumbing.getPermissionLevelRW()));
+    porcelain.setSuspended((plumbing.getSuspendedRO()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
   }
@@ -15423,9 +15423,9 @@ public class Plumbing {
       builder.setManagedBy((porcelain.getManagedBy()));
     }
     if (porcelain.getPermissionLevel() != null) {
-      builder.setPermissionLevel((porcelain.getPermissionLevel()));
+      builder.setPermissionLevelRW((porcelain.getPermissionLevel()));
     }
-    builder.setSuspended(porcelain.getSuspended());
+    builder.setSuspendedRO(porcelain.getSuspended());
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }

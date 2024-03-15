@@ -11025,32 +11025,32 @@ public final class AccountsPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.v1.User user = 1;</code>
+     * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the user field is set.
      */
     boolean hasUser();
     /**
-     * <code>.v1.User user = 1;</code>
+     * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
      * @return The user.
      */
     com.strongdm.api.plumbing.AccountsPlumbing.User getUser();
     /**
-     * <code>.v1.User user = 1;</code>
+     * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.AccountsPlumbing.UserOrBuilder getUserOrBuilder();
 
     /**
-     * <code>.v1.Service service = 2;</code>
+     * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the service field is set.
      */
     boolean hasService();
     /**
-     * <code>.v1.Service service = 2;</code>
+     * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
      * @return The service.
      */
     com.strongdm.api.plumbing.AccountsPlumbing.Service getService();
     /**
-     * <code>.v1.Service service = 2;</code>
+     * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.AccountsPlumbing.ServiceOrBuilder getServiceOrBuilder();
 
@@ -11243,7 +11243,7 @@ public final class AccountsPlumbing {
 
     public static final int USER_FIELD_NUMBER = 1;
     /**
-     * <code>.v1.User user = 1;</code>
+     * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the user field is set.
      */
     @java.lang.Override
@@ -11251,7 +11251,7 @@ public final class AccountsPlumbing {
       return accountCase_ == 1;
     }
     /**
-     * <code>.v1.User user = 1;</code>
+     * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
      * @return The user.
      */
     @java.lang.Override
@@ -11262,7 +11262,7 @@ public final class AccountsPlumbing {
       return com.strongdm.api.plumbing.AccountsPlumbing.User.getDefaultInstance();
     }
     /**
-     * <code>.v1.User user = 1;</code>
+     * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AccountsPlumbing.UserOrBuilder getUserOrBuilder() {
@@ -11274,7 +11274,7 @@ public final class AccountsPlumbing {
 
     public static final int SERVICE_FIELD_NUMBER = 2;
     /**
-     * <code>.v1.Service service = 2;</code>
+     * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the service field is set.
      */
     @java.lang.Override
@@ -11282,7 +11282,7 @@ public final class AccountsPlumbing {
       return accountCase_ == 2;
     }
     /**
-     * <code>.v1.Service service = 2;</code>
+     * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
      * @return The service.
      */
     @java.lang.Override
@@ -11293,7 +11293,7 @@ public final class AccountsPlumbing {
       return com.strongdm.api.plumbing.AccountsPlumbing.Service.getDefaultInstance();
     }
     /**
-     * <code>.v1.Service service = 2;</code>
+     * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AccountsPlumbing.ServiceOrBuilder getServiceOrBuilder() {
@@ -11738,7 +11738,7 @@ public final class AccountsPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AccountsPlumbing.User, com.strongdm.api.plumbing.AccountsPlumbing.User.Builder, com.strongdm.api.plumbing.AccountsPlumbing.UserOrBuilder> userBuilder_;
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        * @return Whether the user field is set.
        */
       @java.lang.Override
@@ -11746,7 +11746,7 @@ public final class AccountsPlumbing {
         return accountCase_ == 1;
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        * @return The user.
        */
       @java.lang.Override
@@ -11764,7 +11764,7 @@ public final class AccountsPlumbing {
         }
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setUser(com.strongdm.api.plumbing.AccountsPlumbing.User value) {
         if (userBuilder_ == null) {
@@ -11780,7 +11780,7 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setUser(
           com.strongdm.api.plumbing.AccountsPlumbing.User.Builder builderForValue) {
@@ -11794,7 +11794,7 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeUser(com.strongdm.api.plumbing.AccountsPlumbing.User value) {
         if (userBuilder_ == null) {
@@ -11817,7 +11817,7 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearUser() {
         if (userBuilder_ == null) {
@@ -11836,13 +11836,13 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.AccountsPlumbing.User.Builder getUserBuilder() {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
       public com.strongdm.api.plumbing.AccountsPlumbing.UserOrBuilder getUserOrBuilder() {
@@ -11856,7 +11856,7 @@ public final class AccountsPlumbing {
         }
       }
       /**
-       * <code>.v1.User user = 1;</code>
+       * <code>.v1.User user = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AccountsPlumbing.User, com.strongdm.api.plumbing.AccountsPlumbing.User.Builder, com.strongdm.api.plumbing.AccountsPlumbing.UserOrBuilder> 
@@ -11880,7 +11880,7 @@ public final class AccountsPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AccountsPlumbing.Service, com.strongdm.api.plumbing.AccountsPlumbing.Service.Builder, com.strongdm.api.plumbing.AccountsPlumbing.ServiceOrBuilder> serviceBuilder_;
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the service field is set.
        */
       @java.lang.Override
@@ -11888,7 +11888,7 @@ public final class AccountsPlumbing {
         return accountCase_ == 2;
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        * @return The service.
        */
       @java.lang.Override
@@ -11906,7 +11906,7 @@ public final class AccountsPlumbing {
         }
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setService(com.strongdm.api.plumbing.AccountsPlumbing.Service value) {
         if (serviceBuilder_ == null) {
@@ -11922,7 +11922,7 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setService(
           com.strongdm.api.plumbing.AccountsPlumbing.Service.Builder builderForValue) {
@@ -11936,7 +11936,7 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeService(com.strongdm.api.plumbing.AccountsPlumbing.Service value) {
         if (serviceBuilder_ == null) {
@@ -11959,7 +11959,7 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearService() {
         if (serviceBuilder_ == null) {
@@ -11978,13 +11978,13 @@ public final class AccountsPlumbing {
         return this;
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.AccountsPlumbing.Service.Builder getServiceBuilder() {
         return getServiceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
       public com.strongdm.api.plumbing.AccountsPlumbing.ServiceOrBuilder getServiceOrBuilder() {
@@ -11998,7 +11998,7 @@ public final class AccountsPlumbing {
         }
       }
       /**
-       * <code>.v1.Service service = 2;</code>
+       * <code>.v1.Service service = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AccountsPlumbing.Service, com.strongdm.api.plumbing.AccountsPlumbing.Service.Builder, com.strongdm.api.plumbing.AccountsPlumbing.ServiceOrBuilder> 
@@ -12393,6 +12393,36 @@ public final class AccountsPlumbing {
      */
     com.google.protobuf.ByteString
         getExternalIdBytes();
+
+    /**
+     * <pre>
+     * Suspended is a read only field for the User's suspended state.
+     * </pre>
+     *
+     * <code>bool suspendedRO = 10 [(.v1.field_options) = { ... }</code>
+     * @return The suspendedRO.
+     */
+    boolean getSuspendedRO();
+
+    /**
+     * <pre>
+     * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+     * </pre>
+     *
+     * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+     * @return The permissionLevelRW.
+     */
+    java.lang.String getPermissionLevelRW();
+    /**
+     * <pre>
+     * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+     * </pre>
+     *
+     * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for permissionLevelRW.
+     */
+    com.google.protobuf.ByteString
+        getPermissionLevelRWBytes();
   }
   /**
    * <pre>
@@ -12419,6 +12449,7 @@ public final class AccountsPlumbing {
       permissionLevel_ = "";
       managedBy_ = "";
       externalId_ = "";
+      permissionLevelRW_ = "";
     }
 
     @java.lang.Override
@@ -12509,6 +12540,17 @@ public final class AccountsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               externalId_ = s;
+              break;
+            }
+            case 80: {
+
+              suspendedRO_ = input.readBool();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              permissionLevelRW_ = s;
               break;
             }
             default: {
@@ -12920,6 +12962,67 @@ public final class AccountsPlumbing {
       }
     }
 
+    public static final int SUSPENDEDRO_FIELD_NUMBER = 10;
+    private boolean suspendedRO_;
+    /**
+     * <pre>
+     * Suspended is a read only field for the User's suspended state.
+     * </pre>
+     *
+     * <code>bool suspendedRO = 10 [(.v1.field_options) = { ... }</code>
+     * @return The suspendedRO.
+     */
+    @java.lang.Override
+    public boolean getSuspendedRO() {
+      return suspendedRO_;
+    }
+
+    public static final int PERMISSION_LEVELRW_FIELD_NUMBER = 11;
+    private volatile java.lang.Object permissionLevelRW_;
+    /**
+     * <pre>
+     * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+     * </pre>
+     *
+     * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+     * @return The permissionLevelRW.
+     */
+    @java.lang.Override
+    public java.lang.String getPermissionLevelRW() {
+      java.lang.Object ref = permissionLevelRW_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        permissionLevelRW_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+     * </pre>
+     *
+     * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for permissionLevelRW.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPermissionLevelRWBytes() {
+      java.lang.Object ref = permissionLevelRW_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        permissionLevelRW_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12961,6 +13064,12 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, externalId_);
       }
+      if (suspendedRO_ != false) {
+        output.writeBool(10, suspendedRO_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permissionLevelRW_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, permissionLevelRW_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12999,6 +13108,13 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, externalId_);
       }
+      if (suspendedRO_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, suspendedRO_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permissionLevelRW_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, permissionLevelRW_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13035,6 +13151,10 @@ public final class AccountsPlumbing {
           .equals(other.getManagedBy())) return false;
       if (!getExternalId()
           .equals(other.getExternalId())) return false;
+      if (getSuspendedRO()
+          != other.getSuspendedRO()) return false;
+      if (!getPermissionLevelRW()
+          .equals(other.getPermissionLevelRW())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13067,6 +13187,11 @@ public final class AccountsPlumbing {
       hash = (53 * hash) + getManagedBy().hashCode();
       hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + SUSPENDEDRO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuspendedRO());
+      hash = (37 * hash) + PERMISSION_LEVELRW_FIELD_NUMBER;
+      hash = (53 * hash) + getPermissionLevelRW().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13227,6 +13352,10 @@ public final class AccountsPlumbing {
 
         externalId_ = "";
 
+        suspendedRO_ = false;
+
+        permissionLevelRW_ = "";
+
         return this;
       }
 
@@ -13266,6 +13395,8 @@ public final class AccountsPlumbing {
         result.permissionLevel_ = permissionLevel_;
         result.managedBy_ = managedBy_;
         result.externalId_ = externalId_;
+        result.suspendedRO_ = suspendedRO_;
+        result.permissionLevelRW_ = permissionLevelRW_;
         onBuilt();
         return result;
       }
@@ -13346,6 +13477,13 @@ public final class AccountsPlumbing {
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (other.getSuspendedRO() != false) {
+          setSuspendedRO(other.getSuspendedRO());
+        }
+        if (!other.getPermissionLevelRW().isEmpty()) {
+          permissionLevelRW_ = other.permissionLevelRW_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -14243,6 +14381,145 @@ public final class AccountsPlumbing {
   checkByteStringIsUtf8(value);
         
         externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean suspendedRO_ ;
+      /**
+       * <pre>
+       * Suspended is a read only field for the User's suspended state.
+       * </pre>
+       *
+       * <code>bool suspendedRO = 10 [(.v1.field_options) = { ... }</code>
+       * @return The suspendedRO.
+       */
+      @java.lang.Override
+      public boolean getSuspendedRO() {
+        return suspendedRO_;
+      }
+      /**
+       * <pre>
+       * Suspended is a read only field for the User's suspended state.
+       * </pre>
+       *
+       * <code>bool suspendedRO = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The suspendedRO to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuspendedRO(boolean value) {
+        
+        suspendedRO_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Suspended is a read only field for the User's suspended state.
+       * </pre>
+       *
+       * <code>bool suspendedRO = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuspendedRO() {
+        
+        suspendedRO_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object permissionLevelRW_ = "";
+      /**
+       * <pre>
+       * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+       * </pre>
+       *
+       * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+       * @return The permissionLevelRW.
+       */
+      public java.lang.String getPermissionLevelRW() {
+        java.lang.Object ref = permissionLevelRW_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          permissionLevelRW_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+       * </pre>
+       *
+       * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for permissionLevelRW.
+       */
+      public com.google.protobuf.ByteString
+          getPermissionLevelRWBytes() {
+        java.lang.Object ref = permissionLevelRW_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          permissionLevelRW_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+       * </pre>
+       *
+       * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The permissionLevelRW to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionLevelRW(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        permissionLevelRW_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+       * </pre>
+       *
+       * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissionLevelRW() {
+        
+        permissionLevelRW_ = getDefaultInstance().getPermissionLevelRW();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PermissionLevel is the user's permission level e.g. admin, DBA, user.
+       * </pre>
+       *
+       * <code>string permission_levelRW = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for permissionLevelRW to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionLevelRWBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        permissionLevelRW_ = value;
         onChanged();
         return this;
       }
@@ -17257,49 +17534,62 @@ public final class AccountsPlumbing {
       ")\n\010accounts\030\002 \003(\0132\013.v1.AccountB\n\362\370\263\007\005\270\363\263" +
       "\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMet" +
       "adataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!j" +
-      "son_gateway\"\206\002\n\007Account\022\030\n\004user\030\001 \001(\0132\010." +
-      "v1.UserH\000\022\036\n\007service\030\002 \001(\0132\013.v1.ServiceH" +
-      "\000\0220\n\005token\030\003 \001(\0132\t.v1.TokenB\024\362\370\263\007\017\262\364\263\007\ng" +
-      "o_privateH\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf" +
-      "_examples/account_resource.txt\252\363\263\007#tf_ex" +
-      "amples/account_data_source.txtB,\n\007accoun" +
-      "t\022!\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263\007\004tags\"\307\002\n" +
-      "\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005email\030\002" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst_name\030\003 \001(" +
-      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\tlast_name\030\004 \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\005 \001(\010B\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022)\n\020permission_level\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230" +
-      "\364\263\007\001\022#\n\nmanaged_by\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007" +
-      "\001\022\037\n\013external_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007" +
-      "\005\250\363\263\007\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsus" +
-      "pended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010" +
-      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\217\002\n\005Tok" +
-      "en\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\t" +
-      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.protobuf." +
-      "TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\0132" +
-      "\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:" +
-      "\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\241\004\n\010Accounts\022" +
-      "c\n\006Create\022\030.v1.AccountCreateRequest\032\031.v1" +
-      ".AccountCreateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371" +
-      "\263\007\021\252\363\263\007\014/v1/accounts\022^\n\003Get\022\025.v1.Account" +
-      "GetRequest\032\026.v1.AccountGetResponse\"(\202\371\263\007" +
-      "\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006" +
-      "Update\022\030.v1.AccountUpdateRequest\032\031.v1.Ac" +
-      "countUpdateResponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252" +
-      "\363\263\007\021/v1/accounts/{id}\022j\n\006Delete\022\030.v1.Acc" +
-      "ountDeleteRequest\032\031.v1.AccountDeleteResp" +
-      "onse\"+\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/acco" +
-      "unts/{id}\022\\\n\004List\022\026.v1.AccountListReques" +
-      "t\032\027.v1.AccountListResponse\"#\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007\021\252\363\263\007\014/v1/accounts\032\035\312\371\263\007\014\302\371\263\007\007Accou" +
-      "nt\312\371\263\007\007\322\371\263\007\002a-Bd\n\031com.strongdm.api.plumb" +
-      "ingB\020AccountsPlumbingZ5github.com/strong" +
-      "dm/strongdm-sdk-go/v3/internal/v1;v1b\006pr" +
-      "oto3"
+      "son_gateway\"\236\002\n\007Account\022$\n\004user\030\001 \001(\0132\010." +
+      "v1.UserB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007service\030\002 \001(\0132\013" +
+      ".v1.ServiceB\n\362\370\263\007\005\260\363\263\007\001H\000\0220\n\005token\030\003 \001(\013" +
+      "2\t.v1.TokenB\024\362\370\263\007\017\262\364\263\007\ngo_privateH\000:a\372\370\263" +
+      "\007\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf_examples/accoun" +
+      "t_resource.txt\252\363\263\007#tf_examples/account_d" +
+      "ata_source.txtB,\n\007account\022!\252\370\263\007\016\252\370\263\007\tsus" +
+      "pended\252\370\263\007\t\252\370\263\007\004tags\"\322\006\n\004User\022\026\n\002id\030\001 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005email\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
+      "\300\363\263\007\001\022#\n\nfirst_name\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
+      "\007\001\022\"\n\tlast_name\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022*" +
+      "\n\tsuspended\030\005 \001(\010B\027\362\370\263\007\022\262\364\263\007\r!json_gatew" +
+      "ay\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0226" +
+      "\n\020permission_level\030\007 \001(\tB\034\362\370\263\007\027\230\364\263\007\001\262\364\263\007" +
+      "\r!json_gateway\022#\n\nmanaged_by\030\010 \001(\tB\017\362\370\263\007" +
+      "\n\260\363\263\007\001\230\364\263\007\001\022\037\n\013external_id\030\t \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\333\001\n\013suspendedRO\030\n \001(\010B\305\001\362\370\263\007\277\001\260\363\263\007\001" +
+      "\312\363\263\007\257\001\302\364\263\007\017\n\002go\022\tSuspended\302\364\263\007\020\n\003cli\022\tsu" +
+      "spended\302\364\263\007\021\n\004ruby\022\tsuspended\302\364\263\007\023\n\006pyth" +
+      "on\022\tsuspended\302\364\263\007\021\n\004java\022\tSuspended\302\364\263\007\037" +
+      "\n\022terraform-provider\022\tsuspended\302\364\263\007\031\n\014js" +
+      "on_gateway\022\tsuspended\230\364\263\007\001\022\220\002\n\022permissio" +
+      "n_levelRW\030\013 \001(\tB\363\001\362\370\263\007\355\001\260\363\263\007\001\312\363\263\007\335\001\302\364\263\007\025" +
+      "\n\002go\022\017PermissionLevel\302\364\263\007\027\n\003cli\022\020permiss" +
+      "ion-level\302\364\263\007\030\n\004ruby\022\020permission_level\302\364" +
+      "\263\007\032\n\006python\022\020permission_level\302\364\263\007\027\n\004java" +
+      "\022\017PermissionLevel\302\364\263\007&\n\022terraform-provid" +
+      "er\022\020permission_level\302\364\263\007\037\n\014json_gateway\022" +
+      "\017permissionLevel\320\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\217\001\n\007Se" +
+      "rvice\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
+      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\217\002\n\005Token\022\026\n\002id\030\001 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
+      "\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004t" +
+      "ags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0227\n\007rekey" +
+      "ed\030\005 \001(\0132\032.google.protobuf.TimestampB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363" +
+      "\263\007\ngo_private2\241\004\n\010Accounts\022c\n\006Create\022\030.v" +
+      "1.AccountCreateRequest\032\031.v1.AccountCreat" +
+      "eResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/a" +
+      "ccounts\022^\n\003Get\022\025.v1.AccountGetRequest\032\026." +
+      "v1.AccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
+      "\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006Update\022\030.v1.A" +
+      "ccountUpdateRequest\032\031.v1.AccountUpdateRe" +
+      "sponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/accou" +
+      "nts/{id}\022j\n\006Delete\022\030.v1.AccountDeleteReq" +
+      "uest\032\031.v1.AccountDeleteResponse\"+\202\371\263\007\013\242\363" +
+      "\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004" +
+      "List\022\026.v1.AccountListRequest\032\027.v1.Accoun" +
+      "tListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v" +
+      "1/accounts\032\035\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a" +
+      "-Bd\n\031com.strongdm.api.plumbingB\020Accounts" +
+      "PlumbingZ5github.com/strongdm/strongdm-s" +
+      "dk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17380,7 +17670,7 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new
