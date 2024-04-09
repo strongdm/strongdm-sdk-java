@@ -18,9 +18,10 @@
 package com.strongdm.api;
 
 /**
- * Accounts are users that have access to strongDM. There are two types of accounts: 1. **Users:**
- * humans who are authenticated through username and password or SSO. 2. **Service Accounts:**
- * machines that are authenticated using a service token.
+ * Accounts are users that have access to strongDM. The types of accounts are: 1. **Users:** humans
+ * who are authenticated through username and password or SSO. 2. **Service Accounts:** machines
+ * that are authenticated using a service token. 3. **Tokens** are access keys with permissions that
+ * can be used for authentication.
  */
 public interface Account {
   /** Returns the unique identifier of the Account. */

@@ -89,7 +89,7 @@ public final class AccountsPlumbing {
   /**
    * <pre>
    * AccountCreateRequest specifies what kind of Account should be registered in the
-   * organizations fleet. Note that a Account must be either a User or a Service.
+   * organizations fleet. Note that a Account must be either a User, a Service or a Token.
    * </pre>
    *
    * Protobuf type {@code v1.AccountCreateRequest}
@@ -451,7 +451,7 @@ public final class AccountsPlumbing {
     /**
      * <pre>
      * AccountCreateRequest specifies what kind of Account should be registered in the
-     * organizations fleet. Note that a Account must be either a User or a Service.
+     * organizations fleet. Note that a Account must be either a User, a Service or a Token.
      * </pre>
      *
      * Protobuf type {@code v1.AccountCreateRequest}
@@ -1090,6 +1090,46 @@ public final class AccountsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+
+    /**
+     * <pre>
+     * ID part of the API key.
+     * </pre>
+     *
+     * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+     * @return The accessKey.
+     */
+    java.lang.String getAccessKey();
+    /**
+     * <pre>
+     * ID part of the API key.
+     * </pre>
+     *
+     * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessKey.
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyBytes();
+
+    /**
+     * <pre>
+     * Secret part of the API key.
+     * </pre>
+     *
+     * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The secretKey.
+     */
+    java.lang.String getSecretKey();
+    /**
+     * <pre>
+     * Secret part of the API key.
+     * </pre>
+     *
+     * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretKey.
+     */
+    com.google.protobuf.ByteString
+        getSecretKeyBytes();
   }
   /**
    * <pre>
@@ -1109,6 +1149,8 @@ public final class AccountsPlumbing {
     }
     private AccountCreateResponse() {
       token_ = "";
+      accessKey_ = "";
+      secretKey_ = "";
     }
 
     @java.lang.Override
@@ -1184,6 +1226,18 @@ public final class AccountsPlumbing {
                 rateLimit_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessKey_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretKey_ = s;
               break;
             }
             default: {
@@ -1382,6 +1436,98 @@ public final class AccountsPlumbing {
       return getRateLimit();
     }
 
+    public static final int ACCESS_KEY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object accessKey_;
+    /**
+     * <pre>
+     * ID part of the API key.
+     * </pre>
+     *
+     * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+     * @return The accessKey.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessKey() {
+      java.lang.Object ref = accessKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID part of the API key.
+     * </pre>
+     *
+     * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessKeyBytes() {
+      java.lang.Object ref = accessKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_KEY_FIELD_NUMBER = 6;
+    private volatile java.lang.Object secretKey_;
+    /**
+     * <pre>
+     * Secret part of the API key.
+     * </pre>
+     *
+     * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The secretKey.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretKey() {
+      java.lang.Object ref = secretKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Secret part of the API key.
+     * </pre>
+     *
+     * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretKeyBytes() {
+      java.lang.Object ref = secretKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1408,6 +1554,12 @@ public final class AccountsPlumbing {
       if (rateLimit_ != null) {
         output.writeMessage(4, getRateLimit());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, accessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, secretKey_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1431,6 +1583,12 @@ public final class AccountsPlumbing {
       if (rateLimit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRateLimit());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, accessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, secretKey_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1464,6 +1622,10 @@ public final class AccountsPlumbing {
         if (!getRateLimit()
             .equals(other.getRateLimit())) return false;
       }
+      if (!getAccessKey()
+          .equals(other.getAccessKey())) return false;
+      if (!getSecretKey()
+          .equals(other.getSecretKey())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1489,6 +1651,10 @@ public final class AccountsPlumbing {
         hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
         hash = (53 * hash) + getRateLimit().hashCode();
       }
+      hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessKey().hashCode();
+      hash = (37 * hash) + SECRET_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretKey().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1646,6 +1812,10 @@ public final class AccountsPlumbing {
           rateLimit_ = null;
           rateLimitBuilder_ = null;
         }
+        accessKey_ = "";
+
+        secretKey_ = "";
+
         return this;
       }
 
@@ -1688,6 +1858,8 @@ public final class AccountsPlumbing {
         } else {
           result.rateLimit_ = rateLimitBuilder_.build();
         }
+        result.accessKey_ = accessKey_;
+        result.secretKey_ = secretKey_;
         onBuilt();
         return result;
       }
@@ -1748,6 +1920,14 @@ public final class AccountsPlumbing {
         }
         if (other.hasRateLimit()) {
           mergeRateLimit(other.getRateLimit());
+        }
+        if (!other.getAccessKey().isEmpty()) {
+          accessKey_ = other.accessKey_;
+          onChanged();
+        }
+        if (!other.getSecretKey().isEmpty()) {
+          secretKey_ = other.secretKey_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2342,6 +2522,198 @@ public final class AccountsPlumbing {
           rateLimit_ = null;
         }
         return rateLimitBuilder_;
+      }
+
+      private java.lang.Object accessKey_ = "";
+      /**
+       * <pre>
+       * ID part of the API key.
+       * </pre>
+       *
+       * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+       * @return The accessKey.
+       */
+      public java.lang.String getAccessKey() {
+        java.lang.Object ref = accessKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID part of the API key.
+       * </pre>
+       *
+       * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accessKey.
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyBytes() {
+        java.lang.Object ref = accessKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID part of the API key.
+       * </pre>
+       *
+       * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The accessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID part of the API key.
+       * </pre>
+       *
+       * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessKey() {
+        
+        accessKey_ = getDefaultInstance().getAccessKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID part of the API key.
+       * </pre>
+       *
+       * <code>string access_key = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secretKey_ = "";
+      /**
+       * <pre>
+       * Secret part of the API key.
+       * </pre>
+       *
+       * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+       * @return The secretKey.
+       */
+      public java.lang.String getSecretKey() {
+        java.lang.Object ref = secretKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Secret part of the API key.
+       * </pre>
+       *
+       * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretKey.
+       */
+      public com.google.protobuf.ByteString
+          getSecretKeyBytes() {
+        java.lang.Object ref = secretKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Secret part of the API key.
+       * </pre>
+       *
+       * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The secretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secret part of the API key.
+       * </pre>
+       *
+       * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretKey() {
+        
+        secretKey_ = getDefaultInstance().getSecretKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secret part of the API key.
+       * </pre>
+       *
+       * <code>string secret_key = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretKey_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11073,9 +11445,10 @@ public final class AccountsPlumbing {
   }
   /**
    * <pre>
-   * Accounts are users that have access to strongDM. There are two types of accounts:
+   * Accounts are users that have access to strongDM. The types of accounts are:
    * 1. **Users:** humans who are authenticated through username and password or SSO.
    * 2. **Service Accounts:** machines that are authenticated using a service token.
+   * 3. **Tokens** are access keys with permissions that can be used for authentication.
    * </pre>
    *
    * Protobuf type {@code v1.Account}
@@ -11534,9 +11907,10 @@ public final class AccountsPlumbing {
     }
     /**
      * <pre>
-     * Accounts are users that have access to strongDM. There are two types of accounts:
+     * Accounts are users that have access to strongDM. The types of accounts are:
      * 1. **Users:** humans who are authenticated through username and password or SSO.
      * 2. **Service Accounts:** machines that are authenticated using a service token.
+     * 3. **Tokens** are access keys with permissions that can be used for authentication.
      * </pre>
      *
      * Protobuf type {@code v1.Account}
@@ -15778,7 +16152,7 @@ public final class AccountsPlumbing {
 
     /**
      * <pre>
-     * The Token's suspended state.
+     * Reserved for future use.  Always false for tokens.
      * </pre>
      *
      * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
@@ -15866,6 +16240,94 @@ public final class AccountsPlumbing {
      * <code>.google.protobuf.Timestamp deadline = 6 [(.v1.field_options) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getDeadlineOrBuilder();
+
+    /**
+     * <pre>
+     * Corresponds to the type of token, e.g. api or admin-token.
+     * </pre>
+     *
+     * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+     * @return The accountType.
+     */
+    java.lang.String getAccountType();
+    /**
+     * <pre>
+     * Corresponds to the type of token, e.g. api or admin-token.
+     * </pre>
+     *
+     * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accountType.
+     */
+    com.google.protobuf.ByteString
+        getAccountTypeBytes();
+
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the permissions.
+     */
+    java.util.List<java.lang.String>
+        getPermissionsList();
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @return The count of permissions.
+     */
+    int getPermissionsCount();
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    java.lang.String getPermissions(int index);
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPermissionsBytes(int index);
+
+    /**
+     * <pre>
+     * Duration from token creation to expiration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * Duration from token creation to expiration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * Duration from token creation to expiration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
   }
   /**
    * <pre>
@@ -15887,6 +16349,8 @@ public final class AccountsPlumbing {
     private Token() {
       id_ = "";
       name_ = "";
+      accountType_ = "";
+      permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -15909,6 +16373,7 @@ public final class AccountsPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15975,6 +16440,34 @@ public final class AccountsPlumbing {
 
               break;
             }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accountType_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                permissions_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              permissions_.add(s);
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (duration_ != null) {
+                subBuilder = duration_.toBuilder();
+              }
+              duration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(duration_);
+                duration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15992,6 +16485,9 @@ public final class AccountsPlumbing {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          permissions_ = permissions_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -16105,7 +16601,7 @@ public final class AccountsPlumbing {
     private boolean suspended_;
     /**
      * <pre>
-     * The Token's suspended state.
+     * Reserved for future use.  Always false for tokens.
      * </pre>
      *
      * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
@@ -16230,6 +16726,141 @@ public final class AccountsPlumbing {
       return getDeadline();
     }
 
+    public static final int ACCOUNT_TYPE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object accountType_;
+    /**
+     * <pre>
+     * Corresponds to the type of token, e.g. api or admin-token.
+     * </pre>
+     *
+     * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+     * @return The accountType.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountType() {
+      java.lang.Object ref = accountType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accountType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Corresponds to the type of token, e.g. api or admin-token.
+     * </pre>
+     *
+     * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accountType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountTypeBytes() {
+      java.lang.Object ref = accountType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERMISSIONS_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList permissions_;
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the permissions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @return The count of permissions.
+     */
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    public java.lang.String getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <pre>
+     * Permissions assigned to the token, e.g. role:create.
+     * </pre>
+     *
+     * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPermissionsBytes(int index) {
+      return permissions_.getByteString(index);
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 9;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * Duration from token creation to expiration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * Duration from token creation to expiration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * Duration from token creation to expiration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return getDuration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16262,6 +16893,15 @@ public final class AccountsPlumbing {
       if (deadline_ != null) {
         output.writeMessage(6, getDeadline());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, accountType_);
+      }
+      for (int i = 0; i < permissions_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, permissions_.getRaw(i));
+      }
+      if (duration_ != null) {
+        output.writeMessage(9, getDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16292,6 +16932,21 @@ public final class AccountsPlumbing {
       if (deadline_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDeadline());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, accountType_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < permissions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(permissions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPermissionsList().size();
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getDuration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16329,6 +16984,15 @@ public final class AccountsPlumbing {
         if (!getDeadline()
             .equals(other.getDeadline())) return false;
       }
+      if (!getAccountType()
+          .equals(other.getAccountType())) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16358,6 +17022,16 @@ public final class AccountsPlumbing {
       if (hasDeadline()) {
         hash = (37 * hash) + DEADLINE_FIELD_NUMBER;
         hash = (53 * hash) + getDeadline().hashCode();
+      }
+      hash = (37 * hash) + ACCOUNT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountType().hashCode();
+      if (getPermissionsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionsList().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -16521,6 +17195,16 @@ public final class AccountsPlumbing {
           deadline_ = null;
           deadlineBuilder_ = null;
         }
+        accountType_ = "";
+
+        permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (durationBuilder_ == null) {
+          duration_ = null;
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
         return this;
       }
 
@@ -16547,6 +17231,7 @@ public final class AccountsPlumbing {
       @java.lang.Override
       public com.strongdm.api.plumbing.AccountsPlumbing.Token buildPartial() {
         com.strongdm.api.plumbing.AccountsPlumbing.Token result = new com.strongdm.api.plumbing.AccountsPlumbing.Token(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
         result.suspended_ = suspended_;
@@ -16564,6 +17249,17 @@ public final class AccountsPlumbing {
           result.deadline_ = deadline_;
         } else {
           result.deadline_ = deadlineBuilder_.build();
+        }
+        result.accountType_ = accountType_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          permissions_ = permissions_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.permissions_ = permissions_;
+        if (durationBuilder_ == null) {
+          result.duration_ = duration_;
+        } else {
+          result.duration_ = durationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -16633,6 +17329,23 @@ public final class AccountsPlumbing {
         if (other.hasDeadline()) {
           mergeDeadline(other.getDeadline());
         }
+        if (!other.getAccountType().isEmpty()) {
+          accountType_ = other.accountType_;
+          onChanged();
+        }
+        if (!other.permissions_.isEmpty()) {
+          if (permissions_.isEmpty()) {
+            permissions_ = other.permissions_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePermissionsIsMutable();
+            permissions_.addAll(other.permissions_);
+          }
+          onChanged();
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -16661,6 +17374,7 @@ public final class AccountsPlumbing {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -16857,7 +17571,7 @@ public final class AccountsPlumbing {
       private boolean suspended_ ;
       /**
        * <pre>
-       * The Token's suspended state.
+       * Reserved for future use.  Always false for tokens.
        * </pre>
        *
        * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
@@ -16869,7 +17583,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * The Token's suspended state.
+       * Reserved for future use.  Always false for tokens.
        * </pre>
        *
        * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
@@ -16884,7 +17598,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * The Token's suspended state.
+       * Reserved for future use.  Always false for tokens.
        * </pre>
        *
        * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
@@ -17361,6 +18075,403 @@ public final class AccountsPlumbing {
         }
         return deadlineBuilder_;
       }
+
+      private java.lang.Object accountType_ = "";
+      /**
+       * <pre>
+       * Corresponds to the type of token, e.g. api or admin-token.
+       * </pre>
+       *
+       * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+       * @return The accountType.
+       */
+      public java.lang.String getAccountType() {
+        java.lang.Object ref = accountType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accountType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Corresponds to the type of token, e.g. api or admin-token.
+       * </pre>
+       *
+       * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accountType.
+       */
+      public com.google.protobuf.ByteString
+          getAccountTypeBytes() {
+        java.lang.Object ref = accountType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Corresponds to the type of token, e.g. api or admin-token.
+       * </pre>
+       *
+       * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accountType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Corresponds to the type of token, e.g. api or admin-token.
+       * </pre>
+       *
+       * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountType() {
+        
+        accountType_ = getDefaultInstance().getAccountType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Corresponds to the type of token, e.g. api or admin-token.
+       * </pre>
+       *
+       * <code>string account_type = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accountType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePermissionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          permissions_ = new com.google.protobuf.LazyStringArrayList(permissions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the permissions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPermissionsList() {
+        return permissions_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @return The count of permissions.
+       */
+      public int getPermissionsCount() {
+        return permissions_.size();
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The permissions at the given index.
+       */
+      public java.lang.String getPermissions(int index) {
+        return permissions_.get(index);
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the permissions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPermissionsBytes(int index) {
+        return permissions_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The permissions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissions(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePermissionsIsMutable();
+        permissions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissions(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePermissionsIsMutable();
+        permissions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @param values The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePermissionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, permissions_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissions() {
+        permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions assigned to the token, e.g. role:create.
+       * </pre>
+       *
+       * <code>repeated string permissions = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return durationBuilder_ != null || duration_ != null;
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (duration_ != null) {
+            duration_ =
+              com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+          } else {
+            duration_ = value;
+          }
+          onChanged();
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearDuration() {
+        if (durationBuilder_ == null) {
+          duration_ = null;
+          onChanged();
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration from token creation to expiration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17493,107 +18604,116 @@ public final class AccountsPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016accounts.proto\022\002v1\032\037google/protobuf/ti" +
-      "mestamp.proto\032\roptions.proto\032\nspec.proto" +
-      "\032\ntags.proto\"i\n\024AccountCreateRequest\022\'\n\004" +
-      "meta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022(\n" +
-      "\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\"" +
-      "\374\001\n\025AccountCreateResponse\0224\n\004meta\030\001 \001(\0132" +
-      "\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022\036\n\005token\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\022W\n\nrat" +
-      "e_limit\030\004 \001(\0132\025.v1.RateLimitMetadataB,\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gatew" +
-      "ay:\n\372\370\263\007\005\250\363\263\007\001\"Q\n\021AccountGetRequest\022$\n\004m" +
-      "eta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030" +
-      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\326\001\n\022AccountGetResponse" +
-      "\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022(\n\007account\030\002 \001(\0132\013.v1.Accoun" +
-      "tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.R" +
-      "ateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362" +
-      "\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"u\n\024Ac" +
-      "countUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Up" +
-      "dateRequestMetadata\022\n\n\002id\030\002 \001(\t\022(\n\007accou" +
-      "nt\030\003 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\"\334\001\n\025Ac" +
-      "countUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.U" +
-      "pdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007acc" +
-      "ount\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nr" +
-      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB," +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gat" +
-      "eway:\n\372\370\263\007\005\250\363\263\007\001\"W\n\024AccountDeleteRequest" +
-      "\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetadat" +
-      "a\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\262\001\n\025AccountDel" +
-      "eteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRes" +
-      "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030" +
-      "\002 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007" +
-      "\005\250\363\263\007\001\"W\n\022AccountListRequest\022%\n\004meta\030\001 \001" +
-      "(\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\301\001\n\023AccountListResponse\022" +
-      "&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\022" +
-      ")\n\010accounts\030\002 \003(\0132\013.v1.AccountB\n\362\370\263\007\005\270\363\263" +
-      "\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMet" +
-      "adataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!j" +
-      "son_gateway\"\236\002\n\007Account\022$\n\004user\030\001 \001(\0132\010." +
-      "v1.UserB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007service\030\002 \001(\0132\013" +
-      ".v1.ServiceB\n\362\370\263\007\005\260\363\263\007\001H\000\0220\n\005token\030\003 \001(\013" +
-      "2\t.v1.TokenB\024\362\370\263\007\017\262\364\263\007\ngo_privateH\000:a\372\370\263" +
-      "\007\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf_examples/accoun" +
-      "t_resource.txt\252\363\263\007#tf_examples/account_d" +
-      "ata_source.txtB,\n\007account\022!\252\370\263\007\016\252\370\263\007\tsus" +
-      "pended\252\370\263\007\t\252\370\263\007\004tags\"\322\006\n\004User\022\026\n\002id\030\001 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005email\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\300\363\263\007\001\022#\n\nfirst_name\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
-      "\007\001\022\"\n\tlast_name\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022*" +
-      "\n\tsuspended\030\005 \001(\010B\027\362\370\263\007\022\262\364\263\007\r!json_gatew" +
-      "ay\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0226" +
-      "\n\020permission_level\030\007 \001(\tB\034\362\370\263\007\027\230\364\263\007\001\262\364\263\007" +
-      "\r!json_gateway\022#\n\nmanaged_by\030\010 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\230\364\263\007\001\022\037\n\013external_id\030\t \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022\333\001\n\013suspendedRO\030\n \001(\010B\305\001\362\370\263\007\277\001\260\363\263\007\001" +
-      "\312\363\263\007\257\001\302\364\263\007\017\n\002go\022\tSuspended\302\364\263\007\020\n\003cli\022\tsu" +
-      "spended\302\364\263\007\021\n\004ruby\022\tsuspended\302\364\263\007\023\n\006pyth" +
-      "on\022\tsuspended\302\364\263\007\021\n\004java\022\tSuspended\302\364\263\007\037" +
-      "\n\022terraform-provider\022\tsuspended\302\364\263\007\031\n\014js" +
-      "on_gateway\022\tsuspended\230\364\263\007\001\022\220\002\n\022permissio" +
-      "n_levelRW\030\013 \001(\tB\363\001\362\370\263\007\355\001\260\363\263\007\001\312\363\263\007\335\001\302\364\263\007\025" +
-      "\n\002go\022\017PermissionLevel\302\364\263\007\027\n\003cli\022\020permiss" +
-      "ion-level\302\364\263\007\030\n\004ruby\022\020permission_level\302\364" +
-      "\263\007\032\n\006python\022\020permission_level\302\364\263\007\027\n\004java" +
-      "\022\017PermissionLevel\302\364\263\007&\n\022terraform-provid" +
-      "er\022\020permission_level\302\364\263\007\037\n\014json_gateway\022" +
-      "\017permissionLevel\320\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\217\001\n\007Se" +
-      "rvice\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
+      "\n\016accounts.proto\022\002v1\032\036google/protobuf/du" +
+      "ration.proto\032\037google/protobuf/timestamp." +
+      "proto\032\roptions.proto\032\nspec.proto\032\ntags.p" +
+      "roto\"i\n\024AccountCreateRequest\022\'\n\004meta\030\001 \001" +
+      "(\0132\031.v1.CreateRequestMetadata\022(\n\007account" +
+      "\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\"\370\002\n\025Acco" +
+      "untCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cre" +
+      "ateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007accou" +
+      "nt\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005tok" +
+      "en\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\022W\n\nrate_limit\030" +
+      "\004 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\022<\n\nac" +
+      "cess_key\030\005 \001(\tB(\362\370\263\007#\260\363\263\007\001\262\364\263\007\001*\262\364\263\007\023!te" +
+      "rraform-provider\022<\n\nsecret_key\030\006 \001(\tB(\362\370" +
+      "\263\007#\260\363\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"Q\n\021AccountGetRequest\022$\n\004meta\030" +
+      "\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\"\326\001\n\022AccountGetResponse\0221\n\004" +
+      "meta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateL" +
+      "imitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022" +
+      "\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"u\n\024Accoun" +
+      "tUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Update" +
+      "RequestMetadata\022\n\n\002id\030\002 \001(\t\022(\n\007account\030\003" +
+      " \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\"\334\001\n\025Accoun" +
+      "tUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Updat" +
+      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007account" +
+      "\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_" +
+      "limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway" +
+      ":\n\372\370\263\007\005\250\363\263\007\001\"W\n\024AccountDeleteRequest\022\'\n\004" +
+      "meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n" +
+      "\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\262\001\n\025AccountDeleteR" +
+      "esponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRespons" +
+      "eMetadataB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\002 \001(" +
+      "\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263" +
+      "\007\001\"W\n\022AccountListRequest\022%\n\004meta\030\001 \001(\0132\027" +
+      ".v1.ListRequestMetadata\022\032\n\006filter\030\002 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\"\301\001\n\023AccountListResponse\022&\n\004m" +
+      "eta\030\001 \001(\0132\030.v1.ListResponseMetadata\022)\n\010a" +
+      "ccounts\030\002 \003(\0132\013.v1.AccountB\n\362\370\263\007\005\270\363\263\007\001\022W" +
+      "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat" +
+      "aB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_" +
+      "gateway\"\262\002\n\007Account\022$\n\004user\030\001 \001(\0132\010.v1.U" +
+      "serB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007service\030\002 \001(\0132\013.v1." +
+      "ServiceB\n\362\370\263\007\005\260\363\263\007\001H\000\022D\n\005token\030\003 \001(\0132\t.v" +
+      "1.TokenB(\362\370\263\007#\260\363\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform" +
+      "-providerH\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf" +
+      "_examples/account_resource.txt\252\363\263\007#tf_ex" +
+      "amples/account_data_source.txtB,\n\007accoun" +
+      "t\022!\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263\007\004tags\"\322\006\n" +
+      "\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005email\030\002" +
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst_name\030\003 \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\tlast_name\030\004 \001(\tB\017\362" +
+      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022*\n\tsuspended\030\005 \001(\010B\027\362\370\263\007\022" +
+      "\262\364\263\007\r!json_gateway\022\"\n\004tags\030\006 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001\0226\n\020permission_level\030\007 \001(\t" +
+      "B\034\362\370\263\007\027\230\364\263\007\001\262\364\263\007\r!json_gateway\022#\n\nmanage" +
+      "d_by\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022\037\n\013external_" +
+      "id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\333\001\n\013suspendedRO\030\n \001" +
+      "(\010B\305\001\362\370\263\007\277\001\260\363\263\007\001\312\363\263\007\257\001\302\364\263\007\017\n\002go\022\tSuspend" +
+      "ed\302\364\263\007\020\n\003cli\022\tsuspended\302\364\263\007\021\n\004ruby\022\tsusp" +
+      "ended\302\364\263\007\023\n\006python\022\tsuspended\302\364\263\007\021\n\004java" +
+      "\022\tSuspended\302\364\263\007\037\n\022terraform-provider\022\tsu" +
+      "spended\302\364\263\007\031\n\014json_gateway\022\tsuspended\230\364\263" +
+      "\007\001\022\220\002\n\022permission_levelRW\030\013 \001(\tB\363\001\362\370\263\007\355\001" +
+      "\260\363\263\007\001\312\363\263\007\335\001\302\364\263\007\025\n\002go\022\017PermissionLevel\302\364\263" +
+      "\007\027\n\003cli\022\020permission-level\302\364\263\007\030\n\004ruby\022\020pe" +
+      "rmission_level\302\364\263\007\032\n\006python\022\020permission_" +
+      "level\302\364\263\007\027\n\004java\022\017PermissionLevel\302\364\263\007&\n\022" +
+      "terraform-provider\022\020permission_level\302\364\263\007" +
+      "\037\n\014json_gateway\022\017permissionLevel\320\364\263\007\001:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\t" +
+      "suspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\232\003\n\005" +
+      "Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
       "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B" +
       "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\217\002\n\005Token\022\026\n\002id\030\001 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
-      "\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004t" +
-      "ags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0227\n\007rekey" +
-      "ed\030\005 \001(\0132\032.google.protobuf.TimestampB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\0132\032.google.prot" +
-      "obuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363" +
-      "\263\007\ngo_private2\241\004\n\010Accounts\022c\n\006Create\022\030.v" +
-      "1.AccountCreateRequest\032\031.v1.AccountCreat" +
-      "eResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/a" +
-      "ccounts\022^\n\003Get\022\025.v1.AccountGetRequest\032\026." +
-      "v1.AccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
-      "\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006Update\022\030.v1.A" +
-      "ccountUpdateRequest\032\031.v1.AccountUpdateRe" +
-      "sponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/accou" +
-      "nts/{id}\022j\n\006Delete\022\030.v1.AccountDeleteReq" +
-      "uest\032\031.v1.AccountDeleteResponse\"+\202\371\263\007\013\242\363" +
-      "\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004" +
-      "List\022\026.v1.AccountListRequest\032\027.v1.Accoun" +
-      "tListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v" +
-      "1/accounts\032\035\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a" +
-      "-Bd\n\031com.strongdm.api.plumbingB\020Accounts" +
-      "PlumbingZ5github.com/strongdm/strongdm-s" +
-      "dk-go/v3/internal/v1;v1b\006proto3"
+      "\007\005\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.protob" +
+      "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001" +
+      "(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022 \n\014account_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013" +
+      "permissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duratio" +
+      "n\030\t \001(\0132\031.google.protobuf.DurationB\n\362\370\263\007" +
+      "\005\260\363\263\007\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!terraform-" +
+      "provider2\253\004\n\010Accounts\022c\n\006Create\022\030.v1.Acc" +
+      "ountCreateRequest\032\031.v1.AccountCreateResp" +
+      "onse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/accoun" +
+      "ts\022^\n\003Get\022\025.v1.AccountGetRequest\032\026.v1.Ac" +
+      "countGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007" +
+      "\021/v1/accounts/{id}\022g\n\006Update\022\030.v1.Accoun" +
+      "tUpdateRequest\032\031.v1.AccountUpdateRespons" +
+      "e\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/accounts/{" +
+      "id}\022j\n\006Delete\022\030.v1.AccountDeleteRequest\032" +
+      "\031.v1.AccountDeleteResponse\"+\202\371\263\007\013\242\363\263\007\006de" +
+      "lete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004List\022" +
+      "\026.v1.AccountListRequest\032\027.v1.AccountList" +
+      "Response\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/acc" +
+      "ounts\032\'\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007" +
+      "\005\340\371\263\007\001Bd\n\031com.strongdm.api.plumbingB\020Acc" +
+      "ountsPlumbingZ5github.com/strongdm/stron" +
+      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
@@ -17610,7 +18730,7 @@ public final class AccountsPlumbing {
     internal_static_v1_AccountCreateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountCreateResponse_descriptor,
-        new java.lang.String[] { "Meta", "Account", "Token", "RateLimit", });
+        new java.lang.String[] { "Meta", "Account", "Token", "RateLimit", "AccessKey", "SecretKey", });
     internal_static_v1_AccountGetRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_AccountGetRequest_fieldAccessorTable = new
@@ -17682,7 +18802,7 @@ public final class AccountsPlumbing {
     internal_static_v1_Token_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Token_descriptor,
-        new java.lang.String[] { "Id", "Name", "Suspended", "Tags", "Rekeyed", "Deadline", });
+        new java.lang.String[] { "Id", "Name", "Suspended", "Tags", "Rekeyed", "Deadline", "AccountType", "Permissions", "Duration", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
@@ -17692,6 +18812,7 @@ public final class AccountsPlumbing {
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();

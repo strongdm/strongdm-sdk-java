@@ -19,6 +19,16 @@ package com.strongdm.api;
 
 /** AccountCreateResponse reports how the Accounts were created in the system. */
 public class AccountCreateResponse {
+  private String accessKey;
+  /** ID part of the API key. */
+  public String getAccessKey() {
+    return this.accessKey;
+  }
+  /** ID part of the API key. */
+  public void setAccessKey(String in) {
+    this.accessKey = in;
+  }
+
   private Account account;
   /** The created Account. */
   public Account getAccount() {
@@ -47,6 +57,16 @@ public class AccountCreateResponse {
   /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+  }
+
+  private String secretKey;
+  /** Secret part of the API key. */
+  public String getSecretKey() {
+    return this.secretKey;
+  }
+  /** Secret part of the API key. */
+  public void setSecretKey(String in) {
+    this.secretKey = in;
   }
 
   private String token;

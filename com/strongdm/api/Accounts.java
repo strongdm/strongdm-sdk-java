@@ -33,7 +33,8 @@ import java.util.function.Supplier;
 /**
  * Accounts are users that have access to strongDM. There are two types of accounts: 1. **Users:**
  * humans who are authenticated through username and password or SSO. 2. **Service Accounts:**
- * machines that are authenticated using a service token.
+ * machines that are authenticated using a service token. 3. **Tokens** are access keys with
+ * permissions that can be used for authentication.
  */
 public class Accounts implements SnapshotAccounts {
   private final AccountsGrpc.AccountsBlockingStub stub;
