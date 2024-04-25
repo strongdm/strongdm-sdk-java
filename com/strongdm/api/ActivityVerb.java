@@ -158,9 +158,17 @@ public final class ActivityVerb {
   public static final String REMOTE_IDENTITY_GROUP_CREATED = "remote identity group created";
   public static final String REMOTE_IDENTITY_GROUP_UPDATED = "remote identity group updated";
   public static final String REMOTE_IDENTITY_GROUP_DELETED = "remote identity group deleted";
+  public static final String IDENTITY_SET_PROVISIONING_ENABLED =
+      "identity set provisioning enabled";
+  public static final String IDENTITY_SET_PROVISIONING_DISABLED =
+      "identity set provisioning disabled";
   public static final String REMOTE_IDENTITY_CREATED = "remote identity created";
   public static final String REMOTE_IDENTITY_UPDATED = "remote identity updated";
   public static final String REMOTE_IDENTITY_DELETED = "remote identity deleted";
+  public static final String IDENTITY_ALIAS_PROVISIONING_ENABLED =
+      "identity alias provisioning enabled";
+  public static final String IDENTITY_ALIAS_PROVISIONING_DISABLED =
+      "identity alias provisioning disabled";
   public static final String ACCESS_REQUESTED_TO_RESOURCE = "access requested to resource";
   public static final String ACCESS_REQUEST_TO_RESOURCE_APPROVAL_ADDED =
       "access request to resource approval added";

@@ -7438,6 +7438,93 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.KeyfactorX509Store convertKeyfactorX509StoreToPorcelain(
+      KeyfactorX509Store plumbing) {
+    com.strongdm.api.KeyfactorX509Store porcelain = new com.strongdm.api.KeyfactorX509Store();
+    porcelain.setCaFilePath((plumbing.getCaFilePath()));
+    porcelain.setCertificateFilePath((plumbing.getCertificateFilePath()));
+    porcelain.setDefaultCertificateAuthorityName((plumbing.getDefaultCertificateAuthorityName()));
+    porcelain.setDefaultCertificateProfileName((plumbing.getDefaultCertificateProfileName()));
+    porcelain.setDefaultEndEntityProfileName((plumbing.getDefaultEndEntityProfileName()));
+    porcelain.setEnrollmentCodeEnvVar((plumbing.getEnrollmentCodeEnvVar()));
+    porcelain.setEnrollmentUsernameEnvVar((plumbing.getEnrollmentUsernameEnvVar()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setKeyFilePath((plumbing.getKeyFilePath()));
+    porcelain.setKeyPasswordEnvVar((plumbing.getKeyPasswordEnvVar()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static KeyfactorX509Store convertKeyfactorX509StoreToPlumbing(
+      com.strongdm.api.KeyfactorX509Store porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    KeyfactorX509Store.Builder builder = KeyfactorX509Store.newBuilder();
+    if (porcelain.getCaFilePath() != null) {
+      builder.setCaFilePath((porcelain.getCaFilePath()));
+    }
+    if (porcelain.getCertificateFilePath() != null) {
+      builder.setCertificateFilePath((porcelain.getCertificateFilePath()));
+    }
+    if (porcelain.getDefaultCertificateAuthorityName() != null) {
+      builder.setDefaultCertificateAuthorityName((porcelain.getDefaultCertificateAuthorityName()));
+    }
+    if (porcelain.getDefaultCertificateProfileName() != null) {
+      builder.setDefaultCertificateProfileName((porcelain.getDefaultCertificateProfileName()));
+    }
+    if (porcelain.getDefaultEndEntityProfileName() != null) {
+      builder.setDefaultEndEntityProfileName((porcelain.getDefaultEndEntityProfileName()));
+    }
+    if (porcelain.getEnrollmentCodeEnvVar() != null) {
+      builder.setEnrollmentCodeEnvVar((porcelain.getEnrollmentCodeEnvVar()));
+    }
+    if (porcelain.getEnrollmentUsernameEnvVar() != null) {
+      builder.setEnrollmentUsernameEnvVar((porcelain.getEnrollmentUsernameEnvVar()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getKeyFilePath() != null) {
+      builder.setKeyFilePath((porcelain.getKeyFilePath()));
+    }
+    if (porcelain.getKeyPasswordEnvVar() != null) {
+      builder.setKeyPasswordEnvVar((porcelain.getKeyPasswordEnvVar()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.KeyfactorX509Store>
+      convertRepeatedKeyfactorX509StoreToPorcelain(Collection<KeyfactorX509Store> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.KeyfactorX509Store>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertKeyfactorX509StoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<KeyfactorX509Store> convertRepeatedKeyfactorX509StoreToPlumbing(
+      Collection<com.strongdm.api.KeyfactorX509Store> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<KeyfactorX509Store>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertKeyfactorX509StoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Kubernetes convertKubernetesToPorcelain(Kubernetes plumbing) {
     com.strongdm.api.Kubernetes porcelain = new com.strongdm.api.Kubernetes();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -14146,6 +14233,9 @@ public class Plumbing {
     if (plumbing.hasGcpCertX509()) {
       return convertGCPCertX509StoreToPorcelain(plumbing.getGcpCertX509());
     }
+    if (plumbing.hasKeyfactorX509()) {
+      return convertKeyfactorX509StoreToPorcelain(plumbing.getKeyfactorX509());
+    }
     if (plumbing.hasVaultAppRole()) {
       return convertVaultAppRoleStoreToPorcelain(plumbing.getVaultAppRole());
     }
@@ -14235,6 +14325,12 @@ public class Plumbing {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setGcpCertX509(
           convertGCPCertX509StoreToPlumbing((com.strongdm.api.GCPCertX509Store) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.KeyfactorX509Store) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setKeyfactorX509(
+          convertKeyfactorX509StoreToPlumbing((com.strongdm.api.KeyfactorX509Store) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.VaultAppRoleStore) {
