@@ -17,7 +17,7 @@
 
 package com.strongdm.api;
 
-public class KeyfactorX509Store implements SecretStore {
+public class KeyfactorSSHStore implements SecretStore {
   private String caFilePath;
   /**
    * Path to the root CA that signed the certificate passed to the client for HTTPS connection. This

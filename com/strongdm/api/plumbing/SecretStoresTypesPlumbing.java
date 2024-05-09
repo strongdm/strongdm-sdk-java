@@ -183,6 +183,21 @@ public final class SecretStoresTypesPlumbing {
     com.strongdm.api.plumbing.SecretStoresTypesPlumbing.GCPCertX509StoreOrBuilder getGcpCertX509OrBuilder();
 
     /**
+     * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+     * @return Whether the keyfactorSsh field is set.
+     */
+    boolean hasKeyfactorSsh();
+    /**
+     * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+     * @return The keyfactorSsh.
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore getKeyfactorSsh();
+    /**
+     * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStoreOrBuilder getKeyfactorSshOrBuilder();
+
+    /**
      * <code>.v1.KeyfactorX509Store keyfactor_x_509 = 200 [(.v1.field_options) = { ... }</code>
      * @return Whether the keyfactorX509 field is set.
      */
@@ -594,6 +609,20 @@ public final class SecretStoresTypesPlumbing {
               secretStoreCase_ = 202;
               break;
             }
+            case 1682: {
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder subBuilder = null;
+              if (secretStoreCase_ == 210) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 210;
+              break;
+            }
             case 2410: {
               com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder subBuilder = null;
               if (secretStoreCase_ == 301) {
@@ -713,6 +742,7 @@ public final class SecretStoresTypesPlumbing {
       DELINEA(2900),
       GCP(201),
       GCP_CERT_X_509(202),
+      KEYFACTOR_SSH(210),
       KEYFACTOR_X_509(200),
       VAULT_APP_ROLE(4),
       VAULT_APP_ROLE_CERT_SSH(94),
@@ -750,6 +780,7 @@ public final class SecretStoresTypesPlumbing {
           case 2900: return DELINEA;
           case 201: return GCP;
           case 202: return GCP_CERT_X_509;
+          case 210: return KEYFACTOR_SSH;
           case 200: return KEYFACTOR_X_509;
           case 4: return VAULT_APP_ROLE;
           case 94: return VAULT_APP_ROLE_CERT_SSH;
@@ -1083,6 +1114,37 @@ public final class SecretStoresTypesPlumbing {
          return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.GCPCertX509Store) secretStore_;
       }
       return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.GCPCertX509Store.getDefaultInstance();
+    }
+
+    public static final int KEYFACTOR_SSH_FIELD_NUMBER = 210;
+    /**
+     * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+     * @return Whether the keyfactorSsh field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeyfactorSsh() {
+      return secretStoreCase_ == 210;
+    }
+    /**
+     * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+     * @return The keyfactorSsh.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore getKeyfactorSsh() {
+      if (secretStoreCase_ == 210) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStoreOrBuilder getKeyfactorSshOrBuilder() {
+      if (secretStoreCase_ == 210) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance();
     }
 
     public static final int KEYFACTOR_X_509_FIELD_NUMBER = 200;
@@ -1454,6 +1516,9 @@ public final class SecretStoresTypesPlumbing {
       if (secretStoreCase_ == 202) {
         output.writeMessage(202, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.GCPCertX509Store) secretStore_);
       }
+      if (secretStoreCase_ == 210) {
+        output.writeMessage(210, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_);
+      }
       if (secretStoreCase_ == 301) {
         output.writeMessage(301, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_);
       }
@@ -1538,6 +1603,10 @@ public final class SecretStoresTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(202, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.GCPCertX509Store) secretStore_);
       }
+      if (secretStoreCase_ == 210) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(210, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_);
+      }
       if (secretStoreCase_ == 301) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(301, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_);
@@ -1614,6 +1683,10 @@ public final class SecretStoresTypesPlumbing {
         case 202:
           if (!getGcpCertX509()
               .equals(other.getGcpCertX509())) return false;
+          break;
+        case 210:
+          if (!getKeyfactorSsh()
+              .equals(other.getKeyfactorSsh())) return false;
           break;
         case 200:
           if (!getKeyfactorX509()
@@ -1709,6 +1782,10 @@ public final class SecretStoresTypesPlumbing {
         case 202:
           hash = (37 * hash) + GCP_CERT_X_509_FIELD_NUMBER;
           hash = (53 * hash) + getGcpCertX509().hashCode();
+          break;
+        case 210:
+          hash = (37 * hash) + KEYFACTOR_SSH_FIELD_NUMBER;
+          hash = (53 * hash) + getKeyfactorSsh().hashCode();
           break;
         case 200:
           hash = (37 * hash) + KEYFACTOR_X_509_FIELD_NUMBER;
@@ -1989,6 +2066,13 @@ public final class SecretStoresTypesPlumbing {
             result.secretStore_ = gcpCertX509Builder_.build();
           }
         }
+        if (secretStoreCase_ == 210) {
+          if (keyfactorSshBuilder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = keyfactorSshBuilder_.build();
+          }
+        }
         if (secretStoreCase_ == 200) {
           if (keyfactorX509Builder_ == null) {
             result.secretStore_ = secretStore_;
@@ -2147,6 +2231,10 @@ public final class SecretStoresTypesPlumbing {
           }
           case GCP_CERT_X_509: {
             mergeGcpCertX509(other.getGcpCertX509());
+            break;
+          }
+          case KEYFACTOR_SSH: {
+            mergeKeyfactorSsh(other.getKeyfactorSsh());
             break;
           }
           case KEYFACTOR_X_509: {
@@ -3655,6 +3743,148 @@ public final class SecretStoresTypesPlumbing {
         secretStoreCase_ = 202;
         onChanged();;
         return gcpCertX509Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStoreOrBuilder> keyfactorSshBuilder_;
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       * @return Whether the keyfactorSsh field is set.
+       */
+      @java.lang.Override
+      public boolean hasKeyfactorSsh() {
+        return secretStoreCase_ == 210;
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       * @return The keyfactorSsh.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore getKeyfactorSsh() {
+        if (keyfactorSshBuilder_ == null) {
+          if (secretStoreCase_ == 210) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 210) {
+            return keyfactorSshBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setKeyfactorSsh(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore value) {
+        if (keyfactorSshBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          keyfactorSshBuilder_.setMessage(value);
+        }
+        secretStoreCase_ = 210;
+        return this;
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setKeyfactorSsh(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder builderForValue) {
+        if (keyfactorSshBuilder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          keyfactorSshBuilder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 210;
+        return this;
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeKeyfactorSsh(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore value) {
+        if (keyfactorSshBuilder_ == null) {
+          if (secretStoreCase_ == 210 &&
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 210) {
+            keyfactorSshBuilder_.mergeFrom(value);
+          } else {
+            keyfactorSshBuilder_.setMessage(value);
+          }
+        }
+        secretStoreCase_ = 210;
+        return this;
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearKeyfactorSsh() {
+        if (keyfactorSshBuilder_ == null) {
+          if (secretStoreCase_ == 210) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 210) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          keyfactorSshBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder getKeyfactorSshBuilder() {
+        return getKeyfactorSshFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStoreOrBuilder getKeyfactorSshOrBuilder() {
+        if ((secretStoreCase_ == 210) && (keyfactorSshBuilder_ != null)) {
+          return keyfactorSshBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 210) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.KeyfactorSSHStore keyfactor_ssh = 210 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStoreOrBuilder> 
+          getKeyfactorSshFieldBuilder() {
+        if (keyfactorSshBuilder_ == null) {
+          if (!(secretStoreCase_ == 210)) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance();
+          }
+          keyfactorSshBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 210;
+        onChanged();;
+        return keyfactorSshBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19030,6 +19260,2789 @@ public final class SecretStoresTypesPlumbing {
 
   }
 
+  public interface KeyfactorSSHStoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.KeyfactorSSHStore)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+     * This is not required if the CA is trusted by the host operating system. This should be a PEM
+     * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+     * </pre>
+     *
+     * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The caFilePath.
+     */
+    java.lang.String getCaFilePath();
+    /**
+     * <pre>
+     * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+     * This is not required if the CA is trusted by the host operating system. This should be a PEM
+     * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+     * </pre>
+     *
+     * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for caFilePath.
+     */
+    com.google.protobuf.ByteString
+        getCaFilePathBytes();
+
+    /**
+     * <pre>
+     * Path to client certificate in PEM format. This certificate must contain a client certificate that
+     * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+     * key associated with the certificate, but KeyFile can also be set to configure the private key.
+     * </pre>
+     *
+     * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The certificateFilePath.
+     */
+    java.lang.String getCertificateFilePath();
+    /**
+     * <pre>
+     * Path to client certificate in PEM format. This certificate must contain a client certificate that
+     * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+     * key associated with the certificate, but KeyFile can also be set to configure the private key.
+     * </pre>
+     *
+     * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for certificateFilePath.
+     */
+    com.google.protobuf.ByteString
+        getCertificateFilePathBytes();
+
+    /**
+     * <pre>
+     * Name of EJBCA certificate authority that will enroll CSR.
+     * </pre>
+     *
+     * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+     * @return The defaultCertificateAuthorityName.
+     */
+    java.lang.String getDefaultCertificateAuthorityName();
+    /**
+     * <pre>
+     * Name of EJBCA certificate authority that will enroll CSR.
+     * </pre>
+     *
+     * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for defaultCertificateAuthorityName.
+     */
+    com.google.protobuf.ByteString
+        getDefaultCertificateAuthorityNameBytes();
+
+    /**
+     * <pre>
+     * Certificate profile name that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+     * @return The defaultCertificateProfileName.
+     */
+    java.lang.String getDefaultCertificateProfileName();
+    /**
+     * <pre>
+     * Certificate profile name that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for defaultCertificateProfileName.
+     */
+    com.google.protobuf.ByteString
+        getDefaultCertificateProfileNameBytes();
+
+    /**
+     * <pre>
+     * End entity profile that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+     * @return The defaultEndEntityProfileName.
+     */
+    java.lang.String getDefaultEndEntityProfileName();
+    /**
+     * <pre>
+     * End entity profile that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for defaultEndEntityProfileName.
+     */
+    com.google.protobuf.ByteString
+        getDefaultEndEntityProfileNameBytes();
+
+    /**
+     * <pre>
+     * code used by EJBCA during enrollment. May be left blank if no code is required.
+     * </pre>
+     *
+     * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+     * @return The enrollmentCodeEnvVar.
+     */
+    java.lang.String getEnrollmentCodeEnvVar();
+    /**
+     * <pre>
+     * code used by EJBCA during enrollment. May be left blank if no code is required.
+     * </pre>
+     *
+     * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for enrollmentCodeEnvVar.
+     */
+    com.google.protobuf.ByteString
+        getEnrollmentCodeEnvVarBytes();
+
+    /**
+     * <pre>
+     * username that used by the EJBCA during enrollment. This can be left out. 
+     * If so, the username must be auto-generated on the Keyfactor side.
+     * </pre>
+     *
+     * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+     * @return The enrollmentUsernameEnvVar.
+     */
+    java.lang.String getEnrollmentUsernameEnvVar();
+    /**
+     * <pre>
+     * username that used by the EJBCA during enrollment. This can be left out. 
+     * If so, the username must be auto-generated on the Keyfactor side.
+     * </pre>
+     *
+     * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for enrollmentUsernameEnvVar.
+     */
+    com.google.protobuf.ByteString
+        getEnrollmentUsernameEnvVarBytes();
+
+    /**
+     * <pre>
+     * Path to private key in PEM format. This file should contain the private key associated with the
+     * client certificate configured in CertificateFile.
+     * </pre>
+     *
+     * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The keyFilePath.
+     */
+    java.lang.String getKeyFilePath();
+    /**
+     * <pre>
+     * Path to private key in PEM format. This file should contain the private key associated with the
+     * client certificate configured in CertificateFile.
+     * </pre>
+     *
+     * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for keyFilePath.
+     */
+    com.google.protobuf.ByteString
+        getKeyFilePathBytes();
+
+    /**
+     * <pre>
+     * the host of the Key Factor CA
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    java.lang.String getServerAddress();
+    /**
+     * <pre>
+     * the host of the Key Factor CA
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    com.google.protobuf.ByteString
+        getServerAddressBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.KeyfactorSSHStore}
+   */
+  public static final class KeyfactorSSHStore extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.KeyfactorSSHStore)
+      KeyfactorSSHStoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeyfactorSSHStore.newBuilder() to construct.
+    private KeyfactorSSHStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeyfactorSSHStore() {
+      id_ = "";
+      name_ = "";
+      caFilePath_ = "";
+      certificateFilePath_ = "";
+      defaultCertificateAuthorityName_ = "";
+      defaultCertificateProfileName_ = "";
+      defaultEndEntityProfileName_ = "";
+      enrollmentCodeEnvVar_ = "";
+      enrollmentUsernameEnvVar_ = "";
+      keyFilePath_ = "";
+      serverAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeyfactorSSHStore();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KeyfactorSSHStore(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serverAddress_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              certificateFilePath_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              keyFilePath_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              caFilePath_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultCertificateProfileName_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultEndEntityProfileName_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultCertificateAuthorityName_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              enrollmentUsernameEnvVar_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              enrollmentCodeEnvVar_ = s;
+              break;
+            }
+            case 262170: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_KeyfactorSSHStore_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_KeyfactorSSHStore_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CA_FILE_PATH_FIELD_NUMBER = 6;
+    private volatile java.lang.Object caFilePath_;
+    /**
+     * <pre>
+     * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+     * This is not required if the CA is trusted by the host operating system. This should be a PEM
+     * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+     * </pre>
+     *
+     * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The caFilePath.
+     */
+    @java.lang.Override
+    public java.lang.String getCaFilePath() {
+      java.lang.Object ref = caFilePath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        caFilePath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+     * This is not required if the CA is trusted by the host operating system. This should be a PEM
+     * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+     * </pre>
+     *
+     * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for caFilePath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCaFilePathBytes() {
+      java.lang.Object ref = caFilePath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        caFilePath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CERTIFICATE_FILE_PATH_FIELD_NUMBER = 4;
+    private volatile java.lang.Object certificateFilePath_;
+    /**
+     * <pre>
+     * Path to client certificate in PEM format. This certificate must contain a client certificate that
+     * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+     * key associated with the certificate, but KeyFile can also be set to configure the private key.
+     * </pre>
+     *
+     * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The certificateFilePath.
+     */
+    @java.lang.Override
+    public java.lang.String getCertificateFilePath() {
+      java.lang.Object ref = certificateFilePath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateFilePath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Path to client certificate in PEM format. This certificate must contain a client certificate that
+     * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+     * key associated with the certificate, but KeyFile can also be set to configure the private key.
+     * </pre>
+     *
+     * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for certificateFilePath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCertificateFilePathBytes() {
+      java.lang.Object ref = certificateFilePath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        certificateFilePath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_CERTIFICATE_AUTHORITY_NAME_FIELD_NUMBER = 10;
+    private volatile java.lang.Object defaultCertificateAuthorityName_;
+    /**
+     * <pre>
+     * Name of EJBCA certificate authority that will enroll CSR.
+     * </pre>
+     *
+     * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+     * @return The defaultCertificateAuthorityName.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultCertificateAuthorityName() {
+      java.lang.Object ref = defaultCertificateAuthorityName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultCertificateAuthorityName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of EJBCA certificate authority that will enroll CSR.
+     * </pre>
+     *
+     * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for defaultCertificateAuthorityName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultCertificateAuthorityNameBytes() {
+      java.lang.Object ref = defaultCertificateAuthorityName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultCertificateAuthorityName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_CERTIFICATE_PROFILE_NAME_FIELD_NUMBER = 8;
+    private volatile java.lang.Object defaultCertificateProfileName_;
+    /**
+     * <pre>
+     * Certificate profile name that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+     * @return The defaultCertificateProfileName.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultCertificateProfileName() {
+      java.lang.Object ref = defaultCertificateProfileName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultCertificateProfileName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Certificate profile name that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for defaultCertificateProfileName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultCertificateProfileNameBytes() {
+      java.lang.Object ref = defaultCertificateProfileName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultCertificateProfileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_END_ENTITY_PROFILE_NAME_FIELD_NUMBER = 9;
+    private volatile java.lang.Object defaultEndEntityProfileName_;
+    /**
+     * <pre>
+     * End entity profile that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+     * @return The defaultEndEntityProfileName.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultEndEntityProfileName() {
+      java.lang.Object ref = defaultEndEntityProfileName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultEndEntityProfileName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * End entity profile that EJBCA will enroll the CSR with.
+     * </pre>
+     *
+     * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for defaultEndEntityProfileName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultEndEntityProfileNameBytes() {
+      java.lang.Object ref = defaultEndEntityProfileName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultEndEntityProfileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENROLLMENT_CODE_ENV_VAR_FIELD_NUMBER = 12;
+    private volatile java.lang.Object enrollmentCodeEnvVar_;
+    /**
+     * <pre>
+     * code used by EJBCA during enrollment. May be left blank if no code is required.
+     * </pre>
+     *
+     * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+     * @return The enrollmentCodeEnvVar.
+     */
+    @java.lang.Override
+    public java.lang.String getEnrollmentCodeEnvVar() {
+      java.lang.Object ref = enrollmentCodeEnvVar_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        enrollmentCodeEnvVar_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * code used by EJBCA during enrollment. May be left blank if no code is required.
+     * </pre>
+     *
+     * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for enrollmentCodeEnvVar.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEnrollmentCodeEnvVarBytes() {
+      java.lang.Object ref = enrollmentCodeEnvVar_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        enrollmentCodeEnvVar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENROLLMENT_USERNAME_ENV_VAR_FIELD_NUMBER = 11;
+    private volatile java.lang.Object enrollmentUsernameEnvVar_;
+    /**
+     * <pre>
+     * username that used by the EJBCA during enrollment. This can be left out. 
+     * If so, the username must be auto-generated on the Keyfactor side.
+     * </pre>
+     *
+     * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+     * @return The enrollmentUsernameEnvVar.
+     */
+    @java.lang.Override
+    public java.lang.String getEnrollmentUsernameEnvVar() {
+      java.lang.Object ref = enrollmentUsernameEnvVar_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        enrollmentUsernameEnvVar_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * username that used by the EJBCA during enrollment. This can be left out. 
+     * If so, the username must be auto-generated on the Keyfactor side.
+     * </pre>
+     *
+     * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for enrollmentUsernameEnvVar.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEnrollmentUsernameEnvVarBytes() {
+      java.lang.Object ref = enrollmentUsernameEnvVar_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        enrollmentUsernameEnvVar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FILE_PATH_FIELD_NUMBER = 5;
+    private volatile java.lang.Object keyFilePath_;
+    /**
+     * <pre>
+     * Path to private key in PEM format. This file should contain the private key associated with the
+     * client certificate configured in CertificateFile.
+     * </pre>
+     *
+     * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The keyFilePath.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyFilePath() {
+      java.lang.Object ref = keyFilePath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyFilePath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Path to private key in PEM format. This file should contain the private key associated with the
+     * client certificate configured in CertificateFile.
+     * </pre>
+     *
+     * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for keyFilePath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyFilePathBytes() {
+      java.lang.Object ref = keyFilePath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyFilePath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serverAddress_;
+    /**
+     * <pre>
+     * the host of the Key Factor CA
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServerAddress() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the host of the Key Factor CA
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerAddressBytes() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 32771;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateFilePath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, certificateFilePath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyFilePath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, keyFilePath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caFilePath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, caFilePath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCertificateProfileName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, defaultCertificateProfileName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultEndEntityProfileName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, defaultEndEntityProfileName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCertificateAuthorityName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, defaultCertificateAuthorityName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(enrollmentUsernameEnvVar_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, enrollmentUsernameEnvVar_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(enrollmentCodeEnvVar_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, enrollmentCodeEnvVar_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(32771, getTags());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateFilePath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, certificateFilePath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyFilePath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, keyFilePath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caFilePath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, caFilePath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCertificateProfileName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, defaultCertificateProfileName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultEndEntityProfileName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, defaultEndEntityProfileName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCertificateAuthorityName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, defaultCertificateAuthorityName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(enrollmentUsernameEnvVar_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, enrollmentUsernameEnvVar_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(enrollmentCodeEnvVar_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, enrollmentCodeEnvVar_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32771, getTags());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getCaFilePath()
+          .equals(other.getCaFilePath())) return false;
+      if (!getCertificateFilePath()
+          .equals(other.getCertificateFilePath())) return false;
+      if (!getDefaultCertificateAuthorityName()
+          .equals(other.getDefaultCertificateAuthorityName())) return false;
+      if (!getDefaultCertificateProfileName()
+          .equals(other.getDefaultCertificateProfileName())) return false;
+      if (!getDefaultEndEntityProfileName()
+          .equals(other.getDefaultEndEntityProfileName())) return false;
+      if (!getEnrollmentCodeEnvVar()
+          .equals(other.getEnrollmentCodeEnvVar())) return false;
+      if (!getEnrollmentUsernameEnvVar()
+          .equals(other.getEnrollmentUsernameEnvVar())) return false;
+      if (!getKeyFilePath()
+          .equals(other.getKeyFilePath())) return false;
+      if (!getServerAddress()
+          .equals(other.getServerAddress())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + CA_FILE_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getCaFilePath().hashCode();
+      hash = (37 * hash) + CERTIFICATE_FILE_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateFilePath().hashCode();
+      hash = (37 * hash) + DEFAULT_CERTIFICATE_AUTHORITY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultCertificateAuthorityName().hashCode();
+      hash = (37 * hash) + DEFAULT_CERTIFICATE_PROFILE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultCertificateProfileName().hashCode();
+      hash = (37 * hash) + DEFAULT_END_ENTITY_PROFILE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultEndEntityProfileName().hashCode();
+      hash = (37 * hash) + ENROLLMENT_CODE_ENV_VAR_FIELD_NUMBER;
+      hash = (53 * hash) + getEnrollmentCodeEnvVar().hashCode();
+      hash = (37 * hash) + ENROLLMENT_USERNAME_ENV_VAR_FIELD_NUMBER;
+      hash = (53 * hash) + getEnrollmentUsernameEnvVar().hashCode();
+      hash = (37 * hash) + KEY_FILE_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyFilePath().hashCode();
+      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getServerAddress().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.KeyfactorSSHStore}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.KeyfactorSSHStore)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_KeyfactorSSHStore_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_KeyfactorSSHStore_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        caFilePath_ = "";
+
+        certificateFilePath_ = "";
+
+        defaultCertificateAuthorityName_ = "";
+
+        defaultCertificateProfileName_ = "";
+
+        defaultEndEntityProfileName_ = "";
+
+        enrollmentCodeEnvVar_ = "";
+
+        enrollmentUsernameEnvVar_ = "";
+
+        keyFilePath_ = "";
+
+        serverAddress_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_KeyfactorSSHStore_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.caFilePath_ = caFilePath_;
+        result.certificateFilePath_ = certificateFilePath_;
+        result.defaultCertificateAuthorityName_ = defaultCertificateAuthorityName_;
+        result.defaultCertificateProfileName_ = defaultCertificateProfileName_;
+        result.defaultEndEntityProfileName_ = defaultEndEntityProfileName_;
+        result.enrollmentCodeEnvVar_ = enrollmentCodeEnvVar_;
+        result.enrollmentUsernameEnvVar_ = enrollmentUsernameEnvVar_;
+        result.keyFilePath_ = keyFilePath_;
+        result.serverAddress_ = serverAddress_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getCaFilePath().isEmpty()) {
+          caFilePath_ = other.caFilePath_;
+          onChanged();
+        }
+        if (!other.getCertificateFilePath().isEmpty()) {
+          certificateFilePath_ = other.certificateFilePath_;
+          onChanged();
+        }
+        if (!other.getDefaultCertificateAuthorityName().isEmpty()) {
+          defaultCertificateAuthorityName_ = other.defaultCertificateAuthorityName_;
+          onChanged();
+        }
+        if (!other.getDefaultCertificateProfileName().isEmpty()) {
+          defaultCertificateProfileName_ = other.defaultCertificateProfileName_;
+          onChanged();
+        }
+        if (!other.getDefaultEndEntityProfileName().isEmpty()) {
+          defaultEndEntityProfileName_ = other.defaultEndEntityProfileName_;
+          onChanged();
+        }
+        if (!other.getEnrollmentCodeEnvVar().isEmpty()) {
+          enrollmentCodeEnvVar_ = other.enrollmentCodeEnvVar_;
+          onChanged();
+        }
+        if (!other.getEnrollmentUsernameEnvVar().isEmpty()) {
+          enrollmentUsernameEnvVar_ = other.enrollmentUsernameEnvVar_;
+          onChanged();
+        }
+        if (!other.getKeyFilePath().isEmpty()) {
+          keyFilePath_ = other.keyFilePath_;
+          onChanged();
+        }
+        if (!other.getServerAddress().isEmpty()) {
+          serverAddress_ = other.serverAddress_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object caFilePath_ = "";
+      /**
+       * <pre>
+       * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+       * This is not required if the CA is trusted by the host operating system. This should be a PEM
+       * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+       * </pre>
+       *
+       * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+       * @return The caFilePath.
+       */
+      public java.lang.String getCaFilePath() {
+        java.lang.Object ref = caFilePath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          caFilePath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+       * This is not required if the CA is trusted by the host operating system. This should be a PEM
+       * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+       * </pre>
+       *
+       * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for caFilePath.
+       */
+      public com.google.protobuf.ByteString
+          getCaFilePathBytes() {
+        java.lang.Object ref = caFilePath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          caFilePath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+       * This is not required if the CA is trusted by the host operating system. This should be a PEM
+       * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+       * </pre>
+       *
+       * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The caFilePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaFilePath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        caFilePath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+       * This is not required if the CA is trusted by the host operating system. This should be a PEM
+       * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+       * </pre>
+       *
+       * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaFilePath() {
+        
+        caFilePath_ = getDefaultInstance().getCaFilePath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path to the root CA that signed the certificate passed to the client for HTTPS connection.
+       * This is not required if the CA is trusted by the host operating system. This should be a PEM
+       * formatted certificate, and doesn't necessarily have to be the CA that signed CertificateFile.
+       * </pre>
+       *
+       * <code>string ca_file_path = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for caFilePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaFilePathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        caFilePath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object certificateFilePath_ = "";
+      /**
+       * <pre>
+       * Path to client certificate in PEM format. This certificate must contain a client certificate that
+       * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+       * key associated with the certificate, but KeyFile can also be set to configure the private key.
+       * </pre>
+       *
+       * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+       * @return The certificateFilePath.
+       */
+      public java.lang.String getCertificateFilePath() {
+        java.lang.Object ref = certificateFilePath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateFilePath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path to client certificate in PEM format. This certificate must contain a client certificate that
+       * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+       * key associated with the certificate, but KeyFile can also be set to configure the private key.
+       * </pre>
+       *
+       * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for certificateFilePath.
+       */
+      public com.google.protobuf.ByteString
+          getCertificateFilePathBytes() {
+        java.lang.Object ref = certificateFilePath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          certificateFilePath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path to client certificate in PEM format. This certificate must contain a client certificate that
+       * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+       * key associated with the certificate, but KeyFile can also be set to configure the private key.
+       * </pre>
+       *
+       * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The certificateFilePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateFilePath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        certificateFilePath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path to client certificate in PEM format. This certificate must contain a client certificate that
+       * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+       * key associated with the certificate, but KeyFile can also be set to configure the private key.
+       * </pre>
+       *
+       * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateFilePath() {
+        
+        certificateFilePath_ = getDefaultInstance().getCertificateFilePath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path to client certificate in PEM format. This certificate must contain a client certificate that
+       * is recognized by the EJBCA instance represented by Hostname. This PEM file may also contain the private
+       * key associated with the certificate, but KeyFile can also be set to configure the private key.
+       * </pre>
+       *
+       * <code>string certificate_file_path = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for certificateFilePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateFilePathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        certificateFilePath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultCertificateAuthorityName_ = "";
+      /**
+       * <pre>
+       * Name of EJBCA certificate authority that will enroll CSR.
+       * </pre>
+       *
+       * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+       * @return The defaultCertificateAuthorityName.
+       */
+      public java.lang.String getDefaultCertificateAuthorityName() {
+        java.lang.Object ref = defaultCertificateAuthorityName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultCertificateAuthorityName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of EJBCA certificate authority that will enroll CSR.
+       * </pre>
+       *
+       * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for defaultCertificateAuthorityName.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultCertificateAuthorityNameBytes() {
+        java.lang.Object ref = defaultCertificateAuthorityName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultCertificateAuthorityName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of EJBCA certificate authority that will enroll CSR.
+       * </pre>
+       *
+       * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The defaultCertificateAuthorityName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCertificateAuthorityName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultCertificateAuthorityName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of EJBCA certificate authority that will enroll CSR.
+       * </pre>
+       *
+       * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultCertificateAuthorityName() {
+        
+        defaultCertificateAuthorityName_ = getDefaultInstance().getDefaultCertificateAuthorityName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of EJBCA certificate authority that will enroll CSR.
+       * </pre>
+       *
+       * <code>string default_certificate_authority_name = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for defaultCertificateAuthorityName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCertificateAuthorityNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultCertificateAuthorityName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultCertificateProfileName_ = "";
+      /**
+       * <pre>
+       * Certificate profile name that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+       * @return The defaultCertificateProfileName.
+       */
+      public java.lang.String getDefaultCertificateProfileName() {
+        java.lang.Object ref = defaultCertificateProfileName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultCertificateProfileName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Certificate profile name that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for defaultCertificateProfileName.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultCertificateProfileNameBytes() {
+        java.lang.Object ref = defaultCertificateProfileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultCertificateProfileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Certificate profile name that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The defaultCertificateProfileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCertificateProfileName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultCertificateProfileName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Certificate profile name that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultCertificateProfileName() {
+        
+        defaultCertificateProfileName_ = getDefaultInstance().getDefaultCertificateProfileName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Certificate profile name that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_certificate_profile_name = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for defaultCertificateProfileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCertificateProfileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultCertificateProfileName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultEndEntityProfileName_ = "";
+      /**
+       * <pre>
+       * End entity profile that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+       * @return The defaultEndEntityProfileName.
+       */
+      public java.lang.String getDefaultEndEntityProfileName() {
+        java.lang.Object ref = defaultEndEntityProfileName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultEndEntityProfileName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * End entity profile that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for defaultEndEntityProfileName.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultEndEntityProfileNameBytes() {
+        java.lang.Object ref = defaultEndEntityProfileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultEndEntityProfileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * End entity profile that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The defaultEndEntityProfileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultEndEntityProfileName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultEndEntityProfileName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End entity profile that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultEndEntityProfileName() {
+        
+        defaultEndEntityProfileName_ = getDefaultInstance().getDefaultEndEntityProfileName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End entity profile that EJBCA will enroll the CSR with.
+       * </pre>
+       *
+       * <code>string default_end_entity_profile_name = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for defaultEndEntityProfileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultEndEntityProfileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultEndEntityProfileName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object enrollmentCodeEnvVar_ = "";
+      /**
+       * <pre>
+       * code used by EJBCA during enrollment. May be left blank if no code is required.
+       * </pre>
+       *
+       * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+       * @return The enrollmentCodeEnvVar.
+       */
+      public java.lang.String getEnrollmentCodeEnvVar() {
+        java.lang.Object ref = enrollmentCodeEnvVar_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          enrollmentCodeEnvVar_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * code used by EJBCA during enrollment. May be left blank if no code is required.
+       * </pre>
+       *
+       * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for enrollmentCodeEnvVar.
+       */
+      public com.google.protobuf.ByteString
+          getEnrollmentCodeEnvVarBytes() {
+        java.lang.Object ref = enrollmentCodeEnvVar_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          enrollmentCodeEnvVar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * code used by EJBCA during enrollment. May be left blank if no code is required.
+       * </pre>
+       *
+       * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The enrollmentCodeEnvVar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnrollmentCodeEnvVar(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        enrollmentCodeEnvVar_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * code used by EJBCA during enrollment. May be left blank if no code is required.
+       * </pre>
+       *
+       * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnrollmentCodeEnvVar() {
+        
+        enrollmentCodeEnvVar_ = getDefaultInstance().getEnrollmentCodeEnvVar();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * code used by EJBCA during enrollment. May be left blank if no code is required.
+       * </pre>
+       *
+       * <code>string enrollment_code_env_var = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for enrollmentCodeEnvVar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnrollmentCodeEnvVarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        enrollmentCodeEnvVar_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object enrollmentUsernameEnvVar_ = "";
+      /**
+       * <pre>
+       * username that used by the EJBCA during enrollment. This can be left out. 
+       * If so, the username must be auto-generated on the Keyfactor side.
+       * </pre>
+       *
+       * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+       * @return The enrollmentUsernameEnvVar.
+       */
+      public java.lang.String getEnrollmentUsernameEnvVar() {
+        java.lang.Object ref = enrollmentUsernameEnvVar_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          enrollmentUsernameEnvVar_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * username that used by the EJBCA during enrollment. This can be left out. 
+       * If so, the username must be auto-generated on the Keyfactor side.
+       * </pre>
+       *
+       * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for enrollmentUsernameEnvVar.
+       */
+      public com.google.protobuf.ByteString
+          getEnrollmentUsernameEnvVarBytes() {
+        java.lang.Object ref = enrollmentUsernameEnvVar_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          enrollmentUsernameEnvVar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * username that used by the EJBCA during enrollment. This can be left out. 
+       * If so, the username must be auto-generated on the Keyfactor side.
+       * </pre>
+       *
+       * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The enrollmentUsernameEnvVar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnrollmentUsernameEnvVar(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        enrollmentUsernameEnvVar_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * username that used by the EJBCA during enrollment. This can be left out. 
+       * If so, the username must be auto-generated on the Keyfactor side.
+       * </pre>
+       *
+       * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnrollmentUsernameEnvVar() {
+        
+        enrollmentUsernameEnvVar_ = getDefaultInstance().getEnrollmentUsernameEnvVar();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * username that used by the EJBCA during enrollment. This can be left out. 
+       * If so, the username must be auto-generated on the Keyfactor side.
+       * </pre>
+       *
+       * <code>string enrollment_username_env_var = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for enrollmentUsernameEnvVar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnrollmentUsernameEnvVarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        enrollmentUsernameEnvVar_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyFilePath_ = "";
+      /**
+       * <pre>
+       * Path to private key in PEM format. This file should contain the private key associated with the
+       * client certificate configured in CertificateFile.
+       * </pre>
+       *
+       * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+       * @return The keyFilePath.
+       */
+      public java.lang.String getKeyFilePath() {
+        java.lang.Object ref = keyFilePath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyFilePath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path to private key in PEM format. This file should contain the private key associated with the
+       * client certificate configured in CertificateFile.
+       * </pre>
+       *
+       * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for keyFilePath.
+       */
+      public com.google.protobuf.ByteString
+          getKeyFilePathBytes() {
+        java.lang.Object ref = keyFilePath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyFilePath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path to private key in PEM format. This file should contain the private key associated with the
+       * client certificate configured in CertificateFile.
+       * </pre>
+       *
+       * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The keyFilePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyFilePath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        keyFilePath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path to private key in PEM format. This file should contain the private key associated with the
+       * client certificate configured in CertificateFile.
+       * </pre>
+       *
+       * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyFilePath() {
+        
+        keyFilePath_ = getDefaultInstance().getKeyFilePath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path to private key in PEM format. This file should contain the private key associated with the
+       * client certificate configured in CertificateFile.
+       * </pre>
+       *
+       * <code>string key_file_path = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for keyFilePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyFilePathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        keyFilePath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverAddress_ = "";
+      /**
+       * <pre>
+       * the host of the Key Factor CA
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The serverAddress.
+       */
+      public java.lang.String getServerAddress() {
+        java.lang.Object ref = serverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the host of the Key Factor CA
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for serverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServerAddressBytes() {
+        java.lang.Object ref = serverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the host of the Key Factor CA
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the host of the Key Factor CA
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerAddress() {
+        
+        serverAddress_ = getDefaultInstance().getServerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the host of the Key Factor CA
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.KeyfactorSSHStore)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.KeyfactorSSHStore)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore();
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeyfactorSSHStore>
+        PARSER = new com.google.protobuf.AbstractParser<KeyfactorSSHStore>() {
+      @java.lang.Override
+      public KeyfactorSSHStore parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KeyfactorSSHStore(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeyfactorSSHStore> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyfactorSSHStore> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorSSHStore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface KeyfactorX509StoreOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.KeyfactorX509Store)
       com.google.protobuf.MessageOrBuilder {
@@ -19248,26 +22261,6 @@ public final class SecretStoresTypesPlumbing {
 
     /**
      * <pre>
-     * optional environment variable housing the password that is used to decrypt the key file.
-     * </pre>
-     *
-     * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-     * @return The keyPasswordEnvVar.
-     */
-    java.lang.String getKeyPasswordEnvVar();
-    /**
-     * <pre>
-     * optional environment variable housing the password that is used to decrypt the key file.
-     * </pre>
-     *
-     * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for keyPasswordEnvVar.
-     */
-    com.google.protobuf.ByteString
-        getKeyPasswordEnvVarBytes();
-
-    /**
-     * <pre>
      * the host of the Key Factor CA
      * </pre>
      *
@@ -19336,7 +22329,6 @@ public final class SecretStoresTypesPlumbing {
       enrollmentCodeEnvVar_ = "";
       enrollmentUsernameEnvVar_ = "";
       keyFilePath_ = "";
-      keyPasswordEnvVar_ = "";
       serverAddress_ = "";
     }
 
@@ -19404,12 +22396,6 @@ public final class SecretStoresTypesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               caFilePath_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              keyPasswordEnvVar_ = s;
               break;
             }
             case 66: {
@@ -19961,52 +22947,6 @@ public final class SecretStoresTypesPlumbing {
       }
     }
 
-    public static final int KEY_PASSWORD_ENV_VAR_FIELD_NUMBER = 7;
-    private volatile java.lang.Object keyPasswordEnvVar_;
-    /**
-     * <pre>
-     * optional environment variable housing the password that is used to decrypt the key file.
-     * </pre>
-     *
-     * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-     * @return The keyPasswordEnvVar.
-     */
-    @java.lang.Override
-    public java.lang.String getKeyPasswordEnvVar() {
-      java.lang.Object ref = keyPasswordEnvVar_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        keyPasswordEnvVar_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * optional environment variable housing the password that is used to decrypt the key file.
-     * </pre>
-     *
-     * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for keyPasswordEnvVar.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getKeyPasswordEnvVarBytes() {
-      java.lang.Object ref = keyPasswordEnvVar_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        keyPasswordEnvVar_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
     private volatile java.lang.Object serverAddress_;
     /**
@@ -20123,9 +23063,6 @@ public final class SecretStoresTypesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caFilePath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, caFilePath_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyPasswordEnvVar_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, keyPasswordEnvVar_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCertificateProfileName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, defaultCertificateProfileName_);
       }
@@ -20170,9 +23107,6 @@ public final class SecretStoresTypesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caFilePath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, caFilePath_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyPasswordEnvVar_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, keyPasswordEnvVar_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCertificateProfileName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, defaultCertificateProfileName_);
@@ -20228,8 +23162,6 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getEnrollmentUsernameEnvVar())) return false;
       if (!getKeyFilePath()
           .equals(other.getKeyFilePath())) return false;
-      if (!getKeyPasswordEnvVar()
-          .equals(other.getKeyPasswordEnvVar())) return false;
       if (!getServerAddress()
           .equals(other.getServerAddress())) return false;
       if (hasTags() != other.hasTags()) return false;
@@ -20268,8 +23200,6 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getEnrollmentUsernameEnvVar().hashCode();
       hash = (37 * hash) + KEY_FILE_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getKeyFilePath().hashCode();
-      hash = (37 * hash) + KEY_PASSWORD_ENV_VAR_FIELD_NUMBER;
-      hash = (53 * hash) + getKeyPasswordEnvVar().hashCode();
       hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getServerAddress().hashCode();
       if (hasTags()) {
@@ -20429,8 +23359,6 @@ public final class SecretStoresTypesPlumbing {
 
         keyFilePath_ = "";
 
-        keyPasswordEnvVar_ = "";
-
         serverAddress_ = "";
 
         if (tagsBuilder_ == null) {
@@ -20475,7 +23403,6 @@ public final class SecretStoresTypesPlumbing {
         result.enrollmentCodeEnvVar_ = enrollmentCodeEnvVar_;
         result.enrollmentUsernameEnvVar_ = enrollmentUsernameEnvVar_;
         result.keyFilePath_ = keyFilePath_;
-        result.keyPasswordEnvVar_ = keyPasswordEnvVar_;
         result.serverAddress_ = serverAddress_;
         if (tagsBuilder_ == null) {
           result.tags_ = tags_;
@@ -20568,10 +23495,6 @@ public final class SecretStoresTypesPlumbing {
         }
         if (!other.getKeyFilePath().isEmpty()) {
           keyFilePath_ = other.keyFilePath_;
-          onChanged();
-        }
-        if (!other.getKeyPasswordEnvVar().isEmpty()) {
-          keyPasswordEnvVar_ = other.keyPasswordEnvVar_;
           onChanged();
         }
         if (!other.getServerAddress().isEmpty()) {
@@ -21596,102 +24519,6 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         keyFilePath_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object keyPasswordEnvVar_ = "";
-      /**
-       * <pre>
-       * optional environment variable housing the password that is used to decrypt the key file.
-       * </pre>
-       *
-       * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-       * @return The keyPasswordEnvVar.
-       */
-      public java.lang.String getKeyPasswordEnvVar() {
-        java.lang.Object ref = keyPasswordEnvVar_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          keyPasswordEnvVar_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * optional environment variable housing the password that is used to decrypt the key file.
-       * </pre>
-       *
-       * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for keyPasswordEnvVar.
-       */
-      public com.google.protobuf.ByteString
-          getKeyPasswordEnvVarBytes() {
-        java.lang.Object ref = keyPasswordEnvVar_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          keyPasswordEnvVar_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * optional environment variable housing the password that is used to decrypt the key file.
-       * </pre>
-       *
-       * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-       * @param value The keyPasswordEnvVar to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKeyPasswordEnvVar(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        keyPasswordEnvVar_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * optional environment variable housing the password that is used to decrypt the key file.
-       * </pre>
-       *
-       * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKeyPasswordEnvVar() {
-        
-        keyPasswordEnvVar_ = getDefaultInstance().getKeyPasswordEnvVar();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * optional environment variable housing the password that is used to decrypt the key file.
-       * </pre>
-       *
-       * <code>string key_password_env_var = 7 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for keyPasswordEnvVar to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKeyPasswordEnvVarBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        keyPasswordEnvVar_ = value;
         onChanged();
         return this;
       }
@@ -39344,6 +42171,11 @@ public final class SecretStoresTypesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_GCPCertX509Store_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_KeyfactorSSHStore_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_KeyfactorSSHStore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_KeyfactorX509Store_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -39403,7 +42235,7 @@ public final class SecretStoresTypesPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\030secret_store_types.proto\022\002v1\032\roptions." +
-      "proto\032\ntags.proto\"\222\021\n\013SecretStore\022I\n\003aws" +
+      "proto\032\ntags.proto\"\372\021\n\013SecretStore\022I\n\003aws" +
       "\030\003 \001(\0132\014.v1.AWSStoreB,\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\014j" +
       "son_gateway\022\003aws\362\370\263\007\005\260\363\263\007\001H\000\022d\n\016aws_cert" +
       "_x_509\030\036 \001(\0132\024.v1.AWSCertX509StoreB4\362\370\263\007" +
@@ -39428,295 +42260,322 @@ public final class SecretStoresTypesPlumbing {
       "\007\030\302\364\263\007\023\n\014json_gateway\022\003gcp\362\370\263\007\005\260\363\263\007\001H\000\022e" +
       "\n\016gcp_cert_x_509\030\312\001 \001(\0132\024.v1.GCPCertX509" +
       "StoreB4\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013gc" +
-      "pCertX509\362\370\263\007\005\260\363\263\007\001H\000\022j\n\017keyfactor_x_509" +
-      "\030\310\001 \001(\0132\026.v1.KeyfactorX509StoreB6\362\370\263\007\'\312\363" +
-      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rkeyfactorX509\362\370\263" +
-      "\007\005\260\363\263\007\001H\000\022f\n\016vault_app_role\030\004 \001(\0132\025.v1.V" +
-      "aultAppRoleStoreB5\362\370\263\007&\312\363\263\007!\302\364\263\007\034\n\014json_" +
-      "gateway\022\014vaultAppRole\362\370\263\007\005\260\363\263\007\001H\000\022}\n\027vau" +
-      "lt_app_role_cert_ssh\030^ \001(\0132\034.v1.VaultApp" +
-      "RoleCertSSHStoreB<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n\014json_" +
-      "gateway\022\023vaultAppRoleCertSSH\362\370\263\007\005\260\363\263\007\001H\000" +
-      "\022\201\001\n\031vault_app_role_cert_x_509\030_ \001(\0132\035.v" +
-      "1.VaultAppRoleCertX509StoreB=\362\370\263\007.\312\363\263\007)\302" +
-      "\364\263\007$\n\014json_gateway\022\024vaultAppRoleCertX509" +
-      "\362\370\263\007\005\260\363\263\007\001H\000\022Y\n\tvault_tls\030\001 \001(\0132\021.v1.Vau" +
-      "ltTLSStoreB1\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\014json_gatewa" +
-      "y\022\010vaultTLS\362\370\263\007\005\260\363\263\007\001H\000\022p\n\022vault_tls_cer" +
-      "t_ssh\030\\ \001(\0132\030.v1.VaultTLSCertSSHStoreB8\362" +
-      "\370\263\007)\312\363\263\007$\302\364\263\007\037\n\014json_gateway\022\017vaultTLSCe" +
-      "rtSSH\362\370\263\007\005\260\363\263\007\001H\000\022t\n\024vault_tls_cert_x_50" +
-      "9\030] \001(\0132\031.v1.VaultTLSCertX509StoreB9\362\370\263\007" +
-      "*\312\363\263\007%\302\364\263\007 \n\014json_gateway\022\020vaultTLSCertX" +
-      "509\362\370\263\007\005\260\363\263\007\001H\000\022_\n\013vault_token\030\002 \001(\0132\023.v" +
-      "1.VaultTokenStoreB3\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\014json" +
-      "_gateway\022\nvaultToken\362\370\263\007\005\260\363\263\007\001H\000\022v\n\024vaul" +
-      "t_token_cert_ssh\030Z \001(\0132\032.v1.VaultTokenCe" +
-      "rtSSHStoreB:\362\370\263\007+\312\363\263\007&\302\364\263\007!\n\014json_gatewa" +
-      "y\022\021vaultTokenCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022z\n\026vaul" +
-      "t_token_cert_x_509\030[ \001(\0132\033.v1.VaultToken" +
-      "CertX509StoreB;\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014json_gat" +
-      "eway\022\022vaultTokenCertX509\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370" +
-      "\263\007\005\250\363\263\007\001B,\n\014secret_store\022\034\252\370\263\007\t\252\370\263\007\004tags" +
-      "\252\370\263\007\t\252\370\263\007\004name\"\374\001\n\010AWSStore\022\026\n\002id\030\001 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
-      "\007\001\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033" +
-      "\302\364\263\007\026\n\014json_gateway\022\006region\022\"\n\004tags\030\004 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E" +
-      "\302\364\263\007\n\n\003cli\022\003aws\302\364\263\007\023\n\014json_gateway\022\003aws\302" +
-      "\364\263\007\031\n\022terraform-provider\022\003aws\"\346\004\n\020AWSCer" +
-      "tX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
-      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022=\n\005caArn\030\005 \001(\t" +
-      "B.\362\370\263\007)\260\363\263\007\001\300\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\014json_gatewa" +
-      "y\022\005caArn\022_\n\026certificateTemplateArn\030\007 \001(\t" +
-      "B?\362\370\263\007:\260\363\263\007\001\300\363\263\007\001\312\363\263\007+\302\364\263\007&\n\014json_gatewa" +
-      "y\022\026certificateTemplateArn\022[\n\024issuedCertT" +
-      "TLMinutes\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263" +
-      "\007$\n\014json_gateway\022\024issuedCertTtlMinutes\022?" +
-      "\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007" +
-      "\026\n\014json_gateway\022\006region\022I\n\013signingAlgo\030\006" +
-      " \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_ga" +
-      "teway\022\013signingAlgo\022\"\n\004tags\030\004 \001(\0132\010.v1.Ta" +
-      "gsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cl" +
-      "i\022\013awsCertX509\302\364\263\007\033\n\014json_gateway\022\013awsCe" +
-      "rtX509\302\364\263\007#\n\022terraform-provider\022\raws_cer" +
-      "t_x509\"\223\002\n\024ActiveDirectoryStore\022\026\n\002id\030\001 " +
+      "pCertX509\362\370\263\007\005\260\363\263\007\001H\000\022f\n\rkeyfactor_ssh\030\322" +
+      "\001 \001(\0132\025.v1.KeyfactorSSHStoreB5\362\370\263\007&\312\363\263\007!" +
+      "\302\364\263\007\034\n\014json_gateway\022\014keyfactorSSH\362\370\263\007\005\260\363" +
+      "\263\007\001H\000\022j\n\017keyfactor_x_509\030\310\001 \001(\0132\026.v1.Key" +
+      "factorX509StoreB6\362\370\263\007\'\312\363\263\007\"\302\364\263\007\035\n\014json_g" +
+      "ateway\022\rkeyfactorX509\362\370\263\007\005\260\363\263\007\001H\000\022f\n\016vau" +
+      "lt_app_role\030\004 \001(\0132\025.v1.VaultAppRoleStore" +
+      "B5\362\370\263\007&\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014vaultAp" +
+      "pRole\362\370\263\007\005\260\363\263\007\001H\000\022}\n\027vault_app_role_cert" +
+      "_ssh\030^ \001(\0132\034.v1.VaultAppRoleCertSSHStore" +
+      "B<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023vaultAp" +
+      "pRoleCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022\201\001\n\031vault_app_r" +
+      "ole_cert_x_509\030_ \001(\0132\035.v1.VaultAppRoleCe" +
+      "rtX509StoreB=\362\370\263\007.\312\363\263\007)\302\364\263\007$\n\014json_gatew" +
+      "ay\022\024vaultAppRoleCertX509\362\370\263\007\005\260\363\263\007\001H\000\022Y\n\t" +
+      "vault_tls\030\001 \001(\0132\021.v1.VaultTLSStoreB1\362\370\263\007" +
+      "\"\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultTLS\362\370\263\007\005" +
+      "\260\363\263\007\001H\000\022p\n\022vault_tls_cert_ssh\030\\ \001(\0132\030.v1" +
+      ".VaultTLSCertSSHStoreB8\362\370\263\007)\312\363\263\007$\302\364\263\007\037\n\014" +
+      "json_gateway\022\017vaultTLSCertSSH\362\370\263\007\005\260\363\263\007\001H" +
+      "\000\022t\n\024vault_tls_cert_x_509\030] \001(\0132\031.v1.Vau" +
+      "ltTLSCertX509StoreB9\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\014jso" +
+      "n_gateway\022\020vaultTLSCertX509\362\370\263\007\005\260\363\263\007\001H\000\022" +
+      "_\n\013vault_token\030\002 \001(\0132\023.v1.VaultTokenStor" +
+      "eB3\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\nvaultT" +
+      "oken\362\370\263\007\005\260\363\263\007\001H\000\022v\n\024vault_token_cert_ssh" +
+      "\030Z \001(\0132\032.v1.VaultTokenCertSSHStoreB:\362\370\263\007" +
+      "+\312\363\263\007&\302\364\263\007!\n\014json_gateway\022\021vaultTokenCer" +
+      "tSSH\362\370\263\007\005\260\363\263\007\001H\000\022z\n\026vault_token_cert_x_5" +
+      "09\030[ \001(\0132\033.v1.VaultTokenCertX509StoreB;\362" +
+      "\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022vaultToken" +
+      "CertX509\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370\263\007\005\250\363\263\007\001B,\n\014secr" +
+      "et_store\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\374" +
+      "\001\n\010AWSStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
+      "ame\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006region\030\003 \001" +
+      "(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gate" +
+      "way\022\006region\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\302\364\263\007\n\n\003cli\022\003aws\302" +
+      "\364\263\007\023\n\014json_gateway\022\003aws\302\364\263\007\031\n\022terraform-" +
+      "provider\022\003aws\"\346\004\n\020AWSCertX509Store\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022=\n\005caArn\030\005 \001(\tB.\362\370\263\007)\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007\032\302\364\263\007\025\n\014json_gateway\022\005caArn\022_\n\026cert" +
+      "ificateTemplateArn\030\007 \001(\tB?\362\370\263\007:\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007+\302\364\263\007&\n\014json_gateway\022\026certificateTe" +
+      "mplateArn\022[\n\024issuedCertTTLMinutes\030\010 \001(\005B" +
+      "=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway" +
+      "\022\024issuedCertTtlMinutes\022?\n\006region\030\003 \001(\tB/" +
+      "\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022" +
+      "\006region\022I\n\013signingAlgo\030\006 \001(\tB4\362\370\263\007/\260\363\263\007\001" +
+      "\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingAl" +
+      "go\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n" +
+      "\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013awsCertX509\302\364" +
+      "\263\007\033\n\014json_gateway\022\013awsCertX509\302\364\263\007#\n\022ter" +
+      "raform-provider\022\raws_cert_x509\"\223\002\n\024Activ" +
+      "eDirectoryStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022N\n\016server" +
+      "_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007" +
+      "\035\n\014json_gateway\022\rserverAddress\022$\n\004tags\030\203" +
+      "\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:N\372\370\263\007I\250\363\263\007\001" +
+      "\312\363\263\007?\302\364\263\007\026\n\003cli\022\017activeDirectory\302\364\263\007\037\n\014j" +
+      "son_gateway\022\017activeDirectory\"\353\001\n\nAzureSt" +
+      "ore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\tvault_uri\030\003 \001(\tB1\362" +
+      "\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010" +
+      "vaultUri\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
+      "\005\260\363\263\007\001::\372\370\263\0075\250\363\263\007\001\312\363\263\007+\302\364\263\007\014\n\003cli\022\005azure" +
+      "\302\364\263\007\025\n\014json_gateway\022\005azure\"\253\002\n\023CyberarkC" +
+      "onjurStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
+      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(" +
+      "\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gatew" +
+      "ay\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007g\302\364\263\007\025\n\003cli\022\016cyb" +
+      "erarkConjur\302\364\263\007\036\n\014json_gateway\022\016cyberark" +
+      "Conjur\302\364\263\007%\n\022terraform-provider\022\017cyberar" +
+      "k_conjur\"\237\002\n\020CyberarkPAMStore\022\026\n\002id\030\001 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
+      "\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004tags\030\203\200" +
+      "\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263\007\001\312" +
+      "\363\263\007^\302\364\263\007\022\n\003cli\022\013cyberarkPAM\302\364\263\007\033\n\014json_g" +
+      "ateway\022\013cyberarkPAM\302\364\263\007\"\n\022terraform-prov" +
+      "ider\022\014cyberark_pam\"\330\002\n\034CyberarkPAMExperi" +
+      "mentalStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
+      "ame\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001" +
+      "(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gate" +
+      "way\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\231\001\372\370\263\007\223\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263\007\036\n" +
+      "\003cli\022\027cyberarkPAMExperimental\302\364\263\007\'\n\014json" +
+      "_gateway\022\027cyberarkPAMExperimental\302\364\263\007/\n\022" +
+      "terraform-provider\022\031cyberark_pam_experim" +
+      "ental\"\263\002\n\014DelineaStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022A\n" +
+      "\nserver_url\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n" +
+      "\014json_gateway\022\tserverUrl\022C\n\013tenant_name\030" +
+      "\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gatewa" +
+      "y\022\ntenantName\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
+      "\n\362\370\263\007\005\260\363\263\007\001:>\372\370\263\0079\250\363\263\007\001\312\363\263\007/\302\364\263\007\016\n\003cli\022\007" +
+      "delinea\302\364\263\007\027\n\014json_gateway\022\007delinea\"\346\001\n\010" +
+      "GCPStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name" +
+      "\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022E\n\tprojectID\030\003 \001" +
+      "(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gate" +
+      "way\022\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
+      "B\n\362\370\263\007\005\260\363\263\007\001:6\372\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cli\022" +
+      "\003gcp\302\364\263\007\023\n\014json_gateway\022\003gcp\"\235\004\n\020GCPCert" +
+      "X509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004nam" +
+      "e\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\0226\n\004caID\030\006 \001(\tB(" +
+      "\362\370\263\007#\260\363\263\007\001\312\363\263\007\031\302\364\263\007\024\n\014json_gateway\022\004caId" +
+      "\022C\n\010caPoolID\030\005 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035" +
+      "\302\364\263\007\030\n\014json_gateway\022\010caPoolId\022[\n\024issuedC" +
+      "ertTTLMinutes\030\007 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
+      ")\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMinut" +
+      "es\022C\n\010location\030\004 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007\035\302\364\263\007\030\n\014json_gateway\022\010location\022E\n\tproje" +
+      "ctID\030\003 \001(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014j" +
+      "son_gateway\022\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:F\372\370\263\007A\250\363\263\007\001\312\363\263\0077\302\364\263" +
+      "\007\022\n\003cli\022\013gcpCertX509\302\364\263\007\033\n\014json_gateway\022" +
+      "\013gcpCertX509\"\212\010\n\021KeyfactorSSHStore\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022D\n\014ca_file_path\030\006 \001(\tB.\362\370\263\007)\260\363" +
+      "\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaFilePath\022" +
+      "[\n\025certificate_file_path\030\004 \001(\tB<\362\370\263\0077\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023certifi" +
+      "cateFilePath\022t\n\"default_certificate_auth" +
+      "ority_name\030\n \001(\tBH\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364" +
+      "\263\007/\n\014json_gateway\022\037defaultCertificateAut" +
+      "horityName\022p\n default_certificate_profil" +
+      "e_name\030\010 \001(\tBF\362\370\263\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n" +
+      "\014json_gateway\022\035defaultCertificateProfile" +
+      "Name\022m\n\037default_end_entity_profile_name\030" +
+      "\t \001(\tBD\362\370\263\007?\260\363\263\007\001\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_g" +
+      "ateway\022\033defaultEndEntityProfileName\022Y\n\027e" +
+      "nrollment_code_env_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001" +
+      "\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024enrollmentCode" +
+      "EnvVar\022a\n\033enrollment_username_env_var\030\013 " +
+      "\001(\tB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\014json_gateway\022" +
+      "\030enrollmentUsernameEnvVar\022F\n\rkey_file_pa" +
+      "th\030\005 \001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gat" +
+      "eway\022\013keyFilePath\022N\n\016server_address\030\003 \001(" +
+      "\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatew" +
+      "ay\022\rserverAddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001:H\372\370\263\007C\250\363\263\007\001\312\363\263\0079\302\364\263\007\023\n\003c" +
+      "li\022\014keyfactorSSH\302\364\263\007\034\n\014json_gateway\022\014key" +
+      "factorSSH\"\215\010\n\022KeyfactorX509Store\022\026\n\002id\030\001" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263" +
+      "\007\001\300\363\263\007\001\022D\n\014ca_file_path\030\006 \001(\tB.\362\370\263\007)\260\363\263\007" +
+      "\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaFilePath\022[\n" +
+      "\025certificate_file_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001" +
+      "\300\363\263\007\001\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023certifica" +
+      "teFilePath\022t\n\"default_certificate_author" +
+      "ity_name\030\n \001(\tBH\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007" +
+      "/\n\014json_gateway\022\037defaultCertificateAutho" +
+      "rityName\022p\n default_certificate_profile_" +
+      "name\030\010 \001(\tBF\362\370\263\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014j" +
+      "son_gateway\022\035defaultCertificateProfileNa" +
+      "me\022m\n\037default_end_entity_profile_name\030\t " +
+      "\001(\tBD\362\370\263\007?\260\363\263\007\001\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_gat" +
+      "eway\022\033defaultEndEntityProfileName\022Y\n\027enr" +
+      "ollment_code_env_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363" +
+      "\263\007)\302\364\263\007$\n\014json_gateway\022\024enrollmentCodeEn" +
+      "vVar\022a\n\033enrollment_username_env_var\030\013 \001(" +
+      "\tB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\014json_gateway\022\030e" +
+      "nrollmentUsernameEnvVar\022F\n\rkey_file_path" +
+      "\030\005 \001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gatew" +
+      "ay\022\013keyFilePath\022N\n\016server_address\030\003 \001(\tB" +
+      "6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway" +
+      "\022\rserverAddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001:J\372\370\263\007E\250\363\263\007\001\312\363\263\007;\302\364\263\007\024\n\003cli" +
+      "\022\rkeyfactorX509\302\364\263\007\035\n\014json_gateway\022\rkeyf" +
+      "actorX509\"\362\002\n\021VaultAppRoleStore\022\026\n\002id\030\001 " +
       "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
-      "\001\300\363\263\007\001\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263" +
-      "\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverA" +
-      "ddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:N\372\370\263\007I\250\363\263\007\001\312\363\263\007?\302\364\263\007\026\n\003cli\022\017activeD" +
-      "irectory\302\364\263\007\037\n\014json_gateway\022\017activeDirec" +
-      "tory\"\353\001\n\nAzureStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\tva" +
-      "ult_uri\030\003 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030" +
-      "\n\014json_gateway\022\010vaultUri\022$\n\004tags\030\203\200\002 \001(\013" +
-      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001::\372\370\263\0075\250\363\263\007\001\312\363\263\007+\302" +
-      "\364\263\007\014\n\003cli\022\005azure\302\364\263\007\025\n\014json_gateway\022\005azu" +
-      "re\"\253\002\n\023CyberarkConjurStore\022\026\n\002id\030\001 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007" +
-      "\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302" +
-      "\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004tags\030\203\200\002 \001" +
-      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007" +
-      "g\302\364\263\007\025\n\003cli\022\016cyberarkConjur\302\364\263\007\036\n\014json_g" +
-      "ateway\022\016cyberarkConjur\302\364\263\007%\n\022terraform-p" +
-      "rovider\022\017cyberark_conjur\"\237\002\n\020CyberarkPAM" +
-      "Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
-      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370" +
-      "\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006a" +
-      "ppUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001:m\372\370\263\007h\250\363\263\007\001\312\363\263\007^\302\364\263\007\022\n\003cli\022\013cyberark" +
-      "PAM\302\364\263\007\033\n\014json_gateway\022\013cyberarkPAM\302\364\263\007\"" +
-      "\n\022terraform-provider\022\014cyberark_pam\"\330\002\n\034C" +
-      "yberarkPAMExperimentalStore\022\026\n\002id\030\001 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
-      "\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033" +
-      "\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004tags\030\203\200\002 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\231\001\372\370\263\007\223\001\250\363\263\007\001\312" +
-      "\363\263\007\210\001\210\364\263\007\001\302\364\263\007\036\n\003cli\022\027cyberarkPAMExperim" +
-      "ental\302\364\263\007\'\n\014json_gateway\022\027cyberarkPAMExp" +
-      "erimental\302\364\263\007/\n\022terraform-provider\022\031cybe" +
-      "rark_pam_experimental\"\263\002\n\014DelineaStore\022\026" +
-      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
-      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022A\n\nserver_url\030\003 \001(\tB-\362\370\263\007(" +
-      "\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tserverUrl" +
-      "\022C\n\013tenant_name\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364" +
-      "\263\007\032\n\014json_gateway\022\ntenantName\022$\n\004tags\030\203\200" +
-      "\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:>\372\370\263\0079\250\363\263\007\001\312" +
-      "\363\263\007/\302\364\263\007\016\n\003cli\022\007delinea\302\364\263\007\027\n\014json_gatew" +
-      "ay\022\007delinea\"\346\001\n\010GCPStore\022\026\n\002id\030\001 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
-      "E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036" +
-      "\302\364\263\007\031\n\014json_gateway\022\tprojectId\022$\n\004tags\030\203" +
-      "\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:6\372\370\263\0071\250\363\263\007\001" +
-      "\312\363\263\007\'\302\364\263\007\n\n\003cli\022\003gcp\302\364\263\007\023\n\014json_gateway\022" +
-      "\003gcp\"\235\004\n\020GCPCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
-      "\0226\n\004caID\030\006 \001(\tB(\362\370\263\007#\260\363\263\007\001\312\363\263\007\031\302\364\263\007\024\n\014js" +
-      "on_gateway\022\004caId\022C\n\010caPoolID\030\005 \001(\tB1\362\370\263\007" +
-      ",\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010caP" +
-      "oolId\022[\n\024issuedCertTTLMinutes\030\007 \001(\005B=\362\370\263" +
-      "\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024is" +
-      "suedCertTtlMinutes\022C\n\010location\030\004 \001(\tB1\362\370" +
-      "\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010l" +
-      "ocation\022E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-\260\363\263\007\001\300\363" +
-      "\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tprojectId\022$" +
-      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:F\372\370" +
-      "\263\007A\250\363\263\007\001\312\363\263\0077\302\364\263\007\022\n\003cli\022\013gcpCertX509\302\364\263\007" +
-      "\033\n\014json_gateway\022\013gcpCertX509\"\342\010\n\022Keyfact" +
-      "orX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
-      "ame\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014ca_file_pa" +
-      "th\030\006 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gat" +
-      "eway\022\ncaFilePath\022[\n\025certificate_file_pat" +
-      "h\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001\300\363\263\007\001\312\363\263\007(\302\364\263\007#\n\014json" +
-      "_gateway\022\023certificateFilePath\022t\n\"default" +
-      "_certificate_authority_name\030\n \001(\tBH\362\370\263\007C" +
-      "\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007/\n\014json_gateway\022\037defa" +
-      "ultCertificateAuthorityName\022p\n default_c" +
-      "ertificate_profile_name\030\010 \001(\tBF\362\370\263\007A\260\363\263\007" +
-      "\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014json_gateway\022\035defaultC" +
-      "ertificateProfileName\022m\n\037default_end_ent" +
-      "ity_profile_name\030\t \001(\tBD\362\370\263\007?\260\363\263\007\001\300\363\263\007\001\312" +
-      "\363\263\0070\302\364\263\007+\n\014json_gateway\022\033defaultEndEntit" +
-      "yProfileName\022Y\n\027enrollment_code_env_var\030" +
-      "\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gatewa" +
-      "y\022\024enrollmentCodeEnvVar\022a\n\033enrollment_us" +
-      "ername_env_var\030\013 \001(\tB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263" +
-      "\007(\n\014json_gateway\022\030enrollmentUsernameEnvV" +
-      "ar\022F\n\rkey_file_path\030\005 \001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263" +
-      "\007 \302\364\263\007\033\n\014json_gateway\022\013keyFilePath\022S\n\024ke" +
-      "y_password_env_var\030\007 \001(\tB5\362\370\263\0070\260\363\263\007\001\312\363\263\007" +
-      "&\302\364\263\007!\n\014json_gateway\022\021keyPasswordEnvVar\022" +
-      "N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001" +
-      "\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022" +
-      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:J\372" +
-      "\370\263\007E\250\363\263\007\001\312\363\263\007;\302\364\263\007\024\n\003cli\022\rkeyfactorX509\302" +
-      "\364\263\007\035\n\014json_gateway\022\rkeyfactorX509\"\362\002\n\021Va" +
-      "ultAppRoleStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamesp" +
-      "ace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_ga" +
-      "teway\022\tnamespace\022N\n\016server_address\030\003 \001(\t" +
-      "B6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatewa" +
-      "y\022\rserverAddress\022\"\n\004tags\030\010 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001\312\363\263\007a\302\364\263\007\023\n\003cli\022" +
-      "\014vaultAppRole\302\364\263\007\034\n\014json_gateway\022\014vaultA" +
-      "ppRole\302\364\263\007#\n\022terraform-provider\022\rvault_a" +
-      "pprole\"\214\005\n\030VaultAppRoleCertSSHStore\022\026\n\002i" +
-      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005" +
-      "B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gatewa" +
-      "y\022\024issuedCertTtlMinutes\022@\n\tnamespace\030\005 \001" +
-      "(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\t" +
-      "namespace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071" +
-      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserv" +
-      "erAddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363" +
-      "\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signin" +
-      "gRole\022O\n\017ssh_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263" +
-      "\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMoun" +
-      "tPoint\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\210\001\372\370\263\007\202\001\250\363\263\007\001\312\363\263\007x\302\364\263\007\032\n\003cli\022\023vaultAp" +
-      "pRoleCertSSH\302\364\263\007#\n\014json_gateway\022\023vaultAp" +
-      "pRoleCertSSH\302\364\263\007,\n\022terraform-provider\022\026v" +
-      "ault_approle_cert_ssh\"\220\005\n\031VaultAppRoleCe" +
-      "rtX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
+      "\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263" +
+      "\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016serv" +
+      "er_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364" +
+      "\263\007\035\n\014json_gateway\022\rserverAddress\022\"\n\004tags" +
+      "\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001" +
+      "\312\363\263\007a\302\364\263\007\023\n\003cli\022\014vaultAppRole\302\364\263\007\034\n\014json" +
+      "_gateway\022\014vaultAppRole\302\364\263\007#\n\022terraform-p" +
+      "rovider\022\rvault_approle\"\214\005\n\030VaultAppRoleC" +
+      "ertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
       "ame\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCert" +
       "TTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364" +
       "\263\007$\n\014json_gateway\022\024issuedCertTtlMinutes\022" +
       "@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031" +
-      "\n\014json_gateway\022\tnamespace\022O\n\017pki_mount_p" +
-      "oint\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rpkiMountPoint\022N\n\016server_add" +
-      "ress\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rserverAddress\022J\n\014signing_ro" +
-      "le\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014jso" +
-      "n_gateway\022\013signingRole\022\"\n\004tags\030\010 \001(\0132\010.v" +
-      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\213\001\372\370\263\007\205\001\250\363\263\007\001\312\363\263\007{\302\364\263" +
-      "\007\033\n\003cli\022\024vaultAppRoleCertX509\302\364\263\007$\n\014json" +
-      "_gateway\022\024vaultAppRoleCertX509\302\364\263\007-\n\022ter" +
-      "raform-provider\022\027vault_approle_cert_x509" +
-      "\"\314\004\n\rVaultTLSStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_" +
-      "cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014j" +
-      "son_gateway\022\ncaCertPath\022Q\n\020client_cert_p" +
-      "ath\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014js" +
-      "on_gateway\022\016clientCertPath\022O\n\017client_key" +
-      "_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014" +
-      "json_gateway\022\rclientKeyPath\022@\n\tnamespace" +
-      "\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatew" +
-      "ay\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6\362" +
-      "\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\r" +
-      "serverAddress\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\312\363\263\007U\302\364\263\007\017\n\003cli\022\010va" +
-      "ultTLS\302\364\263\007\030\n\014json_gateway\022\010vaultTLS\302\364\263\007\037" +
-      "\n\022terraform-provider\022\tvault_tls\"\344\006\n\024Vaul" +
-      "tTLSCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_ce" +
-      "rt_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014jso" +
-      "n_gateway\022\ncaCertPath\022Q\n\020client_cert_pat" +
-      "h\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json" +
-      "_gateway\022\016clientCertPath\022O\n\017client_key_p" +
-      "ath\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014js" +
-      "on_gateway\022\rclientKeyPath\022[\n\024issuedCertT" +
-      "TLMinutes\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263" +
-      "\007$\n\014json_gateway\022\024issuedCertTtlMinutes\022@" +
-      "\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n" +
-      "\014json_gateway\022\tnamespace\022N\n\016server_addre" +
-      "ss\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014jso" +
-      "n_gateway\022\rserverAddress\022J\n\014signing_role" +
-      "\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_" +
-      "gateway\022\013signingRole\022O\n\017ssh_mount_point\030" +
-      "\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_g" +
-      "ateway\022\rsshMountPoint\022\"\n\004tags\030\007 \001(\0132\010.v1" +
-      ".TagsB\n\362\370\263\007\005\260\363\263\007\001:{\372\370\263\007v\250\363\263\007\001\312\363\263\007l\302\364\263\007\026\n" +
-      "\003cli\022\017vaultTLSCertSSH\302\364\263\007\037\n\014json_gateway" +
-      "\022\017vaultTLSCertSSH\302\364\263\007(\n\022terraform-provid" +
-      "er\022\022vault_tls_cert_ssh\"\350\006\n\025VaultTLSCertX" +
-      "509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name" +
-      "\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030" +
-      "\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gatewa" +
-      "y\022\ncaCertPath\022Q\n\020client_cert_path\030\005 \001(\tB" +
-      "7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway" +
-      "\022\016clientCertPath\022O\n\017client_key_path\030\006 \001(" +
-      "\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatew" +
-      "ay\022\rclientKeyPath\022[\n\024issuedCertTTLMinute" +
-      "s\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json" +
-      "_gateway\022\024issuedCertTtlMinutes\022@\n\tnamesp" +
-      "ace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_ga" +
-      "teway\022\tnamespace\022O\n\017pki_mount_point\030\t \001(" +
-      "\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatew" +
-      "ay\022\rpkiMountPoint\022N\n\016server_address\030\003 \001(" +
-      "\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatew" +
-      "ay\022\rserverAddress\022J\n\014signing_role\030\n \001(\tB" +
-      "4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway" +
-      "\022\013signingRole\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:~\372\370\263\007y\250\363\263\007\001\312\363\263\007o\302\364\263\007\027\n\003cli\022\020va" +
-      "ultTLSCertX509\302\364\263\007 \n\014json_gateway\022\020vault" +
-      "TLSCertX509\302\364\263\007)\n\022terraform-provider\022\023va" +
-      "ult_tls_cert_x509\"\352\002\n\017VaultTokenStore\022\026\n" +
-      "\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263" +
-      "\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363" +
-      "\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N" +
-      "\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312" +
-      "\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022\"" +
-      "\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:j\372\370\263\007" +
-      "e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cli\022\nvaultToken\302\364\263\007\032\n\014" +
-      "json_gateway\022\nvaultToken\302\364\263\007!\n\022terraform" +
-      "-provider\022\013vault_token\"\203\005\n\026VaultTokenCer" +
-      "tSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004nam" +
-      "e\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTT" +
-      "LMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007" +
-      "$\n\014json_gateway\022\024issuedCertTtlMinutes\022@\n" +
-      "\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014" +
-      "json_gateway\022\tnamespace\022N\n\016server_addres" +
-      "s\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json" +
-      "_gateway\022\rserverAddress\022J\n\014signing_role\030" +
-      "\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_g" +
-      "ateway\022\013signingRole\022O\n\017ssh_mount_point\030\006" +
-      " \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_ga" +
-      "teway\022\rsshMountPoint\022\"\n\004tags\030\004 \001(\0132\010.v1." +
-      "TagsB\n\362\370\263\007\005\260\363\263\007\001:\201\001\372\370\263\007|\250\363\263\007\001\312\363\263\007r\302\364\263\007\030\n" +
-      "\003cli\022\021vaultTokenCertSSH\302\364\263\007!\n\014json_gatew" +
-      "ay\022\021vaultTokenCertSSH\302\364\263\007*\n\022terraform-pr" +
-      "ovider\022\024vault_token_cert_ssh\"\207\005\n\027VaultTo" +
-      "kenCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issue" +
-      "dCertTTLMinutes\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMin" +
-      "utes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036" +
-      "\302\364\263\007\031\n\014json_gateway\022\tnamespace\022O\n\017pki_mo" +
-      "unt_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
-      "\007\035\n\014json_gateway\022\rpkiMountPoint\022N\n\016serve" +
-      "r_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
-      "\007\035\n\014json_gateway\022\rserverAddress\022J\n\014signi" +
-      "ng_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033" +
-      "\n\014json_gateway\022\013signingRole\022\"\n\004tags\030\004 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\204\001\372\370\263\007\177\250\363\263\007\001\312\363\263\007" +
-      "u\302\364\263\007\031\n\003cli\022\022vaultTokenCertX509\302\364\263\007\"\n\014js" +
-      "on_gateway\022\022vaultTokenCertX509\302\364\263\007+\n\022ter" +
-      "raform-provider\022\025vault_token_cert_x509Bm" +
-      "\n\031com.strongdm.api.plumbingB\031SecretStore" +
-      "sTypesPlumbingZ5github.com/strongdm/stro" +
-      "ngdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\n\014json_gateway\022\tnamespace\022N\n\016server_addr" +
+      "ess\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014js" +
+      "on_gateway\022\rserverAddress\022J\n\014signing_rol" +
+      "e\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json" +
+      "_gateway\022\013signingRole\022O\n\017ssh_mount_point" +
+      "\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_" +
+      "gateway\022\rsshMountPoint\022\"\n\004tags\030\010 \001(\0132\010.v" +
+      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\210\001\372\370\263\007\202\001\250\363\263\007\001\312\363\263\007x\302\364\263" +
+      "\007\032\n\003cli\022\023vaultAppRoleCertSSH\302\364\263\007#\n\014json_" +
+      "gateway\022\023vaultAppRoleCertSSH\302\364\263\007,\n\022terra" +
+      "form-provider\022\026vault_approle_cert_ssh\"\220\005" +
+      "\n\031VaultAppRoleCertX509Store\022\026\n\002id\030\001 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
+      "\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260" +
+      "\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issue" +
+      "dCertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007" +
+      "(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespac" +
+      "e\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMountPoi" +
+      "nt\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddre" +
+      "ss\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022\"" +
+      "\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\213\001\372\370\263" +
+      "\007\205\001\250\363\263\007\001\312\363\263\007{\302\364\263\007\033\n\003cli\022\024vaultAppRoleCer" +
+      "tX509\302\364\263\007$\n\014json_gateway\022\024vaultAppRoleCe" +
+      "rtX509\302\364\263\007-\n\022terraform-provider\022\027vault_a" +
+      "pprole_cert_x509\"\314\004\n\rVaultTLSStore\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363" +
+      "\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022" +
+      "Q\n\020client_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCertPa" +
+      "th\022O\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300" +
+      "\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyP" +
+      "ath\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302" +
+      "\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016server_" +
+      "address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035" +
+      "\n\014json_gateway\022\rserverAddress\022\"\n\004tags\030\007 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\312\363\263" +
+      "\007U\302\364\263\007\017\n\003cli\022\010vaultTLS\302\364\263\007\030\n\014json_gatewa" +
+      "y\022\010vaultTLS\302\364\263\007\037\n\022terraform-provider\022\tva" +
+      "ult_tls\"\344\006\n\024VaultTLSCertSSHStore\022\026\n\002id\030\001" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263" +
+      "\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007" +
+      "\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q\n" +
+      "\020client_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCertPath" +
+      "\022O\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyPat" +
+      "h\022[\n\024issuedCertTTLMinutes\030\013 \001(\005B=\362\370\263\0078\260\363" +
+      "\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issued" +
+      "CertTtlMinutes\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(" +
+      "\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace" +
+      "\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress" +
+      "\022J\n\014signing_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017" +
+      "ssh_mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363" +
+      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n" +
+      "\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:{\372\370\263\007v" +
+      "\250\363\263\007\001\312\363\263\007l\302\364\263\007\026\n\003cli\022\017vaultTLSCertSSH\302\364\263" +
+      "\007\037\n\014json_gateway\022\017vaultTLSCertSSH\302\364\263\007(\n\022" +
+      "terraform-provider\022\022vault_tls_cert_ssh\"\350" +
+      "\006\n\025VaultTLSCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
+      "D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364" +
+      "\263\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020client_" +
+      "cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263" +
+      "\007\036\n\014json_gateway\022\016clientCertPath\022O\n\017clie" +
+      "nt_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302" +
+      "\364\263\007\035\n\014json_gateway\022\rclientKeyPath\022[\n\024iss" +
+      "uedCertTTLMinutes\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlM" +
+      "inutes\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263" +
+      "\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022O\n\017pki_" +
+      "mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302" +
+      "\364\263\007\035\n\014json_gateway\022\rpkiMountPoint\022N\n\016ser" +
+      "ver_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302" +
+      "\364\263\007\035\n\014json_gateway\022\rserverAddress\022J\n\014sig" +
+      "ning_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263" +
+      "\007\033\n\014json_gateway\022\013signingRole\022\"\n\004tags\030\007 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:~\372\370\263\007y\250\363\263\007\001\312\363\263" +
+      "\007o\302\364\263\007\027\n\003cli\022\020vaultTLSCertX509\302\364\263\007 \n\014jso" +
+      "n_gateway\022\020vaultTLSCertX509\302\364\263\007)\n\022terraf" +
+      "orm-provider\022\023vault_tls_cert_x509\"\352\002\n\017Va" +
+      "ultTokenStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
+      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespac" +
+      "e\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gate" +
+      "way\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6" +
+      "\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022" +
+      "\rserverAddress\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n" +
+      "\362\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cli\022\nv" +
+      "aultToken\302\364\263\007\032\n\014json_gateway\022\nvaultToken" +
+      "\302\364\263\007!\n\022terraform-provider\022\013vault_token\"\203" +
+      "\005\n\026VaultTokenCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
+      "\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedC" +
+      "ertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260" +
+      "\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022" +
+      "N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022" +
+      "J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363" +
+      "\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017s" +
+      "sh_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n\004" +
+      "tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\201\001\372\370\263\007|" +
+      "\250\363\263\007\001\312\363\263\007r\302\364\263\007\030\n\003cli\022\021vaultTokenCertSSH\302" +
+      "\364\263\007!\n\014json_gateway\022\021vaultTokenCertSSH\302\364\263" +
+      "\007*\n\022terraform-provider\022\024vault_token_cert" +
+      "_ssh\"\207\005\n\027VaultTokenCertX509Store\022\026\n\002id\030\001" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263" +
+      "\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\010 \001(\005B=\362" +
+      "\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024" +
+      "issuedCertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB" +
+      "-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnam" +
+      "espace\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363" +
+      "\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMou" +
+      "ntPoint\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363" +
+      "\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserver" +
+      "Address\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007" +
+      "\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingR" +
+      "ole\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:" +
+      "\204\001\372\370\263\007\177\250\363\263\007\001\312\363\263\007u\302\364\263\007\031\n\003cli\022\022vaultTokenC" +
+      "ertX509\302\364\263\007\"\n\014json_gateway\022\022vaultTokenCe" +
+      "rtX509\302\364\263\007+\n\022terraform-provider\022\025vault_t" +
+      "oken_cert_x509Bm\n\031com.strongdm.api.plumb" +
+      "ingB\031SecretStoresTypesPlumbingZ5github.c" +
+      "om/strongdm/strongdm-sdk-go/v3/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -39729,7 +42588,7 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_SecretStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretStore_descriptor,
-        new java.lang.String[] { "Aws", "AwsCertX509", "ActiveDirectory", "Azure", "CyberarkConjur", "CyberarkPam", "CyberarkPamExperimental", "Delinea", "Gcp", "GcpCertX509", "KeyfactorX509", "VaultAppRole", "VaultAppRoleCertSsh", "VaultAppRoleCertX509", "VaultTls", "VaultTlsCertSsh", "VaultTlsCertX509", "VaultToken", "VaultTokenCertSsh", "VaultTokenCertX509", "SecretStore", });
+        new java.lang.String[] { "Aws", "AwsCertX509", "ActiveDirectory", "Azure", "CyberarkConjur", "CyberarkPam", "CyberarkPamExperimental", "Delinea", "Gcp", "GcpCertX509", "KeyfactorSsh", "KeyfactorX509", "VaultAppRole", "VaultAppRoleCertSsh", "VaultAppRoleCertX509", "VaultTls", "VaultTlsCertSsh", "VaultTlsCertX509", "VaultToken", "VaultTokenCertSsh", "VaultTokenCertX509", "SecretStore", });
     internal_static_v1_AWSStore_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_AWSStore_fieldAccessorTable = new
@@ -39790,62 +42649,68 @@ public final class SecretStoresTypesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GCPCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "CaID", "CaPoolID", "IssuedCertTTLMinutes", "Location", "ProjectID", "Tags", });
-    internal_static_v1_KeyfactorX509Store_descriptor =
+    internal_static_v1_KeyfactorSSHStore_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_v1_KeyfactorSSHStore_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_KeyfactorSSHStore_descriptor,
+        new java.lang.String[] { "Id", "Name", "CaFilePath", "CertificateFilePath", "DefaultCertificateAuthorityName", "DefaultCertificateProfileName", "DefaultEndEntityProfileName", "EnrollmentCodeEnvVar", "EnrollmentUsernameEnvVar", "KeyFilePath", "ServerAddress", "Tags", });
+    internal_static_v1_KeyfactorX509Store_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_v1_KeyfactorX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KeyfactorX509Store_descriptor,
-        new java.lang.String[] { "Id", "Name", "CaFilePath", "CertificateFilePath", "DefaultCertificateAuthorityName", "DefaultCertificateProfileName", "DefaultEndEntityProfileName", "EnrollmentCodeEnvVar", "EnrollmentUsernameEnvVar", "KeyFilePath", "KeyPasswordEnvVar", "ServerAddress", "Tags", });
+        new java.lang.String[] { "Id", "Name", "CaFilePath", "CertificateFilePath", "DefaultCertificateAuthorityName", "DefaultCertificateProfileName", "DefaultEndEntityProfileName", "EnrollmentCodeEnvVar", "EnrollmentUsernameEnvVar", "KeyFilePath", "ServerAddress", "Tags", });
     internal_static_v1_VaultAppRoleStore_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_v1_VaultAppRoleStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultAppRoleCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_v1_VaultAppRoleCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultAppRoleCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_v1_VaultAppRoleCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTLSStore_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_v1_VaultTLSStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTLSCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_v1_VaultTLSCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTLSCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_v1_VaultTLSCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTokenStore_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_v1_VaultTokenStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTokenCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_v1_VaultTokenCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTokenCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_v1_VaultTokenCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertX509Store_descriptor,
