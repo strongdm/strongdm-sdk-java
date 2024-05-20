@@ -14327,6 +14327,12 @@ public class Plumbing {
     if (plumbing.hasVaultAppRoleCertX509()) {
       return convertVaultAppRoleCertX509StoreToPorcelain(plumbing.getVaultAppRoleCertX509());
     }
+    if (plumbing.hasVaultAwsec2()) {
+      return convertVaultAWSEC2StoreToPorcelain(plumbing.getVaultAwsec2());
+    }
+    if (plumbing.hasVaultAwsiam()) {
+      return convertVaultAWSIAMStoreToPorcelain(plumbing.getVaultAwsiam());
+    }
     if (plumbing.hasVaultTls()) {
       return convertVaultTLSStoreToPorcelain(plumbing.getVaultTls());
     }
@@ -14439,6 +14445,18 @@ public class Plumbing {
       builder.setVaultAppRoleCertX509(
           convertVaultAppRoleCertX509StoreToPlumbing(
               (com.strongdm.api.VaultAppRoleCertX509Store) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.VaultAWSEC2Store) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultAwsec2(
+          convertVaultAWSEC2StoreToPlumbing((com.strongdm.api.VaultAWSEC2Store) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.VaultAWSIAMStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultAwsiam(
+          convertVaultAWSIAMStoreToPlumbing((com.strongdm.api.VaultAWSIAMStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.VaultTLSStore) {
@@ -15714,6 +15732,116 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertUserToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.VaultAWSEC2Store convertVaultAWSEC2StoreToPorcelain(
+      VaultAWSEC2Store plumbing) {
+    com.strongdm.api.VaultAWSEC2Store porcelain = new com.strongdm.api.VaultAWSEC2Store();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultAWSEC2Store convertVaultAWSEC2StoreToPlumbing(
+      com.strongdm.api.VaultAWSEC2Store porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultAWSEC2Store.Builder builder = VaultAWSEC2Store.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultAWSEC2Store> convertRepeatedVaultAWSEC2StoreToPorcelain(
+      Collection<VaultAWSEC2Store> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultAWSEC2Store>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultAWSEC2StoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultAWSEC2Store> convertRepeatedVaultAWSEC2StoreToPlumbing(
+      Collection<com.strongdm.api.VaultAWSEC2Store> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultAWSEC2Store>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultAWSEC2StoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.VaultAWSIAMStore convertVaultAWSIAMStoreToPorcelain(
+      VaultAWSIAMStore plumbing) {
+    com.strongdm.api.VaultAWSIAMStore porcelain = new com.strongdm.api.VaultAWSIAMStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultAWSIAMStore convertVaultAWSIAMStoreToPlumbing(
+      com.strongdm.api.VaultAWSIAMStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultAWSIAMStore.Builder builder = VaultAWSIAMStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.VaultAWSIAMStore> convertRepeatedVaultAWSIAMStoreToPorcelain(
+      Collection<VaultAWSIAMStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.VaultAWSIAMStore>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVaultAWSIAMStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultAWSIAMStore> convertRepeatedVaultAWSIAMStoreToPlumbing(
+      Collection<com.strongdm.api.VaultAWSIAMStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<VaultAWSIAMStore>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVaultAWSIAMStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
