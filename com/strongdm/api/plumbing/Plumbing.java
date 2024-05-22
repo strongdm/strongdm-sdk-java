@@ -51,6 +51,10 @@ import com.strongdm.api.plumbing.ApprovalWorkflowsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.*;
 import com.strongdm.api.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.plumbing.DriversPlumbing.*;
+import com.strongdm.api.plumbing.IdentityAliasesHistoryPlumbing.*;
+import com.strongdm.api.plumbing.IdentityAliasesPlumbing.*;
+import com.strongdm.api.plumbing.IdentitySetsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.IdentitySetsPlumbing.*;
 import com.strongdm.api.plumbing.NodesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.NodesPlumbing.*;
 import com.strongdm.api.plumbing.OrganizationHistoryPlumbing.*;
@@ -243,12 +247,11 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -285,18 +288,18 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -423,12 +426,11 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -458,18 +460,18 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -838,12 +840,11 @@ public class Plumbing {
     porcelain.setEnableEnvVariables((plumbing.getEnableEnvVariables()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
@@ -869,19 +870,19 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
-    }
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
     }
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
@@ -931,12 +932,11 @@ public class Plumbing {
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
@@ -966,19 +966,19 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
-    }
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
     }
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
@@ -2708,12 +2708,11 @@ public class Plumbing {
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
@@ -2753,19 +2752,19 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
-    }
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
     }
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
@@ -2820,12 +2819,11 @@ public class Plumbing {
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
@@ -2862,19 +2860,19 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
-    }
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
     }
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
@@ -2931,9 +2929,6 @@ public class Plumbing {
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
@@ -2978,13 +2973,6 @@ public class Plumbing {
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
-    }
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
     }
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
@@ -6922,11 +6910,10 @@ public class Plumbing {
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setServiceAccountKey((plumbing.getServiceAccountKey()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
@@ -6958,17 +6945,17 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -7438,6 +7425,452 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.IdentityAlias convertIdentityAliasToPorcelain(
+      IdentityAlias plumbing) {
+    com.strongdm.api.IdentityAlias porcelain = new com.strongdm.api.IdentityAlias();
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static IdentityAlias convertIdentityAliasToPlumbing(
+      com.strongdm.api.IdentityAlias porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentityAlias.Builder builder = IdentityAlias.newBuilder();
+    if (porcelain.getAccountId() != null) {
+      builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentityAlias> convertRepeatedIdentityAliasToPorcelain(
+      Collection<IdentityAlias> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentityAlias>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentityAliasToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentityAlias> convertRepeatedIdentityAliasToPlumbing(
+      Collection<com.strongdm.api.IdentityAlias> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentityAlias>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentityAliasToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentityAliasCreateResponse
+      convertIdentityAliasCreateResponseToPorcelain(IdentityAliasCreateResponse plumbing) {
+    com.strongdm.api.IdentityAliasCreateResponse porcelain =
+        new com.strongdm.api.IdentityAliasCreateResponse();
+    porcelain.setIdentityAlias(
+        Plumbing.convertIdentityAliasToPorcelain(plumbing.getIdentityAlias()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentityAliasCreateResponse convertIdentityAliasCreateResponseToPlumbing(
+      com.strongdm.api.IdentityAliasCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentityAliasCreateResponse.Builder builder = IdentityAliasCreateResponse.newBuilder();
+    if (porcelain.getIdentityAlias() != null) {
+      builder.setIdentityAlias(
+          Plumbing.convertIdentityAliasToPlumbing(porcelain.getIdentityAlias()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentityAliasCreateResponse>
+      convertRepeatedIdentityAliasCreateResponseToPorcelain(
+          Collection<IdentityAliasCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentityAliasCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentityAliasCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentityAliasCreateResponse>
+      convertRepeatedIdentityAliasCreateResponseToPlumbing(
+          Collection<com.strongdm.api.IdentityAliasCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentityAliasCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentityAliasCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentityAliasDeleteResponse
+      convertIdentityAliasDeleteResponseToPorcelain(IdentityAliasDeleteResponse plumbing) {
+    com.strongdm.api.IdentityAliasDeleteResponse porcelain =
+        new com.strongdm.api.IdentityAliasDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentityAliasDeleteResponse convertIdentityAliasDeleteResponseToPlumbing(
+      com.strongdm.api.IdentityAliasDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentityAliasDeleteResponse.Builder builder = IdentityAliasDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentityAliasDeleteResponse>
+      convertRepeatedIdentityAliasDeleteResponseToPorcelain(
+          Collection<IdentityAliasDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentityAliasDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentityAliasDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentityAliasDeleteResponse>
+      convertRepeatedIdentityAliasDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.IdentityAliasDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentityAliasDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentityAliasDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentityAliasGetResponse
+      convertIdentityAliasGetResponseToPorcelain(IdentityAliasGetResponse plumbing) {
+    com.strongdm.api.IdentityAliasGetResponse porcelain =
+        new com.strongdm.api.IdentityAliasGetResponse();
+    porcelain.setIdentityAlias(
+        Plumbing.convertIdentityAliasToPorcelain(plumbing.getIdentityAlias()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentityAliasGetResponse convertIdentityAliasGetResponseToPlumbing(
+      com.strongdm.api.IdentityAliasGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentityAliasGetResponse.Builder builder = IdentityAliasGetResponse.newBuilder();
+    if (porcelain.getIdentityAlias() != null) {
+      builder.setIdentityAlias(
+          Plumbing.convertIdentityAliasToPlumbing(porcelain.getIdentityAlias()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentityAliasGetResponse>
+      convertRepeatedIdentityAliasGetResponseToPorcelain(
+          Collection<IdentityAliasGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentityAliasGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentityAliasGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentityAliasGetResponse> convertRepeatedIdentityAliasGetResponseToPlumbing(
+      Collection<com.strongdm.api.IdentityAliasGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentityAliasGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentityAliasGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentityAliasHistory convertIdentityAliasHistoryToPorcelain(
+      IdentityAliasHistory plumbing) {
+    com.strongdm.api.IdentityAliasHistory porcelain = new com.strongdm.api.IdentityAliasHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setIdentityAlias(
+        Plumbing.convertIdentityAliasToPorcelain(plumbing.getIdentityAlias()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static IdentityAliasHistory convertIdentityAliasHistoryToPlumbing(
+      com.strongdm.api.IdentityAliasHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentityAliasHistory.Builder builder = IdentityAliasHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getIdentityAlias() != null) {
+      builder.setIdentityAlias(
+          Plumbing.convertIdentityAliasToPlumbing(porcelain.getIdentityAlias()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentityAliasHistory>
+      convertRepeatedIdentityAliasHistoryToPorcelain(Collection<IdentityAliasHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentityAliasHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentityAliasHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentityAliasHistory> convertRepeatedIdentityAliasHistoryToPlumbing(
+      Collection<com.strongdm.api.IdentityAliasHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentityAliasHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentityAliasHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentityAliasUpdateResponse
+      convertIdentityAliasUpdateResponseToPorcelain(IdentityAliasUpdateResponse plumbing) {
+    com.strongdm.api.IdentityAliasUpdateResponse porcelain =
+        new com.strongdm.api.IdentityAliasUpdateResponse();
+    porcelain.setIdentityAlias(
+        Plumbing.convertIdentityAliasToPorcelain(plumbing.getIdentityAlias()));
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentityAliasUpdateResponse convertIdentityAliasUpdateResponseToPlumbing(
+      com.strongdm.api.IdentityAliasUpdateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentityAliasUpdateResponse.Builder builder = IdentityAliasUpdateResponse.newBuilder();
+    if (porcelain.getIdentityAlias() != null) {
+      builder.setIdentityAlias(
+          Plumbing.convertIdentityAliasToPlumbing(porcelain.getIdentityAlias()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertUpdateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentityAliasUpdateResponse>
+      convertRepeatedIdentityAliasUpdateResponseToPorcelain(
+          Collection<IdentityAliasUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentityAliasUpdateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentityAliasUpdateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentityAliasUpdateResponse>
+      convertRepeatedIdentityAliasUpdateResponseToPlumbing(
+          Collection<com.strongdm.api.IdentityAliasUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentityAliasUpdateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentityAliasUpdateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentitySet convertIdentitySetToPorcelain(IdentitySet plumbing) {
+    com.strongdm.api.IdentitySet porcelain = new com.strongdm.api.IdentitySet();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    return porcelain;
+  }
+
+  public static IdentitySet convertIdentitySetToPlumbing(com.strongdm.api.IdentitySet porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentitySet.Builder builder = IdentitySet.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentitySet> convertRepeatedIdentitySetToPorcelain(
+      Collection<IdentitySet> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentitySet>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentitySetToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentitySet> convertRepeatedIdentitySetToPlumbing(
+      Collection<com.strongdm.api.IdentitySet> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentitySet>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentitySetToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentitySetGetResponse convertIdentitySetGetResponseToPorcelain(
+      IdentitySetGetResponse plumbing) {
+    com.strongdm.api.IdentitySetGetResponse porcelain =
+        new com.strongdm.api.IdentitySetGetResponse();
+    porcelain.setIdentitySet(Plumbing.convertIdentitySetToPorcelain(plumbing.getIdentitySet()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentitySetGetResponse convertIdentitySetGetResponseToPlumbing(
+      com.strongdm.api.IdentitySetGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentitySetGetResponse.Builder builder = IdentitySetGetResponse.newBuilder();
+    if (porcelain.getIdentitySet() != null) {
+      builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(porcelain.getIdentitySet()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentitySetGetResponse>
+      convertRepeatedIdentitySetGetResponseToPorcelain(
+          Collection<IdentitySetGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentitySetGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentitySetGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentitySetGetResponse> convertRepeatedIdentitySetGetResponseToPlumbing(
+      Collection<com.strongdm.api.IdentitySetGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentitySetGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentitySetGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentitySetHistory convertIdentitySetHistoryToPorcelain(
+      IdentitySetHistory plumbing) {
+    com.strongdm.api.IdentitySetHistory porcelain = new com.strongdm.api.IdentitySetHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setIdentitySet(Plumbing.convertIdentitySetToPorcelain(plumbing.getIdentitySet()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static IdentitySetHistory convertIdentitySetHistoryToPlumbing(
+      com.strongdm.api.IdentitySetHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentitySetHistory.Builder builder = IdentitySetHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getIdentitySet() != null) {
+      builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(porcelain.getIdentitySet()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentitySetHistory>
+      convertRepeatedIdentitySetHistoryToPorcelain(Collection<IdentitySetHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentitySetHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentitySetHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentitySetHistory> convertRepeatedIdentitySetHistoryToPlumbing(
+      Collection<com.strongdm.api.IdentitySetHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentitySetHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentitySetHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.KeyfactorSSHStore convertKeyfactorSSHStoreToPorcelain(
       KeyfactorSSHStore plumbing) {
     com.strongdm.api.KeyfactorSSHStore porcelain = new com.strongdm.api.KeyfactorSSHStore();
@@ -7615,12 +8048,11 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -7657,18 +8089,18 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -7796,12 +8228,11 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -7831,18 +8262,18 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -11044,12 +11475,11 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -11075,18 +11505,18 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -14108,14 +14538,13 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setKeyType((plumbing.getKeyType()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortForwarding((plumbing.getPortForwarding()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
-    porcelain.setRemoteIdentityHealthcheckUsername(
-        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -14142,6 +14571,13 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
     if (porcelain.getKeyType() != null) {
       builder.setKeyType((porcelain.getKeyType()));
     }
@@ -14151,13 +14587,6 @@ public class Plumbing {
     builder.setPort(porcelain.getPort());
     builder.setPortForwarding(porcelain.getPortForwarding());
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRemoteIdentityGroupId() != null) {
-      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
-    }
-    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
-      builder.setRemoteIdentityHealthcheckUsername(
-          (porcelain.getRemoteIdentityHealthcheckUsername()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }

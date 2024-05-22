@@ -34,6 +34,7 @@ import java.util.function.Supplier;
  * A RemoteIdentityGroup is a named grouping of Remote Identities for Accounts. An Account's
  * relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
  */
+@Deprecated
 public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
   private final RemoteIdentityGroupsGrpc.RemoteIdentityGroupsBlockingStub stub;
   private final Client parent;

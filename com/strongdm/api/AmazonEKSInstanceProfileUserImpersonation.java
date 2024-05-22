@@ -134,32 +134,6 @@ public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
     this.region = in;
   }
 
-  private String remoteIdentityGroupId;
-  /** The ID of the remote identity group to use for remote identity connections. */
-  public String getRemoteIdentityGroupId() {
-    return this.remoteIdentityGroupId;
-  }
-  /** The ID of the remote identity group to use for remote identity connections. */
-  public void setRemoteIdentityGroupId(String in) {
-    this.remoteIdentityGroupId = in;
-  }
-
-  private String remoteIdentityHealthcheckUsername;
-  /**
-   * The username to use for healthchecks, when clients otherwise connect with their own remote
-   * identity username.
-   */
-  public String getRemoteIdentityHealthcheckUsername() {
-    return this.remoteIdentityHealthcheckUsername;
-  }
-  /**
-   * The username to use for healthchecks, when clients otherwise connect with their own remote
-   * identity username.
-   */
-  public void setRemoteIdentityHealthcheckUsername(String in) {
-    this.remoteIdentityHealthcheckUsername = in;
-  }
-
   private String roleArn;
   /** The role to assume after logging in. */
   public String getRoleArn() {

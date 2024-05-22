@@ -215,6 +215,40 @@ public class Client {
     return this.controlPanel;
   }
 
+  protected final IdentityAliases identityAliases;
+
+  /**
+   * IdentityAliases assign an alias to an account within an IdentitySet. The alias is used as the
+   * username when connecting to a identity supported resource.
+   */
+  public IdentityAliases identityAliases() {
+    return this.identityAliases;
+  }
+
+  protected final IdentityAliasesHistory identityAliasesHistory;
+
+  /** IdentityAliasesHistory records all changes to the state of a IdentityAlias. */
+  public IdentityAliasesHistory identityAliasesHistory() {
+    return this.identityAliasesHistory;
+  }
+
+  protected final IdentitySets identitySets;
+
+  /**
+   * A IdentitySet is a named grouping of Identity Aliases for Accounts. An Account's relationship
+   * to a IdentitySet is defined via IdentityAlias objects.
+   */
+  public IdentitySets identitySets() {
+    return this.identitySets;
+  }
+
+  protected final IdentitySetsHistory identitySetsHistory;
+
+  /** IdentitySetsHistory records all changes to the state of a IdentitySet. */
+  public IdentitySetsHistory identitySetsHistory() {
+    return this.identitySetsHistory;
+  }
+
   protected final Nodes nodes;
 
   /**
@@ -296,6 +330,7 @@ public class Client {
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to
    * connect to that resource.
    */
+  @Deprecated
   public RemoteIdentities remoteIdentities() {
     return this.remoteIdentities;
   }
@@ -303,6 +338,7 @@ public class Client {
   protected final RemoteIdentitiesHistory remoteIdentitiesHistory;
 
   /** RemoteIdentitiesHistory records all changes to the state of a RemoteIdentity. */
+  @Deprecated
   public RemoteIdentitiesHistory remoteIdentitiesHistory() {
     return this.remoteIdentitiesHistory;
   }
@@ -313,6 +349,7 @@ public class Client {
    * A RemoteIdentityGroup is a named grouping of Remote Identities for Accounts. An Account's
    * relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
    */
+  @Deprecated
   public RemoteIdentityGroups remoteIdentityGroups() {
     return this.remoteIdentityGroups;
   }
@@ -320,6 +357,7 @@ public class Client {
   protected final RemoteIdentityGroupsHistory remoteIdentityGroupsHistory;
 
   /** RemoteIdentityGroupsHistory records all changes to the state of a RemoteIdentityGroup. */
+  @Deprecated
   public RemoteIdentityGroupsHistory remoteIdentityGroupsHistory() {
     return this.remoteIdentityGroupsHistory;
   }
@@ -516,6 +554,10 @@ public class Client {
     this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
     this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
     this.controlPanel = new ControlPanel(this.channel, this);
+    this.identityAliases = new IdentityAliases(this.channel, this);
+    this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
+    this.identitySets = new IdentitySets(this.channel, this);
+    this.identitySetsHistory = new IdentitySetsHistory(this.channel, this);
     this.nodes = new Nodes(this.channel, this);
     this.nodesHistory = new NodesHistory(this.channel, this);
     this.organizationHistory = new OrganizationHistory(this.channel, this);
@@ -589,6 +631,10 @@ public class Client {
       this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
       this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
+      this.identityAliases = new IdentityAliases(this.channel, this);
+      this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
+      this.identitySets = new IdentitySets(this.channel, this);
+      this.identitySetsHistory = new IdentitySetsHistory(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
       this.nodesHistory = new NodesHistory(this.channel, this);
       this.organizationHistory = new OrganizationHistory(this.channel, this);

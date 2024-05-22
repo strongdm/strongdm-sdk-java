@@ -3811,18 +3811,18 @@ public final class RemoteIdentityGroupsHistoryPlumbing {
       "moteIdentityGroupB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted" +
       "_at\030\004 \001(\0132\032.google.protobuf.TimestampB\n\362" +
       "\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263" +
-      "\007\023!terraform-provider2\220\002\n\033RemoteIdentity" +
+      "\007\023!terraform-provider2\223\002\n\033RemoteIdentity" +
       "GroupsHistory\022\230\001\n\004List\022).v1.RemoteIdenti" +
       "tyGroupHistoryListRequest\032*.v1.RemoteIde" +
       "ntityGroupHistoryListResponse\"9\202\371\263\007\010\242\363\263\007" +
       "\003get\202\371\263\007\'\252\363\263\007\"/v1/remote-identity-groups" +
-      "-history\032V\312\371\263\007\037\302\371\263\007\032RemoteIdentityGroupH" +
-      "istory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!te" +
-      "rraform-providerB\237\001\n\031com.strongdm.api.pl" +
-      "umbingB#RemoteIdentityGroupsHistoryPlumb" +
-      "ingZ5github.com/strongdm/strongdm-sdk-go" +
-      "/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!" +
-      "terraform-providerb\006proto3"
+      "-history\032Y\210\002\001\312\371\263\007\037\302\371\263\007\032RemoteIdentityGro" +
+      "upHistory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023" +
+      "!terraform-providerB\237\001\n\031com.strongdm.api" +
+      ".plumbingB#RemoteIdentityGroupsHistoryPl" +
+      "umbingZ5github.com/strongdm/strongdm-sdk" +
+      "-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264" +
+      "\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

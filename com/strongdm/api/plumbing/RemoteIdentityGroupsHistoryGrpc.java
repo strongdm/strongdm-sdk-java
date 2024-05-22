@@ -37,6 +37,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: remote_identity_groups_history.proto")
+@java.lang.Deprecated
 public final class RemoteIdentityGroupsHistoryGrpc {
 
   private RemoteIdentityGroupsHistoryGrpc() {}
@@ -124,6 +125,7 @@ public final class RemoteIdentityGroupsHistoryGrpc {
    * RemoteIdentityGroupsHistory records all changes to the state of a RemoteIdentityGroup.
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class RemoteIdentityGroupsHistoryImplBase implements io.grpc.BindableService {
 
     /**
@@ -154,6 +156,7 @@ public final class RemoteIdentityGroupsHistoryGrpc {
    * RemoteIdentityGroupsHistory records all changes to the state of a RemoteIdentityGroup.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentityGroupsHistoryStub extends io.grpc.stub.AbstractAsyncStub<RemoteIdentityGroupsHistoryStub> {
     private RemoteIdentityGroupsHistoryStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -183,6 +186,7 @@ public final class RemoteIdentityGroupsHistoryGrpc {
    * RemoteIdentityGroupsHistory records all changes to the state of a RemoteIdentityGroup.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentityGroupsHistoryBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemoteIdentityGroupsHistoryBlockingStub> {
     private RemoteIdentityGroupsHistoryBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -211,6 +215,7 @@ public final class RemoteIdentityGroupsHistoryGrpc {
    * RemoteIdentityGroupsHistory records all changes to the state of a RemoteIdentityGroup.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentityGroupsHistoryFutureStub extends io.grpc.stub.AbstractFutureStub<RemoteIdentityGroupsHistoryFutureStub> {
     private RemoteIdentityGroupsHistoryFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {

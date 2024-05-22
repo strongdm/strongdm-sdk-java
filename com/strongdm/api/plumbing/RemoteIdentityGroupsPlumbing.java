@@ -5298,18 +5298,18 @@ public final class RemoteIdentityGroupsPlumbing {
       "ntityGroup\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
       "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:E\372\370\263\007@\250\363\263\007\001\302\363\263" +
       "\0076\252\363\263\0071tf_examples/remote_identity_group" +
-      "_data_source.txt2\316\002\n\024RemoteIdentityGroup" +
+      "_data_source.txt2\321\002\n\024RemoteIdentityGroup" +
       "s\022\204\001\n\003Get\022!.v1.RemoteIdentityGroupGetReq" +
       "uest\032\".v1.RemoteIdentityGroupGetResponse" +
       "\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v1/remote-iden" +
       "tity-groups/{id}\022\202\001\n\004List\022\".v1.RemoteIde" +
       "ntityGroupListRequest\032#.v1.RemoteIdentit" +
       "yGroupListResponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363" +
-      "\263\007\032/v1/remote-identity-groups\032*\312\371\263\007\030\302\371\263\007" +
-      "\023RemoteIdentityGroup\312\371\263\007\010\322\371\263\007\003ig-Bp\n\031com" +
-      ".strongdm.api.plumbingB\034RemoteIdentityGr" +
-      "oupsPlumbingZ5github.com/strongdm/strong" +
-      "dm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\263\007\032/v1/remote-identity-groups\032-\210\002\001\312\371\263\007\030\302" +
+      "\371\263\007\023RemoteIdentityGroup\312\371\263\007\010\322\371\263\007\003ig-Bp\n\031" +
+      "com.strongdm.api.plumbingB\034RemoteIdentit" +
+      "yGroupsPlumbingZ5github.com/strongdm/str" +
+      "ongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

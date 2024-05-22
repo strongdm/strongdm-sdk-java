@@ -78,6 +78,20 @@ public class SnapshotClient {
     return this.parent.approvalWorkflows;
   }
   /**
+   * IdentityAliases assign an alias to an account within an IdentitySet. The alias is used as the
+   * username when connecting to a identity supported resource.
+   */
+  public SnapshotIdentityAliases identityAliases() {
+    return this.parent.identityAliases;
+  }
+  /**
+   * A IdentitySet is a named grouping of Identity Aliases for Accounts. An Account's relationship
+   * to a IdentitySet is defined via IdentityAlias objects.
+   */
+  public SnapshotIdentitySets identitySets() {
+    return this.parent.identitySets;
+  }
+  /**
    * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
    * There are two types of nodes: - **Gateways** are the entry points into network. They listen for
    * connection from the strongDM client, and provide access to databases and servers. - **Relays**
@@ -91,6 +105,7 @@ public class SnapshotClient {
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to
    * connect to that resource.
    */
+  @Deprecated
   public SnapshotRemoteIdentities remoteIdentities() {
     return this.parent.remoteIdentities;
   }
@@ -98,6 +113,7 @@ public class SnapshotClient {
    * A RemoteIdentityGroup is a named grouping of Remote Identities for Accounts. An Account's
    * relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
    */
+  @Deprecated
   public SnapshotRemoteIdentityGroups remoteIdentityGroups() {
     return this.parent.remoteIdentityGroups;
   }

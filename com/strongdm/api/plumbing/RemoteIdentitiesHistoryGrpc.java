@@ -37,6 +37,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: remote_identities_history.proto")
+@java.lang.Deprecated
 public final class RemoteIdentitiesHistoryGrpc {
 
   private RemoteIdentitiesHistoryGrpc() {}
@@ -124,6 +125,7 @@ public final class RemoteIdentitiesHistoryGrpc {
    * RemoteIdentitiesHistory records all changes to the state of a RemoteIdentity.
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class RemoteIdentitiesHistoryImplBase implements io.grpc.BindableService {
 
     /**
@@ -154,6 +156,7 @@ public final class RemoteIdentitiesHistoryGrpc {
    * RemoteIdentitiesHistory records all changes to the state of a RemoteIdentity.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentitiesHistoryStub extends io.grpc.stub.AbstractAsyncStub<RemoteIdentitiesHistoryStub> {
     private RemoteIdentitiesHistoryStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -183,6 +186,7 @@ public final class RemoteIdentitiesHistoryGrpc {
    * RemoteIdentitiesHistory records all changes to the state of a RemoteIdentity.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentitiesHistoryBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemoteIdentitiesHistoryBlockingStub> {
     private RemoteIdentitiesHistoryBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -211,6 +215,7 @@ public final class RemoteIdentitiesHistoryGrpc {
    * RemoteIdentitiesHistory records all changes to the state of a RemoteIdentity.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentitiesHistoryFutureStub extends io.grpc.stub.AbstractFutureStub<RemoteIdentitiesHistoryFutureStub> {
     private RemoteIdentitiesHistoryFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {

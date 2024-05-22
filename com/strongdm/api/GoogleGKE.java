@@ -94,6 +94,32 @@ public class GoogleGKE implements Resource {
     this.id = in;
   }
 
+  private String identityAliasHealthcheckUsername;
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own identity
+   * alias username.
+   */
+  public String getIdentityAliasHealthcheckUsername() {
+    return this.identityAliasHealthcheckUsername;
+  }
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own identity
+   * alias username.
+   */
+  public void setIdentityAliasHealthcheckUsername(String in) {
+    this.identityAliasHealthcheckUsername = in;
+  }
+
+  private String identitySetId;
+  /** The ID of the identity set to use for identity connections. */
+  public String getIdentitySetId() {
+    return this.identitySetId;
+  }
+  /** The ID of the identity set to use for identity connections. */
+  public void setIdentitySetId(String in) {
+    this.identitySetId = in;
+  }
+
   private String name;
   /** Unique human-readable name of the Resource. */
   public String getName() {
@@ -112,32 +138,6 @@ public class GoogleGKE implements Resource {
   /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
-  }
-
-  private String remoteIdentityGroupId;
-  /** The ID of the remote identity group to use for remote identity connections. */
-  public String getRemoteIdentityGroupId() {
-    return this.remoteIdentityGroupId;
-  }
-  /** The ID of the remote identity group to use for remote identity connections. */
-  public void setRemoteIdentityGroupId(String in) {
-    this.remoteIdentityGroupId = in;
-  }
-
-  private String remoteIdentityHealthcheckUsername;
-  /**
-   * The username to use for healthchecks, when clients otherwise connect with their own remote
-   * identity username.
-   */
-  public String getRemoteIdentityHealthcheckUsername() {
-    return this.remoteIdentityHealthcheckUsername;
-  }
-  /**
-   * The username to use for healthchecks, when clients otherwise connect with their own remote
-   * identity username.
-   */
-  public void setRemoteIdentityHealthcheckUsername(String in) {
-    this.remoteIdentityHealthcheckUsername = in;
   }
 
   private String secretStoreId;

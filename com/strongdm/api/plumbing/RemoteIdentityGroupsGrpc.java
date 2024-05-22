@@ -38,6 +38,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: remote_identity_groups.proto")
+@java.lang.Deprecated
 public final class RemoteIdentityGroupsGrpc {
 
   private RemoteIdentityGroupsGrpc() {}
@@ -157,6 +158,7 @@ public final class RemoteIdentityGroupsGrpc {
    * An Account's relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class RemoteIdentityGroupsImplBase implements io.grpc.BindableService {
 
     /**
@@ -205,6 +207,7 @@ public final class RemoteIdentityGroupsGrpc {
    * An Account's relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentityGroupsStub extends io.grpc.stub.AbstractAsyncStub<RemoteIdentityGroupsStub> {
     private RemoteIdentityGroupsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -246,6 +249,7 @@ public final class RemoteIdentityGroupsGrpc {
    * An Account's relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentityGroupsBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemoteIdentityGroupsBlockingStub> {
     private RemoteIdentityGroupsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -285,6 +289,7 @@ public final class RemoteIdentityGroupsGrpc {
    * An Account's relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentityGroupsFutureStub extends io.grpc.stub.AbstractFutureStub<RemoteIdentityGroupsFutureStub> {
     private RemoteIdentityGroupsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {

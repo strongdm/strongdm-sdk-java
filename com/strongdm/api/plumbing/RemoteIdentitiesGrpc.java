@@ -37,6 +37,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: remote_identities.proto")
+@java.lang.Deprecated
 public final class RemoteIdentitiesGrpc {
 
   private RemoteIdentitiesGrpc() {}
@@ -248,6 +249,7 @@ public final class RemoteIdentitiesGrpc {
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class RemoteIdentitiesImplBase implements io.grpc.BindableService {
 
     /**
@@ -346,6 +348,7 @@ public final class RemoteIdentitiesGrpc {
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentitiesStub extends io.grpc.stub.AbstractAsyncStub<RemoteIdentitiesStub> {
     private RemoteIdentitiesStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -419,6 +422,7 @@ public final class RemoteIdentitiesGrpc {
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentitiesBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemoteIdentitiesBlockingStub> {
     private RemoteIdentitiesBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -487,6 +491,7 @@ public final class RemoteIdentitiesGrpc {
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RemoteIdentitiesFutureStub extends io.grpc.stub.AbstractFutureStub<RemoteIdentitiesFutureStub> {
     private RemoteIdentitiesFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {

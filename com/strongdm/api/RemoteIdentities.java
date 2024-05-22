@@ -34,6 +34,7 @@ import java.util.function.Supplier;
  * RemoteIdentities assign a resource directly to an account, giving the account the permission to
  * connect to that resource.
  */
+@Deprecated
 public class RemoteIdentities implements SnapshotRemoteIdentities {
   private final RemoteIdentitiesGrpc.RemoteIdentitiesBlockingStub stub;
   private final Client parent;

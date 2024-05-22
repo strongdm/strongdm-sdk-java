@@ -16,6 +16,7 @@
 
 package com.strongdm.api;
 
+@Deprecated
 /**
  * A SnapshotRemoteIdentityGroups exposes the read only methods of the RemoteIdentityGroups service
  * for historical queries.

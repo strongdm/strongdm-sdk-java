@@ -12111,7 +12111,7 @@ public final class RemoteIdentitiesPlumbing {
       "username\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:l\372\370\263\007g\250\363" +
       "\263\007\001\302\363\263\007]\242\363\263\007(tf_examples/remote_identity" +
       "_resource.txt\252\363\263\007+tf_examples/remote_ide" +
-      "ntity_data_source.txt2\244\005\n\020RemoteIdentiti" +
+      "ntity_data_source.txt2\247\005\n\020RemoteIdentiti" +
       "es\022z\n\006Create\022\037.v1.RemoteIdentityCreateRe" +
       "quest\032 .v1.RemoteIdentityCreateResponse\"" +
       "-\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\032\252\363\263\007\025/v1/remote-iden" +
@@ -12127,11 +12127,11 @@ public final class RemoteIdentitiesPlumbing {
       "v1/remote-identities/{id}\022s\n\004List\022\035.v1.R" +
       "emoteIdentityListRequest\032\036.v1.RemoteIden" +
       "tityListResponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\032\252\363\263\007" +
-      "\025/v1/remote-identities\032$\312\371\263\007\023\302\371\263\007\016Remote" +
-      "Identity\312\371\263\007\007\322\371\263\007\002i-Bl\n\031com.strongdm.api" +
-      ".plumbingB\030RemoteIdentitiesPlumbingZ5git" +
-      "hub.com/strongdm/strongdm-sdk-go/v3/inte" +
-      "rnal/v1;v1b\006proto3"
+      "\025/v1/remote-identities\032\'\210\002\001\312\371\263\007\023\302\371\263\007\016Rem" +
+      "oteIdentity\312\371\263\007\007\322\371\263\007\002i-Bl\n\031com.strongdm." +
+      "api.plumbingB\030RemoteIdentitiesPlumbingZ5" +
+      "github.com/strongdm/strongdm-sdk-go/v3/i" +
+      "nternal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

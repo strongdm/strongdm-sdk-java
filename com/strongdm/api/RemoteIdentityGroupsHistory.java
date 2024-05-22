@@ -30,6 +30,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /** RemoteIdentityGroupsHistory records all changes to the state of a RemoteIdentityGroup. */
+@Deprecated
 public class RemoteIdentityGroupsHistory {
   private final RemoteIdentityGroupsHistoryGrpc.RemoteIdentityGroupsHistoryBlockingStub stub;
   private final Client parent;
