@@ -7771,6 +7771,100 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.IdentitySetCreateResponse
+      convertIdentitySetCreateResponseToPorcelain(IdentitySetCreateResponse plumbing) {
+    com.strongdm.api.IdentitySetCreateResponse porcelain =
+        new com.strongdm.api.IdentitySetCreateResponse();
+    porcelain.setIdentitySet(Plumbing.convertIdentitySetToPorcelain(plumbing.getIdentitySet()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentitySetCreateResponse convertIdentitySetCreateResponseToPlumbing(
+      com.strongdm.api.IdentitySetCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentitySetCreateResponse.Builder builder = IdentitySetCreateResponse.newBuilder();
+    if (porcelain.getIdentitySet() != null) {
+      builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(porcelain.getIdentitySet()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentitySetCreateResponse>
+      convertRepeatedIdentitySetCreateResponseToPorcelain(
+          Collection<IdentitySetCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentitySetCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentitySetCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentitySetCreateResponse> convertRepeatedIdentitySetCreateResponseToPlumbing(
+      Collection<com.strongdm.api.IdentitySetCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentitySetCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentitySetCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentitySetDeleteResponse
+      convertIdentitySetDeleteResponseToPorcelain(IdentitySetDeleteResponse plumbing) {
+    com.strongdm.api.IdentitySetDeleteResponse porcelain =
+        new com.strongdm.api.IdentitySetDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentitySetDeleteResponse convertIdentitySetDeleteResponseToPlumbing(
+      com.strongdm.api.IdentitySetDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentitySetDeleteResponse.Builder builder = IdentitySetDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentitySetDeleteResponse>
+      convertRepeatedIdentitySetDeleteResponseToPorcelain(
+          Collection<IdentitySetDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentitySetDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentitySetDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentitySetDeleteResponse> convertRepeatedIdentitySetDeleteResponseToPlumbing(
+      Collection<com.strongdm.api.IdentitySetDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentitySetDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentitySetDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.IdentitySetGetResponse convertIdentitySetGetResponseToPorcelain(
       IdentitySetGetResponse plumbing) {
     com.strongdm.api.IdentitySetGetResponse porcelain =
@@ -7868,6 +7962,55 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertIdentitySetHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.IdentitySetUpdateResponse
+      convertIdentitySetUpdateResponseToPorcelain(IdentitySetUpdateResponse plumbing) {
+    com.strongdm.api.IdentitySetUpdateResponse porcelain =
+        new com.strongdm.api.IdentitySetUpdateResponse();
+    porcelain.setIdentitySet(Plumbing.convertIdentitySetToPorcelain(plumbing.getIdentitySet()));
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static IdentitySetUpdateResponse convertIdentitySetUpdateResponseToPlumbing(
+      com.strongdm.api.IdentitySetUpdateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    IdentitySetUpdateResponse.Builder builder = IdentitySetUpdateResponse.newBuilder();
+    if (porcelain.getIdentitySet() != null) {
+      builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(porcelain.getIdentitySet()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertUpdateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.IdentitySetUpdateResponse>
+      convertRepeatedIdentitySetUpdateResponseToPorcelain(
+          Collection<IdentitySetUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.IdentitySetUpdateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertIdentitySetUpdateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<IdentitySetUpdateResponse> convertRepeatedIdentitySetUpdateResponseToPlumbing(
+      Collection<com.strongdm.api.IdentitySetUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<IdentitySetUpdateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertIdentitySetUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

@@ -45,6 +45,37 @@ public final class IdentitySetsGrpc {
   public static final String SERVICE_NAME = "v1.IdentitySets";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest,
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse> getCreateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Create",
+      requestType = com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.class,
+      responseType = com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest,
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse> getCreateMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse> getCreateMethod;
+    if ((getCreateMethod = IdentitySetsGrpc.getCreateMethod) == null) {
+      synchronized (IdentitySetsGrpc.class) {
+        if ((getCreateMethod = IdentitySetsGrpc.getCreateMethod) == null) {
+          IdentitySetsGrpc.getCreateMethod = getCreateMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IdentitySetsMethodDescriptorSupplier("Create"))
+              .build();
+        }
+      }
+    }
+    return getCreateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetRequest,
       com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetResponse> getGetMethod;
 
@@ -74,6 +105,68 @@ public final class IdentitySetsGrpc {
       }
     }
     return getGetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest,
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.class,
+      responseType = com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest,
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse> getUpdateMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse> getUpdateMethod;
+    if ((getUpdateMethod = IdentitySetsGrpc.getUpdateMethod) == null) {
+      synchronized (IdentitySetsGrpc.class) {
+        if ((getUpdateMethod = IdentitySetsGrpc.getUpdateMethod) == null) {
+          IdentitySetsGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IdentitySetsMethodDescriptorSupplier("Update"))
+              .build();
+        }
+      }
+    }
+    return getUpdateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest,
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.class,
+      responseType = com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest,
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse> getDeleteMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse> getDeleteMethod;
+    if ((getDeleteMethod = IdentitySetsGrpc.getDeleteMethod) == null) {
+      synchronized (IdentitySetsGrpc.class) {
+        if ((getDeleteMethod = IdentitySetsGrpc.getDeleteMethod) == null) {
+          IdentitySetsGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IdentitySetsMethodDescriptorSupplier("Delete"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetListRequest,
@@ -161,12 +254,42 @@ public final class IdentitySetsGrpc {
 
     /**
      * <pre>
+     * Create registers a new IdentitySet.
+     * </pre>
+     */
+    public void create(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get reads one IdentitySet by ID.
      * </pre>
      */
     public void get(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update replaces all the fields of a IdentitySet by ID.
+     * </pre>
+     */
+    public void update(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete removes a IdentitySet by ID.
+     * </pre>
+     */
+    public void delete(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -182,12 +305,33 @@ public final class IdentitySetsGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
+            getCreateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest,
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse>(
+                  this, METHODID_CREATE)))
+          .addMethod(
             getGetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetRequest,
                 com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetResponse>(
                   this, METHODID_GET)))
+          .addMethod(
+            getUpdateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest,
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse>(
+                  this, METHODID_UPDATE)))
+          .addMethod(
+            getDeleteMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest,
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse>(
+                  this, METHODID_DELETE)))
           .addMethod(
             getListMethod(),
             asyncUnaryCall(
@@ -219,6 +363,17 @@ public final class IdentitySetsGrpc {
 
     /**
      * <pre>
+     * Create registers a new IdentitySet.
+     * </pre>
+     */
+    public void create(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get reads one IdentitySet by ID.
      * </pre>
      */
@@ -226,6 +381,28 @@ public final class IdentitySetsGrpc {
         io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update replaces all the fields of a IdentitySet by ID.
+     * </pre>
+     */
+    public void update(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete removes a IdentitySet by ID.
+     * </pre>
+     */
+    public void delete(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -260,12 +437,42 @@ public final class IdentitySetsGrpc {
 
     /**
      * <pre>
+     * Create registers a new IdentitySet.
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse create(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Get reads one IdentitySet by ID.
      * </pre>
      */
     public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetResponse get(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update replaces all the fields of a IdentitySet by ID.
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse update(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete removes a IdentitySet by ID.
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse delete(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
@@ -299,6 +506,17 @@ public final class IdentitySetsGrpc {
 
     /**
      * <pre>
+     * Create registers a new IdentitySet.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse> create(
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Get reads one IdentitySet by ID.
      * </pre>
      */
@@ -306,6 +524,28 @@ public final class IdentitySetsGrpc {
         com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update replaces all the fields of a IdentitySet by ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse> update(
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Delete removes a IdentitySet by ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse> delete(
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
     /**
@@ -320,8 +560,11 @@ public final class IdentitySetsGrpc {
     }
   }
 
-  private static final int METHODID_GET = 0;
-  private static final int METHODID_LIST = 1;
+  private static final int METHODID_CREATE = 0;
+  private static final int METHODID_GET = 1;
+  private static final int METHODID_UPDATE = 2;
+  private static final int METHODID_DELETE = 3;
+  private static final int METHODID_LIST = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -340,9 +583,21 @@ public final class IdentitySetsGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_CREATE:
+          serviceImpl.create((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse>) responseObserver);
+          break;
         case METHODID_GET:
           serviceImpl.get((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE:
+          serviceImpl.update((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse>) responseObserver);
           break;
         case METHODID_LIST:
           serviceImpl.list((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetListRequest) request,
@@ -409,7 +664,10 @@ public final class IdentitySetsGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new IdentitySetsFileDescriptorSupplier())
+              .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
+              .addMethod(getUpdateMethod())
+              .addMethod(getDeleteMethod())
               .addMethod(getListMethod())
               .build();
         }

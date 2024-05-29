@@ -56,6 +56,32 @@ public class IdentitySets implements SnapshotIdentitySets {
   public IdentitySets withDeadlineAfter(long duration, TimeUnit units) {
     return new IdentitySets(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
+  /** Create registers a new IdentitySet. */
+  public IdentitySetCreateResponse create(IdentitySet identitySet) throws RpcException {
+    IdentitySetsPlumbing.IdentitySetCreateRequest.Builder builder =
+        IdentitySetsPlumbing.IdentitySetCreateRequest.newBuilder();
+    builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(identitySet));
+    IdentitySetsPlumbing.IdentitySetCreateRequest req = builder.build();
+    IdentitySetsPlumbing.IdentitySetCreateResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("IdentitySets.Create", req))
+                .create(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertIdentitySetCreateResponseToPorcelain(plumbingResponse);
+  }
   /** Get reads one IdentitySet by ID. */
   public IdentitySetGetResponse get(String id) throws RpcException {
     IdentitySetsPlumbing.IdentitySetGetRequest.Builder builder =
@@ -86,6 +112,58 @@ public class IdentitySets implements SnapshotIdentitySets {
       break;
     }
     return Plumbing.convertIdentitySetGetResponseToPorcelain(plumbingResponse);
+  }
+  /** Update replaces all the fields of a IdentitySet by ID. */
+  public IdentitySetUpdateResponse update(IdentitySet identitySet) throws RpcException {
+    IdentitySetsPlumbing.IdentitySetUpdateRequest.Builder builder =
+        IdentitySetsPlumbing.IdentitySetUpdateRequest.newBuilder();
+    builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(identitySet));
+    IdentitySetsPlumbing.IdentitySetUpdateRequest req = builder.build();
+    IdentitySetsPlumbing.IdentitySetUpdateResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("IdentitySets.Update", req))
+                .update(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertIdentitySetUpdateResponseToPorcelain(plumbingResponse);
+  }
+  /** Delete removes a IdentitySet by ID. */
+  public IdentitySetDeleteResponse delete(String id) throws RpcException {
+    IdentitySetsPlumbing.IdentitySetDeleteRequest.Builder builder =
+        IdentitySetsPlumbing.IdentitySetDeleteRequest.newBuilder();
+    builder.setId((id));
+    IdentitySetsPlumbing.IdentitySetDeleteRequest req = builder.build();
+    IdentitySetsPlumbing.IdentitySetDeleteResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("IdentitySets.Delete", req))
+                .delete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertIdentitySetDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of IdentitySets matching a given set of criteria. */
   public Iterable<IdentitySet> list(String filter, Object... args) throws RpcException {

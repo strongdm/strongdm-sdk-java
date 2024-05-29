@@ -28,6 +28,2181 @@ public final class IdentitySetsPlumbing {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface IdentitySetCreateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.IdentitySetCreateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Parameters to define the new IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    boolean hasIdentitySet();
+    /**
+     * <pre>
+     * Parameters to define the new IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet();
+    /**
+     * <pre>
+     * Parameters to define the new IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder();
+  }
+  /**
+   * <pre>
+   * IdentitySetCreateRequest specifies what kind of IdentitySets that should be registered in
+   * the organizations fleet.
+   * </pre>
+   *
+   * Protobuf type {@code v1.IdentitySetCreateRequest}
+   */
+  public static final class IdentitySetCreateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.IdentitySetCreateRequest)
+      IdentitySetCreateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IdentitySetCreateRequest.newBuilder() to construct.
+    private IdentitySetCreateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IdentitySetCreateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IdentitySetCreateRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IdentitySetCreateRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder subBuilder = null;
+              if (identitySet_ != null) {
+                subBuilder = identitySet_.toBuilder();
+              }
+              identitySet_ = input.readMessage(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(identitySet_);
+                identitySet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int IDENTITY_SET_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+    /**
+     * <pre>
+     * Parameters to define the new IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdentitySet() {
+      return identitySet_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters to define the new IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+      return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+    }
+    /**
+     * <pre>
+     * Parameters to define the new IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+      return getIdentitySet();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (identitySet_ != null) {
+        output.writeMessage(2, getIdentitySet());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (identitySet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getIdentitySet());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest other = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasIdentitySet() != other.hasIdentitySet()) return false;
+      if (hasIdentitySet()) {
+        if (!getIdentitySet()
+            .equals(other.getIdentitySet())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasIdentitySet()) {
+        hash = (37 * hash) + IDENTITY_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getIdentitySet().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IdentitySetCreateRequest specifies what kind of IdentitySets that should be registered in
+     * the organizations fleet.
+     * </pre>
+     *
+     * Protobuf type {@code v1.IdentitySetCreateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.IdentitySetCreateRequest)
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest build() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest buildPartial() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest result = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (identitySetBuilder_ == null) {
+          result.identitySet_ = identitySet_;
+        } else {
+          result.identitySet_ = identitySetBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest other) {
+        if (other == com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasIdentitySet()) {
+          mergeIdentitySet(other.getIdentitySet());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> identitySetBuilder_;
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the identitySet field is set.
+       */
+      public boolean hasIdentitySet() {
+        return identitySetBuilder_ != null || identitySet_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       * @return The identitySet.
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        } else {
+          return identitySetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          identitySet_ = value;
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder builderForValue) {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = builderForValue.build();
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (identitySet_ != null) {
+            identitySet_ =
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.newBuilder(identitySet_).mergeFrom(value).buildPartial();
+          } else {
+            identitySet_ = value;
+          }
+          onChanged();
+        } else {
+          identitySetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+          onChanged();
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder getIdentitySetBuilder() {
+        
+        onChanged();
+        return getIdentitySetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+        if (identitySetBuilder_ != null) {
+          return identitySetBuilder_.getMessageOrBuilder();
+        } else {
+          return identitySet_ == null ?
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to define the new IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> 
+          getIdentitySetFieldBuilder() {
+        if (identitySetBuilder_ == null) {
+          identitySetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder>(
+                  getIdentitySet(),
+                  getParentForChildren(),
+                  isClean());
+          identitySet_ = null;
+        }
+        return identitySetBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.IdentitySetCreateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.IdentitySetCreateRequest)
+    private static final com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest();
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IdentitySetCreateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<IdentitySetCreateRequest>() {
+      @java.lang.Override
+      public IdentitySetCreateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IdentitySetCreateRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IdentitySetCreateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IdentitySetCreateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IdentitySetCreateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.IdentitySetCreateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The created IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    boolean hasIdentitySet();
+    /**
+     * <pre>
+     * The created IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet();
+    /**
+     * <pre>
+     * The created IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * IdentitySetCreateResponse reports how the IdentitySets were created in the system. It can
+   * communicate partial successes or failures.
+   * </pre>
+   *
+   * Protobuf type {@code v1.IdentitySetCreateResponse}
+   */
+  public static final class IdentitySetCreateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.IdentitySetCreateResponse)
+      IdentitySetCreateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IdentitySetCreateResponse.newBuilder() to construct.
+    private IdentitySetCreateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IdentitySetCreateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IdentitySetCreateResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IdentitySetCreateResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder subBuilder = null;
+              if (identitySet_ != null) {
+                subBuilder = identitySet_.toBuilder();
+              }
+              identitySet_ = input.readMessage(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(identitySet_);
+                identitySet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int IDENTITY_SET_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+    /**
+     * <pre>
+     * The created IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdentitySet() {
+      return identitySet_ != null;
+    }
+    /**
+     * <pre>
+     * The created IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+      return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+    }
+    /**
+     * <pre>
+     * The created IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+      return getIdentitySet();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (identitySet_ != null) {
+        output.writeMessage(2, getIdentitySet());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (identitySet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getIdentitySet());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse other = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasIdentitySet() != other.hasIdentitySet()) return false;
+      if (hasIdentitySet()) {
+        if (!getIdentitySet()
+            .equals(other.getIdentitySet())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasIdentitySet()) {
+        hash = (37 * hash) + IDENTITY_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getIdentitySet().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IdentitySetCreateResponse reports how the IdentitySets were created in the system. It can
+     * communicate partial successes or failures.
+     * </pre>
+     *
+     * Protobuf type {@code v1.IdentitySetCreateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.IdentitySetCreateResponse)
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetCreateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse build() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse buildPartial() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse result = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (identitySetBuilder_ == null) {
+          result.identitySet_ = identitySet_;
+        } else {
+          result.identitySet_ = identitySetBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse other) {
+        if (other == com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasIdentitySet()) {
+          mergeIdentitySet(other.getIdentitySet());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> identitySetBuilder_;
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the identitySet field is set.
+       */
+      public boolean hasIdentitySet() {
+        return identitySetBuilder_ != null || identitySet_ != null;
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       * @return The identitySet.
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        } else {
+          return identitySetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          identitySet_ = value;
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder builderForValue) {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = builderForValue.build();
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (identitySet_ != null) {
+            identitySet_ =
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.newBuilder(identitySet_).mergeFrom(value).buildPartial();
+          } else {
+            identitySet_ = value;
+          }
+          onChanged();
+        } else {
+          identitySetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+          onChanged();
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder getIdentitySetBuilder() {
+        
+        onChanged();
+        return getIdentitySetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+        if (identitySetBuilder_ != null) {
+          return identitySetBuilder_.getMessageOrBuilder();
+        } else {
+          return identitySet_ == null ?
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        }
+      }
+      /**
+       * <pre>
+       * The created IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> 
+          getIdentitySetFieldBuilder() {
+        if (identitySetBuilder_ == null) {
+          identitySetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder>(
+                  getIdentitySet(),
+                  getParentForChildren(),
+                  isClean());
+          identitySet_ = null;
+        }
+        return identitySetBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.IdentitySetCreateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.IdentitySetCreateResponse)
+    private static final com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse();
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IdentitySetCreateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<IdentitySetCreateResponse>() {
+      @java.lang.Override
+      public IdentitySetCreateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IdentitySetCreateResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IdentitySetCreateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IdentitySetCreateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetCreateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface IdentitySetGetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.IdentitySetGetRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2117,6 +4292,4216 @@ public final class IdentitySetsPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetGetResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IdentitySetUpdateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.IdentitySetUpdateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to update. If an ID is already
+     * specified in the `identity_set` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to update. If an ID is already
+     * specified in the `identity_set` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Parameters to overwrite the specified IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    boolean hasIdentitySet();
+    /**
+     * <pre>
+     * Parameters to overwrite the specified IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet();
+    /**
+     * <pre>
+     * Parameters to overwrite the specified IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder();
+  }
+  /**
+   * <pre>
+   * IdentitySetUpdateRequest identifies a IdentitySet by ID and provides fields to update on
+   * that IdentitySet record.
+   * </pre>
+   *
+   * Protobuf type {@code v1.IdentitySetUpdateRequest}
+   */
+  public static final class IdentitySetUpdateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.IdentitySetUpdateRequest)
+      IdentitySetUpdateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IdentitySetUpdateRequest.newBuilder() to construct.
+    private IdentitySetUpdateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IdentitySetUpdateRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IdentitySetUpdateRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IdentitySetUpdateRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder subBuilder = null;
+              if (identitySet_ != null) {
+                subBuilder = identitySet_.toBuilder();
+              }
+              identitySet_ = input.readMessage(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(identitySet_);
+                identitySet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.UpdateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to update. If an ID is already
+     * specified in the `identity_set` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to update. If an ID is already
+     * specified in the `identity_set` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDENTITY_SET_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+    /**
+     * <pre>
+     * Parameters to overwrite the specified IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdentitySet() {
+      return identitySet_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters to overwrite the specified IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+      return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+    }
+    /**
+     * <pre>
+     * Parameters to overwrite the specified IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+      return getIdentitySet();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (identitySet_ != null) {
+        output.writeMessage(3, getIdentitySet());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (identitySet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getIdentitySet());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest other = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasIdentitySet() != other.hasIdentitySet()) return false;
+      if (hasIdentitySet()) {
+        if (!getIdentitySet()
+            .equals(other.getIdentitySet())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (hasIdentitySet()) {
+        hash = (37 * hash) + IDENTITY_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getIdentitySet().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IdentitySetUpdateRequest identifies a IdentitySet by ID and provides fields to update on
+     * that IdentitySet record.
+     * </pre>
+     *
+     * Protobuf type {@code v1.IdentitySetUpdateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.IdentitySetUpdateRequest)
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        id_ = "";
+
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest build() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest buildPartial() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest result = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.id_ = id_;
+        if (identitySetBuilder_ == null) {
+          result.identitySet_ = identitySet_;
+        } else {
+          result.identitySet_ = identitySetBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest other) {
+        if (other == com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasIdentitySet()) {
+          mergeIdentitySet(other.getIdentitySet());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.UpdateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to update. If an ID is already
+       * specified in the `identity_set` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to update. If an ID is already
+       * specified in the `identity_set` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to update. If an ID is already
+       * specified in the `identity_set` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to update. If an ID is already
+       * specified in the `identity_set` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to update. If an ID is already
+       * specified in the `identity_set` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> identitySetBuilder_;
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the identitySet field is set.
+       */
+      public boolean hasIdentitySet() {
+        return identitySetBuilder_ != null || identitySet_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       * @return The identitySet.
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        } else {
+          return identitySetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          identitySet_ = value;
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder builderForValue) {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = builderForValue.build();
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (identitySet_ != null) {
+            identitySet_ =
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.newBuilder(identitySet_).mergeFrom(value).buildPartial();
+          } else {
+            identitySet_ = value;
+          }
+          onChanged();
+        } else {
+          identitySetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+          onChanged();
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder getIdentitySetBuilder() {
+        
+        onChanged();
+        return getIdentitySetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+        if (identitySetBuilder_ != null) {
+          return identitySetBuilder_.getMessageOrBuilder();
+        } else {
+          return identitySet_ == null ?
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> 
+          getIdentitySetFieldBuilder() {
+        if (identitySetBuilder_ == null) {
+          identitySetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder>(
+                  getIdentitySet(),
+                  getParentForChildren(),
+                  isClean());
+          identitySet_ = null;
+        }
+        return identitySetBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.IdentitySetUpdateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.IdentitySetUpdateRequest)
+    private static final com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest();
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IdentitySetUpdateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<IdentitySetUpdateRequest>() {
+      @java.lang.Override
+      public IdentitySetUpdateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IdentitySetUpdateRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IdentitySetUpdateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IdentitySetUpdateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IdentitySetUpdateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.IdentitySetUpdateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The updated IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    boolean hasIdentitySet();
+    /**
+     * <pre>
+     * The updated IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet();
+    /**
+     * <pre>
+     * The updated IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * IdentitySetUpdateResponse returns the fields of a IdentitySet after it has been updated by
+   * a IdentitySetUpdateRequest.
+   * </pre>
+   *
+   * Protobuf type {@code v1.IdentitySetUpdateResponse}
+   */
+  public static final class IdentitySetUpdateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.IdentitySetUpdateResponse)
+      IdentitySetUpdateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IdentitySetUpdateResponse.newBuilder() to construct.
+    private IdentitySetUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IdentitySetUpdateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IdentitySetUpdateResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IdentitySetUpdateResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder subBuilder = null;
+              if (identitySet_ != null) {
+                subBuilder = identitySet_.toBuilder();
+              }
+              identitySet_ = input.readMessage(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(identitySet_);
+                identitySet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.UpdateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int IDENTITY_SET_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+    /**
+     * <pre>
+     * The updated IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the identitySet field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdentitySet() {
+      return identitySet_ != null;
+    }
+    /**
+     * <pre>
+     * The updated IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     * @return The identitySet.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+      return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+    }
+    /**
+     * <pre>
+     * The updated IdentitySet.
+     * </pre>
+     *
+     * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+      return getIdentitySet();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (identitySet_ != null) {
+        output.writeMessage(2, getIdentitySet());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (identitySet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getIdentitySet());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse other = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasIdentitySet() != other.hasIdentitySet()) return false;
+      if (hasIdentitySet()) {
+        if (!getIdentitySet()
+            .equals(other.getIdentitySet())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasIdentitySet()) {
+        hash = (37 * hash) + IDENTITY_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getIdentitySet().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IdentitySetUpdateResponse returns the fields of a IdentitySet after it has been updated by
+     * a IdentitySetUpdateRequest.
+     * </pre>
+     *
+     * Protobuf type {@code v1.IdentitySetUpdateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.IdentitySetUpdateResponse)
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetUpdateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse build() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse buildPartial() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse result = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (identitySetBuilder_ == null) {
+          result.identitySet_ = identitySet_;
+        } else {
+          result.identitySet_ = identitySetBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse other) {
+        if (other == com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasIdentitySet()) {
+          mergeIdentitySet(other.getIdentitySet());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.UpdateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.UpdateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet identitySet_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> identitySetBuilder_;
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the identitySet field is set.
+       */
+      public boolean hasIdentitySet() {
+        return identitySetBuilder_ != null || identitySet_ != null;
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       * @return The identitySet.
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet getIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          return identitySet_ == null ? com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        } else {
+          return identitySetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          identitySet_ = value;
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setIdentitySet(
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder builderForValue) {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = builderForValue.build();
+          onChanged();
+        } else {
+          identitySetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeIdentitySet(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet value) {
+        if (identitySetBuilder_ == null) {
+          if (identitySet_ != null) {
+            identitySet_ =
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.newBuilder(identitySet_).mergeFrom(value).buildPartial();
+          } else {
+            identitySet_ = value;
+          }
+          onChanged();
+        } else {
+          identitySetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearIdentitySet() {
+        if (identitySetBuilder_ == null) {
+          identitySet_ = null;
+          onChanged();
+        } else {
+          identitySet_ = null;
+          identitySetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder getIdentitySetBuilder() {
+        
+        onChanged();
+        return getIdentitySetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder getIdentitySetOrBuilder() {
+        if (identitySetBuilder_ != null) {
+          return identitySetBuilder_.getMessageOrBuilder();
+        } else {
+          return identitySet_ == null ?
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.getDefaultInstance() : identitySet_;
+        }
+      }
+      /**
+       * <pre>
+       * The updated IdentitySet.
+       * </pre>
+       *
+       * <code>.v1.IdentitySet identity_set = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder> 
+          getIdentitySetFieldBuilder() {
+        if (identitySetBuilder_ == null) {
+          identitySetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySet.Builder, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetOrBuilder>(
+                  getIdentitySet(),
+                  getParentForChildren(),
+                  isClean());
+          identitySet_ = null;
+        }
+        return identitySetBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.IdentitySetUpdateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.IdentitySetUpdateResponse)
+    private static final com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse();
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IdentitySetUpdateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<IdentitySetUpdateResponse>() {
+      @java.lang.Override
+      public IdentitySetUpdateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IdentitySetUpdateResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IdentitySetUpdateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IdentitySetUpdateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetUpdateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IdentitySetDeleteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.IdentitySetDeleteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.DeleteRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * IdentitySetDeleteRequest identifies a IdentitySet by ID to delete.
+   * </pre>
+   *
+   * Protobuf type {@code v1.IdentitySetDeleteRequest}
+   */
+  public static final class IdentitySetDeleteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.IdentitySetDeleteRequest)
+      IdentitySetDeleteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IdentitySetDeleteRequest.newBuilder() to construct.
+    private IdentitySetDeleteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IdentitySetDeleteRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IdentitySetDeleteRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IdentitySetDeleteRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.DeleteRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier of the IdentitySet to delete.
+     * </pre>
+     *
+     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest other = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IdentitySetDeleteRequest identifies a IdentitySet by ID to delete.
+     * </pre>
+     *
+     * Protobuf type {@code v1.IdentitySetDeleteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.IdentitySetDeleteRequest)
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        id_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest build() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest buildPartial() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest result = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest other) {
+        if (other == com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.DeleteRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.DeleteRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.DeleteRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the IdentitySet to delete.
+       * </pre>
+       *
+       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.IdentitySetDeleteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.IdentitySetDeleteRequest)
+    private static final com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest();
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IdentitySetDeleteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<IdentitySetDeleteRequest>() {
+      @java.lang.Override
+      public IdentitySetDeleteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IdentitySetDeleteRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IdentitySetDeleteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IdentitySetDeleteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IdentitySetDeleteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.IdentitySetDeleteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.DeleteResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * IdentitySetDeleteResponse returns information about a IdentitySet that was deleted.
+   * </pre>
+   *
+   * Protobuf type {@code v1.IdentitySetDeleteResponse}
+   */
+  public static final class IdentitySetDeleteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.IdentitySetDeleteResponse)
+      IdentitySetDeleteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IdentitySetDeleteResponse.newBuilder() to construct.
+    private IdentitySetDeleteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IdentitySetDeleteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IdentitySetDeleteResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IdentitySetDeleteResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.DeleteResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(2, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse other = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IdentitySetDeleteResponse returns information about a IdentitySet that was deleted.
+     * </pre>
+     *
+     * Protobuf type {@code v1.IdentitySetDeleteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.IdentitySetDeleteResponse)
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.class, com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.internal_static_v1_IdentitySetDeleteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse build() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse buildPartial() {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse result = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse other) {
+        if (other == com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.DeleteResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.DeleteResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.DeleteResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.DeleteResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.IdentitySetDeleteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.IdentitySetDeleteResponse)
+    private static final com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse();
+    }
+
+    public static com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IdentitySetDeleteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<IdentitySetDeleteResponse>() {
+      @java.lang.Override
+      public IdentitySetDeleteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IdentitySetDeleteResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IdentitySetDeleteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IdentitySetDeleteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.IdentitySetsPlumbing.IdentitySetDeleteResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5243,6 +11628,16 @@ public final class IdentitySetsPlumbing {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_IdentitySetCreateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_IdentitySetCreateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_IdentitySetCreateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_IdentitySetCreateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_IdentitySetGetRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5252,6 +11647,26 @@ public final class IdentitySetsPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_IdentitySetGetResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_IdentitySetUpdateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_IdentitySetUpdateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_IdentitySetUpdateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_IdentitySetUpdateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_IdentitySetDeleteRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_IdentitySetDeleteRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_IdentitySetDeleteResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_IdentitySetDeleteResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_IdentitySetListRequest_descriptor;
   private static final 
@@ -5277,36 +11692,70 @@ public final class IdentitySetsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\023identity_sets.proto\022\002v1\032\roptions.proto" +
-      "\032\nspec.proto\"U\n\025IdentitySetGetRequest\022$\n" +
-      "\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002i" +
-      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\343\001\n\026IdentitySetGetRe" +
-      "sponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMet" +
-      "adataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014identity_set\030\002 \001(\0132" +
-      "\017.v1.IdentitySetB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_lim" +
-      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372" +
-      "\370\263\007\005\250\363\263\007\001\"[\n\026IdentitySetListRequest\022%\n\004m" +
-      "eta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fi" +
-      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\316\001\n\027IdentitySetLi" +
-      "stResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRespon" +
-      "seMetadata\0222\n\ridentity_sets\030\002 \003(\0132\017.v1.I" +
-      "dentitySetB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001" +
-      "(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\254\001\n\013Iden" +
-      "titySet\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030" +
-      "\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:f\372\370\263\007a\250\363\263\007\001\302\363\263\007W\242" +
-      "\363\263\007%tf_examples/identity_set_resource.tx" +
-      "t\252\363\263\007(tf_examples/identity_set_data_sour" +
-      "ce.txt2\212\002\n\014IdentitySets\022k\n\003Get\022\031.v1.Iden" +
-      "titySetGetRequest\032\032.v1.IdentitySetGetRes" +
-      "ponse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/identi" +
-      "ty-sets/{id}\022i\n\004List\022\032.v1.IdentitySetLis" +
-      "tRequest\032\033.v1.IdentitySetListResponse\"(\202" +
-      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/identity-sets\032" +
-      "\"\312\371\263\007\020\302\371\263\007\013IdentitySet\312\371\263\007\010\322\371\263\007\003ig-Bh\n\031c" +
-      "om.strongdm.api.plumbingB\024IdentitySetsPl" +
-      "umbingZ5github.com/strongdm/strongdm-sdk" +
-      "-go/v3/internal/v1;v1b\006proto3"
+      "\032\nspec.proto\"v\n\030IdentitySetCreateRequest" +
+      "\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadat" +
+      "a\0221\n\014identity_set\030\002 \001(\0132\017.v1.IdentitySet" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\"\351\001\n\031IdentitySetCreateRespon" +
+      "se\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMeta" +
+      "dataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014identity_set\030\002 \001(\0132\017" +
+      ".v1.IdentitySetB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limi" +
+      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"U\n\025IdentitySetGetRequest\022$\n\004met" +
+      "a\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\343\001\n\026IdentitySetGetRespon" +
+      "se\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadat" +
+      "aB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014identity_set\030\002 \001(\0132\017.v1" +
+      ".IdentitySetB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003" +
+      " \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005" +
+      "\250\363\263\007\001\"\202\001\n\030IdentitySetUpdateRequest\022\'\n\004me" +
+      "ta\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002i" +
+      "d\030\002 \001(\t\0221\n\014identity_set\030\003 \001(\0132\017.v1.Ident" +
+      "itySetB\n\362\370\263\007\005\260\363\263\007\001\"\351\001\n\031IdentitySetUpdate" +
+      "Response\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateRespon" +
+      "seMetadataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014identity_set\030\002" +
+      " \001(\0132\017.v1.IdentitySetB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrat" +
+      "e_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gatew" +
+      "ay:\n\372\370\263\007\005\250\363\263\007\001\"[\n\030IdentitySetDeleteReque" +
+      "st\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetad" +
+      "ata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\266\001\n\031Identity" +
+      "SetDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Del" +
+      "eteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_" +
+      "limit\030\002 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway" +
+      ":\n\372\370\263\007\005\250\363\263\007\001\"[\n\026IdentitySetListRequest\022%" +
+      "\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n" +
+      "\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\316\001\n\027IdentitySe" +
+      "tListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRes" +
+      "ponseMetadata\0222\n\ridentity_sets\030\002 \003(\0132\017.v" +
+      "1.IdentitySetB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030" +
+      "\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\254\001\n\013I" +
+      "dentitySet\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
+      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:f\372\370\263\007a\250\363\263\007\001\302\363\263" +
+      "\007W\242\363\263\007%tf_examples/identity_set_resource" +
+      ".txt\252\363\263\007(tf_examples/identity_set_data_s" +
+      "ource.txt2\353\004\n\014IdentitySets\022p\n\006Create\022\034.v" +
+      "1.IdentitySetCreateRequest\032\035.v1.Identity" +
+      "SetCreateResponse\")\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\026\252\363" +
+      "\263\007\021/v1/identity-sets\022k\n\003Get\022\031.v1.Identit" +
+      "ySetGetRequest\032\032.v1.IdentitySetGetRespon" +
+      "se\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/identity-" +
+      "sets/{id}\022t\n\006Update\022\034.v1.IdentitySetUpda" +
+      "teRequest\032\035.v1.IdentitySetUpdateResponse" +
+      "\"-\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\033\252\363\263\007\026/v1/identity-se" +
+      "ts/{id}\022w\n\006Delete\022\034.v1.IdentitySetDelete" +
+      "Request\032\035.v1.IdentitySetDeleteResponse\"0" +
+      "\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1/identity-s" +
+      "ets/{id}\022i\n\004List\022\032.v1.IdentitySetListReq" +
+      "uest\032\033.v1.IdentitySetListResponse\"(\202\371\263\007\010" +
+      "\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/identity-sets\032\"\312\371\263" +
+      "\007\020\302\371\263\007\013IdentitySet\312\371\263\007\010\322\371\263\007\003ig-Bh\n\031com.s" +
+      "trongdm.api.plumbingB\024IdentitySetsPlumbi" +
+      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
+      "v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5314,32 +11763,68 @@ public final class IdentitySetsPlumbing {
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
         });
-    internal_static_v1_IdentitySetGetRequest_descriptor =
+    internal_static_v1_IdentitySetCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_v1_IdentitySetCreateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_IdentitySetCreateRequest_descriptor,
+        new java.lang.String[] { "Meta", "IdentitySet", });
+    internal_static_v1_IdentitySetCreateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_v1_IdentitySetCreateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_IdentitySetCreateResponse_descriptor,
+        new java.lang.String[] { "Meta", "IdentitySet", "RateLimit", });
+    internal_static_v1_IdentitySetGetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_v1_IdentitySetGetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_IdentitySetGetRequest_descriptor,
         new java.lang.String[] { "Meta", "Id", });
     internal_static_v1_IdentitySetGetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_v1_IdentitySetGetResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_IdentitySetGetResponse_descriptor,
         new java.lang.String[] { "Meta", "IdentitySet", "RateLimit", });
+    internal_static_v1_IdentitySetUpdateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_IdentitySetUpdateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_IdentitySetUpdateRequest_descriptor,
+        new java.lang.String[] { "Meta", "Id", "IdentitySet", });
+    internal_static_v1_IdentitySetUpdateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_IdentitySetUpdateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_IdentitySetUpdateResponse_descriptor,
+        new java.lang.String[] { "Meta", "IdentitySet", "RateLimit", });
+    internal_static_v1_IdentitySetDeleteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_IdentitySetDeleteRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_IdentitySetDeleteRequest_descriptor,
+        new java.lang.String[] { "Meta", "Id", });
+    internal_static_v1_IdentitySetDeleteResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_v1_IdentitySetDeleteResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_IdentitySetDeleteResponse_descriptor,
+        new java.lang.String[] { "Meta", "RateLimit", });
     internal_static_v1_IdentitySetListRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_v1_IdentitySetListRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_IdentitySetListRequest_descriptor,
         new java.lang.String[] { "Meta", "Filter", });
     internal_static_v1_IdentitySetListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_v1_IdentitySetListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_IdentitySetListResponse_descriptor,
         new java.lang.String[] { "Meta", "IdentitySets", "RateLimit", });
     internal_static_v1_IdentitySet_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_v1_IdentitySet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_IdentitySet_descriptor,
