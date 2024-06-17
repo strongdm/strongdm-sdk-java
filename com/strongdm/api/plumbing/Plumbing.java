@@ -11336,6 +11336,7 @@ public class Plumbing {
     porcelain.setEgressNodeId((plumbing.getEgressNodeId()));
     porcelain.setEncrypted((plumbing.getEncrypted()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasUsername((plumbing.getIdentityAliasUsername()));
     porcelain.setQueryBody((plumbing.getQueryBody()));
     porcelain.setQueryCategory((plumbing.getQueryCategory()));
     porcelain.setQueryHash((plumbing.getQueryHash()));
@@ -11390,6 +11391,9 @@ public class Plumbing {
     builder.setEncrypted(porcelain.getEncrypted());
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIdentityAliasUsername() != null) {
+      builder.setIdentityAliasUsername((porcelain.getIdentityAliasUsername()));
     }
     if (porcelain.getQueryBody() != null) {
       builder.setQueryBody((porcelain.getQueryBody()));

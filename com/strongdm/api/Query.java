@@ -192,6 +192,16 @@ public class Query {
     this.id = in;
   }
 
+  private String identityAliasUsername;
+  /** The username of the IdentityAlias used to access the Resource. */
+  public String getIdentityAliasUsername() {
+    return this.identityAliasUsername;
+  }
+  /** The username of the IdentityAlias used to access the Resource. */
+  public void setIdentityAliasUsername(String in) {
+    this.identityAliasUsername = in;
+  }
+
   private String queryBody;
   /**
    * The captured content of the Query. For queries against SSH, Kubernetes, and RDP resources, this
@@ -260,10 +270,12 @@ public class Query {
 
   private String remoteIdentityUsername;
   /** The username of the RemoteIdentity used to access the Resource. */
+  @Deprecated
   public String getRemoteIdentityUsername() {
     return this.remoteIdentityUsername;
   }
   /** The username of the RemoteIdentity used to access the Resource. */
+  @Deprecated
   public void setRemoteIdentityUsername(String in) {
     this.remoteIdentityUsername = in;
   }
