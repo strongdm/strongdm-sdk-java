@@ -242,6 +242,8 @@ public class Plumbing {
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClientCertificate((plumbing.getClientCertificate()));
     porcelain.setClientKey((plumbing.getClientKey()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
@@ -274,6 +276,10 @@ public class Plumbing {
     }
     if (porcelain.getClientKey() != null) {
       builder.setClientKey((porcelain.getClientKey()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -421,6 +427,8 @@ public class Plumbing {
       AKSServiceAccount plumbing) {
     com.strongdm.api.AKSServiceAccount porcelain = new com.strongdm.api.AKSServiceAccount();
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
@@ -446,6 +454,10 @@ public class Plumbing {
     AKSServiceAccount.Builder builder = AKSServiceAccount.newBuilder();
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -2703,6 +2715,8 @@ public class Plumbing {
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClusterName((plumbing.getClusterName()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setEndpoint((plumbing.getEndpoint()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
@@ -2738,6 +2752,10 @@ public class Plumbing {
     }
     if (porcelain.getClusterName() != null) {
       builder.setClusterName((porcelain.getClusterName()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -2814,6 +2832,8 @@ public class Plumbing {
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClusterName((plumbing.getClusterName()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setEndpoint((plumbing.getEndpoint()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
@@ -2846,6 +2866,10 @@ public class Plumbing {
     }
     if (porcelain.getClusterName() != null) {
       builder.setClusterName((porcelain.getClusterName()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -6905,6 +6929,8 @@ public class Plumbing {
     com.strongdm.api.GoogleGKE porcelain = new com.strongdm.api.GoogleGKE();
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setEndpoint((plumbing.getEndpoint()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
@@ -6931,6 +6957,10 @@ public class Plumbing {
     }
     if (porcelain.getCertificateAuthority() != null) {
       builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -8186,6 +8216,8 @@ public class Plumbing {
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClientCertificate((plumbing.getClientCertificate()));
     porcelain.setClientKey((plumbing.getClientKey()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
@@ -8218,6 +8250,10 @@ public class Plumbing {
     }
     if (porcelain.getClientKey() != null) {
       builder.setClientKey((porcelain.getClientKey()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -8366,6 +8402,8 @@ public class Plumbing {
     com.strongdm.api.KubernetesServiceAccount porcelain =
         new com.strongdm.api.KubernetesServiceAccount();
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
@@ -8391,6 +8429,10 @@ public class Plumbing {
     KubernetesServiceAccount.Builder builder = KubernetesServiceAccount.newBuilder();
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));

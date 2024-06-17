@@ -44,6 +44,32 @@ public class GoogleGKE implements Resource {
     this.certificateAuthority = in;
   }
 
+  private boolean discoveryEnabled;
+  /** If true, configures discovery of a cluster to be run from a node. */
+  public boolean getDiscoveryEnabled() {
+    return this.discoveryEnabled;
+  }
+  /** If true, configures discovery of a cluster to be run from a node. */
+  public void setDiscoveryEnabled(boolean in) {
+    this.discoveryEnabled = in;
+  }
+
+  private String discoveryUsername;
+  /**
+   * If a cluster is configured for user impersonation, this is the user to impersonate when running
+   * discovery.
+   */
+  public String getDiscoveryUsername() {
+    return this.discoveryUsername;
+  }
+  /**
+   * If a cluster is configured for user impersonation, this is the user to impersonate when running
+   * discovery.
+   */
+  public void setDiscoveryUsername(String in) {
+    this.discoveryUsername = in;
+  }
+
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
