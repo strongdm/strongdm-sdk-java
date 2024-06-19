@@ -118,11 +118,11 @@ public class Activity {
   }
 
   private String verb;
-  /** The kind of activity which has taken place. */
+  /** The kind of activity which has taken place, one of the ActivityVerb constants. */
   public String getVerb() {
     return this.verb;
   }
-  /** The kind of activity which has taken place. */
+  /** The kind of activity which has taken place, one of the ActivityVerb constants. */
   public void setVerb(String in) {
     this.verb = in;
   }

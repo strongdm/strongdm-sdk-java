@@ -3581,7 +3581,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's authentication provider.
+     * The Organization's authentication provider, one of the AuthProvider constants.
      * </pre>
      *
      * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -3590,7 +3590,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getAuthProvider();
     /**
      * <pre>
-     * The Organization's authentication provider.
+     * The Organization's authentication provider, one of the AuthProvider constants.
      * </pre>
      *
      * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -3685,7 +3685,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's multi-factor authentication provider, if enabled.
+     * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
      * </pre>
      *
      * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -3694,7 +3694,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getMfaProvider();
     /**
      * <pre>
-     * The Organization's multi-factor authentication provider, if enabled.
+     * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
      * </pre>
      *
      * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -3705,7 +3705,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's remote log encryption encoder.
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
      * </pre>
      *
      * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -3714,7 +3714,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getLogRemoteEncoder();
     /**
      * <pre>
-     * The Organization's remote log encryption encoder.
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
      * </pre>
      *
      * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -3725,7 +3725,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's local log storage.
+     * The Organization's local log storage, one of the LogLocalStorage constants.
      * </pre>
      *
      * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -3734,7 +3734,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getLogLocalStorage();
     /**
      * <pre>
-     * The Organization's local log storage.
+     * The Organization's local log storage, one of the LogLocalStorage constants.
      * </pre>
      *
      * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -3745,7 +3745,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's local log encryption encoder.
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
      * </pre>
      *
      * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -3754,7 +3754,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getLogLocalEncoder();
     /**
      * <pre>
-     * The Organization's local log encryption encoder.
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
      * </pre>
      *
      * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -3765,7 +3765,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's local log format.
+     * The Organization's local log format, one of the LogLocalFormat constants.
      * </pre>
      *
      * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -3774,7 +3774,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getLogLocalFormat();
     /**
      * <pre>
-     * The Organization's local log format.
+     * The Organization's local log format, one of the LogLocalFormat constants.
      * </pre>
      *
      * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -3825,7 +3825,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's SCIM provider.
+     * The Organization's SCIM provider, one of the SCIMProvider constants.
      * </pre>
      *
      * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -3834,7 +3834,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getScimProvider();
     /**
      * <pre>
-     * The Organization's SCIM provider.
+     * The Organization's SCIM provider, one of the SCIMProvider constants.
      * </pre>
      *
      * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -3962,7 +3962,7 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's type.
+     * The Organization's type, one of the OrgKind constants.
      * </pre>
      *
      * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -3971,7 +3971,7 @@ public final class OrganizationHistoryPlumbing {
     java.lang.String getKind();
     /**
      * <pre>
-     * The Organization's type.
+     * The Organization's type, one of the OrgKind constants.
      * </pre>
      *
      * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -3999,6 +3999,56 @@ public final class OrganizationHistoryPlumbing {
      */
     com.google.protobuf.ByteString
         getIdBytes();
+
+    /**
+     * <pre>
+     * The Organization's loopback subnet.
+     * </pre>
+     *
+     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+     * @return The loopbackSubnet.
+     */
+    java.lang.String getLoopbackSubnet();
+    /**
+     * <pre>
+     * The Organization's loopback subnet.
+     * </pre>
+     *
+     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for loopbackSubnet.
+     */
+    com.google.protobuf.ByteString
+        getLoopbackSubnetBytes();
+
+    /**
+     * <pre>
+     * Indicates if the Organization has device trust enabled.
+     * </pre>
+     *
+     * <code>bool device_trust_enabled = 27 [(.v1.field_options) = { ... }</code>
+     * @return The deviceTrustEnabled.
+     */
+    boolean getDeviceTrustEnabled();
+
+    /**
+     * <pre>
+     * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+     * </pre>
+     *
+     * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+     * @return The deviceTrustProvider.
+     */
+    java.lang.String getDeviceTrustProvider();
+    /**
+     * <pre>
+     * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+     * </pre>
+     *
+     * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for deviceTrustProvider.
+     */
+    com.google.protobuf.ByteString
+        getDeviceTrustProviderBytes();
   }
   /**
    * Protobuf type {@code v1.Organization}
@@ -4029,6 +4079,8 @@ public final class OrganizationHistoryPlumbing {
       samlMetadataUrl_ = "";
       kind_ = "";
       id_ = "";
+      loopbackSubnet_ = "";
+      deviceTrustProvider_ = "";
     }
 
     @java.lang.Override
@@ -4242,6 +4294,23 @@ public final class OrganizationHistoryPlumbing {
               id_ = s;
               break;
             }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loopbackSubnet_ = s;
+              break;
+            }
+            case 216: {
+
+              deviceTrustEnabled_ = input.readBool();
+              break;
+            }
+            case 226: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              deviceTrustProvider_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4402,7 +4471,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object authProvider_;
     /**
      * <pre>
-     * The Organization's authentication provider.
+     * The Organization's authentication provider, one of the AuthProvider constants.
      * </pre>
      *
      * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -4423,7 +4492,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's authentication provider.
+     * The Organization's authentication provider, one of the AuthProvider constants.
      * </pre>
      *
      * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -4569,7 +4638,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object mfaProvider_;
     /**
      * <pre>
-     * The Organization's multi-factor authentication provider, if enabled.
+     * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
      * </pre>
      *
      * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -4590,7 +4659,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's multi-factor authentication provider, if enabled.
+     * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
      * </pre>
      *
      * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -4615,7 +4684,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object logRemoteEncoder_;
     /**
      * <pre>
-     * The Organization's remote log encryption encoder.
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
      * </pre>
      *
      * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -4636,7 +4705,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's remote log encryption encoder.
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
      * </pre>
      *
      * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -4661,7 +4730,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object logLocalStorage_;
     /**
      * <pre>
-     * The Organization's local log storage.
+     * The Organization's local log storage, one of the LogLocalStorage constants.
      * </pre>
      *
      * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -4682,7 +4751,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's local log storage.
+     * The Organization's local log storage, one of the LogLocalStorage constants.
      * </pre>
      *
      * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -4707,7 +4776,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object logLocalEncoder_;
     /**
      * <pre>
-     * The Organization's local log encryption encoder.
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
      * </pre>
      *
      * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -4728,7 +4797,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's local log encryption encoder.
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
      * </pre>
      *
      * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -4753,7 +4822,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object logLocalFormat_;
     /**
      * <pre>
-     * The Organization's local log format.
+     * The Organization's local log format, one of the LogLocalFormat constants.
      * </pre>
      *
      * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -4774,7 +4843,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's local log format.
+     * The Organization's local log format, one of the LogLocalFormat constants.
      * </pre>
      *
      * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -4891,7 +4960,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object scimProvider_;
     /**
      * <pre>
-     * The Organization's SCIM provider.
+     * The Organization's SCIM provider, one of the SCIMProvider constants.
      * </pre>
      *
      * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -4912,7 +4981,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's SCIM provider.
+     * The Organization's SCIM provider, one of the SCIMProvider constants.
      * </pre>
      *
      * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -5174,7 +5243,7 @@ public final class OrganizationHistoryPlumbing {
     private volatile java.lang.Object kind_;
     /**
      * <pre>
-     * The Organization's type.
+     * The Organization's type, one of the OrgKind constants.
      * </pre>
      *
      * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -5195,7 +5264,7 @@ public final class OrganizationHistoryPlumbing {
     }
     /**
      * <pre>
-     * The Organization's type.
+     * The Organization's type, one of the OrgKind constants.
      * </pre>
      *
      * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -5256,6 +5325,113 @@ public final class OrganizationHistoryPlumbing {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOOPBACK_SUBNET_FIELD_NUMBER = 26;
+    private volatile java.lang.Object loopbackSubnet_;
+    /**
+     * <pre>
+     * The Organization's loopback subnet.
+     * </pre>
+     *
+     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+     * @return The loopbackSubnet.
+     */
+    @java.lang.Override
+    public java.lang.String getLoopbackSubnet() {
+      java.lang.Object ref = loopbackSubnet_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loopbackSubnet_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's loopback subnet.
+     * </pre>
+     *
+     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for loopbackSubnet.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoopbackSubnetBytes() {
+      java.lang.Object ref = loopbackSubnet_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loopbackSubnet_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVICE_TRUST_ENABLED_FIELD_NUMBER = 27;
+    private boolean deviceTrustEnabled_;
+    /**
+     * <pre>
+     * Indicates if the Organization has device trust enabled.
+     * </pre>
+     *
+     * <code>bool device_trust_enabled = 27 [(.v1.field_options) = { ... }</code>
+     * @return The deviceTrustEnabled.
+     */
+    @java.lang.Override
+    public boolean getDeviceTrustEnabled() {
+      return deviceTrustEnabled_;
+    }
+
+    public static final int DEVICE_TRUST_PROVIDER_FIELD_NUMBER = 28;
+    private volatile java.lang.Object deviceTrustProvider_;
+    /**
+     * <pre>
+     * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+     * </pre>
+     *
+     * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+     * @return The deviceTrustProvider.
+     */
+    @java.lang.Override
+    public java.lang.String getDeviceTrustProvider() {
+      java.lang.Object ref = deviceTrustProvider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deviceTrustProvider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+     * </pre>
+     *
+     * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for deviceTrustProvider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeviceTrustProviderBytes() {
+      java.lang.Object ref = deviceTrustProvider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deviceTrustProvider_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5351,6 +5527,15 @@ public final class OrganizationHistoryPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 25, id_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loopbackSubnet_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, loopbackSubnet_);
+      }
+      if (deviceTrustEnabled_ != false) {
+        output.writeBool(27, deviceTrustEnabled_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceTrustProvider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, deviceTrustProvider_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5444,6 +5629,16 @@ public final class OrganizationHistoryPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, id_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loopbackSubnet_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, loopbackSubnet_);
+      }
+      if (deviceTrustEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(27, deviceTrustEnabled_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceTrustProvider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, deviceTrustProvider_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5524,6 +5719,12 @@ public final class OrganizationHistoryPlumbing {
           .equals(other.getKind())) return false;
       if (!getId()
           .equals(other.getId())) return false;
+      if (!getLoopbackSubnet()
+          .equals(other.getLoopbackSubnet())) return false;
+      if (getDeviceTrustEnabled()
+          != other.getDeviceTrustEnabled()) return false;
+      if (!getDeviceTrustProvider()
+          .equals(other.getDeviceTrustProvider())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5599,6 +5800,13 @@ public final class OrganizationHistoryPlumbing {
       hash = (53 * hash) + getKind().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + LOOPBACK_SUBNET_FIELD_NUMBER;
+      hash = (53 * hash) + getLoopbackSubnet().hashCode();
+      hash = (37 * hash) + DEVICE_TRUST_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeviceTrustEnabled());
+      hash = (37 * hash) + DEVICE_TRUST_PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceTrustProvider().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5802,6 +6010,12 @@ public final class OrganizationHistoryPlumbing {
 
         id_ = "";
 
+        loopbackSubnet_ = "";
+
+        deviceTrustEnabled_ = false;
+
+        deviceTrustProvider_ = "";
+
         return this;
       }
 
@@ -5873,6 +6087,9 @@ public final class OrganizationHistoryPlumbing {
         result.samlMetadataUrl_ = samlMetadataUrl_;
         result.kind_ = kind_;
         result.id_ = id_;
+        result.loopbackSubnet_ = loopbackSubnet_;
+        result.deviceTrustEnabled_ = deviceTrustEnabled_;
+        result.deviceTrustProvider_ = deviceTrustProvider_;
         onBuilt();
         return result;
       }
@@ -6010,6 +6227,17 @@ public final class OrganizationHistoryPlumbing {
         }
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getLoopbackSubnet().isEmpty()) {
+          loopbackSubnet_ = other.loopbackSubnet_;
+          onChanged();
+        }
+        if (other.getDeviceTrustEnabled() != false) {
+          setDeviceTrustEnabled(other.getDeviceTrustEnabled());
+        }
+        if (!other.getDeviceTrustProvider().isEmpty()) {
+          deviceTrustProvider_ = other.deviceTrustProvider_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -6450,7 +6678,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object authProvider_ = "";
       /**
        * <pre>
-       * The Organization's authentication provider.
+       * The Organization's authentication provider, one of the AuthProvider constants.
        * </pre>
        *
        * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -6470,7 +6698,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's authentication provider.
+       * The Organization's authentication provider, one of the AuthProvider constants.
        * </pre>
        *
        * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -6491,7 +6719,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's authentication provider.
+       * The Organization's authentication provider, one of the AuthProvider constants.
        * </pre>
        *
        * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -6510,7 +6738,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's authentication provider.
+       * The Organization's authentication provider, one of the AuthProvider constants.
        * </pre>
        *
        * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -6524,7 +6752,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's authentication provider.
+       * The Organization's authentication provider, one of the AuthProvider constants.
        * </pre>
        *
        * <code>string auth_provider = 4 [(.v1.field_options) = { ... }</code>
@@ -6985,7 +7213,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object mfaProvider_ = "";
       /**
        * <pre>
-       * The Organization's multi-factor authentication provider, if enabled.
+       * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
        * </pre>
        *
        * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -7005,7 +7233,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's multi-factor authentication provider, if enabled.
+       * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
        * </pre>
        *
        * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -7026,7 +7254,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's multi-factor authentication provider, if enabled.
+       * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
        * </pre>
        *
        * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -7045,7 +7273,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's multi-factor authentication provider, if enabled.
+       * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
        * </pre>
        *
        * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -7059,7 +7287,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's multi-factor authentication provider, if enabled.
+       * The Organization's multi-factor authentication provider, one of the MFAProvider constants.
        * </pre>
        *
        * <code>string mfa_provider = 10 [(.v1.field_options) = { ... }</code>
@@ -7081,7 +7309,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object logRemoteEncoder_ = "";
       /**
        * <pre>
-       * The Organization's remote log encryption encoder.
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
        * </pre>
        *
        * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -7101,7 +7329,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's remote log encryption encoder.
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
        * </pre>
        *
        * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -7122,7 +7350,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's remote log encryption encoder.
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
        * </pre>
        *
        * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -7141,7 +7369,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's remote log encryption encoder.
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
        * </pre>
        *
        * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -7155,7 +7383,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's remote log encryption encoder.
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
        * </pre>
        *
        * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
@@ -7177,7 +7405,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object logLocalStorage_ = "";
       /**
        * <pre>
-       * The Organization's local log storage.
+       * The Organization's local log storage, one of the LogLocalStorage constants.
        * </pre>
        *
        * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -7197,7 +7425,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log storage.
+       * The Organization's local log storage, one of the LogLocalStorage constants.
        * </pre>
        *
        * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -7218,7 +7446,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log storage.
+       * The Organization's local log storage, one of the LogLocalStorage constants.
        * </pre>
        *
        * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -7237,7 +7465,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log storage.
+       * The Organization's local log storage, one of the LogLocalStorage constants.
        * </pre>
        *
        * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -7251,7 +7479,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log storage.
+       * The Organization's local log storage, one of the LogLocalStorage constants.
        * </pre>
        *
        * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
@@ -7273,7 +7501,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object logLocalEncoder_ = "";
       /**
        * <pre>
-       * The Organization's local log encryption encoder.
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
        * </pre>
        *
        * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -7293,7 +7521,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log encryption encoder.
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
        * </pre>
        *
        * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -7314,7 +7542,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log encryption encoder.
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
        * </pre>
        *
        * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -7333,7 +7561,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log encryption encoder.
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
        * </pre>
        *
        * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -7347,7 +7575,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log encryption encoder.
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
        * </pre>
        *
        * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
@@ -7369,7 +7597,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object logLocalFormat_ = "";
       /**
        * <pre>
-       * The Organization's local log format.
+       * The Organization's local log format, one of the LogLocalFormat constants.
        * </pre>
        *
        * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -7389,7 +7617,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log format.
+       * The Organization's local log format, one of the LogLocalFormat constants.
        * </pre>
        *
        * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -7410,7 +7638,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log format.
+       * The Organization's local log format, one of the LogLocalFormat constants.
        * </pre>
        *
        * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -7429,7 +7657,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log format.
+       * The Organization's local log format, one of the LogLocalFormat constants.
        * </pre>
        *
        * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -7443,7 +7671,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's local log format.
+       * The Organization's local log format, one of the LogLocalFormat constants.
        * </pre>
        *
        * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
@@ -7657,7 +7885,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object scimProvider_ = "";
       /**
        * <pre>
-       * The Organization's SCIM provider.
+       * The Organization's SCIM provider, one of the SCIMProvider constants.
        * </pre>
        *
        * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -7677,7 +7905,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's SCIM provider.
+       * The Organization's SCIM provider, one of the SCIMProvider constants.
        * </pre>
        *
        * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -7698,7 +7926,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's SCIM provider.
+       * The Organization's SCIM provider, one of the SCIMProvider constants.
        * </pre>
        *
        * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -7717,7 +7945,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's SCIM provider.
+       * The Organization's SCIM provider, one of the SCIMProvider constants.
        * </pre>
        *
        * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -7731,7 +7959,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's SCIM provider.
+       * The Organization's SCIM provider, one of the SCIMProvider constants.
        * </pre>
        *
        * <code>string scim_provider = 17 [(.v1.field_options) = { ... }</code>
@@ -8335,7 +8563,7 @@ public final class OrganizationHistoryPlumbing {
       private java.lang.Object kind_ = "";
       /**
        * <pre>
-       * The Organization's type.
+       * The Organization's type, one of the OrgKind constants.
        * </pre>
        *
        * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -8355,7 +8583,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's type.
+       * The Organization's type, one of the OrgKind constants.
        * </pre>
        *
        * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -8376,7 +8604,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's type.
+       * The Organization's type, one of the OrgKind constants.
        * </pre>
        *
        * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -8395,7 +8623,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's type.
+       * The Organization's type, one of the OrgKind constants.
        * </pre>
        *
        * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -8409,7 +8637,7 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's type.
+       * The Organization's type, one of the OrgKind constants.
        * </pre>
        *
        * <code>string kind = 24 [(.v1.field_options) = { ... }</code>
@@ -8523,6 +8751,241 @@ public final class OrganizationHistoryPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object loopbackSubnet_ = "";
+      /**
+       * <pre>
+       * The Organization's loopback subnet.
+       * </pre>
+       *
+       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+       * @return The loopbackSubnet.
+       */
+      public java.lang.String getLoopbackSubnet() {
+        java.lang.Object ref = loopbackSubnet_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loopbackSubnet_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's loopback subnet.
+       * </pre>
+       *
+       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for loopbackSubnet.
+       */
+      public com.google.protobuf.ByteString
+          getLoopbackSubnetBytes() {
+        java.lang.Object ref = loopbackSubnet_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loopbackSubnet_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's loopback subnet.
+       * </pre>
+       *
+       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The loopbackSubnet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoopbackSubnet(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loopbackSubnet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's loopback subnet.
+       * </pre>
+       *
+       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoopbackSubnet() {
+        
+        loopbackSubnet_ = getDefaultInstance().getLoopbackSubnet();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's loopback subnet.
+       * </pre>
+       *
+       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for loopbackSubnet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoopbackSubnetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loopbackSubnet_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean deviceTrustEnabled_ ;
+      /**
+       * <pre>
+       * Indicates if the Organization has device trust enabled.
+       * </pre>
+       *
+       * <code>bool device_trust_enabled = 27 [(.v1.field_options) = { ... }</code>
+       * @return The deviceTrustEnabled.
+       */
+      @java.lang.Override
+      public boolean getDeviceTrustEnabled() {
+        return deviceTrustEnabled_;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization has device trust enabled.
+       * </pre>
+       *
+       * <code>bool device_trust_enabled = 27 [(.v1.field_options) = { ... }</code>
+       * @param value The deviceTrustEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceTrustEnabled(boolean value) {
+        
+        deviceTrustEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization has device trust enabled.
+       * </pre>
+       *
+       * <code>bool device_trust_enabled = 27 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeviceTrustEnabled() {
+        
+        deviceTrustEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deviceTrustProvider_ = "";
+      /**
+       * <pre>
+       * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+       * </pre>
+       *
+       * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+       * @return The deviceTrustProvider.
+       */
+      public java.lang.String getDeviceTrustProvider() {
+        java.lang.Object ref = deviceTrustProvider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deviceTrustProvider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+       * </pre>
+       *
+       * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for deviceTrustProvider.
+       */
+      public com.google.protobuf.ByteString
+          getDeviceTrustProviderBytes() {
+        java.lang.Object ref = deviceTrustProvider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deviceTrustProvider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+       * </pre>
+       *
+       * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+       * @param value The deviceTrustProvider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceTrustProvider(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        deviceTrustProvider_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+       * </pre>
+       *
+       * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeviceTrustProvider() {
+        
+        deviceTrustProvider_ = getDefaultInstance().getDeviceTrustProvider();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's device trust provider, one of the DeviceTrustProvider constants.
+       * </pre>
+       *
+       * <code>string device_trust_provider = 28 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for deviceTrustProvider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceTrustProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        deviceTrustProvider_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8605,9 +9068,9 @@ public final class OrganizationHistoryPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032organization_history.proto\022\002v1\032\036google" +
-      "/protobuf/duration.proto\032\037google/protobu" +
-      "f/timestamp.proto\032\roptions.proto\032\nspec.p" +
+      "\n\032organization_history.proto\022\002v1\032\037google" +
+      "/protobuf/timestamp.proto\032\036google/protob" +
+      "uf/duration.proto\032\roptions.proto\032\nspec.p" +
       "roto\"\215\001\n\036OrganizationHistoryListRequest\022" +
       "%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032" +
       "\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372" +
@@ -8624,7 +9087,7 @@ public final class OrganizationHistoryPlumbing {
       "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
       "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
       "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r\"\364\n\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "r\"\375\013\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
       " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
@@ -8657,25 +9120,28 @@ public final class OrganizationHistoryPlumbing {
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021saml_metadata_url\030\027 \001(\t" +
       "B)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017SAMLMetadata" +
       "URL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\002id\030\031 \001(" +
-      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:2\372\370\263\007\005\250\363\263\007\001" +
-      "\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider" +
-      "2\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1.O" +
-      "rganizationHistoryListRequest\032#.v1.Organ" +
-      "izationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312\371\263" +
-      "\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371\263" +
-      "\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provid" +
-      "erB\227\001\n\031com.strongdm.api.plumbingB\033Organi" +
-      "zationHistoryPlumbingZ5github.com/strong" +
-      "dm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007" +
-      "\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006pr" +
-      "oto3"
+      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\0222\n\017loopback" +
+      "_subnet\030\032 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private" +
+      "\022(\n\024device_trust_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022)\n\025device_trust_provider\030\034 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!t" +
+      "erraform-provider2\357\001\n\023OrganizationHistor" +
+      "y\022\200\001\n\004List\022\".v1.OrganizationHistoryListR" +
+      "equest\032#.v1.OrganizationHistoryListRespo" +
+      "nse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/organiza" +
+      "tion-history\032U\312\371\263\007\036\302\371\263\007\031OrganizationHist" +
+      "oryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023" +
+      "!terraform-providerB\227\001\n\031com.strongdm.api" +
+      ".plumbingB\033OrganizationHistoryPlumbingZ5" +
+      "github.com/strongdm/strongdm-sdk-go/v3/i" +
+      "nternal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terra" +
+      "form-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
         });
@@ -8702,7 +9168,7 @@ public final class OrganizationHistoryPlumbing {
     internal_static_v1_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Organization_descriptor,
-        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", });
+        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackSubnet", "DeviceTrustEnabled", "DeviceTrustProvider", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
@@ -8712,8 +9178,8 @@ public final class OrganizationHistoryPlumbing {
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();
   }

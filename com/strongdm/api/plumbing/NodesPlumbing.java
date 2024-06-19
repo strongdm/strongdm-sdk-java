@@ -12031,9 +12031,7 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * The current state of the relay. One of: "new", "verifying_restart",
-     * "awaiting_restart", "restarting", "started", "stopped", "dead",
-     * "unknown".
+     * The current state of the relay, one of the NodeState constants.
      * </pre>
      *
      * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -12042,9 +12040,7 @@ public final class NodesPlumbing {
     java.lang.String getState();
     /**
      * <pre>
-     * The current state of the relay. One of: "new", "verifying_restart",
-     * "awaiting_restart", "restarting", "started", "stopped", "dead",
-     * "unknown".
+     * The current state of the relay, one of the NodeState constants.
      * </pre>
      *
      * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -12579,9 +12575,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object state_;
     /**
      * <pre>
-     * The current state of the relay. One of: "new", "verifying_restart",
-     * "awaiting_restart", "restarting", "started", "stopped", "dead",
-     * "unknown".
+     * The current state of the relay, one of the NodeState constants.
      * </pre>
      *
      * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -12602,9 +12596,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * The current state of the relay. One of: "new", "verifying_restart",
-     * "awaiting_restart", "restarting", "started", "stopped", "dead",
-     * "unknown".
+     * The current state of the relay, one of the NodeState constants.
      * </pre>
      *
      * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -13781,9 +13773,7 @@ public final class NodesPlumbing {
       private java.lang.Object state_ = "";
       /**
        * <pre>
-       * The current state of the relay. One of: "new", "verifying_restart",
-       * "awaiting_restart", "restarting", "started", "stopped", "dead",
-       * "unknown".
+       * The current state of the relay, one of the NodeState constants.
        * </pre>
        *
        * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -13803,9 +13793,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The current state of the relay. One of: "new", "verifying_restart",
-       * "awaiting_restart", "restarting", "started", "stopped", "dead",
-       * "unknown".
+       * The current state of the relay, one of the NodeState constants.
        * </pre>
        *
        * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -13826,9 +13814,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The current state of the relay. One of: "new", "verifying_restart",
-       * "awaiting_restart", "restarting", "started", "stopped", "dead",
-       * "unknown".
+       * The current state of the relay, one of the NodeState constants.
        * </pre>
        *
        * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -13847,9 +13833,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The current state of the relay. One of: "new", "verifying_restart",
-       * "awaiting_restart", "restarting", "started", "stopped", "dead",
-       * "unknown".
+       * The current state of the relay, one of the NodeState constants.
        * </pre>
        *
        * <code>string state = 3 [(.v1.field_options) = { ... }</code>
@@ -13863,9 +13847,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The current state of the relay. One of: "new", "verifying_restart",
-       * "awaiting_restart", "restarting", "started", "stopped", "dead",
-       * "unknown".
+       * The current state of the relay, one of the NodeState constants.
        * </pre>
        *
        * <code>string state = 3 [(.v1.field_options) = { ... }</code>

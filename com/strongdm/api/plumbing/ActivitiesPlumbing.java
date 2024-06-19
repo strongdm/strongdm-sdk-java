@@ -4468,7 +4468,7 @@ public final class ActivitiesPlumbing {
 
     /**
      * <pre>
-     * The kind of activity which has taken place.
+     * The kind of activity which has taken place, one of the ActivityVerb constants.
      * </pre>
      *
      * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -4477,7 +4477,7 @@ public final class ActivitiesPlumbing {
     java.lang.String getVerb();
     /**
      * <pre>
-     * The kind of activity which has taken place.
+     * The kind of activity which has taken place, one of the ActivityVerb constants.
      * </pre>
      *
      * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -4871,7 +4871,7 @@ public final class ActivitiesPlumbing {
     private volatile java.lang.Object verb_;
     /**
      * <pre>
-     * The kind of activity which has taken place.
+     * The kind of activity which has taken place, one of the ActivityVerb constants.
      * </pre>
      *
      * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -4892,7 +4892,7 @@ public final class ActivitiesPlumbing {
     }
     /**
      * <pre>
-     * The kind of activity which has taken place.
+     * The kind of activity which has taken place, one of the ActivityVerb constants.
      * </pre>
      *
      * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -5796,7 +5796,7 @@ public final class ActivitiesPlumbing {
       private java.lang.Object verb_ = "";
       /**
        * <pre>
-       * The kind of activity which has taken place.
+       * The kind of activity which has taken place, one of the ActivityVerb constants.
        * </pre>
        *
        * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -5816,7 +5816,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The kind of activity which has taken place.
+       * The kind of activity which has taken place, one of the ActivityVerb constants.
        * </pre>
        *
        * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -5837,7 +5837,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The kind of activity which has taken place.
+       * The kind of activity which has taken place, one of the ActivityVerb constants.
        * </pre>
        *
        * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -5856,7 +5856,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The kind of activity which has taken place.
+       * The kind of activity which has taken place, one of the ActivityVerb constants.
        * </pre>
        *
        * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -5870,7 +5870,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The kind of activity which has taken place.
+       * The kind of activity which has taken place, one of the ActivityVerb constants.
        * </pre>
        *
        * <code>string verb = 2 [(.v1.field_options) = { ... }</code>
@@ -6936,7 +6936,7 @@ public final class ActivitiesPlumbing {
 
     /**
      * <pre>
-     * The type of entity affected, one of the Activity Entities constants.
+     * The type of entity affected, one of the ActivityEntityType constants.
      * </pre>
      *
      * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -6945,7 +6945,7 @@ public final class ActivitiesPlumbing {
     java.lang.String getType();
     /**
      * <pre>
-     * The type of entity affected, one of the Activity Entities constants.
+     * The type of entity affected, one of the ActivityEntityType constants.
      * </pre>
      *
      * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -7178,7 +7178,7 @@ public final class ActivitiesPlumbing {
     private volatile java.lang.Object type_;
     /**
      * <pre>
-     * The type of entity affected, one of the Activity Entities constants.
+     * The type of entity affected, one of the ActivityEntityType constants.
      * </pre>
      *
      * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -7199,7 +7199,7 @@ public final class ActivitiesPlumbing {
     }
     /**
      * <pre>
-     * The type of entity affected, one of the Activity Entities constants.
+     * The type of entity affected, one of the ActivityEntityType constants.
      * </pre>
      *
      * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -7827,7 +7827,7 @@ public final class ActivitiesPlumbing {
       private java.lang.Object type_ = "";
       /**
        * <pre>
-       * The type of entity affected, one of the Activity Entities constants.
+       * The type of entity affected, one of the ActivityEntityType constants.
        * </pre>
        *
        * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -7847,7 +7847,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The type of entity affected, one of the Activity Entities constants.
+       * The type of entity affected, one of the ActivityEntityType constants.
        * </pre>
        *
        * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -7868,7 +7868,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The type of entity affected, one of the Activity Entities constants.
+       * The type of entity affected, one of the ActivityEntityType constants.
        * </pre>
        *
        * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -7887,7 +7887,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The type of entity affected, one of the Activity Entities constants.
+       * The type of entity affected, one of the ActivityEntityType constants.
        * </pre>
        *
        * <code>string type = 2 [(.v1.field_options) = { ... }</code>
@@ -7901,7 +7901,7 @@ public final class ActivitiesPlumbing {
       }
       /**
        * <pre>
-       * The type of entity affected, one of the Activity Entities constants.
+       * The type of entity affected, one of the ActivityEntityType constants.
        * </pre>
        *
        * <code>string type = 2 [(.v1.field_options) = { ... }</code>

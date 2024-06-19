@@ -133,11 +133,11 @@ public class QueryCapture {
   }
 
   private String type;
-  /** The CaptureType of this query capture. */
+  /** The CaptureType of this query capture, one of the CaptureType constants. */
   public String getType() {
     return this.type;
   }
-  /** The CaptureType of this query capture. */
+  /** The CaptureType of this query capture, one of the CaptureType constants. */
   public void setType(String in) {
     this.type = in;
   }

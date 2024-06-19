@@ -59,11 +59,11 @@ public class ActivityEntity {
   }
 
   private String type;
-  /** The type of entity affected, one of the Activity Entities constants. */
+  /** The type of entity affected, one of the ActivityEntityType constants. */
   public String getType() {
     return this.type;
   }
-  /** The type of entity affected, one of the Activity Entities constants. */
+  /** The type of entity affected, one of the ActivityEntityType constants. */
   public void setType(String in) {
     this.type = in;
   }

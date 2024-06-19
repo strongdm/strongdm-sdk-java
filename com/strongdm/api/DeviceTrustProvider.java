@@ -16,8 +16,8 @@
 
 package com.strongdm.api;
 
-// Providers responsible for device posture enforcement
-public final class DevicePostureProvider {
+// Providers responsible for device trust enforcement
+public final class DeviceTrustProvider {
   public static final String NONE = "";
   public static final String SENTINEL_ONE = "sentinelone";
   public static final String CROWD_STRIKE = "crowdstrike";

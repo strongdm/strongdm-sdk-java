@@ -10239,6 +10239,8 @@ public class Plumbing {
     com.strongdm.api.Organization porcelain = new com.strongdm.api.Organization();
     porcelain.setAuthProvider((plumbing.getAuthProvider()));
     porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
+    porcelain.setDeviceTrustEnabled((plumbing.getDeviceTrustEnabled()));
+    porcelain.setDeviceTrustProvider((plumbing.getDeviceTrustProvider()));
     porcelain.setIdleTimeout(Plumbing.convertDurationToPorcelain(plumbing.getIdleTimeout()));
     porcelain.setIdleTimeoutEnabled((plumbing.getIdleTimeoutEnabled()));
     porcelain.setKind((plumbing.getKind()));
@@ -10276,6 +10278,10 @@ public class Plumbing {
     }
     if (porcelain.getCreatedAt() != null) {
       builder.setCreatedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCreatedAt()));
+    }
+    builder.setDeviceTrustEnabled(porcelain.getDeviceTrustEnabled());
+    if (porcelain.getDeviceTrustProvider() != null) {
+      builder.setDeviceTrustProvider((porcelain.getDeviceTrustProvider()));
     }
     if (porcelain.getIdleTimeout() != null) {
       builder.setIdleTimeout(Plumbing.convertDurationToPlumbing(porcelain.getIdleTimeout()));

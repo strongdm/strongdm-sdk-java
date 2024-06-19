@@ -49,15 +49,13 @@ public class AccountPermission {
 
   private String permission;
   /**
-   * The value of this permission, split into vertical and action e.g. 'secretstore:List',
-   * 'role:update'
+   * The value of this permission, split into vertical and action, one of the Permission constants.
    */
   public String getPermission() {
     return this.permission;
   }
   /**
-   * The value of this permission, split into vertical and action e.g. 'secretstore:List',
-   * 'role:update'
+   * The value of this permission, split into vertical and action, one of the Permission constants.
    */
   public void setPermission(String in) {
     this.permission = in;

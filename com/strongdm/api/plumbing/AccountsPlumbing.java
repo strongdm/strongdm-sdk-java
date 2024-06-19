@@ -12710,7 +12710,7 @@ public final class AccountsPlumbing {
 
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -12719,7 +12719,7 @@ public final class AccountsPlumbing {
     java.lang.String getPermissionLevel();
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -13202,7 +13202,7 @@ public final class AccountsPlumbing {
     private volatile java.lang.Object permissionLevel_;
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -13223,7 +13223,7 @@ public final class AccountsPlumbing {
     }
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -14474,7 +14474,7 @@ public final class AccountsPlumbing {
       private java.lang.Object permissionLevel_ = "";
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -14494,7 +14494,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -14515,7 +14515,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -14534,7 +14534,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -14548,7 +14548,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PermissionLevel is a read only field for the user's permission level, one of the PermissionLevel constants.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>

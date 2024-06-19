@@ -2406,8 +2406,7 @@ public final class AccountPermissionsPlumbing {
 
     /**
      * <pre>
-     * The value of this permission, split into vertical and action e.g.
-     * 'secretstore:List', 'role:update'
+     * The value of this permission, split into vertical and action, one of the Permission constants.
      * </pre>
      *
      * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -2416,8 +2415,7 @@ public final class AccountPermissionsPlumbing {
     java.lang.String getPermission();
     /**
      * <pre>
-     * The value of this permission, split into vertical and action e.g.
-     * 'secretstore:List', 'role:update'
+     * The value of this permission, split into vertical and action, one of the Permission constants.
      * </pre>
      *
      * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -2691,8 +2689,7 @@ public final class AccountPermissionsPlumbing {
     private volatile java.lang.Object permission_;
     /**
      * <pre>
-     * The value of this permission, split into vertical and action e.g.
-     * 'secretstore:List', 'role:update'
+     * The value of this permission, split into vertical and action, one of the Permission constants.
      * </pre>
      *
      * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -2713,8 +2710,7 @@ public final class AccountPermissionsPlumbing {
     }
     /**
      * <pre>
-     * The value of this permission, split into vertical and action e.g.
-     * 'secretstore:List', 'role:update'
+     * The value of this permission, split into vertical and action, one of the Permission constants.
      * </pre>
      *
      * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -3487,8 +3483,7 @@ public final class AccountPermissionsPlumbing {
       private java.lang.Object permission_ = "";
       /**
        * <pre>
-       * The value of this permission, split into vertical and action e.g.
-       * 'secretstore:List', 'role:update'
+       * The value of this permission, split into vertical and action, one of the Permission constants.
        * </pre>
        *
        * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -3508,8 +3503,7 @@ public final class AccountPermissionsPlumbing {
       }
       /**
        * <pre>
-       * The value of this permission, split into vertical and action e.g.
-       * 'secretstore:List', 'role:update'
+       * The value of this permission, split into vertical and action, one of the Permission constants.
        * </pre>
        *
        * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -3530,8 +3524,7 @@ public final class AccountPermissionsPlumbing {
       }
       /**
        * <pre>
-       * The value of this permission, split into vertical and action e.g.
-       * 'secretstore:List', 'role:update'
+       * The value of this permission, split into vertical and action, one of the Permission constants.
        * </pre>
        *
        * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -3550,8 +3543,7 @@ public final class AccountPermissionsPlumbing {
       }
       /**
        * <pre>
-       * The value of this permission, split into vertical and action e.g.
-       * 'secretstore:List', 'role:update'
+       * The value of this permission, split into vertical and action, one of the Permission constants.
        * </pre>
        *
        * <code>string permission = 3 [(.v1.field_options) = { ... }</code>
@@ -3565,8 +3557,7 @@ public final class AccountPermissionsPlumbing {
       }
       /**
        * <pre>
-       * The value of this permission, split into vertical and action e.g.
-       * 'secretstore:List', 'role:update'
+       * The value of this permission, split into vertical and action, one of the Permission constants.
        * </pre>
        *
        * <code>string permission = 3 [(.v1.field_options) = { ... }</code>

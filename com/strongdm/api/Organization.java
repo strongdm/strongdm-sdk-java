@@ -22,11 +22,11 @@ import java.util.Date;
 
 public class Organization {
   private String authProvider;
-  /** The Organization's authentication provider. */
+  /** The Organization's authentication provider, one of the AuthProvider constants. */
   public String getAuthProvider() {
     return this.authProvider;
   }
-  /** The Organization's authentication provider. */
+  /** The Organization's authentication provider, one of the AuthProvider constants. */
   public void setAuthProvider(String in) {
     this.authProvider = in;
   }
@@ -39,6 +39,26 @@ public class Organization {
   /** The time at which the Organization was created. */
   public void setCreatedAt(Date in) {
     this.createdAt = in;
+  }
+
+  private boolean deviceTrustEnabled;
+  /** Indicates if the Organization has device trust enabled. */
+  public boolean getDeviceTrustEnabled() {
+    return this.deviceTrustEnabled;
+  }
+  /** Indicates if the Organization has device trust enabled. */
+  public void setDeviceTrustEnabled(boolean in) {
+    this.deviceTrustEnabled = in;
+  }
+
+  private String deviceTrustProvider;
+  /** The Organization's device trust provider, one of the DeviceTrustProvider constants. */
+  public String getDeviceTrustProvider() {
+    return this.deviceTrustProvider;
+  }
+  /** The Organization's device trust provider, one of the DeviceTrustProvider constants. */
+  public void setDeviceTrustProvider(String in) {
+    this.deviceTrustProvider = in;
   }
 
   private Duration idleTimeout;
@@ -62,51 +82,51 @@ public class Organization {
   }
 
   private String kind;
-  /** The Organization's type. */
+  /** The Organization's type, one of the OrgKind constants. */
   public String getKind() {
     return this.kind;
   }
-  /** The Organization's type. */
+  /** The Organization's type, one of the OrgKind constants. */
   public void setKind(String in) {
     this.kind = in;
   }
 
   private String logLocalEncoder;
-  /** The Organization's local log encryption encoder. */
+  /** The Organization's local log encryption encoder, one of the LogLocalEncoder constants. */
   public String getLogLocalEncoder() {
     return this.logLocalEncoder;
   }
-  /** The Organization's local log encryption encoder. */
+  /** The Organization's local log encryption encoder, one of the LogLocalEncoder constants. */
   public void setLogLocalEncoder(String in) {
     this.logLocalEncoder = in;
   }
 
   private String logLocalFormat;
-  /** The Organization's local log format. */
+  /** The Organization's local log format, one of the LogLocalFormat constants. */
   public String getLogLocalFormat() {
     return this.logLocalFormat;
   }
-  /** The Organization's local log format. */
+  /** The Organization's local log format, one of the LogLocalFormat constants. */
   public void setLogLocalFormat(String in) {
     this.logLocalFormat = in;
   }
 
   private String logLocalStorage;
-  /** The Organization's local log storage. */
+  /** The Organization's local log storage, one of the LogLocalStorage constants. */
   public String getLogLocalStorage() {
     return this.logLocalStorage;
   }
-  /** The Organization's local log storage. */
+  /** The Organization's local log storage, one of the LogLocalStorage constants. */
   public void setLogLocalStorage(String in) {
     this.logLocalStorage = in;
   }
 
   private String logRemoteEncoder;
-  /** The Organization's remote log encryption encoder. */
+  /** The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants. */
   public String getLogRemoteEncoder() {
     return this.logRemoteEncoder;
   }
-  /** The Organization's remote log encryption encoder. */
+  /** The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants. */
   public void setLogRemoteEncoder(String in) {
     this.logRemoteEncoder = in;
   }
@@ -142,11 +162,11 @@ public class Organization {
   }
 
   private String mfaProvider;
-  /** The Organization's multi-factor authentication provider, if enabled. */
+  /** The Organization's multi-factor authentication provider, one of the MFAProvider constants. */
   public String getMfaProvider() {
     return this.mfaProvider;
   }
-  /** The Organization's multi-factor authentication provider, if enabled. */
+  /** The Organization's multi-factor authentication provider, one of the MFAProvider constants. */
   public void setMfaProvider(String in) {
     this.mfaProvider = in;
   }
@@ -182,11 +202,11 @@ public class Organization {
   }
 
   private String scimProvider;
-  /** The Organization's SCIM provider. */
+  /** The Organization's SCIM provider, one of the SCIMProvider constants. */
   public String getScimProvider() {
     return this.scimProvider;
   }
-  /** The Organization's SCIM provider. */
+  /** The Organization's SCIM provider, one of the SCIMProvider constants. */
   public void setScimProvider(String in) {
     this.scimProvider = in;
   }

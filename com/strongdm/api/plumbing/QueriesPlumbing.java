@@ -8793,7 +8793,7 @@ java.lang.String defaultValue);
 
     /**
      * <pre>
-     * The CaptureType of this query capture.
+     * The CaptureType of this query capture, one of the CaptureType constants.
      * </pre>
      *
      * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -8802,7 +8802,7 @@ java.lang.String defaultValue);
     java.lang.String getType();
     /**
      * <pre>
-     * The CaptureType of this query capture.
+     * The CaptureType of this query capture, one of the CaptureType constants.
      * </pre>
      *
      * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -9314,7 +9314,7 @@ java.lang.String defaultValue);
     private volatile java.lang.Object type_;
     /**
      * <pre>
-     * The CaptureType of this query capture.
+     * The CaptureType of this query capture, one of the CaptureType constants.
      * </pre>
      *
      * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -9335,7 +9335,7 @@ java.lang.String defaultValue);
     }
     /**
      * <pre>
-     * The CaptureType of this query capture.
+     * The CaptureType of this query capture, one of the CaptureType constants.
      * </pre>
      *
      * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -10551,7 +10551,7 @@ java.lang.String defaultValue);
       private java.lang.Object type_ = "";
       /**
        * <pre>
-       * The CaptureType of this query capture.
+       * The CaptureType of this query capture, one of the CaptureType constants.
        * </pre>
        *
        * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -10571,7 +10571,7 @@ java.lang.String defaultValue);
       }
       /**
        * <pre>
-       * The CaptureType of this query capture.
+       * The CaptureType of this query capture, one of the CaptureType constants.
        * </pre>
        *
        * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -10592,7 +10592,7 @@ java.lang.String defaultValue);
       }
       /**
        * <pre>
-       * The CaptureType of this query capture.
+       * The CaptureType of this query capture, one of the CaptureType constants.
        * </pre>
        *
        * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -10611,7 +10611,7 @@ java.lang.String defaultValue);
       }
       /**
        * <pre>
-       * The CaptureType of this query capture.
+       * The CaptureType of this query capture, one of the CaptureType constants.
        * </pre>
        *
        * <code>string type = 5 [(.v1.field_options) = { ... }</code>
@@ -10625,7 +10625,7 @@ java.lang.String defaultValue);
       }
       /**
        * <pre>
-       * The CaptureType of this query capture.
+       * The CaptureType of this query capture, one of the CaptureType constants.
        * </pre>
        *
        * <code>string type = 5 [(.v1.field_options) = { ... }</code>
