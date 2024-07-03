@@ -8520,13 +8520,16 @@ public final class Spec {
     /**
      * <pre>
      * The total count of all entities matching the criteria of a list request.
-     * Note that this value may change between page requests.
+     * Note that this value may change between page requests. Deprecated: this
+     * is only exposed in the JSON API (does anyone use that?)
      * </pre>
      *
-     * <code>int32 total = 2;</code>
+     * <code>int32 total = 2 [deprecated = true];</code>
+     * @deprecated v1.ListResponseMetadata.total is deprecated.
+     *     See spec.proto;l=138
      * @return The total.
      */
-    int getTotal();
+    @java.lang.Deprecated int getTotal();
   }
   /**
    * <pre>
@@ -8679,14 +8682,17 @@ public final class Spec {
     /**
      * <pre>
      * The total count of all entities matching the criteria of a list request.
-     * Note that this value may change between page requests.
+     * Note that this value may change between page requests. Deprecated: this
+     * is only exposed in the JSON API (does anyone use that?)
      * </pre>
      *
-     * <code>int32 total = 2;</code>
+     * <code>int32 total = 2 [deprecated = true];</code>
+     * @deprecated v1.ListResponseMetadata.total is deprecated.
+     *     See spec.proto;l=138
      * @return The total.
      */
     @java.lang.Override
-    public int getTotal() {
+    @java.lang.Deprecated public int getTotal() {
       return total_;
     }
 
@@ -9124,27 +9130,33 @@ public final class Spec {
       /**
        * <pre>
        * The total count of all entities matching the criteria of a list request.
-       * Note that this value may change between page requests.
+       * Note that this value may change between page requests. Deprecated: this
+       * is only exposed in the JSON API (does anyone use that?)
        * </pre>
        *
-       * <code>int32 total = 2;</code>
+       * <code>int32 total = 2 [deprecated = true];</code>
+       * @deprecated v1.ListResponseMetadata.total is deprecated.
+       *     See spec.proto;l=138
        * @return The total.
        */
       @java.lang.Override
-      public int getTotal() {
+      @java.lang.Deprecated public int getTotal() {
         return total_;
       }
       /**
        * <pre>
        * The total count of all entities matching the criteria of a list request.
-       * Note that this value may change between page requests.
+       * Note that this value may change between page requests. Deprecated: this
+       * is only exposed in the JSON API (does anyone use that?)
        * </pre>
        *
-       * <code>int32 total = 2;</code>
+       * <code>int32 total = 2 [deprecated = true];</code>
+       * @deprecated v1.ListResponseMetadata.total is deprecated.
+       *     See spec.proto;l=138
        * @param value The total to set.
        * @return This builder for chaining.
        */
-      public Builder setTotal(int value) {
+      @java.lang.Deprecated public Builder setTotal(int value) {
         
         total_ = value;
         onChanged();
@@ -9153,13 +9165,16 @@ public final class Spec {
       /**
        * <pre>
        * The total count of all entities matching the criteria of a list request.
-       * Note that this value may change between page requests.
+       * Note that this value may change between page requests. Deprecated: this
+       * is only exposed in the JSON API (does anyone use that?)
        * </pre>
        *
-       * <code>int32 total = 2;</code>
+       * <code>int32 total = 2 [deprecated = true];</code>
+       * @deprecated v1.ListResponseMetadata.total is deprecated.
+       *     See spec.proto;l=138
        * @return This builder for chaining.
        */
-      public Builder clearTotal() {
+      @java.lang.Deprecated public Builder clearTotal() {
         
         total_ = 0;
         onChanged();
@@ -11281,17 +11296,17 @@ public final class Spec {
       "\263\007\001\"\205\001\n\023ListRequestMetadata\022\016\n\006cursor\030\001 " +
       "\001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\022\020\n\010orde" +
       "r_by\030\004 \001(\t\022/\n\013snapshot_at\030\005 \001(\0132\032.google" +
-      ".protobuf.Timestamp\":\n\024ListResponseMetad" +
-      "ata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 \001(\005\"" +
-      "\257\001\n\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003B\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "8\n\010reset_at\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestMetad" +
-      "ata\"\031\n\027GenericResponseMetadataBR\n\031com.st" +
-      "rongdm.api.plumbingZ5github.com/strongdm" +
-      "/strongdm-sdk-go/v3/internal/v1;v1b\006prot" +
-      "o3"
+      ".protobuf.Timestamp\">\n\024ListResponseMetad" +
+      "ata\022\023\n\013next_cursor\030\001 \001(\t\022\021\n\005total\030\002 \001(\005B" +
+      "\002\030\001\"\257\001\n\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363" +
+      "\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.google.protobuf." +
+      "TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestM" +
+      "etadata\"\031\n\027GenericResponseMetadataBR\n\031co" +
+      "m.strongdm.api.plumbingZ5github.com/stro" +
+      "ngdm/strongdm-sdk-go/v3/internal/v1;v1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

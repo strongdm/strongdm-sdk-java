@@ -4002,23 +4002,23 @@ public final class OrganizationHistoryPlumbing {
 
     /**
      * <pre>
-     * The Organization's loopback subnet.
+     * The Organization's loopback range.
      * </pre>
      *
-     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-     * @return The loopbackSubnet.
+     * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+     * @return The loopbackRange.
      */
-    java.lang.String getLoopbackSubnet();
+    java.lang.String getLoopbackRange();
     /**
      * <pre>
-     * The Organization's loopback subnet.
+     * The Organization's loopback range.
      * </pre>
      *
-     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for loopbackSubnet.
+     * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for loopbackRange.
      */
     com.google.protobuf.ByteString
-        getLoopbackSubnetBytes();
+        getLoopbackRangeBytes();
 
     /**
      * <pre>
@@ -4079,7 +4079,7 @@ public final class OrganizationHistoryPlumbing {
       samlMetadataUrl_ = "";
       kind_ = "";
       id_ = "";
-      loopbackSubnet_ = "";
+      loopbackRange_ = "";
       deviceTrustProvider_ = "";
     }
 
@@ -4297,7 +4297,7 @@ public final class OrganizationHistoryPlumbing {
             case 210: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              loopbackSubnet_ = s;
+              loopbackRange_ = s;
               break;
             }
             case 216: {
@@ -5331,46 +5331,46 @@ public final class OrganizationHistoryPlumbing {
       }
     }
 
-    public static final int LOOPBACK_SUBNET_FIELD_NUMBER = 26;
-    private volatile java.lang.Object loopbackSubnet_;
+    public static final int LOOPBACK_RANGE_FIELD_NUMBER = 26;
+    private volatile java.lang.Object loopbackRange_;
     /**
      * <pre>
-     * The Organization's loopback subnet.
+     * The Organization's loopback range.
      * </pre>
      *
-     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-     * @return The loopbackSubnet.
+     * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+     * @return The loopbackRange.
      */
     @java.lang.Override
-    public java.lang.String getLoopbackSubnet() {
-      java.lang.Object ref = loopbackSubnet_;
+    public java.lang.String getLoopbackRange() {
+      java.lang.Object ref = loopbackRange_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        loopbackSubnet_ = s;
+        loopbackRange_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * The Organization's loopback subnet.
+     * The Organization's loopback range.
      * </pre>
      *
-     * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for loopbackSubnet.
+     * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for loopbackRange.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getLoopbackSubnetBytes() {
-      java.lang.Object ref = loopbackSubnet_;
+        getLoopbackRangeBytes() {
+      java.lang.Object ref = loopbackRange_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        loopbackSubnet_ = b;
+        loopbackRange_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5527,8 +5527,8 @@ public final class OrganizationHistoryPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 25, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loopbackSubnet_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, loopbackSubnet_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loopbackRange_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, loopbackRange_);
       }
       if (deviceTrustEnabled_ != false) {
         output.writeBool(27, deviceTrustEnabled_);
@@ -5629,8 +5629,8 @@ public final class OrganizationHistoryPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loopbackSubnet_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, loopbackSubnet_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loopbackRange_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, loopbackRange_);
       }
       if (deviceTrustEnabled_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -5719,8 +5719,8 @@ public final class OrganizationHistoryPlumbing {
           .equals(other.getKind())) return false;
       if (!getId()
           .equals(other.getId())) return false;
-      if (!getLoopbackSubnet()
-          .equals(other.getLoopbackSubnet())) return false;
+      if (!getLoopbackRange()
+          .equals(other.getLoopbackRange())) return false;
       if (getDeviceTrustEnabled()
           != other.getDeviceTrustEnabled()) return false;
       if (!getDeviceTrustProvider()
@@ -5800,8 +5800,8 @@ public final class OrganizationHistoryPlumbing {
       hash = (53 * hash) + getKind().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + LOOPBACK_SUBNET_FIELD_NUMBER;
-      hash = (53 * hash) + getLoopbackSubnet().hashCode();
+      hash = (37 * hash) + LOOPBACK_RANGE_FIELD_NUMBER;
+      hash = (53 * hash) + getLoopbackRange().hashCode();
       hash = (37 * hash) + DEVICE_TRUST_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeviceTrustEnabled());
@@ -6010,7 +6010,7 @@ public final class OrganizationHistoryPlumbing {
 
         id_ = "";
 
-        loopbackSubnet_ = "";
+        loopbackRange_ = "";
 
         deviceTrustEnabled_ = false;
 
@@ -6087,7 +6087,7 @@ public final class OrganizationHistoryPlumbing {
         result.samlMetadataUrl_ = samlMetadataUrl_;
         result.kind_ = kind_;
         result.id_ = id_;
-        result.loopbackSubnet_ = loopbackSubnet_;
+        result.loopbackRange_ = loopbackRange_;
         result.deviceTrustEnabled_ = deviceTrustEnabled_;
         result.deviceTrustProvider_ = deviceTrustProvider_;
         onBuilt();
@@ -6229,8 +6229,8 @@ public final class OrganizationHistoryPlumbing {
           id_ = other.id_;
           onChanged();
         }
-        if (!other.getLoopbackSubnet().isEmpty()) {
-          loopbackSubnet_ = other.loopbackSubnet_;
+        if (!other.getLoopbackRange().isEmpty()) {
+          loopbackRange_ = other.loopbackRange_;
           onChanged();
         }
         if (other.getDeviceTrustEnabled() != false) {
@@ -8752,22 +8752,22 @@ public final class OrganizationHistoryPlumbing {
         return this;
       }
 
-      private java.lang.Object loopbackSubnet_ = "";
+      private java.lang.Object loopbackRange_ = "";
       /**
        * <pre>
-       * The Organization's loopback subnet.
+       * The Organization's loopback range.
        * </pre>
        *
-       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-       * @return The loopbackSubnet.
+       * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+       * @return The loopbackRange.
        */
-      public java.lang.String getLoopbackSubnet() {
-        java.lang.Object ref = loopbackSubnet_;
+      public java.lang.String getLoopbackRange() {
+        java.lang.Object ref = loopbackRange_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          loopbackSubnet_ = s;
+          loopbackRange_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8775,20 +8775,20 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's loopback subnet.
+       * The Organization's loopback range.
        * </pre>
        *
-       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for loopbackSubnet.
+       * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for loopbackRange.
        */
       public com.google.protobuf.ByteString
-          getLoopbackSubnetBytes() {
-        java.lang.Object ref = loopbackSubnet_;
+          getLoopbackRangeBytes() {
+        java.lang.Object ref = loopbackRange_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          loopbackSubnet_ = b;
+          loopbackRange_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -8796,54 +8796,54 @@ public final class OrganizationHistoryPlumbing {
       }
       /**
        * <pre>
-       * The Organization's loopback subnet.
+       * The Organization's loopback range.
        * </pre>
        *
-       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-       * @param value The loopbackSubnet to set.
+       * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The loopbackRange to set.
        * @return This builder for chaining.
        */
-      public Builder setLoopbackSubnet(
+      public Builder setLoopbackRange(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        loopbackSubnet_ = value;
+        loopbackRange_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The Organization's loopback subnet.
+       * The Organization's loopback range.
        * </pre>
        *
-       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
+       * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearLoopbackSubnet() {
+      public Builder clearLoopbackRange() {
         
-        loopbackSubnet_ = getDefaultInstance().getLoopbackSubnet();
+        loopbackRange_ = getDefaultInstance().getLoopbackRange();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The Organization's loopback subnet.
+       * The Organization's loopback range.
        * </pre>
        *
-       * <code>string loopback_subnet = 26 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for loopbackSubnet to set.
+       * <code>string loopback_range = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for loopbackRange to set.
        * @return This builder for chaining.
        */
-      public Builder setLoopbackSubnetBytes(
+      public Builder setLoopbackRangeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        loopbackSubnet_ = value;
+        loopbackRange_ = value;
         onChanged();
         return this;
       }
@@ -9087,7 +9087,7 @@ public final class OrganizationHistoryPlumbing {
       "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
       "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
       "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r\"\375\013\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "r\"\374\013\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
       " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
@@ -9120,22 +9120,22 @@ public final class OrganizationHistoryPlumbing {
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021saml_metadata_url\030\027 \001(\t" +
       "B)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017SAMLMetadata" +
       "URL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\002id\030\031 \001(" +
-      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\0222\n\017loopback" +
-      "_subnet\030\032 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private" +
-      "\022(\n\024device_trust_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022)\n\025device_trust_provider\030\034 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!t" +
-      "erraform-provider2\357\001\n\023OrganizationHistor" +
-      "y\022\200\001\n\004List\022\".v1.OrganizationHistoryListR" +
-      "equest\032#.v1.OrganizationHistoryListRespo" +
-      "nse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/organiza" +
-      "tion-history\032U\312\371\263\007\036\302\371\263\007\031OrganizationHist" +
-      "oryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023" +
-      "!terraform-providerB\227\001\n\031com.strongdm.api" +
-      ".plumbingB\033OrganizationHistoryPlumbingZ5" +
-      "github.com/strongdm/strongdm-sdk-go/v3/i" +
-      "nternal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terra" +
-      "form-providerb\006proto3"
+      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\0221\n\016loopback" +
+      "_range\030\032 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022" +
+      "(\n\024device_trust_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022)\n\025device_trust_provider\030\034 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!te" +
+      "rraform-provider2\357\001\n\023OrganizationHistory" +
+      "\022\200\001\n\004List\022\".v1.OrganizationHistoryListRe" +
+      "quest\032#.v1.OrganizationHistoryListRespon" +
+      "se\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/organizat" +
+      "ion-history\032U\312\371\263\007\036\302\371\263\007\031OrganizationHisto" +
+      "ryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!" +
+      "terraform-providerB\227\001\n\031com.strongdm.api." +
+      "plumbingB\033OrganizationHistoryPlumbingZ5g" +
+      "ithub.com/strongdm/strongdm-sdk-go/v3/in" +
+      "ternal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraf" +
+      "orm-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9168,7 +9168,7 @@ public final class OrganizationHistoryPlumbing {
     internal_static_v1_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Organization_descriptor,
-        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackSubnet", "DeviceTrustEnabled", "DeviceTrustProvider", });
+        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackRange", "DeviceTrustEnabled", "DeviceTrustProvider", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

@@ -17,15 +17,25 @@
 
 package com.strongdm.api;
 
-public class MongoShardedCluster implements Resource {
-  private String authDatabase;
-  /** The authentication database to use. */
-  public String getAuthDatabase() {
-    return this.authDatabase;
+/**
+ * SSHPassword is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
+public class SSHPassword implements Resource {
+  private boolean allowDeprecatedKeyExchanges;
+  /**
+   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
+   * server.
+   */
+  public boolean getAllowDeprecatedKeyExchanges() {
+    return this.allowDeprecatedKeyExchanges;
   }
-  /** The authentication database to use. */
-  public void setAuthDatabase(String in) {
-    this.authDatabase = in;
+  /**
+   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
+   * server.
+   */
+  public void setAllowDeprecatedKeyExchanges(boolean in) {
+    this.allowDeprecatedKeyExchanges = in;
   }
 
   private String bindInterface;
@@ -104,6 +114,26 @@ public class MongoShardedCluster implements Resource {
     this.password = in;
   }
 
+  private int port;
+  /** The port to dial to initiate a connection from the egress node to this resource. */
+  public int getPort() {
+    return this.port;
+  }
+  /** The port to dial to initiate a connection from the egress node to this resource. */
+  public void setPort(int in) {
+    this.port = in;
+  }
+
+  private boolean portForwarding;
+  /** Whether port forwarding is allowed through this server. */
+  public boolean getPortForwarding() {
+    return this.portForwarding;
+  }
+  /** Whether port forwarding is allowed through this server. */
+  public void setPortForwarding(boolean in) {
+    this.portForwarding = in;
+  }
+
   private int portOverride;
   /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
@@ -157,16 +187,6 @@ public class MongoShardedCluster implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private boolean tlsRequired;
-  /** If set, TLS must be used to connect to this resource. */
-  public boolean getTlsRequired() {
-    return this.tlsRequired;
-  }
-  /** If set, TLS must be used to connect to this resource. */
-  public void setTlsRequired(boolean in) {
-    this.tlsRequired = in;
   }
 
   private String username;
