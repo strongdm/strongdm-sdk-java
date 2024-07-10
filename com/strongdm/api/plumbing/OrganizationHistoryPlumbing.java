@@ -9087,7 +9087,7 @@ public final class OrganizationHistoryPlumbing {
       "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
       "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
       "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r\"\374\013\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "r\"\355\013\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
       " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
@@ -9120,22 +9120,22 @@ public final class OrganizationHistoryPlumbing {
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021saml_metadata_url\030\027 \001(\t" +
       "B)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017SAMLMetadata" +
       "URL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\002id\030\031 \001(" +
-      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\0221\n\016loopback" +
-      "_range\030\032 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022" +
-      "(\n\024device_trust_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022)\n\025device_trust_provider\030\034 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!te" +
-      "rraform-provider2\357\001\n\023OrganizationHistory" +
-      "\022\200\001\n\004List\022\".v1.OrganizationHistoryListRe" +
-      "quest\032#.v1.OrganizationHistoryListRespon" +
-      "se\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/organizat" +
-      "ion-history\032U\312\371\263\007\036\302\371\263\007\031OrganizationHisto" +
-      "ryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!" +
-      "terraform-providerB\227\001\n\031com.strongdm.api." +
-      "plumbingB\033OrganizationHistoryPlumbingZ5g" +
-      "ithub.com/strongdm/strongdm-sdk-go/v3/in" +
-      "ternal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraf" +
-      "orm-providerb\006proto3"
+      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022\"\n\016loopback" +
+      "_range\030\032 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\024device_trust" +
+      "_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022)\n\025device_tru" +
+      "st_provider\030\034 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
+      "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
+      "r2\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1." +
+      "OrganizationHistoryListRequest\032#.v1.Orga" +
+      "nizationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003g" +
+      "et\202\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312\371" +
+      "\263\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371" +
+      "\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
+      "derB\227\001\n\031com.strongdm.api.plumbingB\033Organ" +
+      "izationHistoryPlumbingZ5github.com/stron" +
+      "gdm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264" +
+      "\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

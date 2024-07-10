@@ -10250,6 +10250,7 @@ public class Plumbing {
     porcelain.setLogRemoteEncoder((plumbing.getLogRemoteEncoder()));
     porcelain.setLogSocketPath((plumbing.getLogSocketPath()));
     porcelain.setLogTcpAddress((plumbing.getLogTcpAddress()));
+    porcelain.setLoopbackRange((plumbing.getLoopbackRange()));
     porcelain.setMfaEnabled((plumbing.getMfaEnabled()));
     porcelain.setMfaProvider((plumbing.getMfaProvider()));
     porcelain.setName((plumbing.getName()));
@@ -10307,6 +10308,9 @@ public class Plumbing {
     }
     if (porcelain.getLogTcpAddress() != null) {
       builder.setLogTcpAddress((porcelain.getLogTcpAddress()));
+    }
+    if (porcelain.getLoopbackRange() != null) {
+      builder.setLoopbackRange((porcelain.getLoopbackRange()));
     }
     builder.setMfaEnabled(porcelain.getMfaEnabled());
     if (porcelain.getMfaProvider() != null) {

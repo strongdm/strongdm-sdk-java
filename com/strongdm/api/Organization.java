@@ -151,6 +151,16 @@ public class Organization {
     this.logTcpAddress = in;
   }
 
+  private String loopbackRange;
+  /** The Organization's loopback range. */
+  public String getLoopbackRange() {
+    return this.loopbackRange;
+  }
+  /** The Organization's loopback range. */
+  public void setLoopbackRange(String in) {
+    this.loopbackRange = in;
+  }
+
   private boolean mfaEnabled;
   /** Indicates if the Organization has multi-factor authentication enabled. */
   public boolean getMfaEnabled() {
