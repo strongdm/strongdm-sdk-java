@@ -9223,7 +9223,6 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setReplicaSet((plumbing.getReplicaSet()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -9262,9 +9261,6 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getReplicaSet() != null) {
-      builder.setReplicaSet((porcelain.getReplicaSet()));
-    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
