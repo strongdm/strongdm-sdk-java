@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * MongoHost is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class MongoHost implements Resource {
   private String authDatabase;
   /** The authentication database to use. */

@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * MongoReplicaSet is currently unstable, and its API may change, or it may be removed, without a
- * major version bump.
- */
 public class MongoReplicaSet implements Resource {
   private String authDatabase;
   /** The authentication database to use. */
