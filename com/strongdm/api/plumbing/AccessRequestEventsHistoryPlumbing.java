@@ -3811,18 +3811,18 @@ public final class AccessRequestEventsHistoryPlumbing {
       "entB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.go" +
       "ogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263" +
       "\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-p" +
-      "rovider2\213\002\n\032AccessRequestEventsHistory\022\225" +
+      "rovider2\225\002\n\032AccessRequestEventsHistory\022\225" +
       "\001\n\004List\022(.v1.AccessRequestEventHistoryLi" +
       "stRequest\032).v1.AccessRequestEventHistory" +
       "ListResponse\"8\202\371\263\007\010\242\363\263\007\003get\202\371\263\007&\252\363\263\007!/v1" +
-      "/access-request-events-history\032U\312\371\263\007\036\302\371\263" +
+      "/access-request-events-history\032_\312\371\263\007\036\302\371\263" +
       "\007\031AccessRequestEventHistory\312\371\263\007\005\330\371\263\007\001\312\371\263" +
-      "\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\236\001" +
-      "\n\031com.strongdm.api.plumbingB\"AccessReque" +
-      "stEventsHistoryPlumbingZ5github.com/stro" +
-      "ngdm/strongdm-sdk-go/v3/internal/v1;v1\302\222" +
-      "\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006" +
-      "proto3"
+      "\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provider\312\371\263" +
+      "\007\005\350\371\263\007\001B\236\001\n\031com.strongdm.api.plumbingB\"A" +
+      "ccessRequestEventsHistoryPlumbingZ5githu" +
+      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
+      "al/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-" +
+      "providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3810,17 +3810,17 @@ public final class AccessRequestsHistoryPlumbing {
       "equestB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032" +
       ".google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2" +
       "\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terrafor" +
-      "m-provider2\361\001\n\025AccessRequestsHistory\022\205\001\n" +
+      "m-provider2\373\001\n\025AccessRequestsHistory\022\205\001\n" +
       "\004List\022#.v1.AccessRequestHistoryListReque" +
       "st\032$.v1.AccessRequestHistoryListResponse" +
       "\"2\202\371\263\007\010\242\363\263\007\003get\202\371\263\007 \252\363\263\007\033/v1/access-requ" +
-      "ests-history\032P\312\371\263\007\031\302\371\263\007\024AccessRequestHis" +
+      "ests-history\032Z\312\371\263\007\031\302\371\263\007\024AccessRequestHis" +
       "tory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terr" +
-      "aform-providerB\231\001\n\031com.strongdm.api.plum" +
-      "bingB\035AccessRequestsHistoryPlumbingZ5git" +
-      "hub.com/strongdm/strongdm-sdk-go/v3/inte" +
-      "rnal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terrafor" +
-      "m-providerb\006proto3"
+      "aform-provider\312\371\263\007\005\350\371\263\007\001B\231\001\n\031com.strongd" +
+      "m.api.plumbingB\035AccessRequestsHistoryPlu" +
+      "mbingZ5github.com/strongdm/strongdm-sdk-" +
+      "go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007" +
+      "\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

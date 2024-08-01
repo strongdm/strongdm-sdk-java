@@ -3806,18 +3806,18 @@ public final class WorkflowApproversHistoryPlumbing {
       "over\030\003 \001(\0132\024.v1.WorkflowApproverB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
-      "\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\202\002\n" +
+      "\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\214\002\n" +
       "\030WorkflowApproversHistory\022\220\001\n\004List\022\'.v1." +
       "WorkflowApproversHistoryListRequest\032(.v1" +
       ".WorkflowApproversHistoryListResponse\"5\202" +
       "\371\263\007\010\242\363\263\007\003get\202\371\263\007#\252\363\263\007\036/v1/workflow-appro" +
-      "vers-history\032S\312\371\263\007\034\302\371\263\007\027WorkflowApprover" +
+      "vers-history\032]\312\371\263\007\034\302\371\263\007\027WorkflowApprover" +
       "History\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!t" +
-      "erraform-providerB\234\001\n\031com.strongdm.api.p" +
-      "lumbingB WorkflowApproversHistoryPlumbin" +
-      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
-      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!te" +
-      "rraform-providerb\006proto3"
+      "erraform-provider\312\371\263\007\005\350\371\263\007\001B\234\001\n\031com.stro" +
+      "ngdm.api.plumbingB WorkflowApproversHist" +
+      "oryPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264" +
+      "\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

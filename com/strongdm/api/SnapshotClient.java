@@ -102,6 +102,13 @@ public class SnapshotClient {
     return this.parent.nodes;
   }
   /**
+   * Policies are the collection of one or more statements that enforce fine-grained access control
+   * for the users of an organization.
+   */
+  public SnapshotPolicies policies() {
+    return this.parent.policies;
+  }
+  /**
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to
    * connect to that resource.
    */

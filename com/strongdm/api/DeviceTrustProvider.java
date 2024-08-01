@@ -22,4 +22,5 @@ public final class DeviceTrustProvider {
   public static final String SENTINEL_ONE = "sentinelone";
   public static final String CROWD_STRIKE = "crowdstrike";
   public static final String MICROSOFT_DEFENDER = "microsoftdefender";
+  public static final String DUO = "duo";
 }

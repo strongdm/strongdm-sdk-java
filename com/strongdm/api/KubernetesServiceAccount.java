@@ -18,6 +18,22 @@
 package com.strongdm.api;
 
 public class KubernetesServiceAccount implements Resource {
+  private boolean allowResourceRoleBypass;
+  /**
+   * If true, allows users to fallback to the existing authentication mode (Leased Credential or
+   * Identity Set) when a resource role is not provided.
+   */
+  public boolean getAllowResourceRoleBypass() {
+    return this.allowResourceRoleBypass;
+  }
+  /**
+   * If true, allows users to fallback to the existing authentication mode (Leased Credential or
+   * Identity Set) when a resource role is not provided.
+   */
+  public void setAllowResourceRoleBypass(boolean in) {
+    this.allowResourceRoleBypass = in;
+  }
+
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for

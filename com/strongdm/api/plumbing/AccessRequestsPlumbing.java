@@ -9280,16 +9280,17 @@ public final class AccessRequestsPlumbing {
       "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*2\317\001\n\016Acc" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*2\331\001\n\016Acc" +
       "essRequests\022o\n\004List\022\034.v1.AccessRequestLi" +
       "stRequest\032\035.v1.AccessRequestListResponse" +
       "\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/access-requ" +
-      "ests\032L\312\371\263\007\022\302\371\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003a" +
+      "ests\032V\312\371\263\007\022\302\371\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003a" +
       "q-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provid" +
-      "erB\222\001\n\031com.strongdm.api.plumbingB\026Access" +
-      "RequestsPlumbingZ5github.com/strongdm/st" +
-      "rongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007" +
-      "\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006proto3"
+      "er\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.strongdm.api.plumbi" +
+      "ngB\026AccessRequestsPlumbingZ5github.com/s" +
+      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
+      "1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provide" +
+      "rb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

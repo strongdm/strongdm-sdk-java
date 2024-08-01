@@ -3812,19 +3812,19 @@ public final class ApprovalWorkflowApproversHistoryPlumbing {
       "lWorkflowApproverB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted" +
       "_at\030\004 \001(\0132\032.google.protobuf.TimestampB\n\362" +
       "\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263" +
-      "\007\023!terraform-provider2\251\002\n ApprovalWorkfl" +
+      "\007\023!terraform-provider2\263\002\n ApprovalWorkfl" +
       "owApproversHistory\022\247\001\n\004List\022..v1.Approva" +
       "lWorkflowApproverHistoryListRequest\032/.v1" +
       ".ApprovalWorkflowApproverHistoryListResp" +
       "onse\">\202\371\263\007\010\242\363\263\007\003get\202\371\263\007,\252\363\263\007\'/v1/approva" +
-      "l-workflow-approvers-history\032[\312\371\263\007$\302\371\263\007\037" +
+      "l-workflow-approvers-history\032e\312\371\263\007$\302\371\263\007\037" +
       "ApprovalWorkflowApproverHistory\312\371\263\007\005\330\371\263\007" +
       "\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provide" +
-      "rB\244\001\n\031com.strongdm.api.plumbingB(Approva" +
-      "lWorkflowApproversHistoryPlumbingZ5githu" +
-      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
-      "al/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-" +
-      "providerb\006proto3"
+      "r\312\371\263\007\005\350\371\263\007\001B\244\001\n\031com.strongdm.api.plumbin" +
+      "gB(ApprovalWorkflowApproversHistoryPlumb" +
+      "ingZ5github.com/strongdm/strongdm-sdk-go" +
+      "/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!" +
+      "terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

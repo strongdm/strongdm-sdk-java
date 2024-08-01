@@ -62,6 +62,8 @@ import com.strongdm.api.plumbing.PeeringGroupNodesPlumbing.*;
 import com.strongdm.api.plumbing.PeeringGroupPeersPlumbing.*;
 import com.strongdm.api.plumbing.PeeringGroupResourcesPlumbing.*;
 import com.strongdm.api.plumbing.PeeringGroupsPlumbing.*;
+import com.strongdm.api.plumbing.PoliciesHistoryPlumbing.*;
+import com.strongdm.api.plumbing.PoliciesPlumbing.*;
 import com.strongdm.api.plumbing.QueriesPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentitiesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentitiesPlumbing.*;
@@ -238,6 +240,7 @@ public class Plumbing {
 
   public static com.strongdm.api.AKS convertAKSToPorcelain(AKS plumbing) {
     com.strongdm.api.AKS porcelain = new com.strongdm.api.AKS();
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClientCertificate((plumbing.getClientCertificate()));
@@ -265,6 +268,7 @@ public class Plumbing {
       return null;
     }
     AKS.Builder builder = AKS.newBuilder();
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -426,6 +430,7 @@ public class Plumbing {
   public static com.strongdm.api.AKSServiceAccount convertAKSServiceAccountToPorcelain(
       AKSServiceAccount plumbing) {
     com.strongdm.api.AKSServiceAccount porcelain = new com.strongdm.api.AKSServiceAccount();
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
     porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
@@ -452,6 +457,7 @@ public class Plumbing {
       return null;
     }
     AKSServiceAccount.Builder builder = AKSServiceAccount.newBuilder();
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -2712,6 +2718,7 @@ public class Plumbing {
   public static com.strongdm.api.AmazonEKS convertAmazonEKSToPorcelain(AmazonEKS plumbing) {
     com.strongdm.api.AmazonEKS porcelain = new com.strongdm.api.AmazonEKS();
     porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClusterName((plumbing.getClusterName()));
@@ -2744,6 +2751,7 @@ public class Plumbing {
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey((porcelain.getAccessKey()));
     }
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -2829,6 +2837,7 @@ public class Plumbing {
       convertAmazonEKSInstanceProfileToPorcelain(AmazonEKSInstanceProfile plumbing) {
     com.strongdm.api.AmazonEKSInstanceProfile porcelain =
         new com.strongdm.api.AmazonEKSInstanceProfile();
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClusterName((plumbing.getClusterName()));
@@ -2858,6 +2867,7 @@ public class Plumbing {
       return null;
     }
     AmazonEKSInstanceProfile.Builder builder = AmazonEKSInstanceProfile.newBuilder();
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -6927,6 +6937,7 @@ public class Plumbing {
 
   public static com.strongdm.api.GoogleGKE convertGoogleGKEToPorcelain(GoogleGKE plumbing) {
     com.strongdm.api.GoogleGKE porcelain = new com.strongdm.api.GoogleGKE();
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
@@ -6952,6 +6963,7 @@ public class Plumbing {
       return null;
     }
     GoogleGKE.Builder builder = GoogleGKE.newBuilder();
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -8212,6 +8224,7 @@ public class Plumbing {
 
   public static com.strongdm.api.Kubernetes convertKubernetesToPorcelain(Kubernetes plumbing) {
     com.strongdm.api.Kubernetes porcelain = new com.strongdm.api.Kubernetes();
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
     porcelain.setClientCertificate((plumbing.getClientCertificate()));
@@ -8239,6 +8252,7 @@ public class Plumbing {
       return null;
     }
     Kubernetes.Builder builder = Kubernetes.newBuilder();
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -8401,6 +8415,7 @@ public class Plumbing {
       convertKubernetesServiceAccountToPorcelain(KubernetesServiceAccount plumbing) {
     com.strongdm.api.KubernetesServiceAccount porcelain =
         new com.strongdm.api.KubernetesServiceAccount();
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
     porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
@@ -8427,6 +8442,7 @@ public class Plumbing {
       return null;
     }
     KubernetesServiceAccount.Builder builder = KubernetesServiceAccount.newBuilder();
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
@@ -11197,6 +11213,317 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertPeeringGroupResourceGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.Policy convertPolicyToPorcelain(Policy plumbing) {
+    com.strongdm.api.Policy porcelain = new com.strongdm.api.Policy();
+    porcelain.setDescription((plumbing.getDescription()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPolicy((plumbing.getPolicy()));
+    return porcelain;
+  }
+
+  public static Policy convertPolicyToPlumbing(com.strongdm.api.Policy porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Policy.Builder builder = Policy.newBuilder();
+    if (porcelain.getDescription() != null) {
+      builder.setDescription((porcelain.getDescription()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy((porcelain.getPolicy()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Policy> convertRepeatedPolicyToPorcelain(
+      Collection<Policy> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Policy>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPolicyToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Policy> convertRepeatedPolicyToPlumbing(
+      Collection<com.strongdm.api.Policy> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Policy>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPolicyToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PolicyCreateResponse convertPolicyCreateResponseToPorcelain(
+      PolicyCreateResponse plumbing) {
+    com.strongdm.api.PolicyCreateResponse porcelain = new com.strongdm.api.PolicyCreateResponse();
+    porcelain.setPolicy(Plumbing.convertPolicyToPorcelain(plumbing.getPolicy()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PolicyCreateResponse convertPolicyCreateResponseToPlumbing(
+      com.strongdm.api.PolicyCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PolicyCreateResponse.Builder builder = PolicyCreateResponse.newBuilder();
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy(Plumbing.convertPolicyToPlumbing(porcelain.getPolicy()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PolicyCreateResponse>
+      convertRepeatedPolicyCreateResponseToPorcelain(Collection<PolicyCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PolicyCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPolicyCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PolicyCreateResponse> convertRepeatedPolicyCreateResponseToPlumbing(
+      Collection<com.strongdm.api.PolicyCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PolicyCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPolicyCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PolicyDeleteResponse convertPolicyDeleteResponseToPorcelain(
+      PolicyDeleteResponse plumbing) {
+    com.strongdm.api.PolicyDeleteResponse porcelain = new com.strongdm.api.PolicyDeleteResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PolicyDeleteResponse convertPolicyDeleteResponseToPlumbing(
+      com.strongdm.api.PolicyDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PolicyDeleteResponse.Builder builder = PolicyDeleteResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PolicyDeleteResponse>
+      convertRepeatedPolicyDeleteResponseToPorcelain(Collection<PolicyDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PolicyDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPolicyDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PolicyDeleteResponse> convertRepeatedPolicyDeleteResponseToPlumbing(
+      Collection<com.strongdm.api.PolicyDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PolicyDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPolicyDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PolicyGetResponse convertPolicyGetResponseToPorcelain(
+      PolicyGetResponse plumbing) {
+    com.strongdm.api.PolicyGetResponse porcelain = new com.strongdm.api.PolicyGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPolicy(Plumbing.convertPolicyToPorcelain(plumbing.getPolicy()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PolicyGetResponse convertPolicyGetResponseToPlumbing(
+      com.strongdm.api.PolicyGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PolicyGetResponse.Builder builder = PolicyGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy(Plumbing.convertPolicyToPlumbing(porcelain.getPolicy()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PolicyGetResponse>
+      convertRepeatedPolicyGetResponseToPorcelain(Collection<PolicyGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PolicyGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPolicyGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PolicyGetResponse> convertRepeatedPolicyGetResponseToPlumbing(
+      Collection<com.strongdm.api.PolicyGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PolicyGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPolicyGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PolicyHistory convertPolicyHistoryToPorcelain(
+      PolicyHistory plumbing) {
+    com.strongdm.api.PolicyHistory porcelain = new com.strongdm.api.PolicyHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setPolicy(Plumbing.convertPolicyToPorcelain(plumbing.getPolicy()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static PolicyHistory convertPolicyHistoryToPlumbing(
+      com.strongdm.api.PolicyHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PolicyHistory.Builder builder = PolicyHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy(Plumbing.convertPolicyToPlumbing(porcelain.getPolicy()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PolicyHistory> convertRepeatedPolicyHistoryToPorcelain(
+      Collection<PolicyHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PolicyHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPolicyHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PolicyHistory> convertRepeatedPolicyHistoryToPlumbing(
+      Collection<com.strongdm.api.PolicyHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PolicyHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPolicyHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PolicyListResponse convertPolicyListResponseToPorcelain(
+      PolicyListResponse plumbing) {
+    com.strongdm.api.PolicyListResponse porcelain = new com.strongdm.api.PolicyListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PolicyListResponse convertPolicyListResponseToPlumbing(
+      com.strongdm.api.PolicyListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PolicyListResponse.Builder builder = PolicyListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PolicyListResponse>
+      convertRepeatedPolicyListResponseToPorcelain(Collection<PolicyListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PolicyListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPolicyListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PolicyListResponse> convertRepeatedPolicyListResponseToPlumbing(
+      Collection<com.strongdm.api.PolicyListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PolicyListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPolicyListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.PolicyUpdateResponse convertPolicyUpdateResponseToPorcelain(
+      PolicyUpdateResponse plumbing) {
+    com.strongdm.api.PolicyUpdateResponse porcelain = new com.strongdm.api.PolicyUpdateResponse();
+    porcelain.setPolicy(Plumbing.convertPolicyToPorcelain(plumbing.getPolicy()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static PolicyUpdateResponse convertPolicyUpdateResponseToPlumbing(
+      com.strongdm.api.PolicyUpdateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PolicyUpdateResponse.Builder builder = PolicyUpdateResponse.newBuilder();
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy(Plumbing.convertPolicyToPlumbing(porcelain.getPolicy()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PolicyUpdateResponse>
+      convertRepeatedPolicyUpdateResponseToPorcelain(Collection<PolicyUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PolicyUpdateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPolicyUpdateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PolicyUpdateResponse> convertRepeatedPolicyUpdateResponseToPlumbing(
+      Collection<com.strongdm.api.PolicyUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PolicyUpdateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPolicyUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

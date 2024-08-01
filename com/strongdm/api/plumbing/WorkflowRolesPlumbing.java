@@ -9529,7 +9529,7 @@ public final class WorkflowRolesPlumbing {
       "id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\302\363\263" +
       "\007Y\242\363\263\007&tf_examples/workflow_role_resourc" +
       "e.txt\252\363\263\007)tf_examples/workflow_role_data" +
-      "_source.txt\322\363\263\007\001*2\203\004\n\rWorkflowRoles\022u\n\006C" +
+      "_source.txt\322\363\263\007\001*2\215\004\n\rWorkflowRoles\022u\n\006C" +
       "reate\022\036.v1.WorkflowRolesCreateRequest\032\037." +
       "v1.WorkflowRolesCreateResponse\"*\202\371\263\007\t\242\363\263" +
       "\007\004post\202\371\263\007\027\252\363\263\007\022/v1/workflow-roles\022m\n\003Ge" +
@@ -9541,11 +9541,11 @@ public final class WorkflowRolesPlumbing {
       "\263\007\027\252\363\263\007\022/v1/workflow-roles\022n\n\004List\022\034.v1." +
       "WorkflowRolesListRequest\032\035.v1.WorkflowRo" +
       "lesListResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022" +
-      "/v1/workflow-roles\032#\312\371\263\007\021\302\371\263\007\014WorkflowRo" +
-      "le\312\371\263\007\010\322\371\263\007\003wr-Bi\n\031com.strongdm.api.plum" +
-      "bingB\025WorkflowRolesPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
-      "v1b\006proto3"
+      "/v1/workflow-roles\032-\312\371\263\007\021\302\371\263\007\014WorkflowRo" +
+      "le\312\371\263\007\010\322\371\263\007\003wr-\312\371\263\007\005\350\371\263\007\001Bi\n\031com.strongd" +
+      "m.api.plumbingB\025WorkflowRolesPlumbingZ5g" +
+      "ithub.com/strongdm/strongdm-sdk-go/v3/in" +
+      "ternal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

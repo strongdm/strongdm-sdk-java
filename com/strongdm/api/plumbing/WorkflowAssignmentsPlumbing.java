@@ -3189,17 +3189,17 @@ public final class WorkflowAssignmentsPlumbing {
       "n_gateway:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"l\n\022WorkflowA" +
       "ssignment\022$\n\013workflow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263" +
       "\007\001\300\363\263\007\001\022$\n\013resource_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\300\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\353\001\n\023WorkflowAssignment" +
+      "\300\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\365\001\n\023WorkflowAssignment" +
       "s\022\200\001\n\004List\022\".v1.WorkflowAssignmentsListR" +
       "equest\032#.v1.WorkflowAssignmentsListRespo" +
       "nse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/workflow" +
-      "-assignments\032Q\312\371\263\007\027\302\371\263\007\022WorkflowAssignme" +
+      "-assignments\032[\312\371\263\007\027\302\371\263\007\022WorkflowAssignme" +
       "nt\312\371\263\007\010\322\371\263\007\003wa-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!ter" +
-      "raform-providerB\227\001\n\031com.strongdm.api.plu" +
-      "mbingB\033WorkflowAssignmentsPlumbingZ5gith" +
-      "ub.com/strongdm/strongdm-sdk-go/v3/inter" +
-      "nal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform" +
-      "-providerb\006proto3"
+      "raform-provider\312\371\263\007\005\350\371\263\007\001B\227\001\n\031com.strong" +
+      "dm.api.plumbingB\033WorkflowAssignmentsPlum" +
+      "bingZ5github.com/strongdm/strongdm-sdk-g" +
+      "o/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023" +
+      "!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -10093,7 +10093,7 @@ public final class ApprovalWorkflowApproversPlumbing {
       "\263\007s\242\363\263\0073tf_examples/approval_workflow_ap" +
       "prover_resource.txt\252\363\263\0076tf_examples/appr" +
       "oval_workflow_approver_data_source.txt\322\363" +
-      "\263\007\001*2\256\005\n\031ApprovalWorkflowApprovers\022\230\001\n\006C" +
+      "\263\007\001*2\270\005\n\031ApprovalWorkflowApprovers\022\230\001\n\006C" +
       "reate\022).v1.ApprovalWorkflowApproverCreat" +
       "eRequest\032*.v1.ApprovalWorkflowApproverCr" +
       "eateResponse\"7\202\371\263\007\t\242\363\263\007\004post\202\371\263\007$\252\363\263\007\037/v" +
@@ -10109,11 +10109,11 @@ public final class ApprovalWorkflowApproversPlumbing {
       "rkflowApproverListRequest\032(.v1.ApprovalW" +
       "orkflowApproverListResponse\"6\202\371\263\007\010\242\363\263\007\003g" +
       "et\202\371\263\007$\252\363\263\007\037/v1/approval-workflow-approv" +
-      "ers\0320\312\371\263\007\035\302\371\263\007\030ApprovalWorkflowApprover\312" +
-      "\371\263\007\t\322\371\263\007\004afa-Bu\n\031com.strongdm.api.plumbi" +
-      "ngB!ApprovalWorkflowApproversPlumbingZ5g" +
-      "ithub.com/strongdm/strongdm-sdk-go/v3/in" +
-      "ternal/v1;v1b\006proto3"
+      "ers\032:\312\371\263\007\035\302\371\263\007\030ApprovalWorkflowApprover\312" +
+      "\371\263\007\t\322\371\263\007\004afa-\312\371\263\007\005\350\371\263\007\001Bu\n\031com.strongdm." +
+      "api.plumbingB!ApprovalWorkflowApproversP" +
+      "lumbingZ5github.com/strongdm/strongdm-sd" +
+      "k-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

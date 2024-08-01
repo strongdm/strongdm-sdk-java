@@ -76,6 +76,7 @@ public final class Permission {
   public static final String ORG_AUDIT_WORKFLOWS = "audit:workflows";
   public static final String ORG_AUDIT_APPROVAL_FLOWS = "audit:approvalflows";
   public static final String ORG_AUDIT_ACCESS_REQUESTS = "audit:accessrequests";
+  public static final String ORG_AUDIT_POLICIES = "audit:policies";
   public static final String WORKFLOW_LIST = "workflow:list";
   public static final String WORKFLOW_EDIT = "workflow:edit";
   public static final String ACCESS_REQUEST_EDIT = "accessrequest:edit";

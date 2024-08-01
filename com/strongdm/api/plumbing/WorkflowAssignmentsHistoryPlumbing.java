@@ -3807,18 +3807,18 @@ public final class WorkflowAssignmentsHistoryPlumbing {
       "signmentB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\013" +
       "2\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001" +
       ":2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraf" +
-      "orm-provider2\214\002\n\032WorkflowAssignmentsHist" +
+      "orm-provider2\226\002\n\032WorkflowAssignmentsHist" +
       "ory\022\226\001\n\004List\022).v1.WorkflowAssignmentsHis" +
       "toryListRequest\032*.v1.WorkflowAssignments" +
       "HistoryListResponse\"7\202\371\263\007\010\242\363\263\007\003get\202\371\263\007%\252" +
-      "\363\263\007 /v1/workflow-assignments-history\032U\312\371" +
+      "\363\263\007 /v1/workflow-assignments-history\032_\312\371" +
       "\263\007\036\302\371\263\007\031WorkflowAssignmentHistory\312\371\263\007\005\330\371" +
       "\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
-      "derB\236\001\n\031com.strongdm.api.plumbingB\"Workf" +
-      "lowAssignmentsHistoryPlumbingZ5github.co" +
-      "m/strongdm/strongdm-sdk-go/v3/internal/v" +
-      "1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-prov" +
-      "iderb\006proto3"
+      "der\312\371\263\007\005\350\371\263\007\001B\236\001\n\031com.strongdm.api.plumb" +
+      "ingB\"WorkflowAssignmentsHistoryPlumbingZ" +
+      "5github.com/strongdm/strongdm-sdk-go/v3/" +
+      "internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terr" +
+      "aform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

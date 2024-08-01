@@ -313,6 +313,23 @@ public class Client {
     return this.peeringGroups;
   }
 
+  protected final Policies policies;
+
+  /**
+   * Policies are the collection of one or more statements that enforce fine-grained access control
+   * for the users of an organization.
+   */
+  public Policies policies() {
+    return this.policies;
+  }
+
+  protected final PoliciesHistory policiesHistory;
+
+  /** PoliciesHistory records all changes to the state of a Policy. */
+  public PoliciesHistory policiesHistory() {
+    return this.policiesHistory;
+  }
+
   protected final Queries queries;
 
   /**
@@ -565,6 +582,8 @@ public class Client {
     this.peeringGroupPeers = new PeeringGroupPeers(this.channel, this);
     this.peeringGroupResources = new PeeringGroupResources(this.channel, this);
     this.peeringGroups = new PeeringGroups(this.channel, this);
+    this.policies = new Policies(this.channel, this);
+    this.policiesHistory = new PoliciesHistory(this.channel, this);
     this.queries = new Queries(this.channel, this);
     this.remoteIdentities = new RemoteIdentities(this.channel, this);
     this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);
@@ -642,6 +661,8 @@ public class Client {
       this.peeringGroupPeers = new PeeringGroupPeers(this.channel, this);
       this.peeringGroupResources = new PeeringGroupResources(this.channel, this);
       this.peeringGroups = new PeeringGroups(this.channel, this);
+      this.policies = new Policies(this.channel, this);
+      this.policiesHistory = new PoliciesHistory(this.channel, this);
       this.queries = new Queries(this.channel, this);
       this.remoteIdentities = new RemoteIdentities(this.channel, this);
       this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);

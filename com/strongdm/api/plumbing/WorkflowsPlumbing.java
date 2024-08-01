@@ -12679,7 +12679,7 @@ public final class WorkflowsPlumbing {
       "\020approval_flow_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263" +
       "\007_\250\363\263\007\001\302\363\263\007O\242\363\263\007!tf_examples/workflow_re" +
       "source.txt\252\363\263\007$tf_examples/workflow_data" +
-      "_source.txt\322\363\263\007\001*2\250\004\n\tWorkflows\022f\n\006Creat" +
+      "_source.txt\322\363\263\007\001*2\262\004\n\tWorkflows\022f\n\006Creat" +
       "e\022\031.v1.WorkflowCreateRequest\032\032.v1.Workfl" +
       "owCreateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263" +
       "\007\r/v1/workflows\022`\n\003Get\022\026.v1.WorkflowGetR" +
@@ -12692,11 +12692,11 @@ public final class WorkflowsPlumbing {
       "onse\"$\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflo" +
       "ws\022_\n\004List\022\027.v1.WorkflowListRequest\032\030.v1" +
       ".WorkflowListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
-      "\022\252\363\263\007\r/v1/workflows\032\037\312\371\263\007\r\302\371\263\007\010Workflow\312" +
-      "\371\263\007\010\322\371\263\007\003aw-Be\n\031com.strongdm.api.plumbin" +
-      "gB\021WorkflowsPlumbingZ5github.com/strongd" +
-      "m/strongdm-sdk-go/v3/internal/v1;v1b\006pro" +
-      "to3"
+      "\022\252\363\263\007\r/v1/workflows\032)\312\371\263\007\r\302\371\263\007\010Workflow\312" +
+      "\371\263\007\010\322\371\263\007\003aw-\312\371\263\007\005\350\371\263\007\001Be\n\031com.strongdm.a" +
+      "pi.plumbingB\021WorkflowsPlumbingZ5github.c" +
+      "om/strongdm/strongdm-sdk-go/v3/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

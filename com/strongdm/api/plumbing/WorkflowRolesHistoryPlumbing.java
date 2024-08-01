@@ -3806,17 +3806,17 @@ public final class WorkflowRolesHistoryPlumbing {
       "B\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.googl" +
       "e.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250" +
       "\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-prov" +
-      "ider2\356\001\n\024WorkflowRolesHistory\022\204\001\n\004List\022#" +
+      "ider2\370\001\n\024WorkflowRolesHistory\022\204\001\n\004List\022#" +
       ".v1.WorkflowRolesHistoryListRequest\032$.v1" +
       ".WorkflowRolesHistoryListResponse\"1\202\371\263\007\010" +
       "\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/workflow-roles-his" +
-      "tory\032O\312\371\263\007\030\302\371\263\007\023WorkflowRoleHistory\312\371\263\007\005" +
+      "tory\032Y\312\371\263\007\030\302\371\263\007\023WorkflowRoleHistory\312\371\263\007\005" +
       "\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-pro" +
-      "viderB\230\001\n\031com.strongdm.api.plumbingB\034Wor" +
-      "kflowRolesHistoryPlumbingZ5github.com/st" +
-      "rongdm/strongdm-sdk-go/v3/internal/v1;v1" +
-      "\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provider" +
-      "b\006proto3"
+      "vider\312\371\263\007\005\350\371\263\007\001B\230\001\n\031com.strongdm.api.plu" +
+      "mbingB\034WorkflowRolesHistoryPlumbingZ5git" +
+      "hub.com/strongdm/strongdm-sdk-go/v3/inte" +
+      "rnal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terrafor" +
+      "m-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

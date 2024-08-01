@@ -9530,7 +9530,7 @@ public final class ApprovalWorkflowStepsPlumbing {
       "\263\007\001\300\363\263\007\001:\200\001\372\370\263\007{\250\363\263\007\001\302\363\263\007k\242\363\263\007/tf_exampl" +
       "es/approval_workflow_step_resource.txt\252\363" +
       "\263\0072tf_examples/approval_workflow_step_da" +
-      "ta_source.txt\322\363\263\007\001*2\366\004\n\025ApprovalWorkflow" +
+      "ta_source.txt\322\363\263\007\001*2\200\005\n\025ApprovalWorkflow" +
       "Steps\022\214\001\n\006Create\022%.v1.ApprovalWorkflowSt" +
       "epCreateRequest\032&.v1.ApprovalWorkflowSte" +
       "pCreateResponse\"3\202\371\263\007\t\242\363\263\007\004post\202\371\263\007 \252\363\263\007" +
@@ -9545,11 +9545,11 @@ public final class ApprovalWorkflowStepsPlumbing {
       "#.v1.ApprovalWorkflowStepListRequest\032$.v" +
       "1.ApprovalWorkflowStepListResponse\"2\202\371\263\007" +
       "\010\242\363\263\007\003get\202\371\263\007 \252\363\263\007\033/v1/approval-workflow" +
-      "-steps\032,\312\371\263\007\031\302\371\263\007\024ApprovalWorkflowStep\312\371" +
-      "\263\007\t\322\371\263\007\004afs-Bq\n\031com.strongdm.api.plumbin" +
-      "gB\035ApprovalWorkflowStepsPlumbingZ5github" +
-      ".com/strongdm/strongdm-sdk-go/v3/interna" +
-      "l/v1;v1b\006proto3"
+      "-steps\0326\312\371\263\007\031\302\371\263\007\024ApprovalWorkflowStep\312\371" +
+      "\263\007\t\322\371\263\007\004afs-\312\371\263\007\005\350\371\263\007\001Bq\n\031com.strongdm.a" +
+      "pi.plumbingB\035ApprovalWorkflowStepsPlumbi" +
+      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
+      "v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

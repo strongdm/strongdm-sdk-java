@@ -12098,7 +12098,7 @@ public final class ApprovalWorkflowsPlumbing {
       "\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\302\363\263\007a\242\363\263\007*tf_examples" +
       "/approval_workflow_resource.txt\252\363\263\007-tf_e" +
       "xamples/approval_workflow_data_source.tx" +
-      "t\322\363\263\007\001*2\266\005\n\021ApprovalWorkflows\022\177\n\006Create\022" +
+      "t\322\363\263\007\001*2\300\005\n\021ApprovalWorkflows\022\177\n\006Create\022" +
       "!.v1.ApprovalWorkflowCreateRequest\032\".v1." +
       "ApprovalWorkflowCreateResponse\".\202\371\263\007\t\242\363\263" +
       "\007\004post\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\022y" +
@@ -12114,11 +12114,11 @@ public final class ApprovalWorkflowsPlumbing {
       "v1/approval-workflows\022x\n\004List\022\037.v1.Appro" +
       "valWorkflowListRequest\032 .v1.ApprovalWork" +
       "flowListResponse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007" +
-      "\026/v1/approval-workflows\032\'\312\371\263\007\025\302\371\263\007\020Appro" +
-      "valWorkflow\312\371\263\007\010\322\371\263\007\003af-Bm\n\031com.strongdm" +
-      ".api.plumbingB\031ApprovalWorkflowsPlumbing" +
-      "Z5github.com/strongdm/strongdm-sdk-go/v3" +
-      "/internal/v1;v1b\006proto3"
+      "\026/v1/approval-workflows\0321\312\371\263\007\025\302\371\263\007\020Appro" +
+      "valWorkflow\312\371\263\007\010\322\371\263\007\003af-\312\371\263\007\005\350\371\263\007\001Bm\n\031co" +
+      "m.strongdm.api.plumbingB\031ApprovalWorkflo" +
+      "wsPlumbingZ5github.com/strongdm/strongdm" +
+      "-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

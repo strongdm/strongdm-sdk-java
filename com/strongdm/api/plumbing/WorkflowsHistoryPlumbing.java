@@ -3805,16 +3805,16 @@ public final class WorkflowsHistoryPlumbing {
       "lowB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.go" +
       "ogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263" +
       "\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-p" +
-      "rovider2\326\001\n\020WorkflowsHistory\022u\n\004List\022\036.v" +
+      "rovider2\340\001\n\020WorkflowsHistory\022u\n\004List\022\036.v" +
       "1.WorkflowHistoryListRequest\032\037.v1.Workfl" +
       "owHistoryListResponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
-      "\032\252\363\263\007\025/v1/workflows-history\032K\312\371\263\007\024\302\371\263\007\017W" +
+      "\032\252\363\263\007\025/v1/workflows-history\032U\312\371\263\007\024\302\371\263\007\017W" +
       "orkflowHistory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030" +
-      "\312\371\263\007\023!terraform-providerB\224\001\n\031com.strongd" +
-      "m.api.plumbingB\030WorkflowsHistoryPlumbing" +
-      "Z5github.com/strongdm/strongdm-sdk-go/v3" +
-      "/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!ter" +
-      "raform-providerb\006proto3"
+      "\312\371\263\007\023!terraform-provider\312\371\263\007\005\350\371\263\007\001B\224\001\n\031c" +
+      "om.strongdm.api.plumbingB\030WorkflowsHisto" +
+      "ryPlumbingZ5github.com/strongdm/strongdm" +
+      "-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007" +
+      "\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
