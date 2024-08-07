@@ -110,6 +110,16 @@ public class Query {
     this.accountTags.putAll(in);
   }
 
+  private String authzJson;
+  /** Authorization metadata associated with this query. */
+  public String getAuthzJson() {
+    return this.authzJson;
+  }
+  /** Authorization metadata associated with this query. */
+  public void setAuthzJson(String in) {
+    this.authzJson = in;
+  }
+
   private QueryCapture capture;
   /**
    * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
@@ -363,6 +373,16 @@ public class Query {
   /** The IP address the Query was performed from, as detected at the ingress gateway. */
   public void setSourceIp(String in) {
     this.sourceIp = in;
+  }
+
+  private String target;
+  /** The target destination of the query, in host:port format. */
+  public String getTarget() {
+    return this.target;
+  }
+  /** The target destination of the query, in host:port format. */
+  public void setTarget(String in) {
+    this.target = in;
   }
 
   private Date timestamp;

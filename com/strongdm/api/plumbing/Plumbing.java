@@ -11704,6 +11704,7 @@ public class Plumbing {
     porcelain.setAccountId((plumbing.getAccountId()));
     porcelain.setAccountLastName((plumbing.getAccountLastName()));
     porcelain.setAccountTags(Plumbing.convertTagsToPorcelain(plumbing.getAccountTags()));
+    porcelain.setAuthzJson((plumbing.getAuthzJson()));
     porcelain.setCapture(Plumbing.convertQueryCaptureToPorcelain(plumbing.getCapture()));
     porcelain.setClientIp((plumbing.getClientIp()));
     porcelain.setCompletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCompletedAt()));
@@ -11724,6 +11725,7 @@ public class Plumbing {
     porcelain.setResourceTags(Plumbing.convertTagsToPorcelain(plumbing.getResourceTags()));
     porcelain.setResourceType((plumbing.getResourceType()));
     porcelain.setSourceIp((plumbing.getSourceIp()));
+    porcelain.setTarget((plumbing.getTarget()));
     porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
     return porcelain;
   }
@@ -11747,6 +11749,9 @@ public class Plumbing {
     }
     if (porcelain.getAccountTags() != null) {
       builder.setAccountTags(Plumbing.convertTagsToPlumbing(porcelain.getAccountTags()));
+    }
+    if (porcelain.getAuthzJson() != null) {
+      builder.setAuthzJson((porcelain.getAuthzJson()));
     }
     if (porcelain.getCapture() != null) {
       builder.setCapture(Plumbing.convertQueryCaptureToPlumbing(porcelain.getCapture()));
@@ -11801,6 +11806,9 @@ public class Plumbing {
     }
     if (porcelain.getSourceIp() != null) {
       builder.setSourceIp((porcelain.getSourceIp()));
+    }
+    if (porcelain.getTarget() != null) {
+      builder.setTarget((porcelain.getTarget()));
     }
     if (porcelain.getTimestamp() != null) {
       builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
