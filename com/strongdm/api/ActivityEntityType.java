@@ -31,6 +31,9 @@ public final class ActivityEntityType {
   public static final String IDENTITY_ALIAS = "identity_alias";
   public static final String ACCESS_REQUEST = "access_request";
   public static final String WORKFLOW = "workflow";
+  public static final String APPROVAL_FLOW = "approval_flow";
+  public static final String APPROVAL_FLOW_STEP = "approval_flow_step";
+  public static final String APPROVAL_FLOW_APPROVER = "approval_flow_approver";
   public static final String NODE = "node";
   public static final String PEERING_GROUP = "peering_group";
   public static final String PEERING_GROUP_NODE = "peering_group_node";

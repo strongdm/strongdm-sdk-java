@@ -82,6 +82,8 @@ public final class Permission {
   public static final String ACCESS_REQUEST_EDIT = "accessrequest:edit";
   public static final String ACCESS_REQUEST_LIST = "accessrequest:list";
   public static final String ACCESS_REQUEST_REQUESTER = "accessrequest:requester";
+  public static final String APPROVAL_FLOW_EDIT = "approvalflow:edit";
+  public static final String APPROVAL_FLOW_LIST = "approvalflow:list";
   public static final String GLOBAL_RDP_RENDER = "rdp:render";
   public static final String GLOBAL_QUERY_BUCKET_TRACKER = "query:bucket_tracker";
   public static final String GLOBAL_ASSETS_GET_LATEST_VERSION_COMMIT_HASH =

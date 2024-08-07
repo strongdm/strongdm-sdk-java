@@ -188,6 +188,26 @@ public final class ActivityVerb {
       "access request to resource granted";
   public static final String ACCESS_REQUEST_TO_RESOURCE_GRANTED_AUTOMATICALLY =
       "access request to resource granted automatically";
+  public static final String ACCESS_REQUEST_TO_RESOURCE_APPROVED_VIA_SERVICE_NOW =
+      "access request to resource approved via ServiceNow";
+  public static final String WORKFLOW_DELETED = "workflow deleted";
+  public static final String WORKFLOW_ADDED = "workflow added";
+  public static final String WORKFLOW_ROLES_UPDATED = "workflow roles updated";
+  public static final String WORKFLOW_NAME_UPDATED = "workflow name updated";
+  public static final String WORKFLOW_DESCRIPTION_UPDATED = "workflow description updated";
+  public static final String WORKFLOW_REQUIRES_REASON_UPDATED = "workflow requires reason updated";
+  public static final String WORKFLOW_ACCESS_RULES_UPDATED = "workflow access rules updated";
+  public static final String WORKFLOW_ACCESS_RULES_DELETED = "workflow access rules deleted";
+  public static final String WORKFLOW_ACCESS_RULES_CREATED = "workflow access rules created";
+  public static final String WORKFLOW_ENABLED = "workflow enabled";
+  public static final String WORKFLOW_DISABLED = "workflow disabled";
+  public static final String APPROVAL_FLOW_ADDED = "approval workflow added";
+  public static final String APPROVAL_FLOW_DELETED = "approval workflow deleted";
+  public static final String APPROVAL_FLOW_UPDATED = "approval workflow updated";
+  public static final String APPROVAL_FLOW_STEP_ADDED = "approval workflow step added";
+  public static final String APPROVAL_FLOW_STEP_DELETED = "approval workflow step deleted";
+  public static final String APPROVAL_FLOW_APPROVER_ADDED = "approval workflow approver added";
+  public static final String APPROVAL_FLOW_APPROVER_DELETED = "approval workflow approver deleted";
   public static final String ORG_VNM_SUBNET_UPDATED = "organization VNM subnet updated";
   public static final String ORG_VNM_RESOURCES_ALLOCATED =
       "organization resources allocated within VNM subnet";
@@ -210,4 +230,6 @@ public final class ActivityVerb {
   public static final String USER_INTEGRATION_AUTHORIZED = "user authorized integration";
   public static final String ORG_INTEGRATION_UNINSTALLED = "org integration uninstalled";
   public static final String USER_INTEGRATION_DEAUTHORIZED = "user deauthorized integration";
+  public static final String SERVICE_NOW_TOKEN_ADDED = "ServiceNow token created";
+  public static final String SERVICE_NOW_TOKEN_DELETED = "ServiceNow token deleted";
 }
