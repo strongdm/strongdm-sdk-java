@@ -9335,7 +9335,7 @@ public final class PeeringGroupsPlumbing {
       "\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gatew" +
       "ay\"Q\n\014PeeringGroup\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
       "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001:\n\372\370\263\007\005" +
-      "\250\363\263\007\0012\222\004\n\rPeeringGroups\022r\n\006Create\022\035.v1.P" +
+      "\250\363\263\007\0012\241\004\n\rPeeringGroups\022r\n\006Create\022\035.v1.P" +
       "eeringGroupCreateRequest\032\036.v1.PeeringGro" +
       "upCreateResponse\")\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\026\252\363\263" +
       "\007\021/v1/peeringGroups\022y\n\006Delete\022\035.v1.Peeri" +
@@ -9347,11 +9347,11 @@ public final class PeeringGroupsPlumbing {
       "ngGroups/{id}\022k\n\004List\022\033.v1.PeeringGroupL" +
       "istRequest\032\034.v1.PeeringGroupListResponse" +
       "\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/peeringGrou" +
-      "ps\0326\312\371\263\007\021\302\371\263\007\014PeeringGroup\312\371\263\007\007\322\371\263\007\002g-\312\371" +
-      "\263\007\005\340\371\263\007\001\312\371\263\007\005\330\371\263\007\001Bi\n\031com.strongdm.api.p" +
-      "lumbingB\025PeeringGroupsPlumbingZ5github.c" +
-      "om/strongdm/strongdm-sdk-go/v3/internal/" +
-      "v1;v1b\006proto3"
+      "ps\032E\312\371\263\007\021\302\371\263\007\014PeeringGroup\312\371\263\007\007\322\371\263\007\002g-\312\371" +
+      "\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cli\312\371\263\007\005\330\371\263\007\001Bi\n\031com" +
+      ".strongdm.api.plumbingB\025PeeringGroupsPlu" +
+      "mbingZ5github.com/strongdm/strongdm-sdk-" +
+      "go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

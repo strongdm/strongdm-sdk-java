@@ -18690,7 +18690,7 @@ public final class AccountsPlumbing {
       "B\n\362\370\263\007\005\260\363\263\007\001\022 \n\014account_type\030\007 \001(\tB\n\362\370\263\007" +
       "\005\260\363\263\007\001\022\037\n\013permissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "7\n\010duration\030\t \001(\0132\031.google.protobuf.Dura" +
-      "tionB\n\362\370\263\007\005\260\363\263\007\001:\017\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\253\004\n\010Ac" +
+      "tionB\n\362\370\263\007\005\260\363\263\007\001:\017\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n\010Ac" +
       "counts\022c\n\006Create\022\030.v1.AccountCreateReque" +
       "st\032\031.v1.AccountCreateResponse\"$\202\371\263\007\t\242\363\263\007" +
       "\004post\202\371\263\007\021\252\363\263\007\014/v1/accounts\022^\n\003Get\022\025.v1." +
@@ -18703,11 +18703,11 @@ public final class AccountsPlumbing {
       "eteResponse\"+\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/" +
       "v1/accounts/{id}\022\\\n\004List\022\026.v1.AccountLis" +
       "tRequest\032\027.v1.AccountListResponse\"#\202\371\263\007\010" +
-      "\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/accounts\032\'\312\371\263\007\014\302\371\263" +
-      "\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\005\340\371\263\007\001Bd\n\031com.s" +
-      "trongdm.api.plumbingB\020AccountsPlumbingZ5" +
-      "github.com/strongdm/strongdm-sdk-go/v3/i" +
-      "nternal/v1;v1b\006proto3"
+      "\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/accounts\0326\312\371\263\007\014\302\371\263" +
+      "\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263" +
+      "\007\004!cliBd\n\031com.strongdm.api.plumbingB\020Acc" +
+      "ountsPlumbingZ5github.com/strongdm/stron" +
+      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

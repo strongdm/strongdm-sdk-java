@@ -11054,6 +11054,21 @@ public final class NodesPlumbing {
      */
     com.strongdm.api.plumbing.NodesPlumbing.GatewayOrBuilder getGatewayOrBuilder();
 
+    /**
+     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the gatewayCluster field is set.
+     */
+    boolean hasGatewayCluster();
+    /**
+     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return The gatewayCluster.
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getGatewayCluster();
+    /**
+     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder getGatewayClusterOrBuilder();
+
     public com.strongdm.api.plumbing.NodesPlumbing.Node.NodeCase getNodeCase();
   }
   /**
@@ -11136,6 +11151,20 @@ public final class NodesPlumbing {
               nodeCase_ = 2;
               break;
             }
+            case 26: {
+              com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder subBuilder = null;
+              if (nodeCase_ == 3) {
+                subBuilder = ((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_).toBuilder();
+              }
+              node_ =
+                  input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_);
+                node_ = subBuilder.buildPartial();
+              }
+              nodeCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11177,6 +11206,7 @@ public final class NodesPlumbing {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RELAY(1),
       GATEWAY(2),
+      GATEWAY_CLUSTER(3),
       NODE_NOT_SET(0);
       private final int value;
       private NodeCase(int value) {
@@ -11196,6 +11226,7 @@ public final class NodesPlumbing {
         switch (value) {
           case 1: return RELAY;
           case 2: return GATEWAY;
+          case 3: return GATEWAY_CLUSTER;
           case 0: return NODE_NOT_SET;
           default: return null;
         }
@@ -11273,6 +11304,37 @@ public final class NodesPlumbing {
       return com.strongdm.api.plumbing.NodesPlumbing.Gateway.getDefaultInstance();
     }
 
+    public static final int GATEWAY_CLUSTER_FIELD_NUMBER = 3;
+    /**
+     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the gatewayCluster field is set.
+     */
+    @java.lang.Override
+    public boolean hasGatewayCluster() {
+      return nodeCase_ == 3;
+    }
+    /**
+     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return The gatewayCluster.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getGatewayCluster() {
+      if (nodeCase_ == 3) {
+         return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+      }
+      return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder getGatewayClusterOrBuilder() {
+      if (nodeCase_ == 3) {
+         return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+      }
+      return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11293,6 +11355,9 @@ public final class NodesPlumbing {
       if (nodeCase_ == 2) {
         output.writeMessage(2, (com.strongdm.api.plumbing.NodesPlumbing.Gateway) node_);
       }
+      if (nodeCase_ == 3) {
+        output.writeMessage(3, (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11309,6 +11374,10 @@ public final class NodesPlumbing {
       if (nodeCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (com.strongdm.api.plumbing.NodesPlumbing.Gateway) node_);
+      }
+      if (nodeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11335,6 +11404,10 @@ public final class NodesPlumbing {
           if (!getGateway()
               .equals(other.getGateway())) return false;
           break;
+        case 3:
+          if (!getGatewayCluster()
+              .equals(other.getGatewayCluster())) return false;
+          break;
         case 0:
         default:
       }
@@ -11357,6 +11430,10 @@ public final class NodesPlumbing {
         case 2:
           hash = (37 * hash) + GATEWAY_FIELD_NUMBER;
           hash = (53 * hash) + getGateway().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + GATEWAY_CLUSTER_FIELD_NUMBER;
+          hash = (53 * hash) + getGatewayCluster().hashCode();
           break;
         case 0:
         default:
@@ -11543,6 +11620,13 @@ public final class NodesPlumbing {
             result.node_ = gatewayBuilder_.build();
           }
         }
+        if (nodeCase_ == 3) {
+          if (gatewayClusterBuilder_ == null) {
+            result.node_ = node_;
+          } else {
+            result.node_ = gatewayClusterBuilder_.build();
+          }
+        }
         result.nodeCase_ = nodeCase_;
         onBuilt();
         return result;
@@ -11599,6 +11683,10 @@ public final class NodesPlumbing {
           }
           case GATEWAY: {
             mergeGateway(other.getGateway());
+            break;
+          }
+          case GATEWAY_CLUSTER: {
+            mergeGatewayCluster(other.getGatewayCluster());
             break;
           }
           case NODE_NOT_SET: {
@@ -11931,6 +12019,148 @@ public final class NodesPlumbing {
         nodeCase_ = 2;
         onChanged();;
         return gatewayBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder> gatewayClusterBuilder_;
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the gatewayCluster field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayCluster() {
+        return nodeCase_ == 3;
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * @return The gatewayCluster.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getGatewayCluster() {
+        if (gatewayClusterBuilder_ == null) {
+          if (nodeCase_ == 3) {
+            return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+          }
+          return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+        } else {
+          if (nodeCase_ == 3) {
+            return gatewayClusterBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setGatewayCluster(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster value) {
+        if (gatewayClusterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          node_ = value;
+          onChanged();
+        } else {
+          gatewayClusterBuilder_.setMessage(value);
+        }
+        nodeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setGatewayCluster(
+          com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder builderForValue) {
+        if (gatewayClusterBuilder_ == null) {
+          node_ = builderForValue.build();
+          onChanged();
+        } else {
+          gatewayClusterBuilder_.setMessage(builderForValue.build());
+        }
+        nodeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeGatewayCluster(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster value) {
+        if (gatewayClusterBuilder_ == null) {
+          if (nodeCase_ == 3 &&
+              node_ != com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance()) {
+            node_ = com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.newBuilder((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            node_ = value;
+          }
+          onChanged();
+        } else {
+          if (nodeCase_ == 3) {
+            gatewayClusterBuilder_.mergeFrom(value);
+          } else {
+            gatewayClusterBuilder_.setMessage(value);
+          }
+        }
+        nodeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearGatewayCluster() {
+        if (gatewayClusterBuilder_ == null) {
+          if (nodeCase_ == 3) {
+            nodeCase_ = 0;
+            node_ = null;
+            onChanged();
+          }
+        } else {
+          if (nodeCase_ == 3) {
+            nodeCase_ = 0;
+            node_ = null;
+          }
+          gatewayClusterBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder getGatewayClusterBuilder() {
+        return getGatewayClusterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder getGatewayClusterOrBuilder() {
+        if ((nodeCase_ == 3) && (gatewayClusterBuilder_ != null)) {
+          return gatewayClusterBuilder_.getMessageOrBuilder();
+        } else {
+          if (nodeCase_ == 3) {
+            return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+          }
+          return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder> 
+          getGatewayClusterFieldBuilder() {
+        if (gatewayClusterBuilder_ == null) {
+          if (!(nodeCase_ == 3)) {
+            node_ = com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+          }
+          gatewayClusterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder>(
+                  (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_,
+                  getParentForChildren(),
+                  isClean());
+          node_ = null;
+        }
+        nodeCase_ = 3;
+        onChanged();;
+        return gatewayClusterBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18809,6 +19039,2284 @@ public final class NodesPlumbing {
 
   }
 
+  public interface GatewayClusterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.GatewayCluster)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the Gateway.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the Gateway.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the gateway cluster. Names must
+     * include only letters, numbers, and hyphens (no spaces, underscores, or
+     * other special characters). Generated if not provided on create.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the gateway cluster. Names must
+     * include only letters, numbers, and hyphens (no spaces, underscores, or
+     * other special characters). Generated if not provided on create.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The public hostname/port tuple at which the gateway cluster will be
+     * accessible to clients.
+     * </pre>
+     *
+     * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * The public hostname/port tuple at which the gateway cluster will be
+     * accessible to clients.
+     * </pre>
+     *
+     * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> 
+        getMaintenanceWindowsList();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index);
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    int getMaintenanceWindowsCount();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+        getMaintenanceWindowsOrBuilderList();
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the discoveryConfig field is set.
+     */
+    boolean hasDiscoveryConfig();
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+     * @return The discoveryConfig.
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig();
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder();
+  }
+  /**
+   * <pre>
+   * GatewayCluster represents a cluster of StrongDM gateways and relays.
+   * </pre>
+   *
+   * Protobuf type {@code v1.GatewayCluster}
+   */
+  public static final class GatewayCluster extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.GatewayCluster)
+      GatewayClusterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GatewayCluster.newBuilder() to construct.
+    private GatewayCluster(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GatewayCluster() {
+      id_ = "";
+      name_ = "";
+      address_ = "";
+      maintenanceWindows_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GatewayCluster();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GatewayCluster(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              address_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                maintenanceWindows_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              maintenanceWindows_.add(
+                  input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder subBuilder = null;
+              if (discoveryConfig_ != null) {
+                subBuilder = discoveryConfig_.toBuilder();
+              }
+              discoveryConfig_ = input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(discoveryConfig_);
+                discoveryConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.class, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the Gateway.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the Gateway.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the gateway cluster. Names must
+     * include only letters, numbers, and hyphens (no spaces, underscores, or
+     * other special characters). Generated if not provided on create.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the gateway cluster. Names must
+     * include only letters, numbers, and hyphens (no spaces, underscores, or
+     * other special characters). Generated if not provided on create.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object address_;
+    /**
+     * <pre>
+     * The public hostname/port tuple at which the gateway cluster will be
+     * accessible to clients.
+     * </pre>
+     *
+     * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The public hostname/port tuple at which the gateway cluster will be
+     * accessible to clients.
+     * </pre>
+     *
+     * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    public static final int MAINTENANCE_WINDOWS_FIELD_NUMBER = 5;
+    private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_;
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> getMaintenanceWindowsList() {
+      return maintenanceWindows_;
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+        getMaintenanceWindowsOrBuilderList() {
+      return maintenanceWindows_;
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getMaintenanceWindowsCount() {
+      return maintenanceWindows_.size();
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index) {
+      return maintenanceWindows_.get(index);
+    }
+    /**
+     * <pre>
+     * Maintenance Windows define when this node is allowed to restart. If a node
+     * is requested to restart, it will check each window to determine if any of
+     * them permit it to restart, and if any do, it will. This check is repeated
+     * per window until the restart is successfully completed.
+     * If not set here, may be set on the command line or via an environment variable
+     * on the process itself; any server setting will take precedence over local
+     * settings. This setting is ineffective for nodes below version 38.44.0.
+     * If this setting is not applied via this remote configuration or via local
+     * configuration, the default setting is used: always allow restarts if serving
+     * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+     * </pre>
+     *
+     * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+        int index) {
+      return maintenanceWindows_.get(index);
+    }
+
+    public static final int DISCOVERY_CONFIG_FIELD_NUMBER = 6;
+    private com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig discoveryConfig_;
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the discoveryConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscoveryConfig() {
+      return discoveryConfig_ != null;
+    }
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+     * @return The discoveryConfig.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig() {
+      return discoveryConfig_ == null ? com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+    }
+    /**
+     * <pre>
+     * DiscoveryConfig is a private field with a pending description.
+     * </pre>
+     *
+     * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder() {
+      return getDiscoveryConfig();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
+      for (int i = 0; i < maintenanceWindows_.size(); i++) {
+        output.writeMessage(5, maintenanceWindows_.get(i));
+      }
+      if (discoveryConfig_ != null) {
+        output.writeMessage(6, getDiscoveryConfig());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
+      }
+      for (int i = 0; i < maintenanceWindows_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, maintenanceWindows_.get(i));
+      }
+      if (discoveryConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDiscoveryConfig());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster other = (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!getMaintenanceWindowsList()
+          .equals(other.getMaintenanceWindowsList())) return false;
+      if (hasDiscoveryConfig() != other.hasDiscoveryConfig()) return false;
+      if (hasDiscoveryConfig()) {
+        if (!getDiscoveryConfig()
+            .equals(other.getDiscoveryConfig())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      if (getMaintenanceWindowsCount() > 0) {
+        hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
+      }
+      if (hasDiscoveryConfig()) {
+        hash = (37 * hash) + DISCOVERY_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscoveryConfig().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GatewayCluster represents a cluster of StrongDM gateways and relays.
+     * </pre>
+     *
+     * Protobuf type {@code v1.GatewayCluster}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.GatewayCluster)
+        com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.class, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMaintenanceWindowsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        address_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          maintenanceWindowsBuilder_.clear();
+        }
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = null;
+        } else {
+          discoveryConfig_ = null;
+          discoveryConfigBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster build() {
+        com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster buildPartial() {
+        com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster result = new com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster(this);
+        int from_bitField0_ = bitField0_;
+        result.id_ = id_;
+        result.name_ = name_;
+        result.address_ = address_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        if (maintenanceWindowsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            maintenanceWindows_ = java.util.Collections.unmodifiableList(maintenanceWindows_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.maintenanceWindows_ = maintenanceWindows_;
+        } else {
+          result.maintenanceWindows_ = maintenanceWindowsBuilder_.build();
+        }
+        if (discoveryConfigBuilder_ == null) {
+          result.discoveryConfig_ = discoveryConfig_;
+        } else {
+          result.discoveryConfig_ = discoveryConfigBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) {
+          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster other) {
+        if (other == com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        if (maintenanceWindowsBuilder_ == null) {
+          if (!other.maintenanceWindows_.isEmpty()) {
+            if (maintenanceWindows_.isEmpty()) {
+              maintenanceWindows_ = other.maintenanceWindows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMaintenanceWindowsIsMutable();
+              maintenanceWindows_.addAll(other.maintenanceWindows_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.maintenanceWindows_.isEmpty()) {
+            if (maintenanceWindowsBuilder_.isEmpty()) {
+              maintenanceWindowsBuilder_.dispose();
+              maintenanceWindowsBuilder_ = null;
+              maintenanceWindows_ = other.maintenanceWindows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              maintenanceWindowsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMaintenanceWindowsFieldBuilder() : null;
+            } else {
+              maintenanceWindowsBuilder_.addAllMessages(other.maintenanceWindows_);
+            }
+          }
+        }
+        if (other.hasDiscoveryConfig()) {
+          mergeDiscoveryConfig(other.getDiscoveryConfig());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the Gateway.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Gateway.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Gateway.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Gateway.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Gateway.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the gateway cluster. Names must
+       * include only letters, numbers, and hyphens (no spaces, underscores, or
+       * other special characters). Generated if not provided on create.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the gateway cluster. Names must
+       * include only letters, numbers, and hyphens (no spaces, underscores, or
+       * other special characters). Generated if not provided on create.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the gateway cluster. Names must
+       * include only letters, numbers, and hyphens (no spaces, underscores, or
+       * other special characters). Generated if not provided on create.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the gateway cluster. Names must
+       * include only letters, numbers, and hyphens (no spaces, underscores, or
+       * other special characters). Generated if not provided on create.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the gateway cluster. Names must
+       * include only letters, numbers, and hyphens (no spaces, underscores, or
+       * other special characters). Generated if not provided on create.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * The public hostname/port tuple at which the gateway cluster will be
+       * accessible to clients.
+       * </pre>
+       *
+       * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The public hostname/port tuple at which the gateway cluster will be
+       * accessible to clients.
+       * </pre>
+       *
+       * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The public hostname/port tuple at which the gateway cluster will be
+       * accessible to clients.
+       * </pre>
+       *
+       * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The public hostname/port tuple at which the gateway cluster will be
+       * accessible to clients.
+       * </pre>
+       *
+       * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The public hostname/port tuple at which the gateway cluster will be
+       * accessible to clients.
+       * </pre>
+       *
+       * <code>string address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        address_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+
+      private java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> maintenanceWindows_ =
+        java.util.Collections.emptyList();
+      private void ensureMaintenanceWindowsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          maintenanceWindows_ = new java.util.ArrayList<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow>(maintenanceWindows_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> maintenanceWindowsBuilder_;
+
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> getMaintenanceWindowsList() {
+        if (maintenanceWindowsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(maintenanceWindows_);
+        } else {
+          return maintenanceWindowsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public int getMaintenanceWindowsCount() {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.size();
+        } else {
+          return maintenanceWindowsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow getMaintenanceWindows(int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.get(index);
+        } else {
+          return maintenanceWindowsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.set(index, value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow value) {
+        if (maintenanceWindowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(index, value);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMaintenanceWindows(
+          int index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllMaintenanceWindows(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow> values) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, maintenanceWindows_);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMaintenanceWindows() {
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeMaintenanceWindows(int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          ensureMaintenanceWindowsIsMutable();
+          maintenanceWindows_.remove(index);
+          onChanged();
+        } else {
+          maintenanceWindowsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder getMaintenanceWindowsBuilder(
+          int index) {
+        return getMaintenanceWindowsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
+          int index) {
+        if (maintenanceWindowsBuilder_ == null) {
+          return maintenanceWindows_.get(index);  } else {
+          return maintenanceWindowsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+           getMaintenanceWindowsOrBuilderList() {
+        if (maintenanceWindowsBuilder_ != null) {
+          return maintenanceWindowsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(maintenanceWindows_);
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder addMaintenanceWindowsBuilder() {
+        return getMaintenanceWindowsFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder addMaintenanceWindowsBuilder(
+          int index) {
+        return getMaintenanceWindowsFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Maintenance Windows define when this node is allowed to restart. If a node
+       * is requested to restart, it will check each window to determine if any of
+       * them permit it to restart, and if any do, it will. This check is repeated
+       * per window until the restart is successfully completed.
+       * If not set here, may be set on the command line or via an environment variable
+       * on the process itself; any server setting will take precedence over local
+       * settings. This setting is ineffective for nodes below version 38.44.0.
+       * If this setting is not applied via this remote configuration or via local
+       * configuration, the default setting is used: always allow restarts if serving
+       * no connections, and allow a restart even if serving connections between 7-8 UTC, any day.
+       * </pre>
+       *
+       * <code>repeated .v1.NodeMaintenanceWindow maintenance_windows = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder> 
+           getMaintenanceWindowsBuilderList() {
+        return getMaintenanceWindowsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder> 
+          getMaintenanceWindowsFieldBuilder() {
+        if (maintenanceWindowsBuilder_ == null) {
+          maintenanceWindowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindow.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder>(
+                  maintenanceWindows_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindows_ = null;
+        }
+        return maintenanceWindowsBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig discoveryConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder> discoveryConfigBuilder_;
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       * @return Whether the discoveryConfig field is set.
+       */
+      public boolean hasDiscoveryConfig() {
+        return discoveryConfigBuilder_ != null || discoveryConfig_ != null;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       * @return The discoveryConfig.
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig getDiscoveryConfig() {
+        if (discoveryConfigBuilder_ == null) {
+          return discoveryConfig_ == null ? com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+        } else {
+          return discoveryConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDiscoveryConfig(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig value) {
+        if (discoveryConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          discoveryConfig_ = value;
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDiscoveryConfig(
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder builderForValue) {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeDiscoveryConfig(com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig value) {
+        if (discoveryConfigBuilder_ == null) {
+          if (discoveryConfig_ != null) {
+            discoveryConfig_ =
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.newBuilder(discoveryConfig_).mergeFrom(value).buildPartial();
+          } else {
+            discoveryConfig_ = value;
+          }
+          onChanged();
+        } else {
+          discoveryConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearDiscoveryConfig() {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfig_ = null;
+          onChanged();
+        } else {
+          discoveryConfig_ = null;
+          discoveryConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder getDiscoveryConfigBuilder() {
+        
+        onChanged();
+        return getDiscoveryConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder getDiscoveryConfigOrBuilder() {
+        if (discoveryConfigBuilder_ != null) {
+          return discoveryConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return discoveryConfig_ == null ?
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.getDefaultInstance() : discoveryConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * DiscoveryConfig is a private field with a pending description.
+       * </pre>
+       *
+       * <code>.v1.NodeDiscoveryConfig discovery_config = 6 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder> 
+          getDiscoveryConfigFieldBuilder() {
+        if (discoveryConfigBuilder_ == null) {
+          discoveryConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfig.Builder, com.strongdm.api.plumbing.NodesPlumbing.NodeDiscoveryConfigOrBuilder>(
+                  getDiscoveryConfig(),
+                  getParentForChildren(),
+                  isClean());
+          discoveryConfig_ = null;
+        }
+        return discoveryConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.GatewayCluster)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.GatewayCluster)
+    private static final com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster();
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GatewayCluster>
+        PARSER = new com.google.protobuf.AbstractParser<GatewayCluster>() {
+      @java.lang.Override
+      public GatewayCluster parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GatewayCluster(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GatewayCluster> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GatewayCluster> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface NodeMaintenanceWindowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.NodeMaintenanceWindow)
       com.google.protobuf.MessageOrBuilder {
@@ -21563,6 +24071,11 @@ public final class NodesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Gateway_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_GatewayCluster_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_GatewayCluster_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_NodeMaintenanceWindow_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21625,69 +24138,81 @@ public final class NodesPlumbing {
       "esponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.Node" +
       "B\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
       "teLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
-      "\263\007\022\262\364\263\007\r!json_gateway\"\335\001\n\004Node\022&\n\005relay\030" +
+      "\263\007\022\262\364\263\007\r!json_gateway\"\247\002\n\004Node\022&\n\005relay\030" +
       "\001 \001(\0132\t.v1.RelayB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007gatewa" +
-      "y\030\002 \001(\0132\013.v1.GatewayB\n\362\370\263\007\005\260\363\263\007\001H\000:[\372\370\263\007" +
-      "L\302\363\263\007G\242\363\263\007\035tf_examples/node_resource.txt" +
-      "\252\363\263\007 tf_examples/node_data_source.txt\372\370\263" +
-      "\007\005\250\363\263\007\001B$\n\004node\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007" +
-      "\004name\"\250\004\n\005Relay\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030" +
-      "\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraf" +
-      "orm-provider\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\005 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022\037\n\006device\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n" +
-      "\010location\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007vers" +
-      "ion\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\t" +
-      "B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023main" +
-      "tenance_windows\030\013 \003(\0132\031.v1.NodeMaintenan" +
-      "ceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terrafor" +
-      "m-provider\022\022maintenance_window\022L\n\020discov" +
-      "ery_config\030\014 \001(\0132\027.v1.NodeDiscoveryConfi" +
-      "gB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007\001" +
-      "\"\204\005\n\007Gateway\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
-      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001" +
-      "(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform" +
-      "-provider\022,\n\016listen_address\030\004 \001(\tB\024\362\370\263\007\017" +
-      "\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_address\030\005 \001(\tB\024\362" +
-      "\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\007 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230" +
-      "\364\263\007\001\022!\n\010location\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022" +
-      " \n\007version\030\n \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uui" +
-      "d\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022" +
-      "t\n\023maintenance_windows\030\r \003(\0132\031.v1.NodeMa" +
-      "intenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022t" +
-      "erraform-provider\022\022maintenance_window\022L\n" +
-      "\020discovery_config\030\016 \001(\0132\027.v1.NodeDiscove" +
-      "ryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263" +
-      "\007\005\250\363\263\007\001\"\266\001\n\025NodeMaintenanceWindow\022!\n\rcro" +
-      "n_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_" +
-      "idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363" +
-      "\263\007E\362\363\263\007\036\n\022terraform-provider\022\010TypeList\372\363" +
-      "\263\007\035nodeMaintenanceWindowElemType\"\303\001\n\023Nod" +
-      "eDiscoveryConfig\022\033\n\007enabled\030\001 \001(\010B\n\362\370\263\007\005" +
-      "\260\363\263\007\001\0225\n\006period\030\002 \001(\0132\031.google.protobuf." +
-      "DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014enabledTypes\030\003 \003" +
-      "(\0132\033.v1.NodeDiscoveryTypeConfigB\n\362\370\263\007\005\260\363" +
-      "\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"N\n\027NodeDi" +
-      "scoveryTypeConfig\022\030\n\004type\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\356\003\n\005Nodes" +
-      "\022Z\n\006Create\022\025.v1.NodeCreateRequest\032\026.v1.N" +
-      "odeCreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363" +
-      "\263\007\t/v1/nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032" +
-      "\023.v1.NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023" +
-      "\252\363\263\007\016/v1/nodes/{id}\022^\n\006Update\022\025.v1.NodeU" +
-      "pdateRequest\032\026.v1.NodeUpdateResponse\"%\202\371" +
-      "\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006D" +
-      "elete\022\025.v1.NodeDeleteRequest\032\026.v1.NodeDe" +
-      "leteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016" +
-      "/v1/nodes/{id}\022S\n\004List\022\023.v1.NodeListRequ" +
-      "est\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get" +
-      "\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007" +
-      "\322\371\263\007\002n-Ba\n\031com.strongdm.api.plumbingB\rNo" +
-      "desPlumbingZ5github.com/strongdm/strongd" +
-      "m-sdk-go/v3/internal/v1;v1b\006proto3"
+      "y\030\002 \001(\0132\013.v1.GatewayB\n\362\370\263\007\005\260\363\263\007\001H\000\022H\n\017ga" +
+      "teway_cluster\030\003 \001(\0132\022.v1.GatewayClusterB" +
+      "\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_privateH\000:[\372\370\263\007L\302\363\263\007G" +
+      "\242\363\263\007\035tf_examples/node_resource.txt\252\363\263\007 t" +
+      "f_examples/node_data_source.txt\372\370\263\007\005\250\363\263\007" +
+      "\001B$\n\004node\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"" +
+      "\250\004\n\005Relay\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004nam" +
+      "e\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB" +
+      "-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-pr" +
+      "ovider\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\"\n\016gateway_filter\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
+      "\n\006device\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010locat" +
+      "ion\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\010 " +
+      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007" +
+      "\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023maintenanc" +
+      "e_windows\030\013 \003(\0132\031.v1.NodeMaintenanceWind" +
+      "owB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-prov" +
+      "ider\022\022maintenance_window\022L\n\020discovery_co" +
+      "nfig\030\014 \001(\0132\027.v1.NodeDiscoveryConfigB\031\362\370\263" +
+      "\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007\001\"\204\005\n\007G" +
+      "ateway\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370" +
+      "\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provi" +
+      "der\022,\n\016listen_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300" +
+      "\363\263\007\001\340\363\263\007\001\022*\n\014bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363" +
+      "\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\007 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\037\n\006device\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!" +
+      "\n\010location\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007ver" +
+      "sion\030\n \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(" +
+      "\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023mai" +
+      "ntenance_windows\030\r \003(\0132\031.v1.NodeMaintena" +
+      "nceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terrafo" +
+      "rm-provider\022\022maintenance_window\022L\n\020disco" +
+      "very_config\030\016 \001(\0132\027.v1.NodeDiscoveryConf" +
+      "igB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007" +
+      "\001\"\361\002\n\016GatewayCluster\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022%\n\007a" +
+      "ddress\030\003 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022\"\n\004ta" +
+      "gs\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022t\n\023mainte" +
+      "nance_windows\030\005 \003(\0132\031.v1.NodeMaintenance" +
+      "WindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-" +
+      "provider\022\022maintenance_window\022L\n\020discover" +
+      "y_config\030\006 \001(\0132\027.v1.NodeDiscoveryConfigB" +
+      "\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\031\372\370\263\007\024\250\363\263\007\001\322\363" +
+      "\263\007\ngo_private\"\266\001\n\025NodeMaintenanceWindow\022" +
+      "!\n\rcron_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020re" +
+      "quire_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250" +
+      "\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-provider\022\010Type" +
+      "List\372\363\263\007\035nodeMaintenanceWindowElemType\"\303" +
+      "\001\n\023NodeDiscoveryConfig\022\033\n\007enabled\030\001 \001(\010B" +
+      "\n\362\370\263\007\005\260\363\263\007\001\0225\n\006period\030\002 \001(\0132\031.google.pro" +
+      "tobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014enabledTyp" +
+      "es\030\003 \003(\0132\033.v1.NodeDiscoveryTypeConfigB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"N\n\027" +
+      "NodeDiscoveryTypeConfig\022\030\n\004type\030\001 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\207\004\n" +
+      "\005Nodes\022Z\n\006Create\022\025.v1.NodeCreateRequest\032" +
+      "\026.v1.NodeCreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202" +
+      "\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1.NodeGetRe" +
+      "quest\032\023.v1.NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003ge" +
+      "t\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006Update\022\025.v1" +
+      ".NodeUpdateRequest\032\026.v1.NodeUpdateRespon" +
+      "se\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id" +
+      "}\022a\n\006Delete\022\025.v1.NodeDeleteRequest\032\026.v1." +
+      "NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
+      "\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023.v1.NodeLi" +
+      "stRequest\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363" +
+      "\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\0323\312\371\263\007\t\302\371\263\007\004Nod" +
+      "e\312\371\263\007\007\322\371\263\007\002n-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBa" +
+      "\n\031com.strongdm.api.plumbingB\rNodesPlumbi" +
+      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
+      "v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21762,7 +24287,7 @@ public final class NodesPlumbing {
     internal_static_v1_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Node_descriptor,
-        new java.lang.String[] { "Relay", "Gateway", "Node", });
+        new java.lang.String[] { "Relay", "Gateway", "GatewayCluster", "Node", });
     internal_static_v1_Relay_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_v1_Relay_fieldAccessorTable = new
@@ -21775,20 +24300,26 @@ public final class NodesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
         new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", "DiscoveryConfig", });
-    internal_static_v1_NodeMaintenanceWindow_descriptor =
+    internal_static_v1_GatewayCluster_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_v1_GatewayCluster_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_GatewayCluster_descriptor,
+        new java.lang.String[] { "Id", "Name", "Address", "Tags", "MaintenanceWindows", "DiscoveryConfig", });
+    internal_static_v1_NodeMaintenanceWindow_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeMaintenanceWindow_descriptor,
         new java.lang.String[] { "CronSchedule", "RequireIdleness", });
     internal_static_v1_NodeDiscoveryConfig_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_v1_NodeDiscoveryConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeDiscoveryConfig_descriptor,
         new java.lang.String[] { "Enabled", "Period", "EnabledTypes", });
     internal_static_v1_NodeDiscoveryTypeConfig_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_v1_NodeDiscoveryTypeConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeDiscoveryTypeConfig_descriptor,

@@ -839,16 +839,6 @@ public final class Options {
 
     /**
      * <pre>
-     * if true, will not generate a CLI command
-     * </pre>
-     *
-     * <code>bool skip_cli_generation = 1941404;</code>
-     * @return The skipCliGeneration.
-     */
-    boolean getSkipCliGeneration();
-
-    /**
-     * <pre>
      * if true, registers json gateway with a `NewServiceName()` constructor, rather than &amp;ServiceName{}
      * </pre>
      *
@@ -930,11 +920,6 @@ public final class Options {
             case 15531224: {
 
               disableSnapshotVertical_ = input.readBool();
-              break;
-            }
-            case 15531232: {
-
-              skipCliGeneration_ = input.readBool();
               break;
             }
             case 15531240: {
@@ -1137,21 +1122,6 @@ public final class Options {
       return disableSnapshotVertical_;
     }
 
-    public static final int SKIP_CLI_GENERATION_FIELD_NUMBER = 1941404;
-    private boolean skipCliGeneration_;
-    /**
-     * <pre>
-     * if true, will not generate a CLI command
-     * </pre>
-     *
-     * <code>bool skip_cli_generation = 1941404;</code>
-     * @return The skipCliGeneration.
-     */
-    @java.lang.Override
-    public boolean getSkipCliGeneration() {
-      return skipCliGeneration_;
-    }
-
     public static final int JSON_GATEWAY_REGISTER_WITH_CONSTRUCTOR_FIELD_NUMBER = 1941405;
     private boolean jsonGatewayRegisterWithConstructor_;
     /**
@@ -1193,9 +1163,6 @@ public final class Options {
       if (disableSnapshotVertical_ != false) {
         output.writeBool(1941403, disableSnapshotVertical_);
       }
-      if (skipCliGeneration_ != false) {
-        output.writeBool(1941404, skipCliGeneration_);
-      }
       if (jsonGatewayRegisterWithConstructor_ != false) {
         output.writeBool(1941405, jsonGatewayRegisterWithConstructor_);
       }
@@ -1226,10 +1193,6 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941403, disableSnapshotVertical_);
       }
-      if (skipCliGeneration_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941404, skipCliGeneration_);
-      }
       if (jsonGatewayRegisterWithConstructor_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941405, jsonGatewayRegisterWithConstructor_);
@@ -1257,8 +1220,6 @@ public final class Options {
           .equals(other.getTargetsList())) return false;
       if (getDisableSnapshotVertical()
           != other.getDisableSnapshotVertical()) return false;
-      if (getSkipCliGeneration()
-          != other.getSkipCliGeneration()) return false;
       if (getJsonGatewayRegisterWithConstructor()
           != other.getJsonGatewayRegisterWithConstructor()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -1283,9 +1244,6 @@ public final class Options {
       hash = (37 * hash) + DISABLE_SNAPSHOT_VERTICAL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDisableSnapshotVertical());
-      hash = (37 * hash) + SKIP_CLI_GENERATION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSkipCliGeneration());
       hash = (37 * hash) + JSON_GATEWAY_REGISTER_WITH_CONSTRUCTOR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getJsonGatewayRegisterWithConstructor());
@@ -1430,8 +1388,6 @@ public final class Options {
         bitField0_ = (bitField0_ & ~0x00000001);
         disableSnapshotVertical_ = false;
 
-        skipCliGeneration_ = false;
-
         jsonGatewayRegisterWithConstructor_ = false;
 
         return this;
@@ -1469,7 +1425,6 @@ public final class Options {
         }
         result.targets_ = targets_;
         result.disableSnapshotVertical_ = disableSnapshotVertical_;
-        result.skipCliGeneration_ = skipCliGeneration_;
         result.jsonGatewayRegisterWithConstructor_ = jsonGatewayRegisterWithConstructor_;
         onBuilt();
         return result;
@@ -1539,9 +1494,6 @@ public final class Options {
         }
         if (other.getDisableSnapshotVertical() != false) {
           setDisableSnapshotVertical(other.getDisableSnapshotVertical());
-        }
-        if (other.getSkipCliGeneration() != false) {
-          setSkipCliGeneration(other.getSkipCliGeneration());
         }
         if (other.getJsonGatewayRegisterWithConstructor() != false) {
           setJsonGatewayRegisterWithConstructor(other.getJsonGatewayRegisterWithConstructor());
@@ -1953,49 +1905,6 @@ public final class Options {
       public Builder clearDisableSnapshotVertical() {
         
         disableSnapshotVertical_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean skipCliGeneration_ ;
-      /**
-       * <pre>
-       * if true, will not generate a CLI command
-       * </pre>
-       *
-       * <code>bool skip_cli_generation = 1941404;</code>
-       * @return The skipCliGeneration.
-       */
-      @java.lang.Override
-      public boolean getSkipCliGeneration() {
-        return skipCliGeneration_;
-      }
-      /**
-       * <pre>
-       * if true, will not generate a CLI command
-       * </pre>
-       *
-       * <code>bool skip_cli_generation = 1941404;</code>
-       * @param value The skipCliGeneration to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSkipCliGeneration(boolean value) {
-        
-        skipCliGeneration_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * if true, will not generate a CLI command
-       * </pre>
-       *
-       * <code>bool skip_cli_generation = 1941404;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSkipCliGeneration() {
-        
-        skipCliGeneration_ = false;
         onChanged();
         return this;
       }
@@ -11485,70 +11394,69 @@ java.lang.String defaultValue);
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"9\n\013FileOptions\022\021\n\007targets\030" +
-      "\304\301v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\334\001\n\016Ser" +
+      "\304\301v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\275\001\n\016Ser" +
       "viceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_p" +
       "refix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t\022#\n\031disa" +
-      "ble_snapshot_vertical\030\233\277v \001(\010\022\035\n\023skip_cl" +
-      "i_generation\030\234\277v \001(\010\0220\n&json_gateway_reg" +
-      "ister_with_constructor\030\235\277v \001(\010:\027\372\370\263\007\022\322\363\263" +
-      "\007\r!json_gateway\"x\n\rMethodOptions\022\020\n\006meth" +
-      "od\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecation" +
-      "_date\030\266\276v \001(\t\022\021\n\007targets\030\231\277v \003(\t:\027\372\370\263\007\022\322" +
-      "\363\263\007\r!json_gateway\"\362\001\n\016MessageOptions\022\023\n\t" +
-      "porcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\rop" +
-      "tions_field\030\267\276v \001(\t\022\021\n\007targets\030\272\276v \003(\t\022+" +
-      "\n\016terraform_docs\030\270\276v \001(\0132\021.v1.TerraformD" +
-      "ocs\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOptions" +
-      "\022#\n\031terraform_datasource_only\030\273\276v \001(\010:\027\372" +
-      "\370\263\007\022\322\363\263\007\r!json_gateway\"@\n\014OneofOptions\022\027" +
-      "\n\rcommon_fields\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json" +
-      "_gateway\"\217\004\n\014FieldOptions\022\023\n\tporcelain\030\266" +
-      "\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010\022\022\n\010required\030\270" +
-      "\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tread_onl" +
-      "y\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\021\n\007ta" +
-      "rgets\030\306\276v \003(\t\022\035\n\023terraform_force_new\030\274\276v" +
-      " \001(\010\022\035\n\023terraform_sensitive\030\276\276v \001(\010\022&\n\034t" +
-      "erraform_diff_suppress_func\030\307\276v \001(\t\022\034\n\022t" +
-      "erraform_computed\030\312\276v \001(\010\022#\n\006custom\030\271\276v " +
-      "\001(\0132\021.v1.CustomOptions\022D\n\022read_only_over" +
-      "ride\030\300\276v \003(\0132&.v1.FieldOptions.ReadOnlyO" +
-      "verrideEntry\022\023\n\tcondition\030\313\276v \001(\t\022\025\n\013exp" +
-      "ect_file\030\314\276v \001(\010\0327\n\025ReadOnlyOverrideEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022" +
-      "\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOptions\022\023\n\t" +
-      "converter\030\275\276v \001(\t\022O\n\027porcelain_type_over" +
-      "ride\030\276\276v \003(\0132,.v1.CustomOptions.Porcelai" +
-      "nTypeOverrideEntry\022O\n\027porcelain_name_ove" +
-      "rride\030\310\276v \003(\0132,.v1.CustomOptions.Porcela" +
-      "inNameOverrideEntry\022B\n\020comment_override\030" +
-      "\323\276v \003(\0132&.v1.CustomOptions.CommentOverri" +
-      "deEntry\022H\n\023deprecated_override\030\300\276v \003(\0132)" +
-      ".v1.CustomOptions.DeprecatedOverrideEntr" +
-      "y\022\035\n\023terraform_elem_type\030\277\276v \001(\t\022\022\n\010unst" +
-      "able\030\301\276v \001(\010\032<\n\032PorcelainTypeOverrideEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032Po" +
-      "rcelainNameOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverrideEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027Depr" +
-      "ecatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\r" +
-      "TerraformDocs\022\037\n\025resource_example_path\030\264" +
-      "\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v \001" +
-      "(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file_opti" +
-      "ons\022\034.google.protobuf.FileOptions\030\250\302v \001(" +
-      "\0132\017.v1.FileOptions:N\n\017service_options\022\037." +
-      "google.protobuf.ServiceOptions\030\231\277v \001(\0132\022" +
-      ".v1.ServiceOptions:K\n\016method_options\022\036.g" +
-      "oogle.protobuf.MethodOptions\030\220\277v \001(\0132\021.v" +
-      "1.MethodOptions:N\n\017message_options\022\037.goo" +
-      "gle.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1" +
-      ".MessageOptions:H\n\roneof_options\022\035.googl" +
-      "e.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.One" +
-      "ofOptions:H\n\rfield_options\022\035.google.prot" +
-      "obuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOpti" +
-      "onsBR\n\031com.strongdm.api.plumbingZ5github" +
-      ".com/strongdm/strongdm-sdk-go/v3/interna" +
-      "l/v1;v1b\006proto3"
+      "ble_snapshot_vertical\030\233\277v \001(\010\0220\n&json_ga" +
+      "teway_register_with_constructor\030\235\277v \001(\010:" +
+      "\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"x\n\rMethodOption" +
+      "s\022\020\n\006method\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020de" +
+      "precation_date\030\266\276v \001(\t\022\021\n\007targets\030\231\277v \003(" +
+      "\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\362\001\n\016MessageOp" +
+      "tions\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v " +
+      "\001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022\021\n\007targets\030" +
+      "\272\276v \003(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.T" +
+      "erraformDocs\022#\n\006custom\030\271\276v \001(\0132\021.v1.Cust" +
+      "omOptions\022#\n\031terraform_datasource_only\030\273" +
+      "\276v \001(\010:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"@\n\014Oneof" +
+      "Options\022\027\n\rcommon_fields\030\205\277v \003(\t:\027\372\370\263\007\022\322" +
+      "\363\263\007\r!json_gateway\"\217\004\n\014FieldOptions\022\023\n\tpo" +
+      "rcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010\022\022\n\010r" +
+      "equired\030\270\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n" +
+      "\tread_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v " +
+      "\001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023terraform_forc" +
+      "e_new\030\274\276v \001(\010\022\035\n\023terraform_sensitive\030\276\276v" +
+      " \001(\010\022&\n\034terraform_diff_suppress_func\030\307\276v" +
+      " \001(\t\022\034\n\022terraform_computed\030\312\276v \001(\010\022#\n\006cu" +
+      "stom\030\271\276v \001(\0132\021.v1.CustomOptions\022D\n\022read_" +
+      "only_override\030\300\276v \003(\0132&.v1.FieldOptions." +
+      "ReadOnlyOverrideEntry\022\023\n\tcondition\030\313\276v \001" +
+      "(\t\022\025\n\013expect_file\030\314\276v \001(\010\0327\n\025ReadOnlyOve" +
+      "rrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\002" +
+      "8\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOp" +
+      "tions\022\023\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_" +
+      "type_override\030\276\276v \003(\0132,.v1.CustomOptions" +
+      ".PorcelainTypeOverrideEntry\022O\n\027porcelain" +
+      "_name_override\030\310\276v \003(\0132,.v1.CustomOption" +
+      "s.PorcelainNameOverrideEntry\022B\n\020comment_" +
+      "override\030\323\276v \003(\0132&.v1.CustomOptions.Comm" +
+      "entOverrideEntry\022H\n\023deprecated_override\030" +
+      "\300\276v \003(\0132).v1.CustomOptions.DeprecatedOve" +
+      "rrideEntry\022\035\n\023terraform_elem_type\030\277\276v \001(" +
+      "\t\022\022\n\010unstable\030\301\276v \001(\010\032<\n\032PorcelainTypeOv" +
+      "errideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\032<\n\032PorcelainNameOverrideEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOver" +
+      "rideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\0329\n\027DeprecatedOverrideEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_ga" +
+      "teway\"m\n\rTerraformDocs\022\037\n\025resource_examp" +
+      "le_path\030\264\276v \001(\t\022\"\n\030data_source_example_p" +
+      "ath\030\265\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014" +
+      "file_options\022\034.google.protobuf.FileOptio" +
+      "ns\030\250\302v \001(\0132\017.v1.FileOptions:N\n\017service_o" +
+      "ptions\022\037.google.protobuf.ServiceOptions\030" +
+      "\231\277v \001(\0132\022.v1.ServiceOptions:K\n\016method_op" +
+      "tions\022\036.google.protobuf.MethodOptions\030\220\277" +
+      "v \001(\0132\021.v1.MethodOptions:N\n\017message_opti" +
+      "ons\022\037.google.protobuf.MessageOptions\030\217\277v" +
+      " \001(\0132\022.v1.MessageOptions:H\n\roneof_option" +
+      "s\022\035.google.protobuf.OneofOptions\030\205\277v \001(\013" +
+      "2\020.v1.OneofOptions:H\n\rfield_options\022\035.go" +
+      "ogle.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1." +
+      "FieldOptionsBR\n\031com.strongdm.api.plumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11566,7 +11474,7 @@ java.lang.String defaultValue);
     internal_static_v1_ServiceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ServiceOptions_descriptor,
-        new java.lang.String[] { "MainNoun", "IdPrefix", "Targets", "DisableSnapshotVertical", "SkipCliGeneration", "JsonGatewayRegisterWithConstructor", });
+        new java.lang.String[] { "MainNoun", "IdPrefix", "Targets", "DisableSnapshotVertical", "JsonGatewayRegisterWithConstructor", });
     internal_static_v1_MethodOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_MethodOptions_fieldAccessorTable = new

@@ -9522,7 +9522,7 @@ public final class PeeringGroupPeersPlumbing {
       "\020PeeringGroupPeer\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
       "\001\022!\n\010group_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022,\n\023" +
       "peers_with_group_id\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263" +
-      "\007\001:\n\372\370\263\007\005\250\363\263\007\0012\314\004\n\021PeeringGroupPeers\022~\n\006" +
+      "\007\001:\n\372\370\263\007\005\250\363\263\007\0012\333\004\n\021PeeringGroupPeers\022~\n\006" +
       "Create\022!.v1.PeeringGroupPeerCreateReques" +
       "t\032\".v1.PeeringGroupPeerCreateResponse\"-\202" +
       "\371\263\007\t\242\363\263\007\004post\202\371\263\007\032\252\363\263\007\025/v1/peeringGroupP" +
@@ -9535,12 +9535,12 @@ public final class PeeringGroupPeersPlumbing {
       "/peeringGroupPeers/{id}\022w\n\004List\022\037.v1.Pee" +
       "ringGroupPeerListRequest\032 .v1.PeeringGro" +
       "upPeerListResponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\032\252\363" +
-      "\263\007\025/v1/peeringGroupPeers\032;\312\371\263\007\025\302\371\263\007\020Peer" +
-      "ingGroupPeer\312\371\263\007\010\322\371\263\007\003gp-\312\371\263\007\005\340\371\263\007\001\312\371\263\007\005" +
-      "\330\371\263\007\001Bm\n\031com.strongdm.api.plumbingB\031Peer" +
-      "ingGroupPeersPlumbingZ5github.com/strong" +
-      "dm/strongdm-sdk-go/v3/internal/v1;v1b\006pr" +
-      "oto3"
+      "\263\007\025/v1/peeringGroupPeers\032J\312\371\263\007\025\302\371\263\007\020Peer" +
+      "ingGroupPeer\312\371\263\007\010\322\371\263\007\003gp-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007" +
+      "\t\312\371\263\007\004!cli\312\371\263\007\005\330\371\263\007\001Bm\n\031com.strongdm.api" +
+      ".plumbingB\031PeeringGroupPeersPlumbingZ5gi" +
+      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
+      "ernal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

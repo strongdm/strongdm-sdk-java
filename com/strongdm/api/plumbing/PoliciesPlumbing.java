@@ -12108,7 +12108,7 @@ public final class PoliciesPlumbing {
       "escription\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006policy\030\004" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001:Z\372\370\263\007U\250\363\263\007\001\302\363\263\007K\242\363\263\007\037tf" +
       "_examples/policy_resource.txt\252\363\263\007\"tf_exa" +
-      "mples/policy_data_source.txt2\253\004\n\010Policie" +
+      "mples/policy_data_source.txt2\272\004\n\010Policie" +
       "s\022a\n\006Create\022\027.v1.PolicyCreateRequest\032\030.v" +
       "1.PolicyCreateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371" +
       "\263\007\021\252\363\263\007\014/v1/policies\022h\n\006Delete\022\027.v1.Poli" +
@@ -12121,11 +12121,11 @@ public final class PoliciesPlumbing {
       "e\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/policies/{" +
       "id}\022Z\n\004List\022\025.v1.PolicyListRequest\032\026.v1." +
       "PolicyListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363" +
-      "\263\007\014/v1/policies\0321\312\371\263\007\013\302\371\263\007\006Policy\312\371\263\007\010\322\371" +
-      "\263\007\003po-\312\371\263\007\005\340\371\263\007\001\312\371\263\007\005\350\371\263\007\001Bd\n\031com.strong" +
-      "dm.api.plumbingB\020PoliciesPlumbingZ5githu" +
-      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
-      "al/v1;v1b\006proto3"
+      "\263\007\014/v1/policies\032@\312\371\263\007\013\302\371\263\007\006Policy\312\371\263\007\010\322\371" +
+      "\263\007\003po-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cli\312\371\263\007\005\350\371\263\007" +
+      "\001Bd\n\031com.strongdm.api.plumbingB\020Policies" +
+      "PlumbingZ5github.com/strongdm/strongdm-s" +
+      "dk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

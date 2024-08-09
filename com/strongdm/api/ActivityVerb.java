@@ -206,6 +206,7 @@ public final class ActivityVerb {
   public static final String APPROVAL_FLOW_UPDATED = "approval workflow updated";
   public static final String APPROVAL_FLOW_STEP_ADDED = "approval workflow step added";
   public static final String APPROVAL_FLOW_STEP_DELETED = "approval workflow step deleted";
+  public static final String APPROVAL_FLOW_STEP_UPDATED = "approval workflow step updated";
   public static final String APPROVAL_FLOW_APPROVER_ADDED = "approval workflow approver added";
   public static final String APPROVAL_FLOW_APPROVER_DELETED = "approval workflow approver deleted";
   public static final String ORG_VNM_SUBNET_UPDATED = "organization VNM subnet updated";

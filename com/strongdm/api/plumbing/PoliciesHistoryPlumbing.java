@@ -3809,17 +3809,17 @@ public final class PoliciesHistoryPlumbing {
       "licy\030\003 \001(\0132\n.v1.PolicyB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nde" +
       "leted_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
       "mpB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!te" +
-      "rraform-provider2\346\001\n\017PoliciesHistory\022t\n\004" +
+      "rraform-provider2\352\001\n\017PoliciesHistory\022t\n\004" +
       "List\022\036.v1.PoliciesHistoryListRequest\032\037.v" +
       "1.PoliciesHistoryListResponse\"+\202\371\263\007\010\242\363\263\007" +
-      "\003get\202\371\263\007\031\252\363\263\007\024/v1/policies-history\032]\312\371\263\007" +
+      "\003get\202\371\263\007\031\252\363\263\007\024/v1/policies-history\032a\312\371\263\007" +
       "\022\302\371\263\007\rPolicyHistory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*" +
-      "\312\371\263\007\030\312\371\263\007\023!terraform-provider\312\371\263\007\005\340\371\263\007\001\312" +
-      "\371\263\007\005\350\371\263\007\001B\223\001\n\031com.strongdm.api.plumbingB" +
-      "\027PoliciesHistoryPlumbingZ5github.com/str" +
-      "ongdm/strongdm-sdk-go/v3/internal/v1;v1\302" +
-      "\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb" +
-      "\006proto3"
+      "\312\371\263\007\030\312\371\263\007\023!terraform-provider\312\371\263\007\t\312\371\263\007\004!" +
+      "cli\312\371\263\007\005\350\371\263\007\001B\223\001\n\031com.strongdm.api.plumb" +
+      "ingB\027PoliciesHistoryPlumbingZ5github.com" +
+      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
+      ";v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provi" +
+      "derb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
