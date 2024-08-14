@@ -192,6 +192,18 @@ public final class ActivityVerb {
       "access request to resource approved via ServiceNow";
   public static final String WORKFLOW_DELETED = "workflow deleted";
   public static final String WORKFLOW_ADDED = "workflow added";
+  public static final String DEPRECATED_WORKFLOW_RESOURCE_ASSIGNED =
+      "resource assigned to workflow";
+  public static final String DEPRECATED_WORKFLOW_RESOURCE_UNASSIGNED =
+      "resource unassigned from workflow";
+  public static final String DEPRECATED_WORKFLOW_RESOURCE_MULTIPLE_ASSIGNED =
+      "multiple resources assigned to workflow";
+  public static final String DEPRECATED_WORKFLOW_RESOURCE_MULTIPLE_UNASSIGNED =
+      "multiple resources unassigned from workflow";
+  public static final String DEPRECATED_WORKFLOW_APPROVERS_UPDATED = "workflow approvers updated";
+  public static final String DEPRECATED_WORKFLOW_AUTO_GRANT_UPDATED = "workflow auto grant updated";
+  public static final String DEPRECATED_WORKFLOW_APPROVAL_CRITERIA_UPDATED =
+      "workflow approval criteria updated";
   public static final String WORKFLOW_ROLES_UPDATED = "workflow roles updated";
   public static final String WORKFLOW_NAME_UPDATED = "workflow name updated";
   public static final String WORKFLOW_DESCRIPTION_UPDATED = "workflow description updated";
