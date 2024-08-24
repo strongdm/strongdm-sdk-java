@@ -2577,6 +2577,36 @@ public final class AccessRequestsPlumbing {
      */
     com.google.protobuf.ByteString
         getGrantIdBytes();
+
+    /**
+     * <pre>
+     * Duration of the access request.
+     * </pre>
+     *
+     * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+     * @return The duration.
+     */
+    long getDuration();
+
+    /**
+     * <pre>
+     * Requester name.
+     * </pre>
+     *
+     * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+     * @return The requesterName.
+     */
+    java.lang.String getRequesterName();
+    /**
+     * <pre>
+     * Requester name.
+     * </pre>
+     *
+     * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for requesterName.
+     */
+    com.google.protobuf.ByteString
+        getRequesterNameBytes();
   }
   /**
    * <pre>
@@ -2602,6 +2632,7 @@ public final class AccessRequestsPlumbing {
       accountId_ = "";
       status_ = "";
       grantId_ = "";
+      requesterName_ = "";
     }
 
     @java.lang.Override
@@ -2713,6 +2744,17 @@ public final class AccessRequestsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               grantId_ = s;
+              break;
+            }
+            case 88: {
+
+              duration_ = input.readInt64();
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requesterName_ = s;
               break;
             }
             default: {
@@ -3188,6 +3230,67 @@ public final class AccessRequestsPlumbing {
       }
     }
 
+    public static final int DURATION_FIELD_NUMBER = 11;
+    private long duration_;
+    /**
+     * <pre>
+     * Duration of the access request.
+     * </pre>
+     *
+     * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public long getDuration() {
+      return duration_;
+    }
+
+    public static final int REQUESTER_NAME_FIELD_NUMBER = 12;
+    private volatile java.lang.Object requesterName_;
+    /**
+     * <pre>
+     * Requester name.
+     * </pre>
+     *
+     * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+     * @return The requesterName.
+     */
+    @java.lang.Override
+    public java.lang.String getRequesterName() {
+      java.lang.Object ref = requesterName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requesterName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Requester name.
+     * </pre>
+     *
+     * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for requesterName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequesterNameBytes() {
+      java.lang.Object ref = requesterName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requesterName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3232,6 +3335,12 @@ public final class AccessRequestsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, grantId_);
       }
+      if (duration_ != 0L) {
+        output.writeInt64(11, duration_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requesterName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, requesterName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3273,6 +3382,13 @@ public final class AccessRequestsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, grantId_);
+      }
+      if (duration_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(11, duration_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requesterName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, requesterName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3318,6 +3434,10 @@ public final class AccessRequestsPlumbing {
       }
       if (!getGrantId()
           .equals(other.getGrantId())) return false;
+      if (getDuration()
+          != other.getDuration()) return false;
+      if (!getRequesterName()
+          .equals(other.getRequesterName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3355,6 +3475,11 @@ public final class AccessRequestsPlumbing {
       }
       hash = (37 * hash) + GRANT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGrantId().hashCode();
+      hash = (37 * hash) + DURATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDuration());
+      hash = (37 * hash) + REQUESTER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRequesterName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3524,6 +3649,10 @@ public final class AccessRequestsPlumbing {
         }
         grantId_ = "";
 
+        duration_ = 0L;
+
+        requesterName_ = "";
+
         return this;
       }
 
@@ -3572,6 +3701,8 @@ public final class AccessRequestsPlumbing {
           result.statusAt_ = statusAtBuilder_.build();
         }
         result.grantId_ = grantId_;
+        result.duration_ = duration_;
+        result.requesterName_ = requesterName_;
         onBuilt();
         return result;
       }
@@ -3655,6 +3786,13 @@ public final class AccessRequestsPlumbing {
         }
         if (!other.getGrantId().isEmpty()) {
           grantId_ = other.grantId_;
+          onChanged();
+        }
+        if (other.getDuration() != 0L) {
+          setDuration(other.getDuration());
+        }
+        if (!other.getRequesterName().isEmpty()) {
+          requesterName_ = other.requesterName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -4828,6 +4966,145 @@ public final class AccessRequestsPlumbing {
   checkByteStringIsUtf8(value);
         
         grantId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long duration_ ;
+      /**
+       * <pre>
+       * Duration of the access request.
+       * </pre>
+       *
+       * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+       * @return The duration.
+       */
+      @java.lang.Override
+      public long getDuration() {
+        return duration_;
+      }
+      /**
+       * <pre>
+       * Duration of the access request.
+       * </pre>
+       *
+       * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The duration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDuration(long value) {
+        
+        duration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration of the access request.
+       * </pre>
+       *
+       * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDuration() {
+        
+        duration_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requesterName_ = "";
+      /**
+       * <pre>
+       * Requester name.
+       * </pre>
+       *
+       * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+       * @return The requesterName.
+       */
+      public java.lang.String getRequesterName() {
+        java.lang.Object ref = requesterName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requesterName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Requester name.
+       * </pre>
+       *
+       * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for requesterName.
+       */
+      public com.google.protobuf.ByteString
+          getRequesterNameBytes() {
+        java.lang.Object ref = requesterName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requesterName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Requester name.
+       * </pre>
+       *
+       * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The requesterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequesterName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requesterName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Requester name.
+       * </pre>
+       *
+       * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequesterName() {
+        
+        requesterName_ = getDefaultInstance().getRequesterName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Requester name.
+       * </pre>
+       *
+       * <code>string requester_name = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for requesterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequesterNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        requesterName_ = value;
         onChanged();
         return this;
       }
@@ -9254,7 +9531,7 @@ public final class AccessRequestsPlumbing {
       "access_requests\030\002 \003(\0132\021.v1.AccessRequest" +
       "B\n\362\370\263\007\005\270\363\263\007\001\022@\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
       "teLimitMetadataB\025\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"\257\003\n\rAccessRequest\022\026\n\002id\030\001 \001(\t" +
+      "\372\370\263\007\005\250\363\263\007\001\"\200\004\n\rAccessRequest\022\026\n\002id\030\001 \001(\t" +
       "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007\n" +
       "\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
       "\n\013workflow_id\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccou" +
@@ -9264,33 +9541,35 @@ public final class AccessRequestsPlumbing {
       "uf.TimestampB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006status\030" +
       "\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\tstatus_at\030\t \001(\0132\032.g" +
       "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010" +
-      "grant_id\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363" +
-      "\263\007\001*\"\264\001\n\022AccessRequestEvent\022\026\n\002id\030\001 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nrequest_id\030\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\034\n\010actor_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004typ" +
-      "e\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\364\001\n\023Requesta" +
-      "bleResource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004n" +
-      "ame\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007healthy\030\003 \001(\010B\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016" +
-      "authentication\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags" +
-      "\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006access\030\007" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\303\001\n\023A" +
-      "ccessRequestConfig\022$\n\013resource_id\030\001 \001(\tB" +
-      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.protob" +
-      "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*2\331\001\n\016Acc" +
-      "essRequests\022o\n\004List\022\034.v1.AccessRequestLi" +
-      "stRequest\032\035.v1.AccessRequestListResponse" +
-      "\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/access-requ" +
-      "ests\032V\312\371\263\007\022\302\371\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003a" +
-      "q-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provid" +
-      "er\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.strongdm.api.plumbi" +
-      "ngB\026AccessRequestsPlumbingZ5github.com/s" +
-      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
-      "1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provide" +
-      "rb\006proto3"
+      "grant_id\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\013" +
+      " \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0221\n\016requester_name\030\014 \001(\t" +
+      "B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\020\372\370\263\007\013\250\363\263\007\001\322" +
+      "\363\263\007\001*\"\264\001\n\022AccessRequestEvent\022\026\n\002id\030\001 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nrequest_id\030\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\034\n\010actor_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004ty" +
+      "pe\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\364\001\n\023Request" +
+      "ableResource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004" +
+      "name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007healthy\030\003 \001(\010B" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n" +
+      "\016authentication\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tag" +
+      "s\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006access\030" +
+      "\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\303\001\n\023" +
+      "AccessRequestConfig\022$\n\013resource_id\030\001 \001(\t" +
+      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.proto" +
+      "buf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*2\331\001\n\016Ac" +
+      "cessRequests\022o\n\004List\022\034.v1.AccessRequestL" +
+      "istRequest\032\035.v1.AccessRequestListRespons" +
+      "e\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/access-req" +
+      "uests\032V\312\371\263\007\022\302\371\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003" +
+      "aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
+      "der\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.strongdm.api.plumb" +
+      "ingB\026AccessRequestsPlumbingZ5github.com/" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
+      "v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provid" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9317,7 +9596,7 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_AccessRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequest_descriptor,
-        new java.lang.String[] { "Id", "ResourceId", "Reason", "WorkflowId", "AccountId", "StartFrom", "ValidUntil", "Status", "StatusAt", "GrantId", });
+        new java.lang.String[] { "Id", "ResourceId", "Reason", "WorkflowId", "AccountId", "StartFrom", "ValidUntil", "Status", "StatusAt", "GrantId", "Duration", "RequesterName", });
     internal_static_v1_AccessRequestEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_AccessRequestEvent_fieldAccessorTable = new

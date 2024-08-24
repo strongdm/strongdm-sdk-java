@@ -1094,6 +1094,7 @@ public class Plumbing {
       AccessRequest plumbing) {
     com.strongdm.api.AccessRequest porcelain = new com.strongdm.api.AccessRequest();
     porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setDuration((plumbing.getDuration()));
     porcelain.setGrantId((plumbing.getGrantId()));
     porcelain.setId((plumbing.getId()));
     porcelain.setReason((plumbing.getReason()));
@@ -1115,6 +1116,7 @@ public class Plumbing {
     if (porcelain.getAccountId() != null) {
       builder.setAccountId((porcelain.getAccountId()));
     }
+    builder.setDuration(porcelain.getDuration());
     if (porcelain.getGrantId() != null) {
       builder.setGrantId((porcelain.getGrantId()));
     }

@@ -31,6 +31,16 @@ public class AccessRequest {
     this.accountId = in;
   }
 
+  private long duration;
+  /** Duration of the access request. */
+  public long getDuration() {
+    return this.duration;
+  }
+  /** Duration of the access request. */
+  public void setDuration(long in) {
+    this.duration = in;
+  }
+
   private String grantId;
   /** The account grant created, if it exists. */
   public String getGrantId() {

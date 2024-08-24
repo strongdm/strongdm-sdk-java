@@ -33,4 +33,5 @@ public final class AuthProvider {
   public static final String ONE_LOGIN_SAML = "onelogin-saml";
   public static final String GENERIC_SAML = "generic-saml";
   public static final String PING_IDSAML = "ping-identity-saml";
+  public static final String PING_IDOIDC = "ping-identity-oidc";
 }
