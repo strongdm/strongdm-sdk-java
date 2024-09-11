@@ -16948,6 +16948,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setLastName((plumbing.getLastName()));
     porcelain.setManagedBy((plumbing.getManagedBy()));
+    porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPermissionLevel((plumbing.getPermissionLevelRW()));
     porcelain.setSuspended((plumbing.getSuspendedRO()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -16976,6 +16977,9 @@ public class Plumbing {
     }
     if (porcelain.getManagedBy() != null) {
       builder.setManagedBy((porcelain.getManagedBy()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
     }
     if (porcelain.getPermissionLevel() != null) {
       builder.setPermissionLevelRW((porcelain.getPermissionLevel()));

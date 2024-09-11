@@ -87,6 +87,22 @@ public class User implements Account {
     this.managedBy = in;
   }
 
+  private String password;
+  /**
+   * Password is a write-only field that can be used to set the user's password. Currently only
+   * supported for update.
+   */
+  public String getPassword() {
+    return this.password;
+  }
+  /**
+   * Password is a write-only field that can be used to set the user's password. Currently only
+   * supported for update.
+   */
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
   private String permissionLevel;
   /** PermissionLevel is the user's permission level e.g. admin, DBA, user. */
   public String getPermissionLevel() {

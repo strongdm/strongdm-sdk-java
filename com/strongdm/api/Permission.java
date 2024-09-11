@@ -53,6 +53,7 @@ public final class Permission {
   public static final String USER_DELETE = "user:delete";
   public static final String USER_ASSIGN = "user:assign";
   public static final String USER_SUSPEND = "user:suspend";
+  public static final String USER_SET_PASSWORD = "user:set_password";
   public static final String DEMO_PROVISIONING_REQUEST_CREATE = "demoprovisioningrequest:create";
   public static final String DEMO_PROVISIONING_REQUEST_LIST = "demoprovisioningrequest:list";
   public static final String ROLE_LIST = "role:list";

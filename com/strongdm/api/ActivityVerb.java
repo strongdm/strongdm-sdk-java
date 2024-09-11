@@ -23,6 +23,7 @@ public final class ActivityVerb {
   public static final String USER_UPDATED = "user updated";
   public static final String USER_SIGNUP = "user signup";
   public static final String USER_TYPE_CHANGED = "user type changed";
+  public static final String USER_PASSWORD_CHANGED = "user password changed";
   public static final String USER_TEMPORARY_ACCESS_GRANTED = "user temporary access granted";
   public static final String USER_TEMPORARY_ACCESS_REVOKED = "user temporary access revoked";
   public static final String USER_TEMPORARY_ACCESS_EXPIRED = "user temporary access expired";
