@@ -155,6 +155,9 @@ public final class ActivityVerb {
   public static final String SECRET_STORE_ADDED = "secret store added";
   public static final String SECRET_STORE_UPDATED = "secret store updated";
   public static final String SECRET_STORE_DELETED = "secret store deleted";
+  public static final String SECRET_ENGINE_ADDED = "secret engine added";
+  public static final String SECRET_ENGINE_UPDATED = "secret engine updated";
+  public static final String SECRET_ENGINE_DELETED = "secret engine deleted";
   public static final String REMOTE_IDENTITY_GROUP_CREATED = "remote identity group created";
   public static final String REMOTE_IDENTITY_GROUP_UPDATED = "remote identity group updated";
   public static final String REMOTE_IDENTITY_GROUP_DELETED = "remote identity group deleted";
@@ -245,4 +248,9 @@ public final class ActivityVerb {
   public static final String USER_INTEGRATION_DEAUTHORIZED = "user deauthorized integration";
   public static final String SERVICE_NOW_TOKEN_ADDED = "ServiceNow token created";
   public static final String SERVICE_NOW_TOKEN_DELETED = "ServiceNow token deleted";
+  public static final String MANAGED_SECRET_CREATED = "managed secret created";
+  public static final String MANAGED_SECRET_UPDATED = "managed secret updated";
+  public static final String MANAGED_SECRET_EXPIRATION_TIME_UPDATED =
+      "managed secret expiration time updated";
+  public static final String MANAGED_SECRET_DELETED = "managed secret deleted";
 }

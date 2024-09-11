@@ -11303,10 +11303,10 @@ public final class Spec {
       "\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.google.protobuf." +
       "TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362" +
       "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestM" +
-      "etadata\"\031\n\027GenericResponseMetadataBR\n\031co" +
-      "m.strongdm.api.plumbingZ5github.com/stro" +
-      "ngdm/strongdm-sdk-go/v3/internal/v1;v1b\006" +
-      "proto3"
+      "etadata\"%\n\027GenericResponseMetadata:\n\372\370\263\007" +
+      "\005\250\363\263\007\001BR\n\031com.strongdm.api.plumbingZ5git" +
+      "hub.com/strongdm/strongdm-sdk-go/v3/inte" +
+      "rnal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

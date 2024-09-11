@@ -28,6 +28,11 @@ public final class Permission {
   public static final String DATASOURCE_UPDATE = "datasource:update";
   public static final String RESOURCE_LOCK_DELETE = "resourcelock:delete";
   public static final String RESOURCE_LOCK_LIST = "resourcelock:list";
+  public static final String SECRET_ENGINE_CREATE = "secretengine:create";
+  public static final String SECRET_ENGINE_LIST = "secretengine:list";
+  public static final String SECRET_ENGINE_DELETE = "secretengine:delete";
+  public static final String SECRET_ENGINE_UPDATE = "secretengine:update";
+  public static final String SECRET_ENGINE_STATUS = "secretengine:status";
   public static final String SECRET_STORE_CREATE = "secretstore:create";
   public static final String SECRET_STORE_LIST = "secretstore:list";
   public static final String SECRET_STORE_DELETE = "secretstore:delete";
@@ -72,6 +77,7 @@ public final class Permission {
   public static final String ORG_AUDIT_ORG = "audit:organization";
   public static final String ORG_AUDIT_REMOTE_IDENTITIES = "audit:remoteidentities";
   public static final String ORG_AUDIT_REMOTE_IDENTITY_GROUPS = "audit:remoteidentitygroups";
+  public static final String ORG_AUDIT_SECRET_ENGINES = "audit:secretengines";
   public static final String ORG_AUDIT_SECRET_STORES = "audit:secretstores";
   public static final String ORG_AUDIT_WORKFLOWS = "audit:workflows";
   public static final String ORG_AUDIT_APPROVAL_FLOWS = "audit:approvalflows";
@@ -105,4 +111,9 @@ public final class Permission {
   public static final String BILLING_READ = "billing:read";
   public static final String CREDENTIAL_READ = "credential:read";
   public static final String CREDENTIAL_WRITE = "credential:write";
+  public static final String MANAGED_SECRET_CREATE = "managedsecret:create";
+  public static final String MANAGED_SECRET_LIST = "managedsecret:list";
+  public static final String MANAGED_SECRET_DELETE = "managedsecret:delete";
+  public static final String MANAGED_SECRET_UPDATE = "managedsecret:update";
+  public static final String MANAGED_SECRET_READ = "managedsecret:read";
 }

@@ -25,6 +25,7 @@ public final class ActivityEntityType {
   public static final String ORGANIZATION = "organization";
   public static final String INSTALLATION = "installation";
   public static final String SECRET_STORE = "secretstore";
+  public static final String SECRET_ENGINE = "secretengine";
   public static final String REMOTE_IDENTITY_GROUP = "remote_identity_group";
   public static final String REMOTE_IDENTITY = "remote_identity";
   public static final String IDENTITY_SET = "identity_set";
@@ -34,6 +35,7 @@ public final class ActivityEntityType {
   public static final String APPROVAL_FLOW = "approval_flow";
   public static final String APPROVAL_FLOW_STEP = "approval_flow_step";
   public static final String APPROVAL_FLOW_APPROVER = "approval_flow_approver";
+  public static final String MANAGED_SECRET = "managed_secret";
   public static final String NODE = "node";
   public static final String PEERING_GROUP = "peering_group";
   public static final String PEERING_GROUP_NODE = "peering_group_node";
