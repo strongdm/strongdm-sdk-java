@@ -10456,6 +10456,7 @@ public class Plumbing {
     porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
     porcelain.setDeviceTrustEnabled((plumbing.getDeviceTrustEnabled()));
     porcelain.setDeviceTrustProvider((plumbing.getDeviceTrustProvider()));
+    porcelain.setEnforceSingleSession((plumbing.getEnforceSingleSession()));
     porcelain.setIdleTimeout(Plumbing.convertDurationToPorcelain(plumbing.getIdleTimeout()));
     porcelain.setIdleTimeoutEnabled((plumbing.getIdleTimeoutEnabled()));
     porcelain.setKind((plumbing.getKind()));
@@ -10499,6 +10500,7 @@ public class Plumbing {
     if (porcelain.getDeviceTrustProvider() != null) {
       builder.setDeviceTrustProvider((porcelain.getDeviceTrustProvider()));
     }
+    builder.setEnforceSingleSession(porcelain.getEnforceSingleSession());
     if (porcelain.getIdleTimeout() != null) {
       builder.setIdleTimeout(Plumbing.convertDurationToPlumbing(porcelain.getIdleTimeout()));
     }

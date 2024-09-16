@@ -11055,19 +11055,19 @@ public final class NodesPlumbing {
     com.strongdm.api.plumbing.NodesPlumbing.GatewayOrBuilder getGatewayOrBuilder();
 
     /**
-     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
-     * @return Whether the gatewayCluster field is set.
+     * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the proxyCluster field is set.
      */
-    boolean hasGatewayCluster();
+    boolean hasProxyCluster();
     /**
-     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
-     * @return The gatewayCluster.
+     * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return The proxyCluster.
      */
-    com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getGatewayCluster();
+    com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster getProxyCluster();
     /**
-     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder getGatewayClusterOrBuilder();
+    com.strongdm.api.plumbing.NodesPlumbing.ProxyClusterOrBuilder getProxyClusterOrBuilder();
 
     public com.strongdm.api.plumbing.NodesPlumbing.Node.NodeCase getNodeCase();
   }
@@ -11152,14 +11152,14 @@ public final class NodesPlumbing {
               break;
             }
             case 26: {
-              com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder subBuilder = null;
+              com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder subBuilder = null;
               if (nodeCase_ == 3) {
-                subBuilder = ((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_).toBuilder();
               }
               node_ =
-                  input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_);
                 node_ = subBuilder.buildPartial();
               }
               nodeCase_ = 3;
@@ -11206,7 +11206,7 @@ public final class NodesPlumbing {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RELAY(1),
       GATEWAY(2),
-      GATEWAY_CLUSTER(3),
+      PROXY_CLUSTER(3),
       NODE_NOT_SET(0);
       private final int value;
       private NodeCase(int value) {
@@ -11226,7 +11226,7 @@ public final class NodesPlumbing {
         switch (value) {
           case 1: return RELAY;
           case 2: return GATEWAY;
-          case 3: return GATEWAY_CLUSTER;
+          case 3: return PROXY_CLUSTER;
           case 0: return NODE_NOT_SET;
           default: return null;
         }
@@ -11304,35 +11304,35 @@ public final class NodesPlumbing {
       return com.strongdm.api.plumbing.NodesPlumbing.Gateway.getDefaultInstance();
     }
 
-    public static final int GATEWAY_CLUSTER_FIELD_NUMBER = 3;
+    public static final int PROXY_CLUSTER_FIELD_NUMBER = 3;
     /**
-     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
-     * @return Whether the gatewayCluster field is set.
+     * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the proxyCluster field is set.
      */
     @java.lang.Override
-    public boolean hasGatewayCluster() {
+    public boolean hasProxyCluster() {
       return nodeCase_ == 3;
     }
     /**
-     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
-     * @return The gatewayCluster.
+     * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * @return The proxyCluster.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getGatewayCluster() {
+    public com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster getProxyCluster() {
       if (nodeCase_ == 3) {
-         return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+         return (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_;
       }
-      return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+      return com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance();
     }
     /**
-     * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder getGatewayClusterOrBuilder() {
+    public com.strongdm.api.plumbing.NodesPlumbing.ProxyClusterOrBuilder getProxyClusterOrBuilder() {
       if (nodeCase_ == 3) {
-         return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+         return (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_;
       }
-      return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+      return com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11356,7 +11356,7 @@ public final class NodesPlumbing {
         output.writeMessage(2, (com.strongdm.api.plumbing.NodesPlumbing.Gateway) node_);
       }
       if (nodeCase_ == 3) {
-        output.writeMessage(3, (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_);
+        output.writeMessage(3, (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_);
       }
       unknownFields.writeTo(output);
     }
@@ -11377,7 +11377,7 @@ public final class NodesPlumbing {
       }
       if (nodeCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_);
+          .computeMessageSize(3, (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11405,8 +11405,8 @@ public final class NodesPlumbing {
               .equals(other.getGateway())) return false;
           break;
         case 3:
-          if (!getGatewayCluster()
-              .equals(other.getGatewayCluster())) return false;
+          if (!getProxyCluster()
+              .equals(other.getProxyCluster())) return false;
           break;
         case 0:
         default:
@@ -11432,8 +11432,8 @@ public final class NodesPlumbing {
           hash = (53 * hash) + getGateway().hashCode();
           break;
         case 3:
-          hash = (37 * hash) + GATEWAY_CLUSTER_FIELD_NUMBER;
-          hash = (53 * hash) + getGatewayCluster().hashCode();
+          hash = (37 * hash) + PROXY_CLUSTER_FIELD_NUMBER;
+          hash = (53 * hash) + getProxyCluster().hashCode();
           break;
         case 0:
         default:
@@ -11621,10 +11621,10 @@ public final class NodesPlumbing {
           }
         }
         if (nodeCase_ == 3) {
-          if (gatewayClusterBuilder_ == null) {
+          if (proxyClusterBuilder_ == null) {
             result.node_ = node_;
           } else {
-            result.node_ = gatewayClusterBuilder_.build();
+            result.node_ = proxyClusterBuilder_.build();
           }
         }
         result.nodeCase_ = nodeCase_;
@@ -11685,8 +11685,8 @@ public final class NodesPlumbing {
             mergeGateway(other.getGateway());
             break;
           }
-          case GATEWAY_CLUSTER: {
-            mergeGatewayCluster(other.getGatewayCluster());
+          case PROXY_CLUSTER: {
+            mergeProxyCluster(other.getProxyCluster());
             break;
           }
           case NODE_NOT_SET: {
@@ -12022,71 +12022,71 @@ public final class NodesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder> gatewayClusterBuilder_;
+          com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster, com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.ProxyClusterOrBuilder> proxyClusterBuilder_;
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
-       * @return Whether the gatewayCluster field is set.
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the proxyCluster field is set.
        */
       @java.lang.Override
-      public boolean hasGatewayCluster() {
+      public boolean hasProxyCluster() {
         return nodeCase_ == 3;
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
-       * @return The gatewayCluster.
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * @return The proxyCluster.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getGatewayCluster() {
-        if (gatewayClusterBuilder_ == null) {
+      public com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster getProxyCluster() {
+        if (proxyClusterBuilder_ == null) {
           if (nodeCase_ == 3) {
-            return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+            return (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_;
           }
-          return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+          return com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance();
         } else {
           if (nodeCase_ == 3) {
-            return gatewayClusterBuilder_.getMessage();
+            return proxyClusterBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+          return com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance();
         }
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setGatewayCluster(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster value) {
-        if (gatewayClusterBuilder_ == null) {
+      public Builder setProxyCluster(com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster value) {
+        if (proxyClusterBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           node_ = value;
           onChanged();
         } else {
-          gatewayClusterBuilder_.setMessage(value);
+          proxyClusterBuilder_.setMessage(value);
         }
         nodeCase_ = 3;
         return this;
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setGatewayCluster(
-          com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder builderForValue) {
-        if (gatewayClusterBuilder_ == null) {
+      public Builder setProxyCluster(
+          com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder builderForValue) {
+        if (proxyClusterBuilder_ == null) {
           node_ = builderForValue.build();
           onChanged();
         } else {
-          gatewayClusterBuilder_.setMessage(builderForValue.build());
+          proxyClusterBuilder_.setMessage(builderForValue.build());
         }
         nodeCase_ = 3;
         return this;
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeGatewayCluster(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster value) {
-        if (gatewayClusterBuilder_ == null) {
+      public Builder mergeProxyCluster(com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster value) {
+        if (proxyClusterBuilder_ == null) {
           if (nodeCase_ == 3 &&
-              node_ != com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance()) {
-            node_ = com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.newBuilder((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_)
+              node_ != com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance()) {
+            node_ = com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.newBuilder((com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_)
                 .mergeFrom(value).buildPartial();
           } else {
             node_ = value;
@@ -12094,19 +12094,19 @@ public final class NodesPlumbing {
           onChanged();
         } else {
           if (nodeCase_ == 3) {
-            gatewayClusterBuilder_.mergeFrom(value);
+            proxyClusterBuilder_.mergeFrom(value);
           } else {
-            gatewayClusterBuilder_.setMessage(value);
+            proxyClusterBuilder_.setMessage(value);
           }
         }
         nodeCase_ = 3;
         return this;
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder clearGatewayCluster() {
-        if (gatewayClusterBuilder_ == null) {
+      public Builder clearProxyCluster() {
+        if (proxyClusterBuilder_ == null) {
           if (nodeCase_ == 3) {
             nodeCase_ = 0;
             node_ = null;
@@ -12117,50 +12117,50 @@ public final class NodesPlumbing {
             nodeCase_ = 0;
             node_ = null;
           }
-          gatewayClusterBuilder_.clear();
+          proxyClusterBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder getGatewayClusterBuilder() {
-        return getGatewayClusterFieldBuilder().getBuilder();
+      public com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder getProxyClusterBuilder() {
+        return getProxyClusterFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder getGatewayClusterOrBuilder() {
-        if ((nodeCase_ == 3) && (gatewayClusterBuilder_ != null)) {
-          return gatewayClusterBuilder_.getMessageOrBuilder();
+      public com.strongdm.api.plumbing.NodesPlumbing.ProxyClusterOrBuilder getProxyClusterOrBuilder() {
+        if ((nodeCase_ == 3) && (proxyClusterBuilder_ != null)) {
+          return proxyClusterBuilder_.getMessageOrBuilder();
         } else {
           if (nodeCase_ == 3) {
-            return (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_;
+            return (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_;
           }
-          return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+          return com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance();
         }
       }
       /**
-       * <code>.v1.GatewayCluster gateway_cluster = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.ProxyCluster proxy_cluster = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder> 
-          getGatewayClusterFieldBuilder() {
-        if (gatewayClusterBuilder_ == null) {
+          com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster, com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.ProxyClusterOrBuilder> 
+          getProxyClusterFieldBuilder() {
+        if (proxyClusterBuilder_ == null) {
           if (!(nodeCase_ == 3)) {
-            node_ = com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+            node_ = com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance();
           }
-          gatewayClusterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder>(
-                  (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) node_,
+          proxyClusterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster, com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder, com.strongdm.api.plumbing.NodesPlumbing.ProxyClusterOrBuilder>(
+                  (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) node_,
                   getParentForChildren(),
                   isClean());
           node_ = null;
         }
         nodeCase_ = 3;
         onChanged();;
-        return gatewayClusterBuilder_;
+        return proxyClusterBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19039,13 +19039,13 @@ public final class NodesPlumbing {
 
   }
 
-  public interface GatewayClusterOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.GatewayCluster)
+  public interface ProxyClusterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ProxyCluster)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Unique identifier of the Gateway.
+     * Unique identifier of the Proxy Cluster.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -19054,7 +19054,7 @@ public final class NodesPlumbing {
     java.lang.String getId();
     /**
      * <pre>
-     * Unique identifier of the Gateway.
+     * Unique identifier of the Proxy Cluster.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -19065,7 +19065,7 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * Unique human-readable name of the gateway cluster. Names must
+     * Unique human-readable name of the proxy cluster. Names must
      * include only letters, numbers, and hyphens (no spaces, underscores, or
      * other special characters). Generated if not provided on create.
      * </pre>
@@ -19076,7 +19076,7 @@ public final class NodesPlumbing {
     java.lang.String getName();
     /**
      * <pre>
-     * Unique human-readable name of the gateway cluster. Names must
+     * Unique human-readable name of the proxy cluster. Names must
      * include only letters, numbers, and hyphens (no spaces, underscores, or
      * other special characters). Generated if not provided on create.
      * </pre>
@@ -19089,7 +19089,7 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * The public hostname/port tuple at which the gateway cluster will be
+     * The public hostname/port tuple at which the proxy cluster will be
      * accessible to clients.
      * </pre>
      *
@@ -19099,7 +19099,7 @@ public final class NodesPlumbing {
     java.lang.String getAddress();
     /**
      * <pre>
-     * The public hostname/port tuple at which the gateway cluster will be
+     * The public hostname/port tuple at which the proxy cluster will be
      * accessible to clients.
      * </pre>
      *
@@ -19254,21 +19254,21 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * GatewayCluster represents a cluster of StrongDM gateways and relays.
+   * ProxyCluster represents a cluster of StrongDM proxies.
    * </pre>
    *
-   * Protobuf type {@code v1.GatewayCluster}
+   * Protobuf type {@code v1.ProxyCluster}
    */
-  public static final class GatewayCluster extends
+  public static final class ProxyCluster extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.GatewayCluster)
-      GatewayClusterOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.ProxyCluster)
+      ProxyClusterOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GatewayCluster.newBuilder() to construct.
-    private GatewayCluster(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ProxyCluster.newBuilder() to construct.
+    private ProxyCluster(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GatewayCluster() {
+    private ProxyCluster() {
       id_ = "";
       name_ = "";
       address_ = "";
@@ -19279,7 +19279,7 @@ public final class NodesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GatewayCluster();
+      return new ProxyCluster();
     }
 
     @java.lang.Override
@@ -19287,7 +19287,7 @@ public final class NodesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GatewayCluster(
+    private ProxyCluster(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19385,22 +19385,22 @@ public final class NodesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_descriptor;
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_ProxyCluster_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_fieldAccessorTable
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_ProxyCluster_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.class, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder.class);
+              com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.class, com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Unique identifier of the Gateway.
+     * Unique identifier of the Proxy Cluster.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -19421,7 +19421,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Unique identifier of the Gateway.
+     * Unique identifier of the Proxy Cluster.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -19446,7 +19446,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Unique human-readable name of the gateway cluster. Names must
+     * Unique human-readable name of the proxy cluster. Names must
      * include only letters, numbers, and hyphens (no spaces, underscores, or
      * other special characters). Generated if not provided on create.
      * </pre>
@@ -19469,7 +19469,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Unique human-readable name of the gateway cluster. Names must
+     * Unique human-readable name of the proxy cluster. Names must
      * include only letters, numbers, and hyphens (no spaces, underscores, or
      * other special characters). Generated if not provided on create.
      * </pre>
@@ -19496,7 +19496,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object address_;
     /**
      * <pre>
-     * The public hostname/port tuple at which the gateway cluster will be
+     * The public hostname/port tuple at which the proxy cluster will be
      * accessible to clients.
      * </pre>
      *
@@ -19518,7 +19518,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * The public hostname/port tuple at which the gateway cluster will be
+     * The public hostname/port tuple at which the proxy cluster will be
      * accessible to clients.
      * </pre>
      *
@@ -19793,10 +19793,10 @@ public final class NodesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster other = (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) obj;
+      com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster other = (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -19850,69 +19850,69 @@ public final class NodesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parseFrom(
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19925,7 +19925,7 @@ public final class NodesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -19942,29 +19942,29 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * GatewayCluster represents a cluster of StrongDM gateways and relays.
+     * ProxyCluster represents a cluster of StrongDM proxies.
      * </pre>
      *
-     * Protobuf type {@code v1.GatewayCluster}
+     * Protobuf type {@code v1.ProxyCluster}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.GatewayCluster)
-        com.strongdm.api.plumbing.NodesPlumbing.GatewayClusterOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.ProxyCluster)
+        com.strongdm.api.plumbing.NodesPlumbing.ProxyClusterOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_descriptor;
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_ProxyCluster_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_fieldAccessorTable
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_ProxyCluster_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.class, com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.Builder.class);
+                com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.class, com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.newBuilder()
+      // Construct using com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20013,17 +20013,17 @@ public final class NodesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_GatewayCluster_descriptor;
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_ProxyCluster_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance();
+      public com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster build() {
-        com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster result = buildPartial();
+      public com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster build() {
+        com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20031,8 +20031,8 @@ public final class NodesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster buildPartial() {
-        com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster result = new com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster(this);
+      public com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster buildPartial() {
+        com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster result = new com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster(this);
         int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
@@ -20094,16 +20094,16 @@ public final class NodesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) {
-          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster)other);
+        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) {
+          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster other) {
-        if (other == com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster other) {
+        if (other == com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -20163,11 +20163,11 @@ public final class NodesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster parsedMessage = null;
+        com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -20181,7 +20181,7 @@ public final class NodesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Unique identifier of the Gateway.
+       * Unique identifier of the Proxy Cluster.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -20201,7 +20201,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the Gateway.
+       * Unique identifier of the Proxy Cluster.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -20222,7 +20222,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the Gateway.
+       * Unique identifier of the Proxy Cluster.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -20241,7 +20241,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the Gateway.
+       * Unique identifier of the Proxy Cluster.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -20255,7 +20255,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the Gateway.
+       * Unique identifier of the Proxy Cluster.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -20277,7 +20277,7 @@ public final class NodesPlumbing {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Unique human-readable name of the gateway cluster. Names must
+       * Unique human-readable name of the proxy cluster. Names must
        * include only letters, numbers, and hyphens (no spaces, underscores, or
        * other special characters). Generated if not provided on create.
        * </pre>
@@ -20299,7 +20299,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the gateway cluster. Names must
+       * Unique human-readable name of the proxy cluster. Names must
        * include only letters, numbers, and hyphens (no spaces, underscores, or
        * other special characters). Generated if not provided on create.
        * </pre>
@@ -20322,7 +20322,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the gateway cluster. Names must
+       * Unique human-readable name of the proxy cluster. Names must
        * include only letters, numbers, and hyphens (no spaces, underscores, or
        * other special characters). Generated if not provided on create.
        * </pre>
@@ -20343,7 +20343,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the gateway cluster. Names must
+       * Unique human-readable name of the proxy cluster. Names must
        * include only letters, numbers, and hyphens (no spaces, underscores, or
        * other special characters). Generated if not provided on create.
        * </pre>
@@ -20359,7 +20359,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the gateway cluster. Names must
+       * Unique human-readable name of the proxy cluster. Names must
        * include only letters, numbers, and hyphens (no spaces, underscores, or
        * other special characters). Generated if not provided on create.
        * </pre>
@@ -20383,7 +20383,7 @@ public final class NodesPlumbing {
       private java.lang.Object address_ = "";
       /**
        * <pre>
-       * The public hostname/port tuple at which the gateway cluster will be
+       * The public hostname/port tuple at which the proxy cluster will be
        * accessible to clients.
        * </pre>
        *
@@ -20404,7 +20404,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The public hostname/port tuple at which the gateway cluster will be
+       * The public hostname/port tuple at which the proxy cluster will be
        * accessible to clients.
        * </pre>
        *
@@ -20426,7 +20426,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The public hostname/port tuple at which the gateway cluster will be
+       * The public hostname/port tuple at which the proxy cluster will be
        * accessible to clients.
        * </pre>
        *
@@ -20446,7 +20446,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The public hostname/port tuple at which the gateway cluster will be
+       * The public hostname/port tuple at which the proxy cluster will be
        * accessible to clients.
        * </pre>
        *
@@ -20461,7 +20461,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * The public hostname/port tuple at which the gateway cluster will be
+       * The public hostname/port tuple at which the proxy cluster will be
        * accessible to clients.
        * </pre>
        *
@@ -21277,41 +21277,41 @@ public final class NodesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.GatewayCluster)
+      // @@protoc_insertion_point(builder_scope:v1.ProxyCluster)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.GatewayCluster)
-    private static final com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.ProxyCluster)
+    private static final com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster();
     }
 
-    public static com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getDefaultInstance() {
+    public static com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GatewayCluster>
-        PARSER = new com.google.protobuf.AbstractParser<GatewayCluster>() {
+    private static final com.google.protobuf.Parser<ProxyCluster>
+        PARSER = new com.google.protobuf.AbstractParser<ProxyCluster>() {
       @java.lang.Override
-      public GatewayCluster parsePartialFrom(
+      public ProxyCluster parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GatewayCluster(input, extensionRegistry);
+        return new ProxyCluster(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<GatewayCluster> parser() {
+    public static com.google.protobuf.Parser<ProxyCluster> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GatewayCluster> getParserForType() {
+    public com.google.protobuf.Parser<ProxyCluster> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.NodesPlumbing.GatewayCluster getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.NodesPlumbing.ProxyCluster getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24071,10 +24071,10 @@ public final class NodesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Gateway_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_GatewayCluster_descriptor;
+    internal_static_v1_ProxyCluster_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_GatewayCluster_fieldAccessorTable;
+      internal_static_v1_ProxyCluster_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_NodeMaintenanceWindow_descriptor;
   private static final 
@@ -24138,81 +24138,82 @@ public final class NodesPlumbing {
       "esponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.Node" +
       "B\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
       "teLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
-      "\263\007\022\262\364\263\007\r!json_gateway\"\247\002\n\004Node\022&\n\005relay\030" +
+      "\263\007\022\262\364\263\007\r!json_gateway\"\264\002\n\004Node\022&\n\005relay\030" +
       "\001 \001(\0132\t.v1.RelayB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007gatewa" +
-      "y\030\002 \001(\0132\013.v1.GatewayB\n\362\370\263\007\005\260\363\263\007\001H\000\022H\n\017ga" +
-      "teway_cluster\030\003 \001(\0132\022.v1.GatewayClusterB" +
-      "\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_privateH\000:[\372\370\263\007L\302\363\263\007G" +
-      "\242\363\263\007\035tf_examples/node_resource.txt\252\363\263\007 t" +
-      "f_examples/node_data_source.txt\372\370\263\007\005\250\363\263\007" +
-      "\001B$\n\004node\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"" +
-      "\250\004\n\005Relay\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004nam" +
-      "e\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB" +
-      "-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-pr" +
-      "ovider\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\"\n\016gateway_filter\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
-      "\n\006device\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010locat" +
-      "ion\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\010 " +
-      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007" +
-      "\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023maintenanc" +
-      "e_windows\030\013 \003(\0132\031.v1.NodeMaintenanceWind" +
-      "owB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-prov" +
-      "ider\022\022maintenance_window\022L\n\020discovery_co" +
-      "nfig\030\014 \001(\0132\027.v1.NodeDiscoveryConfigB\031\362\370\263" +
-      "\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007\001\"\204\005\n\007G" +
-      "ateway\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370" +
-      "\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provi" +
-      "der\022,\n\016listen_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300" +
-      "\363\263\007\001\340\363\263\007\001\022*\n\014bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363" +
-      "\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\007 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\037\n\006device\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!" +
-      "\n\010location\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007ver" +
-      "sion\030\n \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(" +
-      "\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023mai" +
-      "ntenance_windows\030\r \003(\0132\031.v1.NodeMaintena" +
-      "nceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terrafo" +
-      "rm-provider\022\022maintenance_window\022L\n\020disco" +
-      "very_config\030\016 \001(\0132\027.v1.NodeDiscoveryConf" +
-      "igB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007" +
-      "\001\"\361\002\n\016GatewayCluster\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022%\n\007a" +
-      "ddress\030\003 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022\"\n\004ta" +
-      "gs\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022t\n\023mainte" +
-      "nance_windows\030\005 \003(\0132\031.v1.NodeMaintenance" +
-      "WindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-" +
-      "provider\022\022maintenance_window\022L\n\020discover" +
-      "y_config\030\006 \001(\0132\027.v1.NodeDiscoveryConfigB" +
-      "\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\031\372\370\263\007\024\250\363\263\007\001\322\363" +
-      "\263\007\ngo_private\"\266\001\n\025NodeMaintenanceWindow\022" +
-      "!\n\rcron_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020re" +
-      "quire_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250" +
-      "\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-provider\022\010Type" +
-      "List\372\363\263\007\035nodeMaintenanceWindowElemType\"\303" +
-      "\001\n\023NodeDiscoveryConfig\022\033\n\007enabled\030\001 \001(\010B" +
-      "\n\362\370\263\007\005\260\363\263\007\001\0225\n\006period\030\002 \001(\0132\031.google.pro" +
-      "tobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014enabledTyp" +
-      "es\030\003 \003(\0132\033.v1.NodeDiscoveryTypeConfigB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"N\n\027" +
-      "NodeDiscoveryTypeConfig\022\030\n\004type\030\001 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\207\004\n" +
-      "\005Nodes\022Z\n\006Create\022\025.v1.NodeCreateRequest\032" +
-      "\026.v1.NodeCreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202" +
-      "\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1.NodeGetRe" +
-      "quest\032\023.v1.NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006Update\022\025.v1" +
-      ".NodeUpdateRequest\032\026.v1.NodeUpdateRespon" +
-      "se\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id" +
-      "}\022a\n\006Delete\022\025.v1.NodeDeleteRequest\032\026.v1." +
-      "NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
-      "\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023.v1.NodeLi" +
-      "stRequest\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363" +
-      "\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\0323\312\371\263\007\t\302\371\263\007\004Nod" +
-      "e\312\371\263\007\007\322\371\263\007\002n-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBa" +
-      "\n\031com.strongdm.api.plumbingB\rNodesPlumbi" +
-      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
-      "v3/internal/v1;v1b\006proto3"
+      "y\030\002 \001(\0132\013.v1.GatewayB\n\362\370\263\007\005\260\363\263\007\001H\000\022U\n\rpr" +
+      "oxy_cluster\030\003 \001(\0132\020.v1.ProxyClusterB*\362\370\263" +
+      "\007%\260\363\263\007\001\262\364\263\007\ngo_private\262\364\263\007\014json_gatewayH" +
+      "\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_examples/node_resou" +
+      "rce.txt\252\363\263\007 tf_examples/node_data_source" +
+      ".txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370" +
+      "\263\007\t\252\370\263\007\004name\"\250\004\n\005Relay\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n" +
+      "\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023" +
+      "!terraform-provider\022\"\n\004tags\030\004 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\005 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230" +
+      "\364\263\007\001\022!\n\010location\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022" +
+      " \n\007version\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uui" +
+      "d\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022" +
+      "t\n\023maintenance_windows\030\013 \003(\0132\031.v1.NodeMa" +
+      "intenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022t" +
+      "erraform-provider\022\022maintenance_window\022L\n" +
+      "\020discovery_config\030\014 \001(\0132\027.v1.NodeDiscove" +
+      "ryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263" +
+      "\007\005\250\363\263\007\001\"\204\005\n\007Gateway\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005st" +
+      "ate\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!te" +
+      "rraform-provider\022,\n\016listen_address\030\004 \001(\t" +
+      "B\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_address\030\005" +
+      " \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004tags\030\006 \001(\013" +
+      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter" +
+      "\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\010 \001(\tB\017\362\370\263\007" +
+      "\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001" +
+      "\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_p" +
+      "rivate\022t\n\023maintenance_windows\030\r \003(\0132\031.v1" +
+      ".NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302" +
+      "\364\263\007(\n\022terraform-provider\022\022maintenance_wi" +
+      "ndow\022L\n\020discovery_config\030\016 \001(\0132\027.v1.Node" +
+      "DiscoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_priva" +
+      "te:\n\372\370\263\007\005\250\363\263\007\001\"\200\003\n\014ProxyCluster\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\320\364\263\007\001\022%\n\007address\030\003 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001" +
+      "\340\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022t\n\023maintenance_windows\030\005 \003(\0132\031.v1.Node" +
+      "MaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n" +
+      "\022terraform-provider\022\022maintenance_window\022" +
+      "L\n\020discovery_config\030\006 \001(\0132\027.v1.NodeDisco" +
+      "veryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:*\372" +
+      "\370\263\007%\250\363\263\007\001\322\363\263\007\ngo_private\322\363\263\007\014json_gatewa" +
+      "y\"\266\001\n\025NodeMaintenanceWindow\022!\n\rcron_sche" +
+      "dule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_idlene" +
+      "ss\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263" +
+      "\007\036\n\022terraform-provider\022\010TypeList\372\363\263\007\035nod" +
+      "eMaintenanceWindowElemType\"\303\001\n\023NodeDisco" +
+      "veryConfig\022\033\n\007enabled\030\001 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "5\n\006period\030\002 \001(\0132\031.google.protobuf.Durati" +
+      "onB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014enabledTypes\030\003 \003(\0132\033.v" +
+      "1.NodeDiscoveryTypeConfigB\n\362\370\263\007\005\260\363\263\007\001:\031\372" +
+      "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"N\n\027NodeDiscover" +
+      "yTypeConfig\022\030\n\004type\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372" +
+      "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\207\004\n\005Nodes\022Z\n\006Cr" +
+      "eate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCre" +
+      "ateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1" +
+      "/nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.N" +
+      "odeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/" +
+      "v1/nodes/{id}\022^\n\006Update\022\025.v1.NodeUpdateR" +
+      "equest\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363\263" +
+      "\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete\022" +
+      "\025.v1.NodeDeleteRequest\032\026.v1.NodeDeleteRe" +
+      "sponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/no" +
+      "des/{id}\022S\n\004List\022\023.v1.NodeListRequest\032\024." +
+      "v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252" +
+      "\363\263\007\t/v1/nodes\0323\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n" +
+      "-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBa\n\031com.strong" +
+      "dm.api.plumbingB\rNodesPlumbingZ5github.c" +
+      "om/strongdm/strongdm-sdk-go/v3/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24287,7 +24288,7 @@ public final class NodesPlumbing {
     internal_static_v1_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Node_descriptor,
-        new java.lang.String[] { "Relay", "Gateway", "GatewayCluster", "Node", });
+        new java.lang.String[] { "Relay", "Gateway", "ProxyCluster", "Node", });
     internal_static_v1_Relay_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_v1_Relay_fieldAccessorTable = new
@@ -24300,11 +24301,11 @@ public final class NodesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
         new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", "DiscoveryConfig", });
-    internal_static_v1_GatewayCluster_descriptor =
+    internal_static_v1_ProxyCluster_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_v1_GatewayCluster_fieldAccessorTable = new
+    internal_static_v1_ProxyCluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_GatewayCluster_descriptor,
+        internal_static_v1_ProxyCluster_descriptor,
         new java.lang.String[] { "Id", "Name", "Address", "Tags", "MaintenanceWindows", "DiscoveryConfig", });
     internal_static_v1_NodeMaintenanceWindow_descriptor =
       getDescriptor().getMessageTypes().get(14);

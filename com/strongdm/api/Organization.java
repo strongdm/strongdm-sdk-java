@@ -61,6 +61,16 @@ public class Organization {
     this.deviceTrustProvider = in;
   }
 
+  private boolean enforceSingleSession;
+  /** Indicates if the Organization enforces a single session per user for the CLI and AdminUI. */
+  public boolean getEnforceSingleSession() {
+    return this.enforceSingleSession;
+  }
+  /** Indicates if the Organization enforces a single session per user for the CLI and AdminUI. */
+  public void setEnforceSingleSession(boolean in) {
+    this.enforceSingleSession = in;
+  }
+
   private Duration idleTimeout;
   /** The Organization's idle timeout, if enabled. */
   public Duration getIdleTimeout() {

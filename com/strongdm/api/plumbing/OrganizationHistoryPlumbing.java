@@ -4049,6 +4049,16 @@ public final class OrganizationHistoryPlumbing {
      */
     com.google.protobuf.ByteString
         getDeviceTrustProviderBytes();
+
+    /**
+     * <pre>
+     * Indicates if the Organization enforces a single session per user for the CLI and AdminUI.
+     * </pre>
+     *
+     * <code>bool enforce_single_session = 29 [(.v1.field_options) = { ... }</code>
+     * @return The enforceSingleSession.
+     */
+    boolean getEnforceSingleSession();
   }
   /**
    * Protobuf type {@code v1.Organization}
@@ -4309,6 +4319,11 @@ public final class OrganizationHistoryPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               deviceTrustProvider_ = s;
+              break;
+            }
+            case 232: {
+
+              enforceSingleSession_ = input.readBool();
               break;
             }
             default: {
@@ -5438,6 +5453,21 @@ public final class OrganizationHistoryPlumbing {
       }
     }
 
+    public static final int ENFORCE_SINGLE_SESSION_FIELD_NUMBER = 29;
+    private boolean enforceSingleSession_;
+    /**
+     * <pre>
+     * Indicates if the Organization enforces a single session per user for the CLI and AdminUI.
+     * </pre>
+     *
+     * <code>bool enforce_single_session = 29 [(.v1.field_options) = { ... }</code>
+     * @return The enforceSingleSession.
+     */
+    @java.lang.Override
+    public boolean getEnforceSingleSession() {
+      return enforceSingleSession_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5535,6 +5565,9 @@ public final class OrganizationHistoryPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceTrustProvider_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 28, deviceTrustProvider_);
+      }
+      if (enforceSingleSession_ != false) {
+        output.writeBool(29, enforceSingleSession_);
       }
       unknownFields.writeTo(output);
     }
@@ -5639,6 +5672,10 @@ public final class OrganizationHistoryPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceTrustProvider_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, deviceTrustProvider_);
       }
+      if (enforceSingleSession_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(29, enforceSingleSession_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5725,6 +5762,8 @@ public final class OrganizationHistoryPlumbing {
           != other.getDeviceTrustEnabled()) return false;
       if (!getDeviceTrustProvider()
           .equals(other.getDeviceTrustProvider())) return false;
+      if (getEnforceSingleSession()
+          != other.getEnforceSingleSession()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5807,6 +5846,9 @@ public final class OrganizationHistoryPlumbing {
           getDeviceTrustEnabled());
       hash = (37 * hash) + DEVICE_TRUST_PROVIDER_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceTrustProvider().hashCode();
+      hash = (37 * hash) + ENFORCE_SINGLE_SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnforceSingleSession());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6016,6 +6058,8 @@ public final class OrganizationHistoryPlumbing {
 
         deviceTrustProvider_ = "";
 
+        enforceSingleSession_ = false;
+
         return this;
       }
 
@@ -6090,6 +6134,7 @@ public final class OrganizationHistoryPlumbing {
         result.loopbackRange_ = loopbackRange_;
         result.deviceTrustEnabled_ = deviceTrustEnabled_;
         result.deviceTrustProvider_ = deviceTrustProvider_;
+        result.enforceSingleSession_ = enforceSingleSession_;
         onBuilt();
         return result;
       }
@@ -6239,6 +6284,9 @@ public final class OrganizationHistoryPlumbing {
         if (!other.getDeviceTrustProvider().isEmpty()) {
           deviceTrustProvider_ = other.deviceTrustProvider_;
           onChanged();
+        }
+        if (other.getEnforceSingleSession() != false) {
+          setEnforceSingleSession(other.getEnforceSingleSession());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8986,6 +9034,49 @@ public final class OrganizationHistoryPlumbing {
         onChanged();
         return this;
       }
+
+      private boolean enforceSingleSession_ ;
+      /**
+       * <pre>
+       * Indicates if the Organization enforces a single session per user for the CLI and AdminUI.
+       * </pre>
+       *
+       * <code>bool enforce_single_session = 29 [(.v1.field_options) = { ... }</code>
+       * @return The enforceSingleSession.
+       */
+      @java.lang.Override
+      public boolean getEnforceSingleSession() {
+        return enforceSingleSession_;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization enforces a single session per user for the CLI and AdminUI.
+       * </pre>
+       *
+       * <code>bool enforce_single_session = 29 [(.v1.field_options) = { ... }</code>
+       * @param value The enforceSingleSession to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnforceSingleSession(boolean value) {
+        
+        enforceSingleSession_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization enforces a single session per user for the CLI and AdminUI.
+       * </pre>
+       *
+       * <code>bool enforce_single_session = 29 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnforceSingleSession() {
+        
+        enforceSingleSession_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9087,7 +9178,7 @@ public final class OrganizationHistoryPlumbing {
       "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
       "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
       "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r\"\355\013\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "r\"\231\014\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
       " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
@@ -9123,19 +9214,20 @@ public final class OrganizationHistoryPlumbing {
       "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022\"\n\016loopback" +
       "_range\030\032 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\024device_trust" +
       "_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022)\n\025device_tru" +
-      "st_provider\030\034 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
-      "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r2\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1." +
-      "OrganizationHistoryListRequest\032#.v1.Orga" +
-      "nizationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312\371" +
-      "\263\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371" +
-      "\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
-      "derB\227\001\n\031com.strongdm.api.plumbingB\033Organ" +
-      "izationHistoryPlumbingZ5github.com/stron" +
-      "gdm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264" +
-      "\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006p" +
-      "roto3"
+      "st_provider\030\034 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026enforce" +
+      "_single_session\030\035 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005" +
+      "\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pro" +
+      "vider2\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\"" +
+      ".v1.OrganizationHistoryListRequest\032#.v1." +
+      "OrganizationHistoryListResponse\"/\202\371\263\007\010\242\363" +
+      "\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/organization-history" +
+      "\032U\312\371\263\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263" +
+      "\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-p" +
+      "roviderB\227\001\n\031com.strongdm.api.plumbingB\033O" +
+      "rganizationHistoryPlumbingZ5github.com/s" +
+      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
+      "1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provide" +
+      "rb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9168,7 +9260,7 @@ public final class OrganizationHistoryPlumbing {
     internal_static_v1_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Organization_descriptor,
-        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackRange", "DeviceTrustEnabled", "DeviceTrustProvider", });
+        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackRange", "DeviceTrustEnabled", "DeviceTrustProvider", "EnforceSingleSession", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

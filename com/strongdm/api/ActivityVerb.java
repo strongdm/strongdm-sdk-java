@@ -243,6 +243,8 @@ public final class ActivityVerb {
   public static final String RESOURCE_LOCKED = "user locked a resource";
   public static final String RESOURCE_UNLOCKED = "user unlocked a resource";
   public static final String RESOURCE_FORCE_UNLOCKED = "admin force-unlocked a resource";
+  public static final String CONCURRENT_AUTHENTICATION_REVOKED_PER_ORG_SETTING =
+      "concurrent authentications revoked per organization settings";
   public static final String ORG_INTEGRATION_INSTALLED = "org integration installed";
   public static final String USER_INTEGRATION_AUTHORIZED = "user authorized integration";
   public static final String ORG_INTEGRATION_UNINSTALLED = "org integration uninstalled";
