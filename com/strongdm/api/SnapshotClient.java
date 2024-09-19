@@ -109,6 +109,14 @@ public class SnapshotClient {
     return this.parent.policies;
   }
   /**
+   * Proxy Cluster Keys are authentication keys for all proxies within a cluster. The proxies within
+   * a cluster share the same key. One cluster can have multiple keys in order to facilitate key
+   * rotation.
+   */
+  public SnapshotProxyClusterKeys proxyClusterKeys() {
+    return this.parent.proxyClusterKeys;
+  }
+  /**
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to
    * connect to that resource.
    */

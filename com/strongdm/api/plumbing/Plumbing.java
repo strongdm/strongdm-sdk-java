@@ -64,6 +64,7 @@ import com.strongdm.api.plumbing.PeeringGroupResourcesPlumbing.*;
 import com.strongdm.api.plumbing.PeeringGroupsPlumbing.*;
 import com.strongdm.api.plumbing.PoliciesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.PoliciesPlumbing.*;
+import com.strongdm.api.plumbing.ProxyClusterKeysPlumbing.*;
 import com.strongdm.api.plumbing.QueriesPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentitiesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentitiesPlumbing.*;
@@ -10043,6 +10044,9 @@ public class Plumbing {
     if (plumbing.hasGateway()) {
       return convertGatewayToPorcelain(plumbing.getGateway());
     }
+    if (plumbing.hasProxyCluster()) {
+      return convertProxyClusterToPorcelain(plumbing.getProxyCluster());
+    }
     if (plumbing.hasRelay()) {
       return convertRelayToPorcelain(plumbing.getRelay());
     }
@@ -10056,6 +10060,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Gateway) {
       Node.Builder builder = Node.newBuilder();
       builder.setGateway(convertGatewayToPlumbing((com.strongdm.api.Gateway) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.ProxyCluster) {
+      Node.Builder builder = Node.newBuilder();
+      builder.setProxyCluster(
+          convertProxyClusterToPlumbing((com.strongdm.api.ProxyCluster) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Relay) {
@@ -11899,6 +11909,267 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertPrestoToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ProxyCluster convertProxyClusterToPorcelain(
+      ProxyCluster plumbing) {
+    com.strongdm.api.ProxyCluster porcelain = new com.strongdm.api.ProxyCluster();
+    porcelain.setAddress((plumbing.getAddress()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setMaintenanceWindows(
+        Plumbing.convertRepeatedNodeMaintenanceWindowToPorcelain(
+            plumbing.getMaintenanceWindowsList()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static ProxyCluster convertProxyClusterToPlumbing(
+      com.strongdm.api.ProxyCluster porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ProxyCluster.Builder builder = ProxyCluster.newBuilder();
+    if (porcelain.getAddress() != null) {
+      builder.setAddress((porcelain.getAddress()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    builder.addAllMaintenanceWindows(
+        Plumbing.convertRepeatedNodeMaintenanceWindowToPlumbing(porcelain.getMaintenanceWindows()));
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ProxyCluster> convertRepeatedProxyClusterToPorcelain(
+      Collection<ProxyCluster> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ProxyCluster>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertProxyClusterToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ProxyCluster> convertRepeatedProxyClusterToPlumbing(
+      Collection<com.strongdm.api.ProxyCluster> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ProxyCluster>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertProxyClusterToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ProxyClusterKey convertProxyClusterKeyToPorcelain(
+      ProxyClusterKey plumbing) {
+    com.strongdm.api.ProxyClusterKey porcelain = new com.strongdm.api.ProxyClusterKey();
+    porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setLastUsedAt(Plumbing.convertTimestampToPorcelain(plumbing.getLastUsedAt()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    return porcelain;
+  }
+
+  public static ProxyClusterKey convertProxyClusterKeyToPlumbing(
+      com.strongdm.api.ProxyClusterKey porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ProxyClusterKey.Builder builder = ProxyClusterKey.newBuilder();
+    if (porcelain.getCreatedAt() != null) {
+      builder.setCreatedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCreatedAt()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getLastUsedAt() != null) {
+      builder.setLastUsedAt(Plumbing.convertTimestampToPlumbing(porcelain.getLastUsedAt()));
+    }
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ProxyClusterKey> convertRepeatedProxyClusterKeyToPorcelain(
+      Collection<ProxyClusterKey> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ProxyClusterKey>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertProxyClusterKeyToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ProxyClusterKey> convertRepeatedProxyClusterKeyToPlumbing(
+      Collection<com.strongdm.api.ProxyClusterKey> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ProxyClusterKey>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertProxyClusterKeyToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ProxyClusterKeyCreateResponse
+      convertProxyClusterKeyCreateResponseToPorcelain(ProxyClusterKeyCreateResponse plumbing) {
+    com.strongdm.api.ProxyClusterKeyCreateResponse porcelain =
+        new com.strongdm.api.ProxyClusterKeyCreateResponse();
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setProxyClusterKey(
+        Plumbing.convertProxyClusterKeyToPorcelain(plumbing.getProxyClusterKey()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setSecretKey((plumbing.getSecretKey()));
+    return porcelain;
+  }
+
+  public static ProxyClusterKeyCreateResponse convertProxyClusterKeyCreateResponseToPlumbing(
+      com.strongdm.api.ProxyClusterKeyCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ProxyClusterKeyCreateResponse.Builder builder = ProxyClusterKeyCreateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getProxyClusterKey() != null) {
+      builder.setProxyClusterKey(
+          Plumbing.convertProxyClusterKeyToPlumbing(porcelain.getProxyClusterKey()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getSecretKey() != null) {
+      builder.setSecretKey((porcelain.getSecretKey()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ProxyClusterKeyCreateResponse>
+      convertRepeatedProxyClusterKeyCreateResponseToPorcelain(
+          Collection<ProxyClusterKeyCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ProxyClusterKeyCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertProxyClusterKeyCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ProxyClusterKeyCreateResponse>
+      convertRepeatedProxyClusterKeyCreateResponseToPlumbing(
+          Collection<com.strongdm.api.ProxyClusterKeyCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ProxyClusterKeyCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertProxyClusterKeyCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ProxyClusterKeyDeleteResponse
+      convertProxyClusterKeyDeleteResponseToPorcelain(ProxyClusterKeyDeleteResponse plumbing) {
+    com.strongdm.api.ProxyClusterKeyDeleteResponse porcelain =
+        new com.strongdm.api.ProxyClusterKeyDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ProxyClusterKeyDeleteResponse convertProxyClusterKeyDeleteResponseToPlumbing(
+      com.strongdm.api.ProxyClusterKeyDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ProxyClusterKeyDeleteResponse.Builder builder = ProxyClusterKeyDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ProxyClusterKeyDeleteResponse>
+      convertRepeatedProxyClusterKeyDeleteResponseToPorcelain(
+          Collection<ProxyClusterKeyDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ProxyClusterKeyDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertProxyClusterKeyDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ProxyClusterKeyDeleteResponse>
+      convertRepeatedProxyClusterKeyDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.ProxyClusterKeyDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ProxyClusterKeyDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertProxyClusterKeyDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ProxyClusterKeyGetResponse
+      convertProxyClusterKeyGetResponseToPorcelain(ProxyClusterKeyGetResponse plumbing) {
+    com.strongdm.api.ProxyClusterKeyGetResponse porcelain =
+        new com.strongdm.api.ProxyClusterKeyGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setProxyClusterKey(
+        Plumbing.convertProxyClusterKeyToPorcelain(plumbing.getProxyClusterKey()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ProxyClusterKeyGetResponse convertProxyClusterKeyGetResponseToPlumbing(
+      com.strongdm.api.ProxyClusterKeyGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ProxyClusterKeyGetResponse.Builder builder = ProxyClusterKeyGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getProxyClusterKey() != null) {
+      builder.setProxyClusterKey(
+          Plumbing.convertProxyClusterKeyToPlumbing(porcelain.getProxyClusterKey()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ProxyClusterKeyGetResponse>
+      convertRepeatedProxyClusterKeyGetResponseToPorcelain(
+          Collection<ProxyClusterKeyGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ProxyClusterKeyGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertProxyClusterKeyGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ProxyClusterKeyGetResponse>
+      convertRepeatedProxyClusterKeyGetResponseToPlumbing(
+          Collection<com.strongdm.api.ProxyClusterKeyGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ProxyClusterKeyGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertProxyClusterKeyGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

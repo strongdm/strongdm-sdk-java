@@ -330,6 +330,17 @@ public class Client {
     return this.policiesHistory;
   }
 
+  protected final ProxyClusterKeys proxyClusterKeys;
+
+  /**
+   * Proxy Cluster Keys are authentication keys for all proxies within a cluster. The proxies within
+   * a cluster share the same key. One cluster can have multiple keys in order to facilitate key
+   * rotation.
+   */
+  public ProxyClusterKeys proxyClusterKeys() {
+    return this.proxyClusterKeys;
+  }
+
   protected final Queries queries;
 
   /**
@@ -584,6 +595,7 @@ public class Client {
     this.peeringGroups = new PeeringGroups(this.channel, this);
     this.policies = new Policies(this.channel, this);
     this.policiesHistory = new PoliciesHistory(this.channel, this);
+    this.proxyClusterKeys = new ProxyClusterKeys(this.channel, this);
     this.queries = new Queries(this.channel, this);
     this.remoteIdentities = new RemoteIdentities(this.channel, this);
     this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);
@@ -663,6 +675,7 @@ public class Client {
       this.peeringGroups = new PeeringGroups(this.channel, this);
       this.policies = new Policies(this.channel, this);
       this.policiesHistory = new PoliciesHistory(this.channel, this);
+      this.proxyClusterKeys = new ProxyClusterKeys(this.channel, this);
       this.queries = new Queries(this.channel, this);
       this.remoteIdentities = new RemoteIdentities(this.channel, this);
       this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);
