@@ -104,6 +104,16 @@ public class DynamoDB implements Resource {
     this.portOverride = in;
   }
 
+  private String proxyClusterId;
+  /** ID of the proxy cluster for this resource, if any. */
+  public String getProxyClusterId() {
+    return this.proxyClusterId;
+  }
+  /** ID of the proxy cluster for this resource, if any. */
+  public void setProxyClusterId(String in) {
+    this.proxyClusterId = in;
+  }
+
   private String region;
   /** The region to authenticate requests against e.g. us-east-1 */
   public String getRegion() {

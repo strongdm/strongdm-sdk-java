@@ -124,6 +124,16 @@ public class AuroraMysql implements Resource {
     this.portOverride = in;
   }
 
+  private String proxyClusterId;
+  /** ID of the proxy cluster for this resource, if any. */
+  public String getProxyClusterId() {
+    return this.proxyClusterId;
+  }
+  /** ID of the proxy cluster for this resource, if any. */
+  public void setProxyClusterId(String in) {
+    this.proxyClusterId = in;
+  }
+
   private boolean requireNativeAuth;
   /**
    * Whether native auth (mysql_native_password) is used for all connections (for backwards

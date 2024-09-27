@@ -94,6 +94,16 @@ public class GCP implements Resource {
     this.portOverride = in;
   }
 
+  private String proxyClusterId;
+  /** ID of the proxy cluster for this resource, if any. */
+  public String getProxyClusterId() {
+    return this.proxyClusterId;
+  }
+  /** ID of the proxy cluster for this resource, if any. */
+  public void setProxyClusterId(String in) {
+    this.proxyClusterId = in;
+  }
+
   private String scopes;
   /** Space separated scopes that this login should assume into when authenticating. */
   public String getScopes() {

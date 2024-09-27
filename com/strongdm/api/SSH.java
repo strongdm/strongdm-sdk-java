@@ -140,6 +140,16 @@ public class SSH implements Resource {
     this.portOverride = in;
   }
 
+  private String proxyClusterId;
+  /** ID of the proxy cluster for this resource, if any. */
+  public String getProxyClusterId() {
+    return this.proxyClusterId;
+  }
+  /** ID of the proxy cluster for this resource, if any. */
+  public void setProxyClusterId(String in) {
+    this.proxyClusterId = in;
+  }
+
   private String publicKey;
   /**
    * The public key to append to a server's authorized keys. This will be generated after resource

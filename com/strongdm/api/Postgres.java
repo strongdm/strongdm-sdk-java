@@ -148,6 +148,16 @@ public class Postgres implements Resource {
     this.portOverride = in;
   }
 
+  private String proxyClusterId;
+  /** ID of the proxy cluster for this resource, if any. */
+  public String getProxyClusterId() {
+    return this.proxyClusterId;
+  }
+  /** ID of the proxy cluster for this resource, if any. */
+  public void setProxyClusterId(String in) {
+    this.proxyClusterId = in;
+  }
+
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {
