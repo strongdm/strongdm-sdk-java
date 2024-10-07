@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+import java.util.List;
+
 /**
  * A QueryCapture contains additional information about queries against SSH, Kubernetes, and RDP
  * resources.
@@ -90,6 +92,26 @@ public class QueryCapture {
   /** The height of the terminal or window for SSH, Kubernetes, and RDP interactive sessions. */
   public void setHeight(int in) {
     this.height = in;
+  }
+
+  private List<String> impersonationGroups;
+  /** The impersonation groups of a Kubernetes operation. */
+  public List<String> getImpersonationGroups() {
+    return this.impersonationGroups;
+  }
+  /** The impersonation groups of a Kubernetes operation. */
+  public void setImpersonationGroups(List<String> in) {
+    this.impersonationGroups = in;
+  }
+
+  private String impersonationUser;
+  /** The impersonation user of a Kubernetes operation. */
+  public String getImpersonationUser() {
+    return this.impersonationUser;
+  }
+  /** The impersonation user of a Kubernetes operation. */
+  public void setImpersonationUser(String in) {
+    this.impersonationUser = in;
   }
 
   private String pod;

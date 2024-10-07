@@ -12586,6 +12586,8 @@ public class Plumbing {
     porcelain.setFileName((plumbing.getFileName()));
     porcelain.setFileSize((plumbing.getFileSize()));
     porcelain.setHeight((plumbing.getHeight()));
+    porcelain.setImpersonationGroups((plumbing.getImpersonationGroupsList()));
+    porcelain.setImpersonationUser((plumbing.getImpersonationUser()));
     porcelain.setPod((plumbing.getPod()));
     porcelain.setRequestBody(Plumbing.convertBytesToPorcelain(plumbing.getRequestBody()));
     porcelain.setRequestMethod((plumbing.getRequestMethod()));
@@ -12616,6 +12618,10 @@ public class Plumbing {
     }
     builder.setFileSize(porcelain.getFileSize());
     builder.setHeight(porcelain.getHeight());
+    builder.addAllImpersonationGroups((porcelain.getImpersonationGroups()));
+    if (porcelain.getImpersonationUser() != null) {
+      builder.setImpersonationUser((porcelain.getImpersonationUser()));
+    }
     if (porcelain.getPod() != null) {
       builder.setPod((porcelain.getPod()));
     }
