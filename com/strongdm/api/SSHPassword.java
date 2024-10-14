@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * SSHPassword is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class SSHPassword implements Resource {
   private boolean allowDeprecatedKeyExchanges;
   /**
