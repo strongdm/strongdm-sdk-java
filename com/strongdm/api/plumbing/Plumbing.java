@@ -51,6 +51,7 @@ import com.strongdm.api.plumbing.ApprovalWorkflowsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.*;
 import com.strongdm.api.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.plumbing.DriversPlumbing.*;
+import com.strongdm.api.plumbing.HealthChecksPlumbing.*;
 import com.strongdm.api.plumbing.IdentityAliasesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.IdentityAliasesPlumbing.*;
 import com.strongdm.api.plumbing.IdentitySetsHistoryPlumbing.*;
@@ -7848,6 +7849,110 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertHTTPNoAuthToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.Healthcheck convertHealthcheckToPorcelain(Healthcheck plumbing) {
+    com.strongdm.api.Healthcheck porcelain = new com.strongdm.api.Healthcheck();
+    porcelain.setErrorMsg((plumbing.getErrorMsg()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setNodeId((plumbing.getNodeId()));
+    porcelain.setNodeName((plumbing.getNodeName()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    porcelain.setResourceName((plumbing.getResourceName()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static Healthcheck convertHealthcheckToPlumbing(com.strongdm.api.Healthcheck porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Healthcheck.Builder builder = Healthcheck.newBuilder();
+    if (porcelain.getErrorMsg() != null) {
+      builder.setErrorMsg((porcelain.getErrorMsg()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getNodeId() != null) {
+      builder.setNodeId((porcelain.getNodeId()));
+    }
+    if (porcelain.getNodeName() != null) {
+      builder.setNodeName((porcelain.getNodeName()));
+    }
+    if (porcelain.getResourceId() != null) {
+      builder.setResourceId((porcelain.getResourceId()));
+    }
+    if (porcelain.getResourceName() != null) {
+      builder.setResourceName((porcelain.getResourceName()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Healthcheck> convertRepeatedHealthcheckToPorcelain(
+      Collection<Healthcheck> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Healthcheck>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertHealthcheckToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Healthcheck> convertRepeatedHealthcheckToPlumbing(
+      Collection<com.strongdm.api.Healthcheck> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Healthcheck>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertHealthcheckToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.HealthcheckListResponse convertHealthcheckListResponseToPorcelain(
+      HealthcheckListResponse plumbing) {
+    com.strongdm.api.HealthcheckListResponse porcelain =
+        new com.strongdm.api.HealthcheckListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static HealthcheckListResponse convertHealthcheckListResponseToPlumbing(
+      com.strongdm.api.HealthcheckListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    HealthcheckListResponse.Builder builder = HealthcheckListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.HealthcheckListResponse>
+      convertRepeatedHealthcheckListResponseToPorcelain(
+          Collection<HealthcheckListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.HealthcheckListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertHealthcheckListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<HealthcheckListResponse> convertRepeatedHealthcheckListResponseToPlumbing(
+      Collection<com.strongdm.api.HealthcheckListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<HealthcheckListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertHealthcheckListResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

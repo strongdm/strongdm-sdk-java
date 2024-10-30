@@ -215,6 +215,16 @@ public class Client {
     return this.controlPanel;
   }
 
+  protected final HealthChecks healthChecks;
+
+  /**
+   * HealthChecks lists the last healthcheck between each node and resource. Note the unconventional
+   * capitalization here is to prevent having a collision with GRPC
+   */
+  public HealthChecks healthChecks() {
+    return this.healthChecks;
+  }
+
   protected final IdentityAliases identityAliases;
 
   /**
@@ -582,6 +592,7 @@ public class Client {
     this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
     this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
     this.controlPanel = new ControlPanel(this.channel, this);
+    this.healthChecks = new HealthChecks(this.channel, this);
     this.identityAliases = new IdentityAliases(this.channel, this);
     this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
     this.identitySets = new IdentitySets(this.channel, this);
@@ -662,6 +673,7 @@ public class Client {
       this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
       this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
+      this.healthChecks = new HealthChecks(this.channel, this);
       this.identityAliases = new IdentityAliases(this.channel, this);
       this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
       this.identitySets = new IdentitySets(this.channel, this);
