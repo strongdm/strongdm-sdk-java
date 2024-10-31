@@ -1075,6 +1075,91 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AWSInstanceProfile convertAWSInstanceProfileToPorcelain(
+      AWSInstanceProfile plumbing) {
+    com.strongdm.api.AWSInstanceProfile porcelain = new com.strongdm.api.AWSInstanceProfile();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setEnableEnvVariables((plumbing.getEnableEnvVariables()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AWSInstanceProfile convertAWSInstanceProfileToPlumbing(
+      com.strongdm.api.AWSInstanceProfile porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWSInstanceProfile.Builder builder = AWSInstanceProfile.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setEnableEnvVariables(porcelain.getEnableEnvVariables());
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AWSInstanceProfile>
+      convertRepeatedAWSInstanceProfileToPorcelain(Collection<AWSInstanceProfile> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AWSInstanceProfile>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAWSInstanceProfileToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWSInstanceProfile> convertRepeatedAWSInstanceProfileToPlumbing(
+      Collection<com.strongdm.api.AWSInstanceProfile> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AWSInstanceProfile>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAWSInstanceProfileToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AWSStore convertAWSStoreToPorcelain(AWSStore plumbing) {
     com.strongdm.api.AWSStore porcelain = new com.strongdm.api.AWSStore();
     porcelain.setId((plumbing.getId()));
@@ -14149,6 +14234,9 @@ public class Plumbing {
     if (plumbing.hasAwsConsoleStaticKeyPair()) {
       return convertAWSConsoleStaticKeyPairToPorcelain(plumbing.getAwsConsoleStaticKeyPair());
     }
+    if (plumbing.hasAwsInstanceProfile()) {
+      return convertAWSInstanceProfileToPorcelain(plumbing.getAwsInstanceProfile());
+    }
     if (plumbing.hasAzure()) {
       return convertAzureToPorcelain(plumbing.getAzure());
     }
@@ -14471,6 +14559,12 @@ public class Plumbing {
       builder.setAwsConsoleStaticKeyPair(
           convertAWSConsoleStaticKeyPairToPlumbing(
               (com.strongdm.api.AWSConsoleStaticKeyPair) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AWSInstanceProfile) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAwsInstanceProfile(
+          convertAWSInstanceProfileToPlumbing((com.strongdm.api.AWSInstanceProfile) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Azure) {
