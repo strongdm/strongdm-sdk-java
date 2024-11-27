@@ -114,6 +114,22 @@ public class GCPWIF implements Resource {
     this.portOverride = in;
   }
 
+  private String projectId;
+  /**
+   * When specified, all project scoped requests will use this Project ID, overriding the project ID
+   * specified by clients
+   */
+  public String getProjectId() {
+    return this.projectId;
+  }
+  /**
+   * When specified, all project scoped requests will use this Project ID, overriding the project ID
+   * specified by clients
+   */
+  public void setProjectId(String in) {
+    this.projectId = in;
+  }
+
   private String proxyClusterId;
   /** ID of the proxy cluster for this resource, if any. */
   public String getProxyClusterId() {

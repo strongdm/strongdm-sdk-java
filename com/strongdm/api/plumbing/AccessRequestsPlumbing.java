@@ -2581,12 +2581,69 @@ public final class AccessRequestsPlumbing {
     /**
      * <pre>
      * Duration of the access request.
+     * Deprecated: use requested/result duration instead
      * </pre>
      *
-     * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+     * <code>int64 duration = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.AccessRequest.duration is deprecated.
+     *     See access_requests.proto;l=122
      * @return The duration.
      */
-    long getDuration();
+    @java.lang.Deprecated long getDuration();
+
+    /**
+     * <pre>
+     * The duration that access was requested for, if any.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+     * @return Whether the requestedDuration field is set.
+     */
+    boolean hasRequestedDuration();
+    /**
+     * <pre>
+     * The duration that access was requested for, if any.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+     * @return The requestedDuration.
+     */
+    com.google.protobuf.Duration getRequestedDuration();
+    /**
+     * <pre>
+     * The duration that access was requested for, if any.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getRequestedDurationOrBuilder();
+
+    /**
+     * <pre>
+     * The duration that results from an approved request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+     * @return Whether the resultDuration field is set.
+     */
+    boolean hasResultDuration();
+    /**
+     * <pre>
+     * The duration that results from an approved request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+     * @return The resultDuration.
+     */
+    com.google.protobuf.Duration getResultDuration();
+    /**
+     * <pre>
+     * The duration that results from an approved request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getResultDurationOrBuilder();
 
     /**
      * <pre>
@@ -2755,6 +2812,32 @@ public final class AccessRequestsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               requesterName_ = s;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (requestedDuration_ != null) {
+                subBuilder = requestedDuration_.toBuilder();
+              }
+              requestedDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(requestedDuration_);
+                requestedDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (resultDuration_ != null) {
+                subBuilder = resultDuration_.toBuilder();
+              }
+              resultDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resultDuration_);
+                resultDuration_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3235,14 +3318,93 @@ public final class AccessRequestsPlumbing {
     /**
      * <pre>
      * Duration of the access request.
+     * Deprecated: use requested/result duration instead
      * </pre>
      *
-     * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+     * <code>int64 duration = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.AccessRequest.duration is deprecated.
+     *     See access_requests.proto;l=122
      * @return The duration.
      */
     @java.lang.Override
-    public long getDuration() {
+    @java.lang.Deprecated public long getDuration() {
       return duration_;
+    }
+
+    public static final int REQUESTEDDURATION_FIELD_NUMBER = 13;
+    private com.google.protobuf.Duration requestedDuration_;
+    /**
+     * <pre>
+     * The duration that access was requested for, if any.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+     * @return Whether the requestedDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestedDuration() {
+      return requestedDuration_ != null;
+    }
+    /**
+     * <pre>
+     * The duration that access was requested for, if any.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+     * @return The requestedDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getRequestedDuration() {
+      return requestedDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : requestedDuration_;
+    }
+    /**
+     * <pre>
+     * The duration that access was requested for, if any.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getRequestedDurationOrBuilder() {
+      return getRequestedDuration();
+    }
+
+    public static final int RESULTDURATION_FIELD_NUMBER = 14;
+    private com.google.protobuf.Duration resultDuration_;
+    /**
+     * <pre>
+     * The duration that results from an approved request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+     * @return Whether the resultDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasResultDuration() {
+      return resultDuration_ != null;
+    }
+    /**
+     * <pre>
+     * The duration that results from an approved request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+     * @return The resultDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getResultDuration() {
+      return resultDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : resultDuration_;
+    }
+    /**
+     * <pre>
+     * The duration that results from an approved request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getResultDurationOrBuilder() {
+      return getResultDuration();
     }
 
     public static final int REQUESTER_NAME_FIELD_NUMBER = 12;
@@ -3341,6 +3503,12 @@ public final class AccessRequestsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requesterName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, requesterName_);
       }
+      if (requestedDuration_ != null) {
+        output.writeMessage(13, getRequestedDuration());
+      }
+      if (resultDuration_ != null) {
+        output.writeMessage(14, getResultDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3390,6 +3558,14 @@ public final class AccessRequestsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requesterName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, requesterName_);
       }
+      if (requestedDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getRequestedDuration());
+      }
+      if (resultDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getResultDuration());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3436,6 +3612,16 @@ public final class AccessRequestsPlumbing {
           .equals(other.getGrantId())) return false;
       if (getDuration()
           != other.getDuration()) return false;
+      if (hasRequestedDuration() != other.hasRequestedDuration()) return false;
+      if (hasRequestedDuration()) {
+        if (!getRequestedDuration()
+            .equals(other.getRequestedDuration())) return false;
+      }
+      if (hasResultDuration() != other.hasResultDuration()) return false;
+      if (hasResultDuration()) {
+        if (!getResultDuration()
+            .equals(other.getResultDuration())) return false;
+      }
       if (!getRequesterName()
           .equals(other.getRequesterName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -3478,6 +3664,14 @@ public final class AccessRequestsPlumbing {
       hash = (37 * hash) + DURATION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDuration());
+      if (hasRequestedDuration()) {
+        hash = (37 * hash) + REQUESTEDDURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestedDuration().hashCode();
+      }
+      if (hasResultDuration()) {
+        hash = (37 * hash) + RESULTDURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getResultDuration().hashCode();
+      }
       hash = (37 * hash) + REQUESTER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getRequesterName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -3651,6 +3845,18 @@ public final class AccessRequestsPlumbing {
 
         duration_ = 0L;
 
+        if (requestedDurationBuilder_ == null) {
+          requestedDuration_ = null;
+        } else {
+          requestedDuration_ = null;
+          requestedDurationBuilder_ = null;
+        }
+        if (resultDurationBuilder_ == null) {
+          resultDuration_ = null;
+        } else {
+          resultDuration_ = null;
+          resultDurationBuilder_ = null;
+        }
         requesterName_ = "";
 
         return this;
@@ -3702,6 +3908,16 @@ public final class AccessRequestsPlumbing {
         }
         result.grantId_ = grantId_;
         result.duration_ = duration_;
+        if (requestedDurationBuilder_ == null) {
+          result.requestedDuration_ = requestedDuration_;
+        } else {
+          result.requestedDuration_ = requestedDurationBuilder_.build();
+        }
+        if (resultDurationBuilder_ == null) {
+          result.resultDuration_ = resultDuration_;
+        } else {
+          result.resultDuration_ = resultDurationBuilder_.build();
+        }
         result.requesterName_ = requesterName_;
         onBuilt();
         return result;
@@ -3790,6 +4006,12 @@ public final class AccessRequestsPlumbing {
         }
         if (other.getDuration() != 0L) {
           setDuration(other.getDuration());
+        }
+        if (other.hasRequestedDuration()) {
+          mergeRequestedDuration(other.getRequestedDuration());
+        }
+        if (other.hasResultDuration()) {
+          mergeResultDuration(other.getResultDuration());
         }
         if (!other.getRequesterName().isEmpty()) {
           requesterName_ = other.requesterName_;
@@ -4974,25 +5196,31 @@ public final class AccessRequestsPlumbing {
       /**
        * <pre>
        * Duration of the access request.
+       * Deprecated: use requested/result duration instead
        * </pre>
        *
-       * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+       * <code>int64 duration = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.AccessRequest.duration is deprecated.
+       *     See access_requests.proto;l=122
        * @return The duration.
        */
       @java.lang.Override
-      public long getDuration() {
+      @java.lang.Deprecated public long getDuration() {
         return duration_;
       }
       /**
        * <pre>
        * Duration of the access request.
+       * Deprecated: use requested/result duration instead
        * </pre>
        *
-       * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+       * <code>int64 duration = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.AccessRequest.duration is deprecated.
+       *     See access_requests.proto;l=122
        * @param value The duration to set.
        * @return This builder for chaining.
        */
-      public Builder setDuration(long value) {
+      @java.lang.Deprecated public Builder setDuration(long value) {
         
         duration_ = value;
         onChanged();
@@ -5001,16 +5229,329 @@ public final class AccessRequestsPlumbing {
       /**
        * <pre>
        * Duration of the access request.
+       * Deprecated: use requested/result duration instead
        * </pre>
        *
-       * <code>int64 duration = 11 [(.v1.field_options) = { ... }</code>
+       * <code>int64 duration = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.AccessRequest.duration is deprecated.
+       *     See access_requests.proto;l=122
        * @return This builder for chaining.
        */
-      public Builder clearDuration() {
+      @java.lang.Deprecated public Builder clearDuration() {
         
         duration_ = 0L;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Duration requestedDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> requestedDurationBuilder_;
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       * @return Whether the requestedDuration field is set.
+       */
+      public boolean hasRequestedDuration() {
+        return requestedDurationBuilder_ != null || requestedDuration_ != null;
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       * @return The requestedDuration.
+       */
+      public com.google.protobuf.Duration getRequestedDuration() {
+        if (requestedDurationBuilder_ == null) {
+          return requestedDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : requestedDuration_;
+        } else {
+          return requestedDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRequestedDuration(com.google.protobuf.Duration value) {
+        if (requestedDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          requestedDuration_ = value;
+          onChanged();
+        } else {
+          requestedDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRequestedDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (requestedDurationBuilder_ == null) {
+          requestedDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          requestedDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRequestedDuration(com.google.protobuf.Duration value) {
+        if (requestedDurationBuilder_ == null) {
+          if (requestedDuration_ != null) {
+            requestedDuration_ =
+              com.google.protobuf.Duration.newBuilder(requestedDuration_).mergeFrom(value).buildPartial();
+          } else {
+            requestedDuration_ = value;
+          }
+          onChanged();
+        } else {
+          requestedDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRequestedDuration() {
+        if (requestedDurationBuilder_ == null) {
+          requestedDuration_ = null;
+          onChanged();
+        } else {
+          requestedDuration_ = null;
+          requestedDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getRequestedDurationBuilder() {
+        
+        onChanged();
+        return getRequestedDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getRequestedDurationOrBuilder() {
+        if (requestedDurationBuilder_ != null) {
+          return requestedDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return requestedDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : requestedDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * The duration that access was requested for, if any.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration requestedDuration = 13 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getRequestedDurationFieldBuilder() {
+        if (requestedDurationBuilder_ == null) {
+          requestedDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getRequestedDuration(),
+                  getParentForChildren(),
+                  isClean());
+          requestedDuration_ = null;
+        }
+        return requestedDurationBuilder_;
+      }
+
+      private com.google.protobuf.Duration resultDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> resultDurationBuilder_;
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       * @return Whether the resultDuration field is set.
+       */
+      public boolean hasResultDuration() {
+        return resultDurationBuilder_ != null || resultDuration_ != null;
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       * @return The resultDuration.
+       */
+      public com.google.protobuf.Duration getResultDuration() {
+        if (resultDurationBuilder_ == null) {
+          return resultDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : resultDuration_;
+        } else {
+          return resultDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setResultDuration(com.google.protobuf.Duration value) {
+        if (resultDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resultDuration_ = value;
+          onChanged();
+        } else {
+          resultDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setResultDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (resultDurationBuilder_ == null) {
+          resultDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          resultDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeResultDuration(com.google.protobuf.Duration value) {
+        if (resultDurationBuilder_ == null) {
+          if (resultDuration_ != null) {
+            resultDuration_ =
+              com.google.protobuf.Duration.newBuilder(resultDuration_).mergeFrom(value).buildPartial();
+          } else {
+            resultDuration_ = value;
+          }
+          onChanged();
+        } else {
+          resultDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearResultDuration() {
+        if (resultDurationBuilder_ == null) {
+          resultDuration_ = null;
+          onChanged();
+        } else {
+          resultDuration_ = null;
+          resultDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getResultDurationBuilder() {
+        
+        onChanged();
+        return getResultDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getResultDurationOrBuilder() {
+        if (resultDurationBuilder_ != null) {
+          return resultDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return resultDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : resultDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * The duration that results from an approved request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration resultDuration = 14 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getResultDurationFieldBuilder() {
+        if (resultDurationBuilder_ == null) {
+          resultDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getResultDuration(),
+                  getParentForChildren(),
+                  isClean());
+          resultDuration_ = null;
+        }
+        return resultDurationBuilder_;
       }
 
       private java.lang.Object requesterName_ = "";
@@ -9482,6 +10023,1357 @@ public final class AccessRequestsPlumbing {
 
   }
 
+  public interface RequestAccessRequestConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.RequestAccessRequestConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the resourceIds.
+     */
+    java.util.List<java.lang.String>
+        getResourceIdsList();
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of resourceIds.
+     */
+    int getResourceIdsCount();
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The resourceIds at the given index.
+     */
+    java.lang.String getResourceIds(int index);
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdsBytes(int index);
+
+    /**
+     * <pre>
+     * The reason for the request.
+     * </pre>
+     *
+     * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <pre>
+     * The reason for the request.
+     * </pre>
+     *
+     * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+
+    /**
+     * <pre>
+     * The requested start time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the startFrom field is set.
+     */
+    boolean hasStartFrom();
+    /**
+     * <pre>
+     * The requested start time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+     * @return The startFrom.
+     */
+    com.google.protobuf.Timestamp getStartFrom();
+    /**
+     * <pre>
+     * The requested start time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartFromOrBuilder();
+
+    /**
+     * <pre>
+     * The requested duration.
+     * </pre>
+     *
+     * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+     * @return The duration.
+     */
+    java.lang.String getDuration();
+    /**
+     * <pre>
+     * The requested duration.
+     * </pre>
+     *
+     * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for duration.
+     */
+    com.google.protobuf.ByteString
+        getDurationBytes();
+  }
+  /**
+   * <pre>
+   * RequestAccessRequestConfig holds args for the request access request.
+   * </pre>
+   *
+   * Protobuf type {@code v1.RequestAccessRequestConfig}
+   */
+  public static final class RequestAccessRequestConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.RequestAccessRequestConfig)
+      RequestAccessRequestConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RequestAccessRequestConfig.newBuilder() to construct.
+    private RequestAccessRequestConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RequestAccessRequestConfig() {
+      resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      reason_ = "";
+      duration_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RequestAccessRequestConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RequestAccessRequestConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                resourceIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              resourceIds_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reason_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (startFrom_ != null) {
+                subBuilder = startFrom_.toBuilder();
+              }
+              startFrom_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startFrom_);
+                startFrom_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              duration_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          resourceIds_ = resourceIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_RequestAccessRequestConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig.Builder.class);
+    }
+
+    public static final int RESOURCE_IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList resourceIds_;
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the resourceIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getResourceIdsList() {
+      return resourceIds_;
+    }
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of resourceIds.
+     */
+    public int getResourceIdsCount() {
+      return resourceIds_.size();
+    }
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The resourceIds at the given index.
+     */
+    public java.lang.String getResourceIds(int index) {
+      return resourceIds_.get(index);
+    }
+    /**
+     * <pre>
+     * The resources for which access is being requested
+     * </pre>
+     *
+     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getResourceIdsBytes(int index) {
+      return resourceIds_.getByteString(index);
+    }
+
+    public static final int REASON_FIELD_NUMBER = 2;
+    private volatile java.lang.Object reason_;
+    /**
+     * <pre>
+     * The reason for the request.
+     * </pre>
+     *
+     * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reason_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The reason for the request.
+     * </pre>
+     *
+     * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_FROM_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp startFrom_;
+    /**
+     * <pre>
+     * The requested start time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the startFrom field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartFrom() {
+      return startFrom_ != null;
+    }
+    /**
+     * <pre>
+     * The requested start time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+     * @return The startFrom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartFrom() {
+      return startFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startFrom_;
+    }
+    /**
+     * <pre>
+     * The requested start time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartFromOrBuilder() {
+      return getStartFrom();
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object duration_;
+    /**
+     * <pre>
+     * The requested duration.
+     * </pre>
+     *
+     * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public java.lang.String getDuration() {
+      java.lang.Object ref = duration_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        duration_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The requested duration.
+     * </pre>
+     *
+     * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDurationBytes() {
+      java.lang.Object ref = duration_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        duration_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < resourceIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reason_);
+      }
+      if (startFrom_ != null) {
+        output.writeMessage(3, getStartFrom());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duration_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, duration_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < resourceIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(resourceIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getResourceIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reason_);
+      }
+      if (startFrom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getStartFrom());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duration_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, duration_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig other = (com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig) obj;
+
+      if (!getResourceIdsList()
+          .equals(other.getResourceIdsList())) return false;
+      if (!getReason()
+          .equals(other.getReason())) return false;
+      if (hasStartFrom() != other.hasStartFrom()) return false;
+      if (hasStartFrom()) {
+        if (!getStartFrom()
+            .equals(other.getStartFrom())) return false;
+      }
+      if (!getDuration()
+          .equals(other.getDuration())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getResourceIdsCount() > 0) {
+        hash = (37 * hash) + RESOURCE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceIdsList().hashCode();
+      }
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getReason().hashCode();
+      if (hasStartFrom()) {
+        hash = (37 * hash) + START_FROM_FIELD_NUMBER;
+        hash = (53 * hash) + getStartFrom().hashCode();
+      }
+      hash = (37 * hash) + DURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDuration().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RequestAccessRequestConfig holds args for the request access request.
+     * </pre>
+     *
+     * Protobuf type {@code v1.RequestAccessRequestConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.RequestAccessRequestConfig)
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_RequestAccessRequestConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reason_ = "";
+
+        if (startFromBuilder_ == null) {
+          startFrom_ = null;
+        } else {
+          startFrom_ = null;
+          startFromBuilder_ = null;
+        }
+        duration_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_RequestAccessRequestConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig build() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig buildPartial() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig result = new com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          resourceIds_ = resourceIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.resourceIds_ = resourceIds_;
+        result.reason_ = reason_;
+        if (startFromBuilder_ == null) {
+          result.startFrom_ = startFrom_;
+        } else {
+          result.startFrom_ = startFromBuilder_.build();
+        }
+        result.duration_ = duration_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig) {
+          return mergeFrom((com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig other) {
+        if (other == com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig.getDefaultInstance()) return this;
+        if (!other.resourceIds_.isEmpty()) {
+          if (resourceIds_.isEmpty()) {
+            resourceIds_ = other.resourceIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureResourceIdsIsMutable();
+            resourceIds_.addAll(other.resourceIds_);
+          }
+          onChanged();
+        }
+        if (!other.getReason().isEmpty()) {
+          reason_ = other.reason_;
+          onChanged();
+        }
+        if (other.hasStartFrom()) {
+          mergeStartFrom(other.getStartFrom());
+        }
+        if (!other.getDuration().isEmpty()) {
+          duration_ = other.duration_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureResourceIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          resourceIds_ = new com.google.protobuf.LazyStringArrayList(resourceIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the resourceIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getResourceIdsList() {
+        return resourceIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @return The count of resourceIds.
+       */
+      public int getResourceIdsCount() {
+        return resourceIds_.size();
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The resourceIds at the given index.
+       */
+      public java.lang.String getResourceIds(int index) {
+        return resourceIds_.get(index);
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resourceIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdsBytes(int index) {
+        return resourceIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The resourceIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureResourceIdsIsMutable();
+        resourceIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The resourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResourceIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureResourceIdsIsMutable();
+        resourceIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @param values The resourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllResourceIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureResourceIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, resourceIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceIds() {
+        resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resources for which access is being requested
+       * </pre>
+       *
+       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the resourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResourceIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureResourceIdsIsMutable();
+        resourceIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reason_ = "";
+      /**
+       * <pre>
+       * The reason for the request.
+       * </pre>
+       *
+       * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+       * @return The reason.
+       */
+      public java.lang.String getReason() {
+        java.lang.Object ref = reason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reason_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The reason for the request.
+       * </pre>
+       *
+       * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for reason.
+       */
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        java.lang.Object ref = reason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The reason for the request.
+       * </pre>
+       *
+       * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reason_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reason for the request.
+       * </pre>
+       *
+       * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        
+        reason_ = getDefaultInstance().getReason();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reason for the request.
+       * </pre>
+       *
+       * <code>string reason = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reason_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startFrom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startFromBuilder_;
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the startFrom field is set.
+       */
+      public boolean hasStartFrom() {
+        return startFromBuilder_ != null || startFrom_ != null;
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       * @return The startFrom.
+       */
+      public com.google.protobuf.Timestamp getStartFrom() {
+        if (startFromBuilder_ == null) {
+          return startFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startFrom_;
+        } else {
+          return startFromBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setStartFrom(com.google.protobuf.Timestamp value) {
+        if (startFromBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startFrom_ = value;
+          onChanged();
+        } else {
+          startFromBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setStartFrom(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startFromBuilder_ == null) {
+          startFrom_ = builderForValue.build();
+          onChanged();
+        } else {
+          startFromBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeStartFrom(com.google.protobuf.Timestamp value) {
+        if (startFromBuilder_ == null) {
+          if (startFrom_ != null) {
+            startFrom_ =
+              com.google.protobuf.Timestamp.newBuilder(startFrom_).mergeFrom(value).buildPartial();
+          } else {
+            startFrom_ = value;
+          }
+          onChanged();
+        } else {
+          startFromBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearStartFrom() {
+        if (startFromBuilder_ == null) {
+          startFrom_ = null;
+          onChanged();
+        } else {
+          startFrom_ = null;
+          startFromBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartFromBuilder() {
+        
+        onChanged();
+        return getStartFromFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartFromOrBuilder() {
+        if (startFromBuilder_ != null) {
+          return startFromBuilder_.getMessageOrBuilder();
+        } else {
+          return startFrom_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startFrom_;
+        }
+      }
+      /**
+       * <pre>
+       * The requested start time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartFromFieldBuilder() {
+        if (startFromBuilder_ == null) {
+          startFromBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartFrom(),
+                  getParentForChildren(),
+                  isClean());
+          startFrom_ = null;
+        }
+        return startFromBuilder_;
+      }
+
+      private java.lang.Object duration_ = "";
+      /**
+       * <pre>
+       * The requested duration.
+       * </pre>
+       *
+       * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+       * @return The duration.
+       */
+      public java.lang.String getDuration() {
+        java.lang.Object ref = duration_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          duration_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The requested duration.
+       * </pre>
+       *
+       * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for duration.
+       */
+      public com.google.protobuf.ByteString
+          getDurationBytes() {
+        java.lang.Object ref = duration_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          duration_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The requested duration.
+       * </pre>
+       *
+       * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The duration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDuration(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        duration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested duration.
+       * </pre>
+       *
+       * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDuration() {
+        
+        duration_ = getDefaultInstance().getDuration();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested duration.
+       * </pre>
+       *
+       * <code>string duration = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for duration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        duration_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.RequestAccessRequestConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.RequestAccessRequestConfig)
+    private static final com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig();
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RequestAccessRequestConfig>
+        PARSER = new com.google.protobuf.AbstractParser<RequestAccessRequestConfig>() {
+      @java.lang.Override
+      public RequestAccessRequestConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RequestAccessRequestConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RequestAccessRequestConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RequestAccessRequestConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestAccessRequestConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccessRequestListRequest_descriptor;
   private static final 
@@ -9512,6 +11404,11 @@ public final class AccessRequestsPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AccessRequestConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_RequestAccessRequestConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9521,59 +11418,69 @@ public final class AccessRequestsPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025access_requests.proto\022\002v1\032\037google/prot" +
-      "obuf/timestamp.proto\032\roptions.proto\032\nspe" +
-      "c.proto\032\ntags.proto\"i\n\030AccessRequestList" +
-      "Request\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMe" +
-      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007" +
-      "\005\250\363\263\007\001\"\311\001\n\031AccessRequestListResponse\022&\n\004" +
-      "meta\030\001 \001(\0132\030.v1.ListResponseMetadata\0226\n\017" +
-      "access_requests\030\002 \003(\0132\021.v1.AccessRequest" +
-      "B\n\362\370\263\007\005\270\363\263\007\001\022@\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
-      "teLimitMetadataB\025\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"\200\004\n\rAccessRequest\022\026\n\002id\030\001 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
-      "\n\013workflow_id\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccou" +
-      "nt_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\006 " +
-      "\001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022@\n\013valid_until\030\007 \001(\0132\032.google.protob" +
-      "uf.TimestampB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006status\030" +
-      "\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\tstatus_at\030\t \001(\0132\032.g" +
-      "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010" +
-      "grant_id\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\013" +
-      " \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0221\n\016requester_name\030\014 \001(\t" +
-      "B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\020\372\370\263\007\013\250\363\263\007\001\322" +
-      "\363\263\007\001*\"\264\001\n\022AccessRequestEvent\022\026\n\002id\030\001 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nrequest_id\030\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022\034\n\010actor_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004ty" +
-      "pe\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\364\001\n\023Request" +
-      "ableResource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004" +
-      "name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007healthy\030\003 \001(\010B" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n" +
-      "\016authentication\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tag" +
-      "s\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006access\030" +
-      "\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\303\001\n\023" +
-      "AccessRequestConfig\022$\n\013resource_id\030\001 \001(\t" +
-      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*2\331\001\n\016Ac" +
-      "cessRequests\022o\n\004List\022\034.v1.AccessRequestL" +
-      "istRequest\032\035.v1.AccessRequestListRespons" +
-      "e\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/access-req" +
-      "uests\032V\312\371\263\007\022\302\371\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003" +
-      "aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
-      "der\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.strongdm.api.plumb" +
-      "ingB\026AccessRequestsPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
-      "v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provid" +
-      "erb\006proto3"
+      "\n\025access_requests.proto\022\002v1\032\036google/prot" +
+      "obuf/duration.proto\032\037google/protobuf/tim" +
+      "estamp.proto\032\roptions.proto\032\nspec.proto\032" +
+      "\ntags.proto\"i\n\030AccessRequestListRequest\022" +
+      "%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032" +
+      "\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\311" +
+      "\001\n\031AccessRequestListResponse\022&\n\004meta\030\001 \001" +
+      "(\0132\030.v1.ListResponseMetadata\0226\n\017access_r" +
+      "equests\030\002 \003(\0132\021.v1.AccessRequestB\n\362\370\263\007\005\270" +
+      "\363\263\007\001\022@\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
+      "etadataB\025\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*:\n\372\370\263\007\005\250\363\263" +
+      "\007\001\"\203\005\n\rAccessRequest\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
+      "\007\001\022\032\n\006reason\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013workfl" +
+      "ow_id\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccount_id\030\005 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\006 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022@\n\013v" +
+      "alid_until\030\007 \001(\0132\032.google.protobuf.Times" +
+      "tampB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006status\030\010 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\0229\n\tstatus_at\030\t \001(\0132\032.google.pr" +
+      "otobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010grant_id" +
+      "\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\010duration\030\013 \001(\003B\014\030\001" +
+      "\362\370\263\007\005\260\363\263\007\001\022@\n\021requestedDuration\030\r \001(\0132\031." +
+      "google.protobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\016" +
+      "resultDuration\030\016 \001(\0132\031.google.protobuf.D" +
+      "urationB\n\362\370\263\007\005\260\363\263\007\001\0221\n\016requester_name\030\014 " +
+      "\001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\020\372\370\263\007\013\250\363\263" +
+      "\007\001\322\363\263\007\001*\"\264\001\n\022AccessRequestEvent\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nrequest_id\030\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\034\n\010actor_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n" +
+      "\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\364\001\n\023Requ" +
+      "estableResource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\030\n\004name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007healthy\030\003 \001" +
+      "(\010B\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\"\n\016authentication\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004" +
+      "tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006acce" +
+      "ss\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\303" +
+      "\001\n\023AccessRequestConfig\022$\n\013resource_id\030\001 " +
+      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.pr" +
+      "otobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration" +
+      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\324\001\n" +
+      "\032RequestAccessRequestConfig\022%\n\014resource_" +
+      "ids\030\001 \003(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010du" +
+      "ration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007" +
+      "\ngo_private2\331\001\n\016AccessRequests\022o\n\004List\022\034" +
+      ".v1.AccessRequestListRequest\032\035.v1.Access" +
+      "RequestListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252" +
+      "\363\263\007\023/v1/access-requests\032V\312\371\263\007\022\302\371\263\007\rAcces" +
+      "sRequest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263" +
+      "\007\023!terraform-provider\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com." +
+      "strongdm.api.plumbingB\026AccessRequestsPlu" +
+      "mbingZ5github.com/strongdm/strongdm-sdk-" +
+      "go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007" +
+      "\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
@@ -9596,7 +11503,7 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_AccessRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequest_descriptor,
-        new java.lang.String[] { "Id", "ResourceId", "Reason", "WorkflowId", "AccountId", "StartFrom", "ValidUntil", "Status", "StatusAt", "GrantId", "Duration", "RequesterName", });
+        new java.lang.String[] { "Id", "ResourceId", "Reason", "WorkflowId", "AccountId", "StartFrom", "ValidUntil", "Status", "StatusAt", "GrantId", "Duration", "RequestedDuration", "ResultDuration", "RequesterName", });
     internal_static_v1_AccessRequestEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_AccessRequestEvent_fieldAccessorTable = new
@@ -9615,6 +11522,12 @@ public final class AccessRequestsPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequestConfig_descriptor,
         new java.lang.String[] { "ResourceId", "Reason", "StartFrom", "Duration", });
+    internal_static_v1_RequestAccessRequestConfig_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_RequestAccessRequestConfig_descriptor,
+        new java.lang.String[] { "ResourceIds", "Reason", "StartFrom", "Duration", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
@@ -9624,6 +11537,7 @@ public final class AccessRequestsPlumbing {
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();

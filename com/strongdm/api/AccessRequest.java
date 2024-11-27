@@ -17,6 +17,7 @@
 
 package com.strongdm.api;
 
+import java.time.Duration;
 import java.util.Date;
 
 /** AccessRequests are requests for access to a resource that may match a Workflow. */
@@ -32,11 +33,13 @@ public class AccessRequest {
   }
 
   private long duration;
-  /** Duration of the access request. */
+  /** Duration of the access request. Deprecated: use requested/result duration instead */
+  @Deprecated
   public long getDuration() {
     return this.duration;
   }
-  /** Duration of the access request. */
+  /** Duration of the access request. Deprecated: use requested/result duration instead */
+  @Deprecated
   public void setDuration(long in) {
     this.duration = in;
   }
@@ -71,6 +74,16 @@ public class AccessRequest {
     this.reason = in;
   }
 
+  private Duration requestedDuration;
+  /** The duration that access was requested for, if any. */
+  public Duration getRequestedDuration() {
+    return this.requestedDuration;
+  }
+  /** The duration that access was requested for, if any. */
+  public void setRequestedDuration(Duration in) {
+    this.requestedDuration = in;
+  }
+
   private String resourceId;
   /** The resource id. */
   public String getResourceId() {
@@ -79,6 +92,16 @@ public class AccessRequest {
   /** The resource id. */
   public void setResourceId(String in) {
     this.resourceId = in;
+  }
+
+  private Duration resultDuration;
+  /** The duration that results from an approved request. */
+  public Duration getResultDuration() {
+    return this.resultDuration;
+  }
+  /** The duration that results from an approved request. */
+  public void setResultDuration(Duration in) {
+    this.resultDuration = in;
   }
 
   private Date startFrom;

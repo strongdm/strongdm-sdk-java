@@ -1217,7 +1217,10 @@ public class Plumbing {
     porcelain.setGrantId((plumbing.getGrantId()));
     porcelain.setId((plumbing.getId()));
     porcelain.setReason((plumbing.getReason()));
+    porcelain.setRequestedDuration(
+        Plumbing.convertDurationToPorcelain(plumbing.getRequestedDuration()));
     porcelain.setResourceId((plumbing.getResourceId()));
+    porcelain.setResultDuration(Plumbing.convertDurationToPorcelain(plumbing.getResultDuration()));
     porcelain.setStartFrom(Plumbing.convertTimestampToPorcelain(plumbing.getStartFrom()));
     porcelain.setStatus((plumbing.getStatus()));
     porcelain.setStatusAt(Plumbing.convertTimestampToPorcelain(plumbing.getStatusAt()));
@@ -1245,8 +1248,15 @@ public class Plumbing {
     if (porcelain.getReason() != null) {
       builder.setReason((porcelain.getReason()));
     }
+    if (porcelain.getRequestedDuration() != null) {
+      builder.setRequestedDuration(
+          Plumbing.convertDurationToPlumbing(porcelain.getRequestedDuration()));
+    }
     if (porcelain.getResourceId() != null) {
       builder.setResourceId((porcelain.getResourceId()));
+    }
+    if (porcelain.getResultDuration() != null) {
+      builder.setResultDuration(Plumbing.convertDurationToPlumbing(porcelain.getResultDuration()));
     }
     if (porcelain.getStartFrom() != null) {
       builder.setStartFrom(Plumbing.convertTimestampToPlumbing(porcelain.getStartFrom()));
@@ -7329,6 +7339,7 @@ public class Plumbing {
     porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProjectId((plumbing.getProjectId()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
     porcelain.setScopes((plumbing.getScopes()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
@@ -7366,6 +7377,9 @@ public class Plumbing {
       builder.setName((porcelain.getName()));
     }
     builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProjectId() != null) {
+      builder.setProjectId((porcelain.getProjectId()));
+    }
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
     }

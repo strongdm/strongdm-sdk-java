@@ -194,6 +194,8 @@ public final class ActivityVerb {
       "access request to resource granted automatically";
   public static final String ACCESS_REQUEST_TO_RESOURCE_APPROVED_VIA_SERVICE_NOW =
       "access request to resource approved via ServiceNow";
+  public static final String ACCESS_REQUEST_TO_RESOURCE_APPROVED_VIA_JIRA =
+      "access request to resource approved via Jira";
   public static final String WORKFLOW_DELETED = "workflow deleted";
   public static final String WORKFLOW_ADDED = "workflow added";
   public static final String DEPRECATED_WORKFLOW_RESOURCE_ASSIGNED =
