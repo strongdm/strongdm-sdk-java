@@ -214,6 +214,7 @@ public final class ActivityVerb {
   public static final String WORKFLOW_NAME_UPDATED = "workflow name updated";
   public static final String WORKFLOW_DESCRIPTION_UPDATED = "workflow description updated";
   public static final String WORKFLOW_REQUIRES_REASON_UPDATED = "workflow requires reason updated";
+  public static final String WORKFLOW_SETTINGS_UPDATED = "workflow settings updated";
   public static final String WORKFLOW_ACCESS_RULES_UPDATED = "workflow access rules updated";
   public static final String WORKFLOW_ACCESS_RULES_DELETED = "workflow access rules deleted";
   public static final String WORKFLOW_ACCESS_RULES_CREATED = "workflow access rules created";
@@ -257,5 +258,6 @@ public final class ActivityVerb {
   public static final String MANAGED_SECRET_UPDATED = "managed secret updated";
   public static final String MANAGED_SECRET_EXPIRATION_TIME_UPDATED =
       "managed secret expiration time updated";
+  public static final String MANAGED_SECRET_CONFIG_UPDATED = "managed secret config updated";
   public static final String MANAGED_SECRET_DELETED = "managed secret deleted";
 }
