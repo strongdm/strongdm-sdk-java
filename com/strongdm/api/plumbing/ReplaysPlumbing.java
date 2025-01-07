@@ -2412,6 +2412,26 @@ public final class ReplaysPlumbing {
      */
     com.strongdm.api.plumbing.ReplaysPlumbing.ReplayChunkEventOrBuilder getEventsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * If the data is encrypted, this contains the encrypted symmetric key
+     * </pre>
+     *
+     * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+     * @return The symmetricKey.
+     */
+    java.lang.String getSymmetricKey();
+    /**
+     * <pre>
+     * If the data is encrypted, this contains the encrypted symmetric key
+     * </pre>
+     *
+     * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for symmetricKey.
+     */
+    com.google.protobuf.ByteString
+        getSymmetricKeyBytes();
   }
   /**
    * <pre>
@@ -2432,6 +2452,7 @@ public final class ReplaysPlumbing {
     private ReplayChunk() {
       data_ = com.google.protobuf.ByteString.EMPTY;
       events_ = java.util.Collections.emptyList();
+      symmetricKey_ = "";
     }
 
     @java.lang.Override
@@ -2477,6 +2498,12 @@ public final class ReplaysPlumbing {
               }
               events_.add(
                   input.readMessage(com.strongdm.api.plumbing.ReplaysPlumbing.ReplayChunkEvent.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              symmetricKey_ = s;
               break;
             }
             default: {
@@ -2596,6 +2623,52 @@ public final class ReplaysPlumbing {
       return events_.get(index);
     }
 
+    public static final int SYMMETRIC_KEY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object symmetricKey_;
+    /**
+     * <pre>
+     * If the data is encrypted, this contains the encrypted symmetric key
+     * </pre>
+     *
+     * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+     * @return The symmetricKey.
+     */
+    @java.lang.Override
+    public java.lang.String getSymmetricKey() {
+      java.lang.Object ref = symmetricKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symmetricKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If the data is encrypted, this contains the encrypted symmetric key
+     * </pre>
+     *
+     * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for symmetricKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymmetricKeyBytes() {
+      java.lang.Object ref = symmetricKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symmetricKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2616,6 +2689,9 @@ public final class ReplaysPlumbing {
       for (int i = 0; i < events_.size(); i++) {
         output.writeMessage(2, events_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symmetricKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, symmetricKey_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2632,6 +2708,9 @@ public final class ReplaysPlumbing {
       for (int i = 0; i < events_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, events_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symmetricKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, symmetricKey_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2652,6 +2731,8 @@ public final class ReplaysPlumbing {
           .equals(other.getData())) return false;
       if (!getEventsList()
           .equals(other.getEventsList())) return false;
+      if (!getSymmetricKey()
+          .equals(other.getSymmetricKey())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2669,6 +2750,8 @@ public final class ReplaysPlumbing {
         hash = (37 * hash) + EVENTS_FIELD_NUMBER;
         hash = (53 * hash) + getEventsList().hashCode();
       }
+      hash = (37 * hash) + SYMMETRIC_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getSymmetricKey().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2815,6 +2898,8 @@ public final class ReplaysPlumbing {
         } else {
           eventsBuilder_.clear();
         }
+        symmetricKey_ = "";
+
         return this;
       }
 
@@ -2852,6 +2937,7 @@ public final class ReplaysPlumbing {
         } else {
           result.events_ = eventsBuilder_.build();
         }
+        result.symmetricKey_ = symmetricKey_;
         onBuilt();
         return result;
       }
@@ -2928,6 +3014,10 @@ public final class ReplaysPlumbing {
               eventsBuilder_.addAllMessages(other.events_);
             }
           }
+        }
+        if (!other.getSymmetricKey().isEmpty()) {
+          symmetricKey_ = other.symmetricKey_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3333,6 +3423,102 @@ public final class ReplaysPlumbing {
           events_ = null;
         }
         return eventsBuilder_;
+      }
+
+      private java.lang.Object symmetricKey_ = "";
+      /**
+       * <pre>
+       * If the data is encrypted, this contains the encrypted symmetric key
+       * </pre>
+       *
+       * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+       * @return The symmetricKey.
+       */
+      public java.lang.String getSymmetricKey() {
+        java.lang.Object ref = symmetricKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symmetricKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If the data is encrypted, this contains the encrypted symmetric key
+       * </pre>
+       *
+       * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for symmetricKey.
+       */
+      public com.google.protobuf.ByteString
+          getSymmetricKeyBytes() {
+        java.lang.Object ref = symmetricKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symmetricKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If the data is encrypted, this contains the encrypted symmetric key
+       * </pre>
+       *
+       * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The symmetricKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymmetricKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        symmetricKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the data is encrypted, this contains the encrypted symmetric key
+       * </pre>
+       *
+       * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymmetricKey() {
+        
+        symmetricKey_ = getDefaultInstance().getSymmetricKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the data is encrypted, this contains the encrypted symmetric key
+       * </pre>
+       *
+       * <code>string symmetric_key = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for symmetricKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymmetricKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        symmetricKey_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4214,22 +4400,23 @@ public final class ReplaysPlumbing {
       "\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadata" +
       "B,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_g" +
       "ateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-" +
-      "provider\"\215\001\n\013ReplayChunk\022\030\n\004data\030\001 \001(\014B\n" +
+      "provider\"\260\001\n\013ReplayChunk\022\030\n\004data\030\001 \001(\014B\n" +
       "\362\370\263\007\005\260\363\263\007\001\0220\n\006events\030\002 \003(\0132\024.v1.ReplayCh" +
-      "unkEventB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263" +
-      "\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\231\001\n\020Rep" +
-      "layChunkEvent\022\030\n\004data\030\001 \001(\014B\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "7\n\010duration\030\002 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372" +
-      "\370\263\007\030\322\363\263\007\023!terraform-provider2\255\001\n\007Replays" +
-      "\022Y\n\004List\022\025.v1.ReplayListRequest\032\026.v1.Rep" +
-      "layListResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013" +
-      "/v1/replays\032G\312\371\263\007\020\302\371\263\007\013ReplayChunk\312\371\263\007\005\330" +
-      "\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-prov" +
-      "iderB\213\001\n\031com.strongdm.api.plumbingB\017Repl" +
-      "aysPlumbingZ5github.com/strongdm/strongd" +
-      "m-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264" +
-      "\007\030\242\214\264\007\023!terraform-providerb\006proto3"
+      "unkEventB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rsymmetric_key\030\003 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370" +
+      "\263\007\030\322\363\263\007\023!terraform-provider\"\231\001\n\020ReplayCh" +
+      "unkEvent\022\030\n\004data\030\001 \001(\014B\n\362\370\263\007\005\260\363\263\007\001\0227\n\010du" +
+      "ration\030\002 \001(\0132\031.google.protobuf.DurationB" +
+      "\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322" +
+      "\363\263\007\023!terraform-provider2\255\001\n\007Replays\022Y\n\004L" +
+      "ist\022\025.v1.ReplayListRequest\032\026.v1.ReplayLi" +
+      "stResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/r" +
+      "eplays\032G\312\371\263\007\020\302\371\263\007\013ReplayChunk\312\371\263\007\005\330\371\263\007\001\312" +
+      "\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB" +
+      "\213\001\n\031com.strongdm.api.plumbingB\017ReplaysPl" +
+      "umbingZ5github.com/strongdm/strongdm-sdk" +
+      "-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264" +
+      "\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4255,7 +4442,7 @@ public final class ReplaysPlumbing {
     internal_static_v1_ReplayChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ReplayChunk_descriptor,
-        new java.lang.String[] { "Data", "Events", });
+        new java.lang.String[] { "Data", "Events", "SymmetricKey", });
     internal_static_v1_ReplayChunkEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_ReplayChunkEvent_fieldAccessorTable = new

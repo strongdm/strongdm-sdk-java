@@ -14231,6 +14231,7 @@ public class Plumbing {
     porcelain.setData(Plumbing.convertBytesToPorcelain(plumbing.getData()));
     porcelain.setEvents(
         Plumbing.convertRepeatedReplayChunkEventToPorcelain(plumbing.getEventsList()));
+    porcelain.setSymmetricKey((plumbing.getSymmetricKey()));
     return porcelain;
   }
 
@@ -14243,6 +14244,9 @@ public class Plumbing {
       builder.setData(Plumbing.convertBytesToPlumbing(porcelain.getData()));
     }
     builder.addAllEvents(Plumbing.convertRepeatedReplayChunkEventToPlumbing(porcelain.getEvents()));
+    if (porcelain.getSymmetricKey() != null) {
+      builder.setSymmetricKey((porcelain.getSymmetricKey()));
+    }
     return builder.build();
   }
 

@@ -52,4 +52,14 @@ public class ReplayChunk {
   public void setEvents(List<ReplayChunkEvent> in) {
     this.events = in;
   }
+
+  private String symmetricKey;
+  /** If the data is encrypted, this contains the encrypted symmetric key */
+  public String getSymmetricKey() {
+    return this.symmetricKey;
+  }
+  /** If the data is encrypted, this contains the encrypted symmetric key */
+  public void setSymmetricKey(String in) {
+    this.symmetricKey = in;
+  }
 }
