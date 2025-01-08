@@ -54,8 +54,6 @@ public final class Permission {
   public static final String USER_ASSIGN = "user:assign";
   public static final String USER_SUSPEND = "user:suspend";
   public static final String USER_SET_PASSWORD = "user:set_password";
-  public static final String DEMO_PROVISIONING_REQUEST_CREATE = "demoprovisioningrequest:create";
-  public static final String DEMO_PROVISIONING_REQUEST_LIST = "demoprovisioningrequest:list";
   public static final String ROLE_LIST = "role:list";
   public static final String ROLE_CREATE = "role:create";
   public static final String ROLE_DELETE = "role:delete";
@@ -86,19 +84,10 @@ public final class Permission {
   public static final String ORG_AUDIT_POLICIES = "audit:policies";
   public static final String WORKFLOW_LIST = "workflow:list";
   public static final String WORKFLOW_EDIT = "workflow:edit";
-  public static final String ACCESS_REQUEST_EDIT = "accessrequest:edit";
   public static final String ACCESS_REQUEST_LIST = "accessrequest:list";
   public static final String ACCESS_REQUEST_REQUESTER = "accessrequest:requester";
   public static final String APPROVAL_FLOW_EDIT = "approvalflow:edit";
   public static final String APPROVAL_FLOW_LIST = "approvalflow:list";
-  public static final String GLOBAL_RDP_RENDER = "rdp:render";
-  public static final String GLOBAL_QUERY_BUCKET_TRACKER = "query:bucket_tracker";
-  public static final String GLOBAL_ASSETS_GET_LATEST_VERSION_COMMIT_HASH =
-      "assets:get_latest_version_commit_hash";
-  public static final String GLOBAL_SDMOS_SERVICE = "sdmos:service";
-  public static final String GLOBAL_SDMOS_DEPLOYMENT = "sdmos:deployment";
-  public static final String GLOBAL_SDMOS_RELEASE = "sdmos:release";
-  public static final String GLOBAL_DEMO_PROVISIONER = "demo:provision";
   public static final String INSTALLATION_BLESS = "installation:bless";
   public static final String INSTALLATION_CREATE = "installation:create";
   public static final String INSTALLATION_REVOKE = "installation:revoke";
