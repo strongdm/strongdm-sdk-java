@@ -10920,6 +10920,66 @@ public final class WorkflowsPlumbing {
 
     /**
      * <pre>
+     * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRequestMaxDuration field is set.
+     */
+    boolean hasAccessRequestMaxDuration();
+    /**
+     * <pre>
+     * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+     * @return The accessRequestMaxDuration.
+     */
+    com.google.protobuf.Duration getAccessRequestMaxDuration();
+    /**
+     * <pre>
+     * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getAccessRequestMaxDurationOrBuilder();
+
+    /**
+     * <pre>
+     * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRequestFixedDuration field is set.
+     */
+    boolean hasAccessRequestFixedDuration();
+    /**
+     * <pre>
+     * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+     * @return The accessRequestFixedDuration.
+     */
+    com.google.protobuf.Duration getAccessRequestFixedDuration();
+    /**
+     * <pre>
+     * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getAccessRequestFixedDurationOrBuilder();
+
+    /**
+     * <pre>
      * AccessRules is a list of access rules defining the resources this Workflow provides access to.
      * </pre>
      *
@@ -11062,6 +11122,32 @@ public final class WorkflowsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               approvalFlowId_ = s;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (accessRequestMaxDuration_ != null) {
+                subBuilder = accessRequestMaxDuration_.toBuilder();
+              }
+              accessRequestMaxDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessRequestMaxDuration_);
+                accessRequestMaxDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (accessRequestFixedDuration_ != null) {
+                subBuilder = accessRequestFixedDuration_.toBuilder();
+              }
+              accessRequestFixedDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessRequestFixedDuration_);
+                accessRequestFixedDuration_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -11301,6 +11387,88 @@ public final class WorkflowsPlumbing {
       return requiresReason_;
     }
 
+    public static final int ACCESS_REQUEST_MAX_DURATION_FIELD_NUMBER = 10;
+    private com.google.protobuf.Duration accessRequestMaxDuration_;
+    /**
+     * <pre>
+     * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRequestMaxDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessRequestMaxDuration() {
+      return accessRequestMaxDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+     * @return The accessRequestMaxDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getAccessRequestMaxDuration() {
+      return accessRequestMaxDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accessRequestMaxDuration_;
+    }
+    /**
+     * <pre>
+     * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getAccessRequestMaxDurationOrBuilder() {
+      return getAccessRequestMaxDuration();
+    }
+
+    public static final int ACCESS_REQUEST_FIXED_DURATION_FIELD_NUMBER = 11;
+    private com.google.protobuf.Duration accessRequestFixedDuration_;
+    /**
+     * <pre>
+     * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRequestFixedDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessRequestFixedDuration() {
+      return accessRequestFixedDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+     * @return The accessRequestFixedDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getAccessRequestFixedDuration() {
+      return accessRequestFixedDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accessRequestFixedDuration_;
+    }
+    /**
+     * <pre>
+     * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+     * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getAccessRequestFixedDurationOrBuilder() {
+      return getAccessRequestFixedDuration();
+    }
+
     public static final int ACCESS_RULES_FIELD_NUMBER = 8;
     private volatile java.lang.Object accessRules_;
     /**
@@ -11434,6 +11602,12 @@ public final class WorkflowsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalFlowId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, approvalFlowId_);
       }
+      if (accessRequestMaxDuration_ != null) {
+        output.writeMessage(10, getAccessRequestMaxDuration());
+      }
+      if (accessRequestFixedDuration_ != null) {
+        output.writeMessage(11, getAccessRequestFixedDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11474,6 +11648,14 @@ public final class WorkflowsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalFlowId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, approvalFlowId_);
       }
+      if (accessRequestMaxDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getAccessRequestMaxDuration());
+      }
+      if (accessRequestFixedDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getAccessRequestFixedDuration());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11503,6 +11685,16 @@ public final class WorkflowsPlumbing {
           != other.getEnabled()) return false;
       if (getRequiresReason()
           != other.getRequiresReason()) return false;
+      if (hasAccessRequestMaxDuration() != other.hasAccessRequestMaxDuration()) return false;
+      if (hasAccessRequestMaxDuration()) {
+        if (!getAccessRequestMaxDuration()
+            .equals(other.getAccessRequestMaxDuration())) return false;
+      }
+      if (hasAccessRequestFixedDuration() != other.hasAccessRequestFixedDuration()) return false;
+      if (hasAccessRequestFixedDuration()) {
+        if (!getAccessRequestFixedDuration()
+            .equals(other.getAccessRequestFixedDuration())) return false;
+      }
       if (!getAccessRules()
           .equals(other.getAccessRules())) return false;
       if (!getApprovalFlowId()
@@ -11536,6 +11728,14 @@ public final class WorkflowsPlumbing {
       hash = (37 * hash) + REQUIRES_REASON_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getRequiresReason());
+      if (hasAccessRequestMaxDuration()) {
+        hash = (37 * hash) + ACCESS_REQUEST_MAX_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessRequestMaxDuration().hashCode();
+      }
+      if (hasAccessRequestFixedDuration()) {
+        hash = (37 * hash) + ACCESS_REQUEST_FIXED_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessRequestFixedDuration().hashCode();
+      }
       hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
       hash = (53 * hash) + getAccessRules().hashCode();
       hash = (37 * hash) + APPROVAL_FLOW_ID_FIELD_NUMBER;
@@ -11693,6 +11893,18 @@ public final class WorkflowsPlumbing {
 
         requiresReason_ = false;
 
+        if (accessRequestMaxDurationBuilder_ == null) {
+          accessRequestMaxDuration_ = null;
+        } else {
+          accessRequestMaxDuration_ = null;
+          accessRequestMaxDurationBuilder_ = null;
+        }
+        if (accessRequestFixedDurationBuilder_ == null) {
+          accessRequestFixedDuration_ = null;
+        } else {
+          accessRequestFixedDuration_ = null;
+          accessRequestFixedDurationBuilder_ = null;
+        }
         accessRules_ = "";
 
         approvalFlowId_ = "";
@@ -11730,6 +11942,16 @@ public final class WorkflowsPlumbing {
         result.autoGrant_ = autoGrant_;
         result.enabled_ = enabled_;
         result.requiresReason_ = requiresReason_;
+        if (accessRequestMaxDurationBuilder_ == null) {
+          result.accessRequestMaxDuration_ = accessRequestMaxDuration_;
+        } else {
+          result.accessRequestMaxDuration_ = accessRequestMaxDurationBuilder_.build();
+        }
+        if (accessRequestFixedDurationBuilder_ == null) {
+          result.accessRequestFixedDuration_ = accessRequestFixedDuration_;
+        } else {
+          result.accessRequestFixedDuration_ = accessRequestFixedDurationBuilder_.build();
+        }
         result.accessRules_ = accessRules_;
         result.approvalFlowId_ = approvalFlowId_;
         onBuilt();
@@ -11803,6 +12025,12 @@ public final class WorkflowsPlumbing {
         }
         if (other.getRequiresReason() != false) {
           setRequiresReason(other.getRequiresReason());
+        }
+        if (other.hasAccessRequestMaxDuration()) {
+          mergeAccessRequestMaxDuration(other.getAccessRequestMaxDuration());
+        }
+        if (other.hasAccessRequestFixedDuration()) {
+          mergeAccessRequestFixedDuration(other.getAccessRequestFixedDuration());
         }
         if (!other.getAccessRules().isEmpty()) {
           accessRules_ = other.accessRules_;
@@ -12316,6 +12544,334 @@ public final class WorkflowsPlumbing {
         return this;
       }
 
+      private com.google.protobuf.Duration accessRequestMaxDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> accessRequestMaxDurationBuilder_;
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       * @return Whether the accessRequestMaxDuration field is set.
+       */
+      public boolean hasAccessRequestMaxDuration() {
+        return accessRequestMaxDurationBuilder_ != null || accessRequestMaxDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       * @return The accessRequestMaxDuration.
+       */
+      public com.google.protobuf.Duration getAccessRequestMaxDuration() {
+        if (accessRequestMaxDurationBuilder_ == null) {
+          return accessRequestMaxDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accessRequestMaxDuration_;
+        } else {
+          return accessRequestMaxDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRequestMaxDuration(com.google.protobuf.Duration value) {
+        if (accessRequestMaxDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRequestMaxDuration_ = value;
+          onChanged();
+        } else {
+          accessRequestMaxDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRequestMaxDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (accessRequestMaxDurationBuilder_ == null) {
+          accessRequestMaxDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessRequestMaxDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAccessRequestMaxDuration(com.google.protobuf.Duration value) {
+        if (accessRequestMaxDurationBuilder_ == null) {
+          if (accessRequestMaxDuration_ != null) {
+            accessRequestMaxDuration_ =
+              com.google.protobuf.Duration.newBuilder(accessRequestMaxDuration_).mergeFrom(value).buildPartial();
+          } else {
+            accessRequestMaxDuration_ = value;
+          }
+          onChanged();
+        } else {
+          accessRequestMaxDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAccessRequestMaxDuration() {
+        if (accessRequestMaxDurationBuilder_ == null) {
+          accessRequestMaxDuration_ = null;
+          onChanged();
+        } else {
+          accessRequestMaxDuration_ = null;
+          accessRequestMaxDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getAccessRequestMaxDurationBuilder() {
+        
+        onChanged();
+        return getAccessRequestMaxDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getAccessRequestMaxDurationOrBuilder() {
+        if (accessRequestMaxDurationBuilder_ != null) {
+          return accessRequestMaxDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return accessRequestMaxDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : accessRequestMaxDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_max_duration = 10 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getAccessRequestMaxDurationFieldBuilder() {
+        if (accessRequestMaxDurationBuilder_ == null) {
+          accessRequestMaxDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getAccessRequestMaxDuration(),
+                  getParentForChildren(),
+                  isClean());
+          accessRequestMaxDuration_ = null;
+        }
+        return accessRequestMaxDurationBuilder_;
+      }
+
+      private com.google.protobuf.Duration accessRequestFixedDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> accessRequestFixedDurationBuilder_;
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       * @return Whether the accessRequestFixedDuration field is set.
+       */
+      public boolean hasAccessRequestFixedDuration() {
+        return accessRequestFixedDurationBuilder_ != null || accessRequestFixedDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       * @return The accessRequestFixedDuration.
+       */
+      public com.google.protobuf.Duration getAccessRequestFixedDuration() {
+        if (accessRequestFixedDurationBuilder_ == null) {
+          return accessRequestFixedDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accessRequestFixedDuration_;
+        } else {
+          return accessRequestFixedDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRequestFixedDuration(com.google.protobuf.Duration value) {
+        if (accessRequestFixedDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRequestFixedDuration_ = value;
+          onChanged();
+        } else {
+          accessRequestFixedDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRequestFixedDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (accessRequestFixedDurationBuilder_ == null) {
+          accessRequestFixedDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessRequestFixedDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAccessRequestFixedDuration(com.google.protobuf.Duration value) {
+        if (accessRequestFixedDurationBuilder_ == null) {
+          if (accessRequestFixedDuration_ != null) {
+            accessRequestFixedDuration_ =
+              com.google.protobuf.Duration.newBuilder(accessRequestFixedDuration_).mergeFrom(value).buildPartial();
+          } else {
+            accessRequestFixedDuration_ = value;
+          }
+          onChanged();
+        } else {
+          accessRequestFixedDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAccessRequestFixedDuration() {
+        if (accessRequestFixedDurationBuilder_ == null) {
+          accessRequestFixedDuration_ = null;
+          onChanged();
+        } else {
+          accessRequestFixedDuration_ = null;
+          accessRequestFixedDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getAccessRequestFixedDurationBuilder() {
+        
+        onChanged();
+        return getAccessRequestFixedDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getAccessRequestFixedDurationOrBuilder() {
+        if (accessRequestFixedDurationBuilder_ != null) {
+          return accessRequestFixedDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return accessRequestFixedDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : accessRequestFixedDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max duration must be empty.
+       * If neither max nor fixed duration are provided, requests that bind to this workflow will use the organization-level settings.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration access_request_fixed_duration = 11 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getAccessRequestFixedDurationFieldBuilder() {
+        if (accessRequestFixedDurationBuilder_ == null) {
+          accessRequestFixedDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getAccessRequestFixedDuration(),
+                  getParentForChildren(),
+                  isClean());
+          accessRequestFixedDuration_ = null;
+        }
+        return accessRequestFixedDurationBuilder_;
+      }
+
       private java.lang.Object accessRules_ = "";
       /**
        * <pre>
@@ -12624,83 +13180,88 @@ public final class WorkflowsPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017workflows.proto\022\002v1\032\roptions.proto\032\nsp" +
-      "ec.proto\"l\n\025WorkflowCreateRequest\022\'\n\004met" +
-      "a\030\001 \001(\0132\031.v1.CreateRequestMetadata\022*\n\010wo" +
-      "rkflow\030\002 \001(\0132\014.v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\"\323" +
-      "\001\n\026WorkflowCreateResponse\022(\n\004meta\030\001 \001(\0132" +
-      "\032.v1.CreateResponseMetadata\022*\n\010workflow\030" +
-      "\002 \001(\0132\014.v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_" +
-      "limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"R\n\022WorkflowGetRequest\022$\n\004me" +
-      "ta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\331\001\n\023WorkflowGetResponse" +
-      "\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022*\n\010workflow\030\002 \001(\0132\014.v1.Workf" +
-      "lowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1" +
-      ".RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001" +
-      "*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"l\n\025" +
-      "WorkflowUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
-      ".UpdateRequestMetadata\022*\n\010workflow\030\002 \001(\013" +
-      "2\014.v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\"\323\001\n\026WorkflowU" +
-      "pdateResponse\022(\n\004meta\030\001 \001(\0132\032.v1.UpdateR" +
-      "esponseMetadata\022*\n\010workflow\030\002 \001(\0132\014.v1.W" +
-      "orkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132" +
-      "\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262" +
-      "\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001" +
-      "\"X\n\025WorkflowDeleteRequest\022\'\n\004meta\030\001 \001(\0132" +
-      "\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\"\277\001\n\026WorkflowDeleteResponse\022(\n" +
-      "\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadata\022" +
-      "\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 " +
+      "\n\017workflows.proto\022\002v1\032\036google/protobuf/d" +
+      "uration.proto\032\roptions.proto\032\nspec.proto" +
+      "\"l\n\025WorkflowCreateRequest\022\'\n\004meta\030\001 \001(\0132" +
+      "\031.v1.CreateRequestMetadata\022*\n\010workflow\030\002" +
+      " \001(\0132\014.v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\"\323\001\n\026Workf" +
+      "lowCreateResponse\022(\n\004meta\030\001 \001(\0132\032.v1.Cre" +
+      "ateResponseMetadata\022*\n\010workflow\030\002 \001(\0132\014." +
+      "v1.WorkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 " +
       "\001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370" +
       "\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"X\n\023WorkflowListRequest\022%\n\004meta\030\001 \001(" +
-      "\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\"\320\001\n\024WorkflowListResponse\022" +
-      "&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\022" +
-      "+\n\tworkflows\030\002 \003(\0132\014.v1.WorkflowB\n\362\370\263\007\005\270" +
-      "\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
-      "etadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r" +
-      "!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\365\004\n\010Workflow\022\026" +
-      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
-      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022\037\n\006weight\030\004 \001(\003B\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022" +
-      "\036\n\nauto_grant\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabl" +
-      "ed\030\006 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030" +
-      "\007 \001(\010B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022\362\001\n\014acc" +
-      "ess_rules\030\010 \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014" +
-      "access_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n" +
-      "\ngo_private\022\013AccessRules\362\363\263\007\033\n\014go_terraf" +
-      "orm\022\013AccessRules\362\363\263\007\030\n\004java\022\020List<Access" +
-      "Rule>\362\363\263\007\"\n\014json_gateway\022\022models.AccessR" +
-      "ules\272\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001\022$\n" +
-      "\020approval_flow_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263" +
-      "\007_\250\363\263\007\001\302\363\263\007O\242\363\263\007!tf_examples/workflow_re" +
-      "source.txt\252\363\263\007$tf_examples/workflow_data" +
-      "_source.txt\322\363\263\007\001*2\262\004\n\tWorkflows\022f\n\006Creat" +
-      "e\022\031.v1.WorkflowCreateRequest\032\032.v1.Workfl" +
-      "owCreateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263" +
-      "\007\r/v1/workflows\022`\n\003Get\022\026.v1.WorkflowGetR" +
-      "equest\032\027.v1.WorkflowGetResponse\"(\202\371\263\007\010\242\363" +
-      "\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/workflow/{id}\022h\n\006Del" +
-      "ete\022\031.v1.WorkflowDeleteRequest\032\032.v1.Work" +
-      "flowDeleteResponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
-      "\022\252\363\263\007\r/v1/workflows\022e\n\006Update\022\031.v1.Workf" +
-      "lowUpdateRequest\032\032.v1.WorkflowUpdateResp" +
-      "onse\"$\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflo" +
-      "ws\022_\n\004List\022\027.v1.WorkflowListRequest\032\030.v1" +
-      ".WorkflowListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
-      "\022\252\363\263\007\r/v1/workflows\032)\312\371\263\007\r\302\371\263\007\010Workflow\312" +
-      "\371\263\007\010\322\371\263\007\003aw-\312\371\263\007\005\350\371\263\007\001Be\n\031com.strongdm.a" +
-      "pi.plumbingB\021WorkflowsPlumbingZ5github.c" +
-      "om/strongdm/strongdm-sdk-go/v3/internal/" +
-      "v1;v1b\006proto3"
+      "\363\263\007\001\"R\n\022WorkflowGetRequest\022$\n\004meta\030\001 \001(\013" +
+      "2\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\"\331\001\n\023WorkflowGetResponse\0221\n\004meta" +
+      "\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022*\n\010workflow\030\002 \001(\0132\014.v1.WorkflowB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLim" +
+      "itMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364" +
+      "\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"l\n\025Workflow" +
+      "UpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateR" +
+      "equestMetadata\022*\n\010workflow\030\002 \001(\0132\014.v1.Wo" +
+      "rkflowB\n\362\370\263\007\005\260\363\263\007\001\"\323\001\n\026WorkflowUpdateRes" +
+      "ponse\022(\n\004meta\030\001 \001(\0132\032.v1.UpdateResponseM" +
+      "etadata\022*\n\010workflow\030\002 \001(\0132\014.v1.WorkflowB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
+      "eLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
+      "\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"X\n\025Work" +
+      "flowDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Del" +
+      "eteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\"\277\001\n\026WorkflowDeleteResponse\022(\n\004meta\030\001 " +
+      "\001(\0132\032.v1.DeleteResponseMetadata\022\026\n\002id\030\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1" +
+      ".RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001" +
+      "*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"X\n\023" +
+      "WorkflowListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.L" +
+      "istRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\"\320\001\n\024WorkflowListResponse\022&\n\004meta\030" +
+      "\001 \001(\0132\030.v1.ListResponseMetadata\022+\n\tworkf" +
+      "lows\030\002 \003(\0132\014.v1.WorkflowB\n\362\370\263\007\005\270\363\263\007\001\022W\n\n" +
+      "rate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB" +
+      ",\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_ga" +
+      "teway:\n\372\370\263\007\005\250\363\263\007\001\"\217\006\n\010Workflow\022\026\n\002id\030\001 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
+      "\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
+      "\n\006weight\030\004 \001(\003B\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022\036\n\nauto_" +
+      "grant\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabled\030\006 \001(\010" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030\007 \001(\010B\031\362" +
+      "\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022J\n\033access_reque" +
+      "st_max_duration\030\n \001(\0132\031.google.protobuf." +
+      "DurationB\n\362\370\263\007\005\260\363\263\007\001\022L\n\035access_request_f" +
+      "ixed_duration\030\013 \001(\0132\031.google.protobuf.Du" +
+      "rationB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\010 \001(" +
+      "\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules\362\363" +
+      "\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022\013A" +
+      "ccessRules\362\363\263\007\033\n\014go_terraform\022\013AccessRul" +
+      "es\362\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014js" +
+      "on_gateway\022\022models.AccessRules\272\364\263\007\027acces" +
+      "sRulesDiffSuppress\320\364\263\007\001\022$\n\020approval_flow" +
+      "_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\302\363\263\007O\242\363" +
+      "\263\007!tf_examples/workflow_resource.txt\252\363\263\007" +
+      "$tf_examples/workflow_data_source.txt\322\363\263" +
+      "\007\001*2\262\004\n\tWorkflows\022f\n\006Create\022\031.v1.Workflo" +
+      "wCreateRequest\032\032.v1.WorkflowCreateRespon" +
+      "se\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/workflow" +
+      "s\022`\n\003Get\022\026.v1.WorkflowGetRequest\032\027.v1.Wo" +
+      "rkflowGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263" +
+      "\007\021/v1/workflow/{id}\022h\n\006Delete\022\031.v1.Workf" +
+      "lowDeleteRequest\032\032.v1.WorkflowDeleteResp" +
+      "onse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\022\252\363\263\007\r/v1/work" +
+      "flows\022e\n\006Update\022\031.v1.WorkflowUpdateReque" +
+      "st\032\032.v1.WorkflowUpdateResponse\"$\202\371\263\007\010\242\363\263" +
+      "\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflows\022_\n\004List\022\027.v" +
+      "1.WorkflowListRequest\032\030.v1.WorkflowListR" +
+      "esponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v1/work" +
+      "flows\032)\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007\010\322\371\263\007\003aw-\312\371" +
+      "\263\007\005\350\371\263\007\001Be\n\031com.strongdm.api.plumbingB\021W" +
+      "orkflowsPlumbingZ5github.com/strongdm/st" +
+      "rongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
         });
@@ -12769,7 +13330,7 @@ public final class WorkflowsPlumbing {
     internal_static_v1_Workflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Workflow_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "Weight", "AutoGrant", "Enabled", "RequiresReason", "AccessRules", "ApprovalFlowId", });
+        new java.lang.String[] { "Id", "Name", "Description", "Weight", "AutoGrant", "Enabled", "RequiresReason", "AccessRequestMaxDuration", "AccessRequestFixedDuration", "AccessRules", "ApprovalFlowId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
@@ -12778,6 +13339,7 @@ public final class WorkflowsPlumbing {
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DurationProto.getDescriptor();
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();
   }

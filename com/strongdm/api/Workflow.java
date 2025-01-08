@@ -17,6 +17,7 @@
 
 package com.strongdm.api;
 
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -25,6 +26,42 @@ import java.util.List;
  * either but automatic approval or a set of users authorized to approve the requests.
  */
 public class Workflow {
+  private Duration accessRequestFixedDuration;
+  /**
+   * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max
+   * duration must be empty. If neither max nor fixed duration are provided, requests that bind to
+   * this workflow will use the organization-level settings.
+   */
+  public Duration getAccessRequestFixedDuration() {
+    return this.accessRequestFixedDuration;
+  }
+  /**
+   * Fixed Duration of access requests bound to this workflow. If fixed duration is provided, max
+   * duration must be empty. If neither max nor fixed duration are provided, requests that bind to
+   * this workflow will use the organization-level settings.
+   */
+  public void setAccessRequestFixedDuration(Duration in) {
+    this.accessRequestFixedDuration = in;
+  }
+
+  private Duration accessRequestMaxDuration;
+  /**
+   * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed
+   * duration must be empty. If neither max nor fixed duration are provided, requests that bind to
+   * this workflow will use the organization-level settings.
+   */
+  public Duration getAccessRequestMaxDuration() {
+    return this.accessRequestMaxDuration;
+  }
+  /**
+   * Maximum Duration of access requests bound to this workflow. If max duration is provided, fixed
+   * duration must be empty. If neither max nor fixed duration are provided, requests that bind to
+   * this workflow will use the organization-level settings.
+   */
+  public void setAccessRequestMaxDuration(Duration in) {
+    this.accessRequestMaxDuration = in;
+  }
+
   private List<AccessRule> accessRules;
   /**
    * AccessRules is a list of access rules defining the resources this Workflow provides access to.
