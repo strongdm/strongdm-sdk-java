@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * GCPConsole is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class GCPConsole implements Resource {
   private String bindInterface;
   /**
