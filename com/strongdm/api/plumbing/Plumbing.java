@@ -4621,6 +4621,99 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AuroraMysqlIAM convertAuroraMysqlIAMToPorcelain(
+      AuroraMysqlIAM plumbing) {
+    com.strongdm.api.AuroraMysqlIAM porcelain = new com.strongdm.api.AuroraMysqlIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleAssumptionArn((plumbing.getRoleAssumptionArn()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static AuroraMysqlIAM convertAuroraMysqlIAMToPlumbing(
+      com.strongdm.api.AuroraMysqlIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AuroraMysqlIAM.Builder builder = AuroraMysqlIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleAssumptionArn() != null) {
+      builder.setRoleAssumptionArn((porcelain.getRoleAssumptionArn()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AuroraMysqlIAM> convertRepeatedAuroraMysqlIAMToPorcelain(
+      Collection<AuroraMysqlIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AuroraMysqlIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAuroraMysqlIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AuroraMysqlIAM> convertRepeatedAuroraMysqlIAMToPlumbing(
+      Collection<com.strongdm.api.AuroraMysqlIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AuroraMysqlIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAuroraMysqlIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AuroraPostgres convertAuroraPostgresToPorcelain(
       AuroraPostgres plumbing) {
     com.strongdm.api.AuroraPostgres porcelain = new com.strongdm.api.AuroraPostgres();
@@ -14419,6 +14512,9 @@ public class Plumbing {
     if (plumbing.hasAuroraMysql()) {
       return convertAuroraMysqlToPorcelain(plumbing.getAuroraMysql());
     }
+    if (plumbing.hasAuroraMysqlIam()) {
+      return convertAuroraMysqlIAMToPorcelain(plumbing.getAuroraMysqlIam());
+    }
     if (plumbing.hasAuroraPostgres()) {
       return convertAuroraPostgresToPorcelain(plumbing.getAuroraPostgres());
     }
@@ -14736,6 +14832,12 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAuroraMysql(
           convertAuroraMysqlToPlumbing((com.strongdm.api.AuroraMysql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AuroraMysqlIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAuroraMysqlIam(
+          convertAuroraMysqlIAMToPlumbing((com.strongdm.api.AuroraMysqlIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AuroraPostgres) {

@@ -158,6 +158,7 @@ public final class ActivityVerb {
   public static final String SECRET_STORE_DELETED = "secret store deleted";
   public static final String SECRET_ENGINE_ADDED = "secret engine added";
   public static final String SECRET_ENGINE_UPDATED = "secret engine updated";
+  public static final String SECRET_ENGINE_ROTATED = "secret engine's credentials updated";
   public static final String SECRET_ENGINE_DELETED = "secret engine deleted";
   public static final String REMOTE_IDENTITY_GROUP_CREATED = "remote identity group created";
   public static final String REMOTE_IDENTITY_GROUP_UPDATED = "remote identity group updated";
