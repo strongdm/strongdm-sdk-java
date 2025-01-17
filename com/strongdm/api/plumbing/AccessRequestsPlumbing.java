@@ -10032,40 +10032,48 @@ public final class AccessRequestsPlumbing {
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @return A list containing the resourceIds.
      */
-    java.util.List<java.lang.String>
+    @java.lang.Deprecated java.util.List<java.lang.String>
         getResourceIdsList();
     /**
      * <pre>
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @return The count of resourceIds.
      */
-    int getResourceIdsCount();
+    @java.lang.Deprecated int getResourceIdsCount();
     /**
      * <pre>
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
-    java.lang.String getResourceIds(int index);
+    @java.lang.Deprecated java.lang.String getResourceIds(int index);
     /**
      * <pre>
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getResourceIdsBytes(int index);
 
     /**
@@ -10134,6 +10142,26 @@ public final class AccessRequestsPlumbing {
      */
     com.google.protobuf.ByteString
         getDurationBytes();
+
+    /**
+     * <pre>
+     * The requested resources and groups.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The accessRules.
+     */
+    java.lang.String getAccessRules();
+    /**
+     * <pre>
+     * The requested resources and groups.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessRules.
+     */
+    com.google.protobuf.ByteString
+        getAccessRulesBytes();
   }
   /**
    * <pre>
@@ -10155,6 +10183,7 @@ public final class AccessRequestsPlumbing {
       resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       reason_ = "";
       duration_ = "";
+      accessRules_ = "";
     }
 
     @java.lang.Override
@@ -10222,6 +10251,12 @@ public final class AccessRequestsPlumbing {
               duration_ = s;
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessRules_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10266,10 +10301,12 @@ public final class AccessRequestsPlumbing {
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @return A list containing the resourceIds.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getResourceIdsList() {
       return resourceIds_;
     }
@@ -10278,10 +10315,12 @@ public final class AccessRequestsPlumbing {
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @return The count of resourceIds.
      */
-    public int getResourceIdsCount() {
+    @java.lang.Deprecated public int getResourceIdsCount() {
       return resourceIds_.size();
     }
     /**
@@ -10289,11 +10328,13 @@ public final class AccessRequestsPlumbing {
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
-    public java.lang.String getResourceIds(int index) {
+    @java.lang.Deprecated public java.lang.String getResourceIds(int index) {
       return resourceIds_.get(index);
     }
     /**
@@ -10301,11 +10342,13 @@ public final class AccessRequestsPlumbing {
      * The resources for which access is being requested
      * </pre>
      *
-     * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+     *     See access_requests.proto;l=231
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getResourceIdsBytes(int index) {
       return resourceIds_.getByteString(index);
     }
@@ -10440,6 +10483,52 @@ public final class AccessRequestsPlumbing {
       }
     }
 
+    public static final int ACCESS_RULES_FIELD_NUMBER = 5;
+    private volatile java.lang.Object accessRules_;
+    /**
+     * <pre>
+     * The requested resources and groups.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The accessRules.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessRules() {
+      java.lang.Object ref = accessRules_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessRules_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The requested resources and groups.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessRules.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessRulesBytes() {
+      java.lang.Object ref = accessRules_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessRules_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10465,6 +10554,9 @@ public final class AccessRequestsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duration_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, duration_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRules_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, accessRules_);
       }
       unknownFields.writeTo(output);
     }
@@ -10493,6 +10585,9 @@ public final class AccessRequestsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duration_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, duration_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRules_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, accessRules_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10519,6 +10614,8 @@ public final class AccessRequestsPlumbing {
       }
       if (!getDuration()
           .equals(other.getDuration())) return false;
+      if (!getAccessRules()
+          .equals(other.getAccessRules())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10542,6 +10639,8 @@ public final class AccessRequestsPlumbing {
       }
       hash = (37 * hash) + DURATION_FIELD_NUMBER;
       hash = (53 * hash) + getDuration().hashCode();
+      hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessRules().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10691,6 +10790,8 @@ public final class AccessRequestsPlumbing {
         }
         duration_ = "";
 
+        accessRules_ = "";
+
         return this;
       }
 
@@ -10730,6 +10831,7 @@ public final class AccessRequestsPlumbing {
           result.startFrom_ = startFromBuilder_.build();
         }
         result.duration_ = duration_;
+        result.accessRules_ = accessRules_;
         onBuilt();
         return result;
       }
@@ -10799,6 +10901,10 @@ public final class AccessRequestsPlumbing {
           duration_ = other.duration_;
           onChanged();
         }
+        if (!other.getAccessRules().isEmpty()) {
+          accessRules_ = other.accessRules_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10841,10 +10947,12 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @return A list containing the resourceIds.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
           getResourceIdsList() {
         return resourceIds_.getUnmodifiableView();
       }
@@ -10853,10 +10961,12 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @return The count of resourceIds.
        */
-      public int getResourceIdsCount() {
+      @java.lang.Deprecated public int getResourceIdsCount() {
         return resourceIds_.size();
       }
       /**
@@ -10864,11 +10974,13 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @param index The index of the element to return.
        * @return The resourceIds at the given index.
        */
-      public java.lang.String getResourceIds(int index) {
+      @java.lang.Deprecated public java.lang.String getResourceIds(int index) {
         return resourceIds_.get(index);
       }
       /**
@@ -10876,11 +10988,13 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @param index The index of the value to return.
        * @return The bytes of the resourceIds at the given index.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getResourceIdsBytes(int index) {
         return resourceIds_.getByteString(index);
       }
@@ -10889,12 +11003,14 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @param index The index to set the value at.
        * @param value The resourceIds to set.
        * @return This builder for chaining.
        */
-      public Builder setResourceIds(
+      @java.lang.Deprecated public Builder setResourceIds(
           int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -10909,11 +11025,13 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @param value The resourceIds to add.
        * @return This builder for chaining.
        */
-      public Builder addResourceIds(
+      @java.lang.Deprecated public Builder addResourceIds(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -10928,11 +11046,13 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @param values The resourceIds to add.
        * @return This builder for chaining.
        */
-      public Builder addAllResourceIds(
+      @java.lang.Deprecated public Builder addAllResourceIds(
           java.lang.Iterable<java.lang.String> values) {
         ensureResourceIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -10945,10 +11065,12 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @return This builder for chaining.
        */
-      public Builder clearResourceIds() {
+      @java.lang.Deprecated public Builder clearResourceIds() {
         resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
@@ -10959,11 +11081,13 @@ public final class AccessRequestsPlumbing {
        * The resources for which access is being requested
        * </pre>
        *
-       * <code>repeated string resource_ids = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
+       *     See access_requests.proto;l=231
        * @param value The bytes of the resourceIds to add.
        * @return This builder for chaining.
        */
-      public Builder addResourceIdsBytes(
+      @java.lang.Deprecated public Builder addResourceIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -11321,6 +11445,102 @@ public final class AccessRequestsPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object accessRules_ = "";
+      /**
+       * <pre>
+       * The requested resources and groups.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return The accessRules.
+       */
+      public java.lang.String getAccessRules() {
+        java.lang.Object ref = accessRules_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessRules_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The requested resources and groups.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accessRules.
+       */
+      public com.google.protobuf.ByteString
+          getAccessRulesBytes() {
+        java.lang.Object ref = accessRules_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessRules_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The requested resources and groups.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The accessRules to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRules(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessRules_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested resources and groups.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessRules() {
+        
+        accessRules_ = getDefaultInstance().getAccessRules();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The requested resources and groups.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accessRules to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRulesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessRules_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11460,22 +11680,28 @@ public final class AccessRequestsPlumbing {
       "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370" +
       "\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.pr" +
       "otobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration" +
-      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\324\001\n" +
-      "\032RequestAccessRequestConfig\022%\n\014resource_" +
-      "ids\030\001 \003(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010du" +
-      "ration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007" +
-      "\ngo_private2\331\001\n\016AccessRequests\022o\n\004List\022\034" +
-      ".v1.AccessRequestListRequest\032\035.v1.Access" +
-      "RequestListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252" +
-      "\363\263\007\023/v1/access-requests\032V\312\371\263\007\022\302\371\263\007\rAcces" +
-      "sRequest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263" +
-      "\007\023!terraform-provider\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com." +
-      "strongdm.api.plumbingB\026AccessRequestsPlu" +
-      "mbingZ5github.com/strongdm/strongdm-sdk-" +
-      "go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007" +
-      "\023!terraform-providerb\006proto3"
+      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\313\003\n" +
+      "\032RequestAccessRequestConfig\022\'\n\014resource_" +
+      "ids\030\001 \003(\tB\021\030\001\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010" +
+      "duration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_ru" +
+      "les\030\005 \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access" +
+      "_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_pr" +
+      "ivate\022\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013A" +
+      "ccessRules\362\363\263\007\030\n\004java\022\020List<AccessRule>\362" +
+      "\363\263\007\"\n\014json_gateway\022\022models.AccessRules\272\364" +
+      "\263\007\027accessRulesDiffSuppress\320\364\263\007\001:\031\372\370\263\007\024\250\363" +
+      "\263\007\001\322\363\263\007\ngo_private2\331\001\n\016AccessRequests\022o\n" +
+      "\004List\022\034.v1.AccessRequestListRequest\032\035.v1" +
+      ".AccessRequestListResponse\"*\202\371\263\007\010\242\363\263\007\003ge" +
+      "t\202\371\263\007\030\252\363\263\007\023/v1/access-requests\032V\312\371\263\007\022\302\371\263" +
+      "\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312" +
+      "\371\263\007\030\312\371\263\007\023!terraform-provider\312\371\263\007\005\350\371\263\007\001B\222" +
+      "\001\n\031com.strongdm.api.plumbingB\026AccessRequ" +
+      "estsPlumbingZ5github.com/strongdm/strong" +
+      "dm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222" +
+      "\264\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11527,7 +11753,7 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RequestAccessRequestConfig_descriptor,
-        new java.lang.String[] { "ResourceIds", "Reason", "StartFrom", "Duration", });
+        new java.lang.String[] { "ResourceIds", "Reason", "StartFrom", "Duration", "AccessRules", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

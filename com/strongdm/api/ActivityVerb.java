@@ -183,6 +183,8 @@ public final class ActivityVerb {
   public static final String ACCESS_REQUESTED_TO_RESOURCE = "access requested to resource";
   public static final String ACCESS_REQUEST_TO_RESOURCE_APPROVAL_ADDED =
       "access request to resource approval added";
+  public static final String ACCESS_REQUEST_TO_RESOURCE_STEP_SKIPPED =
+      "access request to resource step skipped";
   public static final String ACCESS_REQUEST_TO_RESOURCE_CANCELED =
       "access request to resource canceled";
   public static final String ACCESS_REQUEST_TO_RESOURCE_DENIED =
