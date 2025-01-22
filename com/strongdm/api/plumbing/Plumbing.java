@@ -6967,6 +6967,87 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.DocumentDBHostIAM convertDocumentDBHostIAMToPorcelain(
+      DocumentDBHostIAM plumbing) {
+    com.strongdm.api.DocumentDBHostIAM porcelain = new com.strongdm.api.DocumentDBHostIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static DocumentDBHostIAM convertDocumentDBHostIAMToPlumbing(
+      com.strongdm.api.DocumentDBHostIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    DocumentDBHostIAM.Builder builder = DocumentDBHostIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.DocumentDBHostIAM>
+      convertRepeatedDocumentDBHostIAMToPorcelain(Collection<DocumentDBHostIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DocumentDBHostIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertDocumentDBHostIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<DocumentDBHostIAM> convertRepeatedDocumentDBHostIAMToPlumbing(
+      Collection<com.strongdm.api.DocumentDBHostIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DocumentDBHostIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertDocumentDBHostIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.DocumentDBReplicaSet convertDocumentDBReplicaSetToPorcelain(
       DocumentDBReplicaSet plumbing) {
     com.strongdm.api.DocumentDBReplicaSet porcelain = new com.strongdm.api.DocumentDBReplicaSet();
@@ -14938,6 +15019,9 @@ public class Plumbing {
     if (plumbing.hasDocumentDbHost()) {
       return convertDocumentDBHostToPorcelain(plumbing.getDocumentDbHost());
     }
+    if (plumbing.hasDocumentDbHostIam()) {
+      return convertDocumentDBHostIAMToPorcelain(plumbing.getDocumentDbHostIam());
+    }
     if (plumbing.hasDocumentDbReplicaSet()) {
       return convertDocumentDBReplicaSetToPorcelain(plumbing.getDocumentDbReplicaSet());
     }
@@ -15335,6 +15419,12 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setDocumentDbHost(
           convertDocumentDBHostToPlumbing((com.strongdm.api.DocumentDBHost) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.DocumentDBHostIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setDocumentDbHostIam(
+          convertDocumentDBHostIAMToPlumbing((com.strongdm.api.DocumentDBHostIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.DocumentDBReplicaSet) {
