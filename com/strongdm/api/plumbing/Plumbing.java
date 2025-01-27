@@ -4530,6 +4530,91 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AthenaIAM convertAthenaIAMToPorcelain(AthenaIAM plumbing) {
+    com.strongdm.api.AthenaIAM porcelain = new com.strongdm.api.AthenaIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOutput((plumbing.getOutput()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AthenaIAM convertAthenaIAMToPlumbing(com.strongdm.api.AthenaIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AthenaIAM.Builder builder = AthenaIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getOutput() != null) {
+      builder.setOutput((porcelain.getOutput()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AthenaIAM> convertRepeatedAthenaIAMToPorcelain(
+      Collection<AthenaIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AthenaIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAthenaIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AthenaIAM> convertRepeatedAthenaIAMToPlumbing(
+      Collection<com.strongdm.api.AthenaIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AthenaIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAthenaIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AuroraMysql convertAuroraMysqlToPorcelain(AuroraMysql plumbing) {
     com.strongdm.api.AuroraMysql porcelain = new com.strongdm.api.AuroraMysql();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -14940,6 +15025,9 @@ public class Plumbing {
     if (plumbing.hasAthena()) {
       return convertAthenaToPorcelain(plumbing.getAthena());
     }
+    if (plumbing.hasAthenaIam()) {
+      return convertAthenaIAMToPorcelain(plumbing.getAthenaIam());
+    }
     if (plumbing.hasAuroraMysql()) {
       return convertAuroraMysqlToPorcelain(plumbing.getAuroraMysql());
     }
@@ -15272,6 +15360,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Athena) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAthena(convertAthenaToPlumbing((com.strongdm.api.Athena) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AthenaIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAthenaIam(convertAthenaIAMToPlumbing((com.strongdm.api.AthenaIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AuroraMysql) {
