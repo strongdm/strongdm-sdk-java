@@ -9011,6 +9011,47 @@ java.lang.String defaultValue);
      */
     com.google.protobuf.ByteString
         getImpersonationGroupsBytes(int index);
+
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the privilegeGroups.
+     */
+    java.util.List<java.lang.String>
+        getPrivilegeGroupsList();
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @return The count of privilegeGroups.
+     */
+    int getPrivilegeGroupsCount();
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The privilegeGroups at the given index.
+     */
+    java.lang.String getPrivilegeGroups(int index);
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privilegeGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPrivilegeGroupsBytes(int index);
   }
   /**
    * <pre>
@@ -9040,6 +9081,7 @@ java.lang.String defaultValue);
       requestBody_ = com.google.protobuf.ByteString.EMPTY;
       impersonationUser_ = "";
       impersonationGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      privilegeGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -9169,6 +9211,15 @@ java.lang.String defaultValue);
               impersonationGroups_.add(s);
               break;
             }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                privilegeGroups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              privilegeGroups_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9188,6 +9239,9 @@ java.lang.String defaultValue);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           impersonationGroups_ = impersonationGroups_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          privilegeGroups_ = privilegeGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9840,6 +9894,57 @@ java.lang.String defaultValue);
       return impersonationGroups_.getByteString(index);
     }
 
+    public static final int PRIVILEGE_GROUPS_FIELD_NUMBER = 16;
+    private com.google.protobuf.LazyStringList privilegeGroups_;
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the privilegeGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrivilegeGroupsList() {
+      return privilegeGroups_;
+    }
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @return The count of privilegeGroups.
+     */
+    public int getPrivilegeGroupsCount() {
+      return privilegeGroups_.size();
+    }
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The privilegeGroups at the given index.
+     */
+    public java.lang.String getPrivilegeGroups(int index) {
+      return privilegeGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privilegeGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrivilegeGroupsBytes(int index) {
+      return privilegeGroups_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9901,6 +10006,9 @@ java.lang.String defaultValue);
       }
       for (int i = 0; i < impersonationGroups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, impersonationGroups_.getRaw(i));
+      }
+      for (int i = 0; i < privilegeGroups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, privilegeGroups_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -9972,6 +10080,14 @@ java.lang.String defaultValue);
         size += dataSize;
         size += 1 * getImpersonationGroupsList().size();
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < privilegeGroups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(privilegeGroups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getPrivilegeGroupsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10017,6 +10133,8 @@ java.lang.String defaultValue);
           .equals(other.getImpersonationUser())) return false;
       if (!getImpersonationGroupsList()
           .equals(other.getImpersonationGroupsList())) return false;
+      if (!getPrivilegeGroupsList()
+          .equals(other.getPrivilegeGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10062,6 +10180,10 @@ java.lang.String defaultValue);
       if (getImpersonationGroupsCount() > 0) {
         hash = (37 * hash) + IMPERSONATION_GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getImpersonationGroupsList().hashCode();
+      }
+      if (getPrivilegeGroupsCount() > 0) {
+        hash = (37 * hash) + PRIVILEGE_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivilegeGroupsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10251,6 +10373,8 @@ java.lang.String defaultValue);
 
         impersonationGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        privilegeGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -10298,6 +10422,11 @@ java.lang.String defaultValue);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.impersonationGroups_ = impersonationGroups_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          privilegeGroups_ = privilegeGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.privilegeGroups_ = privilegeGroups_;
         onBuilt();
         return result;
       }
@@ -10403,6 +10532,16 @@ java.lang.String defaultValue);
           } else {
             ensureImpersonationGroupsIsMutable();
             impersonationGroups_.addAll(other.impersonationGroups_);
+          }
+          onChanged();
+        }
+        if (!other.privilegeGroups_.isEmpty()) {
+          if (privilegeGroups_.isEmpty()) {
+            privilegeGroups_ = other.privilegeGroups_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensurePrivilegeGroupsIsMutable();
+            privilegeGroups_.addAll(other.privilegeGroups_);
           }
           onChanged();
         }
@@ -11779,6 +11918,152 @@ java.lang.String defaultValue);
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList privilegeGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePrivilegeGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          privilegeGroups_ = new com.google.protobuf.LazyStringArrayList(privilegeGroups_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the privilegeGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPrivilegeGroupsList() {
+        return privilegeGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @return The count of privilegeGroups.
+       */
+      public int getPrivilegeGroupsCount() {
+        return privilegeGroups_.size();
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The privilegeGroups at the given index.
+       */
+      public java.lang.String getPrivilegeGroups(int index) {
+        return privilegeGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the privilegeGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPrivilegeGroupsBytes(int index) {
+        return privilegeGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The privilegeGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegeGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePrivilegeGroupsIsMutable();
+        privilegeGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @param value The privilegeGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivilegeGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePrivilegeGroupsIsMutable();
+        privilegeGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @param values The privilegeGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrivilegeGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePrivilegeGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, privilegeGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivilegeGroups() {
+        privilegeGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>repeated string privilege_groups = 16 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the privilegeGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivilegeGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePrivilegeGroupsIsMutable();
+        privilegeGroups_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11910,7 +12195,7 @@ java.lang.String defaultValue);
       "client_ip\030\035 \001(\tB\"\362\370\263\007\035\260\363\263\007\001\312\363\263\007\023\302\364\263\007\016\n\002g" +
       "o\022\010ClientIP\022+\n\027identity_alias_username\030\036" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372" +
-      "\370\263\007\030\322\363\263\007\023!terraform-provider\"\375\004\n\014QueryCa" +
+      "\370\263\007\030\322\363\263\007\023!terraform-provider\"\243\005\n\014QueryCa" +
       "pture\022\031\n\005width\030\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006heig" +
       "ht\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007command\030\003 \001(\tB\n\362" +
       "\370\263\007\005\260\363\263\007\001\0222\n\003env\030\004 \003(\0132\031.v1.QueryCapture" +
@@ -11924,17 +12209,18 @@ java.lang.String defaultValue);
       "\n\002go\022\nRequestURI\022 \n\014request_body\030\r \001(\014B\n" +
       "\362\370\263\007\005\260\363\263\007\001\022&\n\022impersonation_user\030\016 \001(\tB\n" +
       "\362\370\263\007\005\260\363\263\007\001\022(\n\024impersonation_groups\030\017 \003(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\032*\n\010EnvEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372" +
-      "\370\263\007\030\322\363\263\007\023!terraform-provider2\245\001\n\007Queries" +
-      "\022W\n\004List\022\024.v1.QueryListRequest\032\025.v1.Quer" +
-      "yListResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v" +
-      "1/queries\032A\312\371\263\007\n\302\371\263\007\005Query\312\371\263\007\005\330\371\263\007\001\312\371\263\007" +
-      "\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\213\001\n" +
-      "\031com.strongdm.api.plumbingB\017QueriesPlumb" +
-      "ingZ5github.com/strongdm/strongdm-sdk-go" +
-      "/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!" +
-      "terraform-providerb\006proto3"
+      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\020privilege_groups\030\020 \003(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\032*\n\010EnvEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263" +
+      "\007\030\322\363\263\007\023!terraform-provider2\245\001\n\007Queries\022W" +
+      "\n\004List\022\024.v1.QueryListRequest\032\025.v1.QueryL" +
+      "istResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/" +
+      "queries\032A\312\371\263\007\n\302\371\263\007\005Query\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312" +
+      "\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\213\001\n\031c" +
+      "om.strongdm.api.plumbingB\017QueriesPlumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!te" +
+      "rraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11968,7 +12254,7 @@ java.lang.String defaultValue);
     internal_static_v1_QueryCapture_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_QueryCapture_descriptor,
-        new java.lang.String[] { "Width", "Height", "Command", "Env", "Type", "FileName", "FileSize", "ClientCommand", "Pod", "Container", "RequestMethod", "RequestUri", "RequestBody", "ImpersonationUser", "ImpersonationGroups", });
+        new java.lang.String[] { "Width", "Height", "Command", "Env", "Type", "FileName", "FileSize", "ClientCommand", "Pod", "Container", "RequestMethod", "RequestUri", "RequestBody", "ImpersonationUser", "ImpersonationGroups", "PrivilegeGroups", });
     internal_static_v1_QueryCapture_EnvEntry_descriptor =
       internal_static_v1_QueryCapture_descriptor.getNestedTypes().get(0);
     internal_static_v1_QueryCapture_EnvEntry_fieldAccessorTable = new

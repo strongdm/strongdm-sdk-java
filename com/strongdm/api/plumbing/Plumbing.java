@@ -13582,6 +13582,7 @@ public class Plumbing {
     porcelain.setImpersonationGroups((plumbing.getImpersonationGroupsList()));
     porcelain.setImpersonationUser((plumbing.getImpersonationUser()));
     porcelain.setPod((plumbing.getPod()));
+    porcelain.setPrivilegeGroups((plumbing.getPrivilegeGroupsList()));
     porcelain.setRequestBody(Plumbing.convertBytesToPorcelain(plumbing.getRequestBody()));
     porcelain.setRequestMethod((plumbing.getRequestMethod()));
     porcelain.setRequestUri((plumbing.getRequestUri()));
@@ -13618,6 +13619,7 @@ public class Plumbing {
     if (porcelain.getPod() != null) {
       builder.setPod((porcelain.getPod()));
     }
+    builder.addAllPrivilegeGroups((porcelain.getPrivilegeGroups()));
     if (porcelain.getRequestBody() != null) {
       builder.setRequestBody(Plumbing.convertBytesToPlumbing(porcelain.getRequestBody()));
     }

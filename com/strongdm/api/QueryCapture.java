@@ -124,6 +124,20 @@ public class QueryCapture {
     this.pod = in;
   }
 
+  private List<String> privilegeGroups;
+  /**
+   * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+   */
+  public List<String> getPrivilegeGroups() {
+    return this.privilegeGroups;
+  }
+  /**
+   * The additional impersonation groups, as granted by privilege levels, of a Kubernetes operation.
+   */
+  public void setPrivilegeGroups(List<String> in) {
+    this.privilegeGroups = in;
+  }
+
   private byte[] requestBody;
   /** The HTTP request body of a Kubernetes operation. */
   public byte[] getRequestBody() {

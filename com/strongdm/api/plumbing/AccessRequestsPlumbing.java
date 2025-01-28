@@ -5805,6 +5805,33 @@ public final class AccessRequestsPlumbing {
      */
     com.google.protobuf.ByteString
         getMetadataBytes();
+
+    /**
+     * <pre>
+     * The timestamp when the event occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the time field is set.
+     */
+    boolean hasTime();
+    /**
+     * <pre>
+     * The timestamp when the event occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+     * @return The time.
+     */
+    com.google.protobuf.Timestamp getTime();
+    /**
+     * <pre>
+     * The timestamp when the event occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
   }
   /**
    * <pre>
@@ -5889,6 +5916,19 @@ public final class AccessRequestsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               metadata_ = s;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (time_ != null) {
+                subBuilder = time_.toBuilder();
+              }
+              time_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(time_);
+                time_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6155,6 +6195,44 @@ public final class AccessRequestsPlumbing {
       }
     }
 
+    public static final int TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp time_;
+    /**
+     * <pre>
+     * The timestamp when the event occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the time field is set.
+     */
+    @java.lang.Override
+    public boolean hasTime() {
+      return time_ != null;
+    }
+    /**
+     * <pre>
+     * The timestamp when the event occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTime() {
+      return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+    }
+    /**
+     * <pre>
+     * The timestamp when the event occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+      return getTime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6184,6 +6262,9 @@ public final class AccessRequestsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, metadata_);
       }
+      if (time_ != null) {
+        output.writeMessage(6, getTime());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6207,6 +6288,10 @@ public final class AccessRequestsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, metadata_);
+      }
+      if (time_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6233,6 +6318,11 @@ public final class AccessRequestsPlumbing {
           .equals(other.getType())) return false;
       if (!getMetadata()
           .equals(other.getMetadata())) return false;
+      if (hasTime() != other.hasTime()) return false;
+      if (hasTime()) {
+        if (!getTime()
+            .equals(other.getTime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6254,6 +6344,10 @@ public final class AccessRequestsPlumbing {
       hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getMetadata().hashCode();
+      if (hasTime()) {
+        hash = (37 * hash) + TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTime().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6402,6 +6496,12 @@ public final class AccessRequestsPlumbing {
 
         metadata_ = "";
 
+        if (timeBuilder_ == null) {
+          time_ = null;
+        } else {
+          time_ = null;
+          timeBuilder_ = null;
+        }
         return this;
       }
 
@@ -6433,6 +6533,11 @@ public final class AccessRequestsPlumbing {
         result.actorId_ = actorId_;
         result.type_ = type_;
         result.metadata_ = metadata_;
+        if (timeBuilder_ == null) {
+          result.time_ = time_;
+        } else {
+          result.time_ = timeBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6500,6 +6605,9 @@ public final class AccessRequestsPlumbing {
         if (!other.getMetadata().isEmpty()) {
           metadata_ = other.metadata_;
           onChanged();
+        }
+        if (other.hasTime()) {
+          mergeTime(other.getTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7008,6 +7116,161 @@ public final class AccessRequestsPlumbing {
         metadata_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Timestamp time_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       * @return Whether the time field is set.
+       */
+      public boolean hasTime() {
+        return timeBuilder_ != null || time_ != null;
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       * @return The time.
+       */
+      public com.google.protobuf.Timestamp getTime() {
+        if (timeBuilder_ == null) {
+          return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        } else {
+          return timeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          time_ = value;
+          onChanged();
+        } else {
+          timeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timeBuilder_ == null) {
+          time_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (time_ != null) {
+            time_ =
+              com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
+          } else {
+            time_ = value;
+          }
+          onChanged();
+        } else {
+          timeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTime() {
+        if (timeBuilder_ == null) {
+          time_ = null;
+          onChanged();
+        } else {
+          time_ = null;
+          timeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
+        
+        onChanged();
+        return getTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+        if (timeBuilder_ != null) {
+          return timeBuilder_.getMessageOrBuilder();
+        } else {
+          return time_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp when the event occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimeFieldBuilder() {
+        if (timeBuilder_ == null) {
+          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTime(),
+                  getParentForChildren(),
+                  isClean());
+          time_ = null;
+        }
+        return timeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10034,7 +10297,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -10046,7 +10309,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated int getResourceIdsCount();
@@ -10057,7 +10320,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -10069,7 +10332,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -10303,7 +10566,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -10317,7 +10580,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated public int getResourceIdsCount() {
@@ -10330,7 +10593,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -10344,7 +10607,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=231
+     *     See access_requests.proto;l=238
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -10949,7 +11212,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @return A list containing the resourceIds.
        */
       @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -10963,7 +11226,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @return The count of resourceIds.
        */
       @java.lang.Deprecated public int getResourceIdsCount() {
@@ -10976,7 +11239,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @param index The index of the element to return.
        * @return The resourceIds at the given index.
        */
@@ -10990,7 +11253,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @param index The index of the value to return.
        * @return The bytes of the resourceIds at the given index.
        */
@@ -11005,7 +11268,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @param index The index to set the value at.
        * @param value The resourceIds to set.
        * @return This builder for chaining.
@@ -11027,7 +11290,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @param value The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -11048,7 +11311,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @param values The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -11067,7 +11330,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResourceIds() {
@@ -11083,7 +11346,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=231
+       *     See access_requests.proto;l=238
        * @param value The bytes of the resourceIds to add.
        * @return This builder for chaining.
        */
@@ -11665,43 +11928,45 @@ public final class AccessRequestsPlumbing {
       "resultDuration\030\016 \001(\0132\031.google.protobuf.D" +
       "urationB\n\362\370\263\007\005\260\363\263\007\001\0221\n\016requester_name\030\014 " +
       "\001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\020\372\370\263\007\013\250\363\263" +
-      "\007\001\322\363\263\007\001*\"\264\001\n\022AccessRequestEvent\022\026\n\002id\030\001 " +
+      "\007\001\322\363\263\007\001*\"\371\001\n\022AccessRequestEvent\022\026\n\002id\030\001 " +
       "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nrequest_id\030\002 \001(\tB\n\362\370\263" +
       "\007\005\260\363\263\007\001\022\034\n\010actor_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n" +
       "\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\364\001\n\023Requ" +
-      "estableResource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\030\n\004name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007healthy\030\003 \001" +
-      "(\010B\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\"\n\016authentication\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004" +
-      "tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006acce" +
-      "ss\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\303" +
-      "\001\n\023AccessRequestConfig\022$\n\013resource_id\030\001 " +
-      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.pr" +
-      "otobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration" +
-      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\313\003\n" +
-      "\032RequestAccessRequestConfig\022\'\n\014resource_" +
-      "ids\030\001 \003(\tB\021\030\001\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010" +
-      "duration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_ru" +
-      "les\030\005 \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access" +
-      "_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_pr" +
-      "ivate\022\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013A" +
-      "ccessRules\362\363\263\007\030\n\004java\022\020List<AccessRule>\362" +
-      "\363\263\007\"\n\014json_gateway\022\022models.AccessRules\272\364" +
-      "\263\007\027accessRulesDiffSuppress\320\364\263\007\001:\031\372\370\263\007\024\250\363" +
-      "\263\007\001\322\363\263\007\ngo_private2\331\001\n\016AccessRequests\022o\n" +
-      "\004List\022\034.v1.AccessRequestListRequest\032\035.v1" +
-      ".AccessRequestListResponse\"*\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007\030\252\363\263\007\023/v1/access-requests\032V\312\371\263\007\022\302\371\263" +
-      "\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312" +
-      "\371\263\007\030\312\371\263\007\023!terraform-provider\312\371\263\007\005\350\371\263\007\001B\222" +
-      "\001\n\031com.strongdm.api.plumbingB\026AccessRequ" +
-      "estsPlumbingZ5github.com/strongdm/strong" +
-      "dm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222" +
-      "\264\007\030\242\214\264\007\023!terraform-providerb\006proto3"
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022C\n\004time\030\006 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_priva" +
+      "te:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\364\001\n\023RequestableReso" +
+      "urce\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004name\030\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007healthy\030\003 \001(\010B\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016authent" +
+      "ication\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\006 \001(\0132" +
+      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006access\030\007 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\303\001\n\023AccessRe" +
+      "questConfig\022$\n\013resource_id\030\001 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n" +
+      "\nstart_from\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\313\003\n\032RequestAcc" +
+      "essRequestConfig\022\'\n\014resource_ids\030\001 \003(\tB\021" +
+      "\030\001\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.proto" +
+      "buf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\005 \001(\tB\333" +
+      "\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules\362\363\263\007\021" +
+      "\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022\013Acce" +
+      "ssRules\362\363\263\007\033\n\014go_terraform\022\013AccessRules\362" +
+      "\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014json_" +
+      "gateway\022\022models.AccessRules\272\364\263\007\027accessRu" +
+      "lesDiffSuppress\320\364\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
+      "private2\331\001\n\016AccessRequests\022o\n\004List\022\034.v1." +
+      "AccessRequestListRequest\032\035.v1.AccessRequ" +
+      "estListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023" +
+      "/v1/access-requests\032V\312\371\263\007\022\302\371\263\007\rAccessReq" +
+      "uest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!t" +
+      "erraform-provider\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.stro" +
+      "ngdm.api.plumbingB\026AccessRequestsPlumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!te" +
+      "rraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11735,7 +12000,7 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_AccessRequestEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequestEvent_descriptor,
-        new java.lang.String[] { "Id", "RequestId", "ActorId", "Type", "Metadata", });
+        new java.lang.String[] { "Id", "RequestId", "ActorId", "Type", "Metadata", "Time", });
     internal_static_v1_RequestableResource_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_RequestableResource_fieldAccessorTable = new
