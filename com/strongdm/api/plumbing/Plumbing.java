@@ -3394,6 +3394,93 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AmazonESIAM convertAmazonESIAMToPorcelain(AmazonESIAM plumbing) {
+    com.strongdm.api.AmazonESIAM porcelain = new com.strongdm.api.AmazonESIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
+    return porcelain;
+  }
+
+  public static AmazonESIAM convertAmazonESIAMToPlumbing(com.strongdm.api.AmazonESIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AmazonESIAM.Builder builder = AmazonESIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint((porcelain.getEndpoint()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AmazonESIAM> convertRepeatedAmazonESIAMToPorcelain(
+      Collection<AmazonESIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AmazonESIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAmazonESIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AmazonESIAM> convertRepeatedAmazonESIAMToPlumbing(
+      Collection<com.strongdm.api.AmazonESIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AmazonESIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAmazonESIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AmazonMQAMQP091 convertAmazonMQAMQP091ToPorcelain(
       AmazonMQAMQP091 plumbing) {
     com.strongdm.api.AmazonMQAMQP091 porcelain = new com.strongdm.api.AmazonMQAMQP091();
@@ -15021,6 +15108,9 @@ public class Plumbing {
     if (plumbing.hasAmazonEs()) {
       return convertAmazonESToPorcelain(plumbing.getAmazonEs());
     }
+    if (plumbing.hasAmazonEsiam()) {
+      return convertAmazonESIAMToPorcelain(plumbing.getAmazonEsiam());
+    }
     if (plumbing.hasAmazonMqamqp091()) {
       return convertAmazonMQAMQP091ToPorcelain(plumbing.getAmazonMqamqp091());
     }
@@ -15351,6 +15441,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.AmazonES) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAmazonEs(convertAmazonESToPlumbing((com.strongdm.api.AmazonES) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AmazonESIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAmazonEsiam(
+          convertAmazonESIAMToPlumbing((com.strongdm.api.AmazonESIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AmazonMQAMQP091) {

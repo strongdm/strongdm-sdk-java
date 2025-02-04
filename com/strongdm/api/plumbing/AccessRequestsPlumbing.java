@@ -7465,6 +7465,53 @@ public final class AccessRequestsPlumbing {
      */
     com.google.protobuf.ByteString
         getAccessBytes();
+
+    /**
+     * <pre>
+     * The privileges the user may request for this resource
+     * </pre>
+     *
+     * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+     * @return Whether the privileges field is set.
+     */
+    boolean hasPrivileges();
+    /**
+     * <pre>
+     * The privileges the user may request for this resource
+     * </pre>
+     *
+     * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+     * @return The privileges.
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage getPrivileges();
+    /**
+     * <pre>
+     * The privileges the user may request for this resource
+     * </pre>
+     *
+     * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessageOrBuilder getPrivilegesOrBuilder();
+
+    /**
+     * <pre>
+     * The status of the privileges requirement
+     * </pre>
+     *
+     * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+     * @return The privilegesRequirementStatus.
+     */
+    java.lang.String getPrivilegesRequirementStatus();
+    /**
+     * <pre>
+     * The status of the privileges requirement
+     * </pre>
+     *
+     * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for privilegesRequirementStatus.
+     */
+    com.google.protobuf.ByteString
+        getPrivilegesRequirementStatusBytes();
   }
   /**
    * <pre>
@@ -7488,6 +7535,7 @@ public final class AccessRequestsPlumbing {
       type_ = "";
       authentication_ = "";
       access_ = "";
+      privilegesRequirementStatus_ = "";
     }
 
     @java.lang.Override
@@ -7566,6 +7614,25 @@ public final class AccessRequestsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               access_ = s;
+              break;
+            }
+            case 66: {
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder subBuilder = null;
+              if (privileges_ != null) {
+                subBuilder = privileges_.toBuilder();
+              }
+              privileges_ = input.readMessage(com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(privileges_);
+                privileges_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privilegesRequirementStatus_ = s;
               break;
             }
             default: {
@@ -7885,6 +7952,90 @@ public final class AccessRequestsPlumbing {
       }
     }
 
+    public static final int PRIVILEGES_FIELD_NUMBER = 8;
+    private com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage privileges_;
+    /**
+     * <pre>
+     * The privileges the user may request for this resource
+     * </pre>
+     *
+     * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+     * @return Whether the privileges field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrivileges() {
+      return privileges_ != null;
+    }
+    /**
+     * <pre>
+     * The privileges the user may request for this resource
+     * </pre>
+     *
+     * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+     * @return The privileges.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage getPrivileges() {
+      return privileges_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.getDefaultInstance() : privileges_;
+    }
+    /**
+     * <pre>
+     * The privileges the user may request for this resource
+     * </pre>
+     *
+     * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessageOrBuilder getPrivilegesOrBuilder() {
+      return getPrivileges();
+    }
+
+    public static final int PRIVILEGES_REQUIREMENT_STATUS_FIELD_NUMBER = 9;
+    private volatile java.lang.Object privilegesRequirementStatus_;
+    /**
+     * <pre>
+     * The status of the privileges requirement
+     * </pre>
+     *
+     * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+     * @return The privilegesRequirementStatus.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivilegesRequirementStatus() {
+      java.lang.Object ref = privilegesRequirementStatus_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privilegesRequirementStatus_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The status of the privileges requirement
+     * </pre>
+     *
+     * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for privilegesRequirementStatus.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivilegesRequirementStatusBytes() {
+      java.lang.Object ref = privilegesRequirementStatus_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privilegesRequirementStatus_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7920,6 +8071,12 @@ public final class AccessRequestsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(access_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, access_);
       }
+      if (privileges_ != null) {
+        output.writeMessage(8, getPrivileges());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegesRequirementStatus_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, privilegesRequirementStatus_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7951,6 +8108,13 @@ public final class AccessRequestsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(access_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, access_);
+      }
+      if (privileges_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getPrivileges());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegesRequirementStatus_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, privilegesRequirementStatus_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7984,6 +8148,13 @@ public final class AccessRequestsPlumbing {
       }
       if (!getAccess()
           .equals(other.getAccess())) return false;
+      if (hasPrivileges() != other.hasPrivileges()) return false;
+      if (hasPrivileges()) {
+        if (!getPrivileges()
+            .equals(other.getPrivileges())) return false;
+      }
+      if (!getPrivilegesRequirementStatus()
+          .equals(other.getPrivilegesRequirementStatus())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8012,6 +8183,12 @@ public final class AccessRequestsPlumbing {
       }
       hash = (37 * hash) + ACCESS_FIELD_NUMBER;
       hash = (53 * hash) + getAccess().hashCode();
+      if (hasPrivileges()) {
+        hash = (37 * hash) + PRIVILEGES_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivileges().hashCode();
+      }
+      hash = (37 * hash) + PRIVILEGES_REQUIREMENT_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivilegesRequirementStatus().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8167,6 +8344,14 @@ public final class AccessRequestsPlumbing {
         }
         access_ = "";
 
+        if (privilegesBuilder_ == null) {
+          privileges_ = null;
+        } else {
+          privileges_ = null;
+          privilegesBuilder_ = null;
+        }
+        privilegesRequirementStatus_ = "";
+
         return this;
       }
 
@@ -8204,6 +8389,12 @@ public final class AccessRequestsPlumbing {
           result.tags_ = tagsBuilder_.build();
         }
         result.access_ = access_;
+        if (privilegesBuilder_ == null) {
+          result.privileges_ = privileges_;
+        } else {
+          result.privileges_ = privilegesBuilder_.build();
+        }
+        result.privilegesRequirementStatus_ = privilegesRequirementStatus_;
         onBuilt();
         return result;
       }
@@ -8276,6 +8467,13 @@ public final class AccessRequestsPlumbing {
         }
         if (!other.getAccess().isEmpty()) {
           access_ = other.access_;
+          onChanged();
+        }
+        if (other.hasPrivileges()) {
+          mergePrivileges(other.getPrivileges());
+        }
+        if (!other.getPrivilegesRequirementStatus().isEmpty()) {
+          privilegesRequirementStatus_ = other.privilegesRequirementStatus_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8984,6 +9182,257 @@ public final class AccessRequestsPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage privileges_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessageOrBuilder> privilegesBuilder_;
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       * @return Whether the privileges field is set.
+       */
+      public boolean hasPrivileges() {
+        return privilegesBuilder_ != null || privileges_ != null;
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       * @return The privileges.
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage getPrivileges() {
+        if (privilegesBuilder_ == null) {
+          return privileges_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.getDefaultInstance() : privileges_;
+        } else {
+          return privilegesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPrivileges(com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage value) {
+        if (privilegesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          privileges_ = value;
+          onChanged();
+        } else {
+          privilegesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPrivileges(
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder builderForValue) {
+        if (privilegesBuilder_ == null) {
+          privileges_ = builderForValue.build();
+          onChanged();
+        } else {
+          privilegesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergePrivileges(com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage value) {
+        if (privilegesBuilder_ == null) {
+          if (privileges_ != null) {
+            privileges_ =
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.newBuilder(privileges_).mergeFrom(value).buildPartial();
+          } else {
+            privileges_ = value;
+          }
+          onChanged();
+        } else {
+          privilegesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearPrivileges() {
+        if (privilegesBuilder_ == null) {
+          privileges_ = null;
+          onChanged();
+        } else {
+          privileges_ = null;
+          privilegesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder getPrivilegesBuilder() {
+        
+        onChanged();
+        return getPrivilegesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessageOrBuilder getPrivilegesOrBuilder() {
+        if (privilegesBuilder_ != null) {
+          return privilegesBuilder_.getMessageOrBuilder();
+        } else {
+          return privileges_ == null ?
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.getDefaultInstance() : privileges_;
+        }
+      }
+      /**
+       * <pre>
+       * The privileges the user may request for this resource
+       * </pre>
+       *
+       * <code>.v1.PrivilegesMessage privileges = 8 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessageOrBuilder> 
+          getPrivilegesFieldBuilder() {
+        if (privilegesBuilder_ == null) {
+          privilegesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessageOrBuilder>(
+                  getPrivileges(),
+                  getParentForChildren(),
+                  isClean());
+          privileges_ = null;
+        }
+        return privilegesBuilder_;
+      }
+
+      private java.lang.Object privilegesRequirementStatus_ = "";
+      /**
+       * <pre>
+       * The status of the privileges requirement
+       * </pre>
+       *
+       * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+       * @return The privilegesRequirementStatus.
+       */
+      public java.lang.String getPrivilegesRequirementStatus() {
+        java.lang.Object ref = privilegesRequirementStatus_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privilegesRequirementStatus_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The status of the privileges requirement
+       * </pre>
+       *
+       * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for privilegesRequirementStatus.
+       */
+      public com.google.protobuf.ByteString
+          getPrivilegesRequirementStatusBytes() {
+        java.lang.Object ref = privilegesRequirementStatus_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privilegesRequirementStatus_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The status of the privileges requirement
+       * </pre>
+       *
+       * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The privilegesRequirementStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegesRequirementStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privilegesRequirementStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the privileges requirement
+       * </pre>
+       *
+       * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivilegesRequirementStatus() {
+        
+        privilegesRequirementStatus_ = getDefaultInstance().getPrivilegesRequirementStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the privileges requirement
+       * </pre>
+       *
+       * <code>string privileges_requirement_status = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for privilegesRequirementStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegesRequirementStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privilegesRequirementStatus_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9032,6 +9481,1405 @@ public final class AccessRequestsPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.plumbing.AccessRequestsPlumbing.RequestableResource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrivilegesMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.PrivilegesMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Kubernetes privileges.
+     * </pre>
+     *
+     * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the kubernetes field is set.
+     */
+    boolean hasKubernetes();
+    /**
+     * <pre>
+     * Kubernetes privileges.
+     * </pre>
+     *
+     * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+     * @return The kubernetes.
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges getKubernetes();
+    /**
+     * <pre>
+     * Kubernetes privileges.
+     * </pre>
+     *
+     * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivilegesOrBuilder getKubernetesOrBuilder();
+  }
+  /**
+   * <pre>
+   * Message suffix added to avoid conflict with generated struct in access_rules.go
+   * </pre>
+   *
+   * Protobuf type {@code v1.PrivilegesMessage}
+   */
+  public static final class PrivilegesMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.PrivilegesMessage)
+      PrivilegesMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrivilegesMessage.newBuilder() to construct.
+    private PrivilegesMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrivilegesMessage() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrivilegesMessage();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PrivilegesMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder subBuilder = null;
+              if (kubernetes_ != null) {
+                subBuilder = kubernetes_.toBuilder();
+              }
+              kubernetes_ = input.readMessage(com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kubernetes_);
+                kubernetes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_PrivilegesMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_PrivilegesMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder.class);
+    }
+
+    public static final int KUBERNETES_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges kubernetes_;
+    /**
+     * <pre>
+     * Kubernetes privileges.
+     * </pre>
+     *
+     * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the kubernetes field is set.
+     */
+    @java.lang.Override
+    public boolean hasKubernetes() {
+      return kubernetes_ != null;
+    }
+    /**
+     * <pre>
+     * Kubernetes privileges.
+     * </pre>
+     *
+     * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+     * @return The kubernetes.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges getKubernetes() {
+      return kubernetes_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.getDefaultInstance() : kubernetes_;
+    }
+    /**
+     * <pre>
+     * Kubernetes privileges.
+     * </pre>
+     *
+     * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivilegesOrBuilder getKubernetesOrBuilder() {
+      return getKubernetes();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (kubernetes_ != null) {
+        output.writeMessage(1, getKubernetes());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (kubernetes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getKubernetes());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage other = (com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage) obj;
+
+      if (hasKubernetes() != other.hasKubernetes()) return false;
+      if (hasKubernetes()) {
+        if (!getKubernetes()
+            .equals(other.getKubernetes())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasKubernetes()) {
+        hash = (37 * hash) + KUBERNETES_FIELD_NUMBER;
+        hash = (53 * hash) + getKubernetes().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Message suffix added to avoid conflict with generated struct in access_rules.go
+     * </pre>
+     *
+     * Protobuf type {@code v1.PrivilegesMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.PrivilegesMessage)
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_PrivilegesMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_PrivilegesMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (kubernetesBuilder_ == null) {
+          kubernetes_ = null;
+        } else {
+          kubernetes_ = null;
+          kubernetesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_PrivilegesMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage build() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage buildPartial() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage result = new com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage(this);
+        if (kubernetesBuilder_ == null) {
+          result.kubernetes_ = kubernetes_;
+        } else {
+          result.kubernetes_ = kubernetesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage) {
+          return mergeFrom((com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage other) {
+        if (other == com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage.getDefaultInstance()) return this;
+        if (other.hasKubernetes()) {
+          mergeKubernetes(other.getKubernetes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges kubernetes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivilegesOrBuilder> kubernetesBuilder_;
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the kubernetes field is set.
+       */
+      public boolean hasKubernetes() {
+        return kubernetesBuilder_ != null || kubernetes_ != null;
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       * @return The kubernetes.
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges getKubernetes() {
+        if (kubernetesBuilder_ == null) {
+          return kubernetes_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.getDefaultInstance() : kubernetes_;
+        } else {
+          return kubernetesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setKubernetes(com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges value) {
+        if (kubernetesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kubernetes_ = value;
+          onChanged();
+        } else {
+          kubernetesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setKubernetes(
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder builderForValue) {
+        if (kubernetesBuilder_ == null) {
+          kubernetes_ = builderForValue.build();
+          onChanged();
+        } else {
+          kubernetesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeKubernetes(com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges value) {
+        if (kubernetesBuilder_ == null) {
+          if (kubernetes_ != null) {
+            kubernetes_ =
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.newBuilder(kubernetes_).mergeFrom(value).buildPartial();
+          } else {
+            kubernetes_ = value;
+          }
+          onChanged();
+        } else {
+          kubernetesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearKubernetes() {
+        if (kubernetesBuilder_ == null) {
+          kubernetes_ = null;
+          onChanged();
+        } else {
+          kubernetes_ = null;
+          kubernetesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder getKubernetesBuilder() {
+        
+        onChanged();
+        return getKubernetesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivilegesOrBuilder getKubernetesOrBuilder() {
+        if (kubernetesBuilder_ != null) {
+          return kubernetesBuilder_.getMessageOrBuilder();
+        } else {
+          return kubernetes_ == null ?
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.getDefaultInstance() : kubernetes_;
+        }
+      }
+      /**
+       * <pre>
+       * Kubernetes privileges.
+       * </pre>
+       *
+       * <code>.v1.KubernetesPrivileges kubernetes = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivilegesOrBuilder> 
+          getKubernetesFieldBuilder() {
+        if (kubernetesBuilder_ == null) {
+          kubernetesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivilegesOrBuilder>(
+                  getKubernetes(),
+                  getParentForChildren(),
+                  isClean());
+          kubernetes_ = null;
+        }
+        return kubernetesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.PrivilegesMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.PrivilegesMessage)
+    private static final com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage();
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrivilegesMessage>
+        PARSER = new com.google.protobuf.AbstractParser<PrivilegesMessage>() {
+      @java.lang.Override
+      public PrivilegesMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PrivilegesMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrivilegesMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrivilegesMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.PrivilegesMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KubernetesPrivilegesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.KubernetesPrivileges)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the groups.
+     */
+    java.util.List<java.lang.String>
+        getGroupsList();
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of groups.
+     */
+    int getGroupsCount();
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The groups at the given index.
+     */
+    java.lang.String getGroups(int index);
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the groups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getGroupsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code v1.KubernetesPrivileges}
+   */
+  public static final class KubernetesPrivileges extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.KubernetesPrivileges)
+      KubernetesPrivilegesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KubernetesPrivileges.newBuilder() to construct.
+    private KubernetesPrivileges(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KubernetesPrivileges() {
+      groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KubernetesPrivileges();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KubernetesPrivileges(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                groups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              groups_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          groups_ = groups_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_KubernetesPrivileges_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_KubernetesPrivileges_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder.class);
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList groups_;
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the groups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of groups.
+     */
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The groups at the given index.
+     */
+    public java.lang.String getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <pre>
+     * The kubernetes groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the groups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getGroupsBytes(int index) {
+      return groups_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groups_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < groups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(groups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getGroupsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges other = (com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges) obj;
+
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.KubernetesPrivileges}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.KubernetesPrivileges)
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivilegesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_KubernetesPrivileges_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_KubernetesPrivileges_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_KubernetesPrivileges_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges build() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges buildPartial() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges result = new com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          groups_ = groups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.groups_ = groups_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges) {
+          return mergeFrom((com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges other) {
+        if (other == com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges.getDefaultInstance()) return this;
+        if (!other.groups_.isEmpty()) {
+          if (groups_.isEmpty()) {
+            groups_ = other.groups_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureGroupsIsMutable();
+            groups_.addAll(other.groups_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groups_ = new com.google.protobuf.LazyStringArrayList(groups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the groups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getGroupsList() {
+        return groups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return The count of groups.
+       */
+      public int getGroupsCount() {
+        return groups_.size();
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The groups at the given index.
+       */
+      public java.lang.String getGroups(int index) {
+        return groups_.get(index);
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the groups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getGroupsBytes(int index) {
+        return groups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The groups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGroupsIsMutable();
+        groups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGroupsIsMutable();
+        groups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param values The groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, groups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroups() {
+        groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kubernetes groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureGroupsIsMutable();
+        groups_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.KubernetesPrivileges)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.KubernetesPrivileges)
+    private static final com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges();
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KubernetesPrivileges>
+        PARSER = new com.google.protobuf.AbstractParser<KubernetesPrivileges>() {
+      @java.lang.Override
+      public KubernetesPrivileges parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KubernetesPrivileges(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<KubernetesPrivileges> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KubernetesPrivileges> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.KubernetesPrivileges getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10297,7 +12145,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -10309,7 +12157,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated int getResourceIdsCount();
@@ -10320,7 +12168,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -10332,7 +12180,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -10566,7 +12414,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -10580,7 +12428,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated public int getResourceIdsCount() {
@@ -10593,7 +12441,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -10607,7 +12455,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=238
+     *     See access_requests.proto;l=272
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -11212,7 +13060,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @return A list containing the resourceIds.
        */
       @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -11226,7 +13074,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @return The count of resourceIds.
        */
       @java.lang.Deprecated public int getResourceIdsCount() {
@@ -11239,7 +13087,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @param index The index of the element to return.
        * @return The resourceIds at the given index.
        */
@@ -11253,7 +13101,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @param index The index of the value to return.
        * @return The bytes of the resourceIds at the given index.
        */
@@ -11268,7 +13116,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @param index The index to set the value at.
        * @param value The resourceIds to set.
        * @return This builder for chaining.
@@ -11290,7 +13138,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @param value The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -11311,7 +13159,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @param values The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -11330,7 +13178,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResourceIds() {
@@ -11346,7 +13194,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=238
+       *     See access_requests.proto;l=272
        * @param value The bytes of the resourceIds to add.
        * @return This builder for chaining.
        */
@@ -11883,6 +13731,16 @@ public final class AccessRequestsPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RequestableResource_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_PrivilegesMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_PrivilegesMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_KubernetesPrivileges_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_KubernetesPrivileges_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccessRequestConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11934,39 +13792,47 @@ public final class AccessRequestsPlumbing {
       "\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010metadata\030\005 \001(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022C\n\004time\030\006 \001(\0132\032.google.pro" +
       "tobuf.TimestampB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_priva" +
-      "te:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\364\001\n\023RequestableReso" +
+      "te:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\374\002\n\023RequestableReso" +
       "urce\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004name\030\002 \001" +
       "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007healthy\030\003 \001(\010B\n\362\370\263\007\005\260\363" +
       "\263\007\001\022\030\n\004type\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016authent" +
       "ication\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\006 \001(\0132" +
       "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006access\030\007 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\303\001\n\023AccessRe" +
-      "questConfig\022$\n\013resource_id\030\001 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n" +
-      "\nstart_from\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\313\003\n\032RequestAcc" +
-      "essRequestConfig\022\'\n\014resource_ids\030\001 \003(\tB\021" +
-      "\030\001\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\005 \001(\tB\333" +
-      "\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules\362\363\263\007\021" +
-      "\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022\013Acce" +
-      "ssRules\362\363\263\007\033\n\014go_terraform\022\013AccessRules\362" +
-      "\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014json_" +
-      "gateway\022\022models.AccessRules\272\364\263\007\027accessRu" +
-      "lesDiffSuppress\320\364\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
-      "private2\331\001\n\016AccessRequests\022o\n\004List\022\034.v1." +
-      "AccessRequestListRequest\032\035.v1.AccessRequ" +
-      "estListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023" +
-      "/v1/access-requests\032V\312\371\263\007\022\302\371\263\007\rAccessReq" +
-      "uest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!t" +
-      "erraform-provider\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.stro" +
-      "ngdm.api.plumbingB\026AccessRequestsPlumbin" +
-      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
-      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!te" +
-      "rraform-providerb\006proto3"
+      "\370\263\007\005\260\363\263\007\001\022D\n\nprivileges\030\010 \001(\0132\025.v1.Privi" +
+      "legesMessageB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022" +
+      "@\n\035privileges_requirement_status\030\t \001(\tB\031" +
+      "\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\020\372\370\263\007\013\250\363\263\007\001\322\363\263" +
+      "\007\001*\"h\n\021PrivilegesMessage\0228\n\nkubernetes\030\001" +
+      " \001(\0132\030.v1.KubernetesPrivilegesB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"M\n\024Kuberne" +
+      "tesPrivileges\022\032\n\006groups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\303\001\n\023AccessR" +
+      "equestConfig\022$\n\013resource_id\030\001 \001(\tB\017\362\370\263\007\n" +
+      "\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:" +
+      "\n\nstart_from\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\313\003\n\032RequestAc" +
+      "cessRequestConfig\022\'\n\014resource_ids\030\001 \003(\tB" +
+      "\021\030\001\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\005 \001(\tB" +
+      "\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules\362\363\263\007" +
+      "\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022\013Acc" +
+      "essRules\362\363\263\007\033\n\014go_terraform\022\013AccessRules" +
+      "\362\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014json" +
+      "_gateway\022\022models.AccessRules\272\364\263\007\027accessR" +
+      "ulesDiffSuppress\320\364\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo" +
+      "_private2\331\001\n\016AccessRequests\022o\n\004List\022\034.v1" +
+      ".AccessRequestListRequest\032\035.v1.AccessReq" +
+      "uestListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007" +
+      "\023/v1/access-requests\032V\312\371\263\007\022\302\371\263\007\rAccessRe" +
+      "quest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!" +
+      "terraform-provider\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.str" +
+      "ongdm.api.plumbingB\026AccessRequestsPlumbi" +
+      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
+      "v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!t" +
+      "erraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12006,15 +13872,27 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_RequestableResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RequestableResource_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Type", "Authentication", "Tags", "Access", });
-    internal_static_v1_AccessRequestConfig_descriptor =
+        new java.lang.String[] { "Id", "Name", "Healthy", "Type", "Authentication", "Tags", "Access", "Privileges", "PrivilegesRequirementStatus", });
+    internal_static_v1_PrivilegesMessage_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_PrivilegesMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_PrivilegesMessage_descriptor,
+        new java.lang.String[] { "Kubernetes", });
+    internal_static_v1_KubernetesPrivileges_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_KubernetesPrivileges_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_KubernetesPrivileges_descriptor,
+        new java.lang.String[] { "Groups", });
+    internal_static_v1_AccessRequestConfig_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_v1_AccessRequestConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequestConfig_descriptor,
         new java.lang.String[] { "ResourceId", "Reason", "StartFrom", "Duration", });
     internal_static_v1_RequestAccessRequestConfig_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RequestAccessRequestConfig_descriptor,

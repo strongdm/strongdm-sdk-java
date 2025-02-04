@@ -3530,6 +3530,21 @@ public final class Spec {
   public interface CreateRequestMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.CreateRequestMetadata)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    boolean hasFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder();
   }
   /**
    * <pre>
@@ -3580,6 +3595,19 @@ public final class Spec {
             case 0:
               done = true;
               break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder subBuilder = null;
+              if (fulfillments_ != null) {
+                subBuilder = fulfillments_.toBuilder();
+              }
+              fulfillments_ = input.readMessage(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fulfillments_);
+                fulfillments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3614,6 +3642,32 @@ public final class Spec {
               com.strongdm.api.plumbing.Spec.CreateRequestMetadata.class, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder.class);
     }
 
+    public static final int FULFILLMENTS_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    @java.lang.Override
+    public boolean hasFulfillments() {
+      return fulfillments_ != null;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+      return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+      return getFulfillments();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3628,6 +3682,9 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (fulfillments_ != null) {
+        output.writeMessage(1, getFulfillments());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3637,6 +3694,10 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
+      if (fulfillments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFulfillments());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3652,6 +3713,11 @@ public final class Spec {
       }
       com.strongdm.api.plumbing.Spec.CreateRequestMetadata other = (com.strongdm.api.plumbing.Spec.CreateRequestMetadata) obj;
 
+      if (hasFulfillments() != other.hasFulfillments()) return false;
+      if (hasFulfillments()) {
+        if (!getFulfillments()
+            .equals(other.getFulfillments())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3663,6 +3729,10 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFulfillments()) {
+        hash = (37 * hash) + FULFILLMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFulfillments().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3800,6 +3870,12 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3826,6 +3902,11 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.plumbing.Spec.CreateRequestMetadata buildPartial() {
         com.strongdm.api.plumbing.Spec.CreateRequestMetadata result = new com.strongdm.api.plumbing.Spec.CreateRequestMetadata(this);
+        if (fulfillmentsBuilder_ == null) {
+          result.fulfillments_ = fulfillments_;
+        } else {
+          result.fulfillments_ = fulfillmentsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3874,6 +3955,9 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.Spec.CreateRequestMetadata other) {
         if (other == com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance()) return this;
+        if (other.hasFulfillments()) {
+          mergeFulfillments(other.getFulfillments());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3901,6 +3985,125 @@ public final class Spec {
           }
         }
         return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> fulfillmentsBuilder_;
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return Whether the fulfillments field is set.
+       */
+      public boolean hasFulfillments() {
+        return fulfillmentsBuilder_ != null || fulfillments_ != null;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return The fulfillments.
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        } else {
+          return fulfillmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fulfillments_ = value;
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = builderForValue.build();
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder mergeFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (fulfillments_ != null) {
+            fulfillments_ =
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.newBuilder(fulfillments_).mergeFrom(value).buildPartial();
+          } else {
+            fulfillments_ = value;
+          }
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder clearFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+          onChanged();
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder getFulfillmentsBuilder() {
+        
+        onChanged();
+        return getFulfillmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+        if (fulfillmentsBuilder_ != null) {
+          return fulfillmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return fulfillments_ == null ?
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> 
+          getFulfillmentsFieldBuilder() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder>(
+                  getFulfillments(),
+                  getParentForChildren(),
+                  isClean());
+          fulfillments_ = null;
+        }
+        return fulfillmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4413,6 +4616,21 @@ public final class Spec {
      * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder();
+
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    boolean hasFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+     * @return The fulfillments.
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder();
   }
   /**
    * <pre>
@@ -4472,6 +4690,19 @@ public final class Spec {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(snapshotAt_);
                 snapshotAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder subBuilder = null;
+              if (fulfillments_ != null) {
+                subBuilder = fulfillments_.toBuilder();
+              }
+              fulfillments_ = input.readMessage(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fulfillments_);
+                fulfillments_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4548,6 +4779,32 @@ public final class Spec {
       return getSnapshotAt();
     }
 
+    public static final int FULFILLMENTS_FIELD_NUMBER = 2;
+    private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    @java.lang.Override
+    public boolean hasFulfillments() {
+      return fulfillments_ != null;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+     * @return The fulfillments.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+      return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+      return getFulfillments();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4565,6 +4822,9 @@ public final class Spec {
       if (snapshotAt_ != null) {
         output.writeMessage(1, getSnapshotAt());
       }
+      if (fulfillments_ != null) {
+        output.writeMessage(2, getFulfillments());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4577,6 +4837,10 @@ public final class Spec {
       if (snapshotAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSnapshotAt());
+      }
+      if (fulfillments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFulfillments());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4598,6 +4862,11 @@ public final class Spec {
         if (!getSnapshotAt()
             .equals(other.getSnapshotAt())) return false;
       }
+      if (hasFulfillments() != other.hasFulfillments()) return false;
+      if (hasFulfillments()) {
+        if (!getFulfillments()
+            .equals(other.getFulfillments())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4612,6 +4881,10 @@ public final class Spec {
       if (hasSnapshotAt()) {
         hash = (37 * hash) + SNAPSHOT_AT_FIELD_NUMBER;
         hash = (53 * hash) + getSnapshotAt().hashCode();
+      }
+      if (hasFulfillments()) {
+        hash = (37 * hash) + FULFILLMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFulfillments().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4756,6 +5029,12 @@ public final class Spec {
           snapshotAt_ = null;
           snapshotAtBuilder_ = null;
         }
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
         return this;
       }
 
@@ -4786,6 +5065,11 @@ public final class Spec {
           result.snapshotAt_ = snapshotAt_;
         } else {
           result.snapshotAt_ = snapshotAtBuilder_.build();
+        }
+        if (fulfillmentsBuilder_ == null) {
+          result.fulfillments_ = fulfillments_;
+        } else {
+          result.fulfillments_ = fulfillmentsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4837,6 +5121,9 @@ public final class Spec {
         if (other == com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance()) return this;
         if (other.hasSnapshotAt()) {
           mergeSnapshotAt(other.getSnapshotAt());
+        }
+        if (other.hasFulfillments()) {
+          mergeFulfillments(other.getFulfillments());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5020,6 +5307,125 @@ public final class Spec {
           snapshotAt_ = null;
         }
         return snapshotAtBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> fulfillmentsBuilder_;
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       * @return Whether the fulfillments field is set.
+       */
+      public boolean hasFulfillments() {
+        return fulfillmentsBuilder_ != null || fulfillments_ != null;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       * @return The fulfillments.
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        } else {
+          return fulfillmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       */
+      public Builder setFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fulfillments_ = value;
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       */
+      public Builder setFulfillments(
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = builderForValue.build();
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       */
+      public Builder mergeFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (fulfillments_ != null) {
+            fulfillments_ =
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.newBuilder(fulfillments_).mergeFrom(value).buildPartial();
+          } else {
+            fulfillments_ = value;
+          }
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       */
+      public Builder clearFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+          onChanged();
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder getFulfillmentsBuilder() {
+        
+        onChanged();
+        return getFulfillmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+        if (fulfillmentsBuilder_ != null) {
+          return fulfillmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return fulfillments_ == null ?
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> 
+          getFulfillmentsFieldBuilder() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder>(
+                  getFulfillments(),
+                  getParentForChildren(),
+                  isClean());
+          fulfillments_ = null;
+        }
+        return fulfillmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5505,6 +5911,21 @@ public final class Spec {
   public interface UpdateRequestMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.UpdateRequestMetadata)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    boolean hasFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder();
   }
   /**
    * <pre>
@@ -5555,6 +5976,19 @@ public final class Spec {
             case 0:
               done = true;
               break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder subBuilder = null;
+              if (fulfillments_ != null) {
+                subBuilder = fulfillments_.toBuilder();
+              }
+              fulfillments_ = input.readMessage(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fulfillments_);
+                fulfillments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5589,6 +6023,32 @@ public final class Spec {
               com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.class, com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.Builder.class);
     }
 
+    public static final int FULFILLMENTS_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    @java.lang.Override
+    public boolean hasFulfillments() {
+      return fulfillments_ != null;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+      return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+      return getFulfillments();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5603,6 +6063,9 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (fulfillments_ != null) {
+        output.writeMessage(1, getFulfillments());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5612,6 +6075,10 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
+      if (fulfillments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFulfillments());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5627,6 +6094,11 @@ public final class Spec {
       }
       com.strongdm.api.plumbing.Spec.UpdateRequestMetadata other = (com.strongdm.api.plumbing.Spec.UpdateRequestMetadata) obj;
 
+      if (hasFulfillments() != other.hasFulfillments()) return false;
+      if (hasFulfillments()) {
+        if (!getFulfillments()
+            .equals(other.getFulfillments())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5638,6 +6110,10 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFulfillments()) {
+        hash = (37 * hash) + FULFILLMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFulfillments().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5775,6 +6251,12 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
         return this;
       }
 
@@ -5801,6 +6283,11 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.plumbing.Spec.UpdateRequestMetadata buildPartial() {
         com.strongdm.api.plumbing.Spec.UpdateRequestMetadata result = new com.strongdm.api.plumbing.Spec.UpdateRequestMetadata(this);
+        if (fulfillmentsBuilder_ == null) {
+          result.fulfillments_ = fulfillments_;
+        } else {
+          result.fulfillments_ = fulfillmentsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5849,6 +6336,9 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.Spec.UpdateRequestMetadata other) {
         if (other == com.strongdm.api.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance()) return this;
+        if (other.hasFulfillments()) {
+          mergeFulfillments(other.getFulfillments());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5876,6 +6366,125 @@ public final class Spec {
           }
         }
         return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> fulfillmentsBuilder_;
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return Whether the fulfillments field is set.
+       */
+      public boolean hasFulfillments() {
+        return fulfillmentsBuilder_ != null || fulfillments_ != null;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return The fulfillments.
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        } else {
+          return fulfillmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fulfillments_ = value;
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = builderForValue.build();
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder mergeFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (fulfillments_ != null) {
+            fulfillments_ =
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.newBuilder(fulfillments_).mergeFrom(value).buildPartial();
+          } else {
+            fulfillments_ = value;
+          }
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder clearFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+          onChanged();
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder getFulfillmentsBuilder() {
+        
+        onChanged();
+        return getFulfillmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+        if (fulfillmentsBuilder_ != null) {
+          return fulfillmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return fulfillments_ == null ?
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> 
+          getFulfillmentsFieldBuilder() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder>(
+                  getFulfillments(),
+                  getParentForChildren(),
+                  isClean());
+          fulfillments_ = null;
+        }
+        return fulfillmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6361,6 +6970,21 @@ public final class Spec {
   public interface DeleteRequestMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.DeleteRequestMetadata)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    boolean hasFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder();
   }
   /**
    * <pre>
@@ -6411,6 +7035,19 @@ public final class Spec {
             case 0:
               done = true;
               break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder subBuilder = null;
+              if (fulfillments_ != null) {
+                subBuilder = fulfillments_.toBuilder();
+              }
+              fulfillments_ = input.readMessage(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fulfillments_);
+                fulfillments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6445,6 +7082,32 @@ public final class Spec {
               com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.class, com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.Builder.class);
     }
 
+    public static final int FULFILLMENTS_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    @java.lang.Override
+    public boolean hasFulfillments() {
+      return fulfillments_ != null;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+      return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+      return getFulfillments();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6459,6 +7122,9 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (fulfillments_ != null) {
+        output.writeMessage(1, getFulfillments());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6468,6 +7134,10 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
+      if (fulfillments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFulfillments());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6483,6 +7153,11 @@ public final class Spec {
       }
       com.strongdm.api.plumbing.Spec.DeleteRequestMetadata other = (com.strongdm.api.plumbing.Spec.DeleteRequestMetadata) obj;
 
+      if (hasFulfillments() != other.hasFulfillments()) return false;
+      if (hasFulfillments()) {
+        if (!getFulfillments()
+            .equals(other.getFulfillments())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6494,6 +7169,10 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFulfillments()) {
+        hash = (37 * hash) + FULFILLMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFulfillments().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6631,6 +7310,12 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
         return this;
       }
 
@@ -6657,6 +7342,11 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.plumbing.Spec.DeleteRequestMetadata buildPartial() {
         com.strongdm.api.plumbing.Spec.DeleteRequestMetadata result = new com.strongdm.api.plumbing.Spec.DeleteRequestMetadata(this);
+        if (fulfillmentsBuilder_ == null) {
+          result.fulfillments_ = fulfillments_;
+        } else {
+          result.fulfillments_ = fulfillmentsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6705,6 +7395,9 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.Spec.DeleteRequestMetadata other) {
         if (other == com.strongdm.api.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance()) return this;
+        if (other.hasFulfillments()) {
+          mergeFulfillments(other.getFulfillments());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6732,6 +7425,125 @@ public final class Spec {
           }
         }
         return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> fulfillmentsBuilder_;
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return Whether the fulfillments field is set.
+       */
+      public boolean hasFulfillments() {
+        return fulfillmentsBuilder_ != null || fulfillments_ != null;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return The fulfillments.
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        } else {
+          return fulfillmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fulfillments_ = value;
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = builderForValue.build();
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder mergeFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (fulfillments_ != null) {
+            fulfillments_ =
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.newBuilder(fulfillments_).mergeFrom(value).buildPartial();
+          } else {
+            fulfillments_ = value;
+          }
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder clearFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+          onChanged();
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder getFulfillmentsBuilder() {
+        
+        onChanged();
+        return getFulfillmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+        if (fulfillmentsBuilder_ != null) {
+          return fulfillmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return fulfillments_ == null ?
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> 
+          getFulfillmentsFieldBuilder() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder>(
+                  getFulfillments(),
+                  getParentForChildren(),
+                  isClean());
+          fulfillments_ = null;
+        }
+        return fulfillmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7310,6 +8122,21 @@ public final class Spec {
      * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder();
+
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    boolean hasFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+     * @return The fulfillments.
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder();
   }
   /**
    * <pre>
@@ -7395,6 +8222,19 @@ public final class Spec {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(snapshotAt_);
                 snapshotAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder subBuilder = null;
+              if (fulfillments_ != null) {
+                subBuilder = fulfillments_.toBuilder();
+              }
+              fulfillments_ = input.readMessage(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fulfillments_);
+                fulfillments_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7599,6 +8439,32 @@ public final class Spec {
       return getSnapshotAt();
     }
 
+    public static final int FULFILLMENTS_FIELD_NUMBER = 6;
+    private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    @java.lang.Override
+    public boolean hasFulfillments() {
+      return fulfillments_ != null;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+     * @return The fulfillments.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+      return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+      return getFulfillments();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7628,6 +8494,9 @@ public final class Spec {
       if (snapshotAt_ != null) {
         output.writeMessage(5, getSnapshotAt());
       }
+      if (fulfillments_ != null) {
+        output.writeMessage(6, getFulfillments());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7654,6 +8523,10 @@ public final class Spec {
       if (snapshotAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSnapshotAt());
+      }
+      if (fulfillments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getFulfillments());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7683,6 +8556,11 @@ public final class Spec {
         if (!getSnapshotAt()
             .equals(other.getSnapshotAt())) return false;
       }
+      if (hasFulfillments() != other.hasFulfillments()) return false;
+      if (hasFulfillments()) {
+        if (!getFulfillments()
+            .equals(other.getFulfillments())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7705,6 +8583,10 @@ public final class Spec {
       if (hasSnapshotAt()) {
         hash = (37 * hash) + SNAPSHOT_AT_FIELD_NUMBER;
         hash = (53 * hash) + getSnapshotAt().hashCode();
+      }
+      if (hasFulfillments()) {
+        hash = (37 * hash) + FULFILLMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFulfillments().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7859,6 +8741,12 @@ public final class Spec {
           snapshotAt_ = null;
           snapshotAtBuilder_ = null;
         }
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
         return this;
       }
 
@@ -7893,6 +8781,11 @@ public final class Spec {
           result.snapshotAt_ = snapshotAt_;
         } else {
           result.snapshotAt_ = snapshotAtBuilder_.build();
+        }
+        if (fulfillmentsBuilder_ == null) {
+          result.fulfillments_ = fulfillments_;
+        } else {
+          result.fulfillments_ = fulfillmentsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7958,6 +8851,9 @@ public final class Spec {
         }
         if (other.hasSnapshotAt()) {
           mergeSnapshotAt(other.getSnapshotAt());
+        }
+        if (other.hasFulfillments()) {
+          mergeFulfillments(other.getFulfillments());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8436,6 +9332,125 @@ public final class Spec {
         }
         return snapshotAtBuilder_;
       }
+
+      private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> fulfillmentsBuilder_;
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       * @return Whether the fulfillments field is set.
+       */
+      public boolean hasFulfillments() {
+        return fulfillmentsBuilder_ != null || fulfillments_ != null;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       * @return The fulfillments.
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        } else {
+          return fulfillmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       */
+      public Builder setFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fulfillments_ = value;
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       */
+      public Builder setFulfillments(
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = builderForValue.build();
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       */
+      public Builder mergeFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (fulfillments_ != null) {
+            fulfillments_ =
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.newBuilder(fulfillments_).mergeFrom(value).buildPartial();
+          } else {
+            fulfillments_ = value;
+          }
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       */
+      public Builder clearFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+          onChanged();
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder getFulfillmentsBuilder() {
+        
+        onChanged();
+        return getFulfillmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+        if (fulfillmentsBuilder_ != null) {
+          return fulfillmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return fulfillments_ == null ?
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> 
+          getFulfillmentsFieldBuilder() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder>(
+                  getFulfillments(),
+                  getParentForChildren(),
+                  isClean());
+          fulfillments_ = null;
+        }
+        return fulfillmentsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8526,7 +9541,7 @@ public final class Spec {
      *
      * <code>int32 total = 2 [deprecated = true];</code>
      * @deprecated v1.ListResponseMetadata.total is deprecated.
-     *     See spec.proto;l=138
+     *     See spec.proto;l=144
      * @return The total.
      */
     @java.lang.Deprecated int getTotal();
@@ -8688,7 +9703,7 @@ public final class Spec {
      *
      * <code>int32 total = 2 [deprecated = true];</code>
      * @deprecated v1.ListResponseMetadata.total is deprecated.
-     *     See spec.proto;l=138
+     *     See spec.proto;l=144
      * @return The total.
      */
     @java.lang.Override
@@ -9136,7 +10151,7 @@ public final class Spec {
        *
        * <code>int32 total = 2 [deprecated = true];</code>
        * @deprecated v1.ListResponseMetadata.total is deprecated.
-       *     See spec.proto;l=138
+       *     See spec.proto;l=144
        * @return The total.
        */
       @java.lang.Override
@@ -9152,7 +10167,7 @@ public final class Spec {
        *
        * <code>int32 total = 2 [deprecated = true];</code>
        * @deprecated v1.ListResponseMetadata.total is deprecated.
-       *     See spec.proto;l=138
+       *     See spec.proto;l=144
        * @param value The total to set.
        * @return This builder for chaining.
        */
@@ -9171,7 +10186,7 @@ public final class Spec {
        *
        * <code>int32 total = 2 [deprecated = true];</code>
        * @deprecated v1.ListResponseMetadata.total is deprecated.
-       *     See spec.proto;l=138
+       *     See spec.proto;l=144
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotal() {
@@ -10311,6 +11326,21 @@ public final class Spec {
   public interface GenericRequestMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.GenericRequestMetadata)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    boolean hasFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments();
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder();
   }
   /**
    * <pre>
@@ -10361,6 +11391,19 @@ public final class Spec {
             case 0:
               done = true;
               break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder subBuilder = null;
+              if (fulfillments_ != null) {
+                subBuilder = fulfillments_.toBuilder();
+              }
+              fulfillments_ = input.readMessage(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fulfillments_);
+                fulfillments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10395,6 +11438,32 @@ public final class Spec {
               com.strongdm.api.plumbing.Spec.GenericRequestMetadata.class, com.strongdm.api.plumbing.Spec.GenericRequestMetadata.Builder.class);
     }
 
+    public static final int FULFILLMENTS_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return Whether the fulfillments field is set.
+     */
+    @java.lang.Override
+    public boolean hasFulfillments() {
+      return fulfillments_ != null;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     * @return The fulfillments.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+      return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+    }
+    /**
+     * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+      return getFulfillments();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10409,6 +11478,9 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (fulfillments_ != null) {
+        output.writeMessage(1, getFulfillments());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10418,6 +11490,10 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
+      if (fulfillments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFulfillments());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10433,6 +11509,11 @@ public final class Spec {
       }
       com.strongdm.api.plumbing.Spec.GenericRequestMetadata other = (com.strongdm.api.plumbing.Spec.GenericRequestMetadata) obj;
 
+      if (hasFulfillments() != other.hasFulfillments()) return false;
+      if (hasFulfillments()) {
+        if (!getFulfillments()
+            .equals(other.getFulfillments())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10444,6 +11525,10 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFulfillments()) {
+        hash = (37 * hash) + FULFILLMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFulfillments().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10581,6 +11666,12 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
         return this;
       }
 
@@ -10607,6 +11698,11 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.plumbing.Spec.GenericRequestMetadata buildPartial() {
         com.strongdm.api.plumbing.Spec.GenericRequestMetadata result = new com.strongdm.api.plumbing.Spec.GenericRequestMetadata(this);
+        if (fulfillmentsBuilder_ == null) {
+          result.fulfillments_ = fulfillments_;
+        } else {
+          result.fulfillments_ = fulfillmentsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -10655,6 +11751,9 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.Spec.GenericRequestMetadata other) {
         if (other == com.strongdm.api.plumbing.Spec.GenericRequestMetadata.getDefaultInstance()) return this;
+        if (other.hasFulfillments()) {
+          mergeFulfillments(other.getFulfillments());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10682,6 +11781,125 @@ public final class Spec {
           }
         }
         return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.FulfillmentsMetadata fulfillments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> fulfillmentsBuilder_;
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return Whether the fulfillments field is set.
+       */
+      public boolean hasFulfillments() {
+        return fulfillmentsBuilder_ != null || fulfillments_ != null;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       * @return The fulfillments.
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_ == null ? com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        } else {
+          return fulfillmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fulfillments_ = value;
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = builderForValue.build();
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder mergeFulfillments(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (fulfillments_ != null) {
+            fulfillments_ =
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.newBuilder(fulfillments_).mergeFrom(value).buildPartial();
+          } else {
+            fulfillments_ = value;
+          }
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public Builder clearFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = null;
+          onChanged();
+        } else {
+          fulfillments_ = null;
+          fulfillmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder getFulfillmentsBuilder() {
+        
+        onChanged();
+        return getFulfillmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder getFulfillmentsOrBuilder() {
+        if (fulfillmentsBuilder_ != null) {
+          return fulfillmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return fulfillments_ == null ?
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance() : fulfillments_;
+        }
+      }
+      /**
+       * <code>.v1.FulfillmentsMetadata fulfillments = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder> 
+          getFulfillmentsFieldBuilder() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder, com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder>(
+                  getFulfillments(),
+                  getParentForChildren(),
+                  isClean());
+          fulfillments_ = null;
+        }
+        return fulfillmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11166,6 +12384,3127 @@ public final class Spec {
 
   }
 
+  public interface RequirementsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.RequirementsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.Spec.Requirement> 
+        getRequirementsList();
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.Requirement getRequirements(int index);
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    int getRequirementsCount();
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.Spec.RequirementOrBuilder> 
+        getRequirementsOrBuilderList();
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.RequirementOrBuilder getRequirementsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * RequirementsMetadata contains the list of requirements that must be fulfilled
+   * in order for this request to be authorized.
+   * </pre>
+   *
+   * Protobuf type {@code v1.RequirementsMetadata}
+   */
+  public static final class RequirementsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.RequirementsMetadata)
+      RequirementsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RequirementsMetadata.newBuilder() to construct.
+    private RequirementsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RequirementsMetadata() {
+      requirements_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RequirementsMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RequirementsMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                requirements_ = new java.util.ArrayList<com.strongdm.api.plumbing.Spec.Requirement>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              requirements_.add(
+                  input.readMessage(com.strongdm.api.plumbing.Spec.Requirement.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          requirements_ = java.util.Collections.unmodifiableList(requirements_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_RequirementsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_RequirementsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.Spec.RequirementsMetadata.class, com.strongdm.api.plumbing.Spec.RequirementsMetadata.Builder.class);
+    }
+
+    public static final int REQUIREMENTS_FIELD_NUMBER = 1;
+    private java.util.List<com.strongdm.api.plumbing.Spec.Requirement> requirements_;
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.Spec.Requirement> getRequirementsList() {
+      return requirements_;
+    }
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.Spec.RequirementOrBuilder> 
+        getRequirementsOrBuilderList() {
+      return requirements_;
+    }
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    @java.lang.Override
+    public int getRequirementsCount() {
+      return requirements_.size();
+    }
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.Requirement getRequirements(int index) {
+      return requirements_.get(index);
+    }
+    /**
+     * <code>repeated .v1.Requirement requirements = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RequirementOrBuilder getRequirementsOrBuilder(
+        int index) {
+      return requirements_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < requirements_.size(); i++) {
+        output.writeMessage(1, requirements_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < requirements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, requirements_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.Spec.RequirementsMetadata)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.Spec.RequirementsMetadata other = (com.strongdm.api.plumbing.Spec.RequirementsMetadata) obj;
+
+      if (!getRequirementsList()
+          .equals(other.getRequirementsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRequirementsCount() > 0) {
+        hash = (37 * hash) + REQUIREMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequirementsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.Spec.RequirementsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RequirementsMetadata contains the list of requirements that must be fulfilled
+     * in order for this request to be authorized.
+     * </pre>
+     *
+     * Protobuf type {@code v1.RequirementsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.RequirementsMetadata)
+        com.strongdm.api.plumbing.Spec.RequirementsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_RequirementsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_RequirementsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.Spec.RequirementsMetadata.class, com.strongdm.api.plumbing.Spec.RequirementsMetadata.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.Spec.RequirementsMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequirementsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (requirementsBuilder_ == null) {
+          requirements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          requirementsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_RequirementsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.RequirementsMetadata getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.Spec.RequirementsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.RequirementsMetadata build() {
+        com.strongdm.api.plumbing.Spec.RequirementsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.RequirementsMetadata buildPartial() {
+        com.strongdm.api.plumbing.Spec.RequirementsMetadata result = new com.strongdm.api.plumbing.Spec.RequirementsMetadata(this);
+        int from_bitField0_ = bitField0_;
+        if (requirementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            requirements_ = java.util.Collections.unmodifiableList(requirements_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.requirements_ = requirements_;
+        } else {
+          result.requirements_ = requirementsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.Spec.RequirementsMetadata) {
+          return mergeFrom((com.strongdm.api.plumbing.Spec.RequirementsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.Spec.RequirementsMetadata other) {
+        if (other == com.strongdm.api.plumbing.Spec.RequirementsMetadata.getDefaultInstance()) return this;
+        if (requirementsBuilder_ == null) {
+          if (!other.requirements_.isEmpty()) {
+            if (requirements_.isEmpty()) {
+              requirements_ = other.requirements_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRequirementsIsMutable();
+              requirements_.addAll(other.requirements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.requirements_.isEmpty()) {
+            if (requirementsBuilder_.isEmpty()) {
+              requirementsBuilder_.dispose();
+              requirementsBuilder_ = null;
+              requirements_ = other.requirements_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              requirementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRequirementsFieldBuilder() : null;
+            } else {
+              requirementsBuilder_.addAllMessages(other.requirements_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.Spec.RequirementsMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.Spec.RequirementsMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.strongdm.api.plumbing.Spec.Requirement> requirements_ =
+        java.util.Collections.emptyList();
+      private void ensureRequirementsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requirements_ = new java.util.ArrayList<com.strongdm.api.plumbing.Spec.Requirement>(requirements_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.Requirement, com.strongdm.api.plumbing.Spec.Requirement.Builder, com.strongdm.api.plumbing.Spec.RequirementOrBuilder> requirementsBuilder_;
+
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.Spec.Requirement> getRequirementsList() {
+        if (requirementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(requirements_);
+        } else {
+          return requirementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public int getRequirementsCount() {
+        if (requirementsBuilder_ == null) {
+          return requirements_.size();
+        } else {
+          return requirementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Requirement getRequirements(int index) {
+        if (requirementsBuilder_ == null) {
+          return requirements_.get(index);
+        } else {
+          return requirementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder setRequirements(
+          int index, com.strongdm.api.plumbing.Spec.Requirement value) {
+        if (requirementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequirementsIsMutable();
+          requirements_.set(index, value);
+          onChanged();
+        } else {
+          requirementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder setRequirements(
+          int index, com.strongdm.api.plumbing.Spec.Requirement.Builder builderForValue) {
+        if (requirementsBuilder_ == null) {
+          ensureRequirementsIsMutable();
+          requirements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          requirementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder addRequirements(com.strongdm.api.plumbing.Spec.Requirement value) {
+        if (requirementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequirementsIsMutable();
+          requirements_.add(value);
+          onChanged();
+        } else {
+          requirementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder addRequirements(
+          int index, com.strongdm.api.plumbing.Spec.Requirement value) {
+        if (requirementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequirementsIsMutable();
+          requirements_.add(index, value);
+          onChanged();
+        } else {
+          requirementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder addRequirements(
+          com.strongdm.api.plumbing.Spec.Requirement.Builder builderForValue) {
+        if (requirementsBuilder_ == null) {
+          ensureRequirementsIsMutable();
+          requirements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          requirementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder addRequirements(
+          int index, com.strongdm.api.plumbing.Spec.Requirement.Builder builderForValue) {
+        if (requirementsBuilder_ == null) {
+          ensureRequirementsIsMutable();
+          requirements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          requirementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder addAllRequirements(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.Spec.Requirement> values) {
+        if (requirementsBuilder_ == null) {
+          ensureRequirementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, requirements_);
+          onChanged();
+        } else {
+          requirementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder clearRequirements() {
+        if (requirementsBuilder_ == null) {
+          requirements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          requirementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public Builder removeRequirements(int index) {
+        if (requirementsBuilder_ == null) {
+          ensureRequirementsIsMutable();
+          requirements_.remove(index);
+          onChanged();
+        } else {
+          requirementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Requirement.Builder getRequirementsBuilder(
+          int index) {
+        return getRequirementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RequirementOrBuilder getRequirementsOrBuilder(
+          int index) {
+        if (requirementsBuilder_ == null) {
+          return requirements_.get(index);  } else {
+          return requirementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.Spec.RequirementOrBuilder> 
+           getRequirementsOrBuilderList() {
+        if (requirementsBuilder_ != null) {
+          return requirementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(requirements_);
+        }
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Requirement.Builder addRequirementsBuilder() {
+        return getRequirementsFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.Spec.Requirement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Requirement.Builder addRequirementsBuilder(
+          int index) {
+        return getRequirementsFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.Spec.Requirement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .v1.Requirement requirements = 1;</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.Spec.Requirement.Builder> 
+           getRequirementsBuilderList() {
+        return getRequirementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.Requirement, com.strongdm.api.plumbing.Spec.Requirement.Builder, com.strongdm.api.plumbing.Spec.RequirementOrBuilder> 
+          getRequirementsFieldBuilder() {
+        if (requirementsBuilder_ == null) {
+          requirementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.Requirement, com.strongdm.api.plumbing.Spec.Requirement.Builder, com.strongdm.api.plumbing.Spec.RequirementOrBuilder>(
+                  requirements_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          requirements_ = null;
+        }
+        return requirementsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.RequirementsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.RequirementsMetadata)
+    private static final com.strongdm.api.plumbing.Spec.RequirementsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.Spec.RequirementsMetadata();
+    }
+
+    public static com.strongdm.api.plumbing.Spec.RequirementsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RequirementsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RequirementsMetadata>() {
+      @java.lang.Override
+      public RequirementsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RequirementsMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RequirementsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RequirementsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RequirementsMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FulfillmentsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.FulfillmentsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.Spec.Fulfillment> 
+        getFulfillmentsList();
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.Fulfillment getFulfillments(int index);
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    int getFulfillmentsCount();
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder> 
+        getFulfillmentsOrBuilderList();
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder getFulfillmentsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * FulfillmentsMetadata contains the list of fulfillments added to
+   * a request so that the request can be authorized.
+   * </pre>
+   *
+   * Protobuf type {@code v1.FulfillmentsMetadata}
+   */
+  public static final class FulfillmentsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.FulfillmentsMetadata)
+      FulfillmentsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FulfillmentsMetadata.newBuilder() to construct.
+    private FulfillmentsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FulfillmentsMetadata() {
+      fulfillments_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FulfillmentsMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FulfillmentsMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fulfillments_ = new java.util.ArrayList<com.strongdm.api.plumbing.Spec.Fulfillment>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fulfillments_.add(
+                  input.readMessage(com.strongdm.api.plumbing.Spec.Fulfillment.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fulfillments_ = java.util.Collections.unmodifiableList(fulfillments_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_FulfillmentsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_FulfillmentsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.class, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder.class);
+    }
+
+    public static final int FULFILLMENTS_FIELD_NUMBER = 1;
+    private java.util.List<com.strongdm.api.plumbing.Spec.Fulfillment> fulfillments_;
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.Spec.Fulfillment> getFulfillmentsList() {
+      return fulfillments_;
+    }
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder> 
+        getFulfillmentsOrBuilderList() {
+      return fulfillments_;
+    }
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public int getFulfillmentsCount() {
+      return fulfillments_.size();
+    }
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.Fulfillment getFulfillments(int index) {
+      return fulfillments_.get(index);
+    }
+    /**
+     * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder getFulfillmentsOrBuilder(
+        int index) {
+      return fulfillments_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fulfillments_.size(); i++) {
+        output.writeMessage(1, fulfillments_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < fulfillments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, fulfillments_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.Spec.FulfillmentsMetadata)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.Spec.FulfillmentsMetadata other = (com.strongdm.api.plumbing.Spec.FulfillmentsMetadata) obj;
+
+      if (!getFulfillmentsList()
+          .equals(other.getFulfillmentsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFulfillmentsCount() > 0) {
+        hash = (37 * hash) + FULFILLMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFulfillmentsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * FulfillmentsMetadata contains the list of fulfillments added to
+     * a request so that the request can be authorized.
+     * </pre>
+     *
+     * Protobuf type {@code v1.FulfillmentsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.FulfillmentsMetadata)
+        com.strongdm.api.plumbing.Spec.FulfillmentsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_FulfillmentsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_FulfillmentsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.class, com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFulfillmentsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          fulfillmentsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_FulfillmentsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata build() {
+        com.strongdm.api.plumbing.Spec.FulfillmentsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata buildPartial() {
+        com.strongdm.api.plumbing.Spec.FulfillmentsMetadata result = new com.strongdm.api.plumbing.Spec.FulfillmentsMetadata(this);
+        int from_bitField0_ = bitField0_;
+        if (fulfillmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fulfillments_ = java.util.Collections.unmodifiableList(fulfillments_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fulfillments_ = fulfillments_;
+        } else {
+          result.fulfillments_ = fulfillmentsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.Spec.FulfillmentsMetadata) {
+          return mergeFrom((com.strongdm.api.plumbing.Spec.FulfillmentsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.Spec.FulfillmentsMetadata other) {
+        if (other == com.strongdm.api.plumbing.Spec.FulfillmentsMetadata.getDefaultInstance()) return this;
+        if (fulfillmentsBuilder_ == null) {
+          if (!other.fulfillments_.isEmpty()) {
+            if (fulfillments_.isEmpty()) {
+              fulfillments_ = other.fulfillments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFulfillmentsIsMutable();
+              fulfillments_.addAll(other.fulfillments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fulfillments_.isEmpty()) {
+            if (fulfillmentsBuilder_.isEmpty()) {
+              fulfillmentsBuilder_.dispose();
+              fulfillmentsBuilder_ = null;
+              fulfillments_ = other.fulfillments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              fulfillmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFulfillmentsFieldBuilder() : null;
+            } else {
+              fulfillmentsBuilder_.addAllMessages(other.fulfillments_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.Spec.FulfillmentsMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.Spec.FulfillmentsMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.strongdm.api.plumbing.Spec.Fulfillment> fulfillments_ =
+        java.util.Collections.emptyList();
+      private void ensureFulfillmentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fulfillments_ = new java.util.ArrayList<com.strongdm.api.plumbing.Spec.Fulfillment>(fulfillments_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.Fulfillment, com.strongdm.api.plumbing.Spec.Fulfillment.Builder, com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder> fulfillmentsBuilder_;
+
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.Spec.Fulfillment> getFulfillmentsList() {
+        if (fulfillmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fulfillments_);
+        } else {
+          return fulfillmentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public int getFulfillmentsCount() {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_.size();
+        } else {
+          return fulfillmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Fulfillment getFulfillments(int index) {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_.get(index);
+        } else {
+          return fulfillmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(
+          int index, com.strongdm.api.plumbing.Spec.Fulfillment value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFulfillmentsIsMutable();
+          fulfillments_.set(index, value);
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder setFulfillments(
+          int index, com.strongdm.api.plumbing.Spec.Fulfillment.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          ensureFulfillmentsIsMutable();
+          fulfillments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder addFulfillments(com.strongdm.api.plumbing.Spec.Fulfillment value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFulfillmentsIsMutable();
+          fulfillments_.add(value);
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder addFulfillments(
+          int index, com.strongdm.api.plumbing.Spec.Fulfillment value) {
+        if (fulfillmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFulfillmentsIsMutable();
+          fulfillments_.add(index, value);
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder addFulfillments(
+          com.strongdm.api.plumbing.Spec.Fulfillment.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          ensureFulfillmentsIsMutable();
+          fulfillments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder addFulfillments(
+          int index, com.strongdm.api.plumbing.Spec.Fulfillment.Builder builderForValue) {
+        if (fulfillmentsBuilder_ == null) {
+          ensureFulfillmentsIsMutable();
+          fulfillments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder addAllFulfillments(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.Spec.Fulfillment> values) {
+        if (fulfillmentsBuilder_ == null) {
+          ensureFulfillmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fulfillments_);
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder clearFulfillments() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public Builder removeFulfillments(int index) {
+        if (fulfillmentsBuilder_ == null) {
+          ensureFulfillmentsIsMutable();
+          fulfillments_.remove(index);
+          onChanged();
+        } else {
+          fulfillmentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Fulfillment.Builder getFulfillmentsBuilder(
+          int index) {
+        return getFulfillmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder getFulfillmentsOrBuilder(
+          int index) {
+        if (fulfillmentsBuilder_ == null) {
+          return fulfillments_.get(index);  } else {
+          return fulfillmentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder> 
+           getFulfillmentsOrBuilderList() {
+        if (fulfillmentsBuilder_ != null) {
+          return fulfillmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fulfillments_);
+        }
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Fulfillment.Builder addFulfillmentsBuilder() {
+        return getFulfillmentsFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.Spec.Fulfillment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Fulfillment.Builder addFulfillmentsBuilder(
+          int index) {
+        return getFulfillmentsFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.Spec.Fulfillment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .v1.Fulfillment fulfillments = 1;</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.Spec.Fulfillment.Builder> 
+           getFulfillmentsBuilderList() {
+        return getFulfillmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.Fulfillment, com.strongdm.api.plumbing.Spec.Fulfillment.Builder, com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder> 
+          getFulfillmentsFieldBuilder() {
+        if (fulfillmentsBuilder_ == null) {
+          fulfillmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.Fulfillment, com.strongdm.api.plumbing.Spec.Fulfillment.Builder, com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder>(
+                  fulfillments_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fulfillments_ = null;
+        }
+        return fulfillmentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.FulfillmentsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.FulfillmentsMetadata)
+    private static final com.strongdm.api.plumbing.Spec.FulfillmentsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.Spec.FulfillmentsMetadata();
+    }
+
+    public static com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FulfillmentsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<FulfillmentsMetadata>() {
+      @java.lang.Override
+      public FulfillmentsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FulfillmentsMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FulfillmentsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FulfillmentsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.FulfillmentsMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RequirementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.Requirement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1;</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1;</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string value = 2;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * Requirement details a single requirement that must be fulfilled in order
+   * for a request to be authorized.
+   * </pre>
+   *
+   * Protobuf type {@code v1.Requirement}
+   */
+  public static final class Requirement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.Requirement)
+      RequirementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Requirement.newBuilder() to construct.
+    private Requirement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Requirement() {
+      type_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Requirement();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Requirement(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              value_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_Requirement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_Requirement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.Spec.Requirement.class, com.strongdm.api.plumbing.Spec.Requirement.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object type_;
+    /**
+     * <code>string type = 1;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1;</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>string value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.Spec.Requirement)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.Spec.Requirement other = (com.strongdm.api.plumbing.Spec.Requirement) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.Requirement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.Spec.Requirement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Requirement details a single requirement that must be fulfilled in order
+     * for a request to be authorized.
+     * </pre>
+     *
+     * Protobuf type {@code v1.Requirement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.Requirement)
+        com.strongdm.api.plumbing.Spec.RequirementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_Requirement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_Requirement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.Spec.Requirement.class, com.strongdm.api.plumbing.Spec.Requirement.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.Spec.Requirement.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        type_ = "";
+
+        value_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_Requirement_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.Requirement getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.Spec.Requirement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.Requirement build() {
+        com.strongdm.api.plumbing.Spec.Requirement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.Requirement buildPartial() {
+        com.strongdm.api.plumbing.Spec.Requirement result = new com.strongdm.api.plumbing.Spec.Requirement(this);
+        result.type_ = type_;
+        result.value_ = value_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.Spec.Requirement) {
+          return mergeFrom((com.strongdm.api.plumbing.Spec.Requirement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.Spec.Requirement other) {
+        if (other == com.strongdm.api.plumbing.Spec.Requirement.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.Spec.Requirement parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.Spec.Requirement) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 1;</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 1;</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.Requirement)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Requirement)
+    private static final com.strongdm.api.plumbing.Spec.Requirement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.Spec.Requirement();
+    }
+
+    public static com.strongdm.api.plumbing.Spec.Requirement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Requirement>
+        PARSER = new com.google.protobuf.AbstractParser<Requirement>() {
+      @java.lang.Override
+      public Requirement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Requirement(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Requirement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Requirement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.Requirement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FulfillmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.Fulfillment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.v1.Requirement requirement = 1;</code>
+     * @return Whether the requirement field is set.
+     */
+    boolean hasRequirement();
+    /**
+     * <code>.v1.Requirement requirement = 1;</code>
+     * @return The requirement.
+     */
+    com.strongdm.api.plumbing.Spec.Requirement getRequirement();
+    /**
+     * <code>.v1.Requirement requirement = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.RequirementOrBuilder getRequirementOrBuilder();
+
+    /**
+     * <code>string value = 2;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * Fulfillment details a fulfillment for a requirement.
+   * </pre>
+   *
+   * Protobuf type {@code v1.Fulfillment}
+   */
+  public static final class Fulfillment extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.Fulfillment)
+      FulfillmentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Fulfillment.newBuilder() to construct.
+    private Fulfillment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Fulfillment() {
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Fulfillment();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Fulfillment(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.Requirement.Builder subBuilder = null;
+              if (requirement_ != null) {
+                subBuilder = requirement_.toBuilder();
+              }
+              requirement_ = input.readMessage(com.strongdm.api.plumbing.Spec.Requirement.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(requirement_);
+                requirement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              value_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_Fulfillment_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_Fulfillment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.Spec.Fulfillment.class, com.strongdm.api.plumbing.Spec.Fulfillment.Builder.class);
+    }
+
+    public static final int REQUIREMENT_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.Requirement requirement_;
+    /**
+     * <code>.v1.Requirement requirement = 1;</code>
+     * @return Whether the requirement field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequirement() {
+      return requirement_ != null;
+    }
+    /**
+     * <code>.v1.Requirement requirement = 1;</code>
+     * @return The requirement.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.Requirement getRequirement() {
+      return requirement_ == null ? com.strongdm.api.plumbing.Spec.Requirement.getDefaultInstance() : requirement_;
+    }
+    /**
+     * <code>.v1.Requirement requirement = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RequirementOrBuilder getRequirementOrBuilder() {
+      return getRequirement();
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>string value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (requirement_ != null) {
+        output.writeMessage(1, getRequirement());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (requirement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRequirement());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.Spec.Fulfillment)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.Spec.Fulfillment other = (com.strongdm.api.plumbing.Spec.Fulfillment) obj;
+
+      if (hasRequirement() != other.hasRequirement()) return false;
+      if (hasRequirement()) {
+        if (!getRequirement()
+            .equals(other.getRequirement())) return false;
+      }
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRequirement()) {
+        hash = (37 * hash) + REQUIREMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getRequirement().hashCode();
+      }
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.Fulfillment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.Spec.Fulfillment prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Fulfillment details a fulfillment for a requirement.
+     * </pre>
+     *
+     * Protobuf type {@code v1.Fulfillment}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.Fulfillment)
+        com.strongdm.api.plumbing.Spec.FulfillmentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_Fulfillment_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_Fulfillment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.Spec.Fulfillment.class, com.strongdm.api.plumbing.Spec.Fulfillment.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.Spec.Fulfillment.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (requirementBuilder_ == null) {
+          requirement_ = null;
+        } else {
+          requirement_ = null;
+          requirementBuilder_ = null;
+        }
+        value_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_Fulfillment_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.Fulfillment getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.Spec.Fulfillment.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.Fulfillment build() {
+        com.strongdm.api.plumbing.Spec.Fulfillment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.Fulfillment buildPartial() {
+        com.strongdm.api.plumbing.Spec.Fulfillment result = new com.strongdm.api.plumbing.Spec.Fulfillment(this);
+        if (requirementBuilder_ == null) {
+          result.requirement_ = requirement_;
+        } else {
+          result.requirement_ = requirementBuilder_.build();
+        }
+        result.value_ = value_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.Spec.Fulfillment) {
+          return mergeFrom((com.strongdm.api.plumbing.Spec.Fulfillment)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.Spec.Fulfillment other) {
+        if (other == com.strongdm.api.plumbing.Spec.Fulfillment.getDefaultInstance()) return this;
+        if (other.hasRequirement()) {
+          mergeRequirement(other.getRequirement());
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.Spec.Fulfillment parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.Spec.Fulfillment) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.Requirement requirement_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.Requirement, com.strongdm.api.plumbing.Spec.Requirement.Builder, com.strongdm.api.plumbing.Spec.RequirementOrBuilder> requirementBuilder_;
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       * @return Whether the requirement field is set.
+       */
+      public boolean hasRequirement() {
+        return requirementBuilder_ != null || requirement_ != null;
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       * @return The requirement.
+       */
+      public com.strongdm.api.plumbing.Spec.Requirement getRequirement() {
+        if (requirementBuilder_ == null) {
+          return requirement_ == null ? com.strongdm.api.plumbing.Spec.Requirement.getDefaultInstance() : requirement_;
+        } else {
+          return requirementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       */
+      public Builder setRequirement(com.strongdm.api.plumbing.Spec.Requirement value) {
+        if (requirementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          requirement_ = value;
+          onChanged();
+        } else {
+          requirementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       */
+      public Builder setRequirement(
+          com.strongdm.api.plumbing.Spec.Requirement.Builder builderForValue) {
+        if (requirementBuilder_ == null) {
+          requirement_ = builderForValue.build();
+          onChanged();
+        } else {
+          requirementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       */
+      public Builder mergeRequirement(com.strongdm.api.plumbing.Spec.Requirement value) {
+        if (requirementBuilder_ == null) {
+          if (requirement_ != null) {
+            requirement_ =
+              com.strongdm.api.plumbing.Spec.Requirement.newBuilder(requirement_).mergeFrom(value).buildPartial();
+          } else {
+            requirement_ = value;
+          }
+          onChanged();
+        } else {
+          requirementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       */
+      public Builder clearRequirement() {
+        if (requirementBuilder_ == null) {
+          requirement_ = null;
+          onChanged();
+        } else {
+          requirement_ = null;
+          requirementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.Requirement.Builder getRequirementBuilder() {
+        
+        onChanged();
+        return getRequirementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RequirementOrBuilder getRequirementOrBuilder() {
+        if (requirementBuilder_ != null) {
+          return requirementBuilder_.getMessageOrBuilder();
+        } else {
+          return requirement_ == null ?
+              com.strongdm.api.plumbing.Spec.Requirement.getDefaultInstance() : requirement_;
+        }
+      }
+      /**
+       * <code>.v1.Requirement requirement = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.Requirement, com.strongdm.api.plumbing.Spec.Requirement.Builder, com.strongdm.api.plumbing.Spec.RequirementOrBuilder> 
+          getRequirementFieldBuilder() {
+        if (requirementBuilder_ == null) {
+          requirementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.Requirement, com.strongdm.api.plumbing.Spec.Requirement.Builder, com.strongdm.api.plumbing.Spec.RequirementOrBuilder>(
+                  getRequirement(),
+                  getParentForChildren(),
+                  isClean());
+          requirement_ = null;
+        }
+        return requirementBuilder_;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.Fulfillment)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Fulfillment)
+    private static final com.strongdm.api.plumbing.Spec.Fulfillment DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.Spec.Fulfillment();
+    }
+
+    public static com.strongdm.api.plumbing.Spec.Fulfillment getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Fulfillment>
+        PARSER = new com.google.protobuf.AbstractParser<Fulfillment>() {
+      @java.lang.Override
+      public Fulfillment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Fulfillment(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Fulfillment> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Fulfillment> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.Fulfillment getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AlreadyExistsError_descriptor;
   private static final 
@@ -11266,6 +15605,26 @@ public final class Spec {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_GenericResponseMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_RequirementsMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RequirementsMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_FulfillmentsMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_FulfillmentsMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_Requirement_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Requirement_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_Fulfillment_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Fulfillment_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11285,28 +15644,41 @@ public final class Spec {
       "\"\033\n\rInternalError:\n\372\370\263\007\005\260\363\263\007\r\"u\n\016RateLim" +
       "itError\022W\n\nrate_limit\030\001 \001(\0132\025.v1.RateLim" +
       "itMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364" +
-      "\263\007\r!json_gateway:\n\372\370\263\007\005\260\363\263\007\010\"\027\n\025CreateRe" +
-      "questMetadata\"$\n\026CreateResponseMetadata:" +
-      "\n\372\370\263\007\005\250\363\263\007\001\"E\n\022GetRequestMetadata\022/\n\013sna" +
-      "pshot_at\030\001 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n" +
-      "\025UpdateRequestMetadata\"$\n\026UpdateResponse" +
-      "Metadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMet" +
-      "adata\"$\n\026DeleteResponseMetadata:\n\372\370\263\007\005\250\363" +
-      "\263\007\001\"\205\001\n\023ListRequestMetadata\022\016\n\006cursor\030\001 " +
-      "\001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\022\020\n\010orde" +
-      "r_by\030\004 \001(\t\022/\n\013snapshot_at\030\005 \001(\0132\032.google" +
-      ".protobuf.Timestamp\">\n\024ListResponseMetad" +
+      "\263\007\r!json_gateway:\n\372\370\263\007\005\260\363\263\007\010\"G\n\025CreateRe" +
+      "questMetadata\022.\n\014fulfillments\030\001 \001(\0132\030.v1" +
+      ".FulfillmentsMetadata\"$\n\026CreateResponseM" +
+      "etadata:\n\372\370\263\007\005\250\363\263\007\001\"u\n\022GetRequestMetadat" +
+      "a\022/\n\013snapshot_at\030\001 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022.\n\014fulfillments\030\002 \001(\0132\030.v1.Fu" +
+      "lfillmentsMetadata\"!\n\023GetResponseMetadat" +
+      "a:\n\372\370\263\007\005\250\363\263\007\001\"G\n\025UpdateRequestMetadata\022." +
+      "\n\014fulfillments\030\001 \001(\0132\030.v1.FulfillmentsMe" +
+      "tadata\"$\n\026UpdateResponseMetadata:\n\372\370\263\007\005\250" +
+      "\363\263\007\001\"G\n\025DeleteRequestMetadata\022.\n\014fulfill" +
+      "ments\030\001 \001(\0132\030.v1.FulfillmentsMetadata\"$\n" +
+      "\026DeleteResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\265\001\n\023" +
+      "ListRequestMetadata\022\016\n\006cursor\030\001 \001(\t\022\014\n\004p" +
+      "age\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\022\020\n\010order_by\030\004 \001" +
+      "(\t\022/\n\013snapshot_at\030\005 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022.\n\014fulfillments\030\006 \001(\0132\030.v1.F" +
+      "ulfillmentsMetadata\">\n\024ListResponseMetad" +
       "ata\022\023\n\013next_cursor\030\001 \001(\t\022\021\n\005total\030\002 \001(\005B" +
       "\002\030\001\"\257\001\n\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003" +
       "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363" +
       "\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.google.protobuf." +
       "TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestM" +
-      "etadata\"%\n\027GenericResponseMetadata:\n\372\370\263\007" +
-      "\005\250\363\263\007\001BR\n\031com.strongdm.api.plumbingZ5git" +
-      "hub.com/strongdm/strongdm-sdk-go/v3/inte" +
-      "rnal/v1;v1b\006proto3"
+      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"H\n\026GenericRequestM" +
+      "etadata\022.\n\014fulfillments\030\001 \001(\0132\030.v1.Fulfi" +
+      "llmentsMetadata\"%\n\027GenericResponseMetada" +
+      "ta:\n\372\370\263\007\005\250\363\263\007\001\"=\n\024RequirementsMetadata\022%" +
+      "\n\014requirements\030\001 \003(\0132\017.v1.Requirement\"=\n" +
+      "\024FulfillmentsMetadata\022%\n\014fulfillments\030\001 " +
+      "\003(\0132\017.v1.Fulfillment\"*\n\013Requirement\022\014\n\004t" +
+      "ype\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"B\n\013Fulfillment\022" +
+      "$\n\013requirement\030\001 \001(\0132\017.v1.Requirement\022\r\n" +
+      "\005value\030\002 \001(\tBR\n\031com.strongdm.api.plumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11361,7 +15733,7 @@ public final class Spec {
     internal_static_v1_CreateRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_CreateRequestMetadata_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Fulfillments", });
     internal_static_v1_CreateResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_v1_CreateResponseMetadata_fieldAccessorTable = new
@@ -11373,7 +15745,7 @@ public final class Spec {
     internal_static_v1_GetRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GetRequestMetadata_descriptor,
-        new java.lang.String[] { "SnapshotAt", });
+        new java.lang.String[] { "SnapshotAt", "Fulfillments", });
     internal_static_v1_GetResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_v1_GetResponseMetadata_fieldAccessorTable = new
@@ -11385,7 +15757,7 @@ public final class Spec {
     internal_static_v1_UpdateRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_UpdateRequestMetadata_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Fulfillments", });
     internal_static_v1_UpdateResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_UpdateResponseMetadata_fieldAccessorTable = new
@@ -11397,7 +15769,7 @@ public final class Spec {
     internal_static_v1_DeleteRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DeleteRequestMetadata_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Fulfillments", });
     internal_static_v1_DeleteResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_v1_DeleteResponseMetadata_fieldAccessorTable = new
@@ -11409,7 +15781,7 @@ public final class Spec {
     internal_static_v1_ListRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ListRequestMetadata_descriptor,
-        new java.lang.String[] { "Cursor", "Page", "Limit", "OrderBy", "SnapshotAt", });
+        new java.lang.String[] { "Cursor", "Page", "Limit", "OrderBy", "SnapshotAt", "Fulfillments", });
     internal_static_v1_ListResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_v1_ListResponseMetadata_fieldAccessorTable = new
@@ -11427,13 +15799,37 @@ public final class Spec {
     internal_static_v1_GenericRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GenericRequestMetadata_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Fulfillments", });
     internal_static_v1_GenericResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_v1_GenericResponseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GenericResponseMetadata_descriptor,
         new java.lang.String[] { });
+    internal_static_v1_RequirementsMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_v1_RequirementsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_RequirementsMetadata_descriptor,
+        new java.lang.String[] { "Requirements", });
+    internal_static_v1_FulfillmentsMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_v1_FulfillmentsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_FulfillmentsMetadata_descriptor,
+        new java.lang.String[] { "Fulfillments", });
+    internal_static_v1_Requirement_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_v1_Requirement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_Requirement_descriptor,
+        new java.lang.String[] { "Type", "Value", });
+    internal_static_v1_Fulfillment_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_v1_Fulfillment_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_Fulfillment_descriptor,
+        new java.lang.String[] { "Requirement", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
