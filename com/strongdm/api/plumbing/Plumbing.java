@@ -201,6 +201,44 @@ public class Plumbing {
             }
             rule.setTags(tags);
             break;
+          case "privileges":
+            JSONObject jsonPrivileges = object.getJSONObject("privileges");
+            com.strongdm.api.AccessRule.Privileges privileges =
+                new com.strongdm.api.AccessRule.Privileges();
+            for (Iterator<String> privilegeKeyIterator = jsonPrivileges.keys();
+                privilegeKeyIterator.hasNext(); ) {
+              String privilegeKey = privilegeKeyIterator.next();
+              switch (privilegeKey) {
+                case "k8s":
+                  JSONObject jsonK8sPrivileges = jsonPrivileges.getJSONObject("k8s");
+                  com.strongdm.api.AccessRule.K8sPrivileges k8sPrivileges =
+                      new com.strongdm.api.AccessRule.K8sPrivileges();
+                  for (Iterator<String> k8sPrivilegeKeyIterator = jsonK8sPrivileges.keys();
+                      k8sPrivilegeKeyIterator.hasNext(); ) {
+                    String k8sPrivilegeKey = k8sPrivilegeKeyIterator.next();
+                    switch (k8sPrivilegeKey) {
+                      case "groups":
+                        JSONArray groups = jsonK8sPrivileges.getJSONArray("groups");
+                        for (int j = 0; j < groups.length(); j++) {
+                          k8sPrivileges.addGroup(groups.getString(j));
+                        }
+                        break;
+                      default:
+                        throw new UnknownException(
+                            "unknown k8s privileges field '"
+                                + k8sPrivilegeKey
+                                + "', please upgrade your SDK");
+                    }
+                  }
+                  privileges.setK8s(k8sPrivileges);
+                  break;
+                default:
+                  throw new UnknownException(
+                      "unknown privileges field '" + privilegeKey + "', please upgrade your SDK");
+              }
+            }
+            rule.setPrivileges(privileges);
+            break;
           default:
             throw new UnknownException(
                 "unknown access rule field '" + key + "', please upgrade your SDK");
@@ -235,9 +273,134 @@ public class Plumbing {
         }
         obj.put("ids", jsonIds);
       }
+      if (rule.getPrivileges() != null) {
+        JSONObject jsonPrivileges = new JSONObject();
+        if (rule.getPrivileges().getK8s() != null) {
+          JSONObject jsonK8s = new JSONObject();
+          JSONArray jsonGroups = new JSONArray();
+          for (String group : rule.getPrivileges().getK8s().getGroups()) {
+            jsonGroups.put(group);
+          }
+          jsonK8s.put("groups", jsonGroups);
+          jsonPrivileges.put("k8s", jsonK8s);
+        }
+        obj.put("privileges", jsonPrivileges);
+      }
       plumbing.put(obj);
     }
     return plumbing.toString();
+  }
+
+  public static com.strongdm.api.AccessRule convertAccessRuleToPorcelain(String plumbing) {
+    if (plumbing == "") {
+      return null;
+    }
+
+    JSONObject object = new JSONObject(plumbing);
+    if (object == null) {
+      throw new UnknownException("failed to parse access rule JSON: null or non-object found");
+    }
+    com.strongdm.api.AccessRule rule = new com.strongdm.api.AccessRule();
+    for (Iterator<String> keyIterator = object.keys(); keyIterator.hasNext(); ) {
+      String key = keyIterator.next();
+      switch (key) {
+        case "ids":
+          JSONArray ids = object.getJSONArray("ids");
+          for (int j = 0; j < ids.length(); j++) {
+            rule.addId(ids.getString(j));
+          }
+          break;
+        case "type":
+          rule.setType(object.getString("type"));
+          break;
+        case "tags":
+          JSONObject jsonTags = object.getJSONObject("tags");
+          HashMap<String, String> tags = new HashMap<>();
+          for (Iterator<String> tagKeyIterator = jsonTags.keys(); tagKeyIterator.hasNext(); ) {
+            String tagKey = tagKeyIterator.next();
+            tags.put(tagKey, jsonTags.getString(tagKey));
+          }
+          rule.setTags(tags);
+          break;
+        case "privileges":
+          JSONObject jsonPrivileges = object.getJSONObject("privileges");
+          com.strongdm.api.AccessRule.Privileges privileges =
+              new com.strongdm.api.AccessRule.Privileges();
+          for (Iterator<String> privilegeKeyIterator = jsonPrivileges.keys();
+              privilegeKeyIterator.hasNext(); ) {
+            String privilegeKey = privilegeKeyIterator.next();
+            switch (privilegeKey) {
+              case "k8s":
+                JSONObject jsonK8sPrivileges = jsonPrivileges.getJSONObject("k8s");
+                com.strongdm.api.AccessRule.K8sPrivileges k8sPrivileges =
+                    new com.strongdm.api.AccessRule.K8sPrivileges();
+                for (Iterator<String> k8sPrivilegeKeyIterator = jsonK8sPrivileges.keys();
+                    k8sPrivilegeKeyIterator.hasNext(); ) {
+                  String k8sPrivilegeKey = k8sPrivilegeKeyIterator.next();
+                  switch (k8sPrivilegeKey) {
+                    case "groups":
+                      JSONArray groups = jsonK8sPrivileges.getJSONArray("groups");
+                      for (int j = 0; j < groups.length(); j++) {
+                        k8sPrivileges.addGroup(groups.getString(j));
+                      }
+                      break;
+                    default:
+                      throw new UnknownException(
+                          "unknown k8s privileges field '"
+                              + k8sPrivilegeKey
+                              + "', please upgrade your SDK");
+                  }
+                }
+                privileges.setK8s(k8sPrivileges);
+                break;
+              default:
+                throw new UnknownException(
+                    "unknown privileges field '" + privilegeKey + "', please upgrade your SDK");
+            }
+          }
+          rule.setPrivileges(privileges);
+          break;
+        default:
+          throw new UnknownException(
+              "unknown access rule field '" + key + "', please upgrade your SDK");
+      }
+    }
+    return rule;
+  }
+
+  public static String convertAccessRuleToPlumbing(com.strongdm.api.AccessRule porcelain) {
+    JSONObject obj = new JSONObject();
+    if (porcelain.getType() != "") {
+      obj.put("type", porcelain.getType());
+    }
+    if (porcelain.getTags() != null) {
+      JSONObject jsonTags = new JSONObject();
+      for (Map.Entry<String, String> entry : porcelain.getTags().entrySet()) {
+        jsonTags.put(entry.getKey(), entry.getValue());
+      }
+      obj.put("tags", jsonTags);
+    }
+    if (porcelain.getIds() != null) {
+      JSONArray jsonIds = new JSONArray();
+      for (String id : porcelain.getIds()) {
+        jsonIds.put(id);
+      }
+      obj.put("ids", jsonIds);
+    }
+    if (porcelain.getPrivileges() != null) {
+      JSONObject jsonPrivileges = new JSONObject();
+      if (porcelain.getPrivileges().getK8s() != null) {
+        JSONObject jsonK8s = new JSONObject();
+        JSONArray jsonGroups = new JSONArray();
+        for (String group : porcelain.getPrivileges().getK8s().getGroups()) {
+          jsonGroups.put(group);
+        }
+        jsonK8s.put("groups", jsonGroups);
+        jsonPrivileges.put("k8s", jsonK8s);
+      }
+      obj.put("privileges", jsonPrivileges);
+    }
+    return obj.toString();
   }
 
   public static com.strongdm.api.AKS convertAKSToPorcelain(AKS plumbing) {
@@ -2054,6 +2217,7 @@ public class Plumbing {
   public static com.strongdm.api.AccountGrant convertAccountGrantToPorcelain(
       AccountGrant plumbing) {
     com.strongdm.api.AccountGrant porcelain = new com.strongdm.api.AccountGrant();
+    porcelain.setAccessRule(Plumbing.convertAccessRuleToPorcelain(plumbing.getAccessRule()));
     porcelain.setAccountId((plumbing.getAccountId()));
     porcelain.setId((plumbing.getId()));
     porcelain.setResourceId((plumbing.getResourceId()));
@@ -2068,6 +2232,9 @@ public class Plumbing {
       return null;
     }
     AccountGrant.Builder builder = AccountGrant.newBuilder();
+    if (porcelain.getAccessRule() != null) {
+      builder.setAccessRule(Plumbing.convertAccessRuleToPlumbing(porcelain.getAccessRule()));
+    }
     if (porcelain.getAccountId() != null) {
       builder.setAccountId((porcelain.getAccountId()));
     }
