@@ -10050,6 +10050,87 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.KubernetesPodIdentity convertKubernetesPodIdentityToPorcelain(
+      KubernetesPodIdentity plumbing) {
+    com.strongdm.api.KubernetesPodIdentity porcelain = new com.strongdm.api.KubernetesPodIdentity();
+    porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static KubernetesPodIdentity convertKubernetesPodIdentityToPlumbing(
+      com.strongdm.api.KubernetesPodIdentity porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    KubernetesPodIdentity.Builder builder = KubernetesPodIdentity.newBuilder();
+    builder.setAllowResourceRoleBypass(porcelain.getAllowResourceRoleBypass());
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.KubernetesPodIdentity>
+      convertRepeatedKubernetesPodIdentityToPorcelain(Collection<KubernetesPodIdentity> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.KubernetesPodIdentity>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertKubernetesPodIdentityToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<KubernetesPodIdentity> convertRepeatedKubernetesPodIdentityToPlumbing(
+      Collection<com.strongdm.api.KubernetesPodIdentity> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<KubernetesPodIdentity>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertKubernetesPodIdentityToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.KubernetesServiceAccount
       convertKubernetesServiceAccountToPorcelain(KubernetesServiceAccount plumbing) {
     com.strongdm.api.KubernetesServiceAccount porcelain =
@@ -15420,6 +15501,9 @@ public class Plumbing {
     if (plumbing.hasKubernetesBasicAuth()) {
       return convertKubernetesBasicAuthToPorcelain(plumbing.getKubernetesBasicAuth());
     }
+    if (plumbing.hasKubernetesPodIdentity()) {
+      return convertKubernetesPodIdentityToPorcelain(plumbing.getKubernetesPodIdentity());
+    }
     if (plumbing.hasKubernetesServiceAccount()) {
       return convertKubernetesServiceAccountToPorcelain(plumbing.getKubernetesServiceAccount());
     }
@@ -15875,6 +15959,13 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setKubernetesBasicAuth(
           convertKubernetesBasicAuthToPlumbing((com.strongdm.api.KubernetesBasicAuth) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.KubernetesPodIdentity) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setKubernetesPodIdentity(
+          convertKubernetesPodIdentityToPlumbing(
+              (com.strongdm.api.KubernetesPodIdentity) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.KubernetesServiceAccount) {
