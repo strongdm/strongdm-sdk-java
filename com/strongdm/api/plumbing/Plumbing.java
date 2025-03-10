@@ -14646,6 +14646,194 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.RedshiftIAM convertRedshiftIAMToPorcelain(RedshiftIAM plumbing) {
+    com.strongdm.api.RedshiftIAM porcelain = new com.strongdm.api.RedshiftIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setClusterId((plumbing.getClusterId()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleAssumptionArn((plumbing.getRoleAssumptionArn()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static RedshiftIAM convertRedshiftIAMToPlumbing(com.strongdm.api.RedshiftIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RedshiftIAM.Builder builder = RedshiftIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getClusterId() != null) {
+      builder.setClusterId((porcelain.getClusterId()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleAssumptionArn() != null) {
+      builder.setRoleAssumptionArn((porcelain.getRoleAssumptionArn()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.RedshiftIAM> convertRepeatedRedshiftIAMToPorcelain(
+      Collection<RedshiftIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RedshiftIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertRedshiftIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RedshiftIAM> convertRepeatedRedshiftIAMToPlumbing(
+      Collection<com.strongdm.api.RedshiftIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RedshiftIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertRedshiftIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.RedshiftServerlessIAM convertRedshiftServerlessIAMToPorcelain(
+      RedshiftServerlessIAM plumbing) {
+    com.strongdm.api.RedshiftServerlessIAM porcelain = new com.strongdm.api.RedshiftServerlessIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleAssumptionArn((plumbing.getRoleAssumptionArn()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setWorkgroup((plumbing.getWorkgroup()));
+    return porcelain;
+  }
+
+  public static RedshiftServerlessIAM convertRedshiftServerlessIAMToPlumbing(
+      com.strongdm.api.RedshiftServerlessIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RedshiftServerlessIAM.Builder builder = RedshiftServerlessIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleAssumptionArn() != null) {
+      builder.setRoleAssumptionArn((porcelain.getRoleAssumptionArn()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getWorkgroup() != null) {
+      builder.setWorkgroup((porcelain.getWorkgroup()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.RedshiftServerlessIAM>
+      convertRepeatedRedshiftServerlessIAMToPorcelain(Collection<RedshiftServerlessIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RedshiftServerlessIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertRedshiftServerlessIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RedshiftServerlessIAM> convertRepeatedRedshiftServerlessIAMToPlumbing(
+      Collection<com.strongdm.api.RedshiftServerlessIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RedshiftServerlessIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertRedshiftServerlessIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Relay convertRelayToPorcelain(Relay plumbing) {
     com.strongdm.api.Relay porcelain = new com.strongdm.api.Relay();
     porcelain.setDevice((plumbing.getDevice()));
@@ -15584,6 +15772,12 @@ public class Plumbing {
     if (plumbing.hasRedshift()) {
       return convertRedshiftToPorcelain(plumbing.getRedshift());
     }
+    if (plumbing.hasRedshiftIam()) {
+      return convertRedshiftIAMToPorcelain(plumbing.getRedshiftIam());
+    }
+    if (plumbing.hasRedshiftServerlessIam()) {
+      return convertRedshiftServerlessIAMToPorcelain(plumbing.getRedshiftServerlessIam());
+    }
     if (plumbing.hasSingleStore()) {
       return convertSingleStoreToPorcelain(plumbing.getSingleStore());
     }
@@ -16110,6 +16304,19 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Redshift) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setRedshift(convertRedshiftToPlumbing((com.strongdm.api.Redshift) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.RedshiftIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setRedshiftIam(
+          convertRedshiftIAMToPlumbing((com.strongdm.api.RedshiftIAM) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.RedshiftServerlessIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setRedshiftServerlessIam(
+          convertRedshiftServerlessIAMToPlumbing(
+              (com.strongdm.api.RedshiftServerlessIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.SingleStore) {
