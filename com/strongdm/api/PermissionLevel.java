@@ -22,6 +22,7 @@ public final class PermissionLevel {
   public static final String ROOT_ADMIN = "root-admin";
   public static final String ADMIN = "admin";
   public static final String DATABASE_ADMIN = "database-admin";
+  public static final String DATABASE_OPERATOR = "database-operator";
   public static final String TEAM_LEADER = "multi-team-leader";
   public static final String USER = "user";
   public static final String AUDITOR = "auditor";
