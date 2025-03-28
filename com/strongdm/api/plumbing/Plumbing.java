@@ -15829,6 +15829,9 @@ public class Plumbing {
     if (plumbing.hasTrino()) {
       return convertTrinoToPorcelain(plumbing.getTrino());
     }
+    if (plumbing.hasVertica()) {
+      return convertVerticaToPorcelain(plumbing.getVertica());
+    }
     throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
 
@@ -16401,6 +16404,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Trino) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setTrino(convertTrinoToPlumbing((com.strongdm.api.Trino) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.Vertica) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setVertica(convertVerticaToPlumbing((com.strongdm.api.Vertica) porcelain));
       return builder.build();
     }
     return null;
@@ -20002,6 +20010,93 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertVaultTokenStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.Vertica convertVerticaToPorcelain(Vertica plumbing) {
+    com.strongdm.api.Vertica porcelain = new com.strongdm.api.Vertica();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static Vertica convertVerticaToPlumbing(com.strongdm.api.Vertica porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Vertica.Builder builder = Vertica.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Vertica> convertRepeatedVerticaToPorcelain(
+      Collection<Vertica> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Vertica>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertVerticaToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Vertica> convertRepeatedVerticaToPlumbing(
+      Collection<com.strongdm.api.Vertica> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Vertica>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertVerticaToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
