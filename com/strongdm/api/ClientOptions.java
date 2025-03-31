@@ -50,7 +50,7 @@ public class ClientOptions {
   }
 
   public ClientOptions() {
-    this.host = "api.strongdm.com";
+    this.host = "app.strongdm.com";
     this.port = 443;
     this.insecure = false;
     this.exposeRateLimitErrors = false;
@@ -66,7 +66,7 @@ public class ClientOptions {
   }
 
   // withHostAndPort causes a Client to make it's calls against the provided
-  // host instead of against api.strongdm.com.
+  // host instead of against app.strongdm.com.
   public ClientOptions withHostAndPort(String host, int port) {
     ClientOptions c = this.copy();
     c.host = host;

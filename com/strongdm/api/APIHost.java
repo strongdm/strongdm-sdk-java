@@ -18,6 +18,7 @@ package com.strongdm.api;
 
 // APIHost defines the API host for various control planes.
 public final class APIHost {
-  public static final String US = "api.strongdm.com:443";
-  public static final String UK = "api.uk.strongdm.com:443";
+  public static final String US = "app.strongdm.com:443";
+  public static final String UK = "app.uk.strongdm.com:443";
+  public static final String EU = "app.eu.strongdm.com:443";
 }
