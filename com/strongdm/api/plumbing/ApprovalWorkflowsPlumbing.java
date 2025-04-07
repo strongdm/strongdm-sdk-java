@@ -10892,6 +10892,50 @@ public final class ApprovalWorkflowsPlumbing {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep> 
+        getApprovalWorkflowStepsList();
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep getApprovalWorkflowSteps(int index);
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    int getApprovalWorkflowStepsCount();
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder> 
+        getApprovalWorkflowStepsOrBuilderList();
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder getApprovalWorkflowStepsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -10915,6 +10959,7 @@ public final class ApprovalWorkflowsPlumbing {
       name_ = "";
       approvalMode_ = "";
       description_ = "";
+      approvalWorkflowSteps_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -10937,6 +10982,7 @@ public final class ApprovalWorkflowsPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10971,6 +11017,15 @@ public final class ApprovalWorkflowsPlumbing {
               description_ = s;
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                approvalWorkflowSteps_ = new java.util.ArrayList<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              approvalWorkflowSteps_.add(
+                  input.readMessage(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10988,6 +11043,9 @@ public final class ApprovalWorkflowsPlumbing {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          approvalWorkflowSteps_ = java.util.Collections.unmodifiableList(approvalWorkflowSteps_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -11189,6 +11247,66 @@ public final class ApprovalWorkflowsPlumbing {
       }
     }
 
+    public static final int APPROVAL_WORKFLOW_STEPS_FIELD_NUMBER = 5;
+    private java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep> approvalWorkflowSteps_;
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep> getApprovalWorkflowStepsList() {
+      return approvalWorkflowSteps_;
+    }
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder> 
+        getApprovalWorkflowStepsOrBuilderList() {
+      return approvalWorkflowSteps_;
+    }
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getApprovalWorkflowStepsCount() {
+      return approvalWorkflowSteps_.size();
+    }
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep getApprovalWorkflowSteps(int index) {
+      return approvalWorkflowSteps_.get(index);
+    }
+    /**
+     * <pre>
+     * The approval steps of this approval workflow
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder getApprovalWorkflowStepsOrBuilder(
+        int index) {
+      return approvalWorkflowSteps_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11215,6 +11333,9 @@ public final class ApprovalWorkflowsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
+      for (int i = 0; i < approvalWorkflowSteps_.size(); i++) {
+        output.writeMessage(5, approvalWorkflowSteps_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11235,6 +11356,10 @@ public final class ApprovalWorkflowsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      for (int i = 0; i < approvalWorkflowSteps_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, approvalWorkflowSteps_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11259,6 +11384,8 @@ public final class ApprovalWorkflowsPlumbing {
           .equals(other.getApprovalMode())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getApprovalWorkflowStepsList()
+          .equals(other.getApprovalWorkflowStepsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11278,6 +11405,10 @@ public final class ApprovalWorkflowsPlumbing {
       hash = (53 * hash) + getApprovalMode().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (getApprovalWorkflowStepsCount() > 0) {
+        hash = (37 * hash) + APPROVAL_WORKFLOW_STEPS_FIELD_NUMBER;
+        hash = (53 * hash) + getApprovalWorkflowStepsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11411,6 +11542,7 @@ public final class ApprovalWorkflowsPlumbing {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getApprovalWorkflowStepsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -11424,6 +11556,12 @@ public final class ApprovalWorkflowsPlumbing {
 
         description_ = "";
 
+        if (approvalWorkflowStepsBuilder_ == null) {
+          approvalWorkflowSteps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          approvalWorkflowStepsBuilder_.clear();
+        }
         return this;
       }
 
@@ -11450,10 +11588,20 @@ public final class ApprovalWorkflowsPlumbing {
       @java.lang.Override
       public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalWorkflow buildPartial() {
         com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalWorkflow result = new com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalWorkflow(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
         result.approvalMode_ = approvalMode_;
         result.description_ = description_;
+        if (approvalWorkflowStepsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            approvalWorkflowSteps_ = java.util.Collections.unmodifiableList(approvalWorkflowSteps_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.approvalWorkflowSteps_ = approvalWorkflowSteps_;
+        } else {
+          result.approvalWorkflowSteps_ = approvalWorkflowStepsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -11518,6 +11666,32 @@ public final class ApprovalWorkflowsPlumbing {
           description_ = other.description_;
           onChanged();
         }
+        if (approvalWorkflowStepsBuilder_ == null) {
+          if (!other.approvalWorkflowSteps_.isEmpty()) {
+            if (approvalWorkflowSteps_.isEmpty()) {
+              approvalWorkflowSteps_ = other.approvalWorkflowSteps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureApprovalWorkflowStepsIsMutable();
+              approvalWorkflowSteps_.addAll(other.approvalWorkflowSteps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.approvalWorkflowSteps_.isEmpty()) {
+            if (approvalWorkflowStepsBuilder_.isEmpty()) {
+              approvalWorkflowStepsBuilder_.dispose();
+              approvalWorkflowStepsBuilder_ = null;
+              approvalWorkflowSteps_ = other.approvalWorkflowSteps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              approvalWorkflowStepsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getApprovalWorkflowStepsFieldBuilder() : null;
+            } else {
+              approvalWorkflowStepsBuilder_.addAllMessages(other.approvalWorkflowSteps_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -11546,6 +11720,7 @@ public final class ApprovalWorkflowsPlumbing {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -11930,6 +12105,318 @@ public final class ApprovalWorkflowsPlumbing {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep> approvalWorkflowSteps_ =
+        java.util.Collections.emptyList();
+      private void ensureApprovalWorkflowStepsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          approvalWorkflowSteps_ = new java.util.ArrayList<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep>(approvalWorkflowSteps_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder> approvalWorkflowStepsBuilder_;
+
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep> getApprovalWorkflowStepsList() {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(approvalWorkflowSteps_);
+        } else {
+          return approvalWorkflowStepsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public int getApprovalWorkflowStepsCount() {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          return approvalWorkflowSteps_.size();
+        } else {
+          return approvalWorkflowStepsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep getApprovalWorkflowSteps(int index) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          return approvalWorkflowSteps_.get(index);
+        } else {
+          return approvalWorkflowStepsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setApprovalWorkflowSteps(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep value) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApprovalWorkflowStepsIsMutable();
+          approvalWorkflowSteps_.set(index, value);
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setApprovalWorkflowSteps(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder builderForValue) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          ensureApprovalWorkflowStepsIsMutable();
+          approvalWorkflowSteps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovalWorkflowSteps(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep value) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApprovalWorkflowStepsIsMutable();
+          approvalWorkflowSteps_.add(value);
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovalWorkflowSteps(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep value) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApprovalWorkflowStepsIsMutable();
+          approvalWorkflowSteps_.add(index, value);
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovalWorkflowSteps(
+          com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder builderForValue) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          ensureApprovalWorkflowStepsIsMutable();
+          approvalWorkflowSteps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovalWorkflowSteps(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder builderForValue) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          ensureApprovalWorkflowStepsIsMutable();
+          approvalWorkflowSteps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllApprovalWorkflowSteps(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep> values) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          ensureApprovalWorkflowStepsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, approvalWorkflowSteps_);
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearApprovalWorkflowSteps() {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          approvalWorkflowSteps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeApprovalWorkflowSteps(int index) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          ensureApprovalWorkflowStepsIsMutable();
+          approvalWorkflowSteps_.remove(index);
+          onChanged();
+        } else {
+          approvalWorkflowStepsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder getApprovalWorkflowStepsBuilder(
+          int index) {
+        return getApprovalWorkflowStepsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder getApprovalWorkflowStepsOrBuilder(
+          int index) {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          return approvalWorkflowSteps_.get(index);  } else {
+          return approvalWorkflowStepsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder> 
+           getApprovalWorkflowStepsOrBuilderList() {
+        if (approvalWorkflowStepsBuilder_ != null) {
+          return approvalWorkflowStepsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(approvalWorkflowSteps_);
+        }
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder addApprovalWorkflowStepsBuilder() {
+        return getApprovalWorkflowStepsFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder addApprovalWorkflowStepsBuilder(
+          int index) {
+        return getApprovalWorkflowStepsFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The approval steps of this approval workflow
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowStep approval_workflow_steps = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder> 
+           getApprovalWorkflowStepsBuilderList() {
+        return getApprovalWorkflowStepsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder> 
+          getApprovalWorkflowStepsFieldBuilder() {
+        if (approvalWorkflowStepsBuilder_ == null) {
+          approvalWorkflowStepsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder>(
+                  approvalWorkflowSteps_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          approvalWorkflowSteps_ = null;
+        }
+        return approvalWorkflowStepsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11978,6 +12465,2170 @@ public final class ApprovalWorkflowsPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalWorkflow getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ApprovalFlowStepOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ApprovalFlowStep)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+     * </pre>
+     *
+     * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+     * @return The quantifier.
+     */
+    java.lang.String getQuantifier();
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+     * </pre>
+     *
+     * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for quantifier.
+     */
+    com.google.protobuf.ByteString
+        getQuantifierBytes();
+
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the skipAfter field is set.
+     */
+    boolean hasSkipAfter();
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+     * @return The skipAfter.
+     */
+    com.google.protobuf.Duration getSkipAfter();
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getSkipAfterOrBuilder();
+
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover> 
+        getApproversList();
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover getApprovers(int index);
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    int getApproversCount();
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder> 
+        getApproversOrBuilderList();
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder getApproversOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * An approval step for an approval workflow. Specifies approvers and conditions for approval to be granted.
+   * </pre>
+   *
+   * Protobuf type {@code v1.ApprovalFlowStep}
+   */
+  public static final class ApprovalFlowStep extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ApprovalFlowStep)
+      ApprovalFlowStepOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ApprovalFlowStep.newBuilder() to construct.
+    private ApprovalFlowStep(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ApprovalFlowStep() {
+      quantifier_ = "";
+      approvers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ApprovalFlowStep();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ApprovalFlowStep(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              quantifier_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (skipAfter_ != null) {
+                subBuilder = skipAfter_.toBuilder();
+              }
+              skipAfter_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(skipAfter_);
+                skipAfter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                approvers_ = new java.util.ArrayList<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              approvers_.add(
+                  input.readMessage(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          approvers_ = java.util.Collections.unmodifiableList(approvers_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowStep_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowStep_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.class, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder.class);
+    }
+
+    public static final int QUANTIFIER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object quantifier_;
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+     * </pre>
+     *
+     * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+     * @return The quantifier.
+     */
+    @java.lang.Override
+    public java.lang.String getQuantifier() {
+      java.lang.Object ref = quantifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quantifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+     * </pre>
+     *
+     * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for quantifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuantifierBytes() {
+      java.lang.Object ref = quantifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quantifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SKIP_AFTER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration skipAfter_;
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the skipAfter field is set.
+     */
+    @java.lang.Override
+    public boolean hasSkipAfter() {
+      return skipAfter_ != null;
+    }
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+     * @return The skipAfter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getSkipAfter() {
+      return skipAfter_ == null ? com.google.protobuf.Duration.getDefaultInstance() : skipAfter_;
+    }
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getSkipAfterOrBuilder() {
+      return getSkipAfter();
+    }
+
+    public static final int APPROVERS_FIELD_NUMBER = 3;
+    private java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover> approvers_;
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover> getApproversList() {
+      return approvers_;
+    }
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder> 
+        getApproversOrBuilderList() {
+      return approvers_;
+    }
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getApproversCount() {
+      return approvers_.size();
+    }
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover getApprovers(int index) {
+      return approvers_.get(index);
+    }
+    /**
+     * <pre>
+     * The approvers for this approval step
+     * </pre>
+     *
+     * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder getApproversOrBuilder(
+        int index) {
+      return approvers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, quantifier_);
+      }
+      if (skipAfter_ != null) {
+        output.writeMessage(2, getSkipAfter());
+      }
+      for (int i = 0; i < approvers_.size(); i++) {
+        output.writeMessage(3, approvers_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, quantifier_);
+      }
+      if (skipAfter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSkipAfter());
+      }
+      for (int i = 0; i < approvers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, approvers_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep other = (com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep) obj;
+
+      if (!getQuantifier()
+          .equals(other.getQuantifier())) return false;
+      if (hasSkipAfter() != other.hasSkipAfter()) return false;
+      if (hasSkipAfter()) {
+        if (!getSkipAfter()
+            .equals(other.getSkipAfter())) return false;
+      }
+      if (!getApproversList()
+          .equals(other.getApproversList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUANTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getQuantifier().hashCode();
+      if (hasSkipAfter()) {
+        hash = (37 * hash) + SKIP_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getSkipAfter().hashCode();
+      }
+      if (getApproversCount() > 0) {
+        hash = (37 * hash) + APPROVERS_FIELD_NUMBER;
+        hash = (53 * hash) + getApproversList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An approval step for an approval workflow. Specifies approvers and conditions for approval to be granted.
+     * </pre>
+     *
+     * Protobuf type {@code v1.ApprovalFlowStep}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ApprovalFlowStep)
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStepOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowStep_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowStep_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.class, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getApproversFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        quantifier_ = "";
+
+        if (skipAfterBuilder_ == null) {
+          skipAfter_ = null;
+        } else {
+          skipAfter_ = null;
+          skipAfterBuilder_ = null;
+        }
+        if (approversBuilder_ == null) {
+          approvers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          approversBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowStep_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep build() {
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep buildPartial() {
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep result = new com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep(this);
+        int from_bitField0_ = bitField0_;
+        result.quantifier_ = quantifier_;
+        if (skipAfterBuilder_ == null) {
+          result.skipAfter_ = skipAfter_;
+        } else {
+          result.skipAfter_ = skipAfterBuilder_.build();
+        }
+        if (approversBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            approvers_ = java.util.Collections.unmodifiableList(approvers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.approvers_ = approvers_;
+        } else {
+          result.approvers_ = approversBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep) {
+          return mergeFrom((com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep other) {
+        if (other == com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep.getDefaultInstance()) return this;
+        if (!other.getQuantifier().isEmpty()) {
+          quantifier_ = other.quantifier_;
+          onChanged();
+        }
+        if (other.hasSkipAfter()) {
+          mergeSkipAfter(other.getSkipAfter());
+        }
+        if (approversBuilder_ == null) {
+          if (!other.approvers_.isEmpty()) {
+            if (approvers_.isEmpty()) {
+              approvers_ = other.approvers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureApproversIsMutable();
+              approvers_.addAll(other.approvers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.approvers_.isEmpty()) {
+            if (approversBuilder_.isEmpty()) {
+              approversBuilder_.dispose();
+              approversBuilder_ = null;
+              approvers_ = other.approvers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              approversBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getApproversFieldBuilder() : null;
+            } else {
+              approversBuilder_.addAllMessages(other.approvers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object quantifier_ = "";
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+       * </pre>
+       *
+       * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+       * @return The quantifier.
+       */
+      public java.lang.String getQuantifier() {
+        java.lang.Object ref = quantifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quantifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+       * </pre>
+       *
+       * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for quantifier.
+       */
+      public com.google.protobuf.ByteString
+          getQuantifierBytes() {
+        java.lang.Object ref = quantifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+       * </pre>
+       *
+       * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The quantifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantifier(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        quantifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+       * </pre>
+       *
+       * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuantifier() {
+        
+        quantifier_ = getDefaultInstance().getQuantifier();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Optional, defaults to "any".
+       * </pre>
+       *
+       * <code>string quantifier = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for quantifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        quantifier_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration skipAfter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> skipAfterBuilder_;
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the skipAfter field is set.
+       */
+      public boolean hasSkipAfter() {
+        return skipAfterBuilder_ != null || skipAfter_ != null;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       * @return The skipAfter.
+       */
+      public com.google.protobuf.Duration getSkipAfter() {
+        if (skipAfterBuilder_ == null) {
+          return skipAfter_ == null ? com.google.protobuf.Duration.getDefaultInstance() : skipAfter_;
+        } else {
+          return skipAfterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setSkipAfter(com.google.protobuf.Duration value) {
+        if (skipAfterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          skipAfter_ = value;
+          onChanged();
+        } else {
+          skipAfterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setSkipAfter(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (skipAfterBuilder_ == null) {
+          skipAfter_ = builderForValue.build();
+          onChanged();
+        } else {
+          skipAfterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeSkipAfter(com.google.protobuf.Duration value) {
+        if (skipAfterBuilder_ == null) {
+          if (skipAfter_ != null) {
+            skipAfter_ =
+              com.google.protobuf.Duration.newBuilder(skipAfter_).mergeFrom(value).buildPartial();
+          } else {
+            skipAfter_ = value;
+          }
+          onChanged();
+        } else {
+          skipAfterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearSkipAfter() {
+        if (skipAfterBuilder_ == null) {
+          skipAfter_ = null;
+          onChanged();
+        } else {
+          skipAfter_ = null;
+          skipAfterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getSkipAfterBuilder() {
+        
+        onChanged();
+        return getSkipAfterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getSkipAfterOrBuilder() {
+        if (skipAfterBuilder_ != null) {
+          return skipAfterBuilder_.getMessageOrBuilder();
+        } else {
+          return skipAfter_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : skipAfter_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Optional, if not provided an approver must approve before the step passes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getSkipAfterFieldBuilder() {
+        if (skipAfterBuilder_ == null) {
+          skipAfterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getSkipAfter(),
+                  getParentForChildren(),
+                  isClean());
+          skipAfter_ = null;
+        }
+        return skipAfterBuilder_;
+      }
+
+      private java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover> approvers_ =
+        java.util.Collections.emptyList();
+      private void ensureApproversIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          approvers_ = new java.util.ArrayList<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover>(approvers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder> approversBuilder_;
+
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover> getApproversList() {
+        if (approversBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(approvers_);
+        } else {
+          return approversBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public int getApproversCount() {
+        if (approversBuilder_ == null) {
+          return approvers_.size();
+        } else {
+          return approversBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover getApprovers(int index) {
+        if (approversBuilder_ == null) {
+          return approvers_.get(index);
+        } else {
+          return approversBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setApprovers(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover value) {
+        if (approversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApproversIsMutable();
+          approvers_.set(index, value);
+          onChanged();
+        } else {
+          approversBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setApprovers(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder builderForValue) {
+        if (approversBuilder_ == null) {
+          ensureApproversIsMutable();
+          approvers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          approversBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovers(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover value) {
+        if (approversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApproversIsMutable();
+          approvers_.add(value);
+          onChanged();
+        } else {
+          approversBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovers(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover value) {
+        if (approversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApproversIsMutable();
+          approvers_.add(index, value);
+          onChanged();
+        } else {
+          approversBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovers(
+          com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder builderForValue) {
+        if (approversBuilder_ == null) {
+          ensureApproversIsMutable();
+          approvers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          approversBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addApprovers(
+          int index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder builderForValue) {
+        if (approversBuilder_ == null) {
+          ensureApproversIsMutable();
+          approvers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          approversBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllApprovers(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover> values) {
+        if (approversBuilder_ == null) {
+          ensureApproversIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, approvers_);
+          onChanged();
+        } else {
+          approversBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearApprovers() {
+        if (approversBuilder_ == null) {
+          approvers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          approversBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeApprovers(int index) {
+        if (approversBuilder_ == null) {
+          ensureApproversIsMutable();
+          approvers_.remove(index);
+          onChanged();
+        } else {
+          approversBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder getApproversBuilder(
+          int index) {
+        return getApproversFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder getApproversOrBuilder(
+          int index) {
+        if (approversBuilder_ == null) {
+          return approvers_.get(index);  } else {
+          return approversBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder> 
+           getApproversOrBuilderList() {
+        if (approversBuilder_ != null) {
+          return approversBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(approvers_);
+        }
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder addApproversBuilder() {
+        return getApproversFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder addApproversBuilder(
+          int index) {
+        return getApproversFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The approvers for this approval step
+       * </pre>
+       *
+       * <code>repeated .v1.ApprovalFlowApprover approvers = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder> 
+           getApproversBuilderList() {
+        return getApproversFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder> 
+          getApproversFieldBuilder() {
+        if (approversBuilder_ == null) {
+          approversBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder>(
+                  approvers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          approvers_ = null;
+        }
+        return approversBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ApprovalFlowStep)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ApprovalFlowStep)
+    private static final com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep();
+    }
+
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ApprovalFlowStep>
+        PARSER = new com.google.protobuf.AbstractParser<ApprovalFlowStep>() {
+      @java.lang.Override
+      public ApprovalFlowStep parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ApprovalFlowStep(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ApprovalFlowStep> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ApprovalFlowStep> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowStep getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ApprovalFlowApproverOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ApprovalFlowApprover)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The approver account id.
+     * </pre>
+     *
+     * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The accountId.
+     */
+    java.lang.String getAccountId();
+    /**
+     * <pre>
+     * The approver account id.
+     * </pre>
+     *
+     * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accountId.
+     */
+    com.google.protobuf.ByteString
+        getAccountIdBytes();
+
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The roleId.
+     */
+    java.lang.String getRoleId();
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for roleId.
+     */
+    com.google.protobuf.ByteString
+        getRoleIdBytes();
+  }
+  /**
+   * <pre>
+   * An approver for an approval workflow step. Specifies either an account_id or an role_id (not both)
+   * </pre>
+   *
+   * Protobuf type {@code v1.ApprovalFlowApprover}
+   */
+  public static final class ApprovalFlowApprover extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ApprovalFlowApprover)
+      ApprovalFlowApproverOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ApprovalFlowApprover.newBuilder() to construct.
+    private ApprovalFlowApprover(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ApprovalFlowApprover() {
+      accountId_ = "";
+      roleId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ApprovalFlowApprover();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ApprovalFlowApprover(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accountId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              roleId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowApprover_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowApprover_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.class, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder.class);
+    }
+
+    public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accountId_;
+    /**
+     * <pre>
+     * The approver account id.
+     * </pre>
+     *
+     * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The accountId.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountId() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The approver account id.
+     * </pre>
+     *
+     * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountIdBytes() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROLE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object roleId_;
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The roleId.
+     */
+    @java.lang.Override
+    public java.lang.String getRoleId() {
+      java.lang.Object ref = roleId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roleId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The approver role id
+     * </pre>
+     *
+     * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for roleId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoleIdBytes() {
+      java.lang.Object ref = roleId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roleId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roleId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roleId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover other = (com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover) obj;
+
+      if (!getAccountId()
+          .equals(other.getAccountId())) return false;
+      if (!getRoleId()
+          .equals(other.getRoleId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountId().hashCode();
+      hash = (37 * hash) + ROLE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRoleId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An approver for an approval workflow step. Specifies either an account_id or an role_id (not both)
+     * </pre>
+     *
+     * Protobuf type {@code v1.ApprovalFlowApprover}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ApprovalFlowApprover)
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApproverOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowApprover_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowApprover_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.class, com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accountId_ = "";
+
+        roleId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.internal_static_v1_ApprovalFlowApprover_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover build() {
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover buildPartial() {
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover result = new com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover(this);
+        result.accountId_ = accountId_;
+        result.roleId_ = roleId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover) {
+          return mergeFrom((com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover other) {
+        if (other == com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover.getDefaultInstance()) return this;
+        if (!other.getAccountId().isEmpty()) {
+          accountId_ = other.accountId_;
+          onChanged();
+        }
+        if (!other.getRoleId().isEmpty()) {
+          roleId_ = other.roleId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object accountId_ = "";
+      /**
+       * <pre>
+       * The approver account id.
+       * </pre>
+       *
+       * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The accountId.
+       */
+      public java.lang.String getAccountId() {
+        java.lang.Object ref = accountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The approver account id.
+       * </pre>
+       *
+       * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accountId.
+       */
+      public com.google.protobuf.ByteString
+          getAccountIdBytes() {
+        java.lang.Object ref = accountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The approver account id.
+       * </pre>
+       *
+       * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The accountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The approver account id.
+       * </pre>
+       *
+       * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountId() {
+        
+        accountId_ = getDefaultInstance().getAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The approver account id.
+       * </pre>
+       *
+       * <code>string account_id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object roleId_ = "";
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The roleId.
+       */
+      public java.lang.String getRoleId() {
+        java.lang.Object ref = roleId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roleId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for roleId.
+       */
+      public com.google.protobuf.ByteString
+          getRoleIdBytes() {
+        java.lang.Object ref = roleId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roleId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The roleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        roleId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoleId() {
+        
+        roleId_ = getDefaultInstance().getRoleId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The approver role id
+       * </pre>
+       *
+       * <code>string role_id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for roleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        roleId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ApprovalFlowApprover)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ApprovalFlowApprover)
+    private static final com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover();
+    }
+
+    public static com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ApprovalFlowApprover>
+        PARSER = new com.google.protobuf.AbstractParser<ApprovalFlowApprover>() {
+      @java.lang.Override
+      public ApprovalFlowApprover parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ApprovalFlowApprover(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ApprovalFlowApprover> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ApprovalFlowApprover> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12038,6 +14689,16 @@ public final class ApprovalWorkflowsPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_ApprovalWorkflow_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_ApprovalFlowStep_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ApprovalFlowStep_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_ApprovalFlowApprover_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ApprovalFlowApprover_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12048,83 +14709,101 @@ public final class ApprovalWorkflowsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\030approval_workflows.proto\022\002v1\032\roptions." +
-      "proto\032\nspec.proto\"\205\001\n\035ApprovalWorkflowCr" +
-      "eateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateReq" +
-      "uestMetadata\022;\n\021approval_workflow\030\002 \001(\0132" +
-      "\024.v1.ApprovalWorkflowB\n\362\370\263\007\005\260\363\263\007\001\"\354\001\n\036Ap" +
-      "provalWorkflowCreateResponse\022(\n\004meta\030\001 \001" +
-      "(\0132\032.v1.CreateResponseMetadata\022;\n\021approv" +
-      "al_workflow\030\002 \001(\0132\024.v1.ApprovalWorkflowB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
-      "eLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
-      "\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"Z\n\032Appr" +
-      "ovalWorkflowGetRequest\022$\n\004meta\030\001 \001(\0132\026.v" +
-      "1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\"\362\001\n\033ApprovalWorkflowGetResponse\0221\n\004" +
-      "meta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022;\n\021approval_workflow\030\002 \001(\0132\024.v1." +
-      "ApprovalWorkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_lim" +
-      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372" +
-      "\370\263\007\005\250\363\263\007\001\"\205\001\n\035ApprovalWorkflowUpdateRequ" +
-      "est\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMeta" +
+      "proto\032\nspec.proto\032\036google/protobuf/durat" +
+      "ion.proto\"\205\001\n\035ApprovalWorkflowCreateRequ" +
+      "est\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMeta" +
       "data\022;\n\021approval_workflow\030\002 \001(\0132\024.v1.App" +
       "rovalWorkflowB\n\362\370\263\007\005\260\363\263\007\001\"\354\001\n\036ApprovalWo" +
-      "rkflowUpdateResponse\022(\n\004meta\030\001 \001(\0132\032.v1." +
-      "UpdateResponseMetadata\022;\n\021approval_workf" +
+      "rkflowCreateResponse\022(\n\004meta\030\001 \001(\0132\032.v1." +
+      "CreateResponseMetadata\022;\n\021approval_workf" +
       "low\030\002 \001(\0132\024.v1.ApprovalWorkflowB\n\362\370\263\007\005\260\363" +
       "\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
       "tadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!" +
-      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"`\n\035ApprovalWork" +
-      "flowDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Del" +
-      "eteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\307\001\n\036ApprovalWorkflowDeleteResponse\022(\n" +
-      "\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadata\022" +
-      "\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 " +
-      "\001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"`\n\033ApprovalWorkflowListRequest\022%\n\004m" +
-      "eta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fi" +
-      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\351\001\n\034ApprovalWorkf" +
-      "lowListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
-      "esponseMetadata\022<\n\022approval_workflows\030\002 " +
-      "\003(\0132\024.v1.ApprovalWorkflowB\n\362\370\263\007\005\270\363\263\007\001\022W\n" +
-      "\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadata" +
-      "B,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_g" +
-      "ateway:\n\372\370\263\007\005\250\363\263\007\001\"\212\002\n\020ApprovalWorkflow\022" +
-      "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022&\n\rapproval_mode\030\003 \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\013description\030\004 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\302\363\263\007a\242\363\263\007*tf_examples" +
-      "/approval_workflow_resource.txt\252\363\263\007-tf_e" +
-      "xamples/approval_workflow_data_source.tx" +
-      "t\322\363\263\007\001*2\300\005\n\021ApprovalWorkflows\022\177\n\006Create\022" +
-      "!.v1.ApprovalWorkflowCreateRequest\032\".v1." +
-      "ApprovalWorkflowCreateResponse\".\202\371\263\007\t\242\363\263" +
-      "\007\004post\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\022y" +
-      "\n\003Get\022\036.v1.ApprovalWorkflowGetRequest\032\037." +
-      "v1.ApprovalWorkflowGetResponse\"1\202\371\263\007\010\242\363\263" +
-      "\007\003get\202\371\263\007\037\252\363\263\007\032/v1/approval-workflow/{id" +
-      "}\022\201\001\n\006Delete\022!.v1.ApprovalWorkflowDelete" +
-      "Request\032\".v1.ApprovalWorkflowDeleteRespo" +
-      "nse\"0\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1/appro" +
-      "val-workflows\022~\n\006Update\022!.v1.ApprovalWor" +
-      "kflowUpdateRequest\032\".v1.ApprovalWorkflow" +
-      "UpdateResponse\"-\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\033\252\363\263\007\026/" +
-      "v1/approval-workflows\022x\n\004List\022\037.v1.Appro" +
-      "valWorkflowListRequest\032 .v1.ApprovalWork" +
-      "flowListResponse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007" +
-      "\026/v1/approval-workflows\0321\312\371\263\007\025\302\371\263\007\020Appro" +
-      "valWorkflow\312\371\263\007\010\322\371\263\007\003af-\312\371\263\007\005\350\371\263\007\001Bm\n\031co" +
-      "m.strongdm.api.plumbingB\031ApprovalWorkflo" +
-      "wsPlumbingZ5github.com/strongdm/strongdm" +
-      "-sdk-go/v3/internal/v1;v1b\006proto3"
+      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"Z\n\032ApprovalWork" +
+      "flowGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetReq" +
+      "uestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\362\001\n" +
+      "\033ApprovalWorkflowGetResponse\0221\n\004meta\030\001 \001" +
+      "(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      ";\n\021approval_workflow\030\002 \001(\0132\024.v1.Approval" +
+      "WorkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\013" +
+      "2\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006" +
+      "\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007" +
+      "\001\"\205\001\n\035ApprovalWorkflowUpdateRequest\022\'\n\004m" +
+      "eta\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022;\n\021" +
+      "approval_workflow\030\002 \001(\0132\024.v1.ApprovalWor" +
+      "kflowB\n\362\370\263\007\005\260\363\263\007\001\"\354\001\n\036ApprovalWorkflowUp" +
+      "dateResponse\022(\n\004meta\030\001 \001(\0132\032.v1.UpdateRe" +
+      "sponseMetadata\022;\n\021approval_workflow\030\002 \001(" +
+      "\0132\024.v1.ApprovalWorkflowB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nr" +
+      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB," +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gat" +
+      "eway:\n\372\370\263\007\005\250\363\263\007\001\"`\n\035ApprovalWorkflowDele" +
+      "teRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteReque" +
+      "stMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\307\001\n\036A" +
+      "pprovalWorkflowDeleteResponse\022(\n\004meta\030\001 " +
+      "\001(\0132\032.v1.DeleteResponseMetadata\022\026\n\002id\030\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1" +
+      ".RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001" +
+      "*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"`\n\033" +
+      "ApprovalWorkflowListRequest\022%\n\004meta\030\001 \001(" +
+      "\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\"\351\001\n\034ApprovalWorkflowListR" +
+      "esponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseM" +
+      "etadata\022<\n\022approval_workflows\030\002 \003(\0132\024.v1" +
+      ".ApprovalWorkflowB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_li" +
+      "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"\211\003\n\020ApprovalWorkflow\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\300\363\263\007\001\022&\n\rapproval_mode\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\300\363\263\007\001\022\037\n\013description\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "}\n\027approval_workflow_steps\030\005 \003(\0132\024.v1.Ap" +
+      "provalFlowStepBF\362\370\263\007A\260\363\263\007\001\312\363\263\007(\302\364\263\007#\n\022te" +
+      "rraform-provider\022\rapproval_step\262\364\263\007\ngo_p" +
+      "rivate:v\372\370\263\007q\250\363\263\007\001\302\363\263\007a\242\363\263\007*tf_examples/" +
+      "approval_workflow_resource.txt\252\363\263\007-tf_ex" +
+      "amples/approval_workflow_data_source.txt" +
+      "\322\363\263\007\001*\"\263\002\n\020ApprovalFlowStep\022\036\n\nquantifie" +
+      "r\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\nskip_after\030\002 \001(\0132" +
+      "\031.google.protobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001\022d" +
+      "\n\tapprovers\030\003 \003(\0132\030.v1.ApprovalFlowAppro" +
+      "verB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\022terrafor" +
+      "m-provider\022\010approver:^\372\370\263\007Y\250\363\263\007\001\312\363\263\007@\362\363\263" +
+      "\007\036\n\022terraform-provider\022\010TypeList\372\363\263\007\030app" +
+      "rovalFlowStepElemType\322\363\263\007\ngo_private\"\267\001\n" +
+      "\024ApprovalFlowApprover\022\036\n\naccount_id\030\001 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:b\372\370\263\007]\250\363\263\007\001\312\363\263\007D\362\363\263\007\036\n\022terraform-prov" +
+      "ider\022\010TypeList\372\363\263\007\034approvalFlowApproverE" +
+      "lemType\322\363\263\007\ngo_private2\313\005\n\021ApprovalWorkf" +
+      "lows\022\177\n\006Create\022!.v1.ApprovalWorkflowCrea" +
+      "teRequest\032\".v1.ApprovalWorkflowCreateRes" +
+      "ponse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1/appro" +
+      "val-workflows\022y\n\003Get\022\036.v1.ApprovalWorkfl" +
+      "owGetRequest\032\037.v1.ApprovalWorkflowGetRes" +
+      "ponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/approv" +
+      "al-workflow/{id}\022\201\001\n\006Delete\022!.v1.Approva" +
+      "lWorkflowDeleteRequest\032\".v1.ApprovalWork" +
+      "flowDeleteResponse\"0\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
+      "\033\252\363\263\007\026/v1/approval-workflows\022~\n\006Update\022!" +
+      ".v1.ApprovalWorkflowUpdateRequest\032\".v1.A" +
+      "pprovalWorkflowUpdateResponse\"-\202\371\263\007\010\242\363\263\007" +
+      "\003put\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\022x\n\004" +
+      "List\022\037.v1.ApprovalWorkflowListRequest\032 ." +
+      "v1.ApprovalWorkflowListResponse\"-\202\371\263\007\010\242\363" +
+      "\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\032<" +
+      "\312\371\263\007\025\302\371\263\007\020ApprovalWorkflow\312\371\263\007\010\322\371\263\007\003af-\312" +
+      "\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*Bm\n\031com.strongdm.api" +
+      ".plumbingB\031ApprovalWorkflowsPlumbingZ5gi" +
+      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
+      "ernal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         });
     internal_static_v1_ApprovalWorkflowCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -12191,7 +14870,19 @@ public final class ApprovalWorkflowsPlumbing {
     internal_static_v1_ApprovalWorkflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ApprovalWorkflow_descriptor,
-        new java.lang.String[] { "Id", "Name", "ApprovalMode", "Description", });
+        new java.lang.String[] { "Id", "Name", "ApprovalMode", "Description", "ApprovalWorkflowSteps", });
+    internal_static_v1_ApprovalFlowStep_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_v1_ApprovalFlowStep_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ApprovalFlowStep_descriptor,
+        new java.lang.String[] { "Quantifier", "SkipAfter", "Approvers", });
+    internal_static_v1_ApprovalFlowApprover_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_v1_ApprovalFlowApprover_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ApprovalFlowApprover_descriptor,
+        new java.lang.String[] { "AccountId", "RoleId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
@@ -12202,6 +14893,7 @@ public final class ApprovalWorkflowsPlumbing {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

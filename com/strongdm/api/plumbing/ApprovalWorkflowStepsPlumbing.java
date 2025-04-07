@@ -8660,7 +8660,7 @@ public final class ApprovalWorkflowStepsPlumbing {
 
     /**
      * <pre>
-     * The approval flow id specified the approval workfflow that this step belongs to
+     * The approval flow id specified the approval workflow that this step belongs to
      * </pre>
      *
      * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8669,7 +8669,7 @@ public final class ApprovalWorkflowStepsPlumbing {
     java.lang.String getApprovalFlowId();
     /**
      * <pre>
-     * The approval flow id specified the approval workfflow that this step belongs to
+     * The approval flow id specified the approval workflow that this step belongs to
      * </pre>
      *
      * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8825,7 +8825,7 @@ public final class ApprovalWorkflowStepsPlumbing {
     private volatile java.lang.Object approvalFlowId_;
     /**
      * <pre>
-     * The approval flow id specified the approval workfflow that this step belongs to
+     * The approval flow id specified the approval workflow that this step belongs to
      * </pre>
      *
      * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8846,7 +8846,7 @@ public final class ApprovalWorkflowStepsPlumbing {
     }
     /**
      * <pre>
-     * The approval flow id specified the approval workfflow that this step belongs to
+     * The approval flow id specified the approval workflow that this step belongs to
      * </pre>
      *
      * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9289,7 +9289,7 @@ public final class ApprovalWorkflowStepsPlumbing {
       private java.lang.Object approvalFlowId_ = "";
       /**
        * <pre>
-       * The approval flow id specified the approval workfflow that this step belongs to
+       * The approval flow id specified the approval workflow that this step belongs to
        * </pre>
        *
        * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9309,7 +9309,7 @@ public final class ApprovalWorkflowStepsPlumbing {
       }
       /**
        * <pre>
-       * The approval flow id specified the approval workfflow that this step belongs to
+       * The approval flow id specified the approval workflow that this step belongs to
        * </pre>
        *
        * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9330,7 +9330,7 @@ public final class ApprovalWorkflowStepsPlumbing {
       }
       /**
        * <pre>
-       * The approval flow id specified the approval workfflow that this step belongs to
+       * The approval flow id specified the approval workflow that this step belongs to
        * </pre>
        *
        * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9349,7 +9349,7 @@ public final class ApprovalWorkflowStepsPlumbing {
       }
       /**
        * <pre>
-       * The approval flow id specified the approval workfflow that this step belongs to
+       * The approval flow id specified the approval workflow that this step belongs to
        * </pre>
        *
        * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9363,7 +9363,7 @@ public final class ApprovalWorkflowStepsPlumbing {
       }
       /**
        * <pre>
-       * The approval flow id specified the approval workfflow that this step belongs to
+       * The approval flow id specified the approval workflow that this step belongs to
        * </pre>
        *
        * <code>string approval_flow_id = 2 [(.v1.field_options) = { ... }</code>

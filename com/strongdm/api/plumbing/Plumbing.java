@@ -14566,6 +14566,93 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.RedisCluster convertRedisClusterToPorcelain(
+      RedisCluster plumbing) {
+    com.strongdm.api.RedisCluster porcelain = new com.strongdm.api.RedisCluster();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static RedisCluster convertRedisClusterToPlumbing(
+      com.strongdm.api.RedisCluster porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RedisCluster.Builder builder = RedisCluster.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.RedisCluster> convertRepeatedRedisClusterToPorcelain(
+      Collection<RedisCluster> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.RedisCluster>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertRedisClusterToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RedisCluster> convertRepeatedRedisClusterToPlumbing(
+      Collection<com.strongdm.api.RedisCluster> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<RedisCluster>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertRedisClusterToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Redshift convertRedshiftToPorcelain(Redshift plumbing) {
     com.strongdm.api.Redshift porcelain = new com.strongdm.api.Redshift();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -15778,6 +15865,9 @@ public class Plumbing {
     if (plumbing.hasRedis()) {
       return convertRedisToPorcelain(plumbing.getRedis());
     }
+    if (plumbing.hasRedisCluster()) {
+      return convertRedisClusterToPorcelain(plumbing.getRedisCluster());
+    }
     if (plumbing.hasRedshift()) {
       return convertRedshiftToPorcelain(plumbing.getRedshift());
     }
@@ -16311,6 +16401,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Redis) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setRedis(convertRedisToPlumbing((com.strongdm.api.Redis) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.RedisCluster) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setRedisCluster(
+          convertRedisClusterToPlumbing((com.strongdm.api.RedisCluster) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Redshift) {

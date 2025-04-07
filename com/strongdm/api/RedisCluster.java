@@ -17,7 +17,11 @@
 
 package com.strongdm.api;
 
-public class AmazonESIAM implements Resource {
+/**
+ * RedisCluster is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
+public class RedisCluster implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -44,16 +48,6 @@ public class AmazonESIAM implements Resource {
     this.egressFilter = in;
   }
 
-  private String endpoint;
-  /** The endpoint to dial e.g. search-?.region.es.amazonaws.com" */
-  public String getEndpoint() {
-    return this.endpoint;
-  }
-  /** The endpoint to dial e.g. search-?.region.es.amazonaws.com" */
-  public void setEndpoint(String in) {
-    this.endpoint = in;
-  }
-
   private boolean healthy;
   /** True if the datasource is reachable and the credentials are valid. */
   public boolean getHealthy() {
@@ -62,6 +56,22 @@ public class AmazonESIAM implements Resource {
   /** True if the datasource is reachable and the credentials are valid. */
   public void setHealthy(boolean in) {
     this.healthy = in;
+  }
+
+  private String hostname;
+  /**
+   * Hostname must contain the hostname/port pairs of all instances in the replica set separated by
+   * commas.
+   */
+  public String getHostname() {
+    return this.hostname;
+  }
+  /**
+   * Hostname must contain the hostname/port pairs of all instances in the replica set separated by
+   * commas.
+   */
+  public void setHostname(String in) {
+    this.hostname = in;
   }
 
   private String id;
@@ -84,6 +94,26 @@ public class AmazonESIAM implements Resource {
     this.name = in;
   }
 
+  private String password;
+  /** The password to authenticate with. */
+  public String getPassword() {
+    return this.password;
+  }
+  /** The password to authenticate with. */
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private int port;
+  /** The port to dial to initiate a connection from the egress node to this resource. */
+  public int getPort() {
+    return this.port;
+  }
+  /** The port to dial to initiate a connection from the egress node to this resource. */
+  public void setPort(int in) {
+    this.port = in;
+  }
+
   private int portOverride;
   /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
@@ -102,42 +132,6 @@ public class AmazonESIAM implements Resource {
   /** ID of the proxy cluster for this resource, if any. */
   public void setProxyClusterId(String in) {
     this.proxyClusterId = in;
-  }
-
-  private String region;
-  /** The AWS region to connect to. */
-  public String getRegion() {
-    return this.region;
-  }
-  /** The AWS region to connect to. */
-  public void setRegion(String in) {
-    this.region = in;
-  }
-
-  private String roleArn;
-  /** The role to assume after logging in. */
-  public String getRoleArn() {
-    return this.roleArn;
-  }
-  /** The role to assume after logging in. */
-  public void setRoleArn(String in) {
-    this.roleArn = in;
-  }
-
-  private String roleExternalId;
-  /**
-   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
-   * provided.
-   */
-  public String getRoleExternalId() {
-    return this.roleExternalId;
-  }
-  /**
-   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
-   * provided.
-   */
-  public void setRoleExternalId(String in) {
-    this.roleExternalId = in;
   }
 
   private String secretStoreId;
@@ -186,12 +180,22 @@ public class AmazonESIAM implements Resource {
   }
 
   private boolean tlsRequired;
-  /** Use TLS to connect to the OpenSearch server */
+  /** If set, TLS must be used to connect to this resource. */
   public boolean getTlsRequired() {
     return this.tlsRequired;
   }
-  /** Use TLS to connect to the OpenSearch server */
+  /** If set, TLS must be used to connect to this resource. */
   public void setTlsRequired(boolean in) {
     this.tlsRequired = in;
+  }
+
+  private String username;
+  /** The username to authenticate with. */
+  public String getUsername() {
+    return this.username;
+  }
+  /** The username to authenticate with. */
+  public void setUsername(String in) {
+    this.username = in;
   }
 }

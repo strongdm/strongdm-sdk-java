@@ -20,11 +20,11 @@ package com.strongdm.api;
 /** ApprovalWorkflowStep links an approval workflow step to an ApprovalWorkflow */
 public class ApprovalWorkflowStep {
   private String approvalFlowId;
-  /** The approval flow id specified the approval workfflow that this step belongs to */
+  /** The approval flow id specified the approval workflow that this step belongs to */
   public String getApprovalFlowId() {
     return this.approvalFlowId;
   }
-  /** The approval flow id specified the approval workfflow that this step belongs to */
+  /** The approval flow id specified the approval workflow that this step belongs to */
   public void setApprovalFlowId(String in) {
     this.approvalFlowId = in;
   }
