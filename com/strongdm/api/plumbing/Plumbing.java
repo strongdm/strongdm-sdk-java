@@ -17744,6 +17744,8 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortForwarding((plumbing.getPortForwarding()));
@@ -17776,6 +17778,13 @@ public class Plumbing {
     }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
