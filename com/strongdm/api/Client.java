@@ -259,6 +259,16 @@ public class Client {
     return this.identitySetsHistory;
   }
 
+  protected final ManagedSecrets managedSecrets;
+
+  /**
+   * ManagedSecret is a private vertical for creating, reading, updating, deleting, listing and
+   * rotating the managed secrets in the secrets engines as an authenticated user.
+   */
+  public ManagedSecrets managedSecrets() {
+    return this.managedSecrets;
+  }
+
   protected final Nodes nodes;
 
   /**
@@ -468,6 +478,13 @@ public class Client {
     return this.secretStores;
   }
 
+  protected final SecretEngines secretEngines;
+
+  /** */
+  public SecretEngines secretEngines() {
+    return this.secretEngines;
+  }
+
   protected final SecretStoreHealths secretStoreHealths;
 
   /** SecretStoreHealths exposes health states for secret stores. */
@@ -597,6 +614,7 @@ public class Client {
     this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
     this.identitySets = new IdentitySets(this.channel, this);
     this.identitySetsHistory = new IdentitySetsHistory(this.channel, this);
+    this.managedSecrets = new ManagedSecrets(this.channel, this);
     this.nodes = new Nodes(this.channel, this);
     this.nodesHistory = new NodesHistory(this.channel, this);
     this.organizationHistory = new OrganizationHistory(this.channel, this);
@@ -620,6 +638,7 @@ public class Client {
     this.roles = new Roles(this.channel, this);
     this.rolesHistory = new RolesHistory(this.channel, this);
     this.secretStores = new SecretStores(this.channel, this);
+    this.secretEngines = new SecretEngines(this.channel, this);
     this.secretStoreHealths = new SecretStoreHealths(this.channel, this);
     this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
     this.workflowApprovers = new WorkflowApprovers(this.channel, this);
@@ -678,6 +697,7 @@ public class Client {
       this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
       this.identitySets = new IdentitySets(this.channel, this);
       this.identitySetsHistory = new IdentitySetsHistory(this.channel, this);
+      this.managedSecrets = new ManagedSecrets(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
       this.nodesHistory = new NodesHistory(this.channel, this);
       this.organizationHistory = new OrganizationHistory(this.channel, this);
@@ -701,6 +721,7 @@ public class Client {
       this.roles = new Roles(this.channel, this);
       this.rolesHistory = new RolesHistory(this.channel, this);
       this.secretStores = new SecretStores(this.channel, this);
+      this.secretEngines = new SecretEngines(this.channel, this);
       this.secretStoreHealths = new SecretStoreHealths(this.channel, this);
       this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
       this.workflowApprovers = new WorkflowApprovers(this.channel, this);
