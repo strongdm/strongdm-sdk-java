@@ -31,6 +31,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /** ApprovalWorkflowApprovers link approval workflow approvers to an ApprovalWorkflowStep */
+@Deprecated
 public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprovers {
   private final ApprovalWorkflowApproversGrpc.ApprovalWorkflowApproversBlockingStub stub;
   private final Client parent;
@@ -54,7 +55,7 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
   public ApprovalWorkflowApprovers withDeadlineAfter(long duration, TimeUnit units) {
     return new ApprovalWorkflowApprovers(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  /** Create creates a new approval workflow approver. */
+  /** Deprecated: Create creates a new approval workflow approver. */
   public ApprovalWorkflowApproverCreateResponse create(
       ApprovalWorkflowApprover approvalWorkflowApprover) throws RpcException {
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverCreateRequest.Builder builder =
@@ -83,7 +84,7 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
     }
     return Plumbing.convertApprovalWorkflowApproverCreateResponseToPorcelain(plumbingResponse);
   }
-  /** Get reads one approval workflow approver by ID. */
+  /** Deprecated: Get reads one approval workflow approver by ID. */
   public ApprovalWorkflowApproverGetResponse get(String id) throws RpcException {
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverGetRequest.Builder builder =
         ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverGetRequest.newBuilder();
@@ -115,7 +116,7 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
     }
     return Plumbing.convertApprovalWorkflowApproverGetResponseToPorcelain(plumbingResponse);
   }
-  /** Delete deletes an existing approval workflow approver. */
+  /** Deprecated: Delete deletes an existing approval workflow approver. */
   public ApprovalWorkflowApproverDeleteResponse delete(String id) throws RpcException {
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverDeleteRequest.Builder builder =
         ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverDeleteRequest.newBuilder();
@@ -142,7 +143,7 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
     }
     return Plumbing.convertApprovalWorkflowApproverDeleteResponseToPorcelain(plumbingResponse);
   }
-  /** Lists existing approval workflow approvers. */
+  /** Deprecated: Lists existing approval workflow approvers. */
   public Iterable<ApprovalWorkflowApprover> list(String filter, Object... args)
       throws RpcException {
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverListRequest.Builder builder =

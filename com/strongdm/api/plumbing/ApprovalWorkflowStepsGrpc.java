@@ -37,6 +37,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: approval_workflow_steps.proto")
+@java.lang.Deprecated
 public final class ApprovalWorkflowStepsGrpc {
 
   private ApprovalWorkflowStepsGrpc() {}
@@ -217,11 +218,12 @@ public final class ApprovalWorkflowStepsGrpc {
    * ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class ApprovalWorkflowStepsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Create creates a new approval workflow step.
+     * Deprecated: Create creates a new approval workflow step.
      * </pre>
      */
     public void create(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateRequest request,
@@ -231,7 +233,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Get reads one approval workflow step by ID.
+     * Deprecated: Get reads one approval workflow step by ID.
      * </pre>
      */
     public void get(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetRequest request,
@@ -241,7 +243,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Delete deletes an existing approval workflow step.
+     * Deprecated: Delete deletes an existing approval workflow step.
      * </pre>
      */
     public void delete(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteRequest request,
@@ -251,7 +253,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Lists existing approval workflow steps.
+     * Deprecated: Lists existing approval workflow steps.
      * </pre>
      */
     public void list(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepListRequest request,
@@ -298,6 +300,7 @@ public final class ApprovalWorkflowStepsGrpc {
    * ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class ApprovalWorkflowStepsStub extends io.grpc.stub.AbstractAsyncStub<ApprovalWorkflowStepsStub> {
     private ApprovalWorkflowStepsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -312,7 +315,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Create creates a new approval workflow step.
+     * Deprecated: Create creates a new approval workflow step.
      * </pre>
      */
     public void create(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateRequest request,
@@ -323,7 +326,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Get reads one approval workflow step by ID.
+     * Deprecated: Get reads one approval workflow step by ID.
      * </pre>
      */
     public void get(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetRequest request,
@@ -334,7 +337,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Delete deletes an existing approval workflow step.
+     * Deprecated: Delete deletes an existing approval workflow step.
      * </pre>
      */
     public void delete(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteRequest request,
@@ -345,7 +348,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Lists existing approval workflow steps.
+     * Deprecated: Lists existing approval workflow steps.
      * </pre>
      */
     public void list(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepListRequest request,
@@ -360,6 +363,7 @@ public final class ApprovalWorkflowStepsGrpc {
    * ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class ApprovalWorkflowStepsBlockingStub extends io.grpc.stub.AbstractBlockingStub<ApprovalWorkflowStepsBlockingStub> {
     private ApprovalWorkflowStepsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -374,7 +378,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Create creates a new approval workflow step.
+     * Deprecated: Create creates a new approval workflow step.
      * </pre>
      */
     public com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateResponse create(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateRequest request) {
@@ -384,7 +388,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Get reads one approval workflow step by ID.
+     * Deprecated: Get reads one approval workflow step by ID.
      * </pre>
      */
     public com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetResponse get(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetRequest request) {
@@ -394,7 +398,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Delete deletes an existing approval workflow step.
+     * Deprecated: Delete deletes an existing approval workflow step.
      * </pre>
      */
     public com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteResponse delete(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteRequest request) {
@@ -404,7 +408,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Lists existing approval workflow steps.
+     * Deprecated: Lists existing approval workflow steps.
      * </pre>
      */
     public com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepListResponse list(com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepListRequest request) {
@@ -418,6 +422,7 @@ public final class ApprovalWorkflowStepsGrpc {
    * ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class ApprovalWorkflowStepsFutureStub extends io.grpc.stub.AbstractFutureStub<ApprovalWorkflowStepsFutureStub> {
     private ApprovalWorkflowStepsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -432,7 +437,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Create creates a new approval workflow step.
+     * Deprecated: Create creates a new approval workflow step.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateResponse> create(
@@ -443,7 +448,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Get reads one approval workflow step by ID.
+     * Deprecated: Get reads one approval workflow step by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetResponse> get(
@@ -454,7 +459,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Delete deletes an existing approval workflow step.
+     * Deprecated: Delete deletes an existing approval workflow step.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteResponse> delete(
@@ -465,7 +470,7 @@ public final class ApprovalWorkflowStepsGrpc {
 
     /**
      * <pre>
-     * Lists existing approval workflow steps.
+     * Deprecated: Lists existing approval workflow steps.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepListResponse> list(

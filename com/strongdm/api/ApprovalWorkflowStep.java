@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+import java.time.Duration;
+
 /** ApprovalWorkflowStep links an approval workflow step to an ApprovalWorkflow */
 public class ApprovalWorkflowStep {
   private String approvalFlowId;
@@ -37,5 +39,53 @@ public class ApprovalWorkflowStep {
   /** Unique identifier of the ApprovalWorkflowStep. */
   public void setId(String in) {
     this.id = in;
+  }
+
+  private String quantifier;
+  /**
+   * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field
+   * for history commands.
+   */
+  public String getQuantifier() {
+    return this.quantifier;
+  }
+  /**
+   * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field
+   * for history commands.
+   */
+  public void setQuantifier(String in) {
+    this.quantifier = in;
+  }
+
+  private Duration skipAfter;
+  /**
+   * Duration after which this approval step will be skipped if no approval is given. Read only
+   * field for history commands.
+   */
+  public Duration getSkipAfter() {
+    return this.skipAfter;
+  }
+  /**
+   * Duration after which this approval step will be skipped if no approval is given. Read only
+   * field for history commands.
+   */
+  public void setSkipAfter(Duration in) {
+    this.skipAfter = in;
+  }
+
+  private int stepOrder;
+  /**
+   * The position of the approval step in a sequence of approval steps for an approval workflow.
+   * Read only field for history commands.
+   */
+  public int getStepOrder() {
+    return this.stepOrder;
+  }
+  /**
+   * The position of the approval step in a sequence of approval steps for an approval workflow.
+   * Read only field for history commands.
+   */
+  public void setStepOrder(int in) {
+    this.stepOrder = in;
   }
 }

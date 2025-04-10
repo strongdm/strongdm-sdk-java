@@ -12819,6 +12819,46 @@ public final class AccountsPlumbing {
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
+
+    /**
+     * <pre>
+     * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+     * </pre>
+     *
+     * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+     * @return The sCIM.
+     */
+    java.lang.String getSCIM();
+    /**
+     * <pre>
+     * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+     * </pre>
+     *
+     * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sCIM.
+     */
+    com.google.protobuf.ByteString
+        getSCIMBytes();
+
+    /**
+     * <pre>
+     * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+     * </pre>
+     *
+     * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+     * @return The managerId.
+     */
+    java.lang.String getManagerId();
+    /**
+     * <pre>
+     * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+     * </pre>
+     *
+     * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for managerId.
+     */
+    com.google.protobuf.ByteString
+        getManagerIdBytes();
   }
   /**
    * <pre>
@@ -12847,6 +12887,8 @@ public final class AccountsPlumbing {
       externalId_ = "";
       permissionLevelRW_ = "";
       password_ = "";
+      sCIM_ = "";
+      managerId_ = "";
     }
 
     @java.lang.Override
@@ -12954,6 +12996,18 @@ public final class AccountsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               password_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sCIM_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              managerId_ = s;
               break;
             }
             default: {
@@ -13474,6 +13528,98 @@ public final class AccountsPlumbing {
       }
     }
 
+    public static final int SCIM_FIELD_NUMBER = 13;
+    private volatile java.lang.Object sCIM_;
+    /**
+     * <pre>
+     * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+     * </pre>
+     *
+     * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+     * @return The sCIM.
+     */
+    @java.lang.Override
+    public java.lang.String getSCIM() {
+      java.lang.Object ref = sCIM_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sCIM_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+     * </pre>
+     *
+     * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sCIM.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSCIMBytes() {
+      java.lang.Object ref = sCIM_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sCIM_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MANAGER_ID_FIELD_NUMBER = 14;
+    private volatile java.lang.Object managerId_;
+    /**
+     * <pre>
+     * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+     * </pre>
+     *
+     * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+     * @return The managerId.
+     */
+    @java.lang.Override
+    public java.lang.String getManagerId() {
+      java.lang.Object ref = managerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        managerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+     * </pre>
+     *
+     * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for managerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getManagerIdBytes() {
+      java.lang.Object ref = managerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        managerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13524,6 +13670,12 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, password_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sCIM_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, sCIM_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, managerId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13572,6 +13724,12 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, password_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sCIM_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, sCIM_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, managerId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13614,6 +13772,10 @@ public final class AccountsPlumbing {
           .equals(other.getPermissionLevelRW())) return false;
       if (!getPassword()
           .equals(other.getPassword())) return false;
+      if (!getSCIM()
+          .equals(other.getSCIM())) return false;
+      if (!getManagerId()
+          .equals(other.getManagerId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13653,6 +13815,10 @@ public final class AccountsPlumbing {
       hash = (53 * hash) + getPermissionLevelRW().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + SCIM_FIELD_NUMBER;
+      hash = (53 * hash) + getSCIM().hashCode();
+      hash = (37 * hash) + MANAGER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getManagerId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13819,6 +13985,10 @@ public final class AccountsPlumbing {
 
         password_ = "";
 
+        sCIM_ = "";
+
+        managerId_ = "";
+
         return this;
       }
 
@@ -13861,6 +14031,8 @@ public final class AccountsPlumbing {
         result.suspendedRO_ = suspendedRO_;
         result.permissionLevelRW_ = permissionLevelRW_;
         result.password_ = password_;
+        result.sCIM_ = sCIM_;
+        result.managerId_ = managerId_;
         onBuilt();
         return result;
       }
@@ -13952,6 +14124,14 @@ public final class AccountsPlumbing {
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getSCIM().isEmpty()) {
+          sCIM_ = other.sCIM_;
+          onChanged();
+        }
+        if (!other.getManagerId().isEmpty()) {
+          managerId_ = other.managerId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -15089,6 +15269,198 @@ public final class AccountsPlumbing {
   checkByteStringIsUtf8(value);
         
         password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sCIM_ = "";
+      /**
+       * <pre>
+       * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+       * </pre>
+       *
+       * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+       * @return The sCIM.
+       */
+      public java.lang.String getSCIM() {
+        java.lang.Object ref = sCIM_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sCIM_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+       * </pre>
+       *
+       * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for sCIM.
+       */
+      public com.google.protobuf.ByteString
+          getSCIMBytes() {
+        java.lang.Object ref = sCIM_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sCIM_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+       * </pre>
+       *
+       * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+       * @param value The sCIM to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSCIM(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sCIM_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+       * </pre>
+       *
+       * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSCIM() {
+        
+        sCIM_ = getDefaultInstance().getSCIM();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SCIM contains the raw SCIM metadata for the user. This is a read-only field.
+       * </pre>
+       *
+       * <code>string SCIM = 13 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for sCIM to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSCIMBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sCIM_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object managerId_ = "";
+      /**
+       * <pre>
+       * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+       * </pre>
+       *
+       * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+       * @return The managerId.
+       */
+      public java.lang.String getManagerId() {
+        java.lang.Object ref = managerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          managerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+       * </pre>
+       *
+       * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for managerId.
+       */
+      public com.google.protobuf.ByteString
+          getManagerIdBytes() {
+        java.lang.Object ref = managerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          managerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+       * </pre>
+       *
+       * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+       * @param value The managerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        managerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+       * </pre>
+       *
+       * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManagerId() {
+        
+        managerId_ = getDefaultInstance().getManagerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+       * </pre>
+       *
+       * <code>string manager_id = 14 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for managerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        managerId_ = value;
         onChanged();
         return this;
       }
@@ -18851,7 +19223,7 @@ public final class AccountsPlumbing {
       "\263\007M\242\363\263\007 tf_examples/account_resource.txt" +
       "\252\363\263\007#tf_examples/account_data_source.txt" +
       "B,\n\007account\022!\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263" +
-      "\007\004tags\"\223\007\n\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\007\004tags\"\210\010\n\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "\036\n\005email\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst" +
       "_name\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\tlast_nam" +
       "e\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022*\n\tsuspended\030\005 " +
@@ -18873,38 +19245,41 @@ public final class AccountsPlumbing {
       "vel\302\364\263\007&\n\022terraform-provider\022\020permission" +
       "_level\302\364\263\007\037\n\014json_gateway\022\017permissionLev" +
       "el\320\364\263\007\001\022?\n\010password\030\014 \001(\tB-\362\370\263\007(\260\363\263\007\001\350\363\263" +
-      "\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspe" +
-      "nded\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v" +
-      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\201\003\n\005Token" +
-      "\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017" +
-      "\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\0132\032." +
-      "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022 \n" +
-      "\014account_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013permi" +
-      "ssions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030\t \001" +
-      "(\0132\031.google.protobuf.DurationB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:\017\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n\010Accounts\022c\n\006Creat" +
-      "e\022\030.v1.AccountCreateRequest\032\031.v1.Account" +
-      "CreateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014" +
-      "/v1/accounts\022^\n\003Get\022\025.v1.AccountGetReque" +
-      "st\032\026.v1.AccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006Update\022\030" +
-      ".v1.AccountUpdateRequest\032\031.v1.AccountUpd" +
-      "ateResponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/" +
-      "accounts/{id}\022j\n\006Delete\022\030.v1.AccountDele" +
-      "teRequest\032\031.v1.AccountDeleteResponse\"+\202\371" +
-      "\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id" +
-      "}\022\\\n\004List\022\026.v1.AccountListRequest\032\027.v1.A" +
-      "ccountListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363" +
-      "\263\007\014/v1/accounts\0326\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322" +
-      "\371\263\007\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd\n\031com.s" +
-      "trongdm.api.plumbingB\020AccountsPlumbingZ5" +
-      "github.com/strongdm/strongdm-sdk-go/v3/i" +
-      "nternal/v1;v1b\006proto3"
+      "\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\004SCIM" +
+      "\030\r \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022E" +
+      "\n\nmanager_id\030\016 \001(\tB1\362\370\263\007,\260\363\263\007\001\262\364\263\007\ngo_pr" +
+      "ivate\262\364\263\007\023!terraform-provider:\n\372\370\263\007\005\250\363\263\007" +
+      "\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
+      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspende" +
+      "d\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\201\003\n\005Token\022\026\n" +
+      "\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263" +
+      "\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "7\n\007rekeyed\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014ac" +
+      "count_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013permissi" +
+      "ons\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030\t \001(\0132" +
+      "\031.google.protobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001:\017" +
+      "\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n\010Accounts\022c\n\006Create\022\030" +
+      ".v1.AccountCreateRequest\032\031.v1.AccountCre" +
+      "ateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1" +
+      "/accounts\022^\n\003Get\022\025.v1.AccountGetRequest\032" +
+      "\026.v1.AccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371" +
+      "\263\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006Update\022\030.v1" +
+      ".AccountUpdateRequest\032\031.v1.AccountUpdate" +
+      "Response\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/acc" +
+      "ounts/{id}\022j\n\006Delete\022\030.v1.AccountDeleteR" +
+      "equest\032\031.v1.AccountDeleteResponse\"+\202\371\263\007\013" +
+      "\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\" +
+      "\n\004List\022\026.v1.AccountListRequest\032\027.v1.Acco" +
+      "untListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014" +
+      "/v1/accounts\0326\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007" +
+      "\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd\n\031com.stro" +
+      "ngdm.api.plumbingB\020AccountsPlumbingZ5git" +
+      "hub.com/strongdm/strongdm-sdk-go/v3/inte" +
+      "rnal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18986,7 +19361,7 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", "SCIM", "ManagerId", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new

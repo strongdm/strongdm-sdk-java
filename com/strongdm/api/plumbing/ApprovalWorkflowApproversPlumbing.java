@@ -10084,36 +10084,38 @@ public final class ApprovalWorkflowApproversPlumbing {
       "\0132\034.v1.ApprovalWorkflowApproverB\n\362\370\263\007\005\270\363" +
       "\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
       "tadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!" +
-      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\321\002\n\030ApprovalWor" +
+      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\351\002\n\030ApprovalWor" +
       "kflowApprover\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n" +
       "\020approval_flow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
       "\022)\n\020approval_step_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
       "\263\007\001\022\036\n\naccount_id\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007r" +
-      "ole_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\211\001\372\370\263\007\203\001\250\363\263\007\001\302\363" +
+      "ole_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\241\001\372\370\263\007\233\001\250\363\263\007\001\302\363" +
       "\263\007s\242\363\263\0073tf_examples/approval_workflow_ap" +
       "prover_resource.txt\252\363\263\0076tf_examples/appr" +
       "oval_workflow_approver_data_source.txt\322\363" +
-      "\263\007\001*2\270\005\n\031ApprovalWorkflowApprovers\022\230\001\n\006C" +
-      "reate\022).v1.ApprovalWorkflowApproverCreat" +
-      "eRequest\032*.v1.ApprovalWorkflowApproverCr" +
-      "eateResponse\"7\202\371\263\007\t\242\363\263\007\004post\202\371\263\007$\252\363\263\007\037/v" +
-      "1/approval-workflow-approvers\022\222\001\n\003Get\022&." +
-      "v1.ApprovalWorkflowApproverGetRequest\032\'." +
-      "v1.ApprovalWorkflowApproverGetResponse\":" +
-      "\202\371\263\007\010\242\363\263\007\003get\202\371\263\007(\252\363\263\007#/v1/approval-work" +
-      "flow-approver/{id}\022\232\001\n\006Delete\022).v1.Appro" +
-      "valWorkflowApproverDeleteRequest\032*.v1.Ap" +
-      "provalWorkflowApproverDeleteResponse\"9\202\371" +
-      "\263\007\013\242\363\263\007\006delete\202\371\263\007$\252\363\263\007\037/v1/approval-wor" +
-      "kflow-approvers\022\221\001\n\004List\022\'.v1.ApprovalWo" +
-      "rkflowApproverListRequest\032(.v1.ApprovalW" +
-      "orkflowApproverListResponse\"6\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007$\252\363\263\007\037/v1/approval-workflow-approv" +
-      "ers\032:\312\371\263\007\035\302\371\263\007\030ApprovalWorkflowApprover\312" +
-      "\371\263\007\t\322\371\263\007\004afa-\312\371\263\007\005\350\371\263\007\001Bu\n\031com.strongdm." +
-      "api.plumbingB!ApprovalWorkflowApproversP" +
-      "lumbingZ5github.com/strongdm/strongdm-sd" +
-      "k-go/v3/internal/v1;v1b\006proto3"
+      "\263\007\001*\322\363\263\007\023!terraform-provider2\343\005\n\031Approva" +
+      "lWorkflowApprovers\022\230\001\n\006Create\022).v1.Appro" +
+      "valWorkflowApproverCreateRequest\032*.v1.Ap" +
+      "provalWorkflowApproverCreateResponse\"7\202\371" +
+      "\263\007\t\242\363\263\007\004post\202\371\263\007$\252\363\263\007\037/v1/approval-workf" +
+      "low-approvers\022\222\001\n\003Get\022&.v1.ApprovalWorkf" +
+      "lowApproverGetRequest\032\'.v1.ApprovalWorkf" +
+      "lowApproverGetResponse\":\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007(\252\363\263\007#/v1/approval-workflow-approver/{i" +
+      "d}\022\232\001\n\006Delete\022).v1.ApprovalWorkflowAppro" +
+      "verDeleteRequest\032*.v1.ApprovalWorkflowAp" +
+      "proverDeleteResponse\"9\202\371\263\007\013\242\363\263\007\006delete\202\371" +
+      "\263\007$\252\363\263\007\037/v1/approval-workflow-approvers\022" +
+      "\221\001\n\004List\022\'.v1.ApprovalWorkflowApproverLi" +
+      "stRequest\032(.v1.ApprovalWorkflowApproverL" +
+      "istResponse\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v1/" +
+      "approval-workflow-approvers\032e\210\002\001\312\371\263\007\035\302\371\263" +
+      "\007\030ApprovalWorkflowApprover\312\371\263\007\t\322\371\263\007\004afa-" +
+      "\312\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terrafor" +
+      "m-providerBu\n\031com.strongdm.api.plumbingB" +
+      "!ApprovalWorkflowApproversPlumbingZ5gith" +
+      "ub.com/strongdm/strongdm-sdk-go/v3/inter" +
+      "nal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

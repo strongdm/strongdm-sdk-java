@@ -16,13 +16,14 @@
 
 package com.strongdm.api;
 
+@Deprecated
 /**
  * A SnapshotApprovalWorkflowSteps exposes the read only methods of the ApprovalWorkflowSteps
  * service for historical queries.
  */
 public interface SnapshotApprovalWorkflowSteps {
-  /** Get reads one approval workflow step by ID. */
+  /** Deprecated: Get reads one approval workflow step by ID. */
   public ApprovalWorkflowStepGetResponse get(String id) throws RpcException;
-  /** Lists existing approval workflow steps. */
+  /** Deprecated: Lists existing approval workflow steps. */
   public Iterable<ApprovalWorkflowStep> list(String filter, Object... args) throws RpcException;
 }

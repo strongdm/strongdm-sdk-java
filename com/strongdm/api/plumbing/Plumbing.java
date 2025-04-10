@@ -3852,10 +3852,103 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.ApprovalFlowApprover convertApprovalFlowApproverToPorcelain(
+      ApprovalFlowApprover plumbing) {
+    com.strongdm.api.ApprovalFlowApprover porcelain = new com.strongdm.api.ApprovalFlowApprover();
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setRoleId((plumbing.getRoleId()));
+    return porcelain;
+  }
+
+  public static ApprovalFlowApprover convertApprovalFlowApproverToPlumbing(
+      com.strongdm.api.ApprovalFlowApprover porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ApprovalFlowApprover.Builder builder = ApprovalFlowApprover.newBuilder();
+    if (porcelain.getAccountId() != null) {
+      builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getRoleId() != null) {
+      builder.setRoleId((porcelain.getRoleId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ApprovalFlowApprover>
+      convertRepeatedApprovalFlowApproverToPorcelain(Collection<ApprovalFlowApprover> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ApprovalFlowApprover>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertApprovalFlowApproverToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ApprovalFlowApprover> convertRepeatedApprovalFlowApproverToPlumbing(
+      Collection<com.strongdm.api.ApprovalFlowApprover> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ApprovalFlowApprover>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertApprovalFlowApproverToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ApprovalFlowStep convertApprovalFlowStepToPorcelain(
+      ApprovalFlowStep plumbing) {
+    com.strongdm.api.ApprovalFlowStep porcelain = new com.strongdm.api.ApprovalFlowStep();
+    porcelain.setApprovers(
+        Plumbing.convertRepeatedApprovalFlowApproverToPorcelain(plumbing.getApproversList()));
+    porcelain.setQuantifier((plumbing.getQuantifier()));
+    porcelain.setSkipAfter(Plumbing.convertDurationToPorcelain(plumbing.getSkipAfter()));
+    return porcelain;
+  }
+
+  public static ApprovalFlowStep convertApprovalFlowStepToPlumbing(
+      com.strongdm.api.ApprovalFlowStep porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ApprovalFlowStep.Builder builder = ApprovalFlowStep.newBuilder();
+    builder.addAllApprovers(
+        Plumbing.convertRepeatedApprovalFlowApproverToPlumbing(porcelain.getApprovers()));
+    if (porcelain.getQuantifier() != null) {
+      builder.setQuantifier((porcelain.getQuantifier()));
+    }
+    if (porcelain.getSkipAfter() != null) {
+      builder.setSkipAfter(Plumbing.convertDurationToPlumbing(porcelain.getSkipAfter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ApprovalFlowStep> convertRepeatedApprovalFlowStepToPorcelain(
+      Collection<ApprovalFlowStep> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ApprovalFlowStep>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertApprovalFlowStepToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ApprovalFlowStep> convertRepeatedApprovalFlowStepToPlumbing(
+      Collection<com.strongdm.api.ApprovalFlowStep> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ApprovalFlowStep>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertApprovalFlowStepToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.ApprovalWorkflow convertApprovalWorkflowToPorcelain(
       ApprovalWorkflow plumbing) {
     com.strongdm.api.ApprovalWorkflow porcelain = new com.strongdm.api.ApprovalWorkflow();
     porcelain.setApprovalMode((plumbing.getApprovalMode()));
+    porcelain.setApprovalWorkflowSteps(
+        Plumbing.convertRepeatedApprovalFlowStepToPorcelain(
+            plumbing.getApprovalWorkflowStepsList()));
     porcelain.setDescription((plumbing.getDescription()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
@@ -3871,6 +3964,8 @@ public class Plumbing {
     if (porcelain.getApprovalMode() != null) {
       builder.setApprovalMode((porcelain.getApprovalMode()));
     }
+    builder.addAllApprovalWorkflowSteps(
+        Plumbing.convertRepeatedApprovalFlowStepToPlumbing(porcelain.getApprovalWorkflowSteps()));
     if (porcelain.getDescription() != null) {
       builder.setDescription((porcelain.getDescription()));
     }
@@ -4470,6 +4565,9 @@ public class Plumbing {
     com.strongdm.api.ApprovalWorkflowStep porcelain = new com.strongdm.api.ApprovalWorkflowStep();
     porcelain.setApprovalFlowId((plumbing.getApprovalFlowId()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setQuantifier((plumbing.getQuantifier()));
+    porcelain.setSkipAfter(Plumbing.convertDurationToPorcelain(plumbing.getSkipAfter()));
+    porcelain.setStepOrder((plumbing.getStepOrder()));
     return porcelain;
   }
 
@@ -4485,6 +4583,13 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    if (porcelain.getQuantifier() != null) {
+      builder.setQuantifier((porcelain.getQuantifier()));
+    }
+    if (porcelain.getSkipAfter() != null) {
+      builder.setSkipAfter(Plumbing.convertDurationToPlumbing(porcelain.getSkipAfter()));
+    }
+    builder.setStepOrder(porcelain.getStepOrder());
     return builder.build();
   }
 

@@ -163,6 +163,7 @@ public class Client {
   protected final ApprovalWorkflowApprovers approvalWorkflowApprovers;
 
   /** ApprovalWorkflowApprovers link approval workflow approvers to an ApprovalWorkflowStep */
+  @Deprecated
   public ApprovalWorkflowApprovers approvalWorkflowApprovers() {
     return this.approvalWorkflowApprovers;
   }
@@ -180,6 +181,7 @@ public class Client {
   protected final ApprovalWorkflowSteps approvalWorkflowSteps;
 
   /** ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow */
+  @Deprecated
   public ApprovalWorkflowSteps approvalWorkflowSteps() {
     return this.approvalWorkflowSteps;
   }

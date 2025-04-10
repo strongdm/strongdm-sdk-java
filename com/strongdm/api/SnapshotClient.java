@@ -63,10 +63,12 @@ public class SnapshotClient {
     return this.parent.accounts;
   }
   /** ApprovalWorkflowApprovers link approval workflow approvers to an ApprovalWorkflowStep */
+  @Deprecated
   public SnapshotApprovalWorkflowApprovers approvalWorkflowApprovers() {
     return this.parent.approvalWorkflowApprovers;
   }
   /** ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow */
+  @Deprecated
   public SnapshotApprovalWorkflowSteps approvalWorkflowSteps() {
     return this.parent.approvalWorkflowSteps;
   }

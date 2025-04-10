@@ -14759,8 +14759,8 @@ public final class ApprovalWorkflowsPlumbing {
       "\001\300\363\263\007\001\022\037\n\013description\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "}\n\027approval_workflow_steps\030\005 \003(\0132\024.v1.Ap" +
       "provalFlowStepBF\362\370\263\007A\260\363\263\007\001\312\363\263\007(\302\364\263\007#\n\022te" +
-      "rraform-provider\022\rapproval_step\262\364\263\007\ngo_p" +
-      "rivate:v\372\370\263\007q\250\363\263\007\001\302\363\263\007a\242\363\263\007*tf_examples/" +
+      "rraform-provider\022\rapproval_step\262\364\263\007\001*\262\364\263" +
+      "\007\004!cli:v\372\370\263\007q\250\363\263\007\001\302\363\263\007a\242\363\263\007*tf_examples/" +
       "approval_workflow_resource.txt\252\363\263\007-tf_ex" +
       "amples/approval_workflow_data_source.txt" +
       "\322\363\263\007\001*\"\263\002\n\020ApprovalFlowStep\022\036\n\nquantifie" +
@@ -14770,12 +14770,12 @@ public final class ApprovalWorkflowsPlumbing {
       "verB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\022terrafor" +
       "m-provider\022\010approver:^\372\370\263\007Y\250\363\263\007\001\312\363\263\007@\362\363\263" +
       "\007\036\n\022terraform-provider\022\010TypeList\372\363\263\007\030app" +
-      "rovalFlowStepElemType\322\363\263\007\ngo_private\"\267\001\n" +
+      "rovalFlowStepElemType\322\363\263\007\001*\322\363\263\007\004!cli\"\267\001\n" +
       "\024ApprovalFlowApprover\022\036\n\naccount_id\030\001 \001(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
       "\007\001:b\372\370\263\007]\250\363\263\007\001\312\363\263\007D\362\363\263\007\036\n\022terraform-prov" +
       "ider\022\010TypeList\372\363\263\007\034approvalFlowApproverE" +
-      "lemType\322\363\263\007\ngo_private2\313\005\n\021ApprovalWorkf" +
+      "lemType\322\363\263\007\001*\322\363\263\007\004!cli2\313\005\n\021ApprovalWorkf" +
       "lows\022\177\n\006Create\022!.v1.ApprovalWorkflowCrea" +
       "teRequest\032\".v1.ApprovalWorkflowCreateRes" +
       "ponse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1/appro" +

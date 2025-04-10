@@ -8677,6 +8677,63 @@ public final class ApprovalWorkflowStepsPlumbing {
      */
     com.google.protobuf.ByteString
         getApprovalFlowIdBytes();
+
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+     * </pre>
+     *
+     * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+     * @return The quantifier.
+     */
+    java.lang.String getQuantifier();
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+     * </pre>
+     *
+     * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for quantifier.
+     */
+    com.google.protobuf.ByteString
+        getQuantifierBytes();
+
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the skipAfter field is set.
+     */
+    boolean hasSkipAfter();
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+     * @return The skipAfter.
+     */
+    com.google.protobuf.Duration getSkipAfter();
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getSkipAfterOrBuilder();
+
+    /**
+     * <pre>
+     * The position of the approval step in a sequence of approval steps for an approval workflow. Read only field for history commands.
+     * </pre>
+     *
+     * <code>int32 step_order = 5 [(.v1.field_options) = { ... }</code>
+     * @return The stepOrder.
+     */
+    int getStepOrder();
   }
   /**
    * <pre>
@@ -8697,6 +8754,7 @@ public final class ApprovalWorkflowStepsPlumbing {
     private ApprovalWorkflowStep() {
       id_ = "";
       approvalFlowId_ = "";
+      quantifier_ = "";
     }
 
     @java.lang.Override
@@ -8739,6 +8797,30 @@ public final class ApprovalWorkflowStepsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               approvalFlowId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              quantifier_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (skipAfter_ != null) {
+                subBuilder = skipAfter_.toBuilder();
+              }
+              skipAfter_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(skipAfter_);
+                skipAfter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 40: {
+
+              stepOrder_ = input.readInt32();
               break;
             }
             default: {
@@ -8867,6 +8949,105 @@ public final class ApprovalWorkflowStepsPlumbing {
       }
     }
 
+    public static final int QUANTIFIER_FIELD_NUMBER = 3;
+    private volatile java.lang.Object quantifier_;
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+     * </pre>
+     *
+     * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+     * @return The quantifier.
+     */
+    @java.lang.Override
+    public java.lang.String getQuantifier() {
+      java.lang.Object ref = quantifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quantifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+     * </pre>
+     *
+     * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for quantifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuantifierBytes() {
+      java.lang.Object ref = quantifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quantifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SKIP_AFTER_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration skipAfter_;
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the skipAfter field is set.
+     */
+    @java.lang.Override
+    public boolean hasSkipAfter() {
+      return skipAfter_ != null;
+    }
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+     * @return The skipAfter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getSkipAfter() {
+      return skipAfter_ == null ? com.google.protobuf.Duration.getDefaultInstance() : skipAfter_;
+    }
+    /**
+     * <pre>
+     * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getSkipAfterOrBuilder() {
+      return getSkipAfter();
+    }
+
+    public static final int STEP_ORDER_FIELD_NUMBER = 5;
+    private int stepOrder_;
+    /**
+     * <pre>
+     * The position of the approval step in a sequence of approval steps for an approval workflow. Read only field for history commands.
+     * </pre>
+     *
+     * <code>int32 step_order = 5 [(.v1.field_options) = { ... }</code>
+     * @return The stepOrder.
+     */
+    @java.lang.Override
+    public int getStepOrder() {
+      return stepOrder_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8887,6 +9068,15 @@ public final class ApprovalWorkflowStepsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalFlowId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, approvalFlowId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, quantifier_);
+      }
+      if (skipAfter_ != null) {
+        output.writeMessage(4, getSkipAfter());
+      }
+      if (stepOrder_ != 0) {
+        output.writeInt32(5, stepOrder_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8901,6 +9091,17 @@ public final class ApprovalWorkflowStepsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalFlowId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, approvalFlowId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, quantifier_);
+      }
+      if (skipAfter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSkipAfter());
+      }
+      if (stepOrder_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, stepOrder_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8921,6 +9122,15 @@ public final class ApprovalWorkflowStepsPlumbing {
           .equals(other.getId())) return false;
       if (!getApprovalFlowId()
           .equals(other.getApprovalFlowId())) return false;
+      if (!getQuantifier()
+          .equals(other.getQuantifier())) return false;
+      if (hasSkipAfter() != other.hasSkipAfter()) return false;
+      if (hasSkipAfter()) {
+        if (!getSkipAfter()
+            .equals(other.getSkipAfter())) return false;
+      }
+      if (getStepOrder()
+          != other.getStepOrder()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8936,6 +9146,14 @@ public final class ApprovalWorkflowStepsPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + APPROVAL_FLOW_ID_FIELD_NUMBER;
       hash = (53 * hash) + getApprovalFlowId().hashCode();
+      hash = (37 * hash) + QUANTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getQuantifier().hashCode();
+      if (hasSkipAfter()) {
+        hash = (37 * hash) + SKIP_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getSkipAfter().hashCode();
+      }
+      hash = (37 * hash) + STEP_ORDER_FIELD_NUMBER;
+      hash = (53 * hash) + getStepOrder();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9077,6 +9295,16 @@ public final class ApprovalWorkflowStepsPlumbing {
 
         approvalFlowId_ = "";
 
+        quantifier_ = "";
+
+        if (skipAfterBuilder_ == null) {
+          skipAfter_ = null;
+        } else {
+          skipAfter_ = null;
+          skipAfterBuilder_ = null;
+        }
+        stepOrder_ = 0;
+
         return this;
       }
 
@@ -9105,6 +9333,13 @@ public final class ApprovalWorkflowStepsPlumbing {
         com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStep result = new com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStep(this);
         result.id_ = id_;
         result.approvalFlowId_ = approvalFlowId_;
+        result.quantifier_ = quantifier_;
+        if (skipAfterBuilder_ == null) {
+          result.skipAfter_ = skipAfter_;
+        } else {
+          result.skipAfter_ = skipAfterBuilder_.build();
+        }
+        result.stepOrder_ = stepOrder_;
         onBuilt();
         return result;
       }
@@ -9160,6 +9395,16 @@ public final class ApprovalWorkflowStepsPlumbing {
         if (!other.getApprovalFlowId().isEmpty()) {
           approvalFlowId_ = other.approvalFlowId_;
           onChanged();
+        }
+        if (!other.getQuantifier().isEmpty()) {
+          quantifier_ = other.quantifier_;
+          onChanged();
+        }
+        if (other.hasSkipAfter()) {
+          mergeSkipAfter(other.getSkipAfter());
+        }
+        if (other.getStepOrder() != 0) {
+          setStepOrder(other.getStepOrder());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9381,6 +9626,300 @@ public final class ApprovalWorkflowStepsPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object quantifier_ = "";
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+       * </pre>
+       *
+       * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+       * @return The quantifier.
+       */
+      public java.lang.String getQuantifier() {
+        java.lang.Object ref = quantifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quantifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+       * </pre>
+       *
+       * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for quantifier.
+       */
+      public com.google.protobuf.ByteString
+          getQuantifierBytes() {
+        java.lang.Object ref = quantifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+       * </pre>
+       *
+       * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The quantifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantifier(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        quantifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+       * </pre>
+       *
+       * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuantifier() {
+        
+        quantifier_ = getDefaultInstance().getQuantifier();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether "any" or "all" approvers must approve for this approval step to pass. Read only field for history commands.
+       * </pre>
+       *
+       * <code>string quantifier = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for quantifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        quantifier_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration skipAfter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> skipAfterBuilder_;
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the skipAfter field is set.
+       */
+      public boolean hasSkipAfter() {
+        return skipAfterBuilder_ != null || skipAfter_ != null;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       * @return The skipAfter.
+       */
+      public com.google.protobuf.Duration getSkipAfter() {
+        if (skipAfterBuilder_ == null) {
+          return skipAfter_ == null ? com.google.protobuf.Duration.getDefaultInstance() : skipAfter_;
+        } else {
+          return skipAfterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setSkipAfter(com.google.protobuf.Duration value) {
+        if (skipAfterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          skipAfter_ = value;
+          onChanged();
+        } else {
+          skipAfterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setSkipAfter(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (skipAfterBuilder_ == null) {
+          skipAfter_ = builderForValue.build();
+          onChanged();
+        } else {
+          skipAfterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeSkipAfter(com.google.protobuf.Duration value) {
+        if (skipAfterBuilder_ == null) {
+          if (skipAfter_ != null) {
+            skipAfter_ =
+              com.google.protobuf.Duration.newBuilder(skipAfter_).mergeFrom(value).buildPartial();
+          } else {
+            skipAfter_ = value;
+          }
+          onChanged();
+        } else {
+          skipAfterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearSkipAfter() {
+        if (skipAfterBuilder_ == null) {
+          skipAfter_ = null;
+          onChanged();
+        } else {
+          skipAfter_ = null;
+          skipAfterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getSkipAfterBuilder() {
+        
+        onChanged();
+        return getSkipAfterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getSkipAfterOrBuilder() {
+        if (skipAfterBuilder_ != null) {
+          return skipAfterBuilder_.getMessageOrBuilder();
+        } else {
+          return skipAfter_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : skipAfter_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration after which this approval step will be skipped if no approval is given. Read only field for history commands.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration skip_after = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getSkipAfterFieldBuilder() {
+        if (skipAfterBuilder_ == null) {
+          skipAfterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getSkipAfter(),
+                  getParentForChildren(),
+                  isClean());
+          skipAfter_ = null;
+        }
+        return skipAfterBuilder_;
+      }
+
+      private int stepOrder_ ;
+      /**
+       * <pre>
+       * The position of the approval step in a sequence of approval steps for an approval workflow. Read only field for history commands.
+       * </pre>
+       *
+       * <code>int32 step_order = 5 [(.v1.field_options) = { ... }</code>
+       * @return The stepOrder.
+       */
+      @java.lang.Override
+      public int getStepOrder() {
+        return stepOrder_;
+      }
+      /**
+       * <pre>
+       * The position of the approval step in a sequence of approval steps for an approval workflow. Read only field for history commands.
+       * </pre>
+       *
+       * <code>int32 step_order = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The stepOrder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStepOrder(int value) {
+        
+        stepOrder_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the approval step in a sequence of approval steps for an approval workflow. Read only field for history commands.
+       * </pre>
+       *
+       * <code>int32 step_order = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStepOrder() {
+        
+        stepOrder_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9489,73 +10028,83 @@ public final class ApprovalWorkflowStepsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\035approval_workflow_steps.proto\022\002v1\032\ropt" +
-      "ions.proto\032\nspec.proto\"\222\001\n!ApprovalWorkf" +
-      "lowStepCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1." +
-      "CreateRequestMetadata\022D\n\026approval_workfl" +
-      "ow_step\030\002 \001(\0132\030.v1.ApprovalWorkflowStepB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\"\371\001\n\"ApprovalWorkflowStepCrea" +
-      "teResponse\022(\n\004meta\030\001 \001(\0132\032.v1.CreateResp" +
-      "onseMetadata\022D\n\026approval_workflow_step\030\002" +
-      " \001(\0132\030.v1.ApprovalWorkflowStepB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMet" +
-      "adataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!j" +
-      "son_gateway:\n\372\370\263\007\005\250\363\263\007\001\"^\n\036ApprovalWorkf" +
-      "lowStepGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.Get" +
-      "RequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"" +
-      "\377\001\n\037ApprovalWorkflowStepGetResponse\0221\n\004m" +
-      "eta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022D\n\026approval_workflow_step\030\002 \001(\0132\030" +
-      ".v1.ApprovalWorkflowStepB\n\362\370\263\007\005\260\363\263\007\001\022W\n\n" +
-      "rate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB" +
-      ",\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_ga" +
-      "teway:\n\372\370\263\007\005\250\363\263\007\001\"d\n!ApprovalWorkflowSte" +
-      "pDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Delete" +
-      "RequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"" +
-      "\313\001\n\"ApprovalWorkflowStepDeleteResponse\022(" +
-      "\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadata" +
-      "\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003" +
-      " \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005" +
-      "\250\363\263\007\001\"d\n\037ApprovalWorkflowStepListRequest" +
-      "\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022" +
-      "\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\366\001\n Approval" +
-      "WorkflowStepListResponse\022&\n\004meta\030\001 \001(\0132\030" +
-      ".v1.ListResponseMetadata\022E\n\027approval_wor" +
-      "kflow_steps\030\002 \003(\0132\030.v1.ApprovalWorkflowS" +
-      "tepB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1" +
-      ".RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001" +
-      "*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\334\001\n" +
-      "\024ApprovalWorkflowStep\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022)\n\020approval_flow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\300\363\263\007\001:\200\001\372\370\263\007{\250\363\263\007\001\302\363\263\007k\242\363\263\007/tf_exampl" +
-      "es/approval_workflow_step_resource.txt\252\363" +
-      "\263\0072tf_examples/approval_workflow_step_da" +
-      "ta_source.txt\322\363\263\007\001*2\200\005\n\025ApprovalWorkflow" +
-      "Steps\022\214\001\n\006Create\022%.v1.ApprovalWorkflowSt" +
-      "epCreateRequest\032&.v1.ApprovalWorkflowSte" +
-      "pCreateResponse\"3\202\371\263\007\t\242\363\263\007\004post\202\371\263\007 \252\363\263\007" +
-      "\033/v1/approval-workflow-steps\022\206\001\n\003Get\022\".v" +
-      "1.ApprovalWorkflowStepGetRequest\032#.v1.Ap" +
-      "provalWorkflowStepGetResponse\"6\202\371\263\007\010\242\363\263\007" +
-      "\003get\202\371\263\007$\252\363\263\007\037/v1/approval-workflow-step" +
-      "/{id}\022\216\001\n\006Delete\022%.v1.ApprovalWorkflowSt" +
-      "epDeleteRequest\032&.v1.ApprovalWorkflowSte" +
-      "pDeleteResponse\"5\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007 \252\363" +
-      "\263\007\033/v1/approval-workflow-steps\022\205\001\n\004List\022" +
-      "#.v1.ApprovalWorkflowStepListRequest\032$.v" +
-      "1.ApprovalWorkflowStepListResponse\"2\202\371\263\007" +
-      "\010\242\363\263\007\003get\202\371\263\007 \252\363\263\007\033/v1/approval-workflow" +
-      "-steps\0326\312\371\263\007\031\302\371\263\007\024ApprovalWorkflowStep\312\371" +
-      "\263\007\t\322\371\263\007\004afs-\312\371\263\007\005\350\371\263\007\001Bq\n\031com.strongdm.a" +
-      "pi.plumbingB\035ApprovalWorkflowStepsPlumbi" +
-      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
-      "v3/internal/v1;v1b\006proto3"
+      "ions.proto\032\nspec.proto\032\036google/protobuf/" +
+      "duration.proto\"\222\001\n!ApprovalWorkflowStepC" +
+      "reateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRe" +
+      "questMetadata\022D\n\026approval_workflow_step\030" +
+      "\002 \001(\0132\030.v1.ApprovalWorkflowStepB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\"\371\001\n\"ApprovalWorkflowStepCreateRespon" +
+      "se\022(\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMeta" +
+      "data\022D\n\026approval_workflow_step\030\002 \001(\0132\030.v" +
+      "1.ApprovalWorkflowStepB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nra" +
+      "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gate" +
+      "way:\n\372\370\263\007\005\250\363\263\007\001\"^\n\036ApprovalWorkflowStepG" +
+      "etRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestM" +
+      "etadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\377\001\n\037Appr" +
+      "ovalWorkflowStepGetResponse\0221\n\004meta\030\001 \001(" +
+      "\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022D" +
+      "\n\026approval_workflow_step\030\002 \001(\0132\030.v1.Appr" +
+      "ovalWorkflowStepB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_lim" +
+      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"d\n!ApprovalWorkflowStepDeleteR" +
+      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestM" +
+      "etadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\313\001\n\"Appr" +
+      "ovalWorkflowStepDeleteResponse\022(\n\004meta\030\001" +
+      " \001(\0132\032.v1.DeleteResponseMetadata\022\026\n\002id\030\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v" +
+      "1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007" +
+      "\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"d\n" +
+      "\037ApprovalWorkflowStepListRequest\022%\n\004meta" +
+      "\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filte" +
+      "r\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\366\001\n ApprovalWorkflow" +
+      "StepListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.List" +
+      "ResponseMetadata\022E\n\027approval_workflow_st" +
+      "eps\030\002 \003(\0132\030.v1.ApprovalWorkflowStepB\n\362\370\263" +
+      "\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLim" +
+      "itMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364" +
+      "\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\364\003\n\024Approva" +
+      "lWorkflowStep\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n" +
+      "\020approval_flow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
+      "\022J\n\nquantifier\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263" +
+      "\007\001*\262\364\263\007\023!terraform-provider\262\364\263\007\004!cli\022e\n\n" +
+      "skip_after\030\004 \001(\0132\031.google.protobuf.Durat" +
+      "ionB6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terrafor" +
+      "m-provider\262\364\263\007\004!cli\022J\n\nstep_order\030\005 \001(\005B" +
+      "6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-pr" +
+      "ovider\262\364\263\007\004!cli:\231\001\372\370\263\007\223\001\250\363\263\007\001\302\363\263\007k\242\363\263\007/t" +
+      "f_examples/approval_workflow_step_resour" +
+      "ce.txt\252\363\263\0072tf_examples/approval_workflow" +
+      "_step_data_source.txt\322\363\263\007\001*\322\363\263\007\023!terrafo" +
+      "rm-provider2\253\005\n\025ApprovalWorkflowSteps\022\214\001" +
+      "\n\006Create\022%.v1.ApprovalWorkflowStepCreate" +
+      "Request\032&.v1.ApprovalWorkflowStepCreateR" +
+      "esponse\"3\202\371\263\007\t\242\363\263\007\004post\202\371\263\007 \252\363\263\007\033/v1/app" +
+      "roval-workflow-steps\022\206\001\n\003Get\022\".v1.Approv" +
+      "alWorkflowStepGetRequest\032#.v1.ApprovalWo" +
+      "rkflowStepGetResponse\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
+      "$\252\363\263\007\037/v1/approval-workflow-step/{id}\022\216\001" +
+      "\n\006Delete\022%.v1.ApprovalWorkflowStepDelete" +
+      "Request\032&.v1.ApprovalWorkflowStepDeleteR" +
+      "esponse\"5\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007 \252\363\263\007\033/v1/a" +
+      "pproval-workflow-steps\022\205\001\n\004List\022#.v1.App" +
+      "rovalWorkflowStepListRequest\032$.v1.Approv" +
+      "alWorkflowStepListResponse\"2\202\371\263\007\010\242\363\263\007\003ge" +
+      "t\202\371\263\007 \252\363\263\007\033/v1/approval-workflow-steps\032a" +
+      "\210\002\001\312\371\263\007\031\302\371\263\007\024ApprovalWorkflowStep\312\371\263\007\t\322\371" +
+      "\263\007\004afs-\312\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!t" +
+      "erraform-providerBq\n\031com.strongdm.api.pl" +
+      "umbingB\035ApprovalWorkflowStepsPlumbingZ5g" +
+      "ithub.com/strongdm/strongdm-sdk-go/v3/in" +
+      "ternal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.strongdm.api.plumbing.Options.getDescriptor(),
           com.strongdm.api.plumbing.Spec.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         });
     internal_static_v1_ApprovalWorkflowStepCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9610,7 +10159,7 @@ public final class ApprovalWorkflowStepsPlumbing {
     internal_static_v1_ApprovalWorkflowStep_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ApprovalWorkflowStep_descriptor,
-        new java.lang.String[] { "Id", "ApprovalFlowId", });
+        new java.lang.String[] { "Id", "ApprovalFlowId", "Quantifier", "SkipAfter", "StepOrder", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
@@ -9621,6 +10170,7 @@ public final class ApprovalWorkflowStepsPlumbing {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.strongdm.api.plumbing.Options.getDescriptor();
     com.strongdm.api.plumbing.Spec.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+import java.util.List;
+
 /**
  * ApprovalWorkflows are the mechanism by which requests for access can be viewed by authorized
  * approvers and be approved or denied.
@@ -30,6 +32,16 @@ public class ApprovalWorkflow {
   /** Approval mode of the ApprovalWorkflow */
   public void setApprovalMode(String in) {
     this.approvalMode = in;
+  }
+
+  private List<ApprovalFlowStep> approvalWorkflowSteps;
+  /** The approval steps of this approval workflow */
+  public List<ApprovalFlowStep> getApprovalWorkflowSteps() {
+    return this.approvalWorkflowSteps;
+  }
+  /** The approval steps of this approval workflow */
+  public void setApprovalWorkflowSteps(List<ApprovalFlowStep> in) {
+    this.approvalWorkflowSteps = in;
   }
 
   private String description;

@@ -31,6 +31,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /** ApprovalWorkflowSteps link approval workflow steps to an ApprovalWorkflow */
+@Deprecated
 public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
   private final ApprovalWorkflowStepsGrpc.ApprovalWorkflowStepsBlockingStub stub;
   private final Client parent;
@@ -54,7 +55,7 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
   public ApprovalWorkflowSteps withDeadlineAfter(long duration, TimeUnit units) {
     return new ApprovalWorkflowSteps(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  /** Create creates a new approval workflow step. */
+  /** Deprecated: Create creates a new approval workflow step. */
   public ApprovalWorkflowStepCreateResponse create(ApprovalWorkflowStep approvalWorkflowStep)
       throws RpcException {
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateRequest.Builder builder =
@@ -83,7 +84,7 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
     }
     return Plumbing.convertApprovalWorkflowStepCreateResponseToPorcelain(plumbingResponse);
   }
-  /** Get reads one approval workflow step by ID. */
+  /** Deprecated: Get reads one approval workflow step by ID. */
   public ApprovalWorkflowStepGetResponse get(String id) throws RpcException {
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetRequest.Builder builder =
         ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetRequest.newBuilder();
@@ -115,7 +116,7 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
     }
     return Plumbing.convertApprovalWorkflowStepGetResponseToPorcelain(plumbingResponse);
   }
-  /** Delete deletes an existing approval workflow step. */
+  /** Deprecated: Delete deletes an existing approval workflow step. */
   public ApprovalWorkflowStepDeleteResponse delete(String id) throws RpcException {
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteRequest.Builder builder =
         ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteRequest.newBuilder();
@@ -142,7 +143,7 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
     }
     return Plumbing.convertApprovalWorkflowStepDeleteResponseToPorcelain(plumbingResponse);
   }
-  /** Lists existing approval workflow steps. */
+  /** Deprecated: Lists existing approval workflow steps. */
   public Iterable<ApprovalWorkflowStep> list(String filter, Object... args) throws RpcException {
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepListRequest.Builder builder =
         ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepListRequest.newBuilder();
