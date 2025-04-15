@@ -22,8 +22,8 @@ import java.util.concurrent.Executor;
 class SigningCallCredential extends CallCredentials {
   private final String apiAccessKey;
   private final String signature;
-  private static final String API_VERSION = "2024-03-28";
-  private static final String USER_AGENT = "strongdm-sdk-java/14.0.0";
+  private static final String API_VERSION = "2025-04-14";
+  private static final String USER_AGENT = "strongdm-sdk-java/14.2.0";
 
   protected SigningCallCredential(String apiAccessKey, String signature) {
     this.apiAccessKey = apiAccessKey;
