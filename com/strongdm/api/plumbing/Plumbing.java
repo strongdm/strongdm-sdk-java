@@ -13625,6 +13625,93 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.OracleNNE convertOracleNNEToPorcelain(OracleNNE plumbing) {
+    com.strongdm.api.OracleNNE porcelain = new com.strongdm.api.OracleNNE();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static OracleNNE convertOracleNNEToPlumbing(com.strongdm.api.OracleNNE porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    OracleNNE.Builder builder = OracleNNE.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.OracleNNE> convertRepeatedOracleNNEToPorcelain(
+      Collection<OracleNNE> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.OracleNNE>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertOracleNNEToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<OracleNNE> convertRepeatedOracleNNEToPlumbing(
+      Collection<com.strongdm.api.OracleNNE> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<OracleNNE>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertOracleNNEToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Organization convertOrganizationToPorcelain(
       Organization plumbing) {
     com.strongdm.api.Organization porcelain = new com.strongdm.api.Organization();
@@ -17414,6 +17501,9 @@ public class Plumbing {
     if (plumbing.hasOracle()) {
       return convertOracleToPorcelain(plumbing.getOracle());
     }
+    if (plumbing.hasOracleNne()) {
+      return convertOracleNNEToPorcelain(plumbing.getOracleNne());
+    }
     if (plumbing.hasPostgres()) {
       return convertPostgresToPorcelain(plumbing.getPostgres());
     }
@@ -17932,6 +18022,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Oracle) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setOracle(convertOracleToPlumbing((com.strongdm.api.Oracle) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.OracleNNE) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setOracleNne(convertOracleNNEToPlumbing((com.strongdm.api.OracleNNE) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Postgres) {
