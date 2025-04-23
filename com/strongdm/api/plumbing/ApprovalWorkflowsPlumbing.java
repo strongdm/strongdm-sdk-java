@@ -13877,6 +13877,28 @@ public final class ApprovalWorkflowsPlumbing {
      */
     com.google.protobuf.ByteString
         getRoleIdBytes();
+
+    /**
+     * <pre>
+     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * If set, the account_id and role_id must be empty.
+     * </pre>
+     *
+     * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+     * @return The reference.
+     */
+    java.lang.String getReference();
+    /**
+     * <pre>
+     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * If set, the account_id and role_id must be empty.
+     * </pre>
+     *
+     * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for reference.
+     */
+    com.google.protobuf.ByteString
+        getReferenceBytes();
   }
   /**
    * <pre>
@@ -13897,6 +13919,7 @@ public final class ApprovalWorkflowsPlumbing {
     private ApprovalFlowApprover() {
       accountId_ = "";
       roleId_ = "";
+      reference_ = "";
     }
 
     @java.lang.Override
@@ -13939,6 +13962,12 @@ public final class ApprovalWorkflowsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               roleId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reference_ = s;
               break;
             }
             default: {
@@ -14067,6 +14096,54 @@ public final class ApprovalWorkflowsPlumbing {
       }
     }
 
+    public static final int REFERENCE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object reference_;
+    /**
+     * <pre>
+     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * If set, the account_id and role_id must be empty.
+     * </pre>
+     *
+     * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+     * @return The reference.
+     */
+    @java.lang.Override
+    public java.lang.String getReference() {
+      java.lang.Object ref = reference_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reference_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * If set, the account_id and role_id must be empty.
+     * </pre>
+     *
+     * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for reference.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReferenceBytes() {
+      java.lang.Object ref = reference_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reference_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14087,6 +14164,9 @@ public final class ApprovalWorkflowsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roleId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reference_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reference_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14101,6 +14181,9 @@ public final class ApprovalWorkflowsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roleId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reference_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reference_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14121,6 +14204,8 @@ public final class ApprovalWorkflowsPlumbing {
           .equals(other.getAccountId())) return false;
       if (!getRoleId()
           .equals(other.getRoleId())) return false;
+      if (!getReference()
+          .equals(other.getReference())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14136,6 +14221,8 @@ public final class ApprovalWorkflowsPlumbing {
       hash = (53 * hash) + getAccountId().hashCode();
       hash = (37 * hash) + ROLE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRoleId().hashCode();
+      hash = (37 * hash) + REFERENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getReference().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14277,6 +14364,8 @@ public final class ApprovalWorkflowsPlumbing {
 
         roleId_ = "";
 
+        reference_ = "";
+
         return this;
       }
 
@@ -14305,6 +14394,7 @@ public final class ApprovalWorkflowsPlumbing {
         com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover result = new com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.ApprovalFlowApprover(this);
         result.accountId_ = accountId_;
         result.roleId_ = roleId_;
+        result.reference_ = reference_;
         onBuilt();
         return result;
       }
@@ -14359,6 +14449,10 @@ public final class ApprovalWorkflowsPlumbing {
         }
         if (!other.getRoleId().isEmpty()) {
           roleId_ = other.roleId_;
+          onChanged();
+        }
+        if (!other.getReference().isEmpty()) {
+          reference_ = other.reference_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -14581,6 +14675,107 @@ public final class ApprovalWorkflowsPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object reference_ = "";
+      /**
+       * <pre>
+       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * If set, the account_id and role_id must be empty.
+       * </pre>
+       *
+       * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+       * @return The reference.
+       */
+      public java.lang.String getReference() {
+        java.lang.Object ref = reference_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reference_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * If set, the account_id and role_id must be empty.
+       * </pre>
+       *
+       * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for reference.
+       */
+      public com.google.protobuf.ByteString
+          getReferenceBytes() {
+        java.lang.Object ref = reference_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reference_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * If set, the account_id and role_id must be empty.
+       * </pre>
+       *
+       * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The reference to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReference(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reference_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * If set, the account_id and role_id must be empty.
+       * </pre>
+       *
+       * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReference() {
+        
+        reference_ = getDefaultInstance().getReference();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * If set, the account_id and role_id must be empty.
+       * </pre>
+       *
+       * <code>string reference = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for reference to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReferenceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reference_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14770,33 +14965,34 @@ public final class ApprovalWorkflowsPlumbing {
       "verB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\022terrafor" +
       "m-provider\022\010approver:^\372\370\263\007Y\250\363\263\007\001\312\363\263\007@\362\363\263" +
       "\007\036\n\022terraform-provider\022\010TypeList\372\363\263\007\030app" +
-      "rovalFlowStepElemType\322\363\263\007\001*\322\363\263\007\004!cli\"\267\001\n" +
+      "rovalFlowStepElemType\322\363\263\007\001*\322\363\263\007\004!cli\"\345\001\n" +
       "\024ApprovalFlowApprover\022\036\n\naccount_id\030\001 \001(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:b\372\370\263\007]\250\363\263\007\001\312\363\263\007D\362\363\263\007\036\n\022terraform-prov" +
-      "ider\022\010TypeList\372\363\263\007\034approvalFlowApproverE" +
-      "lemType\322\363\263\007\001*\322\363\263\007\004!cli2\313\005\n\021ApprovalWorkf" +
-      "lows\022\177\n\006Create\022!.v1.ApprovalWorkflowCrea" +
-      "teRequest\032\".v1.ApprovalWorkflowCreateRes" +
-      "ponse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1/appro" +
-      "val-workflows\022y\n\003Get\022\036.v1.ApprovalWorkfl" +
-      "owGetRequest\032\037.v1.ApprovalWorkflowGetRes" +
-      "ponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/approv" +
-      "al-workflow/{id}\022\201\001\n\006Delete\022!.v1.Approva" +
-      "lWorkflowDeleteRequest\032\".v1.ApprovalWork" +
-      "flowDeleteResponse\"0\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
-      "\033\252\363\263\007\026/v1/approval-workflows\022~\n\006Update\022!" +
-      ".v1.ApprovalWorkflowUpdateRequest\032\".v1.A" +
-      "pprovalWorkflowUpdateResponse\"-\202\371\263\007\010\242\363\263\007" +
-      "\003put\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\022x\n\004" +
-      "List\022\037.v1.ApprovalWorkflowListRequest\032 ." +
-      "v1.ApprovalWorkflowListResponse\"-\202\371\263\007\010\242\363" +
-      "\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\032<" +
-      "\312\371\263\007\025\302\371\263\007\020ApprovalWorkflow\312\371\263\007\010\322\371\263\007\003af-\312" +
-      "\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*Bm\n\031com.strongdm.api" +
-      ".plumbingB\031ApprovalWorkflowsPlumbingZ5gi" +
-      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
-      "ernal/v1;v1b\006proto3"
+      "\007\001\022,\n\treference\030\003 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo" +
+      "_private:b\372\370\263\007]\250\363\263\007\001\312\363\263\007D\362\363\263\007\036\n\022terrafor" +
+      "m-provider\022\010TypeList\372\363\263\007\034approvalFlowApp" +
+      "roverElemType\322\363\263\007\001*\322\363\263\007\004!cli2\313\005\n\021Approva" +
+      "lWorkflows\022\177\n\006Create\022!.v1.ApprovalWorkfl" +
+      "owCreateRequest\032\".v1.ApprovalWorkflowCre" +
+      "ateResponse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1" +
+      "/approval-workflows\022y\n\003Get\022\036.v1.Approval" +
+      "WorkflowGetRequest\032\037.v1.ApprovalWorkflow" +
+      "GetResponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/" +
+      "approval-workflow/{id}\022\201\001\n\006Delete\022!.v1.A" +
+      "pprovalWorkflowDeleteRequest\032\".v1.Approv" +
+      "alWorkflowDeleteResponse\"0\202\371\263\007\013\242\363\263\007\006dele" +
+      "te\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\022~\n\006Up" +
+      "date\022!.v1.ApprovalWorkflowUpdateRequest\032" +
+      "\".v1.ApprovalWorkflowUpdateResponse\"-\202\371\263" +
+      "\007\010\242\363\263\007\003put\202\371\263\007\033\252\363\263\007\026/v1/approval-workflo" +
+      "ws\022x\n\004List\022\037.v1.ApprovalWorkflowListRequ" +
+      "est\032 .v1.ApprovalWorkflowListResponse\"-\202" +
+      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/approval-workf" +
+      "lows\032<\312\371\263\007\025\302\371\263\007\020ApprovalWorkflow\312\371\263\007\010\322\371\263" +
+      "\007\003af-\312\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*Bm\n\031com.strong" +
+      "dm.api.plumbingB\031ApprovalWorkflowsPlumbi" +
+      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
+      "v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14882,7 +15078,7 @@ public final class ApprovalWorkflowsPlumbing {
     internal_static_v1_ApprovalFlowApprover_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ApprovalFlowApprover_descriptor,
-        new java.lang.String[] { "AccountId", "RoleId", });
+        new java.lang.String[] { "AccountId", "RoleId", "Reference", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

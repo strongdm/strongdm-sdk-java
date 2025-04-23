@@ -12859,6 +12859,28 @@ public final class AccountsPlumbing {
      */
     com.google.protobuf.ByteString
         getManagerIdBytes();
+
+    /**
+     * <pre>
+     * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+     * if present, or from the SCIM metadata.
+     * </pre>
+     *
+     * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+     * @return The resolvedManagerId.
+     */
+    java.lang.String getResolvedManagerId();
+    /**
+     * <pre>
+     * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+     * if present, or from the SCIM metadata.
+     * </pre>
+     *
+     * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for resolvedManagerId.
+     */
+    com.google.protobuf.ByteString
+        getResolvedManagerIdBytes();
   }
   /**
    * <pre>
@@ -12889,6 +12911,7 @@ public final class AccountsPlumbing {
       password_ = "";
       sCIM_ = "";
       managerId_ = "";
+      resolvedManagerId_ = "";
     }
 
     @java.lang.Override
@@ -13008,6 +13031,12 @@ public final class AccountsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               managerId_ = s;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resolvedManagerId_ = s;
               break;
             }
             default: {
@@ -13620,6 +13649,54 @@ public final class AccountsPlumbing {
       }
     }
 
+    public static final int RESOLVED_MANAGER_ID_FIELD_NUMBER = 15;
+    private volatile java.lang.Object resolvedManagerId_;
+    /**
+     * <pre>
+     * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+     * if present, or from the SCIM metadata.
+     * </pre>
+     *
+     * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+     * @return The resolvedManagerId.
+     */
+    @java.lang.Override
+    public java.lang.String getResolvedManagerId() {
+      java.lang.Object ref = resolvedManagerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resolvedManagerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+     * if present, or from the SCIM metadata.
+     * </pre>
+     *
+     * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for resolvedManagerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResolvedManagerIdBytes() {
+      java.lang.Object ref = resolvedManagerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resolvedManagerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13676,6 +13753,9 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, managerId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedManagerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, resolvedManagerId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13730,6 +13810,9 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, managerId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedManagerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, resolvedManagerId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13776,6 +13859,8 @@ public final class AccountsPlumbing {
           .equals(other.getSCIM())) return false;
       if (!getManagerId()
           .equals(other.getManagerId())) return false;
+      if (!getResolvedManagerId()
+          .equals(other.getResolvedManagerId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13819,6 +13904,8 @@ public final class AccountsPlumbing {
       hash = (53 * hash) + getSCIM().hashCode();
       hash = (37 * hash) + MANAGER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getManagerId().hashCode();
+      hash = (37 * hash) + RESOLVED_MANAGER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResolvedManagerId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13989,6 +14076,8 @@ public final class AccountsPlumbing {
 
         managerId_ = "";
 
+        resolvedManagerId_ = "";
+
         return this;
       }
 
@@ -14033,6 +14122,7 @@ public final class AccountsPlumbing {
         result.password_ = password_;
         result.sCIM_ = sCIM_;
         result.managerId_ = managerId_;
+        result.resolvedManagerId_ = resolvedManagerId_;
         onBuilt();
         return result;
       }
@@ -14132,6 +14222,10 @@ public final class AccountsPlumbing {
         }
         if (!other.getManagerId().isEmpty()) {
           managerId_ = other.managerId_;
+          onChanged();
+        }
+        if (!other.getResolvedManagerId().isEmpty()) {
+          resolvedManagerId_ = other.resolvedManagerId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -15461,6 +15555,107 @@ public final class AccountsPlumbing {
   checkByteStringIsUtf8(value);
         
         managerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resolvedManagerId_ = "";
+      /**
+       * <pre>
+       * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+       * if present, or from the SCIM metadata.
+       * </pre>
+       *
+       * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+       * @return The resolvedManagerId.
+       */
+      public java.lang.String getResolvedManagerId() {
+        java.lang.Object ref = resolvedManagerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resolvedManagerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+       * if present, or from the SCIM metadata.
+       * </pre>
+       *
+       * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for resolvedManagerId.
+       */
+      public com.google.protobuf.ByteString
+          getResolvedManagerIdBytes() {
+        java.lang.Object ref = resolvedManagerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resolvedManagerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+       * if present, or from the SCIM metadata.
+       * </pre>
+       *
+       * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+       * @param value The resolvedManagerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResolvedManagerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resolvedManagerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+       * if present, or from the SCIM metadata.
+       * </pre>
+       *
+       * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResolvedManagerId() {
+        
+        resolvedManagerId_ = getDefaultInstance().getResolvedManagerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
+       * if present, or from the SCIM metadata.
+       * </pre>
+       *
+       * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for resolvedManagerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResolvedManagerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resolvedManagerId_ = value;
         onChanged();
         return this;
       }
@@ -19223,7 +19418,7 @@ public final class AccountsPlumbing {
       "\263\007M\242\363\263\007 tf_examples/account_resource.txt" +
       "\252\363\263\007#tf_examples/account_data_source.txt" +
       "B,\n\007account\022!\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263" +
-      "\007\004tags\"\210\010\n\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\007\004tags\"\305\010\n\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "\036\n\005email\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst" +
       "_name\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\tlast_nam" +
       "e\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022*\n\tsuspended\030\005 " +
@@ -19248,38 +19443,39 @@ public final class AccountsPlumbing {
       "\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\004SCIM" +
       "\030\r \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022E" +
       "\n\nmanager_id\030\016 \001(\tB1\362\370\263\007,\260\363\263\007\001\262\364\263\007\ngo_pr" +
-      "ivate\262\364\263\007\023!terraform-provider:\n\372\370\263\007\005\250\363\263\007" +
-      "\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
-      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspende" +
-      "d\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\201\003\n\005Token\022\026\n" +
-      "\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263" +
-      "\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "7\n\007rekeyed\030\005 \001(\0132\032.google.protobuf.Times" +
-      "tampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014ac" +
-      "count_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013permissi" +
-      "ons\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030\t \001(\0132" +
-      "\031.google.protobuf.DurationB\n\362\370\263\007\005\260\363\263\007\001:\017" +
-      "\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n\010Accounts\022c\n\006Create\022\030" +
-      ".v1.AccountCreateRequest\032\031.v1.AccountCre" +
-      "ateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1" +
-      "/accounts\022^\n\003Get\022\025.v1.AccountGetRequest\032" +
-      "\026.v1.AccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371" +
-      "\263\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006Update\022\030.v1" +
-      ".AccountUpdateRequest\032\031.v1.AccountUpdate" +
-      "Response\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/acc" +
-      "ounts/{id}\022j\n\006Delete\022\030.v1.AccountDeleteR" +
-      "equest\032\031.v1.AccountDeleteResponse\"+\202\371\263\007\013" +
-      "\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\" +
-      "\n\004List\022\026.v1.AccountListRequest\032\027.v1.Acco" +
-      "untListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014" +
-      "/v1/accounts\0326\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007" +
-      "\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd\n\031com.stro" +
-      "ngdm.api.plumbingB\020AccountsPlumbingZ5git" +
-      "hub.com/strongdm/strongdm-sdk-go/v3/inte" +
-      "rnal/v1;v1b\006proto3"
+      "ivate\262\364\263\007\023!terraform-provider\022;\n\023resolve" +
+      "d_manager_id\030\017 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\n" +
+      "go_private:\n\372\370\263\007\005\250\363\263\007\001\"\217\001\n\007Service\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"\201\003\n\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsus" +
+      "pended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032." +
+      "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n" +
+      "\010deadline\030\006 \001(\0132\032.google.protobuf.Timest" +
+      "ampB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014account_type\030\007 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\037\n\013permissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\0227\n\010duration\030\t \001(\0132\031.google.protobuf.D" +
+      "urationB\n\362\370\263\007\005\260\363\263\007\001:\017\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n" +
+      "\010Accounts\022c\n\006Create\022\030.v1.AccountCreateRe" +
+      "quest\032\031.v1.AccountCreateResponse\"$\202\371\263\007\t\242" +
+      "\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/accounts\022^\n\003Get\022\025." +
+      "v1.AccountGetRequest\032\026.v1.AccountGetResp" +
+      "onse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/account" +
+      "s/{id}\022g\n\006Update\022\030.v1.AccountUpdateReque" +
+      "st\032\031.v1.AccountUpdateResponse\"(\202\371\263\007\010\242\363\263\007" +
+      "\003put\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022j\n\006Delet" +
+      "e\022\030.v1.AccountDeleteRequest\032\031.v1.Account" +
+      "DeleteResponse\"+\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263" +
+      "\007\021/v1/accounts/{id}\022\\\n\004List\022\026.v1.Account" +
+      "ListRequest\032\027.v1.AccountListResponse\"#\202\371" +
+      "\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/accounts\0326\312\371\263\007\014" +
+      "\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t" +
+      "\312\371\263\007\004!cliBd\n\031com.strongdm.api.plumbingB\020" +
+      "AccountsPlumbingZ5github.com/strongdm/st" +
+      "rongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19361,7 +19557,7 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", "SCIM", "ManagerId", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", "SCIM", "ManagerId", "ResolvedManagerId", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new
