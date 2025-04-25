@@ -18,8 +18,8 @@
 package com.strongdm.api;
 
 /**
- * An approver for an approval workflow step. Specifies either an account_id or an role_id (not
- * both)
+ * An approver for an approval workflow step. Each approver can specify exactly one of: account_id,
+ * role_id, or reference
  */
 public class ApprovalFlowApprover {
   private String accountId;
@@ -30,6 +30,22 @@ public class ApprovalFlowApprover {
   /** The approver account id. */
   public void setAccountId(String in) {
     this.accountId = in;
+  }
+
+  private String reference;
+  /**
+   * A reference to an approver. Must be one of ApproverReference constants. If set, the account_id
+   * and role_id must be empty.
+   */
+  public String getReference() {
+    return this.reference;
+  }
+  /**
+   * A reference to an approver. Must be one of ApproverReference constants. If set, the account_id
+   * and role_id must be empty.
+   */
+  public void setReference(String in) {
+    this.reference = in;
   }
 
   private String roleId;

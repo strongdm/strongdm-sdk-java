@@ -59,6 +59,26 @@ public class ApprovalWorkflowApprover {
     this.id = in;
   }
 
+  private String reference;
+  /**
+   * A reference to an approver. Will be one of ApproverReference constants. This field is only
+   * populated when reading historical Approval Workflow Approvers data through the Approval
+   * Workflows History API. For the deprecated Approval Workflow Approvers API no value is returned
+   * for this field and it is non-settable.
+   */
+  public String getReference() {
+    return this.reference;
+  }
+  /**
+   * A reference to an approver. Will be one of ApproverReference constants. This field is only
+   * populated when reading historical Approval Workflow Approvers data through the Approval
+   * Workflows History API. For the deprecated Approval Workflow Approvers API no value is returned
+   * for this field and it is non-settable.
+   */
+  public void setReference(String in) {
+    this.reference = in;
+  }
+
   private String roleId;
   /** The approver role id */
   public String getRoleId() {

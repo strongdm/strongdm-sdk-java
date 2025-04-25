@@ -13880,7 +13880,7 @@ public final class ApprovalWorkflowsPlumbing {
 
     /**
      * <pre>
-     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * A reference to an approver. Must be one of ApproverReference constants.
      * If set, the account_id and role_id must be empty.
      * </pre>
      *
@@ -13890,7 +13890,7 @@ public final class ApprovalWorkflowsPlumbing {
     java.lang.String getReference();
     /**
      * <pre>
-     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * A reference to an approver. Must be one of ApproverReference constants.
      * If set, the account_id and role_id must be empty.
      * </pre>
      *
@@ -13902,7 +13902,7 @@ public final class ApprovalWorkflowsPlumbing {
   }
   /**
    * <pre>
-   * An approver for an approval workflow step. Specifies either an account_id or an role_id (not both)
+   * An approver for an approval workflow step. Each approver can specify exactly one of: account_id, role_id, or reference
    * </pre>
    *
    * Protobuf type {@code v1.ApprovalFlowApprover}
@@ -14100,7 +14100,7 @@ public final class ApprovalWorkflowsPlumbing {
     private volatile java.lang.Object reference_;
     /**
      * <pre>
-     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * A reference to an approver. Must be one of ApproverReference constants.
      * If set, the account_id and role_id must be empty.
      * </pre>
      *
@@ -14122,7 +14122,7 @@ public final class ApprovalWorkflowsPlumbing {
     }
     /**
      * <pre>
-     * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+     * A reference to an approver. Must be one of ApproverReference constants.
      * If set, the account_id and role_id must be empty.
      * </pre>
      *
@@ -14320,7 +14320,7 @@ public final class ApprovalWorkflowsPlumbing {
     }
     /**
      * <pre>
-     * An approver for an approval workflow step. Specifies either an account_id or an role_id (not both)
+     * An approver for an approval workflow step. Each approver can specify exactly one of: account_id, role_id, or reference
      * </pre>
      *
      * Protobuf type {@code v1.ApprovalFlowApprover}
@@ -14679,7 +14679,7 @@ public final class ApprovalWorkflowsPlumbing {
       private java.lang.Object reference_ = "";
       /**
        * <pre>
-       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * A reference to an approver. Must be one of ApproverReference constants.
        * If set, the account_id and role_id must be empty.
        * </pre>
        *
@@ -14700,7 +14700,7 @@ public final class ApprovalWorkflowsPlumbing {
       }
       /**
        * <pre>
-       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * A reference to an approver. Must be one of ApproverReference constants.
        * If set, the account_id and role_id must be empty.
        * </pre>
        *
@@ -14722,7 +14722,7 @@ public final class ApprovalWorkflowsPlumbing {
       }
       /**
        * <pre>
-       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * A reference to an approver. Must be one of ApproverReference constants.
        * If set, the account_id and role_id must be empty.
        * </pre>
        *
@@ -14742,7 +14742,7 @@ public final class ApprovalWorkflowsPlumbing {
       }
       /**
        * <pre>
-       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * A reference to an approver. Must be one of ApproverReference constants.
        * If set, the account_id and role_id must be empty.
        * </pre>
        *
@@ -14757,7 +14757,7 @@ public final class ApprovalWorkflowsPlumbing {
       }
       /**
        * <pre>
-       * A reference to an approver: "" or "manager-of-requester" or "manager-of-manager-of-requester"
+       * A reference to an approver. Must be one of ApproverReference constants.
        * If set, the account_id and role_id must be empty.
        * </pre>
        *
@@ -14965,34 +14965,34 @@ public final class ApprovalWorkflowsPlumbing {
       "verB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\022terrafor" +
       "m-provider\022\010approver:^\372\370\263\007Y\250\363\263\007\001\312\363\263\007@\362\363\263" +
       "\007\036\n\022terraform-provider\022\010TypeList\372\363\263\007\030app" +
-      "rovalFlowStepElemType\322\363\263\007\001*\322\363\263\007\004!cli\"\345\001\n" +
+      "rovalFlowStepElemType\322\363\263\007\001*\322\363\263\007\004!cli\"\326\001\n" +
       "\024ApprovalFlowApprover\022\036\n\naccount_id\030\001 \001(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022,\n\treference\030\003 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo" +
-      "_private:b\372\370\263\007]\250\363\263\007\001\312\363\263\007D\362\363\263\007\036\n\022terrafor" +
-      "m-provider\022\010TypeList\372\363\263\007\034approvalFlowApp" +
-      "roverElemType\322\363\263\007\001*\322\363\263\007\004!cli2\313\005\n\021Approva" +
-      "lWorkflows\022\177\n\006Create\022!.v1.ApprovalWorkfl" +
-      "owCreateRequest\032\".v1.ApprovalWorkflowCre" +
-      "ateResponse\".\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1" +
-      "/approval-workflows\022y\n\003Get\022\036.v1.Approval" +
-      "WorkflowGetRequest\032\037.v1.ApprovalWorkflow" +
-      "GetResponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/" +
-      "approval-workflow/{id}\022\201\001\n\006Delete\022!.v1.A" +
-      "pprovalWorkflowDeleteRequest\032\".v1.Approv" +
-      "alWorkflowDeleteResponse\"0\202\371\263\007\013\242\363\263\007\006dele" +
-      "te\202\371\263\007\033\252\363\263\007\026/v1/approval-workflows\022~\n\006Up" +
-      "date\022!.v1.ApprovalWorkflowUpdateRequest\032" +
-      "\".v1.ApprovalWorkflowUpdateResponse\"-\202\371\263" +
-      "\007\010\242\363\263\007\003put\202\371\263\007\033\252\363\263\007\026/v1/approval-workflo" +
-      "ws\022x\n\004List\022\037.v1.ApprovalWorkflowListRequ" +
-      "est\032 .v1.ApprovalWorkflowListResponse\"-\202" +
-      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/approval-workf" +
-      "lows\032<\312\371\263\007\025\302\371\263\007\020ApprovalWorkflow\312\371\263\007\010\322\371\263" +
-      "\007\003af-\312\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*Bm\n\031com.strong" +
-      "dm.api.plumbingB\031ApprovalWorkflowsPlumbi" +
-      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
-      "v3/internal/v1;v1b\006proto3"
+      "\007\001\022\035\n\treference\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:b\372\370\263\007]" +
+      "\250\363\263\007\001\312\363\263\007D\362\363\263\007\036\n\022terraform-provider\022\010Typ" +
+      "eList\372\363\263\007\034approvalFlowApproverElemType\322\363" +
+      "\263\007\001*\322\363\263\007\004!cli2\313\005\n\021ApprovalWorkflows\022\177\n\006C" +
+      "reate\022!.v1.ApprovalWorkflowCreateRequest" +
+      "\032\".v1.ApprovalWorkflowCreateResponse\".\202\371" +
+      "\263\007\t\242\363\263\007\004post\202\371\263\007\033\252\363\263\007\026/v1/approval-workf" +
+      "lows\022y\n\003Get\022\036.v1.ApprovalWorkflowGetRequ" +
+      "est\032\037.v1.ApprovalWorkflowGetResponse\"1\202\371" +
+      "\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/approval-workfl" +
+      "ow/{id}\022\201\001\n\006Delete\022!.v1.ApprovalWorkflow" +
+      "DeleteRequest\032\".v1.ApprovalWorkflowDelet" +
+      "eResponse\"0\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1" +
+      "/approval-workflows\022~\n\006Update\022!.v1.Appro" +
+      "valWorkflowUpdateRequest\032\".v1.ApprovalWo" +
+      "rkflowUpdateResponse\"-\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\033" +
+      "\252\363\263\007\026/v1/approval-workflows\022x\n\004List\022\037.v1" +
+      ".ApprovalWorkflowListRequest\032 .v1.Approv" +
+      "alWorkflowListResponse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\033\252\363\263\007\026/v1/approval-workflows\032<\312\371\263\007\025\302\371\263\007" +
+      "\020ApprovalWorkflow\312\371\263\007\010\322\371\263\007\003af-\312\371\263\007\005\350\371\263\007\001" +
+      "\312\371\263\007\006\312\371\263\007\001*Bm\n\031com.strongdm.api.plumbing" +
+      "B\031ApprovalWorkflowsPlumbingZ5github.com/" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

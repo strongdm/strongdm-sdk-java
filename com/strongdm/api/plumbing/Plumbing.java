@@ -3856,6 +3856,7 @@ public class Plumbing {
       ApprovalFlowApprover plumbing) {
     com.strongdm.api.ApprovalFlowApprover porcelain = new com.strongdm.api.ApprovalFlowApprover();
     porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setReference((plumbing.getReference()));
     porcelain.setRoleId((plumbing.getRoleId()));
     return porcelain;
   }
@@ -3868,6 +3869,9 @@ public class Plumbing {
     ApprovalFlowApprover.Builder builder = ApprovalFlowApprover.newBuilder();
     if (porcelain.getAccountId() != null) {
       builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getReference() != null) {
+      builder.setReference((porcelain.getReference()));
     }
     if (porcelain.getRoleId() != null) {
       builder.setRoleId((porcelain.getRoleId()));
@@ -4006,6 +4010,7 @@ public class Plumbing {
     porcelain.setApprovalFlowId((plumbing.getApprovalFlowId()));
     porcelain.setApprovalStepId((plumbing.getApprovalStepId()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setReference((plumbing.getReference()));
     porcelain.setRoleId((plumbing.getRoleId()));
     return porcelain;
   }
@@ -4027,6 +4032,9 @@ public class Plumbing {
     }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getReference() != null) {
+      builder.setReference((porcelain.getReference()));
     }
     if (porcelain.getRoleId() != null) {
       builder.setRoleId((porcelain.getRoleId()));
