@@ -1931,10 +1931,20 @@ public final class DiscoveryPlumbing {
 
     /**
      * <pre>
+     * The scan ID of the scan that recorded the data.
+     * </pre>
+     *
+     * <code>int64 scan_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The scanId.
+     */
+    long getScanId();
+
+    /**
+     * <pre>
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Component> 
         getComponentsList();
@@ -1943,7 +1953,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.DiscoveryPlumbing.Component getComponents(int index);
     /**
@@ -1951,7 +1961,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     int getComponentsCount();
     /**
@@ -1959,7 +1969,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     java.util.List<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentOrBuilder> 
         getComponentsOrBuilderList();
@@ -1968,7 +1978,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentOrBuilder getComponentsOrBuilder(
         int index);
@@ -2024,7 +2034,12 @@ public final class DiscoveryPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 8: {
+
+              scanId_ = input.readInt64();
+              break;
+            }
+            case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 components_ = new java.util.ArrayList<com.strongdm.api.plumbing.DiscoveryPlumbing.Component>();
                 mutable_bitField0_ |= 0x00000001;
@@ -2070,14 +2085,29 @@ public final class DiscoveryPlumbing {
               com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet.class, com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet.Builder.class);
     }
 
-    public static final int COMPONENTS_FIELD_NUMBER = 1;
+    public static final int SCAN_ID_FIELD_NUMBER = 1;
+    private long scanId_;
+    /**
+     * <pre>
+     * The scan ID of the scan that recorded the data.
+     * </pre>
+     *
+     * <code>int64 scan_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The scanId.
+     */
+    @java.lang.Override
+    public long getScanId() {
+      return scanId_;
+    }
+
+    public static final int COMPONENTS_FIELD_NUMBER = 2;
     private java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Component> components_;
     /**
      * <pre>
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Component> getComponentsList() {
@@ -2088,7 +2118,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentOrBuilder> 
@@ -2100,7 +2130,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public int getComponentsCount() {
@@ -2111,7 +2141,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.DiscoveryPlumbing.Component getComponents(int index) {
@@ -2122,7 +2152,7 @@ public final class DiscoveryPlumbing {
      * The components in the component set.
      * </pre>
      *
-     * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentOrBuilder getComponentsOrBuilder(
@@ -2144,8 +2174,11 @@ public final class DiscoveryPlumbing {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (scanId_ != 0L) {
+        output.writeInt64(1, scanId_);
+      }
       for (int i = 0; i < components_.size(); i++) {
-        output.writeMessage(1, components_.get(i));
+        output.writeMessage(2, components_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2156,9 +2189,13 @@ public final class DiscoveryPlumbing {
       if (size != -1) return size;
 
       size = 0;
+      if (scanId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, scanId_);
+      }
       for (int i = 0; i < components_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, components_.get(i));
+          .computeMessageSize(2, components_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2175,6 +2212,8 @@ public final class DiscoveryPlumbing {
       }
       com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet other = (com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet) obj;
 
+      if (getScanId()
+          != other.getScanId()) return false;
       if (!getComponentsList()
           .equals(other.getComponentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -2188,6 +2227,9 @@ public final class DiscoveryPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCAN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getScanId());
       if (getComponentsCount() > 0) {
         hash = (37 * hash) + COMPONENTS_FIELD_NUMBER;
         hash = (53 * hash) + getComponentsList().hashCode();
@@ -2330,6 +2372,8 @@ public final class DiscoveryPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        scanId_ = 0L;
+
         if (componentsBuilder_ == null) {
           components_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -2363,6 +2407,7 @@ public final class DiscoveryPlumbing {
       public com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet buildPartial() {
         com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet result = new com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet(this);
         int from_bitField0_ = bitField0_;
+        result.scanId_ = scanId_;
         if (componentsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             components_ = java.util.Collections.unmodifiableList(components_);
@@ -2420,6 +2465,9 @@ public final class DiscoveryPlumbing {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet other) {
         if (other == com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentSet.getDefaultInstance()) return this;
+        if (other.getScanId() != 0L) {
+          setScanId(other.getScanId());
+        }
         if (componentsBuilder_ == null) {
           if (!other.components_.isEmpty()) {
             if (components_.isEmpty()) {
@@ -2476,6 +2524,49 @@ public final class DiscoveryPlumbing {
       }
       private int bitField0_;
 
+      private long scanId_ ;
+      /**
+       * <pre>
+       * The scan ID of the scan that recorded the data.
+       * </pre>
+       *
+       * <code>int64 scan_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The scanId.
+       */
+      @java.lang.Override
+      public long getScanId() {
+        return scanId_;
+      }
+      /**
+       * <pre>
+       * The scan ID of the scan that recorded the data.
+       * </pre>
+       *
+       * <code>int64 scan_id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The scanId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScanId(long value) {
+        
+        scanId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The scan ID of the scan that recorded the data.
+       * </pre>
+       *
+       * <code>int64 scan_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScanId() {
+        
+        scanId_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Component> components_ =
         java.util.Collections.emptyList();
       private void ensureComponentsIsMutable() {
@@ -2493,7 +2584,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Component> getComponentsList() {
         if (componentsBuilder_ == null) {
@@ -2507,7 +2598,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public int getComponentsCount() {
         if (componentsBuilder_ == null) {
@@ -2521,7 +2612,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.DiscoveryPlumbing.Component getComponents(int index) {
         if (componentsBuilder_ == null) {
@@ -2535,7 +2626,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setComponents(
           int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Component value) {
@@ -2556,7 +2647,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setComponents(
           int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Component.Builder builderForValue) {
@@ -2574,7 +2665,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addComponents(com.strongdm.api.plumbing.DiscoveryPlumbing.Component value) {
         if (componentsBuilder_ == null) {
@@ -2594,7 +2685,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addComponents(
           int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Component value) {
@@ -2615,7 +2706,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addComponents(
           com.strongdm.api.plumbing.DiscoveryPlumbing.Component.Builder builderForValue) {
@@ -2633,7 +2724,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addComponents(
           int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Component.Builder builderForValue) {
@@ -2651,7 +2742,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addAllComponents(
           java.lang.Iterable<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.Component> values) {
@@ -2670,7 +2761,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearComponents() {
         if (componentsBuilder_ == null) {
@@ -2687,7 +2778,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder removeComponents(int index) {
         if (componentsBuilder_ == null) {
@@ -2704,7 +2795,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.DiscoveryPlumbing.Component.Builder getComponentsBuilder(
           int index) {
@@ -2715,7 +2806,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentOrBuilder getComponentsOrBuilder(
           int index) {
@@ -2729,7 +2820,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public java.util.List<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.ComponentOrBuilder> 
            getComponentsOrBuilderList() {
@@ -2744,7 +2835,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.DiscoveryPlumbing.Component.Builder addComponentsBuilder() {
         return getComponentsFieldBuilder().addBuilder(
@@ -2755,7 +2846,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.plumbing.DiscoveryPlumbing.Component.Builder addComponentsBuilder(
           int index) {
@@ -2767,7 +2858,7 @@ public final class DiscoveryPlumbing {
        * The components in the component set.
        * </pre>
        *
-       * <code>repeated .v1.Component components = 1 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.Component components = 2 [(.v1.field_options) = { ... }</code>
        */
       public java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Component.Builder> 
            getComponentsBuilderList() {
@@ -4132,24 +4223,24 @@ public final class DiscoveryPlumbing {
       "\005\260\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private\"c" +
       "\n\027DiscoveryRecordResponse\022(\n\004meta\030\001 \001(\0132" +
       "\032.v1.CreateResponseMetadata:\036\372\370\263\007\005\250\363\263\007\001\372" +
-      "\370\263\007\017\322\363\263\007\ngo_private\"]\n\014ComponentSet\022-\n\nc" +
-      "omponents\030\001 \003(\0132\r.v1.ComponentB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private\"\360\001\n\tC" +
-      "omponent\022\030\n\004hash\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004ki" +
-      "nd\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007version\030\006 \001(\003B\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022\030\n\004data\030\007 \001(\014B\n\362\370\263\007\005\260\363\263\007\001\022:\n\nu" +
-      "pdated_at\030\t \001(\0132\032.google.protobuf.Timest" +
-      "ampB\n\362\370\263\007\005\260\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_" +
-      "privateJ\004\010\001\020\002J\004\010\002\020\003J\004\010\003\020\004J\004\010\010\020\tJ\004\010\n\020\0132\242\001" +
-      "\n\013DiscoveryV2\022h\n\006Record\022\032.v1.DiscoveryRe" +
-      "cordRequest\032\033.v1.DiscoveryRecordResponse" +
-      "\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/discovery\032" +
-      ")\312\371\263\007\020\302\371\263\007\013DiscoveryV2\312\371\263\007\017\312\371\263\007\ngo_priva" +
-      "teB\226\001\n\031com.strongdm.api.plumbingB\021Discov" +
-      "eryPlumbingZ5github.com/strongdm/strongd" +
-      "m-sdk-go/v3/internal/v1;v1\302\222\264\007\017\242\214\264\007\ngo_p" +
-      "rivate\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006pro" +
-      "to3"
+      "\370\263\007\017\322\363\263\007\ngo_private\"z\n\014ComponentSet\022\033\n\007s" +
+      "can_id\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022-\n\ncomponents\030\002" +
+      " \003(\0132\r.v1.ComponentB\n\362\370\263\007\005\260\363\263\007\001:\036\372\370\263\007\005\250\363" +
+      "\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private\"\360\001\n\tComponent\022\030\n" +
+      "\004hash\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004kind\030\005 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\033\n\007version\030\006 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\030" +
+      "\n\004data\030\007 \001(\014B\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\t" +
+      " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
+      "\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_privateJ\004\010\001" +
+      "\020\002J\004\010\002\020\003J\004\010\003\020\004J\004\010\010\020\tJ\004\010\n\020\0132\242\001\n\013Discovery" +
+      "V2\022h\n\006Record\022\032.v1.DiscoveryRecordRequest" +
+      "\032\033.v1.DiscoveryRecordResponse\"%\202\371\263\007\t\242\363\263\007" +
+      "\004post\202\371\263\007\022\252\363\263\007\r/v1/discovery\032)\312\371\263\007\020\302\371\263\007\013" +
+      "DiscoveryV2\312\371\263\007\017\312\371\263\007\ngo_privateB\226\001\n\031com." +
+      "strongdm.api.plumbingB\021DiscoveryPlumbing" +
+      "Z5github.com/strongdm/strongdm-sdk-go/v3" +
+      "/internal/v1;v1\302\222\264\007\017\242\214\264\007\ngo_private\302\222\264\007\030" +
+      "\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4175,7 +4266,7 @@ public final class DiscoveryPlumbing {
     internal_static_v1_ComponentSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ComponentSet_descriptor,
-        new java.lang.String[] { "Components", });
+        new java.lang.String[] { "ScanId", "Components", });
     internal_static_v1_Component_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_Component_fieldAccessorTable = new
