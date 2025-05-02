@@ -21751,7 +21751,6 @@ public class Plumbing {
   public static com.strongdm.api.Trino convertTrinoToPorcelain(Trino plumbing) {
     com.strongdm.api.Trino porcelain = new com.strongdm.api.Trino();
     porcelain.setBindInterface((plumbing.getBindInterface()));
-    porcelain.setDatabase((plumbing.getDatabase()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
@@ -21775,9 +21774,6 @@ public class Plumbing {
     Trino.Builder builder = Trino.newBuilder();
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase((porcelain.getDatabase()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));

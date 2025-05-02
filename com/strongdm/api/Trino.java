@@ -38,22 +38,6 @@ public class Trino implements Resource {
     this.bindInterface = in;
   }
 
-  private String database;
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
-  public String getDatabase() {
-    return this.database;
-  }
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
-  public void setDatabase(String in) {
-    this.database = in;
-  }
-
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
