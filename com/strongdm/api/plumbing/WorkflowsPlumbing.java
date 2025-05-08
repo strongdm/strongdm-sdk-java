@@ -10888,10 +10888,12 @@ public final class WorkflowsPlumbing {
      * Optional auto grant setting to automatically approve requests or not, defaults to false.
      * </pre>
      *
-     * <code>bool auto_grant = 5 [(.v1.field_options) = { ... }</code>
+     * <code>bool auto_grant = 5 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Workflow.auto_grant is deprecated.
+     *     See workflows.proto;l=209
      * @return The autoGrant.
      */
-    boolean getAutoGrant();
+    @java.lang.Deprecated boolean getAutoGrant();
 
     /**
      * <pre>
@@ -11344,11 +11346,13 @@ public final class WorkflowsPlumbing {
      * Optional auto grant setting to automatically approve requests or not, defaults to false.
      * </pre>
      *
-     * <code>bool auto_grant = 5 [(.v1.field_options) = { ... }</code>
+     * <code>bool auto_grant = 5 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Workflow.auto_grant is deprecated.
+     *     See workflows.proto;l=209
      * @return The autoGrant.
      */
     @java.lang.Override
-    public boolean getAutoGrant() {
+    @java.lang.Deprecated public boolean getAutoGrant() {
       return autoGrant_;
     }
 
@@ -12406,11 +12410,13 @@ public final class WorkflowsPlumbing {
        * Optional auto grant setting to automatically approve requests or not, defaults to false.
        * </pre>
        *
-       * <code>bool auto_grant = 5 [(.v1.field_options) = { ... }</code>
+       * <code>bool auto_grant = 5 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Workflow.auto_grant is deprecated.
+       *     See workflows.proto;l=209
        * @return The autoGrant.
        */
       @java.lang.Override
-      public boolean getAutoGrant() {
+      @java.lang.Deprecated public boolean getAutoGrant() {
         return autoGrant_;
       }
       /**
@@ -12418,11 +12424,13 @@ public final class WorkflowsPlumbing {
        * Optional auto grant setting to automatically approve requests or not, defaults to false.
        * </pre>
        *
-       * <code>bool auto_grant = 5 [(.v1.field_options) = { ... }</code>
+       * <code>bool auto_grant = 5 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Workflow.auto_grant is deprecated.
+       *     See workflows.proto;l=209
        * @param value The autoGrant to set.
        * @return This builder for chaining.
        */
-      public Builder setAutoGrant(boolean value) {
+      @java.lang.Deprecated public Builder setAutoGrant(boolean value) {
         
         autoGrant_ = value;
         onChanged();
@@ -12433,10 +12441,12 @@ public final class WorkflowsPlumbing {
        * Optional auto grant setting to automatically approve requests or not, defaults to false.
        * </pre>
        *
-       * <code>bool auto_grant = 5 [(.v1.field_options) = { ... }</code>
+       * <code>bool auto_grant = 5 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Workflow.auto_grant is deprecated.
+       *     See workflows.proto;l=209
        * @return This builder for chaining.
        */
-      public Builder clearAutoGrant() {
+      @java.lang.Deprecated public Builder clearAutoGrant() {
         
         autoGrant_ = false;
         onChanged();
@@ -13220,43 +13230,44 @@ public final class WorkflowsPlumbing {
       "lows\030\002 \003(\0132\014.v1.WorkflowB\n\362\370\263\007\005\270\363\263\007\001\022W\n\n" +
       "rate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB" +
       ",\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_ga" +
-      "teway:\n\372\370\263\007\005\250\363\263\007\001\"\217\006\n\010Workflow\022\026\n\002id\030\001 \001" +
+      "teway:\n\372\370\263\007\005\250\363\263\007\001\"\221\006\n\010Workflow\022\026\n\002id\030\001 \001" +
       "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
       "\300\363\263\007\001\022\037\n\013description\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
-      "\n\006weight\030\004 \001(\003B\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022\036\n\nauto_" +
-      "grant\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabled\030\006 \001(\010" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030\007 \001(\010B\031\362" +
-      "\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022J\n\033access_reque" +
-      "st_max_duration\030\n \001(\0132\031.google.protobuf." +
-      "DurationB\n\362\370\263\007\005\260\363\263\007\001\022L\n\035access_request_f" +
-      "ixed_duration\030\013 \001(\0132\031.google.protobuf.Du" +
-      "rationB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\010 \001(" +
-      "\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules\362\363" +
-      "\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022\013A" +
-      "ccessRules\362\363\263\007\033\n\014go_terraform\022\013AccessRul" +
-      "es\362\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014js" +
-      "on_gateway\022\022models.AccessRules\272\364\263\007\027acces" +
-      "sRulesDiffSuppress\320\364\263\007\001\022$\n\020approval_flow" +
-      "_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\302\363\263\007O\242\363" +
-      "\263\007!tf_examples/workflow_resource.txt\252\363\263\007" +
-      "$tf_examples/workflow_data_source.txt\322\363\263" +
-      "\007\001*2\262\004\n\tWorkflows\022f\n\006Create\022\031.v1.Workflo" +
-      "wCreateRequest\032\032.v1.WorkflowCreateRespon" +
-      "se\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/workflow" +
-      "s\022`\n\003Get\022\026.v1.WorkflowGetRequest\032\027.v1.Wo" +
-      "rkflowGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263" +
-      "\007\021/v1/workflow/{id}\022h\n\006Delete\022\031.v1.Workf" +
-      "lowDeleteRequest\032\032.v1.WorkflowDeleteResp" +
-      "onse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\022\252\363\263\007\r/v1/work" +
-      "flows\022e\n\006Update\022\031.v1.WorkflowUpdateReque" +
-      "st\032\032.v1.WorkflowUpdateResponse\"$\202\371\263\007\010\242\363\263" +
-      "\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflows\022_\n\004List\022\027.v" +
-      "1.WorkflowListRequest\032\030.v1.WorkflowListR" +
-      "esponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v1/work" +
-      "flows\032)\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007\010\322\371\263\007\003aw-\312\371" +
-      "\263\007\005\350\371\263\007\001Be\n\031com.strongdm.api.plumbingB\021W" +
-      "orkflowsPlumbingZ5github.com/strongdm/st" +
-      "rongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\n\006weight\030\004 \001(\003B\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022 \n\nauto_" +
+      "grant\030\005 \001(\010B\014\030\001\362\370\263\007\005\260\363\263\007\001\022\033\n\007enabled\030\006 \001" +
+      "(\010B\n\362\370\263\007\005\260\363\263\007\001\0222\n\017requires_reason\030\007 \001(\010B" +
+      "\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022J\n\033access_req" +
+      "uest_max_duration\030\n \001(\0132\031.google.protobu" +
+      "f.DurationB\n\362\370\263\007\005\260\363\263\007\001\022L\n\035access_request" +
+      "_fixed_duration\030\013 \001(\0132\031.google.protobuf." +
+      "DurationB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\010 " +
+      "\001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules" +
+      "\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022" +
+      "\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013AccessR" +
+      "ules\362\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014" +
+      "json_gateway\022\022models.AccessRules\272\364\263\007\027acc" +
+      "essRulesDiffSuppress\320\364\263\007\001\022$\n\020approval_fl" +
+      "ow_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\302\363\263\007O" +
+      "\242\363\263\007!tf_examples/workflow_resource.txt\252\363" +
+      "\263\007$tf_examples/workflow_data_source.txt\322" +
+      "\363\263\007\001*2\262\004\n\tWorkflows\022f\n\006Create\022\031.v1.Workf" +
+      "lowCreateRequest\032\032.v1.WorkflowCreateResp" +
+      "onse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/workfl" +
+      "ows\022`\n\003Get\022\026.v1.WorkflowGetRequest\032\027.v1." +
+      "WorkflowGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252" +
+      "\363\263\007\021/v1/workflow/{id}\022h\n\006Delete\022\031.v1.Wor" +
+      "kflowDeleteRequest\032\032.v1.WorkflowDeleteRe" +
+      "sponse\"\'\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\022\252\363\263\007\r/v1/wo" +
+      "rkflows\022e\n\006Update\022\031.v1.WorkflowUpdateReq" +
+      "uest\032\032.v1.WorkflowUpdateResponse\"$\202\371\263\007\010\242" +
+      "\363\263\007\003put\202\371\263\007\022\252\363\263\007\r/v1/workflows\022_\n\004List\022\027" +
+      ".v1.WorkflowListRequest\032\030.v1.WorkflowLis" +
+      "tResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v1/wo" +
+      "rkflows\032)\312\371\263\007\r\302\371\263\007\010Workflow\312\371\263\007\010\322\371\263\007\003aw-" +
+      "\312\371\263\007\005\350\371\263\007\001Be\n\031com.strongdm.api.plumbingB" +
+      "\021WorkflowsPlumbingZ5github.com/strongdm/" +
+      "strongdm-sdk-go/v3/internal/v1;v1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

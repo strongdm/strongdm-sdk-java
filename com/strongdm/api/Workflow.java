@@ -88,10 +88,12 @@ public class Workflow {
 
   private boolean autoGrant;
   /** Optional auto grant setting to automatically approve requests or not, defaults to false. */
+  @Deprecated
   public boolean getAutoGrant() {
     return this.autoGrant;
   }
   /** Optional auto grant setting to automatically approve requests or not, defaults to false. */
+  @Deprecated
   public void setAutoGrant(boolean in) {
     this.autoGrant = in;
   }

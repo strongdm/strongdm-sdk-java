@@ -21,6 +21,7 @@ package com.strongdm.api;
  * WorkflowApprover is an account or a role with the ability to approve requests bound to a
  * workflow.
  */
+@Deprecated
 public class WorkflowApprover {
   private String accountId;
   /** The approver account id. */

@@ -8634,7 +8634,7 @@ public final class ApprovalWorkflowApproversPlumbing {
 
   }
 
-  public interface ApprovalWorkflowApproverOrBuilder extends
+  @java.lang.Deprecated public interface ApprovalWorkflowApproverOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.ApprovalWorkflowApprover)
       com.google.protobuf.MessageOrBuilder {
 
@@ -8769,7 +8769,7 @@ public final class ApprovalWorkflowApproversPlumbing {
    *
    * Protobuf type {@code v1.ApprovalWorkflowApprover}
    */
-  public static final class ApprovalWorkflowApprover extends
+  @java.lang.Deprecated public static final class ApprovalWorkflowApprover extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.ApprovalWorkflowApprover)
       ApprovalWorkflowApproverOrBuilder {
@@ -10288,17 +10288,14 @@ public final class ApprovalWorkflowApproversPlumbing {
       "\0132\034.v1.ApprovalWorkflowApproverB\n\362\370\263\007\005\270\363" +
       "\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
       "tadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!" +
-      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\264\003\n\030ApprovalWor" +
+      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\274\002\n\030ApprovalWor" +
       "kflowApprover\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n" +
       "\020approval_flow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
       "\022)\n\020approval_step_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
       "\263\007\001\022\036\n\naccount_id\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007r" +
       "ole_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022I\n\treference\030\006 " +
       "\001(\tB6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terrafor" +
-      "m-provider\262\364\263\007\004!cli:\241\001\372\370\263\007\233\001\250\363\263\007\001\302\363\263\007s\242\363" +
-      "\263\0073tf_examples/approval_workflow_approve" +
-      "r_resource.txt\252\363\263\0076tf_examples/approval_" +
-      "workflow_approver_data_source.txt\322\363\263\007\001*\322" +
+      "m-provider\262\364\263\007\004!cli:*\030\001\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322" +
       "\363\263\007\023!terraform-provider2\343\005\n\031ApprovalWork" +
       "flowApprovers\022\230\001\n\006Create\022).v1.ApprovalWo" +
       "rkflowApproverCreateRequest\032*.v1.Approva" +

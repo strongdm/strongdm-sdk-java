@@ -18,6 +18,7 @@
 package com.strongdm.api;
 
 /** ApprovalWorkflowApprover links an approval workflow approver to an ApprovalWorkflowStep */
+@Deprecated
 public class ApprovalWorkflowApprover {
   private String accountId;
   /** The approver account id. */

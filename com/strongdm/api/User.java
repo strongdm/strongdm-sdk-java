@@ -19,6 +19,16 @@ package com.strongdm.api;
 
 /** A User can connect to resources they are granted directly, or granted via roles. */
 public class User implements Account {
+  private String scim;
+  /** SCIM contains the raw SCIM metadata for the user. This is a read-only field. */
+  public String getSCIM() {
+    return this.scim;
+  }
+  /** SCIM contains the raw SCIM metadata for the user. This is a read-only field. */
+  public void setSCIM(String in) {
+    this.scim = in;
+  }
+
   private String email;
   /** The User's email address. Must be unique. */
   public String getEmail() {
@@ -87,6 +97,20 @@ public class User implements Account {
     this.managedBy = in;
   }
 
+  private String managerId;
+  /**
+   * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+   */
+  public String getManagerId() {
+    return this.managerId;
+  }
+  /**
+   * Manager ID is the ID of the user's manager. This field is empty when the user has no manager.
+   */
+  public void setManagerId(String in) {
+    this.managerId = in;
+  }
+
   private String password;
   /**
    * Password is a write-only field that can be used to set the user's password. Currently only
@@ -111,6 +135,22 @@ public class User implements Account {
   /** PermissionLevel is the user's permission level e.g. admin, DBA, user. */
   public void setPermissionLevel(String in) {
     this.permissionLevel = in;
+  }
+
+  private String resolvedManagerId;
+  /**
+   * Resolved Manager ID is the ID of the user's manager derived from the manager_id, if present, or
+   * from the SCIM metadata. This is a read-only field that's only populated for get and list.
+   */
+  public String getResolvedManagerId() {
+    return this.resolvedManagerId;
+  }
+  /**
+   * Resolved Manager ID is the ID of the user's manager derived from the manager_id, if present, or
+   * from the SCIM metadata. This is a read-only field that's only populated for get and list.
+   */
+  public void setResolvedManagerId(String in) {
+    this.resolvedManagerId = in;
   }
 
   private boolean suspended;

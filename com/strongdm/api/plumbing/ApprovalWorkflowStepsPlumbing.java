@@ -8634,7 +8634,7 @@ public final class ApprovalWorkflowStepsPlumbing {
 
   }
 
-  public interface ApprovalWorkflowStepOrBuilder extends
+  @java.lang.Deprecated public interface ApprovalWorkflowStepOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.ApprovalWorkflowStep)
       com.google.protobuf.MessageOrBuilder {
 
@@ -8742,7 +8742,7 @@ public final class ApprovalWorkflowStepsPlumbing {
    *
    * Protobuf type {@code v1.ApprovalWorkflowStep}
    */
-  public static final class ApprovalWorkflowStep extends
+  @java.lang.Deprecated public static final class ApprovalWorkflowStep extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.ApprovalWorkflowStep)
       ApprovalWorkflowStepOrBuilder {
@@ -10064,7 +10064,7 @@ public final class ApprovalWorkflowStepsPlumbing {
       "eps\030\002 \003(\0132\030.v1.ApprovalWorkflowStepB\n\362\370\263" +
       "\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLim" +
       "itMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364" +
-      "\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\364\003\n\024Approva" +
+      "\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\204\003\n\024Approva" +
       "lWorkflowStep\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n" +
       "\020approval_flow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
       "\022J\n\nquantifier\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263" +
@@ -10073,31 +10073,28 @@ public final class ApprovalWorkflowStepsPlumbing {
       "ionB6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terrafor" +
       "m-provider\262\364\263\007\004!cli\022J\n\nstep_order\030\005 \001(\005B" +
       "6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-pr" +
-      "ovider\262\364\263\007\004!cli:\231\001\372\370\263\007\223\001\250\363\263\007\001\302\363\263\007k\242\363\263\007/t" +
-      "f_examples/approval_workflow_step_resour" +
-      "ce.txt\252\363\263\0072tf_examples/approval_workflow" +
-      "_step_data_source.txt\322\363\263\007\001*\322\363\263\007\023!terrafo" +
-      "rm-provider2\253\005\n\025ApprovalWorkflowSteps\022\214\001" +
-      "\n\006Create\022%.v1.ApprovalWorkflowStepCreate" +
-      "Request\032&.v1.ApprovalWorkflowStepCreateR" +
-      "esponse\"3\202\371\263\007\t\242\363\263\007\004post\202\371\263\007 \252\363\263\007\033/v1/app" +
-      "roval-workflow-steps\022\206\001\n\003Get\022\".v1.Approv" +
-      "alWorkflowStepGetRequest\032#.v1.ApprovalWo" +
-      "rkflowStepGetResponse\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
-      "$\252\363\263\007\037/v1/approval-workflow-step/{id}\022\216\001" +
-      "\n\006Delete\022%.v1.ApprovalWorkflowStepDelete" +
-      "Request\032&.v1.ApprovalWorkflowStepDeleteR" +
-      "esponse\"5\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007 \252\363\263\007\033/v1/a" +
-      "pproval-workflow-steps\022\205\001\n\004List\022#.v1.App" +
-      "rovalWorkflowStepListRequest\032$.v1.Approv" +
-      "alWorkflowStepListResponse\"2\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007 \252\363\263\007\033/v1/approval-workflow-steps\032a" +
-      "\210\002\001\312\371\263\007\031\302\371\263\007\024ApprovalWorkflowStep\312\371\263\007\t\322\371" +
-      "\263\007\004afs-\312\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!t" +
-      "erraform-providerBq\n\031com.strongdm.api.pl" +
-      "umbingB\035ApprovalWorkflowStepsPlumbingZ5g" +
-      "ithub.com/strongdm/strongdm-sdk-go/v3/in" +
-      "ternal/v1;v1b\006proto3"
+      "ovider\262\364\263\007\004!cli:*\030\001\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023" +
+      "!terraform-provider2\253\005\n\025ApprovalWorkflow" +
+      "Steps\022\214\001\n\006Create\022%.v1.ApprovalWorkflowSt" +
+      "epCreateRequest\032&.v1.ApprovalWorkflowSte" +
+      "pCreateResponse\"3\202\371\263\007\t\242\363\263\007\004post\202\371\263\007 \252\363\263\007" +
+      "\033/v1/approval-workflow-steps\022\206\001\n\003Get\022\".v" +
+      "1.ApprovalWorkflowStepGetRequest\032#.v1.Ap" +
+      "provalWorkflowStepGetResponse\"6\202\371\263\007\010\242\363\263\007" +
+      "\003get\202\371\263\007$\252\363\263\007\037/v1/approval-workflow-step" +
+      "/{id}\022\216\001\n\006Delete\022%.v1.ApprovalWorkflowSt" +
+      "epDeleteRequest\032&.v1.ApprovalWorkflowSte" +
+      "pDeleteResponse\"5\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007 \252\363" +
+      "\263\007\033/v1/approval-workflow-steps\022\205\001\n\004List\022" +
+      "#.v1.ApprovalWorkflowStepListRequest\032$.v" +
+      "1.ApprovalWorkflowStepListResponse\"2\202\371\263\007" +
+      "\010\242\363\263\007\003get\202\371\263\007 \252\363\263\007\033/v1/approval-workflow" +
+      "-steps\032a\210\002\001\312\371\263\007\031\302\371\263\007\024ApprovalWorkflowSte" +
+      "p\312\371\263\007\t\322\371\263\007\004afs-\312\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007" +
+      "\030\312\371\263\007\023!terraform-providerBq\n\031com.strongd" +
+      "m.api.plumbingB\035ApprovalWorkflowStepsPlu" +
+      "mbingZ5github.com/strongdm/strongdm-sdk-" +
+      "go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

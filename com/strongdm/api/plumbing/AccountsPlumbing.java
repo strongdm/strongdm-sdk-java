@@ -12864,6 +12864,7 @@ public final class AccountsPlumbing {
      * <pre>
      * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
      * if present, or from the SCIM metadata.
+     * This is a read-only field that's only populated for get and list.
      * </pre>
      *
      * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -12874,6 +12875,7 @@ public final class AccountsPlumbing {
      * <pre>
      * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
      * if present, or from the SCIM metadata.
+     * This is a read-only field that's only populated for get and list.
      * </pre>
      *
      * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -13655,6 +13657,7 @@ public final class AccountsPlumbing {
      * <pre>
      * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
      * if present, or from the SCIM metadata.
+     * This is a read-only field that's only populated for get and list.
      * </pre>
      *
      * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -13677,6 +13680,7 @@ public final class AccountsPlumbing {
      * <pre>
      * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
      * if present, or from the SCIM metadata.
+     * This is a read-only field that's only populated for get and list.
      * </pre>
      *
      * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -15564,6 +15568,7 @@ public final class AccountsPlumbing {
        * <pre>
        * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
        * if present, or from the SCIM metadata.
+       * This is a read-only field that's only populated for get and list.
        * </pre>
        *
        * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -15585,6 +15590,7 @@ public final class AccountsPlumbing {
        * <pre>
        * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
        * if present, or from the SCIM metadata.
+       * This is a read-only field that's only populated for get and list.
        * </pre>
        *
        * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -15607,6 +15613,7 @@ public final class AccountsPlumbing {
        * <pre>
        * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
        * if present, or from the SCIM metadata.
+       * This is a read-only field that's only populated for get and list.
        * </pre>
        *
        * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -15627,6 +15634,7 @@ public final class AccountsPlumbing {
        * <pre>
        * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
        * if present, or from the SCIM metadata.
+       * This is a read-only field that's only populated for get and list.
        * </pre>
        *
        * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -15642,6 +15650,7 @@ public final class AccountsPlumbing {
        * <pre>
        * Resolved Manager ID is the ID of the user's manager derived from the manager_id,
        * if present, or from the SCIM metadata.
+       * This is a read-only field that's only populated for get and list.
        * </pre>
        *
        * <code>string resolved_manager_id = 15 [(.v1.field_options) = { ... }</code>
@@ -19418,7 +19427,7 @@ public final class AccountsPlumbing {
       "\263\007M\242\363\263\007 tf_examples/account_resource.txt" +
       "\252\363\263\007#tf_examples/account_data_source.txt" +
       "B,\n\007account\022!\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263" +
-      "\007\004tags\"\305\010\n\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\007\004tags\"\222\010\n\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "\036\n\005email\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst" +
       "_name\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\tlast_nam" +
       "e\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022*\n\tsuspended\030\005 " +
@@ -19440,42 +19449,41 @@ public final class AccountsPlumbing {
       "vel\302\364\263\007&\n\022terraform-provider\022\020permission" +
       "_level\302\364\263\007\037\n\014json_gateway\022\017permissionLev" +
       "el\320\364\263\007\001\022?\n\010password\030\014 \001(\tB-\362\370\263\007(\260\363\263\007\001\350\363\263" +
-      "\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\004SCIM" +
-      "\030\r \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022E" +
-      "\n\nmanager_id\030\016 \001(\tB1\362\370\263\007,\260\363\263\007\001\262\364\263\007\ngo_pr" +
-      "ivate\262\364\263\007\023!terraform-provider\022;\n\023resolve" +
-      "d_manager_id\030\017 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\n" +
-      "go_private:\n\372\370\263\007\005\250\363\263\007\001\"\217\001\n\007Service\022\026\n\002id" +
-      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370" +
-      "\263\007\005\250\363\263\007\001\"\201\003\n\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsus" +
-      "pended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010" +
-      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032." +
-      "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n" +
-      "\010deadline\030\006 \001(\0132\032.google.protobuf.Timest" +
-      "ampB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014account_type\030\007 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022\037\n\013permissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\0227\n\010duration\030\t \001(\0132\031.google.protobuf.D" +
-      "urationB\n\362\370\263\007\005\260\363\263\007\001:\017\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n" +
-      "\010Accounts\022c\n\006Create\022\030.v1.AccountCreateRe" +
-      "quest\032\031.v1.AccountCreateResponse\"$\202\371\263\007\t\242" +
-      "\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/accounts\022^\n\003Get\022\025." +
-      "v1.AccountGetRequest\032\026.v1.AccountGetResp" +
-      "onse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/account" +
-      "s/{id}\022g\n\006Update\022\030.v1.AccountUpdateReque" +
-      "st\032\031.v1.AccountUpdateResponse\"(\202\371\263\007\010\242\363\263\007" +
-      "\003put\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022j\n\006Delet" +
-      "e\022\030.v1.AccountDeleteRequest\032\031.v1.Account" +
-      "DeleteResponse\"+\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263" +
-      "\007\021/v1/accounts/{id}\022\\\n\004List\022\026.v1.Account" +
-      "ListRequest\032\027.v1.AccountListResponse\"#\202\371" +
-      "\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/accounts\0326\312\371\263\007\014" +
-      "\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t" +
-      "\312\371\263\007\004!cliBd\n\031com.strongdm.api.plumbingB\020" +
-      "AccountsPlumbingZ5github.com/strongdm/st" +
-      "rongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022#\n\004SCIM" +
+      "\030\r \001(\tB\025\362\370\263\007\020\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\022$\n\nmanager" +
+      "_id\030\016 \001(\tB\020\362\370\263\007\013\260\363\263\007\001\262\364\263\007\001*\0222\n\023resolved_" +
+      "manager_id\030\017 \001(\tB\025\362\370\263\007\020\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*:" +
+      "\n\372\370\263\007\005\250\363\263\007\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035" +
+      "\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\201\003" +
+      "\n\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030" +
+      "\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(" +
+      "\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006" +
+      " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022 \n\014account_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
+      "\n\013permissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010durat" +
+      "ion\030\t \001(\0132\031.google.protobuf.DurationB\n\362\370" +
+      "\263\007\005\260\363\263\007\001:\017\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n\010Accounts\022c" +
+      "\n\006Create\022\030.v1.AccountCreateRequest\032\031.v1." +
+      "AccountCreateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263" +
+      "\007\021\252\363\263\007\014/v1/accounts\022^\n\003Get\022\025.v1.AccountG" +
+      "etRequest\032\026.v1.AccountGetResponse\"(\202\371\263\007\010" +
+      "\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006U" +
+      "pdate\022\030.v1.AccountUpdateRequest\032\031.v1.Acc" +
+      "ountUpdateResponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363" +
+      "\263\007\021/v1/accounts/{id}\022j\n\006Delete\022\030.v1.Acco" +
+      "untDeleteRequest\032\031.v1.AccountDeleteRespo" +
+      "nse\"+\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accou" +
+      "nts/{id}\022\\\n\004List\022\026.v1.AccountListRequest" +
+      "\032\027.v1.AccountListResponse\"#\202\371\263\007\010\242\363\263\007\003get" +
+      "\202\371\263\007\021\252\363\263\007\014/v1/accounts\0326\312\371\263\007\014\302\371\263\007\007Accoun" +
+      "t\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd" +
+      "\n\031com.strongdm.api.plumbingB\020AccountsPlu" +
+      "mbingZ5github.com/strongdm/strongdm-sdk-" +
+      "go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

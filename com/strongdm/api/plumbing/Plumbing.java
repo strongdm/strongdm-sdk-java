@@ -21870,14 +21870,17 @@ public class Plumbing {
 
   public static com.strongdm.api.User convertUserToPorcelain(User plumbing) {
     com.strongdm.api.User porcelain = new com.strongdm.api.User();
+    porcelain.setSCIM((plumbing.getSCIM()));
     porcelain.setEmail((plumbing.getEmail()));
     porcelain.setExternalId((plumbing.getExternalId()));
     porcelain.setFirstName((plumbing.getFirstName()));
     porcelain.setId((plumbing.getId()));
     porcelain.setLastName((plumbing.getLastName()));
     porcelain.setManagedBy((plumbing.getManagedBy()));
+    porcelain.setManagerId((plumbing.getManagerId()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPermissionLevel((plumbing.getPermissionLevelRW()));
+    porcelain.setResolvedManagerId((plumbing.getResolvedManagerId()));
     porcelain.setSuspended((plumbing.getSuspendedRO()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -21888,6 +21891,9 @@ public class Plumbing {
       return null;
     }
     User.Builder builder = User.newBuilder();
+    if (porcelain.getSCIM() != null) {
+      builder.setSCIM((porcelain.getSCIM()));
+    }
     if (porcelain.getEmail() != null) {
       builder.setEmail((porcelain.getEmail()));
     }
@@ -21906,11 +21912,17 @@ public class Plumbing {
     if (porcelain.getManagedBy() != null) {
       builder.setManagedBy((porcelain.getManagedBy()));
     }
+    if (porcelain.getManagerId() != null) {
+      builder.setManagerId((porcelain.getManagerId()));
+    }
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
     }
     if (porcelain.getPermissionLevel() != null) {
       builder.setPermissionLevelRW((porcelain.getPermissionLevel()));
+    }
+    if (porcelain.getResolvedManagerId() != null) {
+      builder.setResolvedManagerId((porcelain.getResolvedManagerId()));
     }
     builder.setSuspendedRO(porcelain.getSuspended());
     if (porcelain.getTags() != null) {
