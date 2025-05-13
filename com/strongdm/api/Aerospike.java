@@ -173,6 +173,16 @@ public class Aerospike implements Resource {
     this.tags.putAll(in);
   }
 
+  private boolean useServicesAlternate;
+  /** If true, uses UseServicesAlternates directive for Aerospike connection */
+  public boolean getUseServicesAlternate() {
+    return this.useServicesAlternate;
+  }
+  /** If true, uses UseServicesAlternates directive for Aerospike connection */
+  public void setUseServicesAlternate(boolean in) {
+    this.useServicesAlternate = in;
+  }
+
   private String username;
   /** The username to authenticate with. */
   public String getUsername() {
