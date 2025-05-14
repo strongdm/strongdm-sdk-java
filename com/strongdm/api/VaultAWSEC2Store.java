@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * VaultAWSEC2Store is currently unstable, and its API may change, or it may be removed, without a
- * major version bump.
- */
 public class VaultAWSEC2Store implements SecretStore {
   private String id;
   /** Unique identifier of the SecretStore. */
