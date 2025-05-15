@@ -17,6 +17,10 @@
 
 package com.strongdm.api;
 
+/**
+ * Vertica is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
 public class Vertica implements Resource {
   private String bindInterface;
   /**

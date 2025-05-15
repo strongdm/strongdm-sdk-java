@@ -22,5 +22,4 @@ public final class MFAProvider {
   public static final String DUO = "duo";
   public static final String TOTP = "totp";
   public static final String OKTA = "okta";
-  public static final String RSA = "rsa";
 }

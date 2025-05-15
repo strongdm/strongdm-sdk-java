@@ -8634,7 +8634,7 @@ public final class ApprovalWorkflowApproversPlumbing {
 
   }
 
-  @java.lang.Deprecated public interface ApprovalWorkflowApproverOrBuilder extends
+  public interface ApprovalWorkflowApproverOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.ApprovalWorkflowApprover)
       com.google.protobuf.MessageOrBuilder {
 
@@ -8737,30 +8737,6 @@ public final class ApprovalWorkflowApproversPlumbing {
      */
     com.google.protobuf.ByteString
         getRoleIdBytes();
-
-    /**
-     * <pre>
-     * A reference to an approver. Will be one of ApproverReference constants.
-     * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-     * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-     * </pre>
-     *
-     * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-     * @return The reference.
-     */
-    java.lang.String getReference();
-    /**
-     * <pre>
-     * A reference to an approver. Will be one of ApproverReference constants.
-     * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-     * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-     * </pre>
-     *
-     * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for reference.
-     */
-    com.google.protobuf.ByteString
-        getReferenceBytes();
   }
   /**
    * <pre>
@@ -8769,7 +8745,7 @@ public final class ApprovalWorkflowApproversPlumbing {
    *
    * Protobuf type {@code v1.ApprovalWorkflowApprover}
    */
-  @java.lang.Deprecated public static final class ApprovalWorkflowApprover extends
+  public static final class ApprovalWorkflowApprover extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.ApprovalWorkflowApprover)
       ApprovalWorkflowApproverOrBuilder {
@@ -8784,7 +8760,6 @@ public final class ApprovalWorkflowApproversPlumbing {
       approvalStepId_ = "";
       accountId_ = "";
       roleId_ = "";
-      reference_ = "";
     }
 
     @java.lang.Override
@@ -8845,12 +8820,6 @@ public final class ApprovalWorkflowApproversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               roleId_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              reference_ = s;
               break;
             }
             default: {
@@ -9117,56 +9086,6 @@ public final class ApprovalWorkflowApproversPlumbing {
       }
     }
 
-    public static final int REFERENCE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object reference_;
-    /**
-     * <pre>
-     * A reference to an approver. Will be one of ApproverReference constants.
-     * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-     * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-     * </pre>
-     *
-     * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-     * @return The reference.
-     */
-    @java.lang.Override
-    public java.lang.String getReference() {
-      java.lang.Object ref = reference_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        reference_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * A reference to an approver. Will be one of ApproverReference constants.
-     * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-     * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-     * </pre>
-     *
-     * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for reference.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReferenceBytes() {
-      java.lang.Object ref = reference_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        reference_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9196,9 +9115,6 @@ public final class ApprovalWorkflowApproversPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, roleId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reference_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reference_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -9222,9 +9138,6 @@ public final class ApprovalWorkflowApproversPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, roleId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reference_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, reference_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9251,8 +9164,6 @@ public final class ApprovalWorkflowApproversPlumbing {
           .equals(other.getAccountId())) return false;
       if (!getRoleId()
           .equals(other.getRoleId())) return false;
-      if (!getReference()
-          .equals(other.getReference())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9274,8 +9185,6 @@ public final class ApprovalWorkflowApproversPlumbing {
       hash = (53 * hash) + getAccountId().hashCode();
       hash = (37 * hash) + ROLE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRoleId().hashCode();
-      hash = (37 * hash) + REFERENCE_FIELD_NUMBER;
-      hash = (53 * hash) + getReference().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9423,8 +9332,6 @@ public final class ApprovalWorkflowApproversPlumbing {
 
         roleId_ = "";
 
-        reference_ = "";
-
         return this;
       }
 
@@ -9456,7 +9363,6 @@ public final class ApprovalWorkflowApproversPlumbing {
         result.approvalStepId_ = approvalStepId_;
         result.accountId_ = accountId_;
         result.roleId_ = roleId_;
-        result.reference_ = reference_;
         onBuilt();
         return result;
       }
@@ -9523,10 +9429,6 @@ public final class ApprovalWorkflowApproversPlumbing {
         }
         if (!other.getRoleId().isEmpty()) {
           roleId_ = other.roleId_;
-          onChanged();
-        }
-        if (!other.getReference().isEmpty()) {
-          reference_ = other.reference_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -10037,112 +9939,6 @@ public final class ApprovalWorkflowApproversPlumbing {
         onChanged();
         return this;
       }
-
-      private java.lang.Object reference_ = "";
-      /**
-       * <pre>
-       * A reference to an approver. Will be one of ApproverReference constants.
-       * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-       * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-       * </pre>
-       *
-       * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-       * @return The reference.
-       */
-      public java.lang.String getReference() {
-        java.lang.Object ref = reference_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          reference_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * A reference to an approver. Will be one of ApproverReference constants.
-       * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-       * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-       * </pre>
-       *
-       * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for reference.
-       */
-      public com.google.protobuf.ByteString
-          getReferenceBytes() {
-        java.lang.Object ref = reference_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          reference_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * A reference to an approver. Will be one of ApproverReference constants.
-       * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-       * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-       * </pre>
-       *
-       * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-       * @param value The reference to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReference(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        reference_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * A reference to an approver. Will be one of ApproverReference constants.
-       * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-       * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-       * </pre>
-       *
-       * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReference() {
-        
-        reference_ = getDefaultInstance().getReference();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * A reference to an approver. Will be one of ApproverReference constants.
-       * This field is only populated when reading historical Approval Workflow Approvers data through the Approval Workflows History API.
-       * For the deprecated Approval Workflow Approvers API no value is returned for this field and it is non-settable.
-       * </pre>
-       *
-       * <code>string reference = 6 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for reference to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReferenceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        reference_ = value;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10288,37 +10084,38 @@ public final class ApprovalWorkflowApproversPlumbing {
       "\0132\034.v1.ApprovalWorkflowApproverB\n\362\370\263\007\005\270\363" +
       "\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
       "tadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!" +
-      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\274\002\n\030ApprovalWor" +
+      "json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\351\002\n\030ApprovalWor" +
       "kflowApprover\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n" +
       "\020approval_flow_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
       "\022)\n\020approval_step_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
       "\263\007\001\022\036\n\naccount_id\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007r" +
-      "ole_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022I\n\treference\030\006 " +
-      "\001(\tB6\362\370\263\0071\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terrafor" +
-      "m-provider\262\364\263\007\004!cli:*\030\001\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322" +
-      "\363\263\007\023!terraform-provider2\343\005\n\031ApprovalWork" +
-      "flowApprovers\022\230\001\n\006Create\022).v1.ApprovalWo" +
-      "rkflowApproverCreateRequest\032*.v1.Approva" +
-      "lWorkflowApproverCreateResponse\"7\202\371\263\007\t\242\363" +
-      "\263\007\004post\202\371\263\007$\252\363\263\007\037/v1/approval-workflow-a" +
-      "pprovers\022\222\001\n\003Get\022&.v1.ApprovalWorkflowAp" +
-      "proverGetRequest\032\'.v1.ApprovalWorkflowAp" +
-      "proverGetResponse\":\202\371\263\007\010\242\363\263\007\003get\202\371\263\007(\252\363\263" +
-      "\007#/v1/approval-workflow-approver/{id}\022\232\001" +
-      "\n\006Delete\022).v1.ApprovalWorkflowApproverDe" +
-      "leteRequest\032*.v1.ApprovalWorkflowApprove" +
-      "rDeleteResponse\"9\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007$\252\363" +
-      "\263\007\037/v1/approval-workflow-approvers\022\221\001\n\004L" +
-      "ist\022\'.v1.ApprovalWorkflowApproverListReq" +
-      "uest\032(.v1.ApprovalWorkflowApproverListRe" +
-      "sponse\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v1/appro" +
-      "val-workflow-approvers\032e\210\002\001\312\371\263\007\035\302\371\263\007\030App" +
-      "rovalWorkflowApprover\312\371\263\007\t\322\371\263\007\004afa-\312\371\263\007\005" +
-      "\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-pro" +
-      "viderBu\n\031com.strongdm.api.plumbingB!Appr" +
-      "ovalWorkflowApproversPlumbingZ5github.co" +
-      "m/strongdm/strongdm-sdk-go/v3/internal/v" +
-      "1;v1b\006proto3"
+      "ole_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\241\001\372\370\263\007\233\001\250\363\263\007\001\302\363" +
+      "\263\007s\242\363\263\0073tf_examples/approval_workflow_ap" +
+      "prover_resource.txt\252\363\263\0076tf_examples/appr" +
+      "oval_workflow_approver_data_source.txt\322\363" +
+      "\263\007\001*\322\363\263\007\023!terraform-provider2\343\005\n\031Approva" +
+      "lWorkflowApprovers\022\230\001\n\006Create\022).v1.Appro" +
+      "valWorkflowApproverCreateRequest\032*.v1.Ap" +
+      "provalWorkflowApproverCreateResponse\"7\202\371" +
+      "\263\007\t\242\363\263\007\004post\202\371\263\007$\252\363\263\007\037/v1/approval-workf" +
+      "low-approvers\022\222\001\n\003Get\022&.v1.ApprovalWorkf" +
+      "lowApproverGetRequest\032\'.v1.ApprovalWorkf" +
+      "lowApproverGetResponse\":\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007(\252\363\263\007#/v1/approval-workflow-approver/{i" +
+      "d}\022\232\001\n\006Delete\022).v1.ApprovalWorkflowAppro" +
+      "verDeleteRequest\032*.v1.ApprovalWorkflowAp" +
+      "proverDeleteResponse\"9\202\371\263\007\013\242\363\263\007\006delete\202\371" +
+      "\263\007$\252\363\263\007\037/v1/approval-workflow-approvers\022" +
+      "\221\001\n\004List\022\'.v1.ApprovalWorkflowApproverLi" +
+      "stRequest\032(.v1.ApprovalWorkflowApproverL" +
+      "istResponse\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v1/" +
+      "approval-workflow-approvers\032e\210\002\001\312\371\263\007\035\302\371\263" +
+      "\007\030ApprovalWorkflowApprover\312\371\263\007\t\322\371\263\007\004afa-" +
+      "\312\371\263\007\005\350\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terrafor" +
+      "m-providerBu\n\031com.strongdm.api.plumbingB" +
+      "!ApprovalWorkflowApproversPlumbingZ5gith" +
+      "ub.com/strongdm/strongdm-sdk-go/v3/inter" +
+      "nal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10379,7 +10176,7 @@ public final class ApprovalWorkflowApproversPlumbing {
     internal_static_v1_ApprovalWorkflowApprover_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ApprovalWorkflowApprover_descriptor,
-        new java.lang.String[] { "Id", "ApprovalFlowId", "ApprovalStepId", "AccountId", "RoleId", "Reference", });
+        new java.lang.String[] { "Id", "ApprovalFlowId", "ApprovalStepId", "AccountId", "RoleId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

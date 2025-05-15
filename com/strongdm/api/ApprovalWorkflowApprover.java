@@ -18,7 +18,6 @@
 package com.strongdm.api;
 
 /** ApprovalWorkflowApprover links an approval workflow approver to an ApprovalWorkflowStep */
-@Deprecated
 public class ApprovalWorkflowApprover {
   private String accountId;
   /** The approver account id. */
@@ -58,26 +57,6 @@ public class ApprovalWorkflowApprover {
   /** Unique identifier of the ApprovalWorkflowApprover. */
   public void setId(String in) {
     this.id = in;
-  }
-
-  private String reference;
-  /**
-   * A reference to an approver. Will be one of ApproverReference constants. This field is only
-   * populated when reading historical Approval Workflow Approvers data through the Approval
-   * Workflows History API. For the deprecated Approval Workflow Approvers API no value is returned
-   * for this field and it is non-settable.
-   */
-  public String getReference() {
-    return this.reference;
-  }
-  /**
-   * A reference to an approver. Will be one of ApproverReference constants. This field is only
-   * populated when reading historical Approval Workflow Approvers data through the Approval
-   * Workflows History API. For the deprecated Approval Workflow Approvers API no value is returned
-   * for this field and it is non-settable.
-   */
-  public void setReference(String in) {
-    this.reference = in;
   }
 
   private String roleId;
