@@ -13895,6 +13895,7 @@ public class Plumbing {
     porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
     porcelain.setDeviceTrustEnabled((plumbing.getDeviceTrustEnabled()));
     porcelain.setDeviceTrustProvider((plumbing.getDeviceTrustProvider()));
+    porcelain.setDiscardReplays((plumbing.getDiscardReplays()));
     porcelain.setEnforceSingleSession((plumbing.getEnforceSingleSession()));
     porcelain.setIdleTimeout(Plumbing.convertDurationToPorcelain(plumbing.getIdleTimeout()));
     porcelain.setIdleTimeoutEnabled((plumbing.getIdleTimeoutEnabled()));
@@ -13909,6 +13910,7 @@ public class Plumbing {
     porcelain.setMfaEnabled((plumbing.getMfaEnabled()));
     porcelain.setMfaProvider((plumbing.getMfaProvider()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPublicKeyPem((plumbing.getPublicKeyPem()));
     porcelain.setRequireSecretStore((plumbing.getRequireSecretStore()));
     porcelain.setSamlMetadataUrl((plumbing.getSamlMetadataUrl()));
     porcelain.setScimProvider((plumbing.getScimProvider()));
@@ -13939,6 +13941,7 @@ public class Plumbing {
     if (porcelain.getDeviceTrustProvider() != null) {
       builder.setDeviceTrustProvider((porcelain.getDeviceTrustProvider()));
     }
+    builder.setDiscardReplays(porcelain.getDiscardReplays());
     builder.setEnforceSingleSession(porcelain.getEnforceSingleSession());
     if (porcelain.getIdleTimeout() != null) {
       builder.setIdleTimeout(Plumbing.convertDurationToPlumbing(porcelain.getIdleTimeout()));
@@ -13974,6 +13977,9 @@ public class Plumbing {
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPublicKeyPem() != null) {
+      builder.setPublicKeyPem((porcelain.getPublicKeyPem()));
     }
     builder.setRequireSecretStore(porcelain.getRequireSecretStore());
     if (porcelain.getSamlMetadataUrl() != null) {
@@ -21765,6 +21771,7 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -21807,6 +21814,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setTlsRequired(porcelain.getTlsRequired());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }

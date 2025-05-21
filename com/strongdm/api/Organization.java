@@ -61,6 +61,16 @@ public class Organization {
     this.deviceTrustProvider = in;
   }
 
+  private boolean discardReplays;
+  /** Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs. */
+  public boolean getDiscardReplays() {
+    return this.discardReplays;
+  }
+  /** Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs. */
+  public void setDiscardReplays(boolean in) {
+    this.discardReplays = in;
+  }
+
   private boolean enforceSingleSession;
   /** Indicates if the Organization enforces a single session per user for the CLI and AdminUI. */
   public boolean getEnforceSingleSession() {
@@ -199,6 +209,16 @@ public class Organization {
   /** The Organization's name. */
   public void setName(String in) {
     this.name = in;
+  }
+
+  private String publicKeyPem;
+  /** The Organization's public key PEM for encrypting remote logs. */
+  public String getPublicKeyPem() {
+    return this.publicKeyPem;
+  }
+  /** The Organization's public key PEM for encrypting remote logs. */
+  public void setPublicKeyPem(String in) {
+    this.publicKeyPem = in;
   }
 
   private boolean requireSecretStore;
