@@ -23,6 +23,7 @@ import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.QueriesGrpc;
 import com.strongdm.api.plumbing.QueriesPlumbing;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,18 @@ import java.util.function.Supplier;
 public class Queries {
   private final QueriesGrpc.QueriesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Queries(ManagedChannel channel, Client client) {
-
     this.stub = QueriesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Queries(QueriesGrpc.QueriesBlockingStub stub, Client client) {
+  private Queries(QueriesGrpc.QueriesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +57,8 @@ public class Queries {
    * method calls.
    */
   public Queries withDeadlineAfter(long duration, TimeUnit units) {
-    return new Queries(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Queries(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List gets a list of Queries matching a given set of criteria. */
   public Iterable<Query> list(String filter, Object... args) throws RpcException {
@@ -83,9 +87,12 @@ public class Queries {
                       .withCallCredentials(this.parent.getCallCredentials("Queries.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -35,17 +36,21 @@ import java.util.function.Supplier;
 public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprovers {
   private final ApprovalWorkflowApproversGrpc.ApprovalWorkflowApproversBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public ApprovalWorkflowApprovers(ManagedChannel channel, Client client) {
-
     this.stub = ApprovalWorkflowApproversGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
   private ApprovalWorkflowApprovers(
-      ApprovalWorkflowApproversGrpc.ApprovalWorkflowApproversBlockingStub stub, Client client) {
+      ApprovalWorkflowApproversGrpc.ApprovalWorkflowApproversBlockingStub stub,
+      Client client,
+      Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -53,7 +58,8 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
    * deadline set for all method calls.
    */
   public ApprovalWorkflowApprovers withDeadlineAfter(long duration, TimeUnit units) {
-    return new ApprovalWorkflowApprovers(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new ApprovalWorkflowApprovers(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Deprecated: Create creates a new approval workflow approver. */
   public ApprovalWorkflowApproverCreateResponse create(
@@ -73,9 +79,12 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
                     this.parent.getCallCredentials("ApprovalWorkflowApprovers.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -105,9 +114,12 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
                     this.parent.getCallCredentials("ApprovalWorkflowApprovers.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -132,9 +144,12 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
                     this.parent.getCallCredentials("ApprovalWorkflowApprovers.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -173,9 +188,12 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
                           this.parent.getCallCredentials("ApprovalWorkflowApprovers.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

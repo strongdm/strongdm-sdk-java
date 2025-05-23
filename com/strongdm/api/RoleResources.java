@@ -23,6 +23,7 @@ import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.RoleResourcesGrpc;
 import com.strongdm.api.plumbing.RoleResourcesPlumbing;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -36,16 +37,19 @@ import java.util.function.Supplier;
 public class RoleResources implements SnapshotRoleResources {
   private final RoleResourcesGrpc.RoleResourcesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public RoleResources(ManagedChannel channel, Client client) {
-
     this.stub = RoleResourcesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private RoleResources(RoleResourcesGrpc.RoleResourcesBlockingStub stub, Client client) {
+  private RoleResources(
+      RoleResourcesGrpc.RoleResourcesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -53,7 +57,8 @@ public class RoleResources implements SnapshotRoleResources {
    * all method calls.
    */
   public RoleResources withDeadlineAfter(long duration, TimeUnit units) {
-    return new RoleResources(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new RoleResources(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List gets a list of RoleResource records matching a given set of criteria. */
   public Iterable<RoleResource> list(String filter, Object... args) throws RpcException {
@@ -83,9 +88,12 @@ public class RoleResources implements SnapshotRoleResources {
                           this.parent.getCallCredentials("RoleResources.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

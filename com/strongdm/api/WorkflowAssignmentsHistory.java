@@ -23,6 +23,7 @@ import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import com.strongdm.api.plumbing.WorkflowAssignmentsHistoryGrpc;
 import com.strongdm.api.plumbing.WorkflowAssignmentsHistoryPlumbing;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -35,17 +36,21 @@ import java.util.function.Supplier;
 public class WorkflowAssignmentsHistory {
   private final WorkflowAssignmentsHistoryGrpc.WorkflowAssignmentsHistoryBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public WorkflowAssignmentsHistory(ManagedChannel channel, Client client) {
-
     this.stub = WorkflowAssignmentsHistoryGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
   private WorkflowAssignmentsHistory(
-      WorkflowAssignmentsHistoryGrpc.WorkflowAssignmentsHistoryBlockingStub stub, Client client) {
+      WorkflowAssignmentsHistoryGrpc.WorkflowAssignmentsHistoryBlockingStub stub,
+      Client client,
+      Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -53,8 +58,8 @@ public class WorkflowAssignmentsHistory {
    * deadline set for all method calls.
    */
   public WorkflowAssignmentsHistory withDeadlineAfter(long duration, TimeUnit units) {
-    return new WorkflowAssignmentsHistory(
-        this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new WorkflowAssignmentsHistory(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List gets a list of WorkflowAssignmentsHistory records matching a given set of criteria. */
   public Iterable<WorkflowAssignmentHistory> list(String filter, Object... args)
@@ -87,9 +92,12 @@ public class WorkflowAssignmentsHistory {
                           this.parent.getCallCredentials("WorkflowAssignmentsHistory.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

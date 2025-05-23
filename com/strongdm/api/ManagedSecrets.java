@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,19 @@ import java.util.function.Supplier;
 public class ManagedSecrets {
   private final ManagedSecretsGrpc.ManagedSecretsBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public ManagedSecrets(ManagedChannel channel, Client client) {
-
     this.stub = ManagedSecretsGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private ManagedSecrets(ManagedSecretsGrpc.ManagedSecretsBlockingStub stub, Client client) {
+  private ManagedSecrets(
+      ManagedSecretsGrpc.ManagedSecretsBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +58,8 @@ public class ManagedSecrets {
    * all method calls.
    */
   public ManagedSecrets withDeadlineAfter(long duration, TimeUnit units) {
-    return new ManagedSecrets(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new ManagedSecrets(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List returns Managed Secrets from a Secret Engine. */
   public Iterable<ManagedSecret> list(String filter, Object... args) throws RpcException {
@@ -84,9 +89,12 @@ public class ManagedSecrets {
                           this.parent.getCallCredentials("ManagedSecrets.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
@@ -138,9 +146,12 @@ public class ManagedSecrets {
                           this.parent.getCallCredentials("ManagedSecrets.ListByActor", req))
                       .listByActor(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
@@ -179,9 +190,12 @@ public class ManagedSecrets {
                 .withCallCredentials(this.parent.getCallCredentials("ManagedSecrets.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -205,9 +219,12 @@ public class ManagedSecrets {
                 .withCallCredentials(this.parent.getCallCredentials("ManagedSecrets.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -231,9 +248,12 @@ public class ManagedSecrets {
                 .withCallCredentials(this.parent.getCallCredentials("ManagedSecrets.Rotate", req))
                 .rotate(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -257,9 +277,12 @@ public class ManagedSecrets {
                 .withCallCredentials(this.parent.getCallCredentials("ManagedSecrets.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -288,9 +311,12 @@ public class ManagedSecrets {
                 .withCallCredentials(this.parent.getCallCredentials("ManagedSecrets.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -315,9 +341,12 @@ public class ManagedSecrets {
                 .withCallCredentials(this.parent.getCallCredentials("ManagedSecrets.Retrieve", req))
                 .retrieve(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -341,9 +370,12 @@ public class ManagedSecrets {
                 .withCallCredentials(this.parent.getCallCredentials("ManagedSecrets.Validate", req))
                 .validate(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -380,9 +412,12 @@ public class ManagedSecrets {
                           this.parent.getCallCredentials("ManagedSecrets.Logs", req))
                       .logs(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

@@ -212,6 +212,16 @@ public class Query {
     this.identityAliasUsername = in;
   }
 
+  private String metadataJson;
+  /** Driver specific metadata associated with this query. */
+  public String getMetadataJson() {
+    return this.metadataJson;
+  }
+  /** Driver specific metadata associated with this query. */
+  public void setMetadataJson(String in) {
+    this.metadataJson = in;
+  }
+
   private String queryBody;
   /**
    * The captured content of the Query. For queries against SSH, Kubernetes, and RDP resources, this

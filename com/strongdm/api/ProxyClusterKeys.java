@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.ProxyClusterKeysGrpc;
 import com.strongdm.api.plumbing.ProxyClusterKeysPlumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -38,16 +39,19 @@ import java.util.function.Supplier;
 public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
   private final ProxyClusterKeysGrpc.ProxyClusterKeysBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public ProxyClusterKeys(ManagedChannel channel, Client client) {
-
     this.stub = ProxyClusterKeysGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private ProxyClusterKeys(ProxyClusterKeysGrpc.ProxyClusterKeysBlockingStub stub, Client client) {
+  private ProxyClusterKeys(
+      ProxyClusterKeysGrpc.ProxyClusterKeysBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -55,7 +59,8 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
    * for all method calls.
    */
   public ProxyClusterKeys withDeadlineAfter(long duration, TimeUnit units) {
-    return new ProxyClusterKeys(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new ProxyClusterKeys(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create registers a new ProxyClusterKey. */
   public ProxyClusterKeyCreateResponse create(ProxyClusterKey proxyClusterKey) throws RpcException {
@@ -72,9 +77,12 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
                 .withCallCredentials(this.parent.getCallCredentials("ProxyClusterKeys.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -103,9 +111,12 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
                 .withCallCredentials(this.parent.getCallCredentials("ProxyClusterKeys.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -129,9 +140,12 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
                 .withCallCredentials(this.parent.getCallCredentials("ProxyClusterKeys.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -168,9 +182,12 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
                           this.parent.getCallCredentials("ProxyClusterKeys.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

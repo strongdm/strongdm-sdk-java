@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.RemoteIdentitiesGrpc;
 import com.strongdm.api.plumbing.RemoteIdentitiesPlumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -38,16 +39,19 @@ import java.util.function.Supplier;
 public class RemoteIdentities implements SnapshotRemoteIdentities {
   private final RemoteIdentitiesGrpc.RemoteIdentitiesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public RemoteIdentities(ManagedChannel channel, Client client) {
-
     this.stub = RemoteIdentitiesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private RemoteIdentities(RemoteIdentitiesGrpc.RemoteIdentitiesBlockingStub stub, Client client) {
+  private RemoteIdentities(
+      RemoteIdentitiesGrpc.RemoteIdentitiesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -55,7 +59,8 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
    * for all method calls.
    */
   public RemoteIdentities withDeadlineAfter(long duration, TimeUnit units) {
-    return new RemoteIdentities(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new RemoteIdentities(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create registers a new RemoteIdentity. */
   public RemoteIdentityCreateResponse create(RemoteIdentity remoteIdentity) throws RpcException {
@@ -72,9 +77,12 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
                 .withCallCredentials(this.parent.getCallCredentials("RemoteIdentities.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -103,9 +111,12 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
                 .withCallCredentials(this.parent.getCallCredentials("RemoteIdentities.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -129,9 +140,12 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
                 .withCallCredentials(this.parent.getCallCredentials("RemoteIdentities.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -155,9 +169,12 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
                 .withCallCredentials(this.parent.getCallCredentials("RemoteIdentities.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -194,9 +211,12 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
                           this.parent.getCallCredentials("RemoteIdentities.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

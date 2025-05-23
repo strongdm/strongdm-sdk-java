@@ -23,6 +23,7 @@ import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.SecretStoreHealthsGrpc;
 import com.strongdm.api.plumbing.SecretStoreHealthsPlumbing;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -33,17 +34,21 @@ import java.util.function.Supplier;
 public class SecretStoreHealths {
   private final SecretStoreHealthsGrpc.SecretStoreHealthsBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public SecretStoreHealths(ManagedChannel channel, Client client) {
-
     this.stub = SecretStoreHealthsGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
   private SecretStoreHealths(
-      SecretStoreHealthsGrpc.SecretStoreHealthsBlockingStub stub, Client client) {
+      SecretStoreHealthsGrpc.SecretStoreHealthsBlockingStub stub,
+      Client client,
+      Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -51,7 +56,8 @@ public class SecretStoreHealths {
    * for all method calls.
    */
   public SecretStoreHealths withDeadlineAfter(long duration, TimeUnit units) {
-    return new SecretStoreHealths(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new SecretStoreHealths(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List reports the health status of node to secret store pairs. */
   public Iterable<SecretStoreHealth> list(String filter, Object... args) throws RpcException {
@@ -81,9 +87,12 @@ public class SecretStoreHealths {
                           this.parent.getCallCredentials("SecretStoreHealths.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
@@ -127,9 +136,12 @@ public class SecretStoreHealths {
                     this.parent.getCallCredentials("SecretStoreHealths.Healthcheck", req))
                 .healthcheck(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);

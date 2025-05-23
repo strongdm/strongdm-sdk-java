@@ -20,6 +20,7 @@ package com.strongdm.api;
 import com.strongdm.api.plumbing.ControlPanelGrpc;
 import com.strongdm.api.plumbing.ControlPanelPlumbing;
 import com.strongdm.api.plumbing.Plumbing;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.concurrent.TimeUnit;
 
@@ -27,16 +28,19 @@ import java.util.concurrent.TimeUnit;
 public class ControlPanel {
   private final ControlPanelGrpc.ControlPanelBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public ControlPanel(ManagedChannel channel, Client client) {
-
     this.stub = ControlPanelGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private ControlPanel(ControlPanelGrpc.ControlPanelBlockingStub stub, Client client) {
+  private ControlPanel(
+      ControlPanelGrpc.ControlPanelBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -44,7 +48,8 @@ public class ControlPanel {
    * all method calls.
    */
   public ControlPanel withDeadlineAfter(long duration, TimeUnit units) {
-    return new ControlPanel(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new ControlPanel(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** GetSSHCAPublicKey retrieves the SSH CA public key. */
   public ControlPanelGetSSHCAPublicKeyResponse getSSHCAPublicKey() throws RpcException {
@@ -61,9 +66,12 @@ public class ControlPanel {
                     this.parent.getCallCredentials("ControlPanel.GetSSHCAPublicKey", req))
                 .getSSHCAPublicKey(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -87,9 +95,12 @@ public class ControlPanel {
                     this.parent.getCallCredentials("ControlPanel.GetRDPCAPublicKey", req))
                 .getRDPCAPublicKey(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -113,9 +124,12 @@ public class ControlPanel {
                 .withCallCredentials(this.parent.getCallCredentials("ControlPanel.VerifyJWT", req))
                 .verifyJWT(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);

@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,18 @@ import java.util.function.Supplier;
 public class Activities {
   private final ActivitiesGrpc.ActivitiesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Activities(ManagedChannel channel, Client client) {
-
     this.stub = ActivitiesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Activities(ActivitiesGrpc.ActivitiesBlockingStub stub, Client client) {
+  private Activities(ActivitiesGrpc.ActivitiesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +57,8 @@ public class Activities {
    * method calls.
    */
   public Activities withDeadlineAfter(long duration, TimeUnit units) {
-    return new Activities(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Activities(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Get reads one Activity by ID. */
   public ActivityGetResponse get(String id) throws RpcException {
@@ -76,9 +80,12 @@ public class Activities {
                 .withCallCredentials(this.parent.getCallCredentials("Activities.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -118,9 +125,12 @@ public class Activities {
                       .withCallCredentials(this.parent.getCallCredentials("Activities.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

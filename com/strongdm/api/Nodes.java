@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -40,16 +41,18 @@ import java.util.function.Supplier;
 public class Nodes implements SnapshotNodes {
   private final NodesGrpc.NodesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Nodes(ManagedChannel channel, Client client) {
-
     this.stub = NodesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Nodes(NodesGrpc.NodesBlockingStub stub, Client client) {
+  private Nodes(NodesGrpc.NodesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -57,7 +60,8 @@ public class Nodes implements SnapshotNodes {
    * method calls.
    */
   public Nodes withDeadlineAfter(long duration, TimeUnit units) {
-    return new Nodes(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Nodes(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create registers a new Node. */
   public NodeCreateResponse create(Node node) throws RpcException {
@@ -73,9 +77,12 @@ public class Nodes implements SnapshotNodes {
                 .withCallCredentials(this.parent.getCallCredentials("Nodes.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -103,9 +110,12 @@ public class Nodes implements SnapshotNodes {
                 .withCallCredentials(this.parent.getCallCredentials("Nodes.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -128,9 +138,12 @@ public class Nodes implements SnapshotNodes {
                 .withCallCredentials(this.parent.getCallCredentials("Nodes.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -153,9 +166,12 @@ public class Nodes implements SnapshotNodes {
                 .withCallCredentials(this.parent.getCallCredentials("Nodes.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -190,9 +206,12 @@ public class Nodes implements SnapshotNodes {
                       .withCallCredentials(this.parent.getCallCredentials("Nodes.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

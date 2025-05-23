@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import com.strongdm.api.plumbing.WorkflowRolesGrpc;
 import com.strongdm.api.plumbing.WorkflowRolesPlumbing;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,19 @@ import java.util.function.Supplier;
 public class WorkflowRoles implements SnapshotWorkflowRoles {
   private final WorkflowRolesGrpc.WorkflowRolesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public WorkflowRoles(ManagedChannel channel, Client client) {
-
     this.stub = WorkflowRolesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private WorkflowRoles(WorkflowRolesGrpc.WorkflowRolesBlockingStub stub, Client client) {
+  private WorkflowRoles(
+      WorkflowRolesGrpc.WorkflowRolesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +58,8 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
    * all method calls.
    */
   public WorkflowRoles withDeadlineAfter(long duration, TimeUnit units) {
-    return new WorkflowRoles(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new WorkflowRoles(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create creates a new workflow role */
   public WorkflowRolesCreateResponse create(WorkflowRole workflowRole) throws RpcException {
@@ -71,9 +76,12 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
                 .withCallCredentials(this.parent.getCallCredentials("WorkflowRoles.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -102,9 +110,12 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
                 .withCallCredentials(this.parent.getCallCredentials("WorkflowRoles.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -128,9 +139,12 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
                 .withCallCredentials(this.parent.getCallCredentials("WorkflowRoles.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -167,9 +181,12 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
                           this.parent.getCallCredentials("WorkflowRoles.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

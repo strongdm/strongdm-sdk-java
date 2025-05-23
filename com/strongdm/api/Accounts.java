@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -39,16 +40,18 @@ import java.util.function.Supplier;
 public class Accounts implements SnapshotAccounts {
   private final AccountsGrpc.AccountsBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Accounts(ManagedChannel channel, Client client) {
-
     this.stub = AccountsGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Accounts(AccountsGrpc.AccountsBlockingStub stub, Client client) {
+  private Accounts(AccountsGrpc.AccountsBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -56,7 +59,8 @@ public class Accounts implements SnapshotAccounts {
    * method calls.
    */
   public Accounts withDeadlineAfter(long duration, TimeUnit units) {
-    return new Accounts(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Accounts(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create registers a new Account. */
   public AccountCreateResponse create(Account account) throws RpcException {
@@ -73,9 +77,12 @@ public class Accounts implements SnapshotAccounts {
                 .withCallCredentials(this.parent.getCallCredentials("Accounts.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -104,9 +111,12 @@ public class Accounts implements SnapshotAccounts {
                 .withCallCredentials(this.parent.getCallCredentials("Accounts.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -130,9 +140,12 @@ public class Accounts implements SnapshotAccounts {
                 .withCallCredentials(this.parent.getCallCredentials("Accounts.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -156,9 +169,12 @@ public class Accounts implements SnapshotAccounts {
                 .withCallCredentials(this.parent.getCallCredentials("Accounts.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -194,9 +210,12 @@ public class Accounts implements SnapshotAccounts {
                       .withCallCredentials(this.parent.getCallCredentials("Accounts.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

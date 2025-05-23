@@ -19,6 +19,7 @@ package com.strongdm.api;
 
 import com.google.rpc.Code;
 import com.strongdm.api.plumbing.Plumbing;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import io.grpc.netty.GrpcSslContexts;
 import io.grpc.netty.NettyChannelBuilder;
@@ -39,16 +40,13 @@ public class Client {
   private String apiAccessKey;
   private byte[] apiSecretKey;
 
-  private final int defaultMaxRetries = 3;
-  private final int defaultBaseRetryDelay = 30; // 30 ms
-  private final int defaultMaxRetryDelay = 300000; // 300 seconds
+  private boolean retryRateLimitErrors;
+  protected int pageLimit;
 
-  private boolean exposeRateLimitErrors;
-  protected int pageLimit = 50;
-
-  private int maxRetries;
-  private int baseRetryDelay;
-  private int maxRetryDelay;
+  private int baseRetryDelay = 1000; // 1 second
+  private int maxRetryDelay = 120000; // 120 seconds
+  private double retryFactor = 1.6;
+  private double retryJitter = 0.2;
   protected Date snapshotDate;
   protected final AccessRequests accessRequests;
 
@@ -583,10 +581,11 @@ public class Client {
   private Client(Client client) {
     this.apiAccessKey = client.apiAccessKey;
     this.apiSecretKey = client.apiSecretKey;
-    this.maxRetries = client.defaultMaxRetries;
-    this.baseRetryDelay = client.defaultBaseRetryDelay;
-    this.maxRetryDelay = client.defaultMaxRetryDelay;
-    this.exposeRateLimitErrors = client.exposeRateLimitErrors;
+    this.baseRetryDelay = client.baseRetryDelay;
+    this.maxRetryDelay = client.maxRetryDelay;
+    this.retryRateLimitErrors = client.retryRateLimitErrors;
+    this.retryFactor = client.retryFactor;
+    this.retryJitter = client.retryJitter;
     this.pageLimit = client.pageLimit;
     this.channel = client.channel;
     this.snapshotDate = client.snapshotDate;
@@ -659,11 +658,8 @@ public class Client {
       throws RpcException {
     this.apiAccessKey = apiAccessKey.trim();
     this.apiSecretKey = Base64.getDecoder().decode(apiSecretKey.trim());
-    this.maxRetries = this.defaultMaxRetries;
-    this.baseRetryDelay = this.defaultBaseRetryDelay;
-    this.maxRetryDelay = this.defaultMaxRetryDelay;
     this.pageLimit = options.getPageLimit();
-    this.exposeRateLimitErrors = options.getExposeRateLimitErrors();
+    this.retryRateLimitErrors = options.getRetryRateLimitErrors();
     try {
       NettyChannelBuilder builder =
           NettyChannelBuilder.forAddress(options.getHost(), options.getPort());
@@ -816,46 +812,47 @@ public class Client {
     return this.channel.awaitTermination(timeout, unit);
   }
 
-  public void jitterSleep(int iter) {
-    int durMax = this.baseRetryDelay * (2 << iter);
-    if (durMax > this.maxRetryDelay) {
-      durMax = this.maxRetryDelay;
+  public long exponentialBackoff(int retries, Deadline deadline) {
+    if (retries == 0) {
+      return applyDeadline(this.baseRetryDelay, deadline);
     }
-    try {
-      Thread.sleep(new Random().nextInt(durMax));
-    } catch (Exception e) {
+    double backoff = this.baseRetryDelay;
+    double max = this.maxRetryDelay;
+    while (backoff < max && retries > 0) {
+      backoff *= this.retryFactor;
+      retries--;
     }
+    if (backoff > max) {
+      backoff = max;
+    }
+    backoff *= 1 + this.retryJitter * (new Random().nextDouble() * 2 - 1);
+    if (backoff < 0) {
+      return 0;
+    }
+
+    return applyDeadline((long) backoff, deadline);
   }
 
-  public boolean shouldRetry(int iter, Exception e) {
-    if (iter >= this.maxRetries - 1) {
+  private long applyDeadline(long delay, Deadline deadline) {
+    if (deadline == null) {
+      return delay;
+    }
+    return Long.max(0, Long.min(delay, deadline.timeRemaining(TimeUnit.MILLISECONDS)));
+  }
+
+  public boolean shouldRetry(int retries, Exception e, Deadline deadline) {
+    if (deadline != null && deadline.isExpired()) {
       return false;
     }
     if (!(e instanceof io.grpc.StatusRuntimeException)) {
-      return true;
+      return false;
     }
     com.google.rpc.Status status = io.grpc.protobuf.StatusProto.fromThrowable(e);
-    if (!this.exposeRateLimitErrors) {
-      Exception porcelain = Plumbing.convertExceptionToPorcelain(e);
-      if (porcelain instanceof RateLimitException) {
-        long now = System.currentTimeMillis();
-        RateLimitException rle = (RateLimitException) porcelain;
-        long resetAt = rle.getRateLimit().getResetAt().toInstant().toEpochMilli();
-        long waitFor = resetAt - now;
-        // If timezones or clock drift causes this calculation to fail,
-        // wait at most one minute.
-        if ((waitFor < 0) || (waitFor > 1000 * 60)) {
-          waitFor = 1000 * 60;
-        }
-        try {
-          Thread.sleep(waitFor);
-        } catch (Exception e2) {
-        }
-        return true;
-      }
+    if (this.retryRateLimitErrors && status.getCode() == Code.RESOURCE_EXHAUSTED_VALUE) {
+      return true;
     }
-
-    return (status.getCode() == Code.INTERNAL_VALUE || status.getCode() == Code.UNAVAILABLE_VALUE);
+    return retries <= 3
+        && (status.getCode() == Code.INTERNAL_VALUE || status.getCode() == Code.UNAVAILABLE_VALUE);
   }
 
   protected Map<String, Object> testOptions;

@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.SecretStoresGrpc;
 import com.strongdm.api.plumbing.SecretStoresPlumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -34,16 +35,19 @@ import java.util.function.Supplier;
 public class SecretStores implements SnapshotSecretStores {
   private final SecretStoresGrpc.SecretStoresBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public SecretStores(ManagedChannel channel, Client client) {
-
     this.stub = SecretStoresGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private SecretStores(SecretStoresGrpc.SecretStoresBlockingStub stub, Client client) {
+  private SecretStores(
+      SecretStoresGrpc.SecretStoresBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -51,7 +55,8 @@ public class SecretStores implements SnapshotSecretStores {
    * all method calls.
    */
   public SecretStores withDeadlineAfter(long duration, TimeUnit units) {
-    return new SecretStores(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new SecretStores(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** */
   public SecretStoreCreateResponse create(SecretStore secretStore) throws RpcException {
@@ -68,9 +73,12 @@ public class SecretStores implements SnapshotSecretStores {
                 .withCallCredentials(this.parent.getCallCredentials("SecretStores.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -99,9 +107,12 @@ public class SecretStores implements SnapshotSecretStores {
                 .withCallCredentials(this.parent.getCallCredentials("SecretStores.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -125,9 +136,12 @@ public class SecretStores implements SnapshotSecretStores {
                 .withCallCredentials(this.parent.getCallCredentials("SecretStores.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -151,9 +165,12 @@ public class SecretStores implements SnapshotSecretStores {
                 .withCallCredentials(this.parent.getCallCredentials("SecretStores.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -189,9 +206,12 @@ public class SecretStores implements SnapshotSecretStores {
                       .withCallCredentials(this.parent.getCallCredentials("SecretStores.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import com.strongdm.api.plumbing.WorkflowsGrpc;
 import com.strongdm.api.plumbing.WorkflowsPlumbing;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -38,16 +39,18 @@ import java.util.function.Supplier;
 public class Workflows implements SnapshotWorkflows {
   private final WorkflowsGrpc.WorkflowsBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Workflows(ManagedChannel channel, Client client) {
-
     this.stub = WorkflowsGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Workflows(WorkflowsGrpc.WorkflowsBlockingStub stub, Client client) {
+  private Workflows(WorkflowsGrpc.WorkflowsBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -55,7 +58,8 @@ public class Workflows implements SnapshotWorkflows {
    * method calls.
    */
   public Workflows withDeadlineAfter(long duration, TimeUnit units) {
-    return new Workflows(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Workflows(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create creates a new workflow and requires a name for the workflow. */
   public WorkflowCreateResponse create(Workflow workflow) throws RpcException {
@@ -72,9 +76,12 @@ public class Workflows implements SnapshotWorkflows {
                 .withCallCredentials(this.parent.getCallCredentials("Workflows.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -103,9 +110,12 @@ public class Workflows implements SnapshotWorkflows {
                 .withCallCredentials(this.parent.getCallCredentials("Workflows.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -129,9 +139,12 @@ public class Workflows implements SnapshotWorkflows {
                 .withCallCredentials(this.parent.getCallCredentials("Workflows.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -155,9 +168,12 @@ public class Workflows implements SnapshotWorkflows {
                 .withCallCredentials(this.parent.getCallCredentials("Workflows.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -193,9 +209,12 @@ public class Workflows implements SnapshotWorkflows {
                       .withCallCredentials(this.parent.getCallCredentials("Workflows.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

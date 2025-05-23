@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,19 @@ import java.util.function.Supplier;
 public class IdentityAliases implements SnapshotIdentityAliases {
   private final IdentityAliasesGrpc.IdentityAliasesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public IdentityAliases(ManagedChannel channel, Client client) {
-
     this.stub = IdentityAliasesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private IdentityAliases(IdentityAliasesGrpc.IdentityAliasesBlockingStub stub, Client client) {
+  private IdentityAliases(
+      IdentityAliasesGrpc.IdentityAliasesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +58,8 @@ public class IdentityAliases implements SnapshotIdentityAliases {
    * for all method calls.
    */
   public IdentityAliases withDeadlineAfter(long duration, TimeUnit units) {
-    return new IdentityAliases(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new IdentityAliases(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create registers a new IdentityAlias. */
   public IdentityAliasCreateResponse create(IdentityAlias identityAlias) throws RpcException {
@@ -71,9 +76,12 @@ public class IdentityAliases implements SnapshotIdentityAliases {
                 .withCallCredentials(this.parent.getCallCredentials("IdentityAliases.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -102,9 +110,12 @@ public class IdentityAliases implements SnapshotIdentityAliases {
                 .withCallCredentials(this.parent.getCallCredentials("IdentityAliases.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -128,9 +139,12 @@ public class IdentityAliases implements SnapshotIdentityAliases {
                 .withCallCredentials(this.parent.getCallCredentials("IdentityAliases.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -154,9 +168,12 @@ public class IdentityAliases implements SnapshotIdentityAliases {
                 .withCallCredentials(this.parent.getCallCredentials("IdentityAliases.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -193,9 +210,12 @@ public class IdentityAliases implements SnapshotIdentityAliases {
                           this.parent.getCallCredentials("IdentityAliases.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

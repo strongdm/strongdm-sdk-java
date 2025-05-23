@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PeeringGroupNodesPlumbing;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,17 +38,19 @@ import java.util.function.Supplier;
 public class PeeringGroupNodes {
   private final PeeringGroupNodesGrpc.PeeringGroupNodesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public PeeringGroupNodes(ManagedChannel channel, Client client) {
-
     this.stub = PeeringGroupNodesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
   private PeeringGroupNodes(
-      PeeringGroupNodesGrpc.PeeringGroupNodesBlockingStub stub, Client client) {
+      PeeringGroupNodesGrpc.PeeringGroupNodesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -55,7 +58,8 @@ public class PeeringGroupNodes {
    * for all method calls.
    */
   public PeeringGroupNodes withDeadlineAfter(long duration, TimeUnit units) {
-    return new PeeringGroupNodes(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new PeeringGroupNodes(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create attaches a Node to a PeeringGroup */
   public PeeringGroupNodeCreateResponse create(PeeringGroupNode peeringGroupNode)
@@ -74,9 +78,12 @@ public class PeeringGroupNodes {
                     this.parent.getCallCredentials("PeeringGroupNodes.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -101,9 +108,12 @@ public class PeeringGroupNodes {
                     this.parent.getCallCredentials("PeeringGroupNodes.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -132,9 +142,12 @@ public class PeeringGroupNodes {
                 .withCallCredentials(this.parent.getCallCredentials("PeeringGroupNodes.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -171,9 +184,12 @@ public class PeeringGroupNodes {
                           this.parent.getCallCredentials("PeeringGroupNodes.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

@@ -25,6 +25,7 @@ import com.strongdm.api.plumbing.SecretEnginesPlumbing;
 import com.strongdm.api.plumbing.SecretStoresPlumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -35,16 +36,19 @@ import java.util.function.Supplier;
 public class SecretEngines {
   private final SecretEnginesGrpc.SecretEnginesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public SecretEngines(ManagedChannel channel, Client client) {
-
     this.stub = SecretEnginesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private SecretEngines(SecretEnginesGrpc.SecretEnginesBlockingStub stub, Client client) {
+  private SecretEngines(
+      SecretEnginesGrpc.SecretEnginesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -52,7 +56,8 @@ public class SecretEngines {
    * all method calls.
    */
   public SecretEngines withDeadlineAfter(long duration, TimeUnit units) {
-    return new SecretEngines(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new SecretEngines(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List returns a list of Secret Engines */
   public Iterable<SecretEngine> list(String filter, Object... args) throws RpcException {
@@ -82,9 +87,12 @@ public class SecretEngines {
                           this.parent.getCallCredentials("SecretEngines.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
@@ -128,9 +136,12 @@ public class SecretEngines {
                 .withCallCredentials(this.parent.getCallCredentials("SecretEngines.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -154,9 +165,12 @@ public class SecretEngines {
                 .withCallCredentials(this.parent.getCallCredentials("SecretEngines.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -180,9 +194,12 @@ public class SecretEngines {
                 .withCallCredentials(this.parent.getCallCredentials("SecretEngines.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -206,9 +223,12 @@ public class SecretEngines {
                 .withCallCredentials(this.parent.getCallCredentials("SecretEngines.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -248,9 +268,12 @@ public class SecretEngines {
                           this.parent.getCallCredentials("SecretEngines.ListSecretStores", req))
                       .listSecretStores(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
@@ -293,9 +316,12 @@ public class SecretEngines {
                     this.parent.getCallCredentials("SecretEngines.GenerateKeys", req))
                 .generateKeys(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -320,9 +346,12 @@ public class SecretEngines {
                     this.parent.getCallCredentials("SecretEngines.Healthcheck", req))
                 .healthcheck(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -348,9 +377,12 @@ public class SecretEngines {
                 .withCallCredentials(this.parent.getCallCredentials("SecretEngines.Rotate", req))
                 .rotate(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);

@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.RolesGrpc;
 import com.strongdm.api.plumbing.RolesPlumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,18 @@ import java.util.function.Supplier;
 public class Roles implements SnapshotRoles {
   private final RolesGrpc.RolesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Roles(ManagedChannel channel, Client client) {
-
     this.stub = RolesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Roles(RolesGrpc.RolesBlockingStub stub, Client client) {
+  private Roles(RolesGrpc.RolesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +57,8 @@ public class Roles implements SnapshotRoles {
    * method calls.
    */
   public Roles withDeadlineAfter(long duration, TimeUnit units) {
-    return new Roles(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Roles(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create registers a new Role. */
   public RoleCreateResponse create(Role role) throws RpcException {
@@ -70,9 +74,12 @@ public class Roles implements SnapshotRoles {
                 .withCallCredentials(this.parent.getCallCredentials("Roles.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -100,9 +107,12 @@ public class Roles implements SnapshotRoles {
                 .withCallCredentials(this.parent.getCallCredentials("Roles.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -125,9 +135,12 @@ public class Roles implements SnapshotRoles {
                 .withCallCredentials(this.parent.getCallCredentials("Roles.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -150,9 +163,12 @@ public class Roles implements SnapshotRoles {
                 .withCallCredentials(this.parent.getCallCredentials("Roles.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -187,9 +203,12 @@ public class Roles implements SnapshotRoles {
                       .withCallCredentials(this.parent.getCallCredentials("Roles.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

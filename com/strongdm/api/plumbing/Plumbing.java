@@ -10718,6 +10718,8 @@ public class Plumbing {
     porcelain.setAllowResourceRoleBypass((plumbing.getAllowResourceRoleBypass()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDiscoveryUsername((plumbing.getDiscoveryUsername()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     porcelain.setHealthy((plumbing.getHealthy()));
@@ -10745,6 +10747,10 @@ public class Plumbing {
     }
     if (porcelain.getCertificateAuthority() != null) {
       builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDiscoveryUsername() != null) {
+      builder.setDiscoveryUsername((porcelain.getDiscoveryUsername()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -15632,6 +15638,7 @@ public class Plumbing {
     porcelain.setEncrypted((plumbing.getEncrypted()));
     porcelain.setId((plumbing.getId()));
     porcelain.setIdentityAliasUsername((plumbing.getIdentityAliasUsername()));
+    porcelain.setMetadataJson((plumbing.getMetadataJson()));
     porcelain.setQueryBody((plumbing.getQueryBody()));
     porcelain.setQueryCategory((plumbing.getQueryCategory()));
     porcelain.setQueryHash((plumbing.getQueryHash()));
@@ -15693,6 +15700,9 @@ public class Plumbing {
     }
     if (porcelain.getIdentityAliasUsername() != null) {
       builder.setIdentityAliasUsername((porcelain.getIdentityAliasUsername()));
+    }
+    if (porcelain.getMetadataJson() != null) {
+      builder.setMetadataJson((porcelain.getMetadataJson()));
     }
     if (porcelain.getQueryBody() != null) {
       builder.setQueryBody((porcelain.getQueryBody()));

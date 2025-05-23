@@ -23,6 +23,7 @@ import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import com.strongdm.api.plumbing.WorkflowRolesHistoryGrpc;
 import com.strongdm.api.plumbing.WorkflowRolesHistoryPlumbing;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -33,17 +34,21 @@ import java.util.function.Supplier;
 public class WorkflowRolesHistory {
   private final WorkflowRolesHistoryGrpc.WorkflowRolesHistoryBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public WorkflowRolesHistory(ManagedChannel channel, Client client) {
-
     this.stub = WorkflowRolesHistoryGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
   private WorkflowRolesHistory(
-      WorkflowRolesHistoryGrpc.WorkflowRolesHistoryBlockingStub stub, Client client) {
+      WorkflowRolesHistoryGrpc.WorkflowRolesHistoryBlockingStub stub,
+      Client client,
+      Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -51,7 +56,8 @@ public class WorkflowRolesHistory {
    * set for all method calls.
    */
   public WorkflowRolesHistory withDeadlineAfter(long duration, TimeUnit units) {
-    return new WorkflowRolesHistory(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new WorkflowRolesHistory(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List gets a list of WorkflowRolesHistory records matching a given set of criteria. */
   public Iterable<WorkflowRoleHistory> list(String filter, Object... args) throws RpcException {
@@ -81,9 +87,12 @@ public class WorkflowRolesHistory {
                           this.parent.getCallCredentials("WorkflowRolesHistory.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

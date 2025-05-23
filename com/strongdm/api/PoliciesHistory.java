@@ -23,6 +23,7 @@ import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.PoliciesHistoryGrpc;
 import com.strongdm.api.plumbing.PoliciesHistoryPlumbing;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -33,16 +34,19 @@ import java.util.function.Supplier;
 public class PoliciesHistory {
   private final PoliciesHistoryGrpc.PoliciesHistoryBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public PoliciesHistory(ManagedChannel channel, Client client) {
-
     this.stub = PoliciesHistoryGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private PoliciesHistory(PoliciesHistoryGrpc.PoliciesHistoryBlockingStub stub, Client client) {
+  private PoliciesHistory(
+      PoliciesHistoryGrpc.PoliciesHistoryBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -50,7 +54,8 @@ public class PoliciesHistory {
    * for all method calls.
    */
   public PoliciesHistory withDeadlineAfter(long duration, TimeUnit units) {
-    return new PoliciesHistory(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new PoliciesHistory(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List gets a list of PolicyHistory records matching a given set of criteria. */
   public Iterable<PolicyHistory> list(String filter, Object... args) throws RpcException {
@@ -80,9 +85,12 @@ public class PoliciesHistory {
                           this.parent.getCallCredentials("PoliciesHistory.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

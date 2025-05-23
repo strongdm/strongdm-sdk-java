@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.ResourcesGrpc;
 import com.strongdm.api.plumbing.ResourcesPlumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,18 @@ import java.util.function.Supplier;
 public class Resources implements SnapshotResources {
   private final ResourcesGrpc.ResourcesBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Resources(ManagedChannel channel, Client client) {
-
     this.stub = ResourcesGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Resources(ResourcesGrpc.ResourcesBlockingStub stub, Client client) {
+  private Resources(ResourcesGrpc.ResourcesBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +57,8 @@ public class Resources implements SnapshotResources {
    * method calls.
    */
   public Resources withDeadlineAfter(long duration, TimeUnit units) {
-    return new Resources(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Resources(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** EnumerateTags gets a list of the filter matching tags. */
   public Iterable<Tag> enumerateTags(String filter, Object... args) throws RpcException {
@@ -84,9 +88,12 @@ public class Resources implements SnapshotResources {
                           this.parent.getCallCredentials("Resources.EnumerateTags", req))
                       .enumerateTags(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
@@ -124,9 +131,12 @@ public class Resources implements SnapshotResources {
                 .withCallCredentials(this.parent.getCallCredentials("Resources.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -155,9 +165,12 @@ public class Resources implements SnapshotResources {
                 .withCallCredentials(this.parent.getCallCredentials("Resources.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -181,9 +194,12 @@ public class Resources implements SnapshotResources {
                 .withCallCredentials(this.parent.getCallCredentials("Resources.Update", req))
                 .update(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -207,9 +223,12 @@ public class Resources implements SnapshotResources {
                 .withCallCredentials(this.parent.getCallCredentials("Resources.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -245,9 +264,12 @@ public class Resources implements SnapshotResources {
                       .withCallCredentials(this.parent.getCallCredentials("Resources.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
@@ -289,9 +311,12 @@ public class Resources implements SnapshotResources {
                 .withCallCredentials(this.parent.getCallCredentials("Resources.Healthcheck", req))
                 .healthcheck(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);

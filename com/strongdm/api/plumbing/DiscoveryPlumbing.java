@@ -1925,6 +1925,3667 @@ public final class DiscoveryPlumbing {
 
   }
 
+  public interface DiscoveryListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.DiscoveryListRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder();
+  }
+  /**
+   * <pre>
+   * DiscoveryListRequest is the request for listing discovered assets.
+   * </pre>
+   *
+   * Protobuf type {@code v1.DiscoveryListRequest}
+   */
+  public static final class DiscoveryListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.DiscoveryListRequest)
+      DiscoveryListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiscoveryListRequest.newBuilder() to construct.
+    private DiscoveryListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiscoveryListRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiscoveryListRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiscoveryListRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest.class, com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest other = (com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DiscoveryListRequest is the request for listing discovered assets.
+     * </pre>
+     *
+     * Protobuf type {@code v1.DiscoveryListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.DiscoveryListRequest)
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest.class, com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest build() {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest buildPartial() {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest result = new com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest other) {
+        if (other == com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.DiscoveryListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.DiscoveryListRequest)
+    private static final com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest();
+    }
+
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiscoveryListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DiscoveryListRequest>() {
+      @java.lang.Override
+      public DiscoveryListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiscoveryListRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiscoveryListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiscoveryListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DiscoveryListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.DiscoveryListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset> 
+        getAssetsList();
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.DiscoveryPlumbing.Asset getAssets(int index);
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    int getAssetsCount();
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder> 
+        getAssetsOrBuilderList();
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder getAssetsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * DiscoveryListResponse is the response for listing discovered assets.
+   * </pre>
+   *
+   * Protobuf type {@code v1.DiscoveryListResponse}
+   */
+  public static final class DiscoveryListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.DiscoveryListResponse)
+      DiscoveryListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiscoveryListResponse.newBuilder() to construct.
+    private DiscoveryListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiscoveryListResponse() {
+      assets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiscoveryListResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiscoveryListResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                assets_ = new java.util.ArrayList<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              assets_.add(
+                  input.readMessage(com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          assets_ = java.util.Collections.unmodifiableList(assets_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse.class, com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 2;
+    private java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset> assets_;
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset> getAssetsList() {
+      return assets_;
+    }
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder> 
+        getAssetsOrBuilderList() {
+      return assets_;
+    }
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getAssetsCount() {
+      return assets_.size();
+    }
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset getAssets(int index) {
+      return assets_.get(index);
+    }
+    /**
+     * <pre>
+     * Assets to return
+     * </pre>
+     *
+     * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder getAssetsOrBuilder(
+        int index) {
+      return assets_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        output.writeMessage(2, assets_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, assets_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse other = (com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getAssetsList()
+          .equals(other.getAssetsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (getAssetsCount() > 0) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DiscoveryListResponse is the response for listing discovered assets.
+     * </pre>
+     *
+     * Protobuf type {@code v1.DiscoveryListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.DiscoveryListResponse)
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse.class, com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_DiscoveryListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse build() {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse buildPartial() {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse result = new com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assets_ = java.util.Collections.unmodifiableList(assets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assets_ = assets_;
+        } else {
+          result.assets_ = assetsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse other) {
+        if (other == com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (assetsBuilder_ == null) {
+          if (!other.assets_.isEmpty()) {
+            if (assets_.isEmpty()) {
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetsIsMutable();
+              assets_.addAll(other.assets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assets_.isEmpty()) {
+            if (assetsBuilder_.isEmpty()) {
+              assetsBuilder_.dispose();
+              assetsBuilder_ = null;
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              assetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsFieldBuilder() : null;
+            } else {
+              assetsBuilder_.addAllMessages(other.assets_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset> assets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          assets_ = new java.util.ArrayList<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset>(assets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.DiscoveryPlumbing.Asset, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder, com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder> assetsBuilder_;
+
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset> getAssetsList() {
+        if (assetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assets_);
+        } else {
+          return assetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public int getAssetsCount() {
+        if (assetsBuilder_ == null) {
+          return assets_.size();
+        } else {
+          return assetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset getAssets(int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);
+        } else {
+          return assetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAssets(
+          int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.set(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAssets(
+          int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAssets(com.strongdm.api.plumbing.DiscoveryPlumbing.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAssets(
+          int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAssets(
+          com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAssets(
+          int index, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllAssets(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.Asset> values) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assets_);
+          onChanged();
+        } else {
+          assetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAssets() {
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeAssets(int index) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.remove(index);
+          onChanged();
+        } else {
+          assetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder getAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder getAssetsOrBuilder(
+          int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);  } else {
+          return assetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder> 
+           getAssetsOrBuilderList() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assets_);
+        }
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder addAssetsBuilder() {
+        return getAssetsFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder addAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Assets to return
+       * </pre>
+       *
+       * <code>repeated .v1.Asset assets = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder> 
+           getAssetsBuilderList() {
+        return getAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.DiscoveryPlumbing.Asset, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder, com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.DiscoveryPlumbing.Asset, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder, com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder>(
+                  assets_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.DiscoveryListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.DiscoveryListResponse)
+    private static final com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse();
+    }
+
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiscoveryListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DiscoveryListResponse>() {
+      @java.lang.Override
+      public DiscoveryListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiscoveryListResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiscoveryListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiscoveryListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.DiscoveryPlumbing.DiscoveryListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.Asset)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The kind of the asset.
+     * </pre>
+     *
+     * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+     * @return The kind.
+     */
+    java.lang.String getKind();
+    /**
+     * <pre>
+     * The kind of the asset.
+     * </pre>
+     *
+     * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for kind.
+     */
+    com.google.protobuf.ByteString
+        getKindBytes();
+
+    /**
+     * <pre>
+     * The name of the asset.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name of the asset.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the tags.
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @return The count of tags.
+     */
+    int getTagsCount();
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
+
+    /**
+     * <pre>
+     * Asset status, like "Managed" or "Unmanaged"
+     * </pre>
+     *
+     * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <pre>
+     * Asset status, like "Managed" or "Unmanaged"
+     * </pre>
+     *
+     * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <pre>
+     * When the asset was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * When the asset was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * When the asset was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * When the asset was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <pre>
+     * When the asset was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+    /**
+     * <pre>
+     * When the asset was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.Asset}
+   */
+  public static final class Asset extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.Asset)
+      AssetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Asset.newBuilder() to construct.
+    private Asset(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Asset() {
+      kind_ = "";
+      name_ = "";
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      status_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Asset();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Asset(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              kind_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tags_.add(s);
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              status_ = s;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (updatedAt_ != null) {
+                subBuilder = updatedAt_.toBuilder();
+              }
+              updatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updatedAt_);
+                updatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_Asset_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_Asset_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.class, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder.class);
+    }
+
+    public static final int KIND_FIELD_NUMBER = 1;
+    private volatile java.lang.Object kind_;
+    /**
+     * <pre>
+     * The kind of the asset.
+     * </pre>
+     *
+     * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+     * @return The kind.
+     */
+    @java.lang.Override
+    public java.lang.String getKind() {
+      java.lang.Object ref = kind_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        kind_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The kind of the asset.
+     * </pre>
+     *
+     * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for kind.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKindBytes() {
+      java.lang.Object ref = kind_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        kind_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The name of the asset.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the asset.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the tags.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @return The count of tags.
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <pre>
+     * Asset tags.
+     * </pre>
+     *
+     * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private volatile java.lang.Object status_;
+    /**
+     * <pre>
+     * Asset status, like "Managed" or "Unmanaged"
+     * </pre>
+     *
+     * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Asset status, like "Managed" or "Unmanaged"
+     * </pre>
+     *
+     * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * When the asset was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * When the asset was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * When the asset was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <pre>
+     * When the asset was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the updatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <pre>
+     * When the asset was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+     * @return The updatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <pre>
+     * When the asset was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      return getUpdatedAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kind_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, kind_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(5, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        output.writeMessage(6, getUpdatedAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kind_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, kind_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getUpdatedAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.DiscoveryPlumbing.Asset)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.DiscoveryPlumbing.Asset other = (com.strongdm.api.plumbing.DiscoveryPlumbing.Asset) obj;
+
+      if (!getKind()
+          .equals(other.getKind())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+      if (hasUpdatedAt()) {
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KIND_FIELD_NUMBER;
+      hash = (53 * hash) + getKind().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.DiscoveryPlumbing.Asset prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.Asset}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.Asset)
+        com.strongdm.api.plumbing.DiscoveryPlumbing.AssetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_Asset_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_Asset_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.class, com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        kind_ = "";
+
+        name_ = "";
+
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.internal_static_v1_Asset_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset build() {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.Asset result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset buildPartial() {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.Asset result = new com.strongdm.api.plumbing.DiscoveryPlumbing.Asset(this);
+        int from_bitField0_ = bitField0_;
+        result.kind_ = kind_;
+        result.name_ = name_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.tags_ = tags_;
+        result.status_ = status_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (updatedAtBuilder_ == null) {
+          result.updatedAt_ = updatedAt_;
+        } else {
+          result.updatedAt_ = updatedAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.DiscoveryPlumbing.Asset) {
+          return mergeFrom((com.strongdm.api.plumbing.DiscoveryPlumbing.Asset)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.DiscoveryPlumbing.Asset other) {
+        if (other == com.strongdm.api.plumbing.DiscoveryPlumbing.Asset.getDefaultInstance()) return this;
+        if (!other.getKind().isEmpty()) {
+          kind_ = other.kind_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.DiscoveryPlumbing.Asset parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.DiscoveryPlumbing.Asset) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object kind_ = "";
+      /**
+       * <pre>
+       * The kind of the asset.
+       * </pre>
+       *
+       * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+       * @return The kind.
+       */
+      public java.lang.String getKind() {
+        java.lang.Object ref = kind_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          kind_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The kind of the asset.
+       * </pre>
+       *
+       * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for kind.
+       */
+      public com.google.protobuf.ByteString
+          getKindBytes() {
+        java.lang.Object ref = kind_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          kind_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The kind of the asset.
+       * </pre>
+       *
+       * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The kind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKind(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        kind_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kind of the asset.
+       * </pre>
+       *
+       * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKind() {
+        
+        kind_ = getDefaultInstance().getKind();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kind of the asset.
+       * </pre>
+       *
+       * <code>string kind = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for kind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKindBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        kind_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name of the asset.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the asset.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the asset.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the asset.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the asset.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the tags.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @return The count of tags.
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset tags.
+       * </pre>
+       *
+       * <code>repeated string tags = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <pre>
+       * Asset status, like "Managed" or "Unmanaged"
+       * </pre>
+       *
+       * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Asset status, like "Managed" or "Unmanaged"
+       * </pre>
+       *
+       * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Asset status, like "Managed" or "Unmanaged"
+       * </pre>
+       *
+       * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset status, like "Managed" or "Unmanaged"
+       * </pre>
+       *
+       * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset status, like "Managed" or "Unmanaged"
+       * </pre>
+       *
+       * <code>string status = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * When the asset was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp updatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       * @return Whether the updatedAt field is set.
+       */
+      public boolean hasUpdatedAt() {
+        return updatedAtBuilder_ != null || updatedAt_ != null;
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       * @return The updatedAt.
+       */
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (updatedAt_ != null) {
+            updatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            updatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+          onChanged();
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+        
+        onChanged();
+        return getUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * When the asset was last updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 6 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.Asset)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Asset)
+    private static final com.strongdm.api.plumbing.DiscoveryPlumbing.Asset DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.DiscoveryPlumbing.Asset();
+    }
+
+    public static com.strongdm.api.plumbing.DiscoveryPlumbing.Asset getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Asset>
+        PARSER = new com.google.protobuf.AbstractParser<Asset>() {
+      @java.lang.Override
+      public Asset parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Asset(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Asset> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Asset> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.DiscoveryPlumbing.Asset getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ComponentSetOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.ComponentSet)
       com.google.protobuf.MessageOrBuilder {
@@ -4197,6 +7858,21 @@ public final class DiscoveryPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_DiscoveryRecordResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_DiscoveryListRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_DiscoveryListRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_DiscoveryListResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_DiscoveryListResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_Asset_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Asset_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_ComponentSet_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4223,19 +7899,34 @@ public final class DiscoveryPlumbing {
       "\005\260\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private\"c" +
       "\n\027DiscoveryRecordResponse\022(\n\004meta\030\001 \001(\0132" +
       "\032.v1.CreateResponseMetadata:\036\372\370\263\007\005\250\363\263\007\001\372" +
-      "\370\263\007\017\322\363\263\007\ngo_private\"z\n\014ComponentSet\022\033\n\007s" +
-      "can_id\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022-\n\ncomponents\030\002" +
-      " \003(\0132\r.v1.ComponentB\n\362\370\263\007\005\260\363\263\007\001:\036\372\370\263\007\005\250\363" +
-      "\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private\"\360\001\n\tComponent\022\030\n" +
-      "\004hash\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004kind\030\005 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022\033\n\007version\030\006 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\030" +
-      "\n\004data\030\007 \001(\014B\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\t" +
-      " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_privateJ\004\010\001" +
-      "\020\002J\004\010\002\020\003J\004\010\003\020\004J\004\010\010\020\tJ\004\010\n\020\0132\242\001\n\013Discovery" +
-      "V2\022h\n\006Record\022\032.v1.DiscoveryRecordRequest" +
-      "\032\033.v1.DiscoveryRecordResponse\"%\202\371\263\007\t\242\363\263\007" +
-      "\004post\202\371\263\007\022\252\363\263\007\r/v1/discovery\032)\312\371\263\007\020\302\371\263\007\013" +
+      "\370\263\007\017\322\363\263\007\ngo_private\"_\n\024DiscoveryListRequ" +
+      "est\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMeta" +
+      "data:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private\"\210\001\n" +
+      "\025DiscoveryListResponse\022(\n\004meta\030\001 \001(\0132\032.v" +
+      "1.CreateResponseMetadata\022%\n\006assets\030\002 \003(\013" +
+      "2\t.v1.AssetB\n\362\370\263\007\005\260\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017" +
+      "\322\363\263\007\ngo_private\"\211\002\n\005Asset\022\030\n\004kind\030\001 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n" +
+      "\004tags\030\003 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006status\030\004 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022:\n\ncreated_at\030\005 \001(\0132\032.google" +
+      ".protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdat" +
+      "ed_at\030\006 \001(\0132\032.google.protobuf.TimestampB" +
+      "\n\362\370\263\007\005\260\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_priv" +
+      "ate\"z\n\014ComponentSet\022\033\n\007scan_id\030\001 \001(\003B\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022-\n\ncomponents\030\002 \003(\0132\r.v1.Compon" +
+      "entB\n\362\370\263\007\005\260\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_" +
+      "private\"\360\001\n\tComponent\022\030\n\004hash\030\004 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\030\n\004kind\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007ver" +
+      "sion\030\006 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004data\030\007 \001(\014B\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\t \001(\0132\032.google.pr" +
+      "otobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\036\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007\017\322\363\263\007\ngo_privateJ\004\010\001\020\002J\004\010\002\020\003J\004\010\003\020\004J\004" +
+      "\010\010\020\tJ\004\010\n\020\0132\202\002\n\013DiscoveryV2\022h\n\006Record\022\032.v" +
+      "1.DiscoveryRecordRequest\032\033.v1.DiscoveryR" +
+      "ecordResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/" +
+      "v1/discovery\022^\n\004List\022\030.v1.DiscoveryListR" +
+      "equest\032\031.v1.DiscoveryListResponse\"!\202\371\263\007\010" +
+      "\242\363\263\007\003get\202\371\263\007\017\252\363\263\007\n/v1/assets\032)\312\371\263\007\020\302\371\263\007\013" +
       "DiscoveryV2\312\371\263\007\017\312\371\263\007\ngo_privateB\226\001\n\031com." +
       "strongdm.api.plumbingB\021DiscoveryPlumbing" +
       "Z5github.com/strongdm/strongdm-sdk-go/v3" +
@@ -4261,14 +7952,32 @@ public final class DiscoveryPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DiscoveryRecordResponse_descriptor,
         new java.lang.String[] { "Meta", });
-    internal_static_v1_ComponentSet_descriptor =
+    internal_static_v1_DiscoveryListRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_DiscoveryListRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_DiscoveryListRequest_descriptor,
+        new java.lang.String[] { "Meta", });
+    internal_static_v1_DiscoveryListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_DiscoveryListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_DiscoveryListResponse_descriptor,
+        new java.lang.String[] { "Meta", "Assets", });
+    internal_static_v1_Asset_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_Asset_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_Asset_descriptor,
+        new java.lang.String[] { "Kind", "Name", "Tags", "Status", "CreatedAt", "UpdatedAt", });
+    internal_static_v1_ComponentSet_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_v1_ComponentSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ComponentSet_descriptor,
         new java.lang.String[] { "ScanId", "Components", });
     internal_static_v1_Component_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_v1_Component_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Component_descriptor,

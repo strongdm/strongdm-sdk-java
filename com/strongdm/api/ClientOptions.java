@@ -37,13 +37,18 @@ public class ClientOptions {
     return this.insecure;
   }
 
-  private boolean exposeRateLimitErrors;
+  private boolean retryRateLimitErrors;
 
-  public boolean getExposeRateLimitErrors() {
-    return this.exposeRateLimitErrors;
+  public boolean getRetryRateLimitErrors() {
+    return this.retryRateLimitErrors;
   }
 
-  private int pageLimit = 50;
+  @Deprecated
+  public boolean getExposeRateLimitErrors() {
+    return !this.retryRateLimitErrors;
+  }
+
+  private int pageLimit;
 
   public int getPageLimit() {
     return this.pageLimit;
@@ -53,7 +58,7 @@ public class ClientOptions {
     this.host = "app.strongdm.com";
     this.port = 443;
     this.insecure = false;
-    this.exposeRateLimitErrors = false;
+    this.retryRateLimitErrors = true;
   }
 
   private ClientOptions copy() {
@@ -61,7 +66,7 @@ public class ClientOptions {
     c.host = this.host;
     c.insecure = this.insecure;
     c.port = this.port;
-    c.exposeRateLimitErrors = this.exposeRateLimitErrors;
+    c.retryRateLimitErrors = this.retryRateLimitErrors;
     return c;
   }
 
@@ -88,15 +93,14 @@ public class ClientOptions {
   // exposed to the code using this client (if disabled). By default, it is enabled.
   public ClientOptions withRateLimitRetries(boolean enabled) {
     ClientOptions c = this.copy();
-    c.exposeRateLimitErrors = !enabled;
+    c.retryRateLimitErrors = enabled;
     return c;
   }
 
   // withPageLimit will set the page limit used for list commands i.e. the number of results
   // that list calls will return per request to the StrongDM control plane. The interface for
   // listing does not directly expose this limit, but it may be useful to manipulate it to reduce
-  // network callouts, or optimize clients if expecting few results. If not provided, the default
-  // is 50.
+  // network callouts, or optimize clients if expecting few results.
   public ClientOptions withPageLimit(int limit) {
     ClientOptions c = this.copy();
     c.pageLimit = limit;

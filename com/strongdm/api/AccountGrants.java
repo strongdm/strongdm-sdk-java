@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -37,16 +38,19 @@ import java.util.function.Supplier;
 public class AccountGrants implements SnapshotAccountGrants {
   private final AccountGrantsGrpc.AccountGrantsBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public AccountGrants(ManagedChannel channel, Client client) {
-
     this.stub = AccountGrantsGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private AccountGrants(AccountGrantsGrpc.AccountGrantsBlockingStub stub, Client client) {
+  private AccountGrants(
+      AccountGrantsGrpc.AccountGrantsBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -54,7 +58,8 @@ public class AccountGrants implements SnapshotAccountGrants {
    * all method calls.
    */
   public AccountGrants withDeadlineAfter(long duration, TimeUnit units) {
-    return new AccountGrants(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new AccountGrants(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Create registers a new AccountGrant. */
   public AccountGrantCreateResponse create(AccountGrant accountGrant) throws RpcException {
@@ -71,9 +76,12 @@ public class AccountGrants implements SnapshotAccountGrants {
                 .withCallCredentials(this.parent.getCallCredentials("AccountGrants.Create", req))
                 .create(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -102,9 +110,12 @@ public class AccountGrants implements SnapshotAccountGrants {
                 .withCallCredentials(this.parent.getCallCredentials("AccountGrants.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -128,9 +139,12 @@ public class AccountGrants implements SnapshotAccountGrants {
                 .withCallCredentials(this.parent.getCallCredentials("AccountGrants.Delete", req))
                 .delete(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -167,9 +181,12 @@ public class AccountGrants implements SnapshotAccountGrants {
                           this.parent.getCallCredentials("AccountGrants.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

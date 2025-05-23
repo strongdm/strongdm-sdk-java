@@ -23,6 +23,7 @@ import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.ReplaysGrpc;
 import com.strongdm.api.plumbing.ReplaysPlumbing;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -36,16 +37,18 @@ import java.util.function.Supplier;
 public class Replays {
   private final ReplaysGrpc.ReplaysBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public Replays(ManagedChannel channel, Client client) {
-
     this.stub = ReplaysGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
-  private Replays(ReplaysGrpc.ReplaysBlockingStub stub, Client client) {
+  private Replays(ReplaysGrpc.ReplaysBlockingStub stub, Client client, Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -53,7 +56,8 @@ public class Replays {
    * method calls.
    */
   public Replays withDeadlineAfter(long duration, TimeUnit units) {
-    return new Replays(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new Replays(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** List gets a list of ReplayChunks for the Query ID specified by the filter criteria. */
   public Iterable<ReplayChunk> list(String filter, Object... args) throws RpcException {
@@ -82,9 +86,12 @@ public class Replays {
                       .withCallCredentials(this.parent.getCallCredentials("Replays.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);

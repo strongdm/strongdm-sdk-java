@@ -24,6 +24,7 @@ import com.strongdm.api.plumbing.RemoteIdentityGroupsGrpc;
 import com.strongdm.api.plumbing.RemoteIdentityGroupsPlumbing;
 import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
+import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
 import java.util.List;
@@ -38,17 +39,21 @@ import java.util.function.Supplier;
 public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
   private final RemoteIdentityGroupsGrpc.RemoteIdentityGroupsBlockingStub stub;
   private final Client parent;
+  private final Deadline deadline;
 
   public RemoteIdentityGroups(ManagedChannel channel, Client client) {
-
     this.stub = RemoteIdentityGroupsGrpc.newBlockingStub(channel);
     this.parent = client;
+    this.deadline = null;
   }
 
   private RemoteIdentityGroups(
-      RemoteIdentityGroupsGrpc.RemoteIdentityGroupsBlockingStub stub, Client client) {
+      RemoteIdentityGroupsGrpc.RemoteIdentityGroupsBlockingStub stub,
+      Client client,
+      Deadline deadline) {
     this.stub = stub;
     this.parent = client;
+    this.deadline = deadline;
   }
 
   /**
@@ -56,7 +61,8 @@ public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
    * set for all method calls.
    */
   public RemoteIdentityGroups withDeadlineAfter(long duration, TimeUnit units) {
-    return new RemoteIdentityGroups(this.stub.withDeadlineAfter(duration, units), this.parent);
+    Deadline deadline = Deadline.after(duration, units);
+    return new RemoteIdentityGroups(this.stub.withDeadline(deadline), this.parent, deadline);
   }
   /** Get reads one RemoteIdentityGroup by ID. */
   public RemoteIdentityGroupGetResponse get(String id) throws RpcException {
@@ -79,9 +85,12 @@ public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
                     this.parent.getCallCredentials("RemoteIdentityGroups.Get", req))
                 .get(req);
       } catch (Exception e) {
-        if (this.parent.shouldRetry(tries, e)) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
           tries++;
-          this.parent.jitterSleep(tries);
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
           continue;
         }
         throw Plumbing.convertExceptionToPorcelain(e);
@@ -118,9 +127,12 @@ public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
                           this.parent.getCallCredentials("RemoteIdentityGroups.List", req))
                       .list(req);
             } catch (Exception e) {
-              if (this.parent.shouldRetry(tries, e)) {
+              if (this.parent.shouldRetry(tries, e, this.deadline)) {
                 tries++;
-                this.parent.jitterSleep(tries);
+                try {
+                  Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+                } catch (Exception ignored) {
+                }
                 continue;
               }
               throw Plumbing.convertExceptionToPorcelain(e);
