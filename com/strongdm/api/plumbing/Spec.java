@@ -13994,6 +13994,804 @@ public final class Spec {
 
   }
 
+  public interface MFAOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.MFA)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string provider = 1;</code>
+     * @return The provider.
+     */
+    java.lang.String getProvider();
+    /**
+     * <code>string provider = 1;</code>
+     * @return The bytes for provider.
+     */
+    com.google.protobuf.ByteString
+        getProviderBytes();
+
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @return A list containing the methodsEnabled.
+     */
+    java.util.List<java.lang.String>
+        getMethodsEnabledList();
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @return The count of methodsEnabled.
+     */
+    int getMethodsEnabledCount();
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @param index The index of the element to return.
+     * @return The methodsEnabled at the given index.
+     */
+    java.lang.String getMethodsEnabled(int index);
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methodsEnabled at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMethodsEnabledBytes(int index);
+  }
+  /**
+   * <pre>
+   * MFA details for Requirement
+   * </pre>
+   *
+   * Protobuf type {@code v1.MFA}
+   */
+  public static final class MFA extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.MFA)
+      MFAOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MFA.newBuilder() to construct.
+    private MFA(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MFA() {
+      provider_ = "";
+      methodsEnabled_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MFA();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MFA(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              provider_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                methodsEnabled_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              methodsEnabled_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          methodsEnabled_ = methodsEnabled_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_MFA_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.Spec.internal_static_v1_MFA_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.Spec.MFA.class, com.strongdm.api.plumbing.Spec.MFA.Builder.class);
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object provider_;
+    /**
+     * <code>string provider = 1;</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public java.lang.String getProvider() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider = 1;</code>
+     * @return The bytes for provider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderBytes() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METHODS_ENABLED_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList methodsEnabled_;
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @return A list containing the methodsEnabled.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMethodsEnabledList() {
+      return methodsEnabled_;
+    }
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @return The count of methodsEnabled.
+     */
+    public int getMethodsEnabledCount() {
+      return methodsEnabled_.size();
+    }
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @param index The index of the element to return.
+     * @return The methodsEnabled at the given index.
+     */
+    public java.lang.String getMethodsEnabled(int index) {
+      return methodsEnabled_.get(index);
+    }
+    /**
+     * <code>repeated string methods_enabled = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methodsEnabled at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMethodsEnabledBytes(int index) {
+      return methodsEnabled_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, provider_);
+      }
+      for (int i = 0; i < methodsEnabled_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, methodsEnabled_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, provider_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < methodsEnabled_.size(); i++) {
+          dataSize += computeStringSizeNoTag(methodsEnabled_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMethodsEnabledList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.Spec.MFA)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.Spec.MFA other = (com.strongdm.api.plumbing.Spec.MFA) obj;
+
+      if (!getProvider()
+          .equals(other.getProvider())) return false;
+      if (!getMethodsEnabledList()
+          .equals(other.getMethodsEnabledList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getProvider().hashCode();
+      if (getMethodsEnabledCount() > 0) {
+        hash = (37 * hash) + METHODS_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getMethodsEnabledList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Spec.MFA parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.Spec.MFA prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MFA details for Requirement
+     * </pre>
+     *
+     * Protobuf type {@code v1.MFA}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.MFA)
+        com.strongdm.api.plumbing.Spec.MFAOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_MFA_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_MFA_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.Spec.MFA.class, com.strongdm.api.plumbing.Spec.MFA.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.Spec.MFA.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        provider_ = "";
+
+        methodsEnabled_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.Spec.internal_static_v1_MFA_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.MFA getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.Spec.MFA.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.MFA build() {
+        com.strongdm.api.plumbing.Spec.MFA result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Spec.MFA buildPartial() {
+        com.strongdm.api.plumbing.Spec.MFA result = new com.strongdm.api.plumbing.Spec.MFA(this);
+        int from_bitField0_ = bitField0_;
+        result.provider_ = provider_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          methodsEnabled_ = methodsEnabled_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.methodsEnabled_ = methodsEnabled_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.Spec.MFA) {
+          return mergeFrom((com.strongdm.api.plumbing.Spec.MFA)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.Spec.MFA other) {
+        if (other == com.strongdm.api.plumbing.Spec.MFA.getDefaultInstance()) return this;
+        if (!other.getProvider().isEmpty()) {
+          provider_ = other.provider_;
+          onChanged();
+        }
+        if (!other.methodsEnabled_.isEmpty()) {
+          if (methodsEnabled_.isEmpty()) {
+            methodsEnabled_ = other.methodsEnabled_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureMethodsEnabledIsMutable();
+            methodsEnabled_.addAll(other.methodsEnabled_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.Spec.MFA parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.Spec.MFA) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object provider_ = "";
+      /**
+       * <code>string provider = 1;</code>
+       * @return The provider.
+       */
+      public java.lang.String getProvider() {
+        java.lang.Object ref = provider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          provider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider = 1;</code>
+       * @return The bytes for provider.
+       */
+      public com.google.protobuf.ByteString
+          getProviderBytes() {
+        java.lang.Object ref = provider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          provider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider = 1;</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProvider(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        provider_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProvider() {
+        
+        provider_ = getDefaultInstance().getProvider();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 1;</code>
+       * @param value The bytes for provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        provider_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList methodsEnabled_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMethodsEnabledIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          methodsEnabled_ = new com.google.protobuf.LazyStringArrayList(methodsEnabled_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @return A list containing the methodsEnabled.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMethodsEnabledList() {
+        return methodsEnabled_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @return The count of methodsEnabled.
+       */
+      public int getMethodsEnabledCount() {
+        return methodsEnabled_.size();
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @param index The index of the element to return.
+       * @return The methodsEnabled at the given index.
+       */
+      public java.lang.String getMethodsEnabled(int index) {
+        return methodsEnabled_.get(index);
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the methodsEnabled at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMethodsEnabledBytes(int index) {
+        return methodsEnabled_.getByteString(index);
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The methodsEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodsEnabled(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMethodsEnabledIsMutable();
+        methodsEnabled_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @param value The methodsEnabled to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethodsEnabled(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMethodsEnabledIsMutable();
+        methodsEnabled_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @param values The methodsEnabled to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMethodsEnabled(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMethodsEnabledIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, methodsEnabled_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethodsEnabled() {
+        methodsEnabled_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods_enabled = 2;</code>
+       * @param value The bytes of the methodsEnabled to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethodsEnabledBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureMethodsEnabledIsMutable();
+        methodsEnabled_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.MFA)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.MFA)
+    private static final com.strongdm.api.plumbing.Spec.MFA DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.Spec.MFA();
+    }
+
+    public static com.strongdm.api.plumbing.Spec.MFA getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MFA>
+        PARSER = new com.google.protobuf.AbstractParser<MFA>() {
+      @java.lang.Override
+      public MFA parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MFA(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MFA> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MFA> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.MFA getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RequirementOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.Requirement)
       com.google.protobuf.MessageOrBuilder {
@@ -14021,6 +14819,21 @@ public final class Spec {
      */
     com.google.protobuf.ByteString
         getValueBytes();
+
+    /**
+     * <code>.v1.MFA MFA = 3;</code>
+     * @return Whether the mFA field is set.
+     */
+    boolean hasMFA();
+    /**
+     * <code>.v1.MFA MFA = 3;</code>
+     * @return The mFA.
+     */
+    com.strongdm.api.plumbing.Spec.MFA getMFA();
+    /**
+     * <code>.v1.MFA MFA = 3;</code>
+     */
+    com.strongdm.api.plumbing.Spec.MFAOrBuilder getMFAOrBuilder();
   }
   /**
    * <pre>
@@ -14084,6 +14897,19 @@ public final class Spec {
               java.lang.String s = input.readStringRequireUtf8();
 
               value_ = s;
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.Spec.MFA.Builder subBuilder = null;
+              if (mFA_ != null) {
+                subBuilder = mFA_.toBuilder();
+              }
+              mFA_ = input.readMessage(com.strongdm.api.plumbing.Spec.MFA.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mFA_);
+                mFA_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -14196,6 +15022,32 @@ public final class Spec {
       }
     }
 
+    public static final int MFA_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.Spec.MFA mFA_;
+    /**
+     * <code>.v1.MFA MFA = 3;</code>
+     * @return Whether the mFA field is set.
+     */
+    @java.lang.Override
+    public boolean hasMFA() {
+      return mFA_ != null;
+    }
+    /**
+     * <code>.v1.MFA MFA = 3;</code>
+     * @return The mFA.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.MFA getMFA() {
+      return mFA_ == null ? com.strongdm.api.plumbing.Spec.MFA.getDefaultInstance() : mFA_;
+    }
+    /**
+     * <code>.v1.MFA MFA = 3;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.MFAOrBuilder getMFAOrBuilder() {
+      return getMFA();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14216,6 +15068,9 @@ public final class Spec {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
       }
+      if (mFA_ != null) {
+        output.writeMessage(3, getMFA());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14230,6 +15085,10 @@ public final class Spec {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      if (mFA_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMFA());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14250,6 +15109,11 @@ public final class Spec {
           .equals(other.getType())) return false;
       if (!getValue()
           .equals(other.getValue())) return false;
+      if (hasMFA() != other.hasMFA()) return false;
+      if (hasMFA()) {
+        if (!getMFA()
+            .equals(other.getMFA())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14265,6 +15129,10 @@ public final class Spec {
       hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getValue().hashCode();
+      if (hasMFA()) {
+        hash = (37 * hash) + MFA_FIELD_NUMBER;
+        hash = (53 * hash) + getMFA().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14407,6 +15275,12 @@ public final class Spec {
 
         value_ = "";
 
+        if (mFABuilder_ == null) {
+          mFA_ = null;
+        } else {
+          mFA_ = null;
+          mFABuilder_ = null;
+        }
         return this;
       }
 
@@ -14435,6 +15309,11 @@ public final class Spec {
         com.strongdm.api.plumbing.Spec.Requirement result = new com.strongdm.api.plumbing.Spec.Requirement(this);
         result.type_ = type_;
         result.value_ = value_;
+        if (mFABuilder_ == null) {
+          result.mFA_ = mFA_;
+        } else {
+          result.mFA_ = mFABuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -14490,6 +15369,9 @@ public final class Spec {
         if (!other.getValue().isEmpty()) {
           value_ = other.value_;
           onChanged();
+        }
+        if (other.hasMFA()) {
+          mergeMFA(other.getMFA());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14670,6 +15552,125 @@ public final class Spec {
         value_ = value;
         onChanged();
         return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.MFA mFA_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.MFA, com.strongdm.api.plumbing.Spec.MFA.Builder, com.strongdm.api.plumbing.Spec.MFAOrBuilder> mFABuilder_;
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       * @return Whether the mFA field is set.
+       */
+      public boolean hasMFA() {
+        return mFABuilder_ != null || mFA_ != null;
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       * @return The mFA.
+       */
+      public com.strongdm.api.plumbing.Spec.MFA getMFA() {
+        if (mFABuilder_ == null) {
+          return mFA_ == null ? com.strongdm.api.plumbing.Spec.MFA.getDefaultInstance() : mFA_;
+        } else {
+          return mFABuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       */
+      public Builder setMFA(com.strongdm.api.plumbing.Spec.MFA value) {
+        if (mFABuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mFA_ = value;
+          onChanged();
+        } else {
+          mFABuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       */
+      public Builder setMFA(
+          com.strongdm.api.plumbing.Spec.MFA.Builder builderForValue) {
+        if (mFABuilder_ == null) {
+          mFA_ = builderForValue.build();
+          onChanged();
+        } else {
+          mFABuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       */
+      public Builder mergeMFA(com.strongdm.api.plumbing.Spec.MFA value) {
+        if (mFABuilder_ == null) {
+          if (mFA_ != null) {
+            mFA_ =
+              com.strongdm.api.plumbing.Spec.MFA.newBuilder(mFA_).mergeFrom(value).buildPartial();
+          } else {
+            mFA_ = value;
+          }
+          onChanged();
+        } else {
+          mFABuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       */
+      public Builder clearMFA() {
+        if (mFABuilder_ == null) {
+          mFA_ = null;
+          onChanged();
+        } else {
+          mFA_ = null;
+          mFABuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.MFA.Builder getMFABuilder() {
+        
+        onChanged();
+        return getMFAFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.MFAOrBuilder getMFAOrBuilder() {
+        if (mFABuilder_ != null) {
+          return mFABuilder_.getMessageOrBuilder();
+        } else {
+          return mFA_ == null ?
+              com.strongdm.api.plumbing.Spec.MFA.getDefaultInstance() : mFA_;
+        }
+      }
+      /**
+       * <code>.v1.MFA MFA = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.MFA, com.strongdm.api.plumbing.Spec.MFA.Builder, com.strongdm.api.plumbing.Spec.MFAOrBuilder> 
+          getMFAFieldBuilder() {
+        if (mFABuilder_ == null) {
+          mFABuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.MFA, com.strongdm.api.plumbing.Spec.MFA.Builder, com.strongdm.api.plumbing.Spec.MFAOrBuilder>(
+                  getMFA(),
+                  getParentForChildren(),
+                  isClean());
+          mFA_ = null;
+        }
+        return mFABuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15616,6 +16617,11 @@ public final class Spec {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_FulfillmentsMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_MFA_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_MFA_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_Requirement_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15673,12 +16679,14 @@ public final class Spec {
       "ta:\n\372\370\263\007\005\250\363\263\007\001\"=\n\024RequirementsMetadata\022%" +
       "\n\014requirements\030\001 \003(\0132\017.v1.Requirement\"=\n" +
       "\024FulfillmentsMetadata\022%\n\014fulfillments\030\001 " +
-      "\003(\0132\017.v1.Fulfillment\"*\n\013Requirement\022\014\n\004t" +
-      "ype\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"B\n\013Fulfillment\022" +
-      "$\n\013requirement\030\001 \001(\0132\017.v1.Requirement\022\r\n" +
-      "\005value\030\002 \001(\tBR\n\031com.strongdm.api.plumbin" +
-      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
-      "3/internal/v1;v1b\006proto3"
+      "\003(\0132\017.v1.Fulfillment\"0\n\003MFA\022\020\n\010provider\030" +
+      "\001 \001(\t\022\027\n\017methods_enabled\030\002 \003(\t\"@\n\013Requir" +
+      "ement\022\014\n\004type\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\024\n\003MF" +
+      "A\030\003 \001(\0132\007.v1.MFA\"B\n\013Fulfillment\022$\n\013requi" +
+      "rement\030\001 \001(\0132\017.v1.Requirement\022\r\n\005value\030\002" +
+      " \001(\tBR\n\031com.strongdm.api.plumbingZ5githu" +
+      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
+      "al/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15818,14 +16826,20 @@ public final class Spec {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FulfillmentsMetadata_descriptor,
         new java.lang.String[] { "Fulfillments", });
-    internal_static_v1_Requirement_descriptor =
+    internal_static_v1_MFA_descriptor =
       getDescriptor().getMessageTypes().get(22);
+    internal_static_v1_MFA_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_MFA_descriptor,
+        new java.lang.String[] { "Provider", "MethodsEnabled", });
+    internal_static_v1_Requirement_descriptor =
+      getDescriptor().getMessageTypes().get(23);
     internal_static_v1_Requirement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Requirement_descriptor,
-        new java.lang.String[] { "Type", "Value", });
+        new java.lang.String[] { "Type", "Value", "MFA", });
     internal_static_v1_Fulfillment_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_v1_Fulfillment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Fulfillment_descriptor,

@@ -4089,6 +4089,33 @@ public final class OrganizationHistoryPlumbing {
      */
     com.google.protobuf.ByteString
         getPublicKeyPemBytes();
+
+    /**
+     * <pre>
+     * The Organization's logging settings
+     * </pre>
+     *
+     * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+     * @return Whether the logConfig field is set.
+     */
+    boolean hasLogConfig();
+    /**
+     * <pre>
+     * The Organization's logging settings
+     * </pre>
+     *
+     * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+     * @return The logConfig.
+     */
+    com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig getLogConfig();
+    /**
+     * <pre>
+     * The Organization's logging settings
+     * </pre>
+     *
+     * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder getLogConfigOrBuilder();
   }
   /**
    * Protobuf type {@code v1.Organization}
@@ -4366,6 +4393,19 @@ public final class OrganizationHistoryPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               publicKeyPem_ = s;
+              break;
+            }
+            case 258: {
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder subBuilder = null;
+              if (logConfig_ != null) {
+                subBuilder = logConfig_.toBuilder();
+              }
+              logConfig_ = input.readMessage(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logConfig_);
+                logConfig_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5571,6 +5611,44 @@ public final class OrganizationHistoryPlumbing {
       }
     }
 
+    public static final int LOG_CONFIG_FIELD_NUMBER = 32;
+    private com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig logConfig_;
+    /**
+     * <pre>
+     * The Organization's logging settings
+     * </pre>
+     *
+     * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+     * @return Whether the logConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogConfig() {
+      return logConfig_ != null;
+    }
+    /**
+     * <pre>
+     * The Organization's logging settings
+     * </pre>
+     *
+     * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+     * @return The logConfig.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig getLogConfig() {
+      return logConfig_ == null ? com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.getDefaultInstance() : logConfig_;
+    }
+    /**
+     * <pre>
+     * The Organization's logging settings
+     * </pre>
+     *
+     * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder getLogConfigOrBuilder() {
+      return getLogConfig();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5677,6 +5755,9 @@ public final class OrganizationHistoryPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKeyPem_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 31, publicKeyPem_);
+      }
+      if (logConfig_ != null) {
+        output.writeMessage(32, getLogConfig());
       }
       unknownFields.writeTo(output);
     }
@@ -5792,6 +5873,10 @@ public final class OrganizationHistoryPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKeyPem_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, publicKeyPem_);
       }
+      if (logConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, getLogConfig());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5884,6 +5969,11 @@ public final class OrganizationHistoryPlumbing {
           != other.getDiscardReplays()) return false;
       if (!getPublicKeyPem()
           .equals(other.getPublicKeyPem())) return false;
+      if (hasLogConfig() != other.hasLogConfig()) return false;
+      if (hasLogConfig()) {
+        if (!getLogConfig()
+            .equals(other.getLogConfig())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5974,6 +6064,10 @@ public final class OrganizationHistoryPlumbing {
           getDiscardReplays());
       hash = (37 * hash) + PUBLIC_KEY_PEM_FIELD_NUMBER;
       hash = (53 * hash) + getPublicKeyPem().hashCode();
+      if (hasLogConfig()) {
+        hash = (37 * hash) + LOG_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getLogConfig().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6189,6 +6283,12 @@ public final class OrganizationHistoryPlumbing {
 
         publicKeyPem_ = "";
 
+        if (logConfigBuilder_ == null) {
+          logConfig_ = null;
+        } else {
+          logConfig_ = null;
+          logConfigBuilder_ = null;
+        }
         return this;
       }
 
@@ -6266,6 +6366,11 @@ public final class OrganizationHistoryPlumbing {
         result.enforceSingleSession_ = enforceSingleSession_;
         result.discardReplays_ = discardReplays_;
         result.publicKeyPem_ = publicKeyPem_;
+        if (logConfigBuilder_ == null) {
+          result.logConfig_ = logConfig_;
+        } else {
+          result.logConfig_ = logConfigBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6425,6 +6530,9 @@ public final class OrganizationHistoryPlumbing {
         if (!other.getPublicKeyPem().isEmpty()) {
           publicKeyPem_ = other.publicKeyPem_;
           onChanged();
+        }
+        if (other.hasLogConfig()) {
+          mergeLogConfig(other.getLogConfig());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9354,6 +9462,161 @@ public final class OrganizationHistoryPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig logConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder> logConfigBuilder_;
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       * @return Whether the logConfig field is set.
+       */
+      public boolean hasLogConfig() {
+        return logConfigBuilder_ != null || logConfig_ != null;
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       * @return The logConfig.
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig getLogConfig() {
+        if (logConfigBuilder_ == null) {
+          return logConfig_ == null ? com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.getDefaultInstance() : logConfig_;
+        } else {
+          return logConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setLogConfig(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig value) {
+        if (logConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logConfig_ = value;
+          onChanged();
+        } else {
+          logConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setLogConfig(
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder builderForValue) {
+        if (logConfigBuilder_ == null) {
+          logConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          logConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeLogConfig(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig value) {
+        if (logConfigBuilder_ == null) {
+          if (logConfig_ != null) {
+            logConfig_ =
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.newBuilder(logConfig_).mergeFrom(value).buildPartial();
+          } else {
+            logConfig_ = value;
+          }
+          onChanged();
+        } else {
+          logConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearLogConfig() {
+        if (logConfigBuilder_ == null) {
+          logConfig_ = null;
+          onChanged();
+        } else {
+          logConfig_ = null;
+          logConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder getLogConfigBuilder() {
+        
+        onChanged();
+        return getLogConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder getLogConfigOrBuilder() {
+        if (logConfigBuilder_ != null) {
+          return logConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return logConfig_ == null ?
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.getDefaultInstance() : logConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's logging settings
+       * </pre>
+       *
+       * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder> 
+          getLogConfigFieldBuilder() {
+        if (logConfigBuilder_ == null) {
+          logConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder>(
+                  getLogConfig(),
+                  getParentForChildren(),
+                  isClean());
+          logConfig_ = null;
+        }
+        return logConfigBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9407,6 +9670,4070 @@ public final class OrganizationHistoryPlumbing {
 
   }
 
+  public interface LogConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.LogConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The Organization's local log storage, one of the LogLocalStorage constants.
+     * </pre>
+     *
+     * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+     * @return The localStorage.
+     */
+    java.lang.String getLocalStorage();
+    /**
+     * <pre>
+     * The Organization's local log storage, one of the LogLocalStorage constants.
+     * </pre>
+     *
+     * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localStorage.
+     */
+    com.google.protobuf.ByteString
+        getLocalStorageBytes();
+
+    /**
+     * <pre>
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * </pre>
+     *
+     * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+     * @return The localEncoder.
+     */
+    java.lang.String getLocalEncoder();
+    /**
+     * <pre>
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * </pre>
+     *
+     * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localEncoder.
+     */
+    com.google.protobuf.ByteString
+        getLocalEncoderBytes();
+
+    /**
+     * <pre>
+     * The Organization's local log format, one of the LogLocalFormat constants.
+     * </pre>
+     *
+     * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+     * @return The localFormat.
+     */
+    java.lang.String getLocalFormat();
+    /**
+     * <pre>
+     * The Organization's local log format, one of the LogLocalFormat constants.
+     * </pre>
+     *
+     * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localFormat.
+     */
+    com.google.protobuf.ByteString
+        getLocalFormatBytes();
+
+    /**
+     * <pre>
+     * The Organization's local log TCP address.
+     * </pre>
+     *
+     * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The localTcpAddress.
+     */
+    java.lang.String getLocalTcpAddress();
+    /**
+     * <pre>
+     * The Organization's local log TCP address.
+     * </pre>
+     *
+     * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localTcpAddress.
+     */
+    com.google.protobuf.ByteString
+        getLocalTcpAddressBytes();
+
+    /**
+     * <pre>
+     * The Organization's local log socket path.
+     * </pre>
+     *
+     * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The localSocketPath.
+     */
+    java.lang.String getLocalSocketPath();
+    /**
+     * <pre>
+     * The Organization's local log socket path.
+     * </pre>
+     *
+     * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localSocketPath.
+     */
+    com.google.protobuf.ByteString
+        getLocalSocketPathBytes();
+
+    /**
+     * <pre>
+     * The Organization's public key in PEM format for encrypting logs.
+     * </pre>
+     *
+     * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The publicKey.
+     */
+    java.lang.String getPublicKey();
+    /**
+     * <pre>
+     * The Organization's public key in PEM format for encrypting logs.
+     * </pre>
+     *
+     * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for publicKey.
+     */
+    com.google.protobuf.ByteString
+        getPublicKeyBytes();
+
+    /**
+     * <pre>
+     * The Organization's log category configuration settings.
+     * </pre>
+     *
+     * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+     * @return Whether the categories field is set.
+     */
+    boolean hasCategories();
+    /**
+     * <pre>
+     * The Organization's log category configuration settings.
+     * </pre>
+     *
+     * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+     * @return The categories.
+     */
+    com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap getCategories();
+    /**
+     * <pre>
+     * The Organization's log category configuration settings.
+     * </pre>
+     *
+     * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMapOrBuilder getCategoriesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.LogConfig}
+   */
+  public static final class LogConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.LogConfig)
+      LogConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogConfig.newBuilder() to construct.
+    private LogConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogConfig() {
+      localStorage_ = "";
+      localEncoder_ = "";
+      localFormat_ = "";
+      localTcpAddress_ = "";
+      localSocketPath_ = "";
+      publicKey_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              localStorage_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              localEncoder_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              localFormat_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              localTcpAddress_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              localSocketPath_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              publicKey_ = s;
+              break;
+            }
+            case 58: {
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder subBuilder = null;
+              if (categories_ != null) {
+                subBuilder = categories_.toBuilder();
+              }
+              categories_ = input.readMessage(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(categories_);
+                categories_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder.class);
+    }
+
+    public static final int LOCAL_STORAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object localStorage_;
+    /**
+     * <pre>
+     * The Organization's local log storage, one of the LogLocalStorage constants.
+     * </pre>
+     *
+     * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+     * @return The localStorage.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalStorage() {
+      java.lang.Object ref = localStorage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localStorage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's local log storage, one of the LogLocalStorage constants.
+     * </pre>
+     *
+     * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localStorage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalStorageBytes() {
+      java.lang.Object ref = localStorage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localStorage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCAL_ENCODER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object localEncoder_;
+    /**
+     * <pre>
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * </pre>
+     *
+     * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+     * @return The localEncoder.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalEncoder() {
+      java.lang.Object ref = localEncoder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localEncoder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * </pre>
+     *
+     * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localEncoder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalEncoderBytes() {
+      java.lang.Object ref = localEncoder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localEncoder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCAL_FORMAT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object localFormat_;
+    /**
+     * <pre>
+     * The Organization's local log format, one of the LogLocalFormat constants.
+     * </pre>
+     *
+     * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+     * @return The localFormat.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalFormat() {
+      java.lang.Object ref = localFormat_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localFormat_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's local log format, one of the LogLocalFormat constants.
+     * </pre>
+     *
+     * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localFormat.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalFormatBytes() {
+      java.lang.Object ref = localFormat_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localFormat_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCAL_TCP_ADDRESS_FIELD_NUMBER = 4;
+    private volatile java.lang.Object localTcpAddress_;
+    /**
+     * <pre>
+     * The Organization's local log TCP address.
+     * </pre>
+     *
+     * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The localTcpAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalTcpAddress() {
+      java.lang.Object ref = localTcpAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localTcpAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's local log TCP address.
+     * </pre>
+     *
+     * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localTcpAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalTcpAddressBytes() {
+      java.lang.Object ref = localTcpAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localTcpAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCAL_SOCKET_PATH_FIELD_NUMBER = 5;
+    private volatile java.lang.Object localSocketPath_;
+    /**
+     * <pre>
+     * The Organization's local log socket path.
+     * </pre>
+     *
+     * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The localSocketPath.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalSocketPath() {
+      java.lang.Object ref = localSocketPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localSocketPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's local log socket path.
+     * </pre>
+     *
+     * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for localSocketPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalSocketPathBytes() {
+      java.lang.Object ref = localSocketPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localSocketPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLIC_KEY_FIELD_NUMBER = 6;
+    private volatile java.lang.Object publicKey_;
+    /**
+     * <pre>
+     * The Organization's public key in PEM format for encrypting logs.
+     * </pre>
+     *
+     * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The publicKey.
+     */
+    @java.lang.Override
+    public java.lang.String getPublicKey() {
+      java.lang.Object ref = publicKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publicKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's public key in PEM format for encrypting logs.
+     * </pre>
+     *
+     * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for publicKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublicKeyBytes() {
+      java.lang.Object ref = publicKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publicKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CATEGORIES_FIELD_NUMBER = 7;
+    private com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap categories_;
+    /**
+     * <pre>
+     * The Organization's log category configuration settings.
+     * </pre>
+     *
+     * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+     * @return Whether the categories field is set.
+     */
+    @java.lang.Override
+    public boolean hasCategories() {
+      return categories_ != null;
+    }
+    /**
+     * <pre>
+     * The Organization's log category configuration settings.
+     * </pre>
+     *
+     * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+     * @return The categories.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap getCategories() {
+      return categories_ == null ? com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.getDefaultInstance() : categories_;
+    }
+    /**
+     * <pre>
+     * The Organization's log category configuration settings.
+     * </pre>
+     *
+     * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMapOrBuilder getCategoriesOrBuilder() {
+      return getCategories();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localStorage_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, localStorage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localEncoder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, localEncoder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localFormat_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, localFormat_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localTcpAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, localTcpAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localSocketPath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, localSocketPath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, publicKey_);
+      }
+      if (categories_ != null) {
+        output.writeMessage(7, getCategories());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localStorage_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, localStorage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localEncoder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, localEncoder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localFormat_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, localFormat_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localTcpAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, localTcpAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localSocketPath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, localSocketPath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, publicKey_);
+      }
+      if (categories_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getCategories());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig other = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig) obj;
+
+      if (!getLocalStorage()
+          .equals(other.getLocalStorage())) return false;
+      if (!getLocalEncoder()
+          .equals(other.getLocalEncoder())) return false;
+      if (!getLocalFormat()
+          .equals(other.getLocalFormat())) return false;
+      if (!getLocalTcpAddress()
+          .equals(other.getLocalTcpAddress())) return false;
+      if (!getLocalSocketPath()
+          .equals(other.getLocalSocketPath())) return false;
+      if (!getPublicKey()
+          .equals(other.getPublicKey())) return false;
+      if (hasCategories() != other.hasCategories()) return false;
+      if (hasCategories()) {
+        if (!getCategories()
+            .equals(other.getCategories())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOCAL_STORAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalStorage().hashCode();
+      hash = (37 * hash) + LOCAL_ENCODER_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalEncoder().hashCode();
+      hash = (37 * hash) + LOCAL_FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalFormat().hashCode();
+      hash = (37 * hash) + LOCAL_TCP_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalTcpAddress().hashCode();
+      hash = (37 * hash) + LOCAL_SOCKET_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalSocketPath().hashCode();
+      hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicKey().hashCode();
+      if (hasCategories()) {
+        hash = (37 * hash) + CATEGORIES_FIELD_NUMBER;
+        hash = (53 * hash) + getCategories().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.LogConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.LogConfig)
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        localStorage_ = "";
+
+        localEncoder_ = "";
+
+        localFormat_ = "";
+
+        localTcpAddress_ = "";
+
+        localSocketPath_ = "";
+
+        publicKey_ = "";
+
+        if (categoriesBuilder_ == null) {
+          categories_ = null;
+        } else {
+          categories_ = null;
+          categoriesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig build() {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig buildPartial() {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig result = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig(this);
+        result.localStorage_ = localStorage_;
+        result.localEncoder_ = localEncoder_;
+        result.localFormat_ = localFormat_;
+        result.localTcpAddress_ = localTcpAddress_;
+        result.localSocketPath_ = localSocketPath_;
+        result.publicKey_ = publicKey_;
+        if (categoriesBuilder_ == null) {
+          result.categories_ = categories_;
+        } else {
+          result.categories_ = categoriesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig) {
+          return mergeFrom((com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig other) {
+        if (other == com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.getDefaultInstance()) return this;
+        if (!other.getLocalStorage().isEmpty()) {
+          localStorage_ = other.localStorage_;
+          onChanged();
+        }
+        if (!other.getLocalEncoder().isEmpty()) {
+          localEncoder_ = other.localEncoder_;
+          onChanged();
+        }
+        if (!other.getLocalFormat().isEmpty()) {
+          localFormat_ = other.localFormat_;
+          onChanged();
+        }
+        if (!other.getLocalTcpAddress().isEmpty()) {
+          localTcpAddress_ = other.localTcpAddress_;
+          onChanged();
+        }
+        if (!other.getLocalSocketPath().isEmpty()) {
+          localSocketPath_ = other.localSocketPath_;
+          onChanged();
+        }
+        if (!other.getPublicKey().isEmpty()) {
+          publicKey_ = other.publicKey_;
+          onChanged();
+        }
+        if (other.hasCategories()) {
+          mergeCategories(other.getCategories());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object localStorage_ = "";
+      /**
+       * <pre>
+       * The Organization's local log storage, one of the LogLocalStorage constants.
+       * </pre>
+       *
+       * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+       * @return The localStorage.
+       */
+      public java.lang.String getLocalStorage() {
+        java.lang.Object ref = localStorage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localStorage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log storage, one of the LogLocalStorage constants.
+       * </pre>
+       *
+       * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for localStorage.
+       */
+      public com.google.protobuf.ByteString
+          getLocalStorageBytes() {
+        java.lang.Object ref = localStorage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localStorage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log storage, one of the LogLocalStorage constants.
+       * </pre>
+       *
+       * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The localStorage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalStorage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        localStorage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log storage, one of the LogLocalStorage constants.
+       * </pre>
+       *
+       * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalStorage() {
+        
+        localStorage_ = getDefaultInstance().getLocalStorage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log storage, one of the LogLocalStorage constants.
+       * </pre>
+       *
+       * <code>string local_storage = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for localStorage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalStorageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        localStorage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localEncoder_ = "";
+      /**
+       * <pre>
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * </pre>
+       *
+       * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+       * @return The localEncoder.
+       */
+      public java.lang.String getLocalEncoder() {
+        java.lang.Object ref = localEncoder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localEncoder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * </pre>
+       *
+       * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for localEncoder.
+       */
+      public com.google.protobuf.ByteString
+          getLocalEncoderBytes() {
+        java.lang.Object ref = localEncoder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localEncoder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * </pre>
+       *
+       * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The localEncoder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalEncoder(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        localEncoder_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * </pre>
+       *
+       * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalEncoder() {
+        
+        localEncoder_ = getDefaultInstance().getLocalEncoder();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * </pre>
+       *
+       * <code>string local_encoder = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for localEncoder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalEncoderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        localEncoder_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localFormat_ = "";
+      /**
+       * <pre>
+       * The Organization's local log format, one of the LogLocalFormat constants.
+       * </pre>
+       *
+       * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+       * @return The localFormat.
+       */
+      public java.lang.String getLocalFormat() {
+        java.lang.Object ref = localFormat_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localFormat_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log format, one of the LogLocalFormat constants.
+       * </pre>
+       *
+       * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for localFormat.
+       */
+      public com.google.protobuf.ByteString
+          getLocalFormatBytes() {
+        java.lang.Object ref = localFormat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localFormat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log format, one of the LogLocalFormat constants.
+       * </pre>
+       *
+       * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The localFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalFormat(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        localFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log format, one of the LogLocalFormat constants.
+       * </pre>
+       *
+       * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalFormat() {
+        
+        localFormat_ = getDefaultInstance().getLocalFormat();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log format, one of the LogLocalFormat constants.
+       * </pre>
+       *
+       * <code>string local_format = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for localFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalFormatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        localFormat_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localTcpAddress_ = "";
+      /**
+       * <pre>
+       * The Organization's local log TCP address.
+       * </pre>
+       *
+       * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+       * @return The localTcpAddress.
+       */
+      public java.lang.String getLocalTcpAddress() {
+        java.lang.Object ref = localTcpAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localTcpAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log TCP address.
+       * </pre>
+       *
+       * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for localTcpAddress.
+       */
+      public com.google.protobuf.ByteString
+          getLocalTcpAddressBytes() {
+        java.lang.Object ref = localTcpAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localTcpAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log TCP address.
+       * </pre>
+       *
+       * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The localTcpAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalTcpAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        localTcpAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log TCP address.
+       * </pre>
+       *
+       * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalTcpAddress() {
+        
+        localTcpAddress_ = getDefaultInstance().getLocalTcpAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log TCP address.
+       * </pre>
+       *
+       * <code>string local_tcp_address = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for localTcpAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalTcpAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        localTcpAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localSocketPath_ = "";
+      /**
+       * <pre>
+       * The Organization's local log socket path.
+       * </pre>
+       *
+       * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+       * @return The localSocketPath.
+       */
+      public java.lang.String getLocalSocketPath() {
+        java.lang.Object ref = localSocketPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localSocketPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log socket path.
+       * </pre>
+       *
+       * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for localSocketPath.
+       */
+      public com.google.protobuf.ByteString
+          getLocalSocketPathBytes() {
+        java.lang.Object ref = localSocketPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localSocketPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's local log socket path.
+       * </pre>
+       *
+       * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The localSocketPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalSocketPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        localSocketPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log socket path.
+       * </pre>
+       *
+       * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalSocketPath() {
+        
+        localSocketPath_ = getDefaultInstance().getLocalSocketPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's local log socket path.
+       * </pre>
+       *
+       * <code>string local_socket_path = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for localSocketPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalSocketPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        localSocketPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publicKey_ = "";
+      /**
+       * <pre>
+       * The Organization's public key in PEM format for encrypting logs.
+       * </pre>
+       *
+       * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+       * @return The publicKey.
+       */
+      public java.lang.String getPublicKey() {
+        java.lang.Object ref = publicKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publicKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's public key in PEM format for encrypting logs.
+       * </pre>
+       *
+       * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for publicKey.
+       */
+      public com.google.protobuf.ByteString
+          getPublicKeyBytes() {
+        java.lang.Object ref = publicKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's public key in PEM format for encrypting logs.
+       * </pre>
+       *
+       * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The publicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        publicKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's public key in PEM format for encrypting logs.
+       * </pre>
+       *
+       * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKey() {
+        
+        publicKey_ = getDefaultInstance().getPublicKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's public key in PEM format for encrypting logs.
+       * </pre>
+       *
+       * <code>string public_key = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for publicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        publicKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap categories_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMapOrBuilder> categoriesBuilder_;
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       * @return Whether the categories field is set.
+       */
+      public boolean hasCategories() {
+        return categoriesBuilder_ != null || categories_ != null;
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       * @return The categories.
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap getCategories() {
+        if (categoriesBuilder_ == null) {
+          return categories_ == null ? com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.getDefaultInstance() : categories_;
+        } else {
+          return categoriesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCategories(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap value) {
+        if (categoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          categories_ = value;
+          onChanged();
+        } else {
+          categoriesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCategories(
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder builderForValue) {
+        if (categoriesBuilder_ == null) {
+          categories_ = builderForValue.build();
+          onChanged();
+        } else {
+          categoriesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCategories(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap value) {
+        if (categoriesBuilder_ == null) {
+          if (categories_ != null) {
+            categories_ =
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.newBuilder(categories_).mergeFrom(value).buildPartial();
+          } else {
+            categories_ = value;
+          }
+          onChanged();
+        } else {
+          categoriesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCategories() {
+        if (categoriesBuilder_ == null) {
+          categories_ = null;
+          onChanged();
+        } else {
+          categories_ = null;
+          categoriesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder getCategoriesBuilder() {
+        
+        onChanged();
+        return getCategoriesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMapOrBuilder getCategoriesOrBuilder() {
+        if (categoriesBuilder_ != null) {
+          return categoriesBuilder_.getMessageOrBuilder();
+        } else {
+          return categories_ == null ?
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.getDefaultInstance() : categories_;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's log category configuration settings.
+       * </pre>
+       *
+       * <code>.v1.LogCategoryConfigMap categories = 7 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMapOrBuilder> 
+          getCategoriesFieldBuilder() {
+        if (categoriesBuilder_ == null) {
+          categoriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMapOrBuilder>(
+                  getCategories(),
+                  getParentForChildren(),
+                  isClean());
+          categories_ = null;
+        }
+        return categoriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.LogConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.LogConfig)
+    private static final com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig();
+    }
+
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogConfig>
+        PARSER = new com.google.protobuf.AbstractParser<LogConfig>() {
+      @java.lang.Override
+      public LogConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LogCategoryConfigMapOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.LogCategoryConfigMap)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    java.util.List<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry> 
+        getEntriesList();
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry getEntries(int index);
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    java.util.List<? extends com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code v1.LogCategoryConfigMap}
+   */
+  public static final class LogCategoryConfigMap extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.LogCategoryConfigMap)
+      LogCategoryConfigMapOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogCategoryConfigMap.newBuilder() to construct.
+    private LogCategoryConfigMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogCategoryConfigMap() {
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogCategoryConfigMap();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogCategoryConfigMap(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                entries_ = new java.util.ArrayList<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              entries_.add(
+                  input.readMessage(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder.class);
+    }
+
+    public interface EntryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:v1.LogCategoryConfigMap.Entry)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>.v1.LogCategoryConfig config = 2;</code>
+       * @return Whether the config field is set.
+       */
+      boolean hasConfig();
+      /**
+       * <code>.v1.LogCategoryConfig config = 2;</code>
+       * @return The config.
+       */
+      com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig getConfig();
+      /**
+       * <code>.v1.LogCategoryConfig config = 2;</code>
+       */
+      com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigOrBuilder getConfigOrBuilder();
+    }
+    /**
+     * Protobuf type {@code v1.LogCategoryConfigMap.Entry}
+     */
+    public static final class Entry extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:v1.LogCategoryConfigMap.Entry)
+        EntryOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Entry.newBuilder() to construct.
+      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Entry() {
+        name_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Entry();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Entry(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder subBuilder = null;
+                if (config_ != null) {
+                  subBuilder = config_.toBuilder();
+                }
+                config_ = input.readMessage(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(config_);
+                  config_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_Entry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_Entry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CONFIG_FIELD_NUMBER = 2;
+      private com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig config_;
+      /**
+       * <code>.v1.LogCategoryConfig config = 2;</code>
+       * @return Whether the config field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return config_ != null;
+      }
+      /**
+       * <code>.v1.LogCategoryConfig config = 2;</code>
+       * @return The config.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig getConfig() {
+        return config_ == null ? com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.getDefaultInstance() : config_;
+      }
+      /**
+       * <code>.v1.LogCategoryConfig config = 2;</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigOrBuilder getConfigOrBuilder() {
+        return getConfig();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (config_ != null) {
+          output.writeMessage(2, getConfig());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (config_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getConfig());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry)) {
+          return super.equals(obj);
+        }
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry other = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry) obj;
+
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (hasConfig() != other.hasConfig()) return false;
+        if (hasConfig()) {
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        if (hasConfig()) {
+          hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfig().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code v1.LogCategoryConfigMap.Entry}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:v1.LogCategoryConfigMap.Entry)
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_Entry_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder.class);
+        }
+
+        // Construct using com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          if (configBuilder_ == null) {
+            config_ = null;
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry getDefaultInstanceForType() {
+          return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry build() {
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry buildPartial() {
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry result = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry(this);
+          result.name_ = name_;
+          if (configBuilder_ == null) {
+            result.config_ = config_;
+          } else {
+            result.config_ = configBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry) {
+            return mergeFrom((com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry other) {
+          if (other == com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasConfig()) {
+            mergeConfig(other.getConfig());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>string name = 1;</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig config_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigOrBuilder> configBuilder_;
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         * @return Whether the config field is set.
+         */
+        public boolean hasConfig() {
+          return configBuilder_ != null || config_ != null;
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         * @return The config.
+         */
+        public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig getConfig() {
+          if (configBuilder_ == null) {
+            return config_ == null ? com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.getDefaultInstance() : config_;
+          } else {
+            return configBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         */
+        public Builder setConfig(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig value) {
+          if (configBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            config_ = value;
+            onChanged();
+          } else {
+            configBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         */
+        public Builder setConfig(
+            com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder builderForValue) {
+          if (configBuilder_ == null) {
+            config_ = builderForValue.build();
+            onChanged();
+          } else {
+            configBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         */
+        public Builder mergeConfig(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig value) {
+          if (configBuilder_ == null) {
+            if (config_ != null) {
+              config_ =
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.newBuilder(config_).mergeFrom(value).buildPartial();
+            } else {
+              config_ = value;
+            }
+            onChanged();
+          } else {
+            configBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         */
+        public Builder clearConfig() {
+          if (configBuilder_ == null) {
+            config_ = null;
+            onChanged();
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         */
+        public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder getConfigBuilder() {
+          
+          onChanged();
+          return getConfigFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         */
+        public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigOrBuilder getConfigOrBuilder() {
+          if (configBuilder_ != null) {
+            return configBuilder_.getMessageOrBuilder();
+          } else {
+            return config_ == null ?
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.getDefaultInstance() : config_;
+          }
+        }
+        /**
+         * <code>.v1.LogCategoryConfig config = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigOrBuilder> 
+            getConfigFieldBuilder() {
+          if (configBuilder_ == null) {
+            configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigOrBuilder>(
+                    getConfig(),
+                    getParentForChildren(),
+                    isClean());
+            config_ = null;
+          }
+          return configBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:v1.LogCategoryConfigMap.Entry)
+      }
+
+      // @@protoc_insertion_point(class_scope:v1.LogCategoryConfigMap.Entry)
+      private static final com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry();
+      }
+
+      public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Entry>
+          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
+        @java.lang.Override
+        public Entry parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Entry(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Entry> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Entry> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 1;
+    private java.util.List<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry> entries_;
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    @java.lang.Override
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(1, entries_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, entries_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap other = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap) obj;
+
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.LogCategoryConfigMap}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.LogCategoryConfigMap)
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMapOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntriesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfigMap_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap build() {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap buildPartial() {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap result = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap(this);
+        int from_bitField0_ = bitField0_;
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap) {
+          return mergeFrom((com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap other) {
+        if (other == com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.getDefaultInstance()) return this;
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          entries_ = new java.util.ArrayList<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry>(entries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder> entriesBuilder_;
+
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder setEntries(
+          int index, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder setEntries(
+          int index, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder addEntries(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder addEntries(
+          int index, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder addEntries(
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder addEntries(
+          int index, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public java.util.List<? extends com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .v1.LogCategoryConfigMap.Entry entries = 1;</code>
+       */
+      public java.util.List<com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.Entry.Builder, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap.EntryOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.LogCategoryConfigMap)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.LogCategoryConfigMap)
+    private static final com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap();
+    }
+
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogCategoryConfigMap>
+        PARSER = new com.google.protobuf.AbstractParser<LogCategoryConfigMap>() {
+      @java.lang.Override
+      public LogCategoryConfigMap parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogCategoryConfigMap(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogCategoryConfigMap> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogCategoryConfigMap> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigMap getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LogCategoryConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.LogCategoryConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * </pre>
+     *
+     * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+     * @return The remoteEncoder.
+     */
+    java.lang.String getRemoteEncoder();
+    /**
+     * <pre>
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * </pre>
+     *
+     * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for remoteEncoder.
+     */
+    com.google.protobuf.ByteString
+        getRemoteEncoderBytes();
+
+    /**
+     * <pre>
+     * Indicates if the Organization should exclude replay data from remote logging for the log category.
+     * </pre>
+     *
+     * <code>bool remote_discard_replays = 2 [(.v1.field_options) = { ... }</code>
+     * @return The remoteDiscardReplays.
+     */
+    boolean getRemoteDiscardReplays();
+  }
+  /**
+   * Protobuf type {@code v1.LogCategoryConfig}
+   */
+  public static final class LogCategoryConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.LogCategoryConfig)
+      LogCategoryConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogCategoryConfig.newBuilder() to construct.
+    private LogCategoryConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogCategoryConfig() {
+      remoteEncoder_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogCategoryConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogCategoryConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              remoteEncoder_ = s;
+              break;
+            }
+            case 16: {
+
+              remoteDiscardReplays_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder.class);
+    }
+
+    public static final int REMOTE_ENCODER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object remoteEncoder_;
+    /**
+     * <pre>
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * </pre>
+     *
+     * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+     * @return The remoteEncoder.
+     */
+    @java.lang.Override
+    public java.lang.String getRemoteEncoder() {
+      java.lang.Object ref = remoteEncoder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        remoteEncoder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * </pre>
+     *
+     * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for remoteEncoder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemoteEncoderBytes() {
+      java.lang.Object ref = remoteEncoder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        remoteEncoder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REMOTE_DISCARD_REPLAYS_FIELD_NUMBER = 2;
+    private boolean remoteDiscardReplays_;
+    /**
+     * <pre>
+     * Indicates if the Organization should exclude replay data from remote logging for the log category.
+     * </pre>
+     *
+     * <code>bool remote_discard_replays = 2 [(.v1.field_options) = { ... }</code>
+     * @return The remoteDiscardReplays.
+     */
+    @java.lang.Override
+    public boolean getRemoteDiscardReplays() {
+      return remoteDiscardReplays_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remoteEncoder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, remoteEncoder_);
+      }
+      if (remoteDiscardReplays_ != false) {
+        output.writeBool(2, remoteDiscardReplays_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remoteEncoder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, remoteEncoder_);
+      }
+      if (remoteDiscardReplays_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, remoteDiscardReplays_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig other = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig) obj;
+
+      if (!getRemoteEncoder()
+          .equals(other.getRemoteEncoder())) return false;
+      if (getRemoteDiscardReplays()
+          != other.getRemoteDiscardReplays()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REMOTE_ENCODER_FIELD_NUMBER;
+      hash = (53 * hash) + getRemoteEncoder().hashCode();
+      hash = (37 * hash) + REMOTE_DISCARD_REPLAYS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRemoteDiscardReplays());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.LogCategoryConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.LogCategoryConfig)
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.class, com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        remoteEncoder_ = "";
+
+        remoteDiscardReplays_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.internal_static_v1_LogCategoryConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig build() {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig buildPartial() {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig result = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig(this);
+        result.remoteEncoder_ = remoteEncoder_;
+        result.remoteDiscardReplays_ = remoteDiscardReplays_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig) {
+          return mergeFrom((com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig other) {
+        if (other == com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig.getDefaultInstance()) return this;
+        if (!other.getRemoteEncoder().isEmpty()) {
+          remoteEncoder_ = other.remoteEncoder_;
+          onChanged();
+        }
+        if (other.getRemoteDiscardReplays() != false) {
+          setRemoteDiscardReplays(other.getRemoteDiscardReplays());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object remoteEncoder_ = "";
+      /**
+       * <pre>
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * </pre>
+       *
+       * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+       * @return The remoteEncoder.
+       */
+      public java.lang.String getRemoteEncoder() {
+        java.lang.Object ref = remoteEncoder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          remoteEncoder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * </pre>
+       *
+       * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for remoteEncoder.
+       */
+      public com.google.protobuf.ByteString
+          getRemoteEncoderBytes() {
+        java.lang.Object ref = remoteEncoder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          remoteEncoder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * </pre>
+       *
+       * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The remoteEncoder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteEncoder(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        remoteEncoder_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * </pre>
+       *
+       * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteEncoder() {
+        
+        remoteEncoder_ = getDefaultInstance().getRemoteEncoder();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * </pre>
+       *
+       * <code>string remote_encoder = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for remoteEncoder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteEncoderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        remoteEncoder_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean remoteDiscardReplays_ ;
+      /**
+       * <pre>
+       * Indicates if the Organization should exclude replay data from remote logging for the log category.
+       * </pre>
+       *
+       * <code>bool remote_discard_replays = 2 [(.v1.field_options) = { ... }</code>
+       * @return The remoteDiscardReplays.
+       */
+      @java.lang.Override
+      public boolean getRemoteDiscardReplays() {
+        return remoteDiscardReplays_;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization should exclude replay data from remote logging for the log category.
+       * </pre>
+       *
+       * <code>bool remote_discard_replays = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The remoteDiscardReplays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteDiscardReplays(boolean value) {
+        
+        remoteDiscardReplays_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization should exclude replay data from remote logging for the log category.
+       * </pre>
+       *
+       * <code>bool remote_discard_replays = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteDiscardReplays() {
+        
+        remoteDiscardReplays_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.LogCategoryConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.LogCategoryConfig)
+    private static final com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig();
+    }
+
+    public static com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogCategoryConfig>
+        PARSER = new com.google.protobuf.AbstractParser<LogCategoryConfig>() {
+      @java.lang.Override
+      public LogCategoryConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogCategoryConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogCategoryConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogCategoryConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogCategoryConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_OrganizationHistoryListRequest_descriptor;
   private static final 
@@ -9427,6 +13754,26 @@ public final class OrganizationHistoryPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Organization_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_LogConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_LogConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_LogCategoryConfigMap_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_LogCategoryConfigMap_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_LogCategoryConfigMap_Entry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_LogCategoryConfigMap_Entry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_LogCategoryConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_LogCategoryConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9455,7 +13802,7 @@ public final class OrganizationHistoryPlumbing {
       "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
       "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
       "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r\"\342\014\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "r\"\240\r\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
       " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
@@ -9494,19 +13841,38 @@ public final class OrganizationHistoryPlumbing {
       "st_provider\030\034 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026enforce" +
       "_single_session\030\035 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022#\n\017dis" +
       "card_replays\030\036 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016public" +
-      "_key_pem\030\037 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370" +
-      "\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\357" +
-      "\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1.Org" +
-      "anizationHistoryListRequest\032#.v1.Organiz" +
-      "ationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312\371\263\007\036" +
-      "\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371\263\007\001" +
-      "\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provider" +
-      "B\227\001\n\031com.strongdm.api.plumbingB\033Organiza" +
-      "tionHistoryPlumbingZ5github.com/strongdm" +
-      "/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242" +
-      "\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006prot" +
-      "o3"
+      "_key_pem\030\037 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022<\n\nlog_config" +
+      "\030  \001(\0132\r.v1.LogConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo" +
+      "_private:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007" +
+      "\023!terraform-provider\"\325\002\n\tLogConfig\022!\n\rlo" +
+      "cal_storage\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rlocal_e" +
+      "ncoder\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014local_format" +
+      "\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021local_tcp_address\030" +
+      "\004 \001(\tB)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017LocalTC" +
+      "PAddress\022%\n\021local_socket_path\030\005 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\036\n\npublic_key\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "8\n\ncategories\030\007 \001(\0132\030.v1.LogCategoryConf" +
+      "igMapB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_pri" +
+      "vate\"\371\001\n\024LogCategoryConfigMap\022/\n\007entries" +
+      "\030\001 \003(\0132\036.v1.LogCategoryConfigMap.Entry\032R" +
+      "\n\005Entry\022\014\n\004name\030\001 \001(\t\022%\n\006config\030\002 \001(\0132\025." +
+      "v1.LogCategoryConfig:\024\372\370\263\007\017\322\363\263\007\ngo_priva" +
+      "te:\\\372\370\263\007W\312\363\263\007C\352\363\263\007\027log_category_config_m" +
+      "ap\362\363\263\007\"\n\ngo_private\022\024LogCategoryConfigMa" +
+      "p\322\363\263\007\ngo_private\"~\n\021LogCategoryConfig\022\"\n" +
+      "\016remote_encoder\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026rem" +
+      "ote_discard_replays\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\031\372" +
+      "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\357\001\n\023Organizatio" +
+      "nHistory\022\200\001\n\004List\022\".v1.OrganizationHisto" +
+      "ryListRequest\032#.v1.OrganizationHistoryLi" +
+      "stResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/o" +
+      "rganization-history\032U\312\371\263\007\036\302\371\263\007\031Organizat" +
+      "ionHistoryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263" +
+      "\007\030\312\371\263\007\023!terraform-providerB\227\001\n\031com.stron" +
+      "gdm.api.plumbingB\033OrganizationHistoryPlu" +
+      "mbingZ5github.com/strongdm/strongdm-sdk-" +
+      "go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007" +
+      "\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9539,7 +13905,31 @@ public final class OrganizationHistoryPlumbing {
     internal_static_v1_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Organization_descriptor,
-        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackRange", "DeviceTrustEnabled", "DeviceTrustProvider", "EnforceSingleSession", "DiscardReplays", "PublicKeyPem", });
+        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackRange", "DeviceTrustEnabled", "DeviceTrustProvider", "EnforceSingleSession", "DiscardReplays", "PublicKeyPem", "LogConfig", });
+    internal_static_v1_LogConfig_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_LogConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_LogConfig_descriptor,
+        new java.lang.String[] { "LocalStorage", "LocalEncoder", "LocalFormat", "LocalTcpAddress", "LocalSocketPath", "PublicKey", "Categories", });
+    internal_static_v1_LogCategoryConfigMap_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_LogCategoryConfigMap_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_LogCategoryConfigMap_descriptor,
+        new java.lang.String[] { "Entries", });
+    internal_static_v1_LogCategoryConfigMap_Entry_descriptor =
+      internal_static_v1_LogCategoryConfigMap_descriptor.getNestedTypes().get(0);
+    internal_static_v1_LogCategoryConfigMap_Entry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_LogCategoryConfigMap_Entry_descriptor,
+        new java.lang.String[] { "Name", "Config", });
+    internal_static_v1_LogCategoryConfig_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_LogCategoryConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_LogCategoryConfig_descriptor,
+        new java.lang.String[] { "RemoteEncoder", "RemoteDiscardReplays", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
