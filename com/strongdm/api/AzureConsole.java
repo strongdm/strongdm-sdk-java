@@ -17,7 +17,11 @@
 
 package com.strongdm.api;
 
-public class Snowflake implements Resource {
+/**
+ * AzureConsole is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
+public class AzureConsole implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -34,20 +38,14 @@ public class Snowflake implements Resource {
     this.bindInterface = in;
   }
 
-  private String database;
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
-  public String getDatabase() {
-    return this.database;
+  private String connectorId;
+  /** The connector ID to authenticate through. */
+  public String getConnectorId() {
+    return this.connectorId;
   }
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
-  public void setDatabase(String in) {
-    this.database = in;
+  /** The connector ID to authenticate through. */
+  public void setConnectorId(String in) {
+    this.connectorId = in;
   }
 
   private String egressFilter;
@@ -70,16 +68,6 @@ public class Snowflake implements Resource {
     this.healthy = in;
   }
 
-  private String hostname;
-  /** The host to dial to initiate a connection from the egress node to this resource. */
-  public String getHostname() {
-    return this.hostname;
-  }
-  /** The host to dial to initiate a connection from the egress node to this resource. */
-  public void setHostname(String in) {
-    this.hostname = in;
-  }
-
   private String id;
   /** Unique identifier of the Resource. */
   public String getId() {
@@ -88,6 +76,26 @@ public class Snowflake implements Resource {
   /** Unique identifier of the Resource. */
   public void setId(String in) {
     this.id = in;
+  }
+
+  private String identitySetId;
+  /** The ID of the identity set to use for identity connections. */
+  public String getIdentitySetId() {
+    return this.identitySetId;
+  }
+  /** The ID of the identity set to use for identity connections. */
+  public void setIdentitySetId(String in) {
+    this.identitySetId = in;
+  }
+
+  private String managementGroupId;
+  /** The management group ID to authenticate scope Privileges to. */
+  public String getManagementGroupId() {
+    return this.managementGroupId;
+  }
+  /** The management group ID to authenticate scope Privileges to. */
+  public void setManagementGroupId(String in) {
+    this.managementGroupId = in;
   }
 
   private String name;
@@ -100,38 +108,14 @@ public class Snowflake implements Resource {
     this.name = in;
   }
 
-  private String password;
-  /**
-   * Deprecated: https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/
-   */
-  public String getPassword() {
-    return this.password;
+  private String privilegeLevels;
+  /** The privilege levels specify which Groups are managed externally */
+  public String getPrivilegeLevels() {
+    return this.privilegeLevels;
   }
-  /**
-   * Deprecated: https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/
-   */
-  public void setPassword(String in) {
-    this.password = in;
-  }
-
-  private int portOverride;
-  /** The local port used by clients to connect to this resource. */
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-  /** The local port used by clients to connect to this resource. */
-  public void setPortOverride(int in) {
-    this.portOverride = in;
-  }
-
-  private String privateKey;
-  /** RSA Private Key for authentication */
-  public String getPrivateKey() {
-    return this.privateKey;
-  }
-  /** RSA Private Key for authentication */
-  public void setPrivateKey(String in) {
-    this.privateKey = in;
+  /** The privilege levels specify which Groups are managed externally */
+  public void setPrivilegeLevels(String in) {
+    this.privilegeLevels = in;
   }
 
   private String proxyClusterId;
@@ -142,16 +126,6 @@ public class Snowflake implements Resource {
   /** ID of the proxy cluster for this resource, if any. */
   public void setProxyClusterId(String in) {
     this.proxyClusterId = in;
-  }
-
-  private String schema;
-  /** The schema to provide on authentication. */
-  public String getSchema() {
-    return this.schema;
-  }
-  /** The schema to provide on authentication. */
-  public void setSchema(String in) {
-    this.schema = in;
   }
 
   private String secretStoreId;
@@ -180,6 +154,16 @@ public class Snowflake implements Resource {
     this.subdomain = in;
   }
 
+  private String subscriptionId;
+  /** The subscription ID to authenticate scope Privileges to. */
+  public String getSubscriptionId() {
+    return this.subscriptionId;
+  }
+  /** The subscription ID to authenticate scope Privileges to. */
+  public void setSubscriptionId(String in) {
+    this.subscriptionId = in;
+  }
+
   private java.util.Map<String, String> tags;
   /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
@@ -197,15 +181,5 @@ public class Snowflake implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private String username;
-  /** The username to authenticate with. */
-  public String getUsername() {
-    return this.username;
-  }
-  /** The username to authenticate with. */
-  public void setUsername(String in) {
-    this.username = in;
   }
 }

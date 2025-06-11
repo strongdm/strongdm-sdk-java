@@ -236,6 +236,31 @@ public class Plumbing {
                   }
                   privileges.setK8s(k8sPrivileges);
                   break;
+                case "entraGroups":
+                  JSONObject jsonEntraGroupsPrivileges =
+                      jsonPrivileges.getJSONObject("entraGroups");
+                  com.strongdm.api.AccessRule.EntraGroupsPrivileges entraGroupsPrivileges =
+                      new com.strongdm.api.AccessRule.EntraGroupsPrivileges();
+                  for (Iterator<String> entraGroupsPrivilegeKeyIterator =
+                          jsonEntraGroupsPrivileges.keys();
+                      entraGroupsPrivilegeKeyIterator.hasNext(); ) {
+                    String entraGroupsPrivilegeKey = entraGroupsPrivilegeKeyIterator.next();
+                    switch (entraGroupsPrivilegeKey) {
+                      case "groups":
+                        JSONArray groups = jsonEntraGroupsPrivileges.getJSONArray("groups");
+                        for (int j = 0; j < groups.length(); j++) {
+                          entraGroupsPrivileges.addGroup(groups.getString(j));
+                        }
+                        break;
+                      default:
+                        throw new UnknownException(
+                            "unknown entraGroups privileges field '"
+                                + entraGroupsPrivilegeKey
+                                + "', please upgrade your SDK");
+                    }
+                  }
+                  privileges.setEntraGroups(entraGroupsPrivileges);
+                  break;
                 default:
                   throw new UnknownException(
                       "unknown privileges field '" + privilegeKey + "', please upgrade your SDK");
@@ -356,6 +381,30 @@ public class Plumbing {
                   }
                 }
                 privileges.setK8s(k8sPrivileges);
+                break;
+              case "entraGroups":
+                JSONObject jsonEntraGroupsPrivileges = jsonPrivileges.getJSONObject("entraGroups");
+                com.strongdm.api.AccessRule.EntraGroupsPrivileges entraGroupsPrivileges =
+                    new com.strongdm.api.AccessRule.EntraGroupsPrivileges();
+                for (Iterator<String> entraGroupsPrivilegeKeyIterator =
+                        jsonEntraGroupsPrivileges.keys();
+                    entraGroupsPrivilegeKeyIterator.hasNext(); ) {
+                  String entraGroupsPrivilegeKey = entraGroupsPrivilegeKeyIterator.next();
+                  switch (entraGroupsPrivilegeKey) {
+                    case "groups":
+                      JSONArray groups = jsonEntraGroupsPrivileges.getJSONArray("groups");
+                      for (int j = 0; j < groups.length(); j++) {
+                        entraGroupsPrivileges.addGroup(groups.getString(j));
+                      }
+                      break;
+                    default:
+                      throw new UnknownException(
+                          "unknown entraGroups privileges field '"
+                              + entraGroupsPrivilegeKey
+                              + "', please upgrade your SDK");
+                  }
+                }
+                privileges.setEntraGroups(entraGroupsPrivileges);
                 break;
               default:
                 throw new UnknownException(
@@ -5715,6 +5764,95 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertAzureCertificateToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AzureConsole convertAzureConsoleToPorcelain(
+      AzureConsole plumbing) {
+    com.strongdm.api.AzureConsole porcelain = new com.strongdm.api.AzureConsole();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setConnectorId((plumbing.getConnectorId()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
+    porcelain.setManagementGroupId((plumbing.getManagementGroupId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPrivilegeLevels((plumbing.getPrivilegeLevels()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setSubscriptionId((plumbing.getSubscriptionId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AzureConsole convertAzureConsoleToPlumbing(
+      com.strongdm.api.AzureConsole porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AzureConsole.Builder builder = AzureConsole.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getConnectorId() != null) {
+      builder.setConnectorId((porcelain.getConnectorId()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
+    if (porcelain.getManagementGroupId() != null) {
+      builder.setManagementGroupId((porcelain.getManagementGroupId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPrivilegeLevels() != null) {
+      builder.setPrivilegeLevels((porcelain.getPrivilegeLevels()));
+    }
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getSubscriptionId() != null) {
+      builder.setSubscriptionId((porcelain.getSubscriptionId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AzureConsole> convertRepeatedAzureConsoleToPorcelain(
+      Collection<AzureConsole> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzureConsole>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAzureConsoleToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AzureConsole> convertRepeatedAzureConsoleToPlumbing(
+      Collection<com.strongdm.api.AzureConsole> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzureConsole>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAzureConsoleToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -17537,6 +17675,9 @@ public class Plumbing {
     if (plumbing.hasAzureCertificate()) {
       return convertAzureCertificateToPorcelain(plumbing.getAzureCertificate());
     }
+    if (plumbing.hasAzureConsole()) {
+      return convertAzureConsoleToPorcelain(plumbing.getAzureConsole());
+    }
     if (plumbing.hasAzureMysql()) {
       return convertAzureMysqlToPorcelain(plumbing.getAzureMysql());
     }
@@ -17934,6 +18075,12 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAzureCertificate(
           convertAzureCertificateToPlumbing((com.strongdm.api.AzureCertificate) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AzureConsole) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAzureConsole(
+          convertAzureConsoleToPlumbing((com.strongdm.api.AzureConsole) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AzureMysql) {
@@ -21256,6 +21403,7 @@ public class Plumbing {
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPrivateKey((plumbing.getPrivateKey()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
     porcelain.setSchema((plumbing.getSchema()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
@@ -21293,6 +21441,9 @@ public class Plumbing {
       builder.setPassword((porcelain.getPassword()));
     }
     builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getPrivateKey() != null) {
+      builder.setPrivateKey((porcelain.getPrivateKey()));
+    }
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
     }

@@ -132,6 +132,7 @@ public final class ActivityVerb {
   public static final String ORG_SELF_REGISTRATION_DEACTIVATED = "self-registration deactivated";
   public static final String ORG_NAME_UPDATED = "organization name updated";
   public static final String ORG_SETTING_UPDATED = "organization setting updated";
+  public static final String ORG_LOG_CONFIG_UPDATED = "organization logging configuration updated";
   public static final String ORG_LOG_SYNC_SETTING_UPDATED =
       "organization log stream setting updated";
   public static final String ORG_WORKFLOW_SETTING_UPDATED = "organization workflow setting updated";
