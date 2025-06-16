@@ -9345,6 +9345,7 @@ public class Plumbing {
     porcelain.setHostOverride((plumbing.getHostOverride()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
@@ -9386,6 +9387,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
     }
@@ -9437,6 +9439,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
@@ -9480,6 +9483,7 @@ public class Plumbing {
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
     }
@@ -9532,6 +9536,7 @@ public class Plumbing {
     porcelain.setHostOverride((plumbing.getHostOverride()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
@@ -9570,6 +9575,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
     }
