@@ -185,6 +185,16 @@ public class DB2LUW implements Resource {
     this.tags.putAll(in);
   }
 
+  private boolean tlsRequired;
+  /** If set, TLS must be used to connect to this resource. */
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
+  }
+  /** If set, TLS must be used to connect to this resource. */
+  public void setTlsRequired(boolean in) {
+    this.tlsRequired = in;
+  }
+
   private String username;
   /** The username to authenticate with. */
   public String getUsername() {
