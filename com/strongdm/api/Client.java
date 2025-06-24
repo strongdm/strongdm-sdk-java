@@ -518,26 +518,6 @@ public class Client {
     return this.workflowApproversHistory;
   }
 
-  protected final WorkflowAssignments workflowAssignments;
-
-  /**
-   * WorkflowAssignments links a Resource to a Workflow. The assigned resources are those that a
-   * user can request access to via the workflow.
-   */
-  public WorkflowAssignments workflowAssignments() {
-    return this.workflowAssignments;
-  }
-
-  protected final WorkflowAssignmentsHistory workflowAssignmentsHistory;
-
-  /**
-   * WorkflowAssignmentsHistory provides records of all changes to the state of a
-   * WorkflowAssignment.
-   */
-  public WorkflowAssignmentsHistory workflowAssignmentsHistory() {
-    return this.workflowAssignmentsHistory;
-  }
-
   protected final WorkflowRoles workflowRoles;
 
   /**
@@ -644,8 +624,6 @@ public class Client {
     this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
     this.workflowApprovers = new WorkflowApprovers(this.channel, this);
     this.workflowApproversHistory = new WorkflowApproversHistory(this.channel, this);
-    this.workflowAssignments = new WorkflowAssignments(this.channel, this);
-    this.workflowAssignmentsHistory = new WorkflowAssignmentsHistory(this.channel, this);
     this.workflowRoles = new WorkflowRoles(this.channel, this);
     this.workflowRolesHistory = new WorkflowRolesHistory(this.channel, this);
     this.workflows = new Workflows(this.channel, this);
@@ -724,8 +702,6 @@ public class Client {
       this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
       this.workflowApprovers = new WorkflowApprovers(this.channel, this);
       this.workflowApproversHistory = new WorkflowApproversHistory(this.channel, this);
-      this.workflowAssignments = new WorkflowAssignments(this.channel, this);
-      this.workflowAssignmentsHistory = new WorkflowAssignmentsHistory(this.channel, this);
       this.workflowRoles = new WorkflowRoles(this.channel, this);
       this.workflowRolesHistory = new WorkflowRolesHistory(this.channel, this);
       this.workflows = new Workflows(this.channel, this);

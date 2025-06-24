@@ -167,13 +167,6 @@ public class SnapshotClient {
     return this.parent.workflowApprovers;
   }
   /**
-   * WorkflowAssignments links a Resource to a Workflow. The assigned resources are those that a
-   * user can request access to via the workflow.
-   */
-  public SnapshotWorkflowAssignments workflowAssignments() {
-    return this.parent.workflowAssignments;
-  }
-  /**
    * WorkflowRole links a role to a workflow. The linked roles indicate which roles a user must be a
    * part of to request access to a resource via the workflow.
    */
