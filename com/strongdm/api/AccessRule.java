@@ -106,7 +106,7 @@ public class AccessRule {
    * the scope of Resources granted.
    *
    * <p>See the following link for a list of possible values for this field:
-   * https://www.strongdm.com/docs/automation/getting-started/filters#h-potentialresourcetypevalues
+   * https://www.strongdm.com/docs/cli/filters/#potential-resource-type-values
    */
   public void setType(String type) {
     this.type = type;

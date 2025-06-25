@@ -41,4 +41,9 @@ public final class ActivityEntityType {
   public static final String PEERING_GROUP_NODE = "peering_group_node";
   public static final String PEERING_GROUP_RESOURCE = "peering_group_resource";
   public static final String PEERING_GROUP_PEER = "peering_group_peer";
+  public static final String ORG_INTEGRATION = "org_integration";
+  public static final String CREDENTIAL = "credential";
+  public static final String CERTIFICATE_AUTHORITY = "certificate_authority";
+  public static final String POLICY = "policy";
+  public static final String PROXY_CLUSTER_KEY = "proxy_cluster_key";
 }
