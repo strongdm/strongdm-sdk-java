@@ -3706,121 +3706,157 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * Deprecated: use categories specific log_config.categories[].remote_encoder instead
      * </pre>
      *
-     * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+     * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_remote_encoder is deprecated.
+     *     See organization_history.proto;l=138
      * @return The logRemoteEncoder.
      */
-    java.lang.String getLogRemoteEncoder();
+    @java.lang.Deprecated java.lang.String getLogRemoteEncoder();
     /**
      * <pre>
      * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * Deprecated: use categories specific log_config.categories[].remote_encoder instead
      * </pre>
      *
-     * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+     * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_remote_encoder is deprecated.
+     *     See organization_history.proto;l=138
      * @return The bytes for logRemoteEncoder.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getLogRemoteEncoderBytes();
 
     /**
      * <pre>
      * The Organization's local log storage, one of the LogLocalStorage constants.
+     * Deprecated: use log_config.local_storage instead
      * </pre>
      *
-     * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_storage is deprecated.
+     *     See organization_history.proto;l=143
      * @return The logLocalStorage.
      */
-    java.lang.String getLogLocalStorage();
+    @java.lang.Deprecated java.lang.String getLogLocalStorage();
     /**
      * <pre>
      * The Organization's local log storage, one of the LogLocalStorage constants.
+     * Deprecated: use log_config.local_storage instead
      * </pre>
      *
-     * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_storage is deprecated.
+     *     See organization_history.proto;l=143
      * @return The bytes for logLocalStorage.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getLogLocalStorageBytes();
 
     /**
      * <pre>
      * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * Deprecated: use log_config.local_encoder instead
      * </pre>
      *
-     * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_encoder is deprecated.
+     *     See organization_history.proto;l=148
      * @return The logLocalEncoder.
      */
-    java.lang.String getLogLocalEncoder();
+    @java.lang.Deprecated java.lang.String getLogLocalEncoder();
     /**
      * <pre>
      * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * Deprecated: use log_config.local_encoder instead
      * </pre>
      *
-     * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_encoder is deprecated.
+     *     See organization_history.proto;l=148
      * @return The bytes for logLocalEncoder.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getLogLocalEncoderBytes();
 
     /**
      * <pre>
      * The Organization's local log format, one of the LogLocalFormat constants.
+     * Deprecated: use log_config.local_format instead
      * </pre>
      *
-     * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_format is deprecated.
+     *     See organization_history.proto;l=153
      * @return The logLocalFormat.
      */
-    java.lang.String getLogLocalFormat();
+    @java.lang.Deprecated java.lang.String getLogLocalFormat();
     /**
      * <pre>
      * The Organization's local log format, one of the LogLocalFormat constants.
+     * Deprecated: use log_config.local_format instead
      * </pre>
      *
-     * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_format is deprecated.
+     *     See organization_history.proto;l=153
      * @return The bytes for logLocalFormat.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getLogLocalFormatBytes();
 
     /**
      * <pre>
      * The Organization's TCP address for TCP or Syslog local log storage.
+     * Deprecated: use log_config.local_tcp_address instead
      * </pre>
      *
-     * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+     * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_tcp_address is deprecated.
+     *     See organization_history.proto;l=158
      * @return The logTcpAddress.
      */
-    java.lang.String getLogTcpAddress();
+    @java.lang.Deprecated java.lang.String getLogTcpAddress();
     /**
      * <pre>
      * The Organization's TCP address for TCP or Syslog local log storage.
+     * Deprecated: use log_config.local_tcp_address instead
      * </pre>
      *
-     * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+     * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_tcp_address is deprecated.
+     *     See organization_history.proto;l=158
      * @return The bytes for logTcpAddress.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getLogTcpAddressBytes();
 
     /**
      * <pre>
      * The Organization's socket path for Socket local log storage.
+     * Deprecated: use log_config.local_socket_path instead
      * </pre>
      *
-     * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+     * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_socket_path is deprecated.
+     *     See organization_history.proto;l=169
      * @return The logSocketPath.
      */
-    java.lang.String getLogSocketPath();
+    @java.lang.Deprecated java.lang.String getLogSocketPath();
     /**
      * <pre>
      * The Organization's socket path for Socket local log storage.
+     * Deprecated: use log_config.local_socket_path instead
      * </pre>
      *
-     * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+     * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_socket_path is deprecated.
+     *     See organization_history.proto;l=169
      * @return The bytes for logSocketPath.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getLogSocketPathBytes();
 
     /**
@@ -4063,31 +4099,40 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs.
+     * Deprecated: use categories specific log_config.categories[].remote_discard_replays instead
      * </pre>
      *
-     * <code>bool discard_replays = 30 [(.v1.field_options) = { ... }</code>
+     * <code>bool discard_replays = 30 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.discard_replays is deprecated.
+     *     See organization_history.proto;l=253
      * @return The discardReplays.
      */
-    boolean getDiscardReplays();
+    @java.lang.Deprecated boolean getDiscardReplays();
 
     /**
      * <pre>
      * The Organization's public key PEM for encrypting remote logs.
+     * Deprecated: use log_config.public_key instead
      * </pre>
      *
-     * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+     * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.public_key_pem is deprecated.
+     *     See organization_history.proto;l=259
      * @return The publicKeyPem.
      */
-    java.lang.String getPublicKeyPem();
+    @java.lang.Deprecated java.lang.String getPublicKeyPem();
     /**
      * <pre>
      * The Organization's public key PEM for encrypting remote logs.
+     * Deprecated: use log_config.public_key instead
      * </pre>
      *
-     * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+     * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.public_key_pem is deprecated.
+     *     See organization_history.proto;l=259
      * @return The bytes for publicKeyPem.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getPublicKeyPemBytes();
 
     /**
@@ -4782,13 +4827,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * Deprecated: use categories specific log_config.categories[].remote_encoder instead
      * </pre>
      *
-     * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+     * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_remote_encoder is deprecated.
+     *     See organization_history.proto;l=138
      * @return The logRemoteEncoder.
      */
     @java.lang.Override
-    public java.lang.String getLogRemoteEncoder() {
+    @java.lang.Deprecated public java.lang.String getLogRemoteEncoder() {
       java.lang.Object ref = logRemoteEncoder_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -4803,13 +4851,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+     * Deprecated: use categories specific log_config.categories[].remote_encoder instead
      * </pre>
      *
-     * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+     * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_remote_encoder is deprecated.
+     *     See organization_history.proto;l=138
      * @return The bytes for logRemoteEncoder.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLogRemoteEncoderBytes() {
       java.lang.Object ref = logRemoteEncoder_;
       if (ref instanceof java.lang.String) {
@@ -4828,13 +4879,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's local log storage, one of the LogLocalStorage constants.
+     * Deprecated: use log_config.local_storage instead
      * </pre>
      *
-     * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_storage is deprecated.
+     *     See organization_history.proto;l=143
      * @return The logLocalStorage.
      */
     @java.lang.Override
-    public java.lang.String getLogLocalStorage() {
+    @java.lang.Deprecated public java.lang.String getLogLocalStorage() {
       java.lang.Object ref = logLocalStorage_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -4849,13 +4903,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's local log storage, one of the LogLocalStorage constants.
+     * Deprecated: use log_config.local_storage instead
      * </pre>
      *
-     * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_storage is deprecated.
+     *     See organization_history.proto;l=143
      * @return The bytes for logLocalStorage.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLogLocalStorageBytes() {
       java.lang.Object ref = logLocalStorage_;
       if (ref instanceof java.lang.String) {
@@ -4874,13 +4931,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * Deprecated: use log_config.local_encoder instead
      * </pre>
      *
-     * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_encoder is deprecated.
+     *     See organization_history.proto;l=148
      * @return The logLocalEncoder.
      */
     @java.lang.Override
-    public java.lang.String getLogLocalEncoder() {
+    @java.lang.Deprecated public java.lang.String getLogLocalEncoder() {
       java.lang.Object ref = logLocalEncoder_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -4895,13 +4955,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+     * Deprecated: use log_config.local_encoder instead
      * </pre>
      *
-     * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_encoder is deprecated.
+     *     See organization_history.proto;l=148
      * @return The bytes for logLocalEncoder.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLogLocalEncoderBytes() {
       java.lang.Object ref = logLocalEncoder_;
       if (ref instanceof java.lang.String) {
@@ -4920,13 +4983,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's local log format, one of the LogLocalFormat constants.
+     * Deprecated: use log_config.local_format instead
      * </pre>
      *
-     * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_format is deprecated.
+     *     See organization_history.proto;l=153
      * @return The logLocalFormat.
      */
     @java.lang.Override
-    public java.lang.String getLogLocalFormat() {
+    @java.lang.Deprecated public java.lang.String getLogLocalFormat() {
       java.lang.Object ref = logLocalFormat_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -4941,13 +5007,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's local log format, one of the LogLocalFormat constants.
+     * Deprecated: use log_config.local_format instead
      * </pre>
      *
-     * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+     * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_local_format is deprecated.
+     *     See organization_history.proto;l=153
      * @return The bytes for logLocalFormat.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLogLocalFormatBytes() {
       java.lang.Object ref = logLocalFormat_;
       if (ref instanceof java.lang.String) {
@@ -4966,13 +5035,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's TCP address for TCP or Syslog local log storage.
+     * Deprecated: use log_config.local_tcp_address instead
      * </pre>
      *
-     * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+     * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_tcp_address is deprecated.
+     *     See organization_history.proto;l=158
      * @return The logTcpAddress.
      */
     @java.lang.Override
-    public java.lang.String getLogTcpAddress() {
+    @java.lang.Deprecated public java.lang.String getLogTcpAddress() {
       java.lang.Object ref = logTcpAddress_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -4987,13 +5059,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's TCP address for TCP or Syslog local log storage.
+     * Deprecated: use log_config.local_tcp_address instead
      * </pre>
      *
-     * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+     * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_tcp_address is deprecated.
+     *     See organization_history.proto;l=158
      * @return The bytes for logTcpAddress.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLogTcpAddressBytes() {
       java.lang.Object ref = logTcpAddress_;
       if (ref instanceof java.lang.String) {
@@ -5012,13 +5087,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's socket path for Socket local log storage.
+     * Deprecated: use log_config.local_socket_path instead
      * </pre>
      *
-     * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+     * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_socket_path is deprecated.
+     *     See organization_history.proto;l=169
      * @return The logSocketPath.
      */
     @java.lang.Override
-    public java.lang.String getLogSocketPath() {
+    @java.lang.Deprecated public java.lang.String getLogSocketPath() {
       java.lang.Object ref = logSocketPath_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -5033,13 +5111,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's socket path for Socket local log storage.
+     * Deprecated: use log_config.local_socket_path instead
      * </pre>
      *
-     * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+     * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.log_socket_path is deprecated.
+     *     See organization_history.proto;l=169
      * @return The bytes for logSocketPath.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLogSocketPathBytes() {
       java.lang.Object ref = logSocketPath_;
       if (ref instanceof java.lang.String) {
@@ -5555,13 +5636,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs.
+     * Deprecated: use categories specific log_config.categories[].remote_discard_replays instead
      * </pre>
      *
-     * <code>bool discard_replays = 30 [(.v1.field_options) = { ... }</code>
+     * <code>bool discard_replays = 30 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.discard_replays is deprecated.
+     *     See organization_history.proto;l=253
      * @return The discardReplays.
      */
     @java.lang.Override
-    public boolean getDiscardReplays() {
+    @java.lang.Deprecated public boolean getDiscardReplays() {
       return discardReplays_;
     }
 
@@ -5570,13 +5654,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's public key PEM for encrypting remote logs.
+     * Deprecated: use log_config.public_key instead
      * </pre>
      *
-     * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+     * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.public_key_pem is deprecated.
+     *     See organization_history.proto;l=259
      * @return The publicKeyPem.
      */
     @java.lang.Override
-    public java.lang.String getPublicKeyPem() {
+    @java.lang.Deprecated public java.lang.String getPublicKeyPem() {
       java.lang.Object ref = publicKeyPem_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -5591,13 +5678,16 @@ public final class OrganizationHistoryPlumbing {
     /**
      * <pre>
      * The Organization's public key PEM for encrypting remote logs.
+     * Deprecated: use log_config.public_key instead
      * </pre>
      *
-     * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+     * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated v1.Organization.public_key_pem is deprecated.
+     *     See organization_history.proto;l=259
      * @return The bytes for publicKeyPem.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getPublicKeyPemBytes() {
       java.lang.Object ref = publicKeyPem_;
       if (ref instanceof java.lang.String) {
@@ -7604,12 +7694,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * Deprecated: use categories specific log_config.categories[].remote_encoder instead
        * </pre>
        *
-       * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+       * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_remote_encoder is deprecated.
+       *     See organization_history.proto;l=138
        * @return The logRemoteEncoder.
        */
-      public java.lang.String getLogRemoteEncoder() {
+      @java.lang.Deprecated public java.lang.String getLogRemoteEncoder() {
         java.lang.Object ref = logRemoteEncoder_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -7624,12 +7717,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * Deprecated: use categories specific log_config.categories[].remote_encoder instead
        * </pre>
        *
-       * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+       * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_remote_encoder is deprecated.
+       *     See organization_history.proto;l=138
        * @return The bytes for logRemoteEncoder.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getLogRemoteEncoderBytes() {
         java.lang.Object ref = logRemoteEncoder_;
         if (ref instanceof String) {
@@ -7645,13 +7741,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * Deprecated: use categories specific log_config.categories[].remote_encoder instead
        * </pre>
        *
-       * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+       * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_remote_encoder is deprecated.
+       *     See organization_history.proto;l=138
        * @param value The logRemoteEncoder to set.
        * @return This builder for chaining.
        */
-      public Builder setLogRemoteEncoder(
+      @java.lang.Deprecated public Builder setLogRemoteEncoder(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7664,12 +7763,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * Deprecated: use categories specific log_config.categories[].remote_encoder instead
        * </pre>
        *
-       * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+       * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_remote_encoder is deprecated.
+       *     See organization_history.proto;l=138
        * @return This builder for chaining.
        */
-      public Builder clearLogRemoteEncoder() {
+      @java.lang.Deprecated public Builder clearLogRemoteEncoder() {
         
         logRemoteEncoder_ = getDefaultInstance().getLogRemoteEncoder();
         onChanged();
@@ -7678,13 +7780,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+       * Deprecated: use categories specific log_config.categories[].remote_encoder instead
        * </pre>
        *
-       * <code>string log_remote_encoder = 11 [(.v1.field_options) = { ... }</code>
+       * <code>string log_remote_encoder = 11 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_remote_encoder is deprecated.
+       *     See organization_history.proto;l=138
        * @param value The bytes for logRemoteEncoder to set.
        * @return This builder for chaining.
        */
-      public Builder setLogRemoteEncoderBytes(
+      @java.lang.Deprecated public Builder setLogRemoteEncoderBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7700,12 +7805,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log storage, one of the LogLocalStorage constants.
+       * Deprecated: use log_config.local_storage instead
        * </pre>
        *
-       * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_storage is deprecated.
+       *     See organization_history.proto;l=143
        * @return The logLocalStorage.
        */
-      public java.lang.String getLogLocalStorage() {
+      @java.lang.Deprecated public java.lang.String getLogLocalStorage() {
         java.lang.Object ref = logLocalStorage_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -7720,12 +7828,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log storage, one of the LogLocalStorage constants.
+       * Deprecated: use log_config.local_storage instead
        * </pre>
        *
-       * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_storage is deprecated.
+       *     See organization_history.proto;l=143
        * @return The bytes for logLocalStorage.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getLogLocalStorageBytes() {
         java.lang.Object ref = logLocalStorage_;
         if (ref instanceof String) {
@@ -7741,13 +7852,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log storage, one of the LogLocalStorage constants.
+       * Deprecated: use log_config.local_storage instead
        * </pre>
        *
-       * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_storage is deprecated.
+       *     See organization_history.proto;l=143
        * @param value The logLocalStorage to set.
        * @return This builder for chaining.
        */
-      public Builder setLogLocalStorage(
+      @java.lang.Deprecated public Builder setLogLocalStorage(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7760,12 +7874,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log storage, one of the LogLocalStorage constants.
+       * Deprecated: use log_config.local_storage instead
        * </pre>
        *
-       * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_storage is deprecated.
+       *     See organization_history.proto;l=143
        * @return This builder for chaining.
        */
-      public Builder clearLogLocalStorage() {
+      @java.lang.Deprecated public Builder clearLogLocalStorage() {
         
         logLocalStorage_ = getDefaultInstance().getLogLocalStorage();
         onChanged();
@@ -7774,13 +7891,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log storage, one of the LogLocalStorage constants.
+       * Deprecated: use log_config.local_storage instead
        * </pre>
        *
-       * <code>string log_local_storage = 12 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_storage = 12 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_storage is deprecated.
+       *     See organization_history.proto;l=143
        * @param value The bytes for logLocalStorage to set.
        * @return This builder for chaining.
        */
-      public Builder setLogLocalStorageBytes(
+      @java.lang.Deprecated public Builder setLogLocalStorageBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7796,12 +7916,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * Deprecated: use log_config.local_encoder instead
        * </pre>
        *
-       * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_encoder is deprecated.
+       *     See organization_history.proto;l=148
        * @return The logLocalEncoder.
        */
-      public java.lang.String getLogLocalEncoder() {
+      @java.lang.Deprecated public java.lang.String getLogLocalEncoder() {
         java.lang.Object ref = logLocalEncoder_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -7816,12 +7939,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * Deprecated: use log_config.local_encoder instead
        * </pre>
        *
-       * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_encoder is deprecated.
+       *     See organization_history.proto;l=148
        * @return The bytes for logLocalEncoder.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getLogLocalEncoderBytes() {
         java.lang.Object ref = logLocalEncoder_;
         if (ref instanceof String) {
@@ -7837,13 +7963,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * Deprecated: use log_config.local_encoder instead
        * </pre>
        *
-       * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_encoder is deprecated.
+       *     See organization_history.proto;l=148
        * @param value The logLocalEncoder to set.
        * @return This builder for chaining.
        */
-      public Builder setLogLocalEncoder(
+      @java.lang.Deprecated public Builder setLogLocalEncoder(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7856,12 +7985,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * Deprecated: use log_config.local_encoder instead
        * </pre>
        *
-       * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_encoder is deprecated.
+       *     See organization_history.proto;l=148
        * @return This builder for chaining.
        */
-      public Builder clearLogLocalEncoder() {
+      @java.lang.Deprecated public Builder clearLogLocalEncoder() {
         
         logLocalEncoder_ = getDefaultInstance().getLogLocalEncoder();
         onChanged();
@@ -7870,13 +8002,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+       * Deprecated: use log_config.local_encoder instead
        * </pre>
        *
-       * <code>string log_local_encoder = 13 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_encoder = 13 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_encoder is deprecated.
+       *     See organization_history.proto;l=148
        * @param value The bytes for logLocalEncoder to set.
        * @return This builder for chaining.
        */
-      public Builder setLogLocalEncoderBytes(
+      @java.lang.Deprecated public Builder setLogLocalEncoderBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7892,12 +8027,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log format, one of the LogLocalFormat constants.
+       * Deprecated: use log_config.local_format instead
        * </pre>
        *
-       * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_format is deprecated.
+       *     See organization_history.proto;l=153
        * @return The logLocalFormat.
        */
-      public java.lang.String getLogLocalFormat() {
+      @java.lang.Deprecated public java.lang.String getLogLocalFormat() {
         java.lang.Object ref = logLocalFormat_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -7912,12 +8050,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log format, one of the LogLocalFormat constants.
+       * Deprecated: use log_config.local_format instead
        * </pre>
        *
-       * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_format is deprecated.
+       *     See organization_history.proto;l=153
        * @return The bytes for logLocalFormat.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getLogLocalFormatBytes() {
         java.lang.Object ref = logLocalFormat_;
         if (ref instanceof String) {
@@ -7933,13 +8074,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log format, one of the LogLocalFormat constants.
+       * Deprecated: use log_config.local_format instead
        * </pre>
        *
-       * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_format is deprecated.
+       *     See organization_history.proto;l=153
        * @param value The logLocalFormat to set.
        * @return This builder for chaining.
        */
-      public Builder setLogLocalFormat(
+      @java.lang.Deprecated public Builder setLogLocalFormat(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7952,12 +8096,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log format, one of the LogLocalFormat constants.
+       * Deprecated: use log_config.local_format instead
        * </pre>
        *
-       * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_format is deprecated.
+       *     See organization_history.proto;l=153
        * @return This builder for chaining.
        */
-      public Builder clearLogLocalFormat() {
+      @java.lang.Deprecated public Builder clearLogLocalFormat() {
         
         logLocalFormat_ = getDefaultInstance().getLogLocalFormat();
         onChanged();
@@ -7966,13 +8113,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's local log format, one of the LogLocalFormat constants.
+       * Deprecated: use log_config.local_format instead
        * </pre>
        *
-       * <code>string log_local_format = 14 [(.v1.field_options) = { ... }</code>
+       * <code>string log_local_format = 14 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_local_format is deprecated.
+       *     See organization_history.proto;l=153
        * @param value The bytes for logLocalFormat to set.
        * @return This builder for chaining.
        */
-      public Builder setLogLocalFormatBytes(
+      @java.lang.Deprecated public Builder setLogLocalFormatBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7988,12 +8138,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's TCP address for TCP or Syslog local log storage.
+       * Deprecated: use log_config.local_tcp_address instead
        * </pre>
        *
-       * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+       * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_tcp_address is deprecated.
+       *     See organization_history.proto;l=158
        * @return The logTcpAddress.
        */
-      public java.lang.String getLogTcpAddress() {
+      @java.lang.Deprecated public java.lang.String getLogTcpAddress() {
         java.lang.Object ref = logTcpAddress_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -8008,12 +8161,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's TCP address for TCP or Syslog local log storage.
+       * Deprecated: use log_config.local_tcp_address instead
        * </pre>
        *
-       * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+       * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_tcp_address is deprecated.
+       *     See organization_history.proto;l=158
        * @return The bytes for logTcpAddress.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getLogTcpAddressBytes() {
         java.lang.Object ref = logTcpAddress_;
         if (ref instanceof String) {
@@ -8029,13 +8185,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's TCP address for TCP or Syslog local log storage.
+       * Deprecated: use log_config.local_tcp_address instead
        * </pre>
        *
-       * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+       * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_tcp_address is deprecated.
+       *     See organization_history.proto;l=158
        * @param value The logTcpAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setLogTcpAddress(
+      @java.lang.Deprecated public Builder setLogTcpAddress(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -8048,12 +8207,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's TCP address for TCP or Syslog local log storage.
+       * Deprecated: use log_config.local_tcp_address instead
        * </pre>
        *
-       * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+       * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_tcp_address is deprecated.
+       *     See organization_history.proto;l=158
        * @return This builder for chaining.
        */
-      public Builder clearLogTcpAddress() {
+      @java.lang.Deprecated public Builder clearLogTcpAddress() {
         
         logTcpAddress_ = getDefaultInstance().getLogTcpAddress();
         onChanged();
@@ -8062,13 +8224,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's TCP address for TCP or Syslog local log storage.
+       * Deprecated: use log_config.local_tcp_address instead
        * </pre>
        *
-       * <code>string log_tcp_address = 15 [(.v1.field_options) = { ... }</code>
+       * <code>string log_tcp_address = 15 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_tcp_address is deprecated.
+       *     See organization_history.proto;l=158
        * @param value The bytes for logTcpAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setLogTcpAddressBytes(
+      @java.lang.Deprecated public Builder setLogTcpAddressBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -8084,12 +8249,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's socket path for Socket local log storage.
+       * Deprecated: use log_config.local_socket_path instead
        * </pre>
        *
-       * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+       * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_socket_path is deprecated.
+       *     See organization_history.proto;l=169
        * @return The logSocketPath.
        */
-      public java.lang.String getLogSocketPath() {
+      @java.lang.Deprecated public java.lang.String getLogSocketPath() {
         java.lang.Object ref = logSocketPath_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -8104,12 +8272,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's socket path for Socket local log storage.
+       * Deprecated: use log_config.local_socket_path instead
        * </pre>
        *
-       * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+       * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_socket_path is deprecated.
+       *     See organization_history.proto;l=169
        * @return The bytes for logSocketPath.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getLogSocketPathBytes() {
         java.lang.Object ref = logSocketPath_;
         if (ref instanceof String) {
@@ -8125,13 +8296,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's socket path for Socket local log storage.
+       * Deprecated: use log_config.local_socket_path instead
        * </pre>
        *
-       * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+       * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_socket_path is deprecated.
+       *     See organization_history.proto;l=169
        * @param value The logSocketPath to set.
        * @return This builder for chaining.
        */
-      public Builder setLogSocketPath(
+      @java.lang.Deprecated public Builder setLogSocketPath(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -8144,12 +8318,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's socket path for Socket local log storage.
+       * Deprecated: use log_config.local_socket_path instead
        * </pre>
        *
-       * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+       * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_socket_path is deprecated.
+       *     See organization_history.proto;l=169
        * @return This builder for chaining.
        */
-      public Builder clearLogSocketPath() {
+      @java.lang.Deprecated public Builder clearLogSocketPath() {
         
         logSocketPath_ = getDefaultInstance().getLogSocketPath();
         onChanged();
@@ -8158,13 +8335,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's socket path for Socket local log storage.
+       * Deprecated: use log_config.local_socket_path instead
        * </pre>
        *
-       * <code>string log_socket_path = 16 [(.v1.field_options) = { ... }</code>
+       * <code>string log_socket_path = 16 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.log_socket_path is deprecated.
+       *     See organization_history.proto;l=169
        * @param value The bytes for logSocketPath to set.
        * @return This builder for chaining.
        */
-      public Builder setLogSocketPathBytes(
+      @java.lang.Deprecated public Builder setLogSocketPathBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -9328,25 +9508,31 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs.
+       * Deprecated: use categories specific log_config.categories[].remote_discard_replays instead
        * </pre>
        *
-       * <code>bool discard_replays = 30 [(.v1.field_options) = { ... }</code>
+       * <code>bool discard_replays = 30 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.discard_replays is deprecated.
+       *     See organization_history.proto;l=253
        * @return The discardReplays.
        */
       @java.lang.Override
-      public boolean getDiscardReplays() {
+      @java.lang.Deprecated public boolean getDiscardReplays() {
         return discardReplays_;
       }
       /**
        * <pre>
        * Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs.
+       * Deprecated: use categories specific log_config.categories[].remote_discard_replays instead
        * </pre>
        *
-       * <code>bool discard_replays = 30 [(.v1.field_options) = { ... }</code>
+       * <code>bool discard_replays = 30 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.discard_replays is deprecated.
+       *     See organization_history.proto;l=253
        * @param value The discardReplays to set.
        * @return This builder for chaining.
        */
-      public Builder setDiscardReplays(boolean value) {
+      @java.lang.Deprecated public Builder setDiscardReplays(boolean value) {
         
         discardReplays_ = value;
         onChanged();
@@ -9355,12 +9541,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs.
+       * Deprecated: use categories specific log_config.categories[].remote_discard_replays instead
        * </pre>
        *
-       * <code>bool discard_replays = 30 [(.v1.field_options) = { ... }</code>
+       * <code>bool discard_replays = 30 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.discard_replays is deprecated.
+       *     See organization_history.proto;l=253
        * @return This builder for chaining.
        */
-      public Builder clearDiscardReplays() {
+      @java.lang.Deprecated public Builder clearDiscardReplays() {
         
         discardReplays_ = false;
         onChanged();
@@ -9371,12 +9560,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's public key PEM for encrypting remote logs.
+       * Deprecated: use log_config.public_key instead
        * </pre>
        *
-       * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+       * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.public_key_pem is deprecated.
+       *     See organization_history.proto;l=259
        * @return The publicKeyPem.
        */
-      public java.lang.String getPublicKeyPem() {
+      @java.lang.Deprecated public java.lang.String getPublicKeyPem() {
         java.lang.Object ref = publicKeyPem_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -9391,12 +9583,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's public key PEM for encrypting remote logs.
+       * Deprecated: use log_config.public_key instead
        * </pre>
        *
-       * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+       * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.public_key_pem is deprecated.
+       *     See organization_history.proto;l=259
        * @return The bytes for publicKeyPem.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getPublicKeyPemBytes() {
         java.lang.Object ref = publicKeyPem_;
         if (ref instanceof String) {
@@ -9412,13 +9607,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's public key PEM for encrypting remote logs.
+       * Deprecated: use log_config.public_key instead
        * </pre>
        *
-       * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+       * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.public_key_pem is deprecated.
+       *     See organization_history.proto;l=259
        * @param value The publicKeyPem to set.
        * @return This builder for chaining.
        */
-      public Builder setPublicKeyPem(
+      @java.lang.Deprecated public Builder setPublicKeyPem(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -9431,12 +9629,15 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's public key PEM for encrypting remote logs.
+       * Deprecated: use log_config.public_key instead
        * </pre>
        *
-       * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+       * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.public_key_pem is deprecated.
+       *     See organization_history.proto;l=259
        * @return This builder for chaining.
        */
-      public Builder clearPublicKeyPem() {
+      @java.lang.Deprecated public Builder clearPublicKeyPem() {
         
         publicKeyPem_ = getDefaultInstance().getPublicKeyPem();
         onChanged();
@@ -9445,13 +9646,16 @@ public final class OrganizationHistoryPlumbing {
       /**
        * <pre>
        * The Organization's public key PEM for encrypting remote logs.
+       * Deprecated: use log_config.public_key instead
        * </pre>
        *
-       * <code>string public_key_pem = 31 [(.v1.field_options) = { ... }</code>
+       * <code>string public_key_pem = 31 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated v1.Organization.public_key_pem is deprecated.
+       *     See organization_history.proto;l=259
        * @param value The bytes for publicKeyPem to set.
        * @return This builder for chaining.
        */
-      public Builder setPublicKeyPemBytes(
+      @java.lang.Deprecated public Builder setPublicKeyPemBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -13802,7 +14006,7 @@ public final class OrganizationHistoryPlumbing {
       "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
       "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
       "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r\"\240\r\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "r\"\241\r\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
       " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
@@ -13815,64 +14019,68 @@ public final class OrganizationHistoryPlumbing {
       "\n\362\370\263\007\005\260\363\263\007\001\0229\n\013mfa_enabled\030\t \001(\010B$\362\370\263\007\037\260" +
       "\363\263\007\001\312\363\263\007\025\302\364\263\007\020\n\002go\022\nMFAEnabled\022;\n\014mfa_pr" +
       "ovider\030\n \001(\tB%\362\370\263\007 \260\363\263\007\001\312\363\263\007\026\302\364\263\007\021\n\002go\022\013" +
-      "MFAProvider\022&\n\022log_remote_encoder\030\013 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\021log_local_storage\030\014 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022%\n\021log_local_encoder\030\r \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022$\n\020log_local_format\030\016 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022@\n\017log_tcp_address\030\017 \001(\tB\'\362\370\263\007\"\260" +
-      "\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\002go\022\rLogTCPAddress\022#\n\017log" +
-      "_socket_path\030\020 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022=\n\rscim_p" +
-      "rovider\030\021 \001(\tB&\362\370\263\007!\260\363\263\007\001\312\363\263\007\027\302\364\263\007\022\n\002go\022" +
-      "\014SCIMProvider\022&\n\022websites_subdomain\030\022 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n$ssh_certificate_authori" +
-      "ty_public_key\030\023 \001(\tB:\362\370\263\0075\260\363\263\007\001\312\363\263\007+\302\364\263\007" +
-      "&\n\002go\022 SSHCertificateAuthorityPublicKey\022" +
-      "\204\001\n$ssh_certificate_authority_updated_at" +
-      "\030\024 \001(\0132\032.google.protobuf.TimestampB:\362\370\263\007" +
-      "5\260\363\263\007\001\312\363\263\007+\302\364\263\007&\n\002go\022 SSHCertificateAuth" +
-      "orityUpdatedAt\022(\n\024require_secret_store\030\025" +
-      " \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022#\n\017sensitive_label\030\026 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021saml_metadata_url\030\027 \001(\t" +
-      "B)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017SAMLMetadata" +
-      "URL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\002id\030\031 \001(" +
-      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022\"\n\016loopback" +
-      "_range\030\032 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\024device_trust" +
-      "_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022)\n\025device_tru" +
-      "st_provider\030\034 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026enforce" +
-      "_single_session\030\035 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022#\n\017dis" +
-      "card_replays\030\036 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016public" +
-      "_key_pem\030\037 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022<\n\nlog_config" +
-      "\030  \001(\0132\r.v1.LogConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo" +
-      "_private:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007" +
-      "\023!terraform-provider\"\325\002\n\tLogConfig\022!\n\rlo" +
-      "cal_storage\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rlocal_e" +
-      "ncoder\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014local_format" +
-      "\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021local_tcp_address\030" +
-      "\004 \001(\tB)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017LocalTC" +
-      "PAddress\022%\n\021local_socket_path\030\005 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022\036\n\npublic_key\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "8\n\ncategories\030\007 \001(\0132\030.v1.LogCategoryConf" +
-      "igMapB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_pri" +
-      "vate\"\371\001\n\024LogCategoryConfigMap\022/\n\007entries" +
-      "\030\001 \003(\0132\036.v1.LogCategoryConfigMap.Entry\032R" +
-      "\n\005Entry\022\014\n\004name\030\001 \001(\t\022%\n\006config\030\002 \001(\0132\025." +
-      "v1.LogCategoryConfig:\024\372\370\263\007\017\322\363\263\007\ngo_priva" +
-      "te:\\\372\370\263\007W\312\363\263\007C\352\363\263\007\027log_category_config_m" +
-      "ap\362\363\263\007\"\n\ngo_private\022\024LogCategoryConfigMa" +
-      "p\322\363\263\007\ngo_private\"~\n\021LogCategoryConfig\022\"\n" +
-      "\016remote_encoder\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026rem" +
-      "ote_discard_replays\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\031\372" +
-      "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\357\001\n\023Organizatio" +
-      "nHistory\022\200\001\n\004List\022\".v1.OrganizationHisto" +
-      "ryListRequest\032#.v1.OrganizationHistoryLi" +
-      "stResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/o" +
-      "rganization-history\032U\312\371\263\007\036\302\371\263\007\031Organizat" +
-      "ionHistoryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263" +
-      "\007\030\312\371\263\007\023!terraform-providerB\227\001\n\031com.stron" +
-      "gdm.api.plumbingB\033OrganizationHistoryPlu" +
-      "mbingZ5github.com/strongdm/strongdm-sdk-" +
-      "go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007" +
-      "\023!terraform-providerb\006proto3"
+      "MFAProvider\022(\n\022log_remote_encoder\030\013 \001(\tB" +
+      "\014\030\001\362\370\263\007\005\260\363\263\007\001\022\'\n\021log_local_storage\030\014 \001(\t" +
+      "B\014\030\001\362\370\263\007\005\260\363\263\007\001\022\'\n\021log_local_encoder\030\r \001(" +
+      "\tB\014\030\001\362\370\263\007\005\260\363\263\007\001\022&\n\020log_local_format\030\016 \001(" +
+      "\tB\014\030\001\362\370\263\007\005\260\363\263\007\001\022B\n\017log_tcp_address\030\017 \001(\t" +
+      "B)\030\001\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\002go\022\rLogTCPAddr" +
+      "ess\022%\n\017log_socket_path\030\020 \001(\tB\014\030\001\362\370\263\007\005\260\363\263" +
+      "\007\001\022=\n\rscim_provider\030\021 \001(\tB&\362\370\263\007!\260\363\263\007\001\312\363\263" +
+      "\007\027\302\364\263\007\022\n\002go\022\014SCIMProvider\022&\n\022websites_su" +
+      "bdomain\030\022 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n$ssh_certifi" +
+      "cate_authority_public_key\030\023 \001(\tB:\362\370\263\0075\260\363" +
+      "\263\007\001\312\363\263\007+\302\364\263\007&\n\002go\022 SSHCertificateAuthori" +
+      "tyPublicKey\022\204\001\n$ssh_certificate_authorit" +
+      "y_updated_at\030\024 \001(\0132\032.google.protobuf.Tim" +
+      "estampB:\362\370\263\0075\260\363\263\007\001\312\363\263\007+\302\364\263\007&\n\002go\022 SSHCer" +
+      "tificateAuthorityUpdatedAt\022(\n\024require_se" +
+      "cret_store\030\025 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022#\n\017sensitiv" +
+      "e_label\030\026 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021saml_metada" +
+      "ta_url\030\027 \001(\tB)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017" +
+      "SAMLMetadataURL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022%\n\002id\030\031 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private" +
+      "\022\"\n\016loopback_range\030\032 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\024" +
+      "device_trust_enabled\030\033 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022)" +
+      "\n\025device_trust_provider\030\034 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022*\n\026enforce_single_session\030\035 \001(\010B\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022%\n\017discard_replays\030\036 \001(\010B\014\030\001\362\370\263\007\005\260" +
+      "\363\263\007\001\022$\n\016public_key_pem\030\037 \001(\tB\014\030\001\362\370\263\007\005\260\363\263" +
+      "\007\001\022-\n\nlog_config\030  \001(\0132\r.v1.LogConfigB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263" +
+      "\007\023!terraform-provider\"\306\002\n\tLogConfig\022!\n\rl" +
+      "ocal_storage\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rlocal_" +
+      "encoder\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014local_forma" +
+      "t\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021local_tcp_address" +
+      "\030\004 \001(\tB)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017LocalT" +
+      "CPAddress\022%\n\021local_socket_path\030\005 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022\036\n\npublic_key\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\0228\n\ncategories\030\007 \001(\0132\030.v1.LogCategoryCon" +
+      "figMapB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\274\003\n\024LogCa" +
+      "tegoryConfigMap\022/\n\007entries\030\001 \003(\0132\036.v1.Lo" +
+      "gCategoryConfigMap.Entry\032[\n\005Entry\022\014\n\004nam" +
+      "e\030\001 \001(\t\022%\n\006config\030\002 \001(\0132\025.v1.LogCategory" +
+      "Config:\035\372\370\263\007\030\322\363\263\007\001*\322\363\263\007\r!json_gateway:\225\002" +
+      "\372\370\263\007\217\002\312\363\263\007\361\001\352\363\263\007\027log_category_config_map" +
+      "\362\363\263\007\032\n\002go\022\024LogCategoryConfigMap\362\363\263\007\"\n\ngo" +
+      "_private\022\024LogCategoryConfigMap\362\363\263\007$\n\014go_" +
+      "terraform\022\024LogCategoryConfigMap\362\363\263\0070\n\004ja" +
+      "va\022(java.util.Map<String, LogCategoryCon" +
+      "fig>\362\363\263\007,\n\014json_gateway\022\034map[string]LogC" +
+      "ategoryConfig\322\363\263\007\001*\322\363\263\007\r!json_gateway\"o\n" +
+      "\021LogCategoryConfig\022\"\n\016remote_encoder\030\001 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026remote_discard_replays" +
+      "\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\357\001\n\023Organ" +
+      "izationHistory\022\200\001\n\004List\022\".v1.Organizatio" +
+      "nHistoryListRequest\032#.v1.OrganizationHis" +
+      "toryListResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007" +
+      "\030/v1/organization-history\032U\312\371\263\007\036\302\371\263\007\031Org" +
+      "anizationHistoryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263" +
+      "\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\227\001\n\031com" +
+      ".strongdm.api.plumbingB\033OrganizationHist" +
+      "oryPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264" +
+      "\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

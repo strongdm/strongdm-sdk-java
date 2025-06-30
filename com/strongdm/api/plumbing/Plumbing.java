@@ -170,6 +170,30 @@ public class Plumbing {
     return builder.build();
   }
 
+  public static java.util.Map<String, com.strongdm.api.LogCategoryConfig>
+      convertLogCategoryConfigMapToPorcelain(LogCategoryConfigMap plumbing) {
+    java.util.HashMap<String, com.strongdm.api.LogCategoryConfig> porcelain =
+        new java.util.HashMap<String, com.strongdm.api.LogCategoryConfig>();
+    for (LogCategoryConfigMap.Entry e : plumbing.getEntriesList()) {
+      porcelain.put(e.getName(), convertLogCategoryConfigToPorcelain(e.getConfig()));
+    }
+    return porcelain;
+  }
+
+  public static LogCategoryConfigMap convertLogCategoryConfigMapToPlumbing(
+      java.util.Map<String, com.strongdm.api.LogCategoryConfig> porcelain) {
+    LogCategoryConfigMap.Builder builder = LogCategoryConfigMap.newBuilder();
+    for (java.util.Map.Entry<String, com.strongdm.api.LogCategoryConfig> entry :
+        porcelain.entrySet()) {
+      builder.addEntries(
+          LogCategoryConfigMap.Entry.newBuilder()
+              .setName(entry.getKey())
+              .setConfig(convertLogCategoryConfigToPlumbing(entry.getValue()))
+              .build());
+    }
+    return builder.build();
+  }
+
   public static List<com.strongdm.api.AccessRule> convertAccessRulesToPorcelain(String plumbing) {
     if (plumbing == "") {
       return null;
@@ -11243,6 +11267,110 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.LogCategoryConfig convertLogCategoryConfigToPorcelain(
+      LogCategoryConfig plumbing) {
+    com.strongdm.api.LogCategoryConfig porcelain = new com.strongdm.api.LogCategoryConfig();
+    porcelain.setRemoteDiscardReplays((plumbing.getRemoteDiscardReplays()));
+    porcelain.setRemoteEncoder((plumbing.getRemoteEncoder()));
+    return porcelain;
+  }
+
+  public static LogCategoryConfig convertLogCategoryConfigToPlumbing(
+      com.strongdm.api.LogCategoryConfig porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    LogCategoryConfig.Builder builder = LogCategoryConfig.newBuilder();
+    builder.setRemoteDiscardReplays(porcelain.getRemoteDiscardReplays());
+    if (porcelain.getRemoteEncoder() != null) {
+      builder.setRemoteEncoder((porcelain.getRemoteEncoder()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.LogCategoryConfig>
+      convertRepeatedLogCategoryConfigToPorcelain(Collection<LogCategoryConfig> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.LogCategoryConfig>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertLogCategoryConfigToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<LogCategoryConfig> convertRepeatedLogCategoryConfigToPlumbing(
+      Collection<com.strongdm.api.LogCategoryConfig> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<LogCategoryConfig>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertLogCategoryConfigToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.LogConfig convertLogConfigToPorcelain(LogConfig plumbing) {
+    com.strongdm.api.LogConfig porcelain = new com.strongdm.api.LogConfig();
+    porcelain.setCategories(
+        Plumbing.convertLogCategoryConfigMapToPorcelain(plumbing.getCategories()));
+    porcelain.setLocalEncoder((plumbing.getLocalEncoder()));
+    porcelain.setLocalFormat((plumbing.getLocalFormat()));
+    porcelain.setLocalSocketPath((plumbing.getLocalSocketPath()));
+    porcelain.setLocalStorage((plumbing.getLocalStorage()));
+    porcelain.setLocalTcpAddress((plumbing.getLocalTcpAddress()));
+    porcelain.setPublicKey((plumbing.getPublicKey()));
+    return porcelain;
+  }
+
+  public static LogConfig convertLogConfigToPlumbing(com.strongdm.api.LogConfig porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    LogConfig.Builder builder = LogConfig.newBuilder();
+    if (porcelain.getCategories() != null) {
+      builder.setCategories(
+          Plumbing.convertLogCategoryConfigMapToPlumbing(porcelain.getCategories()));
+    }
+    if (porcelain.getLocalEncoder() != null) {
+      builder.setLocalEncoder((porcelain.getLocalEncoder()));
+    }
+    if (porcelain.getLocalFormat() != null) {
+      builder.setLocalFormat((porcelain.getLocalFormat()));
+    }
+    if (porcelain.getLocalSocketPath() != null) {
+      builder.setLocalSocketPath((porcelain.getLocalSocketPath()));
+    }
+    if (porcelain.getLocalStorage() != null) {
+      builder.setLocalStorage((porcelain.getLocalStorage()));
+    }
+    if (porcelain.getLocalTcpAddress() != null) {
+      builder.setLocalTcpAddress((porcelain.getLocalTcpAddress()));
+    }
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey((porcelain.getPublicKey()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.LogConfig> convertRepeatedLogConfigToPorcelain(
+      Collection<LogConfig> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.LogConfig>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertLogConfigToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<LogConfig> convertRepeatedLogConfigToPlumbing(
+      Collection<com.strongdm.api.LogConfig> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<LogConfig>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertLogConfigToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.MTLSMysql convertMTLSMysqlToPorcelain(MTLSMysql plumbing) {
     com.strongdm.api.MTLSMysql porcelain = new com.strongdm.api.MTLSMysql();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -14050,6 +14178,7 @@ public class Plumbing {
     porcelain.setIdleTimeout(Plumbing.convertDurationToPorcelain(plumbing.getIdleTimeout()));
     porcelain.setIdleTimeoutEnabled((plumbing.getIdleTimeoutEnabled()));
     porcelain.setKind((plumbing.getKind()));
+    porcelain.setLogConfig(Plumbing.convertLogConfigToPorcelain(plumbing.getLogConfig()));
     porcelain.setLogLocalEncoder((plumbing.getLogLocalEncoder()));
     porcelain.setLogLocalFormat((plumbing.getLogLocalFormat()));
     porcelain.setLogLocalStorage((plumbing.getLogLocalStorage()));
@@ -14099,6 +14228,9 @@ public class Plumbing {
     builder.setIdleTimeoutEnabled(porcelain.getIdleTimeoutEnabled());
     if (porcelain.getKind() != null) {
       builder.setKind((porcelain.getKind()));
+    }
+    if (porcelain.getLogConfig() != null) {
+      builder.setLogConfig(Plumbing.convertLogConfigToPlumbing(porcelain.getLogConfig()));
     }
     if (porcelain.getLogLocalEncoder() != null) {
       builder.setLogLocalEncoder((porcelain.getLogLocalEncoder()));

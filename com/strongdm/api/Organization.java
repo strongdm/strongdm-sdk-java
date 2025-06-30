@@ -62,11 +62,19 @@ public class Organization {
   }
 
   private boolean discardReplays;
-  /** Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs. */
+  /**
+   * Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs. Deprecated:
+   * use categories specific log_config.categories[].remote_discard_replays instead
+   */
+  @Deprecated
   public boolean getDiscardReplays() {
     return this.discardReplays;
   }
-  /** Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs. */
+  /**
+   * Indicates if the Organization should drop replay data for SSH, RDP, and K8s logs. Deprecated:
+   * use categories specific log_config.categories[].remote_discard_replays instead
+   */
+  @Deprecated
   public void setDiscardReplays(boolean in) {
     this.discardReplays = in;
   }
@@ -111,62 +119,120 @@ public class Organization {
     this.kind = in;
   }
 
+  private LogConfig logConfig;
+  /** The Organization's logging settings */
+  public LogConfig getLogConfig() {
+    return this.logConfig;
+  }
+  /** The Organization's logging settings */
+  public void setLogConfig(LogConfig in) {
+    this.logConfig = in;
+  }
+
   private String logLocalEncoder;
-  /** The Organization's local log encryption encoder, one of the LogLocalEncoder constants. */
+  /**
+   * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+   * Deprecated: use log_config.local_encoder instead
+   */
+  @Deprecated
   public String getLogLocalEncoder() {
     return this.logLocalEncoder;
   }
-  /** The Organization's local log encryption encoder, one of the LogLocalEncoder constants. */
+  /**
+   * The Organization's local log encryption encoder, one of the LogLocalEncoder constants.
+   * Deprecated: use log_config.local_encoder instead
+   */
+  @Deprecated
   public void setLogLocalEncoder(String in) {
     this.logLocalEncoder = in;
   }
 
   private String logLocalFormat;
-  /** The Organization's local log format, one of the LogLocalFormat constants. */
+  /**
+   * The Organization's local log format, one of the LogLocalFormat constants. Deprecated: use
+   * log_config.local_format instead
+   */
+  @Deprecated
   public String getLogLocalFormat() {
     return this.logLocalFormat;
   }
-  /** The Organization's local log format, one of the LogLocalFormat constants. */
+  /**
+   * The Organization's local log format, one of the LogLocalFormat constants. Deprecated: use
+   * log_config.local_format instead
+   */
+  @Deprecated
   public void setLogLocalFormat(String in) {
     this.logLocalFormat = in;
   }
 
   private String logLocalStorage;
-  /** The Organization's local log storage, one of the LogLocalStorage constants. */
+  /**
+   * The Organization's local log storage, one of the LogLocalStorage constants. Deprecated: use
+   * log_config.local_storage instead
+   */
+  @Deprecated
   public String getLogLocalStorage() {
     return this.logLocalStorage;
   }
-  /** The Organization's local log storage, one of the LogLocalStorage constants. */
+  /**
+   * The Organization's local log storage, one of the LogLocalStorage constants. Deprecated: use
+   * log_config.local_storage instead
+   */
+  @Deprecated
   public void setLogLocalStorage(String in) {
     this.logLocalStorage = in;
   }
 
   private String logRemoteEncoder;
-  /** The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants. */
+  /**
+   * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+   * Deprecated: use categories specific log_config.categories[].remote_encoder instead
+   */
+  @Deprecated
   public String getLogRemoteEncoder() {
     return this.logRemoteEncoder;
   }
-  /** The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants. */
+  /**
+   * The Organization's remote log encryption encoder, one of the LogRemoteEncoder constants.
+   * Deprecated: use categories specific log_config.categories[].remote_encoder instead
+   */
+  @Deprecated
   public void setLogRemoteEncoder(String in) {
     this.logRemoteEncoder = in;
   }
 
   private String logSocketPath;
-  /** The Organization's socket path for Socket local log storage. */
+  /**
+   * The Organization's socket path for Socket local log storage. Deprecated: use
+   * log_config.local_socket_path instead
+   */
+  @Deprecated
   public String getLogSocketPath() {
     return this.logSocketPath;
   }
-  /** The Organization's socket path for Socket local log storage. */
+  /**
+   * The Organization's socket path for Socket local log storage. Deprecated: use
+   * log_config.local_socket_path instead
+   */
+  @Deprecated
   public void setLogSocketPath(String in) {
     this.logSocketPath = in;
   }
 
   private String logTcpAddress;
-  /** The Organization's TCP address for TCP or Syslog local log storage. */
+  /**
+   * The Organization's TCP address for TCP or Syslog local log storage. Deprecated: use
+   * log_config.local_tcp_address instead
+   */
+  @Deprecated
   public String getLogTcpAddress() {
     return this.logTcpAddress;
   }
-  /** The Organization's TCP address for TCP or Syslog local log storage. */
+  /**
+   * The Organization's TCP address for TCP or Syslog local log storage. Deprecated: use
+   * log_config.local_tcp_address instead
+   */
+  @Deprecated
   public void setLogTcpAddress(String in) {
     this.logTcpAddress = in;
   }
@@ -212,11 +278,19 @@ public class Organization {
   }
 
   private String publicKeyPem;
-  /** The Organization's public key PEM for encrypting remote logs. */
+  /**
+   * The Organization's public key PEM for encrypting remote logs. Deprecated: use
+   * log_config.public_key instead
+   */
+  @Deprecated
   public String getPublicKeyPem() {
     return this.publicKeyPem;
   }
-  /** The Organization's public key PEM for encrypting remote logs. */
+  /**
+   * The Organization's public key PEM for encrypting remote logs. Deprecated: use
+   * log_config.public_key instead
+   */
+  @Deprecated
   public void setPublicKeyPem(String in) {
     this.publicKeyPem = in;
   }
