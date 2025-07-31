@@ -21,6 +21,7 @@ import java.time.Duration;
 
 /** ApprovalWorkflowStep links an approval workflow step to an ApprovalWorkflow */
 @Deprecated
+/** ApprovalWorkflowStep is deprecated, see docs for more info. */
 public class ApprovalWorkflowStep {
   private String approvalFlowId;
   /** The approval flow id specified the approval workflow that this step belongs to */

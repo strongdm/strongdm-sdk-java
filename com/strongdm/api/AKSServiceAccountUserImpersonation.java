@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+@Deprecated
+/** AKSServiceAccountUserImpersonation is deprecated, see docs for more info. */
 public class AKSServiceAccountUserImpersonation implements Resource {
   private String bindInterface;
   /**

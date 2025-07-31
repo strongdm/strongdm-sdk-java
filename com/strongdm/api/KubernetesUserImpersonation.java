@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+@Deprecated
+/** KubernetesUserImpersonation is deprecated, see docs for more info. */
 public class KubernetesUserImpersonation implements Resource {
   private String bindInterface;
   /**

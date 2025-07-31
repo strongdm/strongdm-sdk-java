@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+@Deprecated
+/** AKSUserImpersonation is deprecated, see docs for more info. */
 public class AKSUserImpersonation implements Resource {
   private String bindInterface;
   /**

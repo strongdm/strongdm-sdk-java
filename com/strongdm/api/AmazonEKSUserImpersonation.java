@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+@Deprecated
+/** AmazonEKSUserImpersonation is deprecated, see docs for more info. */
 public class AmazonEKSUserImpersonation implements Resource {
   private String accessKey;
   /** The Access Key ID to use to authenticate. */

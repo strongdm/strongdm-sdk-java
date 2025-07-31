@@ -215,6 +215,16 @@ public class Client {
     return this.controlPanel;
   }
 
+  protected final Roles roles;
+
+  /**
+   * A Role has a list of access rules which determine which Resources the members of the Role have
+   * access to. An Account can be a member of multiple Roles via AccountAttachments.
+   */
+  public Roles roles() {
+    return this.roles;
+  }
+
   protected final HealthChecks healthChecks;
 
   /**
@@ -454,16 +464,6 @@ public class Client {
     return this.roleResourcesHistory;
   }
 
-  protected final Roles roles;
-
-  /**
-   * A Role has a list of access rules which determine which Resources the members of the Role have
-   * access to. An Account can be a member of multiple Roles via AccountAttachments.
-   */
-  public Roles roles() {
-    return this.roles;
-  }
-
   protected final RolesHistory rolesHistory;
 
   /** RolesHistory records all changes to the state of a Role. */
@@ -590,6 +590,7 @@ public class Client {
     this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
     this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
     this.controlPanel = new ControlPanel(this.channel, this);
+    this.roles = new Roles(this.channel, this);
     this.healthChecks = new HealthChecks(this.channel, this);
     this.identityAliases = new IdentityAliases(this.channel, this);
     this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
@@ -616,7 +617,6 @@ public class Client {
     this.resourcesHistory = new ResourcesHistory(this.channel, this);
     this.roleResources = new RoleResources(this.channel, this);
     this.roleResourcesHistory = new RoleResourcesHistory(this.channel, this);
-    this.roles = new Roles(this.channel, this);
     this.rolesHistory = new RolesHistory(this.channel, this);
     this.secretStores = new SecretStores(this.channel, this);
     this.secretEngines = new SecretEngines(this.channel, this);
@@ -668,6 +668,7 @@ public class Client {
       this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
       this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
+      this.roles = new Roles(this.channel, this);
       this.healthChecks = new HealthChecks(this.channel, this);
       this.identityAliases = new IdentityAliases(this.channel, this);
       this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
@@ -694,7 +695,6 @@ public class Client {
       this.resourcesHistory = new ResourcesHistory(this.channel, this);
       this.roleResources = new RoleResources(this.channel, this);
       this.roleResourcesHistory = new RoleResourcesHistory(this.channel, this);
-      this.roles = new Roles(this.channel, this);
       this.rolesHistory = new RolesHistory(this.channel, this);
       this.secretStores = new SecretStores(this.channel, this);
       this.secretEngines = new SecretEngines(this.channel, this);

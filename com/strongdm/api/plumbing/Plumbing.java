@@ -961,6 +961,91 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AMQP convertAMQPToPorcelain(AMQP plumbing) {
+    com.strongdm.api.AMQP porcelain = new com.strongdm.api.AMQP();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static AMQP convertAMQPToPlumbing(com.strongdm.api.AMQP porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AMQP.Builder builder = AMQP.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AMQP> convertRepeatedAMQPToPorcelain(
+      Collection<AMQP> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AMQP>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAMQPToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AMQP> convertRepeatedAMQPToPlumbing(
+      Collection<com.strongdm.api.AMQP> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AMQP>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAMQPToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AWS convertAWSToPorcelain(AWS plumbing) {
     com.strongdm.api.AWS porcelain = new com.strongdm.api.AWS();
     porcelain.setAccessKey((plumbing.getAccessKey()));
@@ -5966,6 +6051,99 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertAzureMysqlToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AzureMysqlManagedIdentity
+      convertAzureMysqlManagedIdentityToPorcelain(AzureMysqlManagedIdentity plumbing) {
+    com.strongdm.api.AzureMysqlManagedIdentity porcelain =
+        new com.strongdm.api.AzureMysqlManagedIdentity();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static AzureMysqlManagedIdentity convertAzureMysqlManagedIdentityToPlumbing(
+      com.strongdm.api.AzureMysqlManagedIdentity porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AzureMysqlManagedIdentity.Builder builder = AzureMysqlManagedIdentity.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AzureMysqlManagedIdentity>
+      convertRepeatedAzureMysqlManagedIdentityToPorcelain(
+          Collection<AzureMysqlManagedIdentity> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzureMysqlManagedIdentity>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAzureMysqlManagedIdentityToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AzureMysqlManagedIdentity> convertRepeatedAzureMysqlManagedIdentityToPlumbing(
+      Collection<com.strongdm.api.AzureMysqlManagedIdentity> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzureMysqlManagedIdentity>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAzureMysqlManagedIdentityToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -17777,6 +17955,9 @@ public class Plumbing {
     if (plumbing.hasAmazonMqamqp091()) {
       return convertAmazonMQAMQP091ToPorcelain(plumbing.getAmazonMqamqp091());
     }
+    if (plumbing.hasAmqp()) {
+      return convertAMQPToPorcelain(plumbing.getAmqp());
+    }
     if (plumbing.hasAthena()) {
       return convertAthenaToPorcelain(plumbing.getAthena());
     }
@@ -17818,6 +17999,9 @@ public class Plumbing {
     }
     if (plumbing.hasAzureMysql()) {
       return convertAzureMysqlToPorcelain(plumbing.getAzureMysql());
+    }
+    if (plumbing.hasAzureMysqlManagedIdentity()) {
+      return convertAzureMysqlManagedIdentityToPorcelain(plumbing.getAzureMysqlManagedIdentity());
     }
     if (plumbing.hasAzurePostgres()) {
       return convertAzurePostgresToPorcelain(plumbing.getAzurePostgres());
@@ -18147,6 +18331,11 @@ public class Plumbing {
           convertAmazonMQAMQP091ToPlumbing((com.strongdm.api.AmazonMQAMQP091) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.AMQP) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAmqp(convertAMQPToPlumbing((com.strongdm.api.AMQP) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.Athena) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAthena(convertAthenaToPlumbing((com.strongdm.api.Athena) porcelain));
@@ -18224,6 +18413,13 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.AzureMysql) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAzureMysql(convertAzureMysqlToPlumbing((com.strongdm.api.AzureMysql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AzureMysqlManagedIdentity) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAzureMysqlManagedIdentity(
+          convertAzureMysqlManagedIdentityToPlumbing(
+              (com.strongdm.api.AzureMysqlManagedIdentity) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AzurePostgres) {

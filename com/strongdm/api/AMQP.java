@@ -17,9 +17,11 @@
 
 package com.strongdm.api;
 
-@Deprecated
-/** AmazonEKSInstanceProfileUserImpersonation is deprecated, see docs for more info. */
-public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
+/**
+ * AMQP is currently unstable, and its API may change, or it may be removed, without a major version
+ * bump.
+ */
+public class AMQP implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -36,26 +38,6 @@ public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
     this.bindInterface = in;
   }
 
-  private String certificateAuthority;
-  /** The CA to authenticate TLS connections with. */
-  public String getCertificateAuthority() {
-    return this.certificateAuthority;
-  }
-  /** The CA to authenticate TLS connections with. */
-  public void setCertificateAuthority(String in) {
-    this.certificateAuthority = in;
-  }
-
-  private String clusterName;
-  /** The name of the cluster to connect to. */
-  public String getClusterName() {
-    return this.clusterName;
-  }
-  /** The name of the cluster to connect to. */
-  public void setClusterName(String in) {
-    this.clusterName = in;
-  }
-
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
@@ -66,26 +48,6 @@ public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
     this.egressFilter = in;
   }
 
-  private String endpoint;
-  /** The endpoint to dial. */
-  public String getEndpoint() {
-    return this.endpoint;
-  }
-  /** The endpoint to dial. */
-  public void setEndpoint(String in) {
-    this.endpoint = in;
-  }
-
-  private String healthcheckNamespace;
-  /** The path used to check the health of your connection. Defaults to `default`. */
-  public String getHealthcheckNamespace() {
-    return this.healthcheckNamespace;
-  }
-  /** The path used to check the health of your connection. Defaults to `default`. */
-  public void setHealthcheckNamespace(String in) {
-    this.healthcheckNamespace = in;
-  }
-
   private boolean healthy;
   /** True if the datasource is reachable and the credentials are valid. */
   public boolean getHealthy() {
@@ -94,6 +56,16 @@ public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
   /** True if the datasource is reachable and the credentials are valid. */
   public void setHealthy(boolean in) {
     this.healthy = in;
+  }
+
+  private String hostname;
+  /** The host to dial to initiate a connection from the egress node to this resource. */
+  public String getHostname() {
+    return this.hostname;
+  }
+  /** The host to dial to initiate a connection from the egress node to this resource. */
+  public void setHostname(String in) {
+    this.hostname = in;
   }
 
   private String id;
@@ -116,6 +88,26 @@ public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
     this.name = in;
   }
 
+  private String password;
+  /** The password to authenticate with. */
+  public String getPassword() {
+    return this.password;
+  }
+  /** The password to authenticate with. */
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private int port;
+  /** The port to dial to initiate a connection from the egress node to this resource. */
+  public int getPort() {
+    return this.port;
+  }
+  /** The port to dial to initiate a connection from the egress node to this resource. */
+  public void setPort(int in) {
+    this.port = in;
+  }
+
   private int portOverride;
   /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
@@ -134,42 +126,6 @@ public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
   /** ID of the proxy cluster for this resource, if any. */
   public void setProxyClusterId(String in) {
     this.proxyClusterId = in;
-  }
-
-  private String region;
-  /** The AWS region to connect to e.g. us-east-1. */
-  public String getRegion() {
-    return this.region;
-  }
-  /** The AWS region to connect to e.g. us-east-1. */
-  public void setRegion(String in) {
-    this.region = in;
-  }
-
-  private String roleArn;
-  /** The role to assume after logging in. */
-  public String getRoleArn() {
-    return this.roleArn;
-  }
-  /** The role to assume after logging in. */
-  public void setRoleArn(String in) {
-    this.roleArn = in;
-  }
-
-  private String roleExternalId;
-  /**
-   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
-   * provided.
-   */
-  public String getRoleExternalId() {
-    return this.roleExternalId;
-  }
-  /**
-   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
-   * provided.
-   */
-  public void setRoleExternalId(String in) {
-    this.roleExternalId = in;
   }
 
   private String secretStoreId;
@@ -215,5 +171,25 @@ public class AmazonEKSInstanceProfileUserImpersonation implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private boolean tlsRequired;
+  /** If set, TLS must be used to connect to this resource. */
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
+  }
+  /** If set, TLS must be used to connect to this resource. */
+  public void setTlsRequired(boolean in) {
+    this.tlsRequired = in;
+  }
+
+  private String username;
+  /** The username to authenticate with. */
+  public String getUsername() {
+    return this.username;
+  }
+  /** The username to authenticate with. */
+  public void setUsername(String in) {
+    this.username = in;
   }
 }

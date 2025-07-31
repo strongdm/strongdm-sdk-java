@@ -80,6 +80,13 @@ public class SnapshotClient {
     return this.parent.approvalWorkflows;
   }
   /**
+   * A Role has a list of access rules which determine which Resources the members of the Role have
+   * access to. An Account can be a member of multiple Roles via AccountAttachments.
+   */
+  public SnapshotRoles roles() {
+    return this.parent.roles;
+  }
+  /**
    * IdentityAliases assign an alias to an account within an IdentitySet. The alias is used as the
    * username when connecting to a identity supported resource.
    */
@@ -147,13 +154,6 @@ public class SnapshotClient {
    */
   public SnapshotRoleResources roleResources() {
     return this.parent.roleResources;
-  }
-  /**
-   * A Role has a list of access rules which determine which Resources the members of the Role have
-   * access to. An Account can be a member of multiple Roles via AccountAttachments.
-   */
-  public SnapshotRoles roles() {
-    return this.parent.roles;
   }
   /** SecretStores are servers where resource secrets (passwords, keys) are stored. */
   public SnapshotSecretStores secretStores() {

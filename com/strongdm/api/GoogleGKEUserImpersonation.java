@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+@Deprecated
+/** GoogleGKEUserImpersonation is deprecated, see docs for more info. */
 public class GoogleGKEUserImpersonation implements Resource {
   private String bindInterface;
   /**

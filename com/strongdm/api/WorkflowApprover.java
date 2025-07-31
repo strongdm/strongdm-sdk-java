@@ -22,6 +22,7 @@ package com.strongdm.api;
  * workflow.
  */
 @Deprecated
+/** WorkflowApprover is deprecated, see docs for more info. */
 public class WorkflowApprover {
   private String accountId;
   /** The approver account id. */
