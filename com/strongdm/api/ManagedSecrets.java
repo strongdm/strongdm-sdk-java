@@ -291,6 +291,36 @@ public class ManagedSecrets {
     }
     return Plumbing.convertManagedSecretDeleteResponseToPorcelain(plumbingResponse);
   }
+  /** ForceDelete deletes a Managed Secret regardless of errors on external system */
+  public ManagedSecretDeleteResponse forceDelete(String id) throws RpcException {
+    ManagedSecretsPlumbing.ManagedSecretDeleteRequest.Builder builder =
+        ManagedSecretsPlumbing.ManagedSecretDeleteRequest.newBuilder();
+    builder.setId((id));
+    ManagedSecretsPlumbing.ManagedSecretDeleteRequest req = builder.build();
+    ManagedSecretsPlumbing.ManagedSecretDeleteResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(
+                    this.parent.getCallCredentials("ManagedSecrets.ForceDelete", req))
+                .forceDelete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
+          tries++;
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertManagedSecretDeleteResponseToPorcelain(plumbingResponse);
+  }
   /** Get gets details of a Managed Secret without sensitive data */
   public ManagedSecretGetResponse get(String id) throws RpcException {
     ManagedSecretsPlumbing.ManagedSecretGetRequest.Builder builder =

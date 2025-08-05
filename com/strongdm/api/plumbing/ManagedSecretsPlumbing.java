@@ -26241,7 +26241,7 @@ public final class ManagedSecretsPlumbing {
       "llow_repeat\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022&\n\022exclude" +
       "_characters\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007" +
       "\001\")\n\033ManagedSecretRotationPolicy:\n\372\370\263\007\005\250" +
-      "\363\263\007\0012\301\n\n\016ManagedSecrets\022o\n\004List\022\034.v1.Man" +
+      "\363\263\007\0012\314\013\n\016ManagedSecrets\022o\n\004List\022\034.v1.Man" +
       "agedSecretListRequest\032\035.v1.ManagedSecret" +
       "ListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1" +
       "/managed-secrets\022|\n\013ListByActor\022\034.v1.Man" +
@@ -26260,24 +26260,28 @@ public final class ManagedSecretsPlumbing {
       "\n\006Delete\022\036.v1.ManagedSecretDeleteRequest" +
       "\032\037.v1.ManagedSecretDeleteResponse\"2\202\371\263\007\013" +
       "\242\363\263\007\006delete\202\371\263\007\035\252\363\263\007\030/v1/managed-secrets" +
-      "/{id}\022q\n\003Get\022\033.v1.ManagedSecretGetReques" +
-      "t\032\034.v1.ManagedSecretGetResponse\"/\202\371\263\007\010\242\363" +
-      "\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/managed-secrets/{id}" +
-      "\022\212\001\n\010Retrieve\022 .v1.ManagedSecretRetrieve" +
-      "Request\032!.v1.ManagedSecretRetrieveRespon" +
-      "se\"9\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\'\252\363\263\007\"/v1/managed-s" +
-      "ecrets/{id}/sensitive\022\211\001\n\010Validate\022 .v1." +
-      "ManagedSecretValidateRequest\032!.v1.Manage" +
-      "dSecretValidateResponse\"8\202\371\263\007\010\242\363\263\007\003get\202\371" +
-      "\263\007&\252\363\263\007!/v1/managed-secrets/{id}/validat" +
-      "e\022t\n\004Logs\022\034.v1.ManagedSecretLogsRequest\032" +
-      "\035.v1.ManagedSecretLogsResponse\"/\202\371\263\007\010\242\363\263" +
-      "\007\003get\202\371\263\007\035\252\363\263\007\030/v1/managed-secrets-logs\032" +
-      "G\312\371\263\007\022\302\371\263\007\rManagedSecret\312\371\263\007\010\322\371\263\007\003ms-\312\371\263" +
-      "\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBj\n\031com." +
-      "strongdm.api.plumbingB\026ManagedSecretsPlu" +
-      "mbingZ5github.com/strongdm/strongdm-sdk-" +
-      "go/v3/internal/v1;v1b\006proto3"
+      "/{id}\022\210\001\n\013ForceDelete\022\036.v1.ManagedSecret" +
+      "DeleteRequest\032\037.v1.ManagedSecretDeleteRe" +
+      "sponse\"8\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007#\252\363\263\007\036/v1/ma" +
+      "naged-secrets/{id}/force\022q\n\003Get\022\033.v1.Man" +
+      "agedSecretGetRequest\032\034.v1.ManagedSecretG" +
+      "etResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/m" +
+      "anaged-secrets/{id}\022\212\001\n\010Retrieve\022 .v1.Ma" +
+      "nagedSecretRetrieveRequest\032!.v1.ManagedS" +
+      "ecretRetrieveResponse\"9\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
+      "\'\252\363\263\007\"/v1/managed-secrets/{id}/sensitive" +
+      "\022\211\001\n\010Validate\022 .v1.ManagedSecretValidate" +
+      "Request\032!.v1.ManagedSecretValidateRespon" +
+      "se\"8\202\371\263\007\010\242\363\263\007\003get\202\371\263\007&\252\363\263\007!/v1/managed-s" +
+      "ecrets/{id}/validate\022t\n\004Logs\022\034.v1.Manage" +
+      "dSecretLogsRequest\032\035.v1.ManagedSecretLog" +
+      "sResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/ma" +
+      "naged-secrets-logs\032G\312\371\263\007\022\302\371\263\007\rManagedSec" +
+      "ret\312\371\263\007\010\322\371\263\007\003ms-\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263" +
+      "\007\t\312\371\263\007\004!cliBj\n\031com.strongdm.api.plumbing" +
+      "B\026ManagedSecretsPlumbingZ5github.com/str" +
+      "ongdm/strongdm-sdk-go/v3/internal/v1;v1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

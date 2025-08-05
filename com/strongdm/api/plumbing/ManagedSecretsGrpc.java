@@ -232,6 +232,37 @@ public final class ManagedSecretsGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest,
+      com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse> getForceDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ForceDelete",
+      requestType = com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest.class,
+      responseType = com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest,
+      com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse> getForceDeleteMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest, com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse> getForceDeleteMethod;
+    if ((getForceDeleteMethod = ManagedSecretsGrpc.getForceDeleteMethod) == null) {
+      synchronized (ManagedSecretsGrpc.class) {
+        if ((getForceDeleteMethod = ManagedSecretsGrpc.getForceDeleteMethod) == null) {
+          ManagedSecretsGrpc.getForceDeleteMethod = getForceDeleteMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest, com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ForceDelete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ManagedSecretsMethodDescriptorSupplier("ForceDelete"))
+              .build();
+        }
+      }
+    }
+    return getForceDeleteMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretGetRequest,
       com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretGetResponse> getGetMethod;
 
@@ -471,6 +502,16 @@ public final class ManagedSecretsGrpc {
 
     /**
      * <pre>
+     * ForceDelete deletes a Managed Secret regardless of errors on external system 
+     * </pre>
+     */
+    public void forceDelete(com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getForceDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get gets details of a Managed Secret without sensitive data
      * </pre>
      */
@@ -555,6 +596,13 @@ public final class ManagedSecretsGrpc {
                 com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest,
                 com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getForceDeleteMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest,
+                com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse>(
+                  this, METHODID_FORCE_DELETE)))
           .addMethod(
             getGetMethod(),
             asyncUnaryCall(
@@ -670,6 +718,17 @@ public final class ManagedSecretsGrpc {
         io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ForceDelete deletes a Managed Secret regardless of errors on external system 
+     * </pre>
+     */
+    public void forceDelete(com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getForceDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -796,6 +855,16 @@ public final class ManagedSecretsGrpc {
     public com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse delete(com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ForceDelete deletes a Managed Secret regardless of errors on external system 
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse forceDelete(com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getForceDeleteMethod(), getCallOptions(), request);
     }
 
     /**
@@ -928,6 +997,17 @@ public final class ManagedSecretsGrpc {
 
     /**
      * <pre>
+     * ForceDelete deletes a Managed Secret regardless of errors on external system 
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse> forceDelete(
+        com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getForceDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Get gets details of a Managed Secret without sensitive data
      * </pre>
      */
@@ -979,10 +1059,11 @@ public final class ManagedSecretsGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_ROTATE = 4;
   private static final int METHODID_DELETE = 5;
-  private static final int METHODID_GET = 6;
-  private static final int METHODID_RETRIEVE = 7;
-  private static final int METHODID_VALIDATE = 8;
-  private static final int METHODID_LOGS = 9;
+  private static final int METHODID_FORCE_DELETE = 6;
+  private static final int METHODID_GET = 7;
+  private static final int METHODID_RETRIEVE = 8;
+  private static final int METHODID_VALIDATE = 9;
+  private static final int METHODID_LOGS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1023,6 +1104,10 @@ public final class ManagedSecretsGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse>) responseObserver);
+          break;
+        case METHODID_FORCE_DELETE:
+          serviceImpl.forceDelete((com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ManagedSecretsPlumbing.ManagedSecretDeleteResponse>) responseObserver);
           break;
         case METHODID_GET:
@@ -1108,6 +1193,7 @@ public final class ManagedSecretsGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getRotateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getForceDeleteMethod())
               .addMethod(getGetMethod())
               .addMethod(getRetrieveMethod())
               .addMethod(getValidateMethod())
