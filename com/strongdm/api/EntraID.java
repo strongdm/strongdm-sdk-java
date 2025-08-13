@@ -18,10 +18,10 @@
 package com.strongdm.api;
 
 /**
- * AzureConsole is currently unstable, and its API may change, or it may be removed, without a major
+ * EntraID is currently unstable, and its API may change, or it may be removed, without a major
  * version bump.
  */
-public class AzureConsole implements Resource {
+public class EntraID implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -38,14 +38,14 @@ public class AzureConsole implements Resource {
     this.bindInterface = in;
   }
 
-  private String connectorId;
-  /** The connector ID to authenticate through. */
-  public String getConnectorId() {
-    return this.connectorId;
+  private boolean discoveryEnabled;
+  /** If true, configures discovery of the tenant to be run from a node. */
+  public boolean getDiscoveryEnabled() {
+    return this.discoveryEnabled;
   }
-  /** The connector ID to authenticate through. */
-  public void setConnectorId(String in) {
-    this.connectorId = in;
+  /** If true, configures discovery of the tenant to be run from a node. */
+  public void setDiscoveryEnabled(boolean in) {
+    this.discoveryEnabled = in;
   }
 
   private String egressFilter;
@@ -56,6 +56,16 @@ public class AzureConsole implements Resource {
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public void setEgressFilter(String in) {
     this.egressFilter = in;
+  }
+
+  private String groupNames;
+  /** comma separated list of group names to filter by. Supports wildcards (*) */
+  public String getGroupNames() {
+    return this.groupNames;
+  }
+  /** comma separated list of group names to filter by. Supports wildcards (*) */
+  public void setGroupNames(String in) {
+    this.groupNames = in;
   }
 
   private boolean healthy;
@@ -128,6 +138,16 @@ public class AzureConsole implements Resource {
     this.proxyClusterId = in;
   }
 
+  private String resourceGroupId;
+  /** filters discovered groups to the specified Resource Group */
+  public String getResourceGroupId() {
+    return this.resourceGroupId;
+  }
+  /** filters discovered groups to the specified Resource Group */
+  public void setResourceGroupId(String in) {
+    this.resourceGroupId = in;
+  }
+
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {
@@ -181,5 +201,15 @@ public class AzureConsole implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private String tenantId;
+  /** The connector ID to authenticate through. */
+  public String getTenantId() {
+    return this.tenantId;
+  }
+  /** The connector ID to authenticate through. */
+  public void setTenantId(String in) {
+    this.tenantId = in;
   }
 }

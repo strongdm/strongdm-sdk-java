@@ -166,6 +166,22 @@ public class RDPCert implements Resource {
     this.secretStoreId = in;
   }
 
+  private String sid;
+  /**
+   * The SID needed in leased credentials to generate a valid certificate. Using extraplain3 here as
+   * 1 and 2 are used in cert generation and internal driver config
+   */
+  public String getSid() {
+    return this.sid;
+  }
+  /**
+   * The SID needed in leased credentials to generate a valid certificate. Using extraplain3 here as
+   * 1 and 2 are used in cert generation and internal driver config
+   */
+  public void setSid(String in) {
+    this.sid = in;
+  }
+
   private String subdomain;
   /**
    * Subdomain is the local DNS address. (e.g. app-prod1 turns into
