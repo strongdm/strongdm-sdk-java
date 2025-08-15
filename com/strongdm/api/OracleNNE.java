@@ -21,14 +21,18 @@ public class OracleNNE implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
-   * example, 127.0.0.1). It is automatically generated if not provided.
+   * example, 127.0.0.1). It is automatically generated if not provided and may also be set to one
+   * of the ResourceIPAllocationMode constants to select between VNM, loopback, or default
+   * allocation.
    */
   public String getBindInterface() {
     return this.bindInterface;
   }
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
-   * example, 127.0.0.1). It is automatically generated if not provided.
+   * example, 127.0.0.1). It is automatically generated if not provided and may also be set to one
+   * of the ResourceIPAllocationMode constants to select between VNM, loopback, or default
+   * allocation.
    */
   public void setBindInterface(String in) {
     this.bindInterface = in;
@@ -121,11 +125,17 @@ public class OracleNNE implements Resource {
   }
 
   private int portOverride;
-  /** The local port used by clients to connect to this resource. */
+  /**
+   * The local port used by clients to connect to this resource. It is automatically generated if
+   * not provided on create and may be re-generated on update by specifying a value of -1.
+   */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** The local port used by clients to connect to this resource. */
+  /**
+   * The local port used by clients to connect to this resource. It is automatically generated if
+   * not provided on create and may be re-generated on update by specifying a value of -1.
+   */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
