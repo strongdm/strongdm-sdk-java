@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * AzureMysqlManagedIdentity is currently unstable, and its API may change, or it may be removed,
- * without a major version bump.
- */
 public class AzureMysqlManagedIdentity implements Resource {
   private String bindInterface;
   /**
