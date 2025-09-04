@@ -260,15 +260,17 @@ public class AmazonEKSInstanceProfile implements Resource {
 
   private String subdomain;
   /**
-   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
-   * app-prod1.your-org-name.sdm.network)
+   * DNS subdomain through which this resource may be accessed on clients. (e.g. "app-prod1" allows
+   * the resource to be accessed at "app-prod1.your-org-name.sdm-proxy-domain"). Only applicable to
+   * HTTP-based resources or resources using virtual networking mode.
    */
   public String getSubdomain() {
     return this.subdomain;
   }
   /**
-   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
-   * app-prod1.your-org-name.sdm.network)
+   * DNS subdomain through which this resource may be accessed on clients. (e.g. "app-prod1" allows
+   * the resource to be accessed at "app-prod1.your-org-name.sdm-proxy-domain"). Only applicable to
+   * HTTP-based resources or resources using virtual networking mode.
    */
   public void setSubdomain(String in) {
     this.subdomain = in;
