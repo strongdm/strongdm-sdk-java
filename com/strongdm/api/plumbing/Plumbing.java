@@ -21833,6 +21833,7 @@ public class Plumbing {
   public static com.strongdm.api.Snowsight convertSnowsightToPorcelain(Snowsight plumbing) {
     com.strongdm.api.Snowsight porcelain = new com.strongdm.api.Snowsight();
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setConnectToDefault((plumbing.getConnectToDefault()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthcheckUsername((plumbing.getHealthcheckUsername()));
     porcelain.setHealthy((plumbing.getHealthy()));
@@ -21855,6 +21856,7 @@ public class Plumbing {
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
+    builder.setConnectToDefault(porcelain.getConnectToDefault());
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
     }

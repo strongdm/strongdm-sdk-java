@@ -38,6 +38,16 @@ public class Snowsight implements Resource {
     this.bindInterface = in;
   }
 
+  private boolean connectToDefault;
+  /** If true, select the ACS with isDefault=true */
+  public boolean getConnectToDefault() {
+    return this.connectToDefault;
+  }
+  /** If true, select the ACS with isDefault=true */
+  public void setConnectToDefault(boolean in) {
+    this.connectToDefault = in;
+  }
+
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
