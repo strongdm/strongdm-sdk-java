@@ -16404,6 +16404,7 @@ public class Plumbing {
   public static com.strongdm.api.RDPCert convertRDPCertToPorcelain(RDPCert plumbing) {
     com.strongdm.api.RDPCert porcelain = new com.strongdm.api.RDPCert();
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDcHostnames((plumbing.getDcHostnames()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
@@ -16430,6 +16431,9 @@ public class Plumbing {
     RDPCert.Builder builder = RDPCert.newBuilder();
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDcHostnames() != null) {
+      builder.setDcHostnames((porcelain.getDcHostnames()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));

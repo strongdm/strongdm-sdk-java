@@ -38,6 +38,24 @@ public class RDPCert implements Resource {
     this.bindInterface = in;
   }
 
+  private String dcHostnames;
+  /**
+   * Comma-separated list of Active Directory Domain Controller hostnames for LDAPS SID resolution.
+   * Utilized for strong certificate mapping in full enforcement mode when the identity alias does
+   * not specify a SID.
+   */
+  public String getDcHostnames() {
+    return this.dcHostnames;
+  }
+  /**
+   * Comma-separated list of Active Directory Domain Controller hostnames for LDAPS SID resolution.
+   * Utilized for strong certificate mapping in full enforcement mode when the identity alias does
+   * not specify a SID.
+   */
+  public void setDcHostnames(String in) {
+    this.dcHostnames = in;
+  }
+
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
