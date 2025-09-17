@@ -39,17 +39,11 @@ public class OracleNNE implements Resource {
   }
 
   private String database;
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
+  /** Oracle service name to connect to */
   public String getDatabase() {
     return this.database;
   }
-  /**
-   * The initial database to connect to. This setting does not by itself prevent switching to
-   * another database after connecting.
-   */
+  /** Oracle service name to connect to */
   public void setDatabase(String in) {
     this.database = in;
   }
@@ -195,6 +189,16 @@ public class OracleNNE implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private boolean tlsRequired;
+  /** If set, TLS must be used to connect to this resource. */
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
+  }
+  /** If set, TLS must be used to connect to this resource. */
+  public void setTlsRequired(boolean in) {
+    this.tlsRequired = in;
   }
 
   private String username;

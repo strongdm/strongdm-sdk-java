@@ -14281,6 +14281,7 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -14326,6 +14327,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setTlsRequired(porcelain.getTlsRequired());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
