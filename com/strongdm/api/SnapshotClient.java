@@ -62,6 +62,10 @@ public class SnapshotClient {
   public SnapshotAccounts accounts() {
     return this.parent.accounts;
   }
+  /** An AccountGroup links an account and a group. */
+  public SnapshotAccountsGroups accountsGroups() {
+    return this.parent.accountsGroups;
+  }
   /** ApprovalWorkflowApprovers link approval workflow approvers to an ApprovalWorkflowStep */
   @Deprecated
   public SnapshotApprovalWorkflowApprovers approvalWorkflowApprovers() {
@@ -85,6 +89,14 @@ public class SnapshotClient {
    */
   public SnapshotRoles roles() {
     return this.parent.roles;
+  }
+  /** A Group is a set of principals. */
+  public SnapshotGroups groups() {
+    return this.parent.groups;
+  }
+  /** A GroupRole is an assignment of a Group to a Role. */
+  public SnapshotGroupsRoles groupsRoles() {
+    return this.parent.groupsRoles;
   }
   /**
    * IdentityAliases assign an alias to an account within an IdentitySet. The alias is used as the

@@ -141,6 +141,20 @@ public class Client {
     return this.accounts;
   }
 
+  protected final AccountsGroups accountsGroups;
+
+  /** An AccountGroup links an account and a group. */
+  public AccountsGroups accountsGroups() {
+    return this.accountsGroups;
+  }
+
+  protected final AccountsGroupsHistory accountsGroupsHistory;
+
+  /** AccountsGroupsHistory records all changes to the state of an AccountGroup. */
+  public AccountsGroupsHistory accountsGroupsHistory() {
+    return this.accountsGroupsHistory;
+  }
+
   protected final AccountsHistory accountsHistory;
 
   /** AccountsHistory records all changes to the state of an Account. */
@@ -223,6 +237,34 @@ public class Client {
    */
   public Roles roles() {
     return this.roles;
+  }
+
+  protected final Groups groups;
+
+  /** A Group is a set of principals. */
+  public Groups groups() {
+    return this.groups;
+  }
+
+  protected final GroupsHistory groupsHistory;
+
+  /** GroupsHistory records all changes to the state of a Group. */
+  public GroupsHistory groupsHistory() {
+    return this.groupsHistory;
+  }
+
+  protected final GroupsRoles groupsRoles;
+
+  /** A GroupRole is an assignment of a Group to a Role. */
+  public GroupsRoles groupsRoles() {
+    return this.groupsRoles;
+  }
+
+  protected final GroupsRolesHistory groupsRolesHistory;
+
+  /** GroupsRolesHistory records all changes to the state of a GroupRole. */
+  public GroupsRolesHistory groupsRolesHistory() {
+    return this.groupsRolesHistory;
   }
 
   protected final HealthChecks healthChecks;
@@ -580,6 +622,8 @@ public class Client {
     this.accountResources = new AccountResources(this.channel, this);
     this.accountResourcesHistory = new AccountResourcesHistory(this.channel, this);
     this.accounts = new Accounts(this.channel, this);
+    this.accountsGroups = new AccountsGroups(this.channel, this);
+    this.accountsGroupsHistory = new AccountsGroupsHistory(this.channel, this);
     this.accountsHistory = new AccountsHistory(this.channel, this);
     this.activities = new Activities(this.channel, this);
     this.approvalWorkflowApprovers = new ApprovalWorkflowApprovers(this.channel, this);
@@ -591,6 +635,10 @@ public class Client {
     this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
     this.controlPanel = new ControlPanel(this.channel, this);
     this.roles = new Roles(this.channel, this);
+    this.groups = new Groups(this.channel, this);
+    this.groupsHistory = new GroupsHistory(this.channel, this);
+    this.groupsRoles = new GroupsRoles(this.channel, this);
+    this.groupsRolesHistory = new GroupsRolesHistory(this.channel, this);
     this.healthChecks = new HealthChecks(this.channel, this);
     this.identityAliases = new IdentityAliases(this.channel, this);
     this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);
@@ -658,6 +706,8 @@ public class Client {
       this.accountResources = new AccountResources(this.channel, this);
       this.accountResourcesHistory = new AccountResourcesHistory(this.channel, this);
       this.accounts = new Accounts(this.channel, this);
+      this.accountsGroups = new AccountsGroups(this.channel, this);
+      this.accountsGroupsHistory = new AccountsGroupsHistory(this.channel, this);
       this.accountsHistory = new AccountsHistory(this.channel, this);
       this.activities = new Activities(this.channel, this);
       this.approvalWorkflowApprovers = new ApprovalWorkflowApprovers(this.channel, this);
@@ -669,6 +719,10 @@ public class Client {
       this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
       this.roles = new Roles(this.channel, this);
+      this.groups = new Groups(this.channel, this);
+      this.groupsHistory = new GroupsHistory(this.channel, this);
+      this.groupsRoles = new GroupsRoles(this.channel, this);
+      this.groupsRolesHistory = new GroupsRolesHistory(this.channel, this);
       this.healthChecks = new HealthChecks(this.channel, this);
       this.identityAliases = new IdentityAliases(this.channel, this);
       this.identityAliasesHistory = new IdentityAliasesHistory(this.channel, this);

@@ -40,6 +40,8 @@ import com.strongdm.api.plumbing.AccountGrantsPlumbing.*;
 import com.strongdm.api.plumbing.AccountPermissionsPlumbing.*;
 import com.strongdm.api.plumbing.AccountResourcesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.AccountResourcesPlumbing.*;
+import com.strongdm.api.plumbing.AccountsGroupsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.AccountsGroupsPlumbing.*;
 import com.strongdm.api.plumbing.AccountsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.AccountsPlumbing.*;
 import com.strongdm.api.plumbing.ActivitiesPlumbing.*;
@@ -51,6 +53,10 @@ import com.strongdm.api.plumbing.ApprovalWorkflowsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.*;
 import com.strongdm.api.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.plumbing.DriversPlumbing.*;
+import com.strongdm.api.plumbing.GroupsHistoryPlumbing.*;
+import com.strongdm.api.plumbing.GroupsPlumbing.*;
+import com.strongdm.api.plumbing.GroupsRolesHistoryPlumbing.*;
+import com.strongdm.api.plumbing.GroupsRolesPlumbing.*;
 import com.strongdm.api.plumbing.HealthChecksPlumbing.*;
 import com.strongdm.api.plumbing.IdentityAliasesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.IdentityAliasesPlumbing.*;
@@ -2629,6 +2635,450 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AccountGroup convertAccountGroupToPorcelain(
+      AccountGroup plumbing) {
+    com.strongdm.api.AccountGroup porcelain = new com.strongdm.api.AccountGroup();
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static AccountGroup convertAccountGroupToPlumbing(
+      com.strongdm.api.AccountGroup porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroup.Builder builder = AccountGroup.newBuilder();
+    if (porcelain.getAccountId() != null) {
+      builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroup> convertRepeatedAccountGroupToPorcelain(
+      Collection<AccountGroup> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroup>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroup> convertRepeatedAccountGroupToPlumbing(
+      Collection<com.strongdm.api.AccountGroup> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroup>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupCreateRequest
+      convertAccountGroupCreateRequestToPorcelain(AccountGroupCreateRequest plumbing) {
+    com.strongdm.api.AccountGroupCreateRequest porcelain =
+        new com.strongdm.api.AccountGroupCreateRequest();
+    porcelain.setAccountGroup(Plumbing.convertAccountGroupToPorcelain(plumbing.getAccountGroup()));
+    return porcelain;
+  }
+
+  public static AccountGroupCreateRequest convertAccountGroupCreateRequestToPlumbing(
+      com.strongdm.api.AccountGroupCreateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupCreateRequest.Builder builder = AccountGroupCreateRequest.newBuilder();
+    if (porcelain.getAccountGroup() != null) {
+      builder.setAccountGroup(Plumbing.convertAccountGroupToPlumbing(porcelain.getAccountGroup()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupCreateRequest>
+      convertRepeatedAccountGroupCreateRequestToPorcelain(
+          Collection<AccountGroupCreateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupCreateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupCreateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupCreateRequest> convertRepeatedAccountGroupCreateRequestToPlumbing(
+      Collection<com.strongdm.api.AccountGroupCreateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupCreateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupCreateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupCreateResponse
+      convertAccountGroupCreateResponseToPorcelain(AccountGroupCreateResponse plumbing) {
+    com.strongdm.api.AccountGroupCreateResponse porcelain =
+        new com.strongdm.api.AccountGroupCreateResponse();
+    porcelain.setAccountGroup(Plumbing.convertAccountGroupToPorcelain(plumbing.getAccountGroup()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static AccountGroupCreateResponse convertAccountGroupCreateResponseToPlumbing(
+      com.strongdm.api.AccountGroupCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupCreateResponse.Builder builder = AccountGroupCreateResponse.newBuilder();
+    if (porcelain.getAccountGroup() != null) {
+      builder.setAccountGroup(Plumbing.convertAccountGroupToPlumbing(porcelain.getAccountGroup()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupCreateResponse>
+      convertRepeatedAccountGroupCreateResponseToPorcelain(
+          Collection<AccountGroupCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupCreateResponse>
+      convertRepeatedAccountGroupCreateResponseToPlumbing(
+          Collection<com.strongdm.api.AccountGroupCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupDeleteRequest
+      convertAccountGroupDeleteRequestToPorcelain(AccountGroupDeleteRequest plumbing) {
+    com.strongdm.api.AccountGroupDeleteRequest porcelain =
+        new com.strongdm.api.AccountGroupDeleteRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static AccountGroupDeleteRequest convertAccountGroupDeleteRequestToPlumbing(
+      com.strongdm.api.AccountGroupDeleteRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupDeleteRequest.Builder builder = AccountGroupDeleteRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupDeleteRequest>
+      convertRepeatedAccountGroupDeleteRequestToPorcelain(
+          Collection<AccountGroupDeleteRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupDeleteRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupDeleteRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupDeleteRequest> convertRepeatedAccountGroupDeleteRequestToPlumbing(
+      Collection<com.strongdm.api.AccountGroupDeleteRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupDeleteRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupDeleteRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupDeleteResponse
+      convertAccountGroupDeleteResponseToPorcelain(AccountGroupDeleteResponse plumbing) {
+    com.strongdm.api.AccountGroupDeleteResponse porcelain =
+        new com.strongdm.api.AccountGroupDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static AccountGroupDeleteResponse convertAccountGroupDeleteResponseToPlumbing(
+      com.strongdm.api.AccountGroupDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupDeleteResponse.Builder builder = AccountGroupDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupDeleteResponse>
+      convertRepeatedAccountGroupDeleteResponseToPorcelain(
+          Collection<AccountGroupDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupDeleteResponse>
+      convertRepeatedAccountGroupDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.AccountGroupDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupGetRequest convertAccountGroupGetRequestToPorcelain(
+      AccountGroupGetRequest plumbing) {
+    com.strongdm.api.AccountGroupGetRequest porcelain =
+        new com.strongdm.api.AccountGroupGetRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static AccountGroupGetRequest convertAccountGroupGetRequestToPlumbing(
+      com.strongdm.api.AccountGroupGetRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupGetRequest.Builder builder = AccountGroupGetRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupGetRequest>
+      convertRepeatedAccountGroupGetRequestToPorcelain(
+          Collection<AccountGroupGetRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupGetRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupGetRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupGetRequest> convertRepeatedAccountGroupGetRequestToPlumbing(
+      Collection<com.strongdm.api.AccountGroupGetRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupGetRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupGetRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupGetResponse convertAccountGroupGetResponseToPorcelain(
+      AccountGroupGetResponse plumbing) {
+    com.strongdm.api.AccountGroupGetResponse porcelain =
+        new com.strongdm.api.AccountGroupGetResponse();
+    porcelain.setAccountGroup(Plumbing.convertAccountGroupToPorcelain(plumbing.getAccountGroup()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static AccountGroupGetResponse convertAccountGroupGetResponseToPlumbing(
+      com.strongdm.api.AccountGroupGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupGetResponse.Builder builder = AccountGroupGetResponse.newBuilder();
+    if (porcelain.getAccountGroup() != null) {
+      builder.setAccountGroup(Plumbing.convertAccountGroupToPlumbing(porcelain.getAccountGroup()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupGetResponse>
+      convertRepeatedAccountGroupGetResponseToPorcelain(
+          Collection<AccountGroupGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupGetResponse> convertRepeatedAccountGroupGetResponseToPlumbing(
+      Collection<com.strongdm.api.AccountGroupGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupHistory convertAccountGroupHistoryToPorcelain(
+      AccountGroupHistory plumbing) {
+    com.strongdm.api.AccountGroupHistory porcelain = new com.strongdm.api.AccountGroupHistory();
+    porcelain.setAccountGroup(Plumbing.convertAccountGroupToPorcelain(plumbing.getAccountGroup()));
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static AccountGroupHistory convertAccountGroupHistoryToPlumbing(
+      com.strongdm.api.AccountGroupHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupHistory.Builder builder = AccountGroupHistory.newBuilder();
+    if (porcelain.getAccountGroup() != null) {
+      builder.setAccountGroup(Plumbing.convertAccountGroupToPlumbing(porcelain.getAccountGroup()));
+    }
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupHistory>
+      convertRepeatedAccountGroupHistoryToPorcelain(Collection<AccountGroupHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupHistory> convertRepeatedAccountGroupHistoryToPlumbing(
+      Collection<com.strongdm.api.AccountGroupHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupListRequest convertAccountGroupListRequestToPorcelain(
+      AccountGroupListRequest plumbing) {
+    com.strongdm.api.AccountGroupListRequest porcelain =
+        new com.strongdm.api.AccountGroupListRequest();
+    porcelain.setFilter((plumbing.getFilter()));
+    return porcelain;
+  }
+
+  public static AccountGroupListRequest convertAccountGroupListRequestToPlumbing(
+      com.strongdm.api.AccountGroupListRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupListRequest.Builder builder = AccountGroupListRequest.newBuilder();
+    if (porcelain.getFilter() != null) {
+      builder.setFilter((porcelain.getFilter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupListRequest>
+      convertRepeatedAccountGroupListRequestToPorcelain(
+          Collection<AccountGroupListRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupListRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupListRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupListRequest> convertRepeatedAccountGroupListRequestToPlumbing(
+      Collection<com.strongdm.api.AccountGroupListRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupListRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupListRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AccountGroupListResponse
+      convertAccountGroupListResponseToPorcelain(AccountGroupListResponse plumbing) {
+    com.strongdm.api.AccountGroupListResponse porcelain =
+        new com.strongdm.api.AccountGroupListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static AccountGroupListResponse convertAccountGroupListResponseToPlumbing(
+      com.strongdm.api.AccountGroupListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AccountGroupListResponse.Builder builder = AccountGroupListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AccountGroupListResponse>
+      convertRepeatedAccountGroupListResponseToPorcelain(
+          Collection<AccountGroupListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AccountGroupListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAccountGroupListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AccountGroupListResponse> convertRepeatedAccountGroupListResponseToPlumbing(
+      Collection<com.strongdm.api.AccountGroupListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AccountGroupListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAccountGroupListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AccountHistory convertAccountHistoryToPorcelain(
       AccountHistory plumbing) {
     com.strongdm.api.AccountHistory porcelain = new com.strongdm.api.AccountHistory();
@@ -4097,6 +4547,7 @@ public class Plumbing {
       ApprovalFlowApprover plumbing) {
     com.strongdm.api.ApprovalFlowApprover porcelain = new com.strongdm.api.ApprovalFlowApprover();
     porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setGroupId((plumbing.getGroupId()));
     porcelain.setReference((plumbing.getReference()));
     porcelain.setRoleId((plumbing.getRoleId()));
     return porcelain;
@@ -4110,6 +4561,9 @@ public class Plumbing {
     ApprovalFlowApprover.Builder builder = ApprovalFlowApprover.newBuilder();
     if (porcelain.getAccountId() != null) {
       builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
     }
     if (porcelain.getReference() != null) {
       builder.setReference((porcelain.getReference()));
@@ -9543,6 +9997,1097 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.Group convertGroupToPorcelain(Group plumbing) {
+    com.strongdm.api.Group porcelain = new com.strongdm.api.Group();
+    porcelain.setDescription((plumbing.getDescription()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setSource((plumbing.getSource()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static Group convertGroupToPlumbing(com.strongdm.api.Group porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Group.Builder builder = Group.newBuilder();
+    if (porcelain.getDescription() != null) {
+      builder.setDescription((porcelain.getDescription()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getSource() != null) {
+      builder.setSource((porcelain.getSource()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Group> convertRepeatedGroupToPorcelain(
+      Collection<Group> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Group>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Group> convertRepeatedGroupToPlumbing(
+      Collection<com.strongdm.api.Group> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Group>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupCreateFromRolesRequest
+      convertGroupCreateFromRolesRequestToPorcelain(GroupCreateFromRolesRequest plumbing) {
+    com.strongdm.api.GroupCreateFromRolesRequest porcelain =
+        new com.strongdm.api.GroupCreateFromRolesRequest();
+    porcelain.setCommit((plumbing.getCommit()));
+    porcelain.setRoleIds((plumbing.getRoleIdsList()));
+    return porcelain;
+  }
+
+  public static GroupCreateFromRolesRequest convertGroupCreateFromRolesRequestToPlumbing(
+      com.strongdm.api.GroupCreateFromRolesRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupCreateFromRolesRequest.Builder builder = GroupCreateFromRolesRequest.newBuilder();
+    builder.setCommit(porcelain.getCommit());
+    builder.addAllRoleIds((porcelain.getRoleIds()));
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupCreateFromRolesRequest>
+      convertRepeatedGroupCreateFromRolesRequestToPorcelain(
+          Collection<GroupCreateFromRolesRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupCreateFromRolesRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupCreateFromRolesRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupCreateFromRolesRequest>
+      convertRepeatedGroupCreateFromRolesRequestToPlumbing(
+          Collection<com.strongdm.api.GroupCreateFromRolesRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupCreateFromRolesRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupCreateFromRolesRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupCreateFromRolesResponse
+      convertGroupCreateFromRolesResponseToPorcelain(GroupCreateFromRolesResponse plumbing) {
+    com.strongdm.api.GroupCreateFromRolesResponse porcelain =
+        new com.strongdm.api.GroupCreateFromRolesResponse();
+    porcelain.setGroupFromRole(
+        Plumbing.convertRepeatedGroupFromRoleToPorcelain(plumbing.getGroupFromRoleList()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupCreateFromRolesResponse convertGroupCreateFromRolesResponseToPlumbing(
+      com.strongdm.api.GroupCreateFromRolesResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupCreateFromRolesResponse.Builder builder = GroupCreateFromRolesResponse.newBuilder();
+    builder.addAllGroupFromRole(
+        Plumbing.convertRepeatedGroupFromRoleToPlumbing(porcelain.getGroupFromRole()));
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupCreateFromRolesResponse>
+      convertRepeatedGroupCreateFromRolesResponseToPorcelain(
+          Collection<GroupCreateFromRolesResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupCreateFromRolesResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupCreateFromRolesResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupCreateFromRolesResponse>
+      convertRepeatedGroupCreateFromRolesResponseToPlumbing(
+          Collection<com.strongdm.api.GroupCreateFromRolesResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupCreateFromRolesResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupCreateFromRolesResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupCreateRequest convertGroupCreateRequestToPorcelain(
+      GroupCreateRequest plumbing) {
+    com.strongdm.api.GroupCreateRequest porcelain = new com.strongdm.api.GroupCreateRequest();
+    porcelain.setGroup(Plumbing.convertGroupToPorcelain(plumbing.getGroup()));
+    return porcelain;
+  }
+
+  public static GroupCreateRequest convertGroupCreateRequestToPlumbing(
+      com.strongdm.api.GroupCreateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupCreateRequest.Builder builder = GroupCreateRequest.newBuilder();
+    if (porcelain.getGroup() != null) {
+      builder.setGroup(Plumbing.convertGroupToPlumbing(porcelain.getGroup()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupCreateRequest>
+      convertRepeatedGroupCreateRequestToPorcelain(Collection<GroupCreateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupCreateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupCreateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupCreateRequest> convertRepeatedGroupCreateRequestToPlumbing(
+      Collection<com.strongdm.api.GroupCreateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupCreateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupCreateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupCreateResponse convertGroupCreateResponseToPorcelain(
+      GroupCreateResponse plumbing) {
+    com.strongdm.api.GroupCreateResponse porcelain = new com.strongdm.api.GroupCreateResponse();
+    porcelain.setGroup(Plumbing.convertGroupToPorcelain(plumbing.getGroup()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupCreateResponse convertGroupCreateResponseToPlumbing(
+      com.strongdm.api.GroupCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupCreateResponse.Builder builder = GroupCreateResponse.newBuilder();
+    if (porcelain.getGroup() != null) {
+      builder.setGroup(Plumbing.convertGroupToPlumbing(porcelain.getGroup()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupCreateResponse>
+      convertRepeatedGroupCreateResponseToPorcelain(Collection<GroupCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupCreateResponse> convertRepeatedGroupCreateResponseToPlumbing(
+      Collection<com.strongdm.api.GroupCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupDeleteRequest convertGroupDeleteRequestToPorcelain(
+      GroupDeleteRequest plumbing) {
+    com.strongdm.api.GroupDeleteRequest porcelain = new com.strongdm.api.GroupDeleteRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static GroupDeleteRequest convertGroupDeleteRequestToPlumbing(
+      com.strongdm.api.GroupDeleteRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupDeleteRequest.Builder builder = GroupDeleteRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupDeleteRequest>
+      convertRepeatedGroupDeleteRequestToPorcelain(Collection<GroupDeleteRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupDeleteRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupDeleteRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupDeleteRequest> convertRepeatedGroupDeleteRequestToPlumbing(
+      Collection<com.strongdm.api.GroupDeleteRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupDeleteRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupDeleteRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupDeleteResponse convertGroupDeleteResponseToPorcelain(
+      GroupDeleteResponse plumbing) {
+    com.strongdm.api.GroupDeleteResponse porcelain = new com.strongdm.api.GroupDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupDeleteResponse convertGroupDeleteResponseToPlumbing(
+      com.strongdm.api.GroupDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupDeleteResponse.Builder builder = GroupDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupDeleteResponse>
+      convertRepeatedGroupDeleteResponseToPorcelain(Collection<GroupDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupDeleteResponse> convertRepeatedGroupDeleteResponseToPlumbing(
+      Collection<com.strongdm.api.GroupDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupFromRole convertGroupFromRoleToPorcelain(
+      GroupFromRole plumbing) {
+    com.strongdm.api.GroupFromRole porcelain = new com.strongdm.api.GroupFromRole();
+    porcelain.setAccounts(Plumbing.convertRepeatedUserToPorcelain(plumbing.getAccountsList()));
+    porcelain.setApprovalFlows(
+        Plumbing.convertRepeatedApprovalWorkflowToPorcelain(plumbing.getApprovalFlowsList()));
+    porcelain.setGroup(Plumbing.convertGroupToPorcelain(plumbing.getGroup()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setRole(Plumbing.convertRoleToPorcelain(plumbing.getRole()));
+    return porcelain;
+  }
+
+  public static GroupFromRole convertGroupFromRoleToPlumbing(
+      com.strongdm.api.GroupFromRole porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupFromRole.Builder builder = GroupFromRole.newBuilder();
+    builder.addAllAccounts(Plumbing.convertRepeatedUserToPlumbing(porcelain.getAccounts()));
+    builder.addAllApprovalFlows(
+        Plumbing.convertRepeatedApprovalWorkflowToPlumbing(porcelain.getApprovalFlows()));
+    if (porcelain.getGroup() != null) {
+      builder.setGroup(Plumbing.convertGroupToPlumbing(porcelain.getGroup()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getRole() != null) {
+      builder.setRole(Plumbing.convertRoleToPlumbing(porcelain.getRole()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupFromRole> convertRepeatedGroupFromRoleToPorcelain(
+      Collection<GroupFromRole> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupFromRole>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupFromRoleToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupFromRole> convertRepeatedGroupFromRoleToPlumbing(
+      Collection<com.strongdm.api.GroupFromRole> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupFromRole>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupFromRoleToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupGetRequest convertGroupGetRequestToPorcelain(
+      GroupGetRequest plumbing) {
+    com.strongdm.api.GroupGetRequest porcelain = new com.strongdm.api.GroupGetRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static GroupGetRequest convertGroupGetRequestToPlumbing(
+      com.strongdm.api.GroupGetRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupGetRequest.Builder builder = GroupGetRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupGetRequest> convertRepeatedGroupGetRequestToPorcelain(
+      Collection<GroupGetRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupGetRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupGetRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupGetRequest> convertRepeatedGroupGetRequestToPlumbing(
+      Collection<com.strongdm.api.GroupGetRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupGetRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupGetRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupGetResponse convertGroupGetResponseToPorcelain(
+      GroupGetResponse plumbing) {
+    com.strongdm.api.GroupGetResponse porcelain = new com.strongdm.api.GroupGetResponse();
+    porcelain.setGroup(Plumbing.convertGroupToPorcelain(plumbing.getGroup()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupGetResponse convertGroupGetResponseToPlumbing(
+      com.strongdm.api.GroupGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupGetResponse.Builder builder = GroupGetResponse.newBuilder();
+    if (porcelain.getGroup() != null) {
+      builder.setGroup(Plumbing.convertGroupToPlumbing(porcelain.getGroup()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupGetResponse> convertRepeatedGroupGetResponseToPorcelain(
+      Collection<GroupGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupGetResponse> convertRepeatedGroupGetResponseToPlumbing(
+      Collection<com.strongdm.api.GroupGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupHistory convertGroupHistoryToPorcelain(
+      GroupHistory plumbing) {
+    com.strongdm.api.GroupHistory porcelain = new com.strongdm.api.GroupHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setGroup(Plumbing.convertGroupToPorcelain(plumbing.getGroup()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static GroupHistory convertGroupHistoryToPlumbing(
+      com.strongdm.api.GroupHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupHistory.Builder builder = GroupHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getGroup() != null) {
+      builder.setGroup(Plumbing.convertGroupToPlumbing(porcelain.getGroup()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupHistory> convertRepeatedGroupHistoryToPorcelain(
+      Collection<GroupHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupHistory> convertRepeatedGroupHistoryToPlumbing(
+      Collection<com.strongdm.api.GroupHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupListRequest convertGroupListRequestToPorcelain(
+      GroupListRequest plumbing) {
+    com.strongdm.api.GroupListRequest porcelain = new com.strongdm.api.GroupListRequest();
+    porcelain.setFilter((plumbing.getFilter()));
+    return porcelain;
+  }
+
+  public static GroupListRequest convertGroupListRequestToPlumbing(
+      com.strongdm.api.GroupListRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupListRequest.Builder builder = GroupListRequest.newBuilder();
+    if (porcelain.getFilter() != null) {
+      builder.setFilter((porcelain.getFilter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupListRequest> convertRepeatedGroupListRequestToPorcelain(
+      Collection<GroupListRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupListRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupListRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupListRequest> convertRepeatedGroupListRequestToPlumbing(
+      Collection<com.strongdm.api.GroupListRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupListRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupListRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupListResponse convertGroupListResponseToPorcelain(
+      GroupListResponse plumbing) {
+    com.strongdm.api.GroupListResponse porcelain = new com.strongdm.api.GroupListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupListResponse convertGroupListResponseToPlumbing(
+      com.strongdm.api.GroupListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupListResponse.Builder builder = GroupListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupListResponse>
+      convertRepeatedGroupListResponseToPorcelain(Collection<GroupListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupListResponse> convertRepeatedGroupListResponseToPlumbing(
+      Collection<com.strongdm.api.GroupListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRole convertGroupRoleToPorcelain(GroupRole plumbing) {
+    com.strongdm.api.GroupRole porcelain = new com.strongdm.api.GroupRole();
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setRoleId((plumbing.getRoleId()));
+    return porcelain;
+  }
+
+  public static GroupRole convertGroupRoleToPlumbing(com.strongdm.api.GroupRole porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRole.Builder builder = GroupRole.newBuilder();
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getRoleId() != null) {
+      builder.setRoleId((porcelain.getRoleId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRole> convertRepeatedGroupRoleToPorcelain(
+      Collection<GroupRole> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRole>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRole> convertRepeatedGroupRoleToPlumbing(
+      Collection<com.strongdm.api.GroupRole> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRole>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleCreateRequest convertGroupRoleCreateRequestToPorcelain(
+      GroupRoleCreateRequest plumbing) {
+    com.strongdm.api.GroupRoleCreateRequest porcelain =
+        new com.strongdm.api.GroupRoleCreateRequest();
+    porcelain.setGroupRole(Plumbing.convertGroupRoleToPorcelain(plumbing.getGroupRole()));
+    return porcelain;
+  }
+
+  public static GroupRoleCreateRequest convertGroupRoleCreateRequestToPlumbing(
+      com.strongdm.api.GroupRoleCreateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleCreateRequest.Builder builder = GroupRoleCreateRequest.newBuilder();
+    if (porcelain.getGroupRole() != null) {
+      builder.setGroupRole(Plumbing.convertGroupRoleToPlumbing(porcelain.getGroupRole()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleCreateRequest>
+      convertRepeatedGroupRoleCreateRequestToPorcelain(
+          Collection<GroupRoleCreateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleCreateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleCreateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleCreateRequest> convertRepeatedGroupRoleCreateRequestToPlumbing(
+      Collection<com.strongdm.api.GroupRoleCreateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleCreateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleCreateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleCreateResponse convertGroupRoleCreateResponseToPorcelain(
+      GroupRoleCreateResponse plumbing) {
+    com.strongdm.api.GroupRoleCreateResponse porcelain =
+        new com.strongdm.api.GroupRoleCreateResponse();
+    porcelain.setGroupRole(Plumbing.convertGroupRoleToPorcelain(plumbing.getGroupRole()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupRoleCreateResponse convertGroupRoleCreateResponseToPlumbing(
+      com.strongdm.api.GroupRoleCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleCreateResponse.Builder builder = GroupRoleCreateResponse.newBuilder();
+    if (porcelain.getGroupRole() != null) {
+      builder.setGroupRole(Plumbing.convertGroupRoleToPlumbing(porcelain.getGroupRole()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleCreateResponse>
+      convertRepeatedGroupRoleCreateResponseToPorcelain(
+          Collection<GroupRoleCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleCreateResponse> convertRepeatedGroupRoleCreateResponseToPlumbing(
+      Collection<com.strongdm.api.GroupRoleCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleDeleteRequest convertGroupRoleDeleteRequestToPorcelain(
+      GroupRoleDeleteRequest plumbing) {
+    com.strongdm.api.GroupRoleDeleteRequest porcelain =
+        new com.strongdm.api.GroupRoleDeleteRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static GroupRoleDeleteRequest convertGroupRoleDeleteRequestToPlumbing(
+      com.strongdm.api.GroupRoleDeleteRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleDeleteRequest.Builder builder = GroupRoleDeleteRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleDeleteRequest>
+      convertRepeatedGroupRoleDeleteRequestToPorcelain(
+          Collection<GroupRoleDeleteRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleDeleteRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleDeleteRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleDeleteRequest> convertRepeatedGroupRoleDeleteRequestToPlumbing(
+      Collection<com.strongdm.api.GroupRoleDeleteRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleDeleteRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleDeleteRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleDeleteResponse convertGroupRoleDeleteResponseToPorcelain(
+      GroupRoleDeleteResponse plumbing) {
+    com.strongdm.api.GroupRoleDeleteResponse porcelain =
+        new com.strongdm.api.GroupRoleDeleteResponse();
+    porcelain.setGroupRole(Plumbing.convertGroupRoleToPorcelain(plumbing.getGroupRole()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupRoleDeleteResponse convertGroupRoleDeleteResponseToPlumbing(
+      com.strongdm.api.GroupRoleDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleDeleteResponse.Builder builder = GroupRoleDeleteResponse.newBuilder();
+    if (porcelain.getGroupRole() != null) {
+      builder.setGroupRole(Plumbing.convertGroupRoleToPlumbing(porcelain.getGroupRole()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleDeleteResponse>
+      convertRepeatedGroupRoleDeleteResponseToPorcelain(
+          Collection<GroupRoleDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleDeleteResponse> convertRepeatedGroupRoleDeleteResponseToPlumbing(
+      Collection<com.strongdm.api.GroupRoleDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleGetRequest convertGroupRoleGetRequestToPorcelain(
+      GroupRoleGetRequest plumbing) {
+    com.strongdm.api.GroupRoleGetRequest porcelain = new com.strongdm.api.GroupRoleGetRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static GroupRoleGetRequest convertGroupRoleGetRequestToPlumbing(
+      com.strongdm.api.GroupRoleGetRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleGetRequest.Builder builder = GroupRoleGetRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleGetRequest>
+      convertRepeatedGroupRoleGetRequestToPorcelain(Collection<GroupRoleGetRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleGetRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleGetRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleGetRequest> convertRepeatedGroupRoleGetRequestToPlumbing(
+      Collection<com.strongdm.api.GroupRoleGetRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleGetRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleGetRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleGetResponse convertGroupRoleGetResponseToPorcelain(
+      GroupRoleGetResponse plumbing) {
+    com.strongdm.api.GroupRoleGetResponse porcelain = new com.strongdm.api.GroupRoleGetResponse();
+    porcelain.setGroupRole(Plumbing.convertGroupRoleToPorcelain(plumbing.getGroupRole()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupRoleGetResponse convertGroupRoleGetResponseToPlumbing(
+      com.strongdm.api.GroupRoleGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleGetResponse.Builder builder = GroupRoleGetResponse.newBuilder();
+    if (porcelain.getGroupRole() != null) {
+      builder.setGroupRole(Plumbing.convertGroupRoleToPlumbing(porcelain.getGroupRole()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleGetResponse>
+      convertRepeatedGroupRoleGetResponseToPorcelain(Collection<GroupRoleGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleGetResponse> convertRepeatedGroupRoleGetResponseToPlumbing(
+      Collection<com.strongdm.api.GroupRoleGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleHistory convertGroupRoleHistoryToPorcelain(
+      GroupRoleHistory plumbing) {
+    com.strongdm.api.GroupRoleHistory porcelain = new com.strongdm.api.GroupRoleHistory();
+    porcelain.setActivityId((plumbing.getActivityId()));
+    porcelain.setDeletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getDeletedAt()));
+    porcelain.setGroupRole(Plumbing.convertGroupRoleToPorcelain(plumbing.getGroupRole()));
+    porcelain.setTimestamp(Plumbing.convertTimestampToPorcelain(plumbing.getTimestamp()));
+    return porcelain;
+  }
+
+  public static GroupRoleHistory convertGroupRoleHistoryToPlumbing(
+      com.strongdm.api.GroupRoleHistory porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleHistory.Builder builder = GroupRoleHistory.newBuilder();
+    if (porcelain.getActivityId() != null) {
+      builder.setActivityId((porcelain.getActivityId()));
+    }
+    if (porcelain.getDeletedAt() != null) {
+      builder.setDeletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getDeletedAt()));
+    }
+    if (porcelain.getGroupRole() != null) {
+      builder.setGroupRole(Plumbing.convertGroupRoleToPlumbing(porcelain.getGroupRole()));
+    }
+    if (porcelain.getTimestamp() != null) {
+      builder.setTimestamp(Plumbing.convertTimestampToPlumbing(porcelain.getTimestamp()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleHistory> convertRepeatedGroupRoleHistoryToPorcelain(
+      Collection<GroupRoleHistory> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleHistory>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleHistoryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleHistory> convertRepeatedGroupRoleHistoryToPlumbing(
+      Collection<com.strongdm.api.GroupRoleHistory> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleHistory>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleHistoryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleListRequest convertGroupRoleListRequestToPorcelain(
+      GroupRoleListRequest plumbing) {
+    com.strongdm.api.GroupRoleListRequest porcelain = new com.strongdm.api.GroupRoleListRequest();
+    porcelain.setFilter((plumbing.getFilter()));
+    return porcelain;
+  }
+
+  public static GroupRoleListRequest convertGroupRoleListRequestToPlumbing(
+      com.strongdm.api.GroupRoleListRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleListRequest.Builder builder = GroupRoleListRequest.newBuilder();
+    if (porcelain.getFilter() != null) {
+      builder.setFilter((porcelain.getFilter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleListRequest>
+      convertRepeatedGroupRoleListRequestToPorcelain(Collection<GroupRoleListRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleListRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleListRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleListRequest> convertRepeatedGroupRoleListRequestToPlumbing(
+      Collection<com.strongdm.api.GroupRoleListRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleListRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleListRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupRoleListResponse convertGroupRoleListResponseToPorcelain(
+      GroupRoleListResponse plumbing) {
+    com.strongdm.api.GroupRoleListResponse porcelain = new com.strongdm.api.GroupRoleListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupRoleListResponse convertGroupRoleListResponseToPlumbing(
+      com.strongdm.api.GroupRoleListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupRoleListResponse.Builder builder = GroupRoleListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupRoleListResponse>
+      convertRepeatedGroupRoleListResponseToPorcelain(Collection<GroupRoleListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupRoleListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupRoleListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupRoleListResponse> convertRepeatedGroupRoleListResponseToPlumbing(
+      Collection<com.strongdm.api.GroupRoleListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupRoleListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupRoleListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupUpdateRequest convertGroupUpdateRequestToPorcelain(
+      GroupUpdateRequest plumbing) {
+    com.strongdm.api.GroupUpdateRequest porcelain = new com.strongdm.api.GroupUpdateRequest();
+    porcelain.setGroup(Plumbing.convertGroupToPorcelain(plumbing.getGroup()));
+    return porcelain;
+  }
+
+  public static GroupUpdateRequest convertGroupUpdateRequestToPlumbing(
+      com.strongdm.api.GroupUpdateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupUpdateRequest.Builder builder = GroupUpdateRequest.newBuilder();
+    if (porcelain.getGroup() != null) {
+      builder.setGroup(Plumbing.convertGroupToPlumbing(porcelain.getGroup()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupUpdateRequest>
+      convertRepeatedGroupUpdateRequestToPorcelain(Collection<GroupUpdateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupUpdateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupUpdateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupUpdateRequest> convertRepeatedGroupUpdateRequestToPlumbing(
+      Collection<com.strongdm.api.GroupUpdateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupUpdateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupUpdateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GroupUpdateResponse convertGroupUpdateResponseToPorcelain(
+      GroupUpdateResponse plumbing) {
+    com.strongdm.api.GroupUpdateResponse porcelain = new com.strongdm.api.GroupUpdateResponse();
+    porcelain.setGroup(Plumbing.convertGroupToPorcelain(plumbing.getGroup()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static GroupUpdateResponse convertGroupUpdateResponseToPlumbing(
+      com.strongdm.api.GroupUpdateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GroupUpdateResponse.Builder builder = GroupUpdateResponse.newBuilder();
+    if (porcelain.getGroup() != null) {
+      builder.setGroup(Plumbing.convertGroupToPlumbing(porcelain.getGroup()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GroupUpdateResponse>
+      convertRepeatedGroupUpdateResponseToPorcelain(Collection<GroupUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GroupUpdateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGroupUpdateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GroupUpdateResponse> convertRepeatedGroupUpdateResponseToPlumbing(
+      Collection<com.strongdm.api.GroupUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GroupUpdateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGroupUpdateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.HTTPAuth convertHTTPAuthToPorcelain(HTTPAuth plumbing) {
     com.strongdm.api.HTTPAuth porcelain = new com.strongdm.api.HTTPAuth();
     porcelain.setAuthHeader((plumbing.getAuthHeader()));
@@ -11554,6 +13099,89 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertLogConfigToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.MCP convertMCPToPorcelain(MCP plumbing) {
+    com.strongdm.api.MCP porcelain = new com.strongdm.api.MCP();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static MCP convertMCPToPlumbing(com.strongdm.api.MCP porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MCP.Builder builder = MCP.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.MCP> convertRepeatedMCPToPorcelain(
+      Collection<MCP> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MCP>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertMCPToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MCP> convertRepeatedMCPToPlumbing(
+      Collection<com.strongdm.api.MCP> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MCP>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertMCPToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -18141,6 +19769,9 @@ public class Plumbing {
     if (plumbing.hasMaria()) {
       return convertMariaToPorcelain(plumbing.getMaria());
     }
+    if (plumbing.hasMcp()) {
+      return convertMCPToPorcelain(plumbing.getMcp());
+    }
     if (plumbing.hasMemcached()) {
       return convertMemcachedToPorcelain(plumbing.getMemcached());
     }
@@ -18659,6 +20290,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Maria) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setMaria(convertMariaToPlumbing((com.strongdm.api.Maria) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.MCP) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMcp(convertMCPToPlumbing((com.strongdm.api.MCP) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Memcached) {

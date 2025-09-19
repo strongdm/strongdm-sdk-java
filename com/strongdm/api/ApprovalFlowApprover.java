@@ -32,6 +32,16 @@ public class ApprovalFlowApprover {
     this.accountId = in;
   }
 
+  private String groupId;
+  /** The approver group id */
+  public String getGroupId() {
+    return this.groupId;
+  }
+  /** The approver group id */
+  public void setGroupId(String in) {
+    this.groupId = in;
+  }
+
   private String reference;
   /**
    * A reference to an approver. Must be one of ApproverReference constants. If set, the account_id
