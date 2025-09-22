@@ -18,6 +18,12 @@ package com.strongdm.api;
 
 // Permissions, all permissions that may be granted to an account.
 public final class Permission {
+  public static final String GROUP_READ = "group:read";
+  public static final String GROUP_WRITE = "group:write";
+  public static final String GROUP_ROLE_READ = "grouprole:read";
+  public static final String GROUP_ROLE_WRITE = "grouprole:write";
+  public static final String ACCOUNT_GROUP_READ = "accountgroup:read";
+  public static final String ACCOUNT_GROUP_WRITE = "accountgroup:write";
   public static final String RELAY_LIST = "relay:list";
   public static final String RELAY_CREATE = "relay:create";
   public static final String DATASOURCE_LIST = "datasource:list";
@@ -82,6 +88,7 @@ public final class Permission {
   public static final String ORG_AUDIT_APPROVAL_FLOWS = "audit:approvalflows";
   public static final String ORG_AUDIT_ACCESS_REQUESTS = "audit:accessrequests";
   public static final String ORG_AUDIT_POLICIES = "audit:policies";
+  public static final String ORG_AUDIT_GROUPS = "audit:groups";
   public static final String WORKFLOW_LIST = "workflow:list";
   public static final String WORKFLOW_EDIT = "workflow:edit";
   public static final String ACCESS_REQUEST_LIST = "accessrequest:list";
