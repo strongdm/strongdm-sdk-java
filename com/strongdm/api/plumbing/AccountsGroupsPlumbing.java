@@ -9517,28 +9517,30 @@ public final class AccountsGroupsPlumbing {
       "ponseMetadata\0224\n\016account_groups\030\002 \003(\0132\020." +
       "v1.AccountGroupB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limi" +
       "t\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\030\372\370\263\007\023\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\003cli\"\210\001\n\014Account" +
+      "\007\001:\030\372\370\263\007\023\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\003cli\"\346\001\n\014Account" +
       "Group\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\naccount" +
       "_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\010group_id\030\003" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:\030\372\370\263\007\023\250\363\263\007\001\322\363\263\007\001*\322" +
-      "\363\263\007\003cli2\227\004\n\016AccountsGroups\022s\n\006Create\022\035.v" +
-      "1.AccountGroupCreateRequest\032\036.v1.Account" +
-      "GroupCreateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027" +
-      "\252\363\263\007\022/v1/accountsgroups\022n\n\003Get\022\032.v1.Acco" +
-      "untGroupGetRequest\032\033.v1.AccountGroupGetR" +
-      "esponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/acco" +
-      "untsgroups/{id}\022z\n\006Delete\022\035.v1.AccountGr" +
-      "oupDeleteRequest\032\036.v1.AccountGroupDelete" +
-      "Response\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027/v1/" +
-      "accountsgroups/{id}\022l\n\004List\022\033.v1.Account" +
-      "GroupListRequest\032\034.v1.AccountGroupListRe" +
-      "sponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/accou" +
-      "ntsgroups\0326\312\371\263\0071\302\371\263\007\014AccountGroup\312\371\263\007\001*\312" +
-      "\371\263\007\003cli\322\371\263\007\raccountgroup-B\202\001\n\031com.strong" +
-      "dm.api.plumbingB\026AccountsGroupsPlumbingZ" +
-      "5github.com/strongdm/strongdm-sdk-go/v3/" +
-      "internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\010\242\214\264\007\003clib\006" +
-      "proto3"
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\302\363\263\007Y\242\363" +
+      "\263\007&tf_examples/account_group_resource.tx" +
+      "t\252\363\263\007)tf_examples/account_group_data_sou" +
+      "rce.txt\322\363\263\007\001*\322\363\263\007\003cli2\227\004\n\016AccountsGroups" +
+      "\022s\n\006Create\022\035.v1.AccountGroupCreateReques" +
+      "t\032\036.v1.AccountGroupCreateResponse\"*\202\371\263\007\t" +
+      "\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/v1/accountsgroups\022n\n" +
+      "\003Get\022\032.v1.AccountGroupGetRequest\032\033.v1.Ac" +
+      "countGroupGetResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
+      "\034\252\363\263\007\027/v1/accountsgroups/{id}\022z\n\006Delete\022" +
+      "\035.v1.AccountGroupDeleteRequest\032\036.v1.Acco" +
+      "untGroupDeleteResponse\"1\202\371\263\007\013\242\363\263\007\006delete" +
+      "\202\371\263\007\034\252\363\263\007\027/v1/accountsgroups/{id}\022l\n\004Lis" +
+      "t\022\033.v1.AccountGroupListRequest\032\034.v1.Acco" +
+      "untGroupListResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027" +
+      "\252\363\263\007\022/v1/accountsgroups\0326\312\371\263\0071\302\371\263\007\014Accou" +
+      "ntGroup\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\raccountgroup-B" +
+      "\202\001\n\031com.strongdm.api.plumbingB\026AccountsG" +
+      "roupsPlumbingZ5github.com/strongdm/stron" +
+      "gdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302" +
+      "\222\264\007\010\242\214\264\007\003clib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

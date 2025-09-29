@@ -19,10 +19,6 @@ package com.strongdm.api;
 
 import java.time.Duration;
 
-/**
- * ActiveDirectoryEngine is currently unstable, and its API may change, or it may be removed,
- * without a major version bump.
- */
 public class ActiveDirectoryEngine implements SecretEngine {
   private Duration afterReadTtl;
   /**

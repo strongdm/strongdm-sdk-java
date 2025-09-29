@@ -17364,6 +17364,81 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.PostgresEngine convertPostgresEngineToPorcelain(
+      PostgresEngine plumbing) {
+    com.strongdm.api.PostgresEngine porcelain = new com.strongdm.api.PostgresEngine();
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPublicKey(Plumbing.convertBytesToPorcelain(plumbing.getPublicKey()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSecretStoreRootPath((plumbing.getSecretStoreRootPath()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static PostgresEngine convertPostgresEngineToPlumbing(
+      com.strongdm.api.PostgresEngine porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    PostgresEngine.Builder builder = PostgresEngine.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    builder.setKeyRotationIntervalDays(porcelain.getKeyRotationIntervalDays());
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey(Plumbing.convertBytesToPlumbing(porcelain.getPublicKey()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSecretStoreRootPath() != null) {
+      builder.setSecretStoreRootPath((porcelain.getSecretStoreRootPath()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.PostgresEngine> convertRepeatedPostgresEngineToPorcelain(
+      Collection<PostgresEngine> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.PostgresEngine>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertPostgresEngineToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<PostgresEngine> convertRepeatedPostgresEngineToPlumbing(
+      Collection<com.strongdm.api.PostgresEngine> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<PostgresEngine>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertPostgresEngineToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Presto convertPrestoToPorcelain(Presto plumbing) {
     com.strongdm.api.Presto porcelain = new com.strongdm.api.Presto();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -21943,6 +22018,9 @@ public class Plumbing {
     if (plumbing.hasKeyValue()) {
       return convertKeyValueEngineToPorcelain(plumbing.getKeyValue());
     }
+    if (plumbing.hasPostgres()) {
+      return convertPostgresEngineToPorcelain(plumbing.getPostgres());
+    }
     throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
 
@@ -21962,6 +22040,12 @@ public class Plumbing {
       SecretEngine.Builder builder = SecretEngine.newBuilder();
       builder.setKeyValue(
           convertKeyValueEngineToPlumbing((com.strongdm.api.KeyValueEngine) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.PostgresEngine) {
+      SecretEngine.Builder builder = SecretEngine.newBuilder();
+      builder.setPostgres(
+          convertPostgresEngineToPlumbing((com.strongdm.api.PostgresEngine) porcelain));
       return builder.build();
     }
     return null;

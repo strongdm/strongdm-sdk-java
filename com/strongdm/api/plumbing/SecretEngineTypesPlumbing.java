@@ -62,6 +62,21 @@ public final class SecretEngineTypesPlumbing {
      */
     com.strongdm.api.plumbing.SecretEngineTypesPlumbing.KeyValueEngineOrBuilder getKeyValueOrBuilder();
 
+    /**
+     * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+     * @return Whether the postgres field is set.
+     */
+    boolean hasPostgres();
+    /**
+     * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+     * @return The postgres.
+     */
+    com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine getPostgres();
+    /**
+     * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngineOrBuilder getPostgresOrBuilder();
+
     public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.SecretEngine.SecretEngineCase getSecretEngineCase();
   }
   /**
@@ -141,6 +156,20 @@ public final class SecretEngineTypesPlumbing {
               secretEngineCase_ = 332;
               break;
             }
+            case 2666: {
+              com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder subBuilder = null;
+              if (secretEngineCase_ == 333) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_).toBuilder();
+              }
+              secretEngine_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_);
+                secretEngine_ = subBuilder.buildPartial();
+              }
+              secretEngineCase_ = 333;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -182,6 +211,7 @@ public final class SecretEngineTypesPlumbing {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       ACTIVE_DIRECTORY(332),
       KEY_VALUE(331),
+      POSTGRES(333),
       SECRETENGINE_NOT_SET(0);
       private final int value;
       private SecretEngineCase(int value) {
@@ -201,6 +231,7 @@ public final class SecretEngineTypesPlumbing {
         switch (value) {
           case 332: return ACTIVE_DIRECTORY;
           case 331: return KEY_VALUE;
+          case 333: return POSTGRES;
           case 0: return SECRETENGINE_NOT_SET;
           default: return null;
         }
@@ -278,6 +309,37 @@ public final class SecretEngineTypesPlumbing {
       return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.KeyValueEngine.getDefaultInstance();
     }
 
+    public static final int POSTGRES_FIELD_NUMBER = 333;
+    /**
+     * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+     * @return Whether the postgres field is set.
+     */
+    @java.lang.Override
+    public boolean hasPostgres() {
+      return secretEngineCase_ == 333;
+    }
+    /**
+     * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+     * @return The postgres.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine getPostgres() {
+      if (secretEngineCase_ == 333) {
+         return (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_;
+      }
+      return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngineOrBuilder getPostgresOrBuilder() {
+      if (secretEngineCase_ == 333) {
+         return (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_;
+      }
+      return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -298,6 +360,9 @@ public final class SecretEngineTypesPlumbing {
       if (secretEngineCase_ == 332) {
         output.writeMessage(332, (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.ActiveDirectoryEngine) secretEngine_);
       }
+      if (secretEngineCase_ == 333) {
+        output.writeMessage(333, (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -314,6 +379,10 @@ public final class SecretEngineTypesPlumbing {
       if (secretEngineCase_ == 332) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(332, (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.ActiveDirectoryEngine) secretEngine_);
+      }
+      if (secretEngineCase_ == 333) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(333, (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -340,6 +409,10 @@ public final class SecretEngineTypesPlumbing {
           if (!getKeyValue()
               .equals(other.getKeyValue())) return false;
           break;
+        case 333:
+          if (!getPostgres()
+              .equals(other.getPostgres())) return false;
+          break;
         case 0:
         default:
       }
@@ -362,6 +435,10 @@ public final class SecretEngineTypesPlumbing {
         case 331:
           hash = (37 * hash) + KEY_VALUE_FIELD_NUMBER;
           hash = (53 * hash) + getKeyValue().hashCode();
+          break;
+        case 333:
+          hash = (37 * hash) + POSTGRES_FIELD_NUMBER;
+          hash = (53 * hash) + getPostgres().hashCode();
           break;
         case 0:
         default:
@@ -545,6 +622,13 @@ public final class SecretEngineTypesPlumbing {
             result.secretEngine_ = keyValueBuilder_.build();
           }
         }
+        if (secretEngineCase_ == 333) {
+          if (postgresBuilder_ == null) {
+            result.secretEngine_ = secretEngine_;
+          } else {
+            result.secretEngine_ = postgresBuilder_.build();
+          }
+        }
         result.secretEngineCase_ = secretEngineCase_;
         onBuilt();
         return result;
@@ -601,6 +685,10 @@ public final class SecretEngineTypesPlumbing {
           }
           case KEY_VALUE: {
             mergeKeyValue(other.getKeyValue());
+            break;
+          }
+          case POSTGRES: {
+            mergePostgres(other.getPostgres());
             break;
           }
           case SECRETENGINE_NOT_SET: {
@@ -933,6 +1021,148 @@ public final class SecretEngineTypesPlumbing {
         secretEngineCase_ = 331;
         onChanged();;
         return keyValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngineOrBuilder> postgresBuilder_;
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       * @return Whether the postgres field is set.
+       */
+      @java.lang.Override
+      public boolean hasPostgres() {
+        return secretEngineCase_ == 333;
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       * @return The postgres.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine getPostgres() {
+        if (postgresBuilder_ == null) {
+          if (secretEngineCase_ == 333) {
+            return (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_;
+          }
+          return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance();
+        } else {
+          if (secretEngineCase_ == 333) {
+            return postgresBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPostgres(com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine value) {
+        if (postgresBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretEngine_ = value;
+          onChanged();
+        } else {
+          postgresBuilder_.setMessage(value);
+        }
+        secretEngineCase_ = 333;
+        return this;
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPostgres(
+          com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder builderForValue) {
+        if (postgresBuilder_ == null) {
+          secretEngine_ = builderForValue.build();
+          onChanged();
+        } else {
+          postgresBuilder_.setMessage(builderForValue.build());
+        }
+        secretEngineCase_ = 333;
+        return this;
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergePostgres(com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine value) {
+        if (postgresBuilder_ == null) {
+          if (secretEngineCase_ == 333 &&
+              secretEngine_ != com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance()) {
+            secretEngine_ = com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.newBuilder((com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretEngine_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretEngineCase_ == 333) {
+            postgresBuilder_.mergeFrom(value);
+          } else {
+            postgresBuilder_.setMessage(value);
+          }
+        }
+        secretEngineCase_ = 333;
+        return this;
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearPostgres() {
+        if (postgresBuilder_ == null) {
+          if (secretEngineCase_ == 333) {
+            secretEngineCase_ = 0;
+            secretEngine_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretEngineCase_ == 333) {
+            secretEngineCase_ = 0;
+            secretEngine_ = null;
+          }
+          postgresBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder getPostgresBuilder() {
+        return getPostgresFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngineOrBuilder getPostgresOrBuilder() {
+        if ((secretEngineCase_ == 333) && (postgresBuilder_ != null)) {
+          return postgresBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretEngineCase_ == 333) {
+            return (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_;
+          }
+          return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.PostgresEngine postgres = 333 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngineOrBuilder> 
+          getPostgresFieldBuilder() {
+        if (postgresBuilder_ == null) {
+          if (!(secretEngineCase_ == 333)) {
+            secretEngine_ = com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance();
+          }
+          postgresBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngineOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) secretEngine_,
+                  getParentForChildren(),
+                  isClean());
+          secretEngine_ = null;
+        }
+        secretEngineCase_ = 333;
+        onChanged();;
+        return postgresBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7217,6 +7447,2451 @@ public final class SecretEngineTypesPlumbing {
 
   }
 
+  public interface PostgresEngineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.PostgresEngine)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Hostname is the hostname or IP address of the Postgres server.
+     * </pre>
+     *
+     * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <pre>
+     * Hostname is the hostname or IP address of the Postgres server.
+     * </pre>
+     *
+     * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString
+        getHostnameBytes();
+
+    /**
+     * <pre>
+     * Password is the password to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <pre>
+     * Password is the password to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString
+        getPasswordBytes();
+
+    /**
+     * <pre>
+     * Port is the port number of the Postgres server.
+     * </pre>
+     *
+     * <code>uint32 port = 104 [(.v1.field_options) = { ... }</code>
+     * @return The port.
+     */
+    int getPort();
+
+    /**
+     * <pre>
+     * Username is the username to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <pre>
+     * Username is the username to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString
+        getUsernameBytes();
+
+    /**
+     * <pre>
+     * Unique identifier of the Secret Engine.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the Secret Engine.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the Secret Engine.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the Secret Engine.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Type of a Secret Engine
+     * </pre>
+     *
+     * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * Type of a Secret Engine
+     * </pre>
+     *
+     * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <pre>
+     * Backing secret store identifier
+     * </pre>
+     *
+     * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * Backing secret store identifier
+     * </pre>
+     *
+     * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
+     * <pre>
+     * Backing Secret Store root path where managed secrets are going to be stored
+     * </pre>
+     *
+     * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreRootPath.
+     */
+    java.lang.String getSecretStoreRootPath();
+    /**
+     * <pre>
+     * Backing Secret Store root path where managed secrets are going to be stored
+     * </pre>
+     *
+     * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreRootPath.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreRootPathBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * Public key linked with a secret engine
+     * </pre>
+     *
+     * <code>bytes public_key = 8 [(.v1.field_options) = { ... }</code>
+     * @return The publicKey.
+     */
+    com.google.protobuf.ByteString getPublicKey();
+
+    /**
+     * <pre>
+     * An interval of public/private key rotation for secret engine in days
+     * </pre>
+     *
+     * <code>int32 key_rotation_interval_days = 9 [(.v1.field_options) = { ... }</code>
+     * @return The keyRotationIntervalDays.
+     */
+    int getKeyRotationIntervalDays();
+  }
+  /**
+   * Protobuf type {@code v1.PostgresEngine}
+   */
+  public static final class PostgresEngine extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.PostgresEngine)
+      PostgresEngineOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PostgresEngine.newBuilder() to construct.
+    private PostgresEngine(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PostgresEngine() {
+      hostname_ = "";
+      password_ = "";
+      username_ = "";
+      id_ = "";
+      name_ = "";
+      type_ = "";
+      secretStoreId_ = "";
+      secretStoreRootPath_ = "";
+      publicKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PostgresEngine();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PostgresEngine(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreRootPath_ = s;
+              break;
+            }
+            case 58: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+
+              publicKey_ = input.readBytes();
+              break;
+            }
+            case 72: {
+
+              keyRotationIntervalDays_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostname_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              username_ = s;
+              break;
+            }
+            case 826: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              password_ = s;
+              break;
+            }
+            case 832: {
+
+              port_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.internal_static_v1_PostgresEngine_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.internal_static_v1_PostgresEngine_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.class, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder.class);
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 101;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <pre>
+     * Hostname is the hostname or IP address of the Postgres server.
+     * </pre>
+     *
+     * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+     * @return The hostname.
+     */
+    @java.lang.Override
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Hostname is the hostname or IP address of the Postgres server.
+     * </pre>
+     *
+     * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for hostname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 103;
+    private volatile java.lang.Object password_;
+    /**
+     * <pre>
+     * Password is the password to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+     * @return The password.
+     */
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Password is the password to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for password.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 104;
+    private int port_;
+    /**
+     * <pre>
+     * Port is the port number of the Postgres server.
+     * </pre>
+     *
+     * <code>uint32 port = 104 [(.v1.field_options) = { ... }</code>
+     * @return The port.
+     */
+    @java.lang.Override
+    public int getPort() {
+      return port_;
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 102;
+    private volatile java.lang.Object username_;
+    /**
+     * <pre>
+     * Username is the username to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+     * @return The username.
+     */
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Username is the username to connect to the Postgres server.
+     * </pre>
+     *
+     * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for username.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the Secret Engine.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the Secret Engine.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the Secret Engine.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the Secret Engine.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * Type of a Secret Engine
+     * </pre>
+     *
+     * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Type of a Secret Engine
+     * </pre>
+     *
+     * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * Backing secret store identifier
+     * </pre>
+     *
+     * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Backing secret store identifier
+     * </pre>
+     *
+     * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_STORE_ROOT_PATH_FIELD_NUMBER = 6;
+    private volatile java.lang.Object secretStoreRootPath_;
+    /**
+     * <pre>
+     * Backing Secret Store root path where managed secrets are going to be stored
+     * </pre>
+     *
+     * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreRootPath.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreRootPath() {
+      java.lang.Object ref = secretStoreRootPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreRootPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Backing Secret Store root path where managed secrets are going to be stored
+     * </pre>
+     *
+     * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreRootPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreRootPathBytes() {
+      java.lang.Object ref = secretStoreRootPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreRootPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 7;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    public static final int PUBLIC_KEY_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString publicKey_;
+    /**
+     * <pre>
+     * Public key linked with a secret engine
+     * </pre>
+     *
+     * <code>bytes public_key = 8 [(.v1.field_options) = { ... }</code>
+     * @return The publicKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicKey() {
+      return publicKey_;
+    }
+
+    public static final int KEY_ROTATION_INTERVAL_DAYS_FIELD_NUMBER = 9;
+    private int keyRotationIntervalDays_;
+    /**
+     * <pre>
+     * An interval of public/private key rotation for secret engine in days
+     * </pre>
+     *
+     * <code>int32 key_rotation_interval_days = 9 [(.v1.field_options) = { ... }</code>
+     * @return The keyRotationIntervalDays.
+     */
+    @java.lang.Override
+    public int getKeyRotationIntervalDays() {
+      return keyRotationIntervalDays_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretStoreId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, secretStoreId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretStoreRootPath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, secretStoreRootPath_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(7, getTags());
+      }
+      if (!publicKey_.isEmpty()) {
+        output.writeBytes(8, publicKey_);
+      }
+      if (keyRotationIntervalDays_ != 0) {
+        output.writeInt32(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, hostname_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, username_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 103, password_);
+      }
+      if (port_ != 0) {
+        output.writeUInt32(104, port_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretStoreId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, secretStoreId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretStoreRootPath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, secretStoreRootPath_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTags());
+      }
+      if (!publicKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, publicKey_);
+      }
+      if (keyRotationIntervalDays_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, hostname_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, username_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(103, password_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(104, port_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine other = (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) obj;
+
+      if (!getHostname()
+          .equals(other.getHostname())) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (getPort()
+          != other.getPort()) return false;
+      if (!getUsername()
+          .equals(other.getUsername())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
+      if (!getSecretStoreRootPath()
+          .equals(other.getSecretStoreRootPath())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!getPublicKey()
+          .equals(other.getPublicKey())) return false;
+      if (getKeyRotationIntervalDays()
+          != other.getKeyRotationIntervalDays()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
+      hash = (37 * hash) + SECRET_STORE_ROOT_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreRootPath().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicKey().hashCode();
+      hash = (37 * hash) + KEY_ROTATION_INTERVAL_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyRotationIntervalDays();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.PostgresEngine}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.PostgresEngine)
+        com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngineOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.internal_static_v1_PostgresEngine_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.internal_static_v1_PostgresEngine_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.class, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostname_ = "";
+
+        password_ = "";
+
+        port_ = 0;
+
+        username_ = "";
+
+        id_ = "";
+
+        name_ = "";
+
+        type_ = "";
+
+        secretStoreId_ = "";
+
+        secretStoreRootPath_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        publicKey_ = com.google.protobuf.ByteString.EMPTY;
+
+        keyRotationIntervalDays_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.internal_static_v1_PostgresEngine_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine build() {
+        com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine buildPartial() {
+        com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine result = new com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine(this);
+        result.hostname_ = hostname_;
+        result.password_ = password_;
+        result.port_ = port_;
+        result.username_ = username_;
+        result.id_ = id_;
+        result.name_ = name_;
+        result.type_ = type_;
+        result.secretStoreId_ = secretStoreId_;
+        result.secretStoreRootPath_ = secretStoreRootPath_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        result.publicKey_ = publicKey_;
+        result.keyRotationIntervalDays_ = keyRotationIntervalDays_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine other) {
+        if (other == com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance()) return this;
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
+        }
+        if (!other.getSecretStoreRootPath().isEmpty()) {
+          secretStoreRootPath_ = other.secretStoreRootPath_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        if (other.getPublicKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicKey(other.getPublicKey());
+        }
+        if (other.getKeyRotationIntervalDays() != 0) {
+          setKeyRotationIntervalDays(other.getKeyRotationIntervalDays());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <pre>
+       * Hostname is the hostname or IP address of the Postgres server.
+       * </pre>
+       *
+       * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hostname is the hostname or IP address of the Postgres server.
+       * </pre>
+       *
+       * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString
+          getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hostname is the hostname or IP address of the Postgres server.
+       * </pre>
+       *
+       * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hostname is the hostname or IP address of the Postgres server.
+       * </pre>
+       *
+       * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+        
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hostname is the hostname or IP address of the Postgres server.
+       * </pre>
+       *
+       * <code>string hostname = 101 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <pre>
+       * Password is the password to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Password is the password to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Password is the password to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password is the password to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+        
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password is the password to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string password = 103 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_ ;
+      /**
+       * <pre>
+       * Port is the port number of the Postgres server.
+       * </pre>
+       *
+       * <code>uint32 port = 104 [(.v1.field_options) = { ... }</code>
+       * @return The port.
+       */
+      @java.lang.Override
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <pre>
+       * Port is the port number of the Postgres server.
+       * </pre>
+       *
+       * <code>uint32 port = 104 [(.v1.field_options) = { ... }</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+        
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Port is the port number of the Postgres server.
+       * </pre>
+       *
+       * <code>uint32 port = 104 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+        
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <pre>
+       * Username is the username to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Username is the username to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Username is the username to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Username is the username to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+        
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Username is the username to connect to the Postgres server.
+       * </pre>
+       *
+       * <code>string username = 102 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the Secret Engine.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Secret Engine.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Secret Engine.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Secret Engine.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Secret Engine.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the Secret Engine.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Secret Engine.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Secret Engine.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Secret Engine.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Secret Engine.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * Type of a Secret Engine
+       * </pre>
+       *
+       * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Type of a Secret Engine
+       * </pre>
+       *
+       * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Type of a Secret Engine
+       * </pre>
+       *
+       * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of a Secret Engine
+       * </pre>
+       *
+       * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of a Secret Engine
+       * </pre>
+       *
+       * <code>string type = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * Backing secret store identifier
+       * </pre>
+       *
+       * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backing secret store identifier
+       * </pre>
+       *
+       * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backing secret store identifier
+       * </pre>
+       *
+       * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backing secret store identifier
+       * </pre>
+       *
+       * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backing secret store identifier
+       * </pre>
+       *
+       * <code>string secret_store_id = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secretStoreRootPath_ = "";
+      /**
+       * <pre>
+       * Backing Secret Store root path where managed secrets are going to be stored
+       * </pre>
+       *
+       * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreRootPath.
+       */
+      public java.lang.String getSecretStoreRootPath() {
+        java.lang.Object ref = secretStoreRootPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreRootPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backing Secret Store root path where managed secrets are going to be stored
+       * </pre>
+       *
+       * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreRootPath.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreRootPathBytes() {
+        java.lang.Object ref = secretStoreRootPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreRootPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backing Secret Store root path where managed secrets are going to be stored
+       * </pre>
+       *
+       * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreRootPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreRootPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreRootPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backing Secret Store root path where managed secrets are going to be stored
+       * </pre>
+       *
+       * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreRootPath() {
+        
+        secretStoreRootPath_ = getDefaultInstance().getSecretStoreRootPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backing Secret Store root path where managed secrets are going to be stored
+       * </pre>
+       *
+       * <code>string secret_store_root_path = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreRootPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreRootPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreRootPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+
+      private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Public key linked with a secret engine
+       * </pre>
+       *
+       * <code>bytes public_key = 8 [(.v1.field_options) = { ... }</code>
+       * @return The publicKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicKey() {
+        return publicKey_;
+      }
+      /**
+       * <pre>
+       * Public key linked with a secret engine
+       * </pre>
+       *
+       * <code>bytes public_key = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The publicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKey(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        publicKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Public key linked with a secret engine
+       * </pre>
+       *
+       * <code>bytes public_key = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKey() {
+        
+        publicKey_ = getDefaultInstance().getPublicKey();
+        onChanged();
+        return this;
+      }
+
+      private int keyRotationIntervalDays_ ;
+      /**
+       * <pre>
+       * An interval of public/private key rotation for secret engine in days
+       * </pre>
+       *
+       * <code>int32 key_rotation_interval_days = 9 [(.v1.field_options) = { ... }</code>
+       * @return The keyRotationIntervalDays.
+       */
+      @java.lang.Override
+      public int getKeyRotationIntervalDays() {
+        return keyRotationIntervalDays_;
+      }
+      /**
+       * <pre>
+       * An interval of public/private key rotation for secret engine in days
+       * </pre>
+       *
+       * <code>int32 key_rotation_interval_days = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The keyRotationIntervalDays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyRotationIntervalDays(int value) {
+        
+        keyRotationIntervalDays_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An interval of public/private key rotation for secret engine in days
+       * </pre>
+       *
+       * <code>int32 key_rotation_interval_days = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyRotationIntervalDays() {
+        
+        keyRotationIntervalDays_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.PostgresEngine)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.PostgresEngine)
+    private static final com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine();
+    }
+
+    public static com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PostgresEngine>
+        PARSER = new com.google.protobuf.AbstractParser<PostgresEngine>() {
+      @java.lang.Override
+      public PostgresEngine parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PostgresEngine(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PostgresEngine> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PostgresEngine> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_SecretEngine_descriptor;
   private static final 
@@ -7232,6 +9907,11 @@ public final class SecretEngineTypesPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_KeyValueEngine_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_PostgresEngine_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_PostgresEngine_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7243,72 +9923,92 @@ public final class SecretEngineTypesPlumbing {
     java.lang.String[] descriptorData = {
       "\n\031secret_engine_types.proto\022\002v1\032\roptions" +
       ".proto\032\ntags.proto\032\032secret_engine_policy" +
-      ".proto\032\036google/protobuf/duration.proto\"\347" +
-      "\002\n\014SecretEngine\022q\n\020active_directory\030\314\002 \001" +
+      ".proto\032\036google/protobuf/duration.proto\"\303" +
+      "\003\n\014SecretEngine\022q\n\020active_directory\030\314\002 \001" +
       "(\0132\031.v1.ActiveDirectoryEngineB9\362\370\263\007*\312\363\263\007" +
       "%\302\364\263\007 \n\014json_gateway\022\020active_directory\362\370" +
       "\263\007\005\260\363\263\007\001H\000\022\\\n\tkey_value\030\313\002 \001(\0132\022.v1.KeyV" +
       "alueEngineB2\362\370\263\007#\312\363\263\007\036\302\364\263\007\031\n\014json_gatewa" +
-      "y\022\tkey_value\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370\263\007\005\250\363\263\007\001Bz\n\r" +
-      "secret_engine\022i\252\370\263\007\t\252\370\263\007\004name\252\370\263\007\t\252\370\263\007\004t" +
-      "ags\252\370\263\007\024\252\370\263\007\017secret_store_id\252\370\263\007\033\252\370\263\007\026se" +
-      "cret_store_root_path\252\370\263\007\017\252\370\263\007\npublic_key" +
-      "\"\347\014\n\025ActiveDirectoryEngine\022d\n\016after_read" +
-      "_ttl\030\364\007 \001(\0132\031.google.protobuf.DurationB0" +
-      "\362\370\263\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014afte" +
-      "rReadTtl\022?\n\006binddn\030l \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006binddn\022C\n\010bin" +
-      "dpass\030m \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014" +
-      "json_gateway\022\010bindpass\022D\n\013certificate\030k " +
-      "\001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022" +
-      "\013certificate\022Q\n\022connection_timeout\030g \001(\r" +
-      "B5\362\370\263\0070\260\363\263\007\001\312\363\263\007&\302\364\263\007!\n\014json_gateway\022\021co" +
-      "nnectionTimeout\022`\n\032do_not_validate_times" +
-      "tamps\030\367\007 \001(\010B;\362\370\263\0076\260\363\263\007\001\312\363\263\007,\302\364\263\007\'\n\014json" +
-      "_gateway\022\027doNotValidateTimestamps\022E\n\014ins" +
-      "ecure_tls\030j \001(\010B/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014j" +
-      "son_gateway\022\013insecureTls\022p\n\024max_backoff_" +
-      "duration\030\370\007 \001(\0132\031.google.protobuf.Durati" +
-      "onB6\362\370\263\0071\260\363\263\007\001\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022" +
-      "maxBackoffDuration\022S\n\006policy\030\366\007 \001(\0132\026.v1" +
-      ".SecretEnginePolicyB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007" +
-      "\026\n\014json_gateway\022\006policy\022K\n\017request_timeo" +
-      "ut\030h \001(\rB2\362\370\263\007-\260\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gat" +
-      "eway\022\016requestTimeout\022?\n\tstart_tls\030i \001(\010B" +
-      ",\362\370\263\007\'\260\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010sta" +
-      "rtTls\022P\n\003ttl\030\365\007 \001(\0132\031.google.protobuf.Du" +
-      "rationB\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gatew" +
-      "ay\022\003ttl\022A\n\tupndomain\030\363\007 \001(\tB-\362\370\263\007(\260\363\263\007\001\312" +
-      "\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tupndomain\0229\n\003ur" +
-      "l\030f \001(\tB,\362\370\263\007\'\260\363\263\007\001\300\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json" +
-      "_gateway\022\003url\022;\n\006userdn\030\362\007 \001(\tB*\362\370\263\007%\260\363\263" +
-      "\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006userdn\022\026\n\002id" +
-      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004" +
-      "!cli\022(\n\017secret_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
-      "\001\300\363\263\007\001\022/\n\026secret_store_root_path\030\006 \001(\tB\017" +
-      "\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\0222\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363" +
-      "\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032key_rotation_" +
-      "interval_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\200\001\372\370\263\007{\250" +
-      "\363\263\007\001\312\363\263\007q\210\364\263\007\001\302\364\263\007\027\n\003cli\022\020active_directo" +
-      "ry\302\364\263\007 \n\014json_gateway\022\020active_directory\302" +
-      "\364\263\007&\n\022terraform-provider\022\020active_directo" +
-      "ry\"\272\003\n\016KeyValueEngine\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004" +
-      "type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secre" +
-      "t_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026sec" +
-      "ret_store_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
-      "\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222" +
-      "\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001" +
-      "*\262\364\263\007\004!cli\022.\n\032key_rotation_interval_days" +
-      "\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001:k\372\370\263\007f\250\363\263\007\001\312\363\263\007\\\210\364\263\007\001" +
-      "\302\364\263\007\020\n\003cli\022\tkey_value\302\364\263\007\031\n\014json_gateway" +
-      "\022\tkey_value\302\364\263\007\037\n\022terraform-provider\022\tke" +
-      "y_valueBm\n\031com.strongdm.api.plumbingB\031Se" +
-      "cretEngineTypesPlumbingZ5github.com/stro" +
-      "ngdm/strongdm-sdk-go/v3/internal/v1;v1b\006" +
-      "proto3"
+      "y\022\tkey_value\362\370\263\007\005\260\363\263\007\001H\000\022Z\n\010postgres\030\315\002 " +
+      "\001(\0132\022.v1.PostgresEngineB1\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030" +
+      "\n\014json_gateway\022\010postgres\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370" +
+      "\263\007\005\250\363\263\007\001Bz\n\rsecret_engine\022i\252\370\263\007\t\252\370\263\007\004nam" +
+      "e\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\024\252\370\263\007\017secret_store_id" +
+      "\252\370\263\007\033\252\370\263\007\026secret_store_root_path\252\370\263\007\017\252\370\263" +
+      "\007\npublic_key\"\341\014\n\025ActiveDirectoryEngine\022d" +
+      "\n\016after_read_ttl\030\364\007 \001(\0132\031.google.protobu" +
+      "f.DurationB0\362\370\263\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007\034\n\014json_g" +
+      "ateway\022\014afterReadTtl\022?\n\006binddn\030l \001(\tB/\362\370" +
+      "\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006b" +
+      "inddn\022C\n\010bindpass\030m \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010bindpass\022D\n\013ce" +
+      "rtificate\030k \001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014j" +
+      "son_gateway\022\013certificate\022Q\n\022connection_t" +
+      "imeout\030g \001(\rB5\362\370\263\0070\260\363\263\007\001\312\363\263\007&\302\364\263\007!\n\014json" +
+      "_gateway\022\021connectionTimeout\022`\n\032do_not_va" +
+      "lidate_timestamps\030\367\007 \001(\010B;\362\370\263\0076\260\363\263\007\001\312\363\263\007" +
+      ",\302\364\263\007\'\n\014json_gateway\022\027doNotValidateTimes" +
+      "tamps\022E\n\014insecure_tls\030j \001(\010B/\362\370\263\007*\260\363\263\007\001\312" +
+      "\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013insecureTls\022p\n\024" +
+      "max_backoff_duration\030\370\007 \001(\0132\031.google.pro" +
+      "tobuf.DurationB6\362\370\263\0071\260\363\263\007\001\312\363\263\007\'\302\364\263\007\"\n\014js" +
+      "on_gateway\022\022maxBackoffDuration\022S\n\006policy" +
+      "\030\366\007 \001(\0132\026.v1.SecretEnginePolicyB*\362\370\263\007%\260\363" +
+      "\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006policy\022K\n\017r" +
+      "equest_timeout\030h \001(\rB2\362\370\263\007-\260\363\263\007\001\312\363\263\007#\302\364\263" +
+      "\007\036\n\014json_gateway\022\016requestTimeout\022?\n\tstar" +
+      "t_tls\030i \001(\010B,\362\370\263\007\'\260\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_" +
+      "gateway\022\010startTls\022P\n\003ttl\030\365\007 \001(\0132\031.google" +
+      ".protobuf.DurationB\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023" +
+      "\n\014json_gateway\022\003ttl\022A\n\tupndomain\030\363\007 \001(\tB" +
+      "-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tupn" +
+      "domain\0229\n\003url\030f \001(\tB,\362\370\263\007\'\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
+      "\030\302\364\263\007\023\n\014json_gateway\022\003url\022;\n\006userdn\030\362\007 \001" +
+      "(\tB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006" +
+      "userdn\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263" +
+      "\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secret_store_id\030\005 \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026secret_store_root_" +
+      "path\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\007 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222\n\npublic_key\030\010 " +
+      "\001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032k" +
+      "ey_rotation_interval_days\030\t \001(\005B\n\362\370\263\007\005\260\363" +
+      "\263\007\001:{\372\370\263\007v\250\363\263\007\001\312\363\263\007l\302\364\263\007\027\n\003cli\022\020active_d" +
+      "irectory\302\364\263\007 \n\014json_gateway\022\020active_dire" +
+      "ctory\302\364\263\007&\n\022terraform-provider\022\020active_d" +
+      "irectory\"\265\003\n\016KeyValueEngine\022\026\n\002id\030\001 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
+      "\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n" +
+      "\017secret_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
+      "/\n\026secret_store_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\0222\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007" +
+      "\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032key_rotation_interva" +
+      "l_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001:f\372\370\263\007a\250\363\263\007\001\312\363\263\007" +
+      "W\302\364\263\007\020\n\003cli\022\tkey_value\302\364\263\007\031\n\014json_gatewa" +
+      "y\022\tkey_value\302\364\263\007\037\n\022terraform-provider\022\tk" +
+      "ey_value\"\321\005\n\016PostgresEngine\022C\n\010hostname\030" +
+      "e \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_g" +
+      "ateway\022\010hostname\022C\n\010password\030g \001(\tB1\362\370\263\007" +
+      ",\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010pas" +
+      "sword\022;\n\004port\030h \001(\rB-\362\370\263\007(\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
+      "\031\302\364\263\007\024\n\014json_gateway\022\004port\022C\n\010username\030f" +
+      " \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_ga" +
+      "teway\022\010username\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003" +
+      " \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secret_stor" +
+      "e_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026secret_st" +
+      "ore_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004" +
+      "tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222\n\npubl" +
+      "ic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004" +
+      "!cli\022.\n\032key_rotation_interval_days\030\t \001(\005" +
+      "B\n\362\370\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007g\210\364\263\007\001\302\364\263\007\017\n" +
+      "\003cli\022\010postgres\302\364\263\007\030\n\014json_gateway\022\010postg" +
+      "res\302\364\263\007,\n\022terraform-provider\022\026postgres_s" +
+      "ecret_engineBm\n\031com.strongdm.api.plumbin" +
+      "gB\031SecretEngineTypesPlumbingZ5github.com" +
+      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
+      ";v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7323,7 +10023,7 @@ public final class SecretEngineTypesPlumbing {
     internal_static_v1_SecretEngine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretEngine_descriptor,
-        new java.lang.String[] { "ActiveDirectory", "KeyValue", "SecretEngine", });
+        new java.lang.String[] { "ActiveDirectory", "KeyValue", "Postgres", "SecretEngine", });
     internal_static_v1_ActiveDirectoryEngine_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_ActiveDirectoryEngine_fieldAccessorTable = new
@@ -7336,6 +10036,12 @@ public final class SecretEngineTypesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KeyValueEngine_descriptor,
         new java.lang.String[] { "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
+    internal_static_v1_PostgresEngine_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_PostgresEngine_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_PostgresEngine_descriptor,
+        new java.lang.String[] { "Hostname", "Password", "Port", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

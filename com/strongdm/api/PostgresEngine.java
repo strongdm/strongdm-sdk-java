@@ -17,7 +17,21 @@
 
 package com.strongdm.api;
 
-public class KeyValueEngine implements SecretEngine {
+/**
+ * PostgresEngine is currently unstable, and its API may change, or it may be removed, without a
+ * major version bump.
+ */
+public class PostgresEngine implements SecretEngine {
+  private String hostname;
+  /** Hostname is the hostname or IP address of the Postgres server. */
+  public String getHostname() {
+    return this.hostname;
+  }
+  /** Hostname is the hostname or IP address of the Postgres server. */
+  public void setHostname(String in) {
+    this.hostname = in;
+  }
+
   private String id;
   /** Unique identifier of the Secret Engine. */
   public String getId() {
@@ -46,6 +60,26 @@ public class KeyValueEngine implements SecretEngine {
   /** Unique human-readable name of the Secret Engine. */
   public void setName(String in) {
     this.name = in;
+  }
+
+  private String password;
+  /** Password is the password to connect to the Postgres server. */
+  public String getPassword() {
+    return this.password;
+  }
+  /** Password is the password to connect to the Postgres server. */
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private int port;
+  /** Port is the port number of the Postgres server. */
+  public int getPort() {
+    return this.port;
+  }
+  /** Port is the port number of the Postgres server. */
+  public void setPort(int in) {
+    this.port = in;
   }
 
   private byte[] publicKey;
@@ -95,5 +129,15 @@ public class KeyValueEngine implements SecretEngine {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private String username;
+  /** Username is the username to connect to the Postgres server. */
+  public String getUsername() {
+    return this.username;
+  }
+  /** Username is the username to connect to the Postgres server. */
+  public void setUsername(String in) {
+    this.username = in;
   }
 }
