@@ -184,14 +184,4 @@ public class MCP implements Resource {
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
   }
-
-  private String username;
-  /** The username to authenticate with. */
-  public String getUsername() {
-    return this.username;
-  }
-  /** The username to authenticate with. */
-  public void setUsername(String in) {
-    this.username = in;
-  }
 }

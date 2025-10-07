@@ -17,11 +17,39 @@
 
 package com.strongdm.api;
 
+import java.time.Duration;
+
 /**
  * PostgresEngine is currently unstable, and its API may change, or it may be removed, without a
  * major version bump.
  */
 public class PostgresEngine implements SecretEngine {
+  private Duration afterReadTtl;
+  /**
+   * The default time-to-live duration of the password after it's read. Once the ttl has passed, a
+   * password will be rotated.
+   */
+  public Duration getAfterReadTtl() {
+    return this.afterReadTtl;
+  }
+  /**
+   * The default time-to-live duration of the password after it's read. Once the ttl has passed, a
+   * password will be rotated.
+   */
+  public void setAfterReadTtl(Duration in) {
+    this.afterReadTtl = in;
+  }
+
+  private String database;
+  /** Database is the database to verify credential against. */
+  public String getDatabase() {
+    return this.database;
+  }
+  /** Database is the database to verify credential against. */
+  public void setDatabase(String in) {
+    this.database = in;
+  }
+
   private String hostname;
   /** Hostname is the hostname or IP address of the Postgres server. */
   public String getHostname() {
@@ -70,6 +98,16 @@ public class PostgresEngine implements SecretEngine {
   /** Password is the password to connect to the Postgres server. */
   public void setPassword(String in) {
     this.password = in;
+  }
+
+  private SecretEnginePolicy policy;
+  /** Policy for password creation */
+  public SecretEnginePolicy getPolicy() {
+    return this.policy;
+  }
+  /** Policy for password creation */
+  public void setPolicy(SecretEnginePolicy in) {
+    this.policy = in;
   }
 
   private int port;
@@ -129,6 +167,32 @@ public class PostgresEngine implements SecretEngine {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private boolean tls;
+  /** TLS enables TLS/SSL when connecting to the Postgres server. */
+  public boolean getTls() {
+    return this.tls;
+  }
+  /** TLS enables TLS/SSL when connecting to the Postgres server. */
+  public void setTls(boolean in) {
+    this.tls = in;
+  }
+
+  private Duration ttl;
+  /**
+   * The default password time-to-live duration. Once the ttl has passed, a password will be rotated
+   * the next time it's requested.
+   */
+  public Duration getTtl() {
+    return this.ttl;
+  }
+  /**
+   * The default password time-to-live duration. Once the ttl has passed, a password will be rotated
+   * the next time it's requested.
+   */
+  public void setTtl(Duration in) {
+    this.ttl = in;
   }
 
   private String username;

@@ -7453,6 +7453,53 @@ public final class SecretEngineTypesPlumbing {
 
     /**
      * <pre>
+     * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+     * @return Whether the afterReadTtl field is set.
+     */
+    boolean hasAfterReadTtl();
+    /**
+     * <pre>
+     * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+     * @return The afterReadTtl.
+     */
+    com.google.protobuf.Duration getAfterReadTtl();
+    /**
+     * <pre>
+     * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getAfterReadTtlOrBuilder();
+
+    /**
+     * <pre>
+     * Database is the database to verify credential against.
+     * </pre>
+     *
+     * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <pre>
+     * Database is the database to verify credential against.
+     * </pre>
+     *
+     * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseBytes();
+
+    /**
+     * <pre>
      * Hostname is the hostname or IP address of the Postgres server.
      * </pre>
      *
@@ -7493,6 +7540,33 @@ public final class SecretEngineTypesPlumbing {
 
     /**
      * <pre>
+     * Policy for password creation
+     * </pre>
+     *
+     * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+     * @return Whether the policy field is set.
+     */
+    boolean hasPolicy();
+    /**
+     * <pre>
+     * Policy for password creation
+     * </pre>
+     *
+     * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+     * @return The policy.
+     */
+    com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy getPolicy();
+    /**
+     * <pre>
+     * Policy for password creation
+     * </pre>
+     *
+     * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicyOrBuilder getPolicyOrBuilder();
+
+    /**
+     * <pre>
      * Port is the port number of the Postgres server.
      * </pre>
      *
@@ -7500,6 +7574,43 @@ public final class SecretEngineTypesPlumbing {
      * @return The port.
      */
     int getPort();
+
+    /**
+     * <pre>
+     * TLS enables TLS/SSL when connecting to the Postgres server.
+     * </pre>
+     *
+     * <code>bool tls = 109 [(.v1.field_options) = { ... }</code>
+     * @return The tls.
+     */
+    boolean getTls();
+
+    /**
+     * <pre>
+     * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+     * @return Whether the ttl field is set.
+     */
+    boolean hasTtl();
+    /**
+     * <pre>
+     * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+     * @return The ttl.
+     */
+    com.google.protobuf.Duration getTtl();
+    /**
+     * <pre>
+     * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.DurationOrBuilder getTtlOrBuilder();
 
     /**
      * <pre>
@@ -7681,6 +7792,7 @@ public final class SecretEngineTypesPlumbing {
       super(builder);
     }
     private PostgresEngine() {
+      database_ = "";
       hostname_ = "";
       password_ = "";
       username_ = "";
@@ -7798,6 +7910,56 @@ public final class SecretEngineTypesPlumbing {
               port_ = input.readUInt32();
               break;
             }
+            case 842: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (afterReadTtl_ != null) {
+                subBuilder = afterReadTtl_.toBuilder();
+              }
+              afterReadTtl_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(afterReadTtl_);
+                afterReadTtl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 850: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (ttl_ != null) {
+                subBuilder = ttl_.toBuilder();
+              }
+              ttl_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ttl_);
+                ttl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 858: {
+              com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.Builder subBuilder = null;
+              if (policy_ != null) {
+                subBuilder = policy_.toBuilder();
+              }
+              policy_ = input.readMessage(com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(policy_);
+                policy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 866: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              database_ = s;
+              break;
+            }
+            case 872: {
+
+              tls_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7830,6 +7992,90 @@ public final class SecretEngineTypesPlumbing {
       return com.strongdm.api.plumbing.SecretEngineTypesPlumbing.internal_static_v1_PostgresEngine_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.class, com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.Builder.class);
+    }
+
+    public static final int AFTER_READ_TTL_FIELD_NUMBER = 105;
+    private com.google.protobuf.Duration afterReadTtl_;
+    /**
+     * <pre>
+     * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+     * @return Whether the afterReadTtl field is set.
+     */
+    @java.lang.Override
+    public boolean hasAfterReadTtl() {
+      return afterReadTtl_ != null;
+    }
+    /**
+     * <pre>
+     * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+     * @return The afterReadTtl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getAfterReadTtl() {
+      return afterReadTtl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : afterReadTtl_;
+    }
+    /**
+     * <pre>
+     * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getAfterReadTtlOrBuilder() {
+      return getAfterReadTtl();
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 108;
+    private volatile java.lang.Object database_;
+    /**
+     * <pre>
+     * Database is the database to verify credential against.
+     * </pre>
+     *
+     * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+     * @return The database.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Database is the database to verify credential against.
+     * </pre>
+     *
+     * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for database.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 101;
@@ -7924,6 +8170,44 @@ public final class SecretEngineTypesPlumbing {
       }
     }
 
+    public static final int POLICY_FIELD_NUMBER = 107;
+    private com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy policy_;
+    /**
+     * <pre>
+     * Policy for password creation
+     * </pre>
+     *
+     * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+     * @return Whether the policy field is set.
+     */
+    @java.lang.Override
+    public boolean hasPolicy() {
+      return policy_ != null;
+    }
+    /**
+     * <pre>
+     * Policy for password creation
+     * </pre>
+     *
+     * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+     * @return The policy.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy getPolicy() {
+      return policy_ == null ? com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.getDefaultInstance() : policy_;
+    }
+    /**
+     * <pre>
+     * Policy for password creation
+     * </pre>
+     *
+     * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicyOrBuilder getPolicyOrBuilder() {
+      return getPolicy();
+    }
+
     public static final int PORT_FIELD_NUMBER = 104;
     private int port_;
     /**
@@ -7937,6 +8221,59 @@ public final class SecretEngineTypesPlumbing {
     @java.lang.Override
     public int getPort() {
       return port_;
+    }
+
+    public static final int TLS_FIELD_NUMBER = 109;
+    private boolean tls_;
+    /**
+     * <pre>
+     * TLS enables TLS/SSL when connecting to the Postgres server.
+     * </pre>
+     *
+     * <code>bool tls = 109 [(.v1.field_options) = { ... }</code>
+     * @return The tls.
+     */
+    @java.lang.Override
+    public boolean getTls() {
+      return tls_;
+    }
+
+    public static final int TTL_FIELD_NUMBER = 106;
+    private com.google.protobuf.Duration ttl_;
+    /**
+     * <pre>
+     * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+     * @return Whether the ttl field is set.
+     */
+    @java.lang.Override
+    public boolean hasTtl() {
+      return ttl_ != null;
+    }
+    /**
+     * <pre>
+     * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+     * @return The ttl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getTtl() {
+      return ttl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : ttl_;
+    }
+    /**
+     * <pre>
+     * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getTtlOrBuilder() {
+      return getTtl();
     }
 
     public static final int USERNAME_FIELD_NUMBER = 102;
@@ -8333,6 +8670,21 @@ public final class SecretEngineTypesPlumbing {
       if (port_ != 0) {
         output.writeUInt32(104, port_);
       }
+      if (afterReadTtl_ != null) {
+        output.writeMessage(105, getAfterReadTtl());
+      }
+      if (ttl_ != null) {
+        output.writeMessage(106, getTtl());
+      }
+      if (policy_ != null) {
+        output.writeMessage(107, getPolicy());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 108, database_);
+      }
+      if (tls_ != false) {
+        output.writeBool(109, tls_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8382,6 +8734,25 @@ public final class SecretEngineTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(104, port_);
       }
+      if (afterReadTtl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(105, getAfterReadTtl());
+      }
+      if (ttl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(106, getTtl());
+      }
+      if (policy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(107, getPolicy());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(108, database_);
+      }
+      if (tls_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(109, tls_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8397,12 +8768,31 @@ public final class SecretEngineTypesPlumbing {
       }
       com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine other = (com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine) obj;
 
+      if (hasAfterReadTtl() != other.hasAfterReadTtl()) return false;
+      if (hasAfterReadTtl()) {
+        if (!getAfterReadTtl()
+            .equals(other.getAfterReadTtl())) return false;
+      }
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getPassword()
           .equals(other.getPassword())) return false;
+      if (hasPolicy() != other.hasPolicy()) return false;
+      if (hasPolicy()) {
+        if (!getPolicy()
+            .equals(other.getPolicy())) return false;
+      }
       if (getPort()
           != other.getPort()) return false;
+      if (getTls()
+          != other.getTls()) return false;
+      if (hasTtl() != other.hasTtl()) return false;
+      if (hasTtl()) {
+        if (!getTtl()
+            .equals(other.getTtl())) return false;
+      }
       if (!getUsername()
           .equals(other.getUsername())) return false;
       if (!getId()
@@ -8435,12 +8825,29 @@ public final class SecretEngineTypesPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAfterReadTtl()) {
+        hash = (37 * hash) + AFTER_READ_TTL_FIELD_NUMBER;
+        hash = (53 * hash) + getAfterReadTtl().hashCode();
+      }
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      if (hasPolicy()) {
+        hash = (37 * hash) + POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getPolicy().hashCode();
+      }
       hash = (37 * hash) + PORT_FIELD_NUMBER;
       hash = (53 * hash) + getPort();
+      hash = (37 * hash) + TLS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTls());
+      if (hasTtl()) {
+        hash = (37 * hash) + TTL_FIELD_NUMBER;
+        hash = (53 * hash) + getTtl().hashCode();
+      }
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
       hash = (53 * hash) + getUsername().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
@@ -8594,12 +9001,34 @@ public final class SecretEngineTypesPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (afterReadTtlBuilder_ == null) {
+          afterReadTtl_ = null;
+        } else {
+          afterReadTtl_ = null;
+          afterReadTtlBuilder_ = null;
+        }
+        database_ = "";
+
         hostname_ = "";
 
         password_ = "";
 
+        if (policyBuilder_ == null) {
+          policy_ = null;
+        } else {
+          policy_ = null;
+          policyBuilder_ = null;
+        }
         port_ = 0;
 
+        tls_ = false;
+
+        if (ttlBuilder_ == null) {
+          ttl_ = null;
+        } else {
+          ttl_ = null;
+          ttlBuilder_ = null;
+        }
         username_ = "";
 
         id_ = "";
@@ -8648,9 +9077,26 @@ public final class SecretEngineTypesPlumbing {
       @java.lang.Override
       public com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine buildPartial() {
         com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine result = new com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine(this);
+        if (afterReadTtlBuilder_ == null) {
+          result.afterReadTtl_ = afterReadTtl_;
+        } else {
+          result.afterReadTtl_ = afterReadTtlBuilder_.build();
+        }
+        result.database_ = database_;
         result.hostname_ = hostname_;
         result.password_ = password_;
+        if (policyBuilder_ == null) {
+          result.policy_ = policy_;
+        } else {
+          result.policy_ = policyBuilder_.build();
+        }
         result.port_ = port_;
+        result.tls_ = tls_;
+        if (ttlBuilder_ == null) {
+          result.ttl_ = ttl_;
+        } else {
+          result.ttl_ = ttlBuilder_.build();
+        }
         result.username_ = username_;
         result.id_ = id_;
         result.name_ = name_;
@@ -8712,6 +9158,13 @@ public final class SecretEngineTypesPlumbing {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine other) {
         if (other == com.strongdm.api.plumbing.SecretEngineTypesPlumbing.PostgresEngine.getDefaultInstance()) return this;
+        if (other.hasAfterReadTtl()) {
+          mergeAfterReadTtl(other.getAfterReadTtl());
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
           onChanged();
@@ -8720,8 +9173,17 @@ public final class SecretEngineTypesPlumbing {
           password_ = other.password_;
           onChanged();
         }
+        if (other.hasPolicy()) {
+          mergePolicy(other.getPolicy());
+        }
         if (other.getPort() != 0) {
           setPort(other.getPort());
+        }
+        if (other.getTls() != false) {
+          setTls(other.getTls());
+        }
+        if (other.hasTtl()) {
+          mergeTtl(other.getTtl());
         }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
@@ -8782,6 +9244,257 @@ public final class SecretEngineTypesPlumbing {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private com.google.protobuf.Duration afterReadTtl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> afterReadTtlBuilder_;
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       * @return Whether the afterReadTtl field is set.
+       */
+      public boolean hasAfterReadTtl() {
+        return afterReadTtlBuilder_ != null || afterReadTtl_ != null;
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       * @return The afterReadTtl.
+       */
+      public com.google.protobuf.Duration getAfterReadTtl() {
+        if (afterReadTtlBuilder_ == null) {
+          return afterReadTtl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : afterReadTtl_;
+        } else {
+          return afterReadTtlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAfterReadTtl(com.google.protobuf.Duration value) {
+        if (afterReadTtlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          afterReadTtl_ = value;
+          onChanged();
+        } else {
+          afterReadTtlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAfterReadTtl(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (afterReadTtlBuilder_ == null) {
+          afterReadTtl_ = builderForValue.build();
+          onChanged();
+        } else {
+          afterReadTtlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAfterReadTtl(com.google.protobuf.Duration value) {
+        if (afterReadTtlBuilder_ == null) {
+          if (afterReadTtl_ != null) {
+            afterReadTtl_ =
+              com.google.protobuf.Duration.newBuilder(afterReadTtl_).mergeFrom(value).buildPartial();
+          } else {
+            afterReadTtl_ = value;
+          }
+          onChanged();
+        } else {
+          afterReadTtlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAfterReadTtl() {
+        if (afterReadTtlBuilder_ == null) {
+          afterReadTtl_ = null;
+          onChanged();
+        } else {
+          afterReadTtl_ = null;
+          afterReadTtlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getAfterReadTtlBuilder() {
+        
+        onChanged();
+        return getAfterReadTtlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getAfterReadTtlOrBuilder() {
+        if (afterReadTtlBuilder_ != null) {
+          return afterReadTtlBuilder_.getMessageOrBuilder();
+        } else {
+          return afterReadTtl_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : afterReadTtl_;
+        }
+      }
+      /**
+       * <pre>
+       * The default time-to-live duration of the password after it's read. Once the ttl has passed, a password will be rotated.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration after_read_ttl = 105 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getAfterReadTtlFieldBuilder() {
+        if (afterReadTtlBuilder_ == null) {
+          afterReadTtlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getAfterReadTtl(),
+                  getParentForChildren(),
+                  isClean());
+          afterReadTtl_ = null;
+        }
+        return afterReadTtlBuilder_;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <pre>
+       * Database is the database to verify credential against.
+       * </pre>
+       *
+       * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database is the database to verify credential against.
+       * </pre>
+       *
+       * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database is the database to verify credential against.
+       * </pre>
+       *
+       * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database is the database to verify credential against.
+       * </pre>
+       *
+       * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+        
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database is the database to verify credential against.
+       * </pre>
+       *
+       * <code>string database = 108 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        database_ = value;
+        onChanged();
         return this;
       }
 
@@ -8977,6 +9690,161 @@ public final class SecretEngineTypesPlumbing {
         return this;
       }
 
+      private com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy policy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy, com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.Builder, com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicyOrBuilder> policyBuilder_;
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       * @return Whether the policy field is set.
+       */
+      public boolean hasPolicy() {
+        return policyBuilder_ != null || policy_ != null;
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       * @return The policy.
+       */
+      public com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy getPolicy() {
+        if (policyBuilder_ == null) {
+          return policy_ == null ? com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.getDefaultInstance() : policy_;
+        } else {
+          return policyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPolicy(com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy value) {
+        if (policyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          policy_ = value;
+          onChanged();
+        } else {
+          policyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setPolicy(
+          com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.Builder builderForValue) {
+        if (policyBuilder_ == null) {
+          policy_ = builderForValue.build();
+          onChanged();
+        } else {
+          policyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergePolicy(com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy value) {
+        if (policyBuilder_ == null) {
+          if (policy_ != null) {
+            policy_ =
+              com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.newBuilder(policy_).mergeFrom(value).buildPartial();
+          } else {
+            policy_ = value;
+          }
+          onChanged();
+        } else {
+          policyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearPolicy() {
+        if (policyBuilder_ == null) {
+          policy_ = null;
+          onChanged();
+        } else {
+          policy_ = null;
+          policyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.Builder getPolicyBuilder() {
+        
+        onChanged();
+        return getPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicyOrBuilder getPolicyOrBuilder() {
+        if (policyBuilder_ != null) {
+          return policyBuilder_.getMessageOrBuilder();
+        } else {
+          return policy_ == null ?
+              com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.getDefaultInstance() : policy_;
+        }
+      }
+      /**
+       * <pre>
+       * Policy for password creation
+       * </pre>
+       *
+       * <code>.v1.SecretEnginePolicy policy = 107 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy, com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.Builder, com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicyOrBuilder> 
+          getPolicyFieldBuilder() {
+        if (policyBuilder_ == null) {
+          policyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy, com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicy.Builder, com.strongdm.api.plumbing.SecretEnginePolicyPlumbing.SecretEnginePolicyOrBuilder>(
+                  getPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          policy_ = null;
+        }
+        return policyBuilder_;
+      }
+
       private int port_ ;
       /**
        * <pre>
@@ -9018,6 +9886,204 @@ public final class SecretEngineTypesPlumbing {
         port_ = 0;
         onChanged();
         return this;
+      }
+
+      private boolean tls_ ;
+      /**
+       * <pre>
+       * TLS enables TLS/SSL when connecting to the Postgres server.
+       * </pre>
+       *
+       * <code>bool tls = 109 [(.v1.field_options) = { ... }</code>
+       * @return The tls.
+       */
+      @java.lang.Override
+      public boolean getTls() {
+        return tls_;
+      }
+      /**
+       * <pre>
+       * TLS enables TLS/SSL when connecting to the Postgres server.
+       * </pre>
+       *
+       * <code>bool tls = 109 [(.v1.field_options) = { ... }</code>
+       * @param value The tls to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTls(boolean value) {
+        
+        tls_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS enables TLS/SSL when connecting to the Postgres server.
+       * </pre>
+       *
+       * <code>bool tls = 109 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTls() {
+        
+        tls_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration ttl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> ttlBuilder_;
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       * @return Whether the ttl field is set.
+       */
+      public boolean hasTtl() {
+        return ttlBuilder_ != null || ttl_ != null;
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       * @return The ttl.
+       */
+      public com.google.protobuf.Duration getTtl() {
+        if (ttlBuilder_ == null) {
+          return ttl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : ttl_;
+        } else {
+          return ttlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTtl(com.google.protobuf.Duration value) {
+        if (ttlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ttl_ = value;
+          onChanged();
+        } else {
+          ttlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTtl(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (ttlBuilder_ == null) {
+          ttl_ = builderForValue.build();
+          onChanged();
+        } else {
+          ttlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTtl(com.google.protobuf.Duration value) {
+        if (ttlBuilder_ == null) {
+          if (ttl_ != null) {
+            ttl_ =
+              com.google.protobuf.Duration.newBuilder(ttl_).mergeFrom(value).buildPartial();
+          } else {
+            ttl_ = value;
+          }
+          onChanged();
+        } else {
+          ttlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTtl() {
+        if (ttlBuilder_ == null) {
+          ttl_ = null;
+          onChanged();
+        } else {
+          ttl_ = null;
+          ttlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Duration.Builder getTtlBuilder() {
+        
+        onChanged();
+        return getTtlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getTtlOrBuilder() {
+        if (ttlBuilder_ != null) {
+          return ttlBuilder_.getMessageOrBuilder();
+        } else {
+          return ttl_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : ttl_;
+        }
+      }
+      /**
+       * <pre>
+       * The default password time-to-live duration. Once the ttl has passed, a password will be rotated the next time it's requested.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration ttl = 106 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getTtlFieldBuilder() {
+        if (ttlBuilder_ == null) {
+          ttlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getTtl(),
+                  getParentForChildren(),
+                  isClean());
+          ttl_ = null;
+        }
+        return ttlBuilder_;
       }
 
       private java.lang.Object username_ = "";
@@ -9987,28 +11053,37 @@ public final class SecretEngineTypesPlumbing {
       "l_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001:f\372\370\263\007a\250\363\263\007\001\312\363\263\007" +
       "W\302\364\263\007\020\n\003cli\022\tkey_value\302\364\263\007\031\n\014json_gatewa" +
       "y\022\tkey_value\302\364\263\007\037\n\022terraform-provider\022\tk" +
-      "ey_value\"\321\005\n\016PostgresEngine\022C\n\010hostname\030" +
-      "e \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_g" +
-      "ateway\022\010hostname\022C\n\010password\030g \001(\tB1\362\370\263\007" +
-      ",\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010pas" +
-      "sword\022;\n\004port\030h \001(\rB-\362\370\263\007(\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
-      "\031\302\364\263\007\024\n\014json_gateway\022\004port\022C\n\010username\030f" +
+      "ey_value\"\326\010\n\016PostgresEngine\022c\n\016after_rea" +
+      "d_ttl\030i \001(\0132\031.google.protobuf.DurationB0" +
+      "\362\370\263\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014afte" +
+      "rReadTtl\022C\n\010database\030l \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010database\022C\n" +
+      "\010hostname\030e \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263" +
+      "\007\030\n\014json_gateway\022\010hostname\022C\n\010password\030g" +
       " \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_ga" +
-      "teway\022\010username\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003" +
-      " \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secret_stor" +
-      "e_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026secret_st" +
-      "ore_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004" +
-      "tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222\n\npubl" +
-      "ic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004" +
-      "!cli\022.\n\032key_rotation_interval_days\030\t \001(\005" +
-      "B\n\362\370\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007g\210\364\263\007\001\302\364\263\007\017\n" +
-      "\003cli\022\010postgres\302\364\263\007\030\n\014json_gateway\022\010postg" +
-      "res\302\364\263\007,\n\022terraform-provider\022\026postgres_s" +
-      "ecret_engineBm\n\031com.strongdm.api.plumbin" +
-      "gB\031SecretEngineTypesPlumbingZ5github.com" +
-      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
-      ";v1b\006proto3"
+      "teway\022\010password\022R\n\006policy\030k \001(\0132\026.v1.Sec" +
+      "retEnginePolicyB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014j" +
+      "son_gateway\022\006policy\022;\n\004port\030h \001(\rB-\362\370\263\007(" +
+      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\031\302\364\263\007\024\n\014json_gateway\022\004port" +
+      "\0224\n\003tls\030m \001(\010B\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014jso" +
+      "n_gateway\022\003tls\022O\n\003ttl\030j \001(\0132\031.google.pro" +
+      "tobuf.DurationB\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014js" +
+      "on_gateway\022\003ttl\022C\n\010username\030f \001(\tB1\362\370\263\007," +
+      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010user" +
+      "name\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001" +
+      "(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263\007\016" +
+      "\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secret_store_id\030\005 \001(\tB" +
+      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026secret_store_root_pa" +
+      "th\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\007 \001(\0132" +
+      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222\n\npublic_key\030\010 \001(" +
+      "\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032key" +
+      "_rotation_interval_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007" +
+      "\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007g\210\364\263\007\001\302\364\263\007\017\n\003cli\022\010postg" +
+      "res\302\364\263\007\030\n\014json_gateway\022\010postgres\302\364\263\007,\n\022t" +
+      "erraform-provider\022\026postgres_secret_engin" +
+      "eBm\n\031com.strongdm.api.plumbingB\031SecretEn" +
+      "gineTypesPlumbingZ5github.com/strongdm/s" +
+      "trongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10041,7 +11116,7 @@ public final class SecretEngineTypesPlumbing {
     internal_static_v1_PostgresEngine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_PostgresEngine_descriptor,
-        new java.lang.String[] { "Hostname", "Password", "Port", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
+        new java.lang.String[] { "AfterReadTtl", "Database", "Hostname", "Password", "Policy", "Port", "Tls", "Ttl", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

@@ -13117,7 +13117,6 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
 
@@ -13158,9 +13157,6 @@ public class Plumbing {
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername((porcelain.getUsername()));
     }
     return builder.build();
   }
@@ -17367,16 +17363,21 @@ public class Plumbing {
   public static com.strongdm.api.PostgresEngine convertPostgresEngineToPorcelain(
       PostgresEngine plumbing) {
     com.strongdm.api.PostgresEngine porcelain = new com.strongdm.api.PostgresEngine();
+    porcelain.setAfterReadTtl(Plumbing.convertDurationToPorcelain(plumbing.getAfterReadTtl()));
+    porcelain.setDatabase((plumbing.getDatabase()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
     porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPolicy(Plumbing.convertSecretEnginePolicyToPorcelain(plumbing.getPolicy()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPublicKey(Plumbing.convertBytesToPorcelain(plumbing.getPublicKey()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSecretStoreRootPath((plumbing.getSecretStoreRootPath()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTls((plumbing.getTls()));
+    porcelain.setTtl(Plumbing.convertDurationToPorcelain(plumbing.getTtl()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -17387,6 +17388,12 @@ public class Plumbing {
       return null;
     }
     PostgresEngine.Builder builder = PostgresEngine.newBuilder();
+    if (porcelain.getAfterReadTtl() != null) {
+      builder.setAfterReadTtl(Plumbing.convertDurationToPlumbing(porcelain.getAfterReadTtl()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname((porcelain.getHostname()));
     }
@@ -17400,6 +17407,9 @@ public class Plumbing {
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
     }
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy(Plumbing.convertSecretEnginePolicyToPlumbing(porcelain.getPolicy()));
+    }
     builder.setPort(porcelain.getPort());
     if (porcelain.getPublicKey() != null) {
       builder.setPublicKey(Plumbing.convertBytesToPlumbing(porcelain.getPublicKey()));
@@ -17412,6 +17422,10 @@ public class Plumbing {
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTls(porcelain.getTls());
+    if (porcelain.getTtl() != null) {
+      builder.setTtl(Plumbing.convertDurationToPlumbing(porcelain.getTtl()));
     }
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
