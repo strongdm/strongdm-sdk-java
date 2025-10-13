@@ -228,6 +228,36 @@ public final class SecretStoresTypesPlumbing {
     com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2StoreOrBuilder getVaultAwsec2OrBuilder();
 
     /**
+     * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsec2CertSsh field is set.
+     */
+    boolean hasVaultAwsec2CertSsh();
+    /**
+     * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsec2CertSsh.
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore getVaultAwsec2CertSsh();
+    /**
+     * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStoreOrBuilder getVaultAwsec2CertSshOrBuilder();
+
+    /**
+     * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsec2CertX509 field is set.
+     */
+    boolean hasVaultAwsec2CertX509();
+    /**
+     * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsec2CertX509.
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store getVaultAwsec2CertX509();
+    /**
+     * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509StoreOrBuilder getVaultAwsec2CertX509OrBuilder();
+
+    /**
      * <code>.v1.VaultAWSIAMStore vault_awsiam = 96 [(.v1.field_options) = { ... }</code>
      * @return Whether the vaultAwsiam field is set.
      */
@@ -241,6 +271,36 @@ public final class SecretStoresTypesPlumbing {
      * <code>.v1.VaultAWSIAMStore vault_awsiam = 96 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMStoreOrBuilder getVaultAwsiamOrBuilder();
+
+    /**
+     * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsiamCertSsh field is set.
+     */
+    boolean hasVaultAwsiamCertSsh();
+    /**
+     * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsiamCertSsh.
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore getVaultAwsiamCertSsh();
+    /**
+     * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStoreOrBuilder getVaultAwsiamCertSshOrBuilder();
+
+    /**
+     * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsiamCertX509 field is set.
+     */
+    boolean hasVaultAwsiamCertX509();
+    /**
+     * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsiamCertX509.
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store getVaultAwsiamCertX509();
+    /**
+     * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509StoreOrBuilder getVaultAwsiamCertX509OrBuilder();
 
     /**
      * <code>.v1.VaultAppRoleStore vault_app_role = 4 [(.v1.field_options) = { ... }</code>
@@ -611,6 +671,48 @@ public final class SecretStoresTypesPlumbing {
               secretStoreCase_ = 97;
               break;
             }
+            case 786: {
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder subBuilder = null;
+              if (secretStoreCase_ == 98) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 98;
+              break;
+            }
+            case 794: {
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder subBuilder = null;
+              if (secretStoreCase_ == 99) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 99;
+              break;
+            }
+            case 802: {
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder subBuilder = null;
+              if (secretStoreCase_ == 100) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 100;
+              break;
+            }
             case 810: {
               com.strongdm.api.plumbing.SecretStoresTypesPlumbing.AzureStore.Builder subBuilder = null;
               if (secretStoreCase_ == 101) {
@@ -623,6 +725,20 @@ public final class SecretStoresTypesPlumbing {
                 secretStore_ = subBuilder.buildPartial();
               }
               secretStoreCase_ = 101;
+              break;
+            }
+            case 818: {
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder subBuilder = null;
+              if (secretStoreCase_ == 102) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 102;
               break;
             }
             case 1602: {
@@ -803,7 +919,11 @@ public final class SecretStoresTypesPlumbing {
       KEYFACTOR_SSH(210),
       KEYFACTOR_X_509(200),
       VAULT_AWSEC_2(97),
+      VAULT_AWSEC_2_CERT_SSH(98),
+      VAULT_AWSEC_2_CERT_X_509(100),
       VAULT_AWSIAM(96),
+      VAULT_AWSIAM_CERT_SSH(99),
+      VAULT_AWSIAM_CERT_X_509(102),
       VAULT_APP_ROLE(4),
       VAULT_APP_ROLE_CERT_SSH(94),
       VAULT_APP_ROLE_CERT_X_509(95),
@@ -843,7 +963,11 @@ public final class SecretStoresTypesPlumbing {
           case 210: return KEYFACTOR_SSH;
           case 200: return KEYFACTOR_X_509;
           case 97: return VAULT_AWSEC_2;
+          case 98: return VAULT_AWSEC_2_CERT_SSH;
+          case 100: return VAULT_AWSEC_2_CERT_X_509;
           case 96: return VAULT_AWSIAM;
+          case 99: return VAULT_AWSIAM_CERT_SSH;
+          case 102: return VAULT_AWSIAM_CERT_X_509;
           case 4: return VAULT_APP_ROLE;
           case 94: return VAULT_APP_ROLE_CERT_SSH;
           case 95: return VAULT_APP_ROLE_CERT_X_509;
@@ -1271,6 +1395,68 @@ public final class SecretStoresTypesPlumbing {
       return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2Store.getDefaultInstance();
     }
 
+    public static final int VAULT_AWSEC_2_CERT_SSH_FIELD_NUMBER = 98;
+    /**
+     * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsec2CertSsh field is set.
+     */
+    @java.lang.Override
+    public boolean hasVaultAwsec2CertSsh() {
+      return secretStoreCase_ == 98;
+    }
+    /**
+     * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsec2CertSsh.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore getVaultAwsec2CertSsh() {
+      if (secretStoreCase_ == 98) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStoreOrBuilder getVaultAwsec2CertSshOrBuilder() {
+      if (secretStoreCase_ == 98) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance();
+    }
+
+    public static final int VAULT_AWSEC_2_CERT_X_509_FIELD_NUMBER = 100;
+    /**
+     * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsec2CertX509 field is set.
+     */
+    @java.lang.Override
+    public boolean hasVaultAwsec2CertX509() {
+      return secretStoreCase_ == 100;
+    }
+    /**
+     * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsec2CertX509.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store getVaultAwsec2CertX509() {
+      if (secretStoreCase_ == 100) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509StoreOrBuilder getVaultAwsec2CertX509OrBuilder() {
+      if (secretStoreCase_ == 100) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance();
+    }
+
     public static final int VAULT_AWSIAM_FIELD_NUMBER = 96;
     /**
      * <code>.v1.VaultAWSIAMStore vault_awsiam = 96 [(.v1.field_options) = { ... }</code>
@@ -1300,6 +1486,68 @@ public final class SecretStoresTypesPlumbing {
          return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMStore) secretStore_;
       }
       return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMStore.getDefaultInstance();
+    }
+
+    public static final int VAULT_AWSIAM_CERT_SSH_FIELD_NUMBER = 99;
+    /**
+     * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsiamCertSsh field is set.
+     */
+    @java.lang.Override
+    public boolean hasVaultAwsiamCertSsh() {
+      return secretStoreCase_ == 99;
+    }
+    /**
+     * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsiamCertSsh.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore getVaultAwsiamCertSsh() {
+      if (secretStoreCase_ == 99) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStoreOrBuilder getVaultAwsiamCertSshOrBuilder() {
+      if (secretStoreCase_ == 99) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance();
+    }
+
+    public static final int VAULT_AWSIAM_CERT_X_509_FIELD_NUMBER = 102;
+    /**
+     * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+     * @return Whether the vaultAwsiamCertX509 field is set.
+     */
+    @java.lang.Override
+    public boolean hasVaultAwsiamCertX509() {
+      return secretStoreCase_ == 102;
+    }
+    /**
+     * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+     * @return The vaultAwsiamCertX509.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store getVaultAwsiamCertX509() {
+      if (secretStoreCase_ == 102) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509StoreOrBuilder getVaultAwsiamCertX509OrBuilder() {
+      if (secretStoreCase_ == 102) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance();
     }
 
     public static final int VAULT_APP_ROLE_FIELD_NUMBER = 4;
@@ -1634,8 +1882,20 @@ public final class SecretStoresTypesPlumbing {
       if (secretStoreCase_ == 97) {
         output.writeMessage(97, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2Store) secretStore_);
       }
+      if (secretStoreCase_ == 98) {
+        output.writeMessage(98, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_);
+      }
+      if (secretStoreCase_ == 99) {
+        output.writeMessage(99, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_);
+      }
+      if (secretStoreCase_ == 100) {
+        output.writeMessage(100, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_);
+      }
       if (secretStoreCase_ == 101) {
         output.writeMessage(101, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.AzureStore) secretStore_);
+      }
+      if (secretStoreCase_ == 102) {
+        output.writeMessage(102, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_);
       }
       if (secretStoreCase_ == 200) {
         output.writeMessage(200, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.KeyfactorX509Store) secretStore_);
@@ -1725,9 +1985,25 @@ public final class SecretStoresTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(97, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2Store) secretStore_);
       }
+      if (secretStoreCase_ == 98) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(98, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_);
+      }
+      if (secretStoreCase_ == 99) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_);
+      }
+      if (secretStoreCase_ == 100) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_);
+      }
       if (secretStoreCase_ == 101) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(101, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.AzureStore) secretStore_);
+      }
+      if (secretStoreCase_ == 102) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(102, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_);
       }
       if (secretStoreCase_ == 200) {
         size += com.google.protobuf.CodedOutputStream
@@ -1834,9 +2110,25 @@ public final class SecretStoresTypesPlumbing {
           if (!getVaultAwsec2()
               .equals(other.getVaultAwsec2())) return false;
           break;
+        case 98:
+          if (!getVaultAwsec2CertSsh()
+              .equals(other.getVaultAwsec2CertSsh())) return false;
+          break;
+        case 100:
+          if (!getVaultAwsec2CertX509()
+              .equals(other.getVaultAwsec2CertX509())) return false;
+          break;
         case 96:
           if (!getVaultAwsiam()
               .equals(other.getVaultAwsiam())) return false;
+          break;
+        case 99:
+          if (!getVaultAwsiamCertSsh()
+              .equals(other.getVaultAwsiamCertSsh())) return false;
+          break;
+        case 102:
+          if (!getVaultAwsiamCertX509()
+              .equals(other.getVaultAwsiamCertX509())) return false;
           break;
         case 4:
           if (!getVaultAppRole()
@@ -1941,9 +2233,25 @@ public final class SecretStoresTypesPlumbing {
           hash = (37 * hash) + VAULT_AWSEC_2_FIELD_NUMBER;
           hash = (53 * hash) + getVaultAwsec2().hashCode();
           break;
+        case 98:
+          hash = (37 * hash) + VAULT_AWSEC_2_CERT_SSH_FIELD_NUMBER;
+          hash = (53 * hash) + getVaultAwsec2CertSsh().hashCode();
+          break;
+        case 100:
+          hash = (37 * hash) + VAULT_AWSEC_2_CERT_X_509_FIELD_NUMBER;
+          hash = (53 * hash) + getVaultAwsec2CertX509().hashCode();
+          break;
         case 96:
           hash = (37 * hash) + VAULT_AWSIAM_FIELD_NUMBER;
           hash = (53 * hash) + getVaultAwsiam().hashCode();
+          break;
+        case 99:
+          hash = (37 * hash) + VAULT_AWSIAM_CERT_SSH_FIELD_NUMBER;
+          hash = (53 * hash) + getVaultAwsiamCertSsh().hashCode();
+          break;
+        case 102:
+          hash = (37 * hash) + VAULT_AWSIAM_CERT_X_509_FIELD_NUMBER;
+          hash = (53 * hash) + getVaultAwsiamCertX509().hashCode();
           break;
         case 4:
           hash = (37 * hash) + VAULT_APP_ROLE_FIELD_NUMBER;
@@ -2241,11 +2549,39 @@ public final class SecretStoresTypesPlumbing {
             result.secretStore_ = vaultAwsec2Builder_.build();
           }
         }
+        if (secretStoreCase_ == 98) {
+          if (vaultAwsec2CertSshBuilder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = vaultAwsec2CertSshBuilder_.build();
+          }
+        }
+        if (secretStoreCase_ == 100) {
+          if (vaultAwsec2CertX509Builder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = vaultAwsec2CertX509Builder_.build();
+          }
+        }
         if (secretStoreCase_ == 96) {
           if (vaultAwsiamBuilder_ == null) {
             result.secretStore_ = secretStore_;
           } else {
             result.secretStore_ = vaultAwsiamBuilder_.build();
+          }
+        }
+        if (secretStoreCase_ == 99) {
+          if (vaultAwsiamCertSshBuilder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = vaultAwsiamCertSshBuilder_.build();
+          }
+        }
+        if (secretStoreCase_ == 102) {
+          if (vaultAwsiamCertX509Builder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = vaultAwsiamCertX509Builder_.build();
           }
         }
         if (secretStoreCase_ == 4) {
@@ -2413,8 +2749,24 @@ public final class SecretStoresTypesPlumbing {
             mergeVaultAwsec2(other.getVaultAwsec2());
             break;
           }
+          case VAULT_AWSEC_2_CERT_SSH: {
+            mergeVaultAwsec2CertSsh(other.getVaultAwsec2CertSsh());
+            break;
+          }
+          case VAULT_AWSEC_2_CERT_X_509: {
+            mergeVaultAwsec2CertX509(other.getVaultAwsec2CertX509());
+            break;
+          }
           case VAULT_AWSIAM: {
             mergeVaultAwsiam(other.getVaultAwsiam());
+            break;
+          }
+          case VAULT_AWSIAM_CERT_SSH: {
+            mergeVaultAwsiamCertSsh(other.getVaultAwsiamCertSsh());
+            break;
+          }
+          case VAULT_AWSIAM_CERT_X_509: {
+            mergeVaultAwsiamCertX509(other.getVaultAwsiamCertX509());
             break;
           }
           case VAULT_APP_ROLE: {
@@ -4348,6 +4700,290 @@ public final class SecretStoresTypesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStoreOrBuilder> vaultAwsec2CertSshBuilder_;
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       * @return Whether the vaultAwsec2CertSsh field is set.
+       */
+      @java.lang.Override
+      public boolean hasVaultAwsec2CertSsh() {
+        return secretStoreCase_ == 98;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       * @return The vaultAwsec2CertSsh.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore getVaultAwsec2CertSsh() {
+        if (vaultAwsec2CertSshBuilder_ == null) {
+          if (secretStoreCase_ == 98) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 98) {
+            return vaultAwsec2CertSshBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsec2CertSsh(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore value) {
+        if (vaultAwsec2CertSshBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          vaultAwsec2CertSshBuilder_.setMessage(value);
+        }
+        secretStoreCase_ = 98;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsec2CertSsh(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder builderForValue) {
+        if (vaultAwsec2CertSshBuilder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          vaultAwsec2CertSshBuilder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 98;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeVaultAwsec2CertSsh(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore value) {
+        if (vaultAwsec2CertSshBuilder_ == null) {
+          if (secretStoreCase_ == 98 &&
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 98) {
+            vaultAwsec2CertSshBuilder_.mergeFrom(value);
+          } else {
+            vaultAwsec2CertSshBuilder_.setMessage(value);
+          }
+        }
+        secretStoreCase_ = 98;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearVaultAwsec2CertSsh() {
+        if (vaultAwsec2CertSshBuilder_ == null) {
+          if (secretStoreCase_ == 98) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 98) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          vaultAwsec2CertSshBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder getVaultAwsec2CertSshBuilder() {
+        return getVaultAwsec2CertSshFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStoreOrBuilder getVaultAwsec2CertSshOrBuilder() {
+        if ((secretStoreCase_ == 98) && (vaultAwsec2CertSshBuilder_ != null)) {
+          return vaultAwsec2CertSshBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 98) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertSSHStore vault_awsec_2_cert_ssh = 98 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStoreOrBuilder> 
+          getVaultAwsec2CertSshFieldBuilder() {
+        if (vaultAwsec2CertSshBuilder_ == null) {
+          if (!(secretStoreCase_ == 98)) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance();
+          }
+          vaultAwsec2CertSshBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 98;
+        onChanged();;
+        return vaultAwsec2CertSshBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509StoreOrBuilder> vaultAwsec2CertX509Builder_;
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       * @return Whether the vaultAwsec2CertX509 field is set.
+       */
+      @java.lang.Override
+      public boolean hasVaultAwsec2CertX509() {
+        return secretStoreCase_ == 100;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       * @return The vaultAwsec2CertX509.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store getVaultAwsec2CertX509() {
+        if (vaultAwsec2CertX509Builder_ == null) {
+          if (secretStoreCase_ == 100) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 100) {
+            return vaultAwsec2CertX509Builder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsec2CertX509(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store value) {
+        if (vaultAwsec2CertX509Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          vaultAwsec2CertX509Builder_.setMessage(value);
+        }
+        secretStoreCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsec2CertX509(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder builderForValue) {
+        if (vaultAwsec2CertX509Builder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          vaultAwsec2CertX509Builder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeVaultAwsec2CertX509(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store value) {
+        if (vaultAwsec2CertX509Builder_ == null) {
+          if (secretStoreCase_ == 100 &&
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 100) {
+            vaultAwsec2CertX509Builder_.mergeFrom(value);
+          } else {
+            vaultAwsec2CertX509Builder_.setMessage(value);
+          }
+        }
+        secretStoreCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearVaultAwsec2CertX509() {
+        if (vaultAwsec2CertX509Builder_ == null) {
+          if (secretStoreCase_ == 100) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 100) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          vaultAwsec2CertX509Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder getVaultAwsec2CertX509Builder() {
+        return getVaultAwsec2CertX509FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509StoreOrBuilder getVaultAwsec2CertX509OrBuilder() {
+        if ((secretStoreCase_ == 100) && (vaultAwsec2CertX509Builder_ != null)) {
+          return vaultAwsec2CertX509Builder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 100) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSEC2CertX509Store vault_awsec_2_cert_x_509 = 100 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509StoreOrBuilder> 
+          getVaultAwsec2CertX509FieldBuilder() {
+        if (vaultAwsec2CertX509Builder_ == null) {
+          if (!(secretStoreCase_ == 100)) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance();
+          }
+          vaultAwsec2CertX509Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509StoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 100;
+        onChanged();;
+        return vaultAwsec2CertX509Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMStoreOrBuilder> vaultAwsiamBuilder_;
       /**
        * <code>.v1.VaultAWSIAMStore vault_awsiam = 96 [(.v1.field_options) = { ... }</code>
@@ -4487,6 +5123,290 @@ public final class SecretStoresTypesPlumbing {
         secretStoreCase_ = 96;
         onChanged();;
         return vaultAwsiamBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStoreOrBuilder> vaultAwsiamCertSshBuilder_;
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       * @return Whether the vaultAwsiamCertSsh field is set.
+       */
+      @java.lang.Override
+      public boolean hasVaultAwsiamCertSsh() {
+        return secretStoreCase_ == 99;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       * @return The vaultAwsiamCertSsh.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore getVaultAwsiamCertSsh() {
+        if (vaultAwsiamCertSshBuilder_ == null) {
+          if (secretStoreCase_ == 99) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 99) {
+            return vaultAwsiamCertSshBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsiamCertSsh(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore value) {
+        if (vaultAwsiamCertSshBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          vaultAwsiamCertSshBuilder_.setMessage(value);
+        }
+        secretStoreCase_ = 99;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsiamCertSsh(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder builderForValue) {
+        if (vaultAwsiamCertSshBuilder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          vaultAwsiamCertSshBuilder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 99;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeVaultAwsiamCertSsh(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore value) {
+        if (vaultAwsiamCertSshBuilder_ == null) {
+          if (secretStoreCase_ == 99 &&
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 99) {
+            vaultAwsiamCertSshBuilder_.mergeFrom(value);
+          } else {
+            vaultAwsiamCertSshBuilder_.setMessage(value);
+          }
+        }
+        secretStoreCase_ = 99;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearVaultAwsiamCertSsh() {
+        if (vaultAwsiamCertSshBuilder_ == null) {
+          if (secretStoreCase_ == 99) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 99) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          vaultAwsiamCertSshBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder getVaultAwsiamCertSshBuilder() {
+        return getVaultAwsiamCertSshFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStoreOrBuilder getVaultAwsiamCertSshOrBuilder() {
+        if ((secretStoreCase_ == 99) && (vaultAwsiamCertSshBuilder_ != null)) {
+          return vaultAwsiamCertSshBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 99) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertSSHStore vault_awsiam_cert_ssh = 99 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStoreOrBuilder> 
+          getVaultAwsiamCertSshFieldBuilder() {
+        if (vaultAwsiamCertSshBuilder_ == null) {
+          if (!(secretStoreCase_ == 99)) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance();
+          }
+          vaultAwsiamCertSshBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 99;
+        onChanged();;
+        return vaultAwsiamCertSshBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509StoreOrBuilder> vaultAwsiamCertX509Builder_;
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       * @return Whether the vaultAwsiamCertX509 field is set.
+       */
+      @java.lang.Override
+      public boolean hasVaultAwsiamCertX509() {
+        return secretStoreCase_ == 102;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       * @return The vaultAwsiamCertX509.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store getVaultAwsiamCertX509() {
+        if (vaultAwsiamCertX509Builder_ == null) {
+          if (secretStoreCase_ == 102) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 102) {
+            return vaultAwsiamCertX509Builder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsiamCertX509(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store value) {
+        if (vaultAwsiamCertX509Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          vaultAwsiamCertX509Builder_.setMessage(value);
+        }
+        secretStoreCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setVaultAwsiamCertX509(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder builderForValue) {
+        if (vaultAwsiamCertX509Builder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          vaultAwsiamCertX509Builder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeVaultAwsiamCertX509(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store value) {
+        if (vaultAwsiamCertX509Builder_ == null) {
+          if (secretStoreCase_ == 102 &&
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 102) {
+            vaultAwsiamCertX509Builder_.mergeFrom(value);
+          } else {
+            vaultAwsiamCertX509Builder_.setMessage(value);
+          }
+        }
+        secretStoreCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearVaultAwsiamCertX509() {
+        if (vaultAwsiamCertX509Builder_ == null) {
+          if (secretStoreCase_ == 102) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 102) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          vaultAwsiamCertX509Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder getVaultAwsiamCertX509Builder() {
+        return getVaultAwsiamCertX509FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509StoreOrBuilder getVaultAwsiamCertX509OrBuilder() {
+        if ((secretStoreCase_ == 102) && (vaultAwsiamCertX509Builder_ != null)) {
+          return vaultAwsiamCertX509Builder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 102) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.VaultAWSIAMCertX509Store vault_awsiam_cert_x_509 = 102 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509StoreOrBuilder> 
+          getVaultAwsiamCertX509FieldBuilder() {
+        if (vaultAwsiamCertX509Builder_ == null) {
+          if (!(secretStoreCase_ == 102)) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance();
+          }
+          vaultAwsiamCertX509Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509StoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 102;
+        onChanged();;
+        return vaultAwsiamCertX509Builder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -26713,6 +27633,3784 @@ public final class SecretStoresTypesPlumbing {
 
   }
 
+  public interface VaultAWSEC2CertSSHStoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.VaultAWSEC2CertSSHStore)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    java.lang.String getNamespace();
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    java.lang.String getServerAddress();
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    com.google.protobuf.ByteString
+        getServerAddressBytes();
+
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    java.lang.String getSigningRole();
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    com.google.protobuf.ByteString
+        getSigningRoleBytes();
+
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The sshMountPoint.
+     */
+    java.lang.String getSshMountPoint();
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sshMountPoint.
+     */
+    com.google.protobuf.ByteString
+        getSshMountPointBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.VaultAWSEC2CertSSHStore}
+   */
+  public static final class VaultAWSEC2CertSSHStore extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.VaultAWSEC2CertSSHStore)
+      VaultAWSEC2CertSSHStoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VaultAWSEC2CertSSHStore.newBuilder() to construct.
+    private VaultAWSEC2CertSSHStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VaultAWSEC2CertSSHStore() {
+      id_ = "";
+      name_ = "";
+      namespace_ = "";
+      serverAddress_ = "";
+      signingRole_ = "";
+      sshMountPoint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VaultAWSEC2CertSSHStore();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VaultAWSEC2CertSSHStore(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serverAddress_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespace_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sshMountPoint_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signingRole_ = s;
+              break;
+            }
+            case 72: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertSSHStore_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertSSHStore_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 9;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
+    }
+
+    public static final int NAMESPACE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object namespace_;
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    @java.lang.Override
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serverAddress_;
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServerAddress() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerAddressBytes() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNING_ROLE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object signingRole_;
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    @java.lang.Override
+    public java.lang.String getSigningRole() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signingRole_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSigningRoleBytes() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signingRole_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SSH_MOUNT_POINT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object sshMountPoint_;
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The sshMountPoint.
+     */
+    @java.lang.Override
+    public java.lang.String getSshMountPoint() {
+      java.lang.Object ref = sshMountPoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sshMountPoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sshMountPoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSshMountPointBytes() {
+      java.lang.Object ref = sshMountPoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sshMountPoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sshMountPoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sshMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(9, issuedCertTTLMinutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sshMountPoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sshMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, issuedCertTTLMinutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
+      if (!getNamespace()
+          .equals(other.getNamespace())) return false;
+      if (!getServerAddress()
+          .equals(other.getServerAddress())) return false;
+      if (!getSigningRole()
+          .equals(other.getSigningRole())) return false;
+      if (!getSshMountPoint()
+          .equals(other.getSshMountPoint())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
+      hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespace().hashCode();
+      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getServerAddress().hashCode();
+      hash = (37 * hash) + SIGNING_ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + getSigningRole().hashCode();
+      hash = (37 * hash) + SSH_MOUNT_POINT_FIELD_NUMBER;
+      hash = (53 * hash) + getSshMountPoint().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.VaultAWSEC2CertSSHStore}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.VaultAWSEC2CertSSHStore)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertSSHStore_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertSSHStore_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        issuedCertTTLMinutes_ = 0;
+
+        namespace_ = "";
+
+        serverAddress_ = "";
+
+        signingRole_ = "";
+
+        sshMountPoint_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertSSHStore_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
+        result.namespace_ = namespace_;
+        result.serverAddress_ = serverAddress_;
+        result.signingRole_ = signingRole_;
+        result.sshMountPoint_ = sshMountPoint_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
+        }
+        if (!other.getNamespace().isEmpty()) {
+          namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (!other.getServerAddress().isEmpty()) {
+          serverAddress_ = other.serverAddress_;
+          onChanged();
+        }
+        if (!other.getSigningRole().isEmpty()) {
+          signingRole_ = other.signingRole_;
+          onChanged();
+        }
+        if (!other.getSshMountPoint().isEmpty()) {
+          sshMountPoint_ = other.sshMountPoint_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object namespace_ = "";
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The namespace.
+       */
+      public java.lang.String getNamespace() {
+        java.lang.Object ref = namespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for namespace.
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNamespace() {
+        
+        namespace_ = getDefaultInstance().getNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverAddress_ = "";
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The serverAddress.
+       */
+      public java.lang.String getServerAddress() {
+        java.lang.Object ref = serverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for serverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServerAddressBytes() {
+        java.lang.Object ref = serverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerAddress() {
+        
+        serverAddress_ = getDefaultInstance().getServerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signingRole_ = "";
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The signingRole.
+       */
+      public java.lang.String getSigningRole() {
+        java.lang.Object ref = signingRole_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signingRole_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for signingRole.
+       */
+      public com.google.protobuf.ByteString
+          getSigningRoleBytes() {
+        java.lang.Object ref = signingRole_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signingRole_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRole(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigningRole() {
+        
+        signingRole_ = getDefaultInstance().getSigningRole();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRoleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sshMountPoint_ = "";
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The sshMountPoint.
+       */
+      public java.lang.String getSshMountPoint() {
+        java.lang.Object ref = sshMountPoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sshMountPoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for sshMountPoint.
+       */
+      public com.google.protobuf.ByteString
+          getSshMountPointBytes() {
+        java.lang.Object ref = sshMountPoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sshMountPoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The sshMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshMountPoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sshMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSshMountPoint() {
+        
+        sshMountPoint_ = getDefaultInstance().getSshMountPoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for sshMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshMountPointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sshMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.VaultAWSEC2CertSSHStore)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.VaultAWSEC2CertSSHStore)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore();
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VaultAWSEC2CertSSHStore>
+        PARSER = new com.google.protobuf.AbstractParser<VaultAWSEC2CertSSHStore>() {
+      @java.lang.Override
+      public VaultAWSEC2CertSSHStore parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VaultAWSEC2CertSSHStore(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VaultAWSEC2CertSSHStore> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VaultAWSEC2CertSSHStore> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertSSHStore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VaultAWSEC2CertX509StoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.VaultAWSEC2CertX509Store)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    java.lang.String getNamespace();
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The pkiMountPoint.
+     */
+    java.lang.String getPkiMountPoint();
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for pkiMountPoint.
+     */
+    com.google.protobuf.ByteString
+        getPkiMountPointBytes();
+
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    java.lang.String getServerAddress();
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    com.google.protobuf.ByteString
+        getServerAddressBytes();
+
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    java.lang.String getSigningRole();
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    com.google.protobuf.ByteString
+        getSigningRoleBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.VaultAWSEC2CertX509Store}
+   */
+  public static final class VaultAWSEC2CertX509Store extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.VaultAWSEC2CertX509Store)
+      VaultAWSEC2CertX509StoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VaultAWSEC2CertX509Store.newBuilder() to construct.
+    private VaultAWSEC2CertX509Store(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VaultAWSEC2CertX509Store() {
+      id_ = "";
+      name_ = "";
+      namespace_ = "";
+      pkiMountPoint_ = "";
+      serverAddress_ = "";
+      signingRole_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VaultAWSEC2CertX509Store();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VaultAWSEC2CertX509Store(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serverAddress_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespace_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pkiMountPoint_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signingRole_ = s;
+              break;
+            }
+            case 72: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertX509Store_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertX509Store_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 9;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
+    }
+
+    public static final int NAMESPACE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object namespace_;
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    @java.lang.Override
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PKI_MOUNT_POINT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object pkiMountPoint_;
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The pkiMountPoint.
+     */
+    @java.lang.Override
+    public java.lang.String getPkiMountPoint() {
+      java.lang.Object ref = pkiMountPoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pkiMountPoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for pkiMountPoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPkiMountPointBytes() {
+      java.lang.Object ref = pkiMountPoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pkiMountPoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serverAddress_;
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServerAddress() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerAddressBytes() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNING_ROLE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object signingRole_;
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    @java.lang.Override
+    public java.lang.String getSigningRole() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signingRole_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSigningRoleBytes() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signingRole_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pkiMountPoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pkiMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(9, issuedCertTTLMinutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pkiMountPoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pkiMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, issuedCertTTLMinutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
+      if (!getNamespace()
+          .equals(other.getNamespace())) return false;
+      if (!getPkiMountPoint()
+          .equals(other.getPkiMountPoint())) return false;
+      if (!getServerAddress()
+          .equals(other.getServerAddress())) return false;
+      if (!getSigningRole()
+          .equals(other.getSigningRole())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
+      hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespace().hashCode();
+      hash = (37 * hash) + PKI_MOUNT_POINT_FIELD_NUMBER;
+      hash = (53 * hash) + getPkiMountPoint().hashCode();
+      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getServerAddress().hashCode();
+      hash = (37 * hash) + SIGNING_ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + getSigningRole().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.VaultAWSEC2CertX509Store}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.VaultAWSEC2CertX509Store)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509StoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertX509Store_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertX509Store_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        issuedCertTTLMinutes_ = 0;
+
+        namespace_ = "";
+
+        pkiMountPoint_ = "";
+
+        serverAddress_ = "";
+
+        signingRole_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSEC2CertX509Store_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
+        result.namespace_ = namespace_;
+        result.pkiMountPoint_ = pkiMountPoint_;
+        result.serverAddress_ = serverAddress_;
+        result.signingRole_ = signingRole_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
+        }
+        if (!other.getNamespace().isEmpty()) {
+          namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (!other.getPkiMountPoint().isEmpty()) {
+          pkiMountPoint_ = other.pkiMountPoint_;
+          onChanged();
+        }
+        if (!other.getServerAddress().isEmpty()) {
+          serverAddress_ = other.serverAddress_;
+          onChanged();
+        }
+        if (!other.getSigningRole().isEmpty()) {
+          signingRole_ = other.signingRole_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object namespace_ = "";
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The namespace.
+       */
+      public java.lang.String getNamespace() {
+        java.lang.Object ref = namespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for namespace.
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNamespace() {
+        
+        namespace_ = getDefaultInstance().getNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pkiMountPoint_ = "";
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The pkiMountPoint.
+       */
+      public java.lang.String getPkiMountPoint() {
+        java.lang.Object ref = pkiMountPoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pkiMountPoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for pkiMountPoint.
+       */
+      public com.google.protobuf.ByteString
+          getPkiMountPointBytes() {
+        java.lang.Object ref = pkiMountPoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pkiMountPoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The pkiMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPkiMountPoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pkiMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPkiMountPoint() {
+        
+        pkiMountPoint_ = getDefaultInstance().getPkiMountPoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for pkiMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPkiMountPointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pkiMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverAddress_ = "";
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The serverAddress.
+       */
+      public java.lang.String getServerAddress() {
+        java.lang.Object ref = serverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for serverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServerAddressBytes() {
+        java.lang.Object ref = serverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerAddress() {
+        
+        serverAddress_ = getDefaultInstance().getServerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signingRole_ = "";
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The signingRole.
+       */
+      public java.lang.String getSigningRole() {
+        java.lang.Object ref = signingRole_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signingRole_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for signingRole.
+       */
+      public com.google.protobuf.ByteString
+          getSigningRoleBytes() {
+        java.lang.Object ref = signingRole_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signingRole_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRole(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigningRole() {
+        
+        signingRole_ = getDefaultInstance().getSigningRole();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRoleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.VaultAWSEC2CertX509Store)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.VaultAWSEC2CertX509Store)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store();
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VaultAWSEC2CertX509Store>
+        PARSER = new com.google.protobuf.AbstractParser<VaultAWSEC2CertX509Store>() {
+      @java.lang.Override
+      public VaultAWSEC2CertX509Store parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VaultAWSEC2CertX509Store(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VaultAWSEC2CertX509Store> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VaultAWSEC2CertX509Store> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSEC2CertX509Store getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface VaultAWSIAMStoreOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.VaultAWSIAMStore)
       com.google.protobuf.MessageOrBuilder {
@@ -28135,6 +32833,3784 @@ public final class SecretStoresTypesPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMStore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VaultAWSIAMCertSSHStoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.VaultAWSIAMCertSSHStore)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    java.lang.String getNamespace();
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    java.lang.String getServerAddress();
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    com.google.protobuf.ByteString
+        getServerAddressBytes();
+
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    java.lang.String getSigningRole();
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    com.google.protobuf.ByteString
+        getSigningRoleBytes();
+
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The sshMountPoint.
+     */
+    java.lang.String getSshMountPoint();
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sshMountPoint.
+     */
+    com.google.protobuf.ByteString
+        getSshMountPointBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.VaultAWSIAMCertSSHStore}
+   */
+  public static final class VaultAWSIAMCertSSHStore extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.VaultAWSIAMCertSSHStore)
+      VaultAWSIAMCertSSHStoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VaultAWSIAMCertSSHStore.newBuilder() to construct.
+    private VaultAWSIAMCertSSHStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VaultAWSIAMCertSSHStore() {
+      id_ = "";
+      name_ = "";
+      namespace_ = "";
+      serverAddress_ = "";
+      signingRole_ = "";
+      sshMountPoint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VaultAWSIAMCertSSHStore();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VaultAWSIAMCertSSHStore(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serverAddress_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespace_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sshMountPoint_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signingRole_ = s;
+              break;
+            }
+            case 72: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertSSHStore_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertSSHStore_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 9;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
+    }
+
+    public static final int NAMESPACE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object namespace_;
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    @java.lang.Override
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serverAddress_;
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServerAddress() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerAddressBytes() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNING_ROLE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object signingRole_;
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    @java.lang.Override
+    public java.lang.String getSigningRole() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signingRole_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSigningRoleBytes() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signingRole_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SSH_MOUNT_POINT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object sshMountPoint_;
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The sshMountPoint.
+     */
+    @java.lang.Override
+    public java.lang.String getSshMountPoint() {
+      java.lang.Object ref = sshMountPoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sshMountPoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The mount point of the SSH engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for sshMountPoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSshMountPointBytes() {
+      java.lang.Object ref = sshMountPoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sshMountPoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sshMountPoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sshMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(9, issuedCertTTLMinutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sshMountPoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sshMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, issuedCertTTLMinutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
+      if (!getNamespace()
+          .equals(other.getNamespace())) return false;
+      if (!getServerAddress()
+          .equals(other.getServerAddress())) return false;
+      if (!getSigningRole()
+          .equals(other.getSigningRole())) return false;
+      if (!getSshMountPoint()
+          .equals(other.getSshMountPoint())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
+      hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespace().hashCode();
+      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getServerAddress().hashCode();
+      hash = (37 * hash) + SIGNING_ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + getSigningRole().hashCode();
+      hash = (37 * hash) + SSH_MOUNT_POINT_FIELD_NUMBER;
+      hash = (53 * hash) + getSshMountPoint().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.VaultAWSIAMCertSSHStore}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.VaultAWSIAMCertSSHStore)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertSSHStore_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertSSHStore_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        issuedCertTTLMinutes_ = 0;
+
+        namespace_ = "";
+
+        serverAddress_ = "";
+
+        signingRole_ = "";
+
+        sshMountPoint_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertSSHStore_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
+        result.namespace_ = namespace_;
+        result.serverAddress_ = serverAddress_;
+        result.signingRole_ = signingRole_;
+        result.sshMountPoint_ = sshMountPoint_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
+        }
+        if (!other.getNamespace().isEmpty()) {
+          namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (!other.getServerAddress().isEmpty()) {
+          serverAddress_ = other.serverAddress_;
+          onChanged();
+        }
+        if (!other.getSigningRole().isEmpty()) {
+          signingRole_ = other.signingRole_;
+          onChanged();
+        }
+        if (!other.getSshMountPoint().isEmpty()) {
+          sshMountPoint_ = other.sshMountPoint_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA in minutes. Recommended value is 5.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object namespace_ = "";
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The namespace.
+       */
+      public java.lang.String getNamespace() {
+        java.lang.Object ref = namespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for namespace.
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNamespace() {
+        
+        namespace_ = getDefaultInstance().getNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverAddress_ = "";
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The serverAddress.
+       */
+      public java.lang.String getServerAddress() {
+        java.lang.Object ref = serverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for serverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServerAddressBytes() {
+        java.lang.Object ref = serverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerAddress() {
+        
+        serverAddress_ = getDefaultInstance().getServerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signingRole_ = "";
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The signingRole.
+       */
+      public java.lang.String getSigningRole() {
+        java.lang.Object ref = signingRole_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signingRole_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for signingRole.
+       */
+      public com.google.protobuf.ByteString
+          getSigningRoleBytes() {
+        java.lang.Object ref = signingRole_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signingRole_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRole(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigningRole() {
+        
+        signingRole_ = getDefaultInstance().getSigningRole();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRoleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sshMountPoint_ = "";
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The sshMountPoint.
+       */
+      public java.lang.String getSshMountPoint() {
+        java.lang.Object ref = sshMountPoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sshMountPoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for sshMountPoint.
+       */
+      public com.google.protobuf.ByteString
+          getSshMountPointBytes() {
+        java.lang.Object ref = sshMountPoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sshMountPoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The sshMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshMountPoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sshMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSshMountPoint() {
+        
+        sshMountPoint_ = getDefaultInstance().getSshMountPoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the SSH engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string ssh_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for sshMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshMountPointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sshMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.VaultAWSIAMCertSSHStore)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.VaultAWSIAMCertSSHStore)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore();
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VaultAWSIAMCertSSHStore>
+        PARSER = new com.google.protobuf.AbstractParser<VaultAWSIAMCertSSHStore>() {
+      @java.lang.Override
+      public VaultAWSIAMCertSSHStore parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VaultAWSIAMCertSSHStore(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VaultAWSIAMCertSSHStore> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VaultAWSIAMCertSSHStore> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertSSHStore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VaultAWSIAMCertX509StoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.VaultAWSIAMCertX509Store)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    int getIssuedCertTTLMinutes();
+
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    java.lang.String getNamespace();
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The pkiMountPoint.
+     */
+    java.lang.String getPkiMountPoint();
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for pkiMountPoint.
+     */
+    com.google.protobuf.ByteString
+        getPkiMountPointBytes();
+
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    java.lang.String getServerAddress();
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    com.google.protobuf.ByteString
+        getServerAddressBytes();
+
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    java.lang.String getSigningRole();
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    com.google.protobuf.ByteString
+        getSigningRoleBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.VaultAWSIAMCertX509Store}
+   */
+  public static final class VaultAWSIAMCertX509Store extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.VaultAWSIAMCertX509Store)
+      VaultAWSIAMCertX509StoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VaultAWSIAMCertX509Store.newBuilder() to construct.
+    private VaultAWSIAMCertX509Store(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VaultAWSIAMCertX509Store() {
+      id_ = "";
+      name_ = "";
+      namespace_ = "";
+      pkiMountPoint_ = "";
+      serverAddress_ = "";
+      signingRole_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VaultAWSIAMCertX509Store();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VaultAWSIAMCertX509Store(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serverAddress_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespace_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pkiMountPoint_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signingRole_ = s;
+              break;
+            }
+            case 72: {
+
+              issuedCertTTLMinutes_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertX509Store_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertX509Store_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUEDCERTTTLMINUTES_FIELD_NUMBER = 9;
+    private int issuedCertTTLMinutes_;
+    /**
+     * <pre>
+     * The lifetime of certificates issued by this CA represented in minutes.
+     * </pre>
+     *
+     * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+     * @return The issuedCertTTLMinutes.
+     */
+    @java.lang.Override
+    public int getIssuedCertTTLMinutes() {
+      return issuedCertTTLMinutes_;
+    }
+
+    public static final int NAMESPACE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object namespace_;
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    @java.lang.Override
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PKI_MOUNT_POINT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object pkiMountPoint_;
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The pkiMountPoint.
+     */
+    @java.lang.Override
+    public java.lang.String getPkiMountPoint() {
+      java.lang.Object ref = pkiMountPoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pkiMountPoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The mount point of the PKI engine configured with the desired CA
+     * </pre>
+     *
+     * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for pkiMountPoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPkiMountPointBytes() {
+      java.lang.Object ref = pkiMountPoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pkiMountPoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serverAddress_;
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServerAddress() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerAddressBytes() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNING_ROLE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object signingRole_;
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The signingRole.
+     */
+    @java.lang.Override
+    public java.lang.String getSigningRole() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signingRole_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The signing role to be used for signing certificates
+     * </pre>
+     *
+     * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for signingRole.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSigningRoleBytes() {
+      java.lang.Object ref = signingRole_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signingRole_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pkiMountPoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pkiMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        output.writeInt32(9, issuedCertTTLMinutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, namespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pkiMountPoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pkiMountPoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signingRole_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, signingRole_);
+      }
+      if (issuedCertTTLMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, issuedCertTTLMinutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getIssuedCertTTLMinutes()
+          != other.getIssuedCertTTLMinutes()) return false;
+      if (!getNamespace()
+          .equals(other.getNamespace())) return false;
+      if (!getPkiMountPoint()
+          .equals(other.getPkiMountPoint())) return false;
+      if (!getServerAddress()
+          .equals(other.getServerAddress())) return false;
+      if (!getSigningRole()
+          .equals(other.getSigningRole())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ISSUEDCERTTTLMINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuedCertTTLMinutes();
+      hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespace().hashCode();
+      hash = (37 * hash) + PKI_MOUNT_POINT_FIELD_NUMBER;
+      hash = (53 * hash) + getPkiMountPoint().hashCode();
+      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getServerAddress().hashCode();
+      hash = (37 * hash) + SIGNING_ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + getSigningRole().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.VaultAWSIAMCertX509Store}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.VaultAWSIAMCertX509Store)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509StoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertX509Store_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertX509Store_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        issuedCertTTLMinutes_ = 0;
+
+        namespace_ = "";
+
+        pkiMountPoint_ = "";
+
+        serverAddress_ = "";
+
+        signingRole_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_VaultAWSIAMCertX509Store_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.issuedCertTTLMinutes_ = issuedCertTTLMinutes_;
+        result.namespace_ = namespace_;
+        result.pkiMountPoint_ = pkiMountPoint_;
+        result.serverAddress_ = serverAddress_;
+        result.signingRole_ = signingRole_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getIssuedCertTTLMinutes() != 0) {
+          setIssuedCertTTLMinutes(other.getIssuedCertTTLMinutes());
+        }
+        if (!other.getNamespace().isEmpty()) {
+          namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (!other.getPkiMountPoint().isEmpty()) {
+          pkiMountPoint_ = other.pkiMountPoint_;
+          onChanged();
+        }
+        if (!other.getServerAddress().isEmpty()) {
+          serverAddress_ = other.serverAddress_;
+          onChanged();
+        }
+        if (!other.getSigningRole().isEmpty()) {
+          signingRole_ = other.signingRole_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int issuedCertTTLMinutes_ ;
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return The issuedCertTTLMinutes.
+       */
+      @java.lang.Override
+      public int getIssuedCertTTLMinutes() {
+        return issuedCertTTLMinutes_;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The issuedCertTTLMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedCertTTLMinutes(int value) {
+        
+        issuedCertTTLMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The lifetime of certificates issued by this CA represented in minutes.
+       * </pre>
+       *
+       * <code>int32 issuedCertTTLMinutes = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedCertTTLMinutes() {
+        
+        issuedCertTTLMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object namespace_ = "";
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The namespace.
+       */
+      public java.lang.String getNamespace() {
+        java.lang.Object ref = namespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for namespace.
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNamespace() {
+        
+        namespace_ = getDefaultInstance().getNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pkiMountPoint_ = "";
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The pkiMountPoint.
+       */
+      public java.lang.String getPkiMountPoint() {
+        java.lang.Object ref = pkiMountPoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pkiMountPoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for pkiMountPoint.
+       */
+      public com.google.protobuf.ByteString
+          getPkiMountPointBytes() {
+        java.lang.Object ref = pkiMountPoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pkiMountPoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The pkiMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPkiMountPoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pkiMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPkiMountPoint() {
+        
+        pkiMountPoint_ = getDefaultInstance().getPkiMountPoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mount point of the PKI engine configured with the desired CA
+       * </pre>
+       *
+       * <code>string pki_mount_point = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for pkiMountPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPkiMountPointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pkiMountPoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverAddress_ = "";
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The serverAddress.
+       */
+      public java.lang.String getServerAddress() {
+        java.lang.Object ref = serverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for serverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServerAddressBytes() {
+        java.lang.Object ref = serverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerAddress() {
+        
+        serverAddress_ = getDefaultInstance().getServerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signingRole_ = "";
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The signingRole.
+       */
+      public java.lang.String getSigningRole() {
+        java.lang.Object ref = signingRole_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signingRole_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for signingRole.
+       */
+      public com.google.protobuf.ByteString
+          getSigningRoleBytes() {
+        java.lang.Object ref = signingRole_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signingRole_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRole(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigningRole() {
+        
+        signingRole_ = getDefaultInstance().getSigningRole();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing role to be used for signing certificates
+       * </pre>
+       *
+       * <code>string signing_role = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for signingRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningRoleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signingRole_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.VaultAWSIAMCertX509Store)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.VaultAWSIAMCertX509Store)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store();
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VaultAWSIAMCertX509Store>
+        PARSER = new com.google.protobuf.AbstractParser<VaultAWSIAMCertX509Store>() {
+      @java.lang.Override
+      public VaultAWSIAMCertX509Store parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VaultAWSIAMCertX509Store(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VaultAWSIAMCertX509Store> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VaultAWSIAMCertX509Store> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.VaultAWSIAMCertX509Store getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -45500,10 +53976,30 @@ public final class SecretStoresTypesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_VaultAWSEC2Store_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_VaultAWSEC2CertSSHStore_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_VaultAWSEC2CertSSHStore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_VaultAWSEC2CertX509Store_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_VaultAWSEC2CertX509Store_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_VaultAWSIAMStore_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_VaultAWSIAMStore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_VaultAWSIAMCertSSHStore_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_VaultAWSIAMCertSSHStore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_VaultAWSIAMCertX509Store_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_VaultAWSIAMCertX509Store_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_VaultAppRoleStore_descriptor;
   private static final 
@@ -45559,7 +54055,7 @@ public final class SecretStoresTypesPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\030secret_store_types.proto\022\002v1\032\roptions." +
-      "proto\032\ntags.proto\"\303\023\n\013SecretStore\022I\n\003aws" +
+      "proto\032\ntags.proto\"\271\027\n\013SecretStore\022I\n\003aws" +
       "\030\003 \001(\0132\014.v1.AWSStoreB,\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\014j" +
       "son_gateway\022\003aws\362\370\263\007\005\260\363\263\007\001H\000\022d\n\016aws_cert" +
       "_x_509\030\036 \001(\0132\024.v1.AWSCertX509StoreB4\362\370\263\007" +
@@ -45592,218 +54088,212 @@ public final class SecretStoresTypesPlumbing {
       "ateway\022\rkeyfactorX509\362\370\263\007\005\260\363\263\007\001H\000\022c\n\rvau" +
       "lt_awsec_2\030a \001(\0132\024.v1.VaultAWSEC2StoreB4" +
       "\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013vaultAWSE" +
-      "C2\362\370\263\007\005\260\363\263\007\001H\000\022b\n\014vault_awsiam\030` \001(\0132\024.v" +
-      "1.VaultAWSIAMStoreB4\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014jso" +
-      "n_gateway\022\013vaultAWSIAM\362\370\263\007\005\260\363\263\007\001H\000\022f\n\016va" +
-      "ult_app_role\030\004 \001(\0132\025.v1.VaultAppRoleStor" +
-      "eB5\362\370\263\007&\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014vaultA" +
-      "ppRole\362\370\263\007\005\260\363\263\007\001H\000\022}\n\027vault_app_role_cer" +
-      "t_ssh\030^ \001(\0132\034.v1.VaultAppRoleCertSSHStor" +
-      "eB<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023vaultA" +
-      "ppRoleCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022\201\001\n\031vault_app_" +
-      "role_cert_x_509\030_ \001(\0132\035.v1.VaultAppRoleC" +
-      "ertX509StoreB=\362\370\263\007.\312\363\263\007)\302\364\263\007$\n\014json_gate" +
-      "way\022\024vaultAppRoleCertX509\362\370\263\007\005\260\363\263\007\001H\000\022Y\n" +
-      "\tvault_tls\030\001 \001(\0132\021.v1.VaultTLSStoreB1\362\370\263" +
-      "\007\"\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultTLS\362\370\263\007" +
-      "\005\260\363\263\007\001H\000\022p\n\022vault_tls_cert_ssh\030\\ \001(\0132\030.v" +
-      "1.VaultTLSCertSSHStoreB8\362\370\263\007)\312\363\263\007$\302\364\263\007\037\n" +
-      "\014json_gateway\022\017vaultTLSCertSSH\362\370\263\007\005\260\363\263\007\001" +
-      "H\000\022t\n\024vault_tls_cert_x_509\030] \001(\0132\031.v1.Va" +
-      "ultTLSCertX509StoreB9\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\014js" +
-      "on_gateway\022\020vaultTLSCertX509\362\370\263\007\005\260\363\263\007\001H\000" +
-      "\022_\n\013vault_token\030\002 \001(\0132\023.v1.VaultTokenSto" +
-      "reB3\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\nvault" +
-      "Token\362\370\263\007\005\260\363\263\007\001H\000\022v\n\024vault_token_cert_ss" +
-      "h\030Z \001(\0132\032.v1.VaultTokenCertSSHStoreB:\362\370\263" +
-      "\007+\312\363\263\007&\302\364\263\007!\n\014json_gateway\022\021vaultTokenCe" +
-      "rtSSH\362\370\263\007\005\260\363\263\007\001H\000\022z\n\026vault_token_cert_x_" +
-      "509\030[ \001(\0132\033.v1.VaultTokenCertX509StoreB;" +
-      "\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022vaultToke" +
-      "nCertX509\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370\263\007\005\250\363\263\007\001B,\n\014sec" +
-      "ret_store\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"" +
-      "\374\001\n\010AWSStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
-      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006region\030\003 " +
-      "\001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gat" +
-      "eway\022\006region\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\302\364\263\007\n\n\003cli\022\003aws" +
-      "\302\364\263\007\023\n\014json_gateway\022\003aws\302\364\263\007\031\n\022terraform" +
-      "-provider\022\003aws\"\346\004\n\020AWSCertX509Store\022\026\n\002i" +
-      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\300\363\263\007\001\022=\n\005caArn\030\005 \001(\tB.\362\370\263\007)\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007\032\302\364\263\007\025\n\014json_gateway\022\005caArn\022_\n\026cer" +
-      "tificateTemplateArn\030\007 \001(\tB?\362\370\263\007:\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007+\302\364\263\007&\n\014json_gateway\022\026certificateT" +
-      "emplateArn\022[\n\024issuedCertTTLMinutes\030\010 \001(\005" +
-      "B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gatewa" +
-      "y\022\024issuedCertTtlMinutes\022?\n\006region\030\003 \001(\tB" +
-      "/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway" +
-      "\022\006region\022I\n\013signingAlgo\030\006 \001(\tB4\362\370\263\007/\260\363\263\007" +
-      "\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingA" +
-      "lgo\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:" +
-      "n\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013awsCertX509\302" +
-      "\364\263\007\033\n\014json_gateway\022\013awsCertX509\302\364\263\007#\n\022te" +
-      "rraform-provider\022\raws_cert_x509\"\223\002\n\024Acti" +
-      "veDirectoryStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022N\n\016serve" +
-      "r_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
-      "\007\035\n\014json_gateway\022\rserverAddress\022$\n\004tags\030" +
-      "\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:N\372\370\263\007I\250\363\263\007" +
-      "\001\312\363\263\007?\302\364\263\007\026\n\003cli\022\017activeDirectory\302\364\263\007\037\n\014" +
-      "json_gateway\022\017activeDirectory\"\353\001\n\nAzureS" +
-      "tore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001" +
-      "(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\tvault_uri\030\003 \001(\tB1" +
-      "\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022" +
-      "\010vaultUri\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263" +
-      "\007\005\260\363\263\007\001::\372\370\263\0075\250\363\263\007\001\312\363\263\007+\302\364\263\007\014\n\003cli\022\005azur" +
-      "e\302\364\263\007\025\n\014json_gateway\022\005azure\"\253\002\n\023Cyberark" +
-      "ConjurStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
-      "ame\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001" +
-      "(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gate" +
-      "way\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007g\302\364\263\007\025\n\003cli\022\016cy" +
-      "berarkConjur\302\364\263\007\036\n\014json_gateway\022\016cyberar" +
-      "kConjur\302\364\263\007%\n\022terraform-provider\022\017cybera" +
-      "rk_conjur\"\237\002\n\020CyberarkPAMStore\022\026\n\002id\030\001 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004tags\030\203" +
-      "\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263\007\001" +
-      "\312\363\263\007^\302\364\263\007\022\n\003cli\022\013cyberarkPAM\302\364\263\007\033\n\014json_" +
-      "gateway\022\013cyberarkPAM\302\364\263\007\"\n\022terraform-pro" +
-      "vider\022\014cyberark_pam\"\330\002\n\034CyberarkPAMExper" +
-      "imentalStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
+      "C2\362\370\263\007\005\260\363\263\007\001H\000\022z\n\026vault_awsec_2_cert_ssh" +
+      "\030b \001(\0132\033.v1.VaultAWSEC2CertSSHStoreB;\362\370\263" +
+      "\007,\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022vaultAWSEC2C" +
+      "ertSSH\362\370\263\007\005\260\363\263\007\001H\000\022~\n\030vault_awsec_2_cert" +
+      "_x_509\030d \001(\0132\034.v1.VaultAWSEC2CertX509Sto" +
+      "reB<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023vault" +
+      "AWSEC2CertX509\362\370\263\007\005\260\363\263\007\001H\000\022b\n\014vault_awsi" +
+      "am\030` \001(\0132\024.v1.VaultAWSIAMStoreB4\362\370\263\007%\312\363\263" +
+      "\007 \302\364\263\007\033\n\014json_gateway\022\013vaultAWSIAM\362\370\263\007\005\260" +
+      "\363\263\007\001H\000\022y\n\025vault_awsiam_cert_ssh\030c \001(\0132\033." +
+      "v1.VaultAWSIAMCertSSHStoreB;\362\370\263\007,\312\363\263\007\'\302\364" +
+      "\263\007\"\n\014json_gateway\022\022vaultAWSIAMCertSSH\362\370\263" +
+      "\007\005\260\363\263\007\001H\000\022}\n\027vault_awsiam_cert_x_509\030f \001" +
+      "(\0132\034.v1.VaultAWSIAMCertX509StoreB<\362\370\263\007-\312" +
+      "\363\263\007(\302\364\263\007#\n\014json_gateway\022\023vaultAWSIAMCert" +
+      "X509\362\370\263\007\005\260\363\263\007\001H\000\022f\n\016vault_app_role\030\004 \001(\013" +
+      "2\025.v1.VaultAppRoleStoreB5\362\370\263\007&\312\363\263\007!\302\364\263\007\034" +
+      "\n\014json_gateway\022\014vaultAppRole\362\370\263\007\005\260\363\263\007\001H\000" +
+      "\022}\n\027vault_app_role_cert_ssh\030^ \001(\0132\034.v1.V" +
+      "aultAppRoleCertSSHStoreB<\362\370\263\007-\312\363\263\007(\302\364\263\007#" +
+      "\n\014json_gateway\022\023vaultAppRoleCertSSH\362\370\263\007\005" +
+      "\260\363\263\007\001H\000\022\201\001\n\031vault_app_role_cert_x_509\030_ " +
+      "\001(\0132\035.v1.VaultAppRoleCertX509StoreB=\362\370\263\007" +
+      ".\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024vaultAppRoleC" +
+      "ertX509\362\370\263\007\005\260\363\263\007\001H\000\022Y\n\tvault_tls\030\001 \001(\0132\021" +
+      ".v1.VaultTLSStoreB1\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\014json" +
+      "_gateway\022\010vaultTLS\362\370\263\007\005\260\363\263\007\001H\000\022p\n\022vault_" +
+      "tls_cert_ssh\030\\ \001(\0132\030.v1.VaultTLSCertSSHS" +
+      "toreB8\362\370\263\007)\312\363\263\007$\302\364\263\007\037\n\014json_gateway\022\017vau" +
+      "ltTLSCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022t\n\024vault_tls_ce" +
+      "rt_x_509\030] \001(\0132\031.v1.VaultTLSCertX509Stor" +
+      "eB9\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\014json_gateway\022\020vaultT" +
+      "LSCertX509\362\370\263\007\005\260\363\263\007\001H\000\022_\n\013vault_token\030\002 " +
+      "\001(\0132\023.v1.VaultTokenStoreB3\362\370\263\007$\312\363\263\007\037\302\364\263\007" +
+      "\032\n\014json_gateway\022\nvaultToken\362\370\263\007\005\260\363\263\007\001H\000\022" +
+      "v\n\024vault_token_cert_ssh\030Z \001(\0132\032.v1.Vault" +
+      "TokenCertSSHStoreB:\362\370\263\007+\312\363\263\007&\302\364\263\007!\n\014json" +
+      "_gateway\022\021vaultTokenCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022" +
+      "z\n\026vault_token_cert_x_509\030[ \001(\0132\033.v1.Vau" +
+      "ltTokenCertX509StoreB;\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014j" +
+      "son_gateway\022\022vaultTokenCertX509\362\370\263\007\005\260\363\263\007" +
+      "\001H\000:\n\372\370\263\007\005\250\363\263\007\001B,\n\014secret_store\022\034\252\370\263\007\t\252\370" +
+      "\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\374\001\n\010AWSStore\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006region\022\"\n\004ta" +
+      "gs\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263" +
+      "\007\001\312\363\263\007E\302\364\263\007\n\n\003cli\022\003aws\302\364\263\007\023\n\014json_gatewa" +
+      "y\022\003aws\302\364\263\007\031\n\022terraform-provider\022\003aws\"\346\004\n" +
+      "\020AWSCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022=\n\005caAr" +
+      "n\030\005 \001(\tB.\362\370\263\007)\260\363\263\007\001\300\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\014json" +
+      "_gateway\022\005caArn\022_\n\026certificateTemplateAr" +
+      "n\030\007 \001(\tB?\362\370\263\007:\260\363\263\007\001\300\363\263\007\001\312\363\263\007+\302\364\263\007&\n\014json" +
+      "_gateway\022\026certificateTemplateArn\022[\n\024issu" +
+      "edCertTTLMinutes\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMi" +
+      "nutes\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363" +
+      "\263\007\033\302\364\263\007\026\n\014json_gateway\022\006region\022I\n\013signin" +
+      "gAlgo\030\006 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014" +
+      "json_gateway\022\013signingAlgo\022\"\n\004tags\030\004 \001(\0132" +
+      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364" +
+      "\263\007\022\n\003cli\022\013awsCertX509\302\364\263\007\033\n\014json_gateway" +
+      "\022\013awsCertX509\302\364\263\007#\n\022terraform-provider\022\r" +
+      "aws_cert_x509\"\223\002\n\024ActiveDirectoryStore\022\026" +
+      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
+      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022N\n\016server_address\030\003 \001(\tB6\362" +
+      "\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\r" +
+      "serverAddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
+      "\n\362\370\263\007\005\260\363\263\007\001:N\372\370\263\007I\250\363\263\007\001\312\363\263\007?\302\364\263\007\026\n\003cli\022\017" +
+      "activeDirectory\302\364\263\007\037\n\014json_gateway\022\017acti" +
+      "veDirectory\"\353\001\n\nAzureStore\022\026\n\002id\030\001 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007" +
+      "\001\022D\n\tvault_uri\030\003 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultUri\022$\n\004tags\030" +
+      "\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001::\372\370\263\0075\250\363\263\007" +
+      "\001\312\363\263\007+\302\364\263\007\014\n\003cli\022\005azure\302\364\263\007\025\n\014json_gatew" +
+      "ay\022\005azure\"\253\002\n\023CyberarkConjurStore\022\026\n\002id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004tag" +
+      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363" +
+      "\263\007\001\312\363\263\007g\302\364\263\007\025\n\003cli\022\016cyberarkConjur\302\364\263\007\036\n" +
+      "\014json_gateway\022\016cyberarkConjur\302\364\263\007%\n\022terr" +
+      "aform-provider\022\017cyberark_conjur\"\237\002\n\020Cybe" +
+      "rarkPAMStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
       "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 " +
       "\001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gat" +
       "eway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
-      "\362\370\263\007\005\260\363\263\007\001:\231\001\372\370\263\007\223\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263\007\036" +
-      "\n\003cli\022\027cyberarkPAMExperimental\302\364\263\007\'\n\014jso" +
-      "n_gateway\022\027cyberarkPAMExperimental\302\364\263\007/\n" +
-      "\022terraform-provider\022\031cyberark_pam_experi" +
-      "mental\"\263\002\n\014DelineaStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022A" +
-      "\n\nserver_url\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031" +
-      "\n\014json_gateway\022\tserverUrl\022C\n\013tenant_name" +
-      "\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gatew" +
-      "ay\022\ntenantName\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001:>\372\370\263\0079\250\363\263\007\001\312\363\263\007/\302\364\263\007\016\n\003cli\022" +
-      "\007delinea\302\364\263\007\027\n\014json_gateway\022\007delinea\"\346\001\n" +
-      "\010GCPStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004nam" +
-      "e\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022E\n\tprojectID\030\003 " +
-      "\001(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gat" +
-      "eway\022\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
-      "sB\n\362\370\263\007\005\260\363\263\007\001:6\372\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cli" +
-      "\022\003gcp\302\364\263\007\023\n\014json_gateway\022\003gcp\"\235\004\n\020GCPCer" +
-      "tX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
-      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\0226\n\004caID\030\006 \001(\tB" +
-      "(\362\370\263\007#\260\363\263\007\001\312\363\263\007\031\302\364\263\007\024\n\014json_gateway\022\004caI" +
-      "d\022C\n\010caPoolID\030\005 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
-      "\035\302\364\263\007\030\n\014json_gateway\022\010caPoolId\022[\n\024issued" +
-      "CertTTLMinutes\030\007 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263" +
-      "\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMinu" +
-      "tes\022C\n\010location\030\004 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\035\302\364\263\007\030\n\014json_gateway\022\010location\022E\n\tproj" +
-      "ectID\030\003 \001(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014" +
-      "json_gateway\022\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132" +
-      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:F\372\370\263\007A\250\363\263\007\001\312\363\263\0077\302\364" +
-      "\263\007\022\n\003cli\022\013gcpCertX509\302\364\263\007\033\n\014json_gateway" +
-      "\022\013gcpCertX509\"\212\010\n\021KeyfactorSSHStore\022\026\n\002i" +
-      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\300\363\263\007\001\022D\n\014ca_file_path\030\006 \001(\tB.\362\370\263\007)\260" +
-      "\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaFilePath" +
-      "\022[\n\025certificate_file_path\030\004 \001(\tB<\362\370\263\0077\260\363" +
-      "\263\007\001\300\363\263\007\001\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023certif" +
-      "icateFilePath\022t\n\"default_certificate_aut" +
-      "hority_name\030\n \001(\tBH\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302" +
-      "\364\263\007/\n\014json_gateway\022\037defaultCertificateAu" +
-      "thorityName\022p\n default_certificate_profi" +
-      "le_name\030\010 \001(\tBF\362\370\263\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-" +
-      "\n\014json_gateway\022\035defaultCertificateProfil" +
-      "eName\022m\n\037default_end_entity_profile_name" +
-      "\030\t \001(\tBD\362\370\263\007?\260\363\263\007\001\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_" +
-      "gateway\022\033defaultEndEntityProfileName\022Y\n\027" +
-      "enrollment_code_env_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007" +
-      "\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024enrollmentCod" +
-      "eEnvVar\022a\n\033enrollment_username_env_var\030\013" +
-      " \001(\tB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\014json_gateway" +
-      "\022\030enrollmentUsernameEnvVar\022F\n\rkey_file_p" +
-      "ath\030\005 \001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_ga" +
-      "teway\022\013keyFilePath\022N\n\016server_address\030\003 \001" +
-      "(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gate" +
-      "way\022\rserverAddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
-      "TagsB\n\362\370\263\007\005\260\363\263\007\001:H\372\370\263\007C\250\363\263\007\001\312\363\263\0079\302\364\263\007\023\n\003" +
-      "cli\022\014keyfactorSSH\302\364\263\007\034\n\014json_gateway\022\014ke" +
-      "yfactorSSH\"\215\010\n\022KeyfactorX509Store\022\026\n\002id\030" +
-      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\300\363\263\007\001\022D\n\014ca_file_path\030\006 \001(\tB.\362\370\263\007)\260\363\263" +
-      "\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaFilePath\022[" +
-      "\n\025certificate_file_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007" +
-      "\001\300\363\263\007\001\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023certific" +
-      "ateFilePath\022t\n\"default_certificate_autho" +
-      "rity_name\030\n \001(\tBH\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263" +
-      "\007/\n\014json_gateway\022\037defaultCertificateAuth" +
-      "orityName\022p\n default_certificate_profile" +
-      "_name\030\010 \001(\tBF\362\370\263\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014" +
-      "json_gateway\022\035defaultCertificateProfileN" +
-      "ame\022m\n\037default_end_entity_profile_name\030\t" +
-      " \001(\tBD\362\370\263\007?\260\363\263\007\001\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_ga" +
-      "teway\022\033defaultEndEntityProfileName\022Y\n\027en" +
-      "rollment_code_env_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312" +
-      "\363\263\007)\302\364\263\007$\n\014json_gateway\022\024enrollmentCodeE" +
-      "nvVar\022a\n\033enrollment_username_env_var\030\013 \001" +
-      "(\tB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\014json_gateway\022\030" +
-      "enrollmentUsernameEnvVar\022F\n\rkey_file_pat" +
-      "h\030\005 \001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gate" +
-      "way\022\013keyFilePath\022N\n\016server_address\030\003 \001(\t" +
-      "B6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatewa" +
-      "y\022\rserverAddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
-      "gsB\n\362\370\263\007\005\260\363\263\007\001:J\372\370\263\007E\250\363\263\007\001\312\363\263\007;\302\364\263\007\024\n\003cl" +
-      "i\022\rkeyfactorX509\302\364\263\007\035\n\014json_gateway\022\rkey" +
-      "factorX509\"\357\002\n\020VaultAWSEC2Store\022\026\n\002id\030\001 " +
+      "\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263\007\001\312\363\263\007^\302\364\263\007\022\n\003cli\022\013c" +
+      "yberarkPAM\302\364\263\007\033\n\014json_gateway\022\013cyberarkP" +
+      "AM\302\364\263\007\"\n\022terraform-provider\022\014cyberark_pa" +
+      "m\"\330\002\n\034CyberarkPAMExperimentalStore\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004ta" +
+      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\231\001\372\370\263\007\223" +
+      "\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263\007\036\n\003cli\022\027cyberarkPAM" +
+      "Experimental\302\364\263\007\'\n\014json_gateway\022\027cyberar" +
+      "kPAMExperimental\302\364\263\007/\n\022terraform-provide" +
+      "r\022\031cyberark_pam_experimental\"\263\002\n\014Delinea" +
+      "Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
+      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022A\n\nserver_url\030\003 \001(\t" +
+      "B-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tse" +
+      "rverUrl\022C\n\013tenant_name\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001" +
+      "\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ntenantName\022$\n\004" +
+      "tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:>\372\370\263\007" +
+      "9\250\363\263\007\001\312\363\263\007/\302\364\263\007\016\n\003cli\022\007delinea\302\364\263\007\027\n\014jso" +
+      "n_gateway\022\007delinea\"\346\001\n\010GCPStore\022\026\n\002id\030\001 " +
       "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
-      "\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263" +
-      "\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016serv" +
-      "er_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364" +
-      "\263\007\035\n\014json_gateway\022\rserverAddress\022\"\n\004tags" +
-      "\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i\250\363\263\007\001" +
-      "\312\363\263\007_\302\364\263\007\022\n\003cli\022\013vaultAWSEC2\302\364\263\007\033\n\014json_" +
-      "gateway\022\013vaultAWSEC2\302\364\263\007#\n\022terraform-pro" +
-      "vider\022\rvault_aws_ec2\"\357\002\n\020VaultAWSIAMStor" +
-      "e\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB" +
-      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263" +
-      "\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespa" +
-      "ce\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
-      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddre" +
-      "ss\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n" +
-      "\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013vaultAWSIAM\302\364" +
-      "\263\007\033\n\014json_gateway\022\013vaultAWSIAM\302\364\263\007#\n\022ter" +
-      "raform-provider\022\rvault_aws_iam\"\362\002\n\021Vault" +
-      "AppRoleStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
-      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace" +
-      "\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatew" +
-      "ay\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6\362" +
-      "\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\r" +
-      "serverAddress\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001\312\363\263\007a\302\364\263\007\023\n\003cli\022\014va" +
-      "ultAppRole\302\364\263\007\034\n\014json_gateway\022\014vaultAppR" +
-      "ole\302\364\263\007#\n\022terraform-provider\022\rvault_appr" +
-      "ole\"\214\005\n\030VaultAppRoleCertSSHStore\022\026\n\002id\030\001" +
+      "\001\300\363\263\007\001\022E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tprojectId\022$\n" +
+      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:6\372\370\263" +
+      "\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cli\022\003gcp\302\364\263\007\023\n\014json_g" +
+      "ateway\022\003gcp\"\235\004\n\020GCPCertX509Store\022\026\n\002id\030\001" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263" +
-      "\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362" +
-      "\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024" +
-      "issuedCertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB" +
-      "-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnam" +
-      "espace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263" +
-      "\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverA" +
-      "ddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001" +
-      "\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRo" +
-      "le\022O\n\017ssh_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPo" +
-      "int\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:" +
-      "\210\001\372\370\263\007\202\001\250\363\263\007\001\312\363\263\007x\302\364\263\007\032\n\003cli\022\023vaultAppRo" +
-      "leCertSSH\302\364\263\007#\n\014json_gateway\022\023vaultAppRo" +
-      "leCertSSH\302\364\263\007,\n\022terraform-provider\022\026vaul" +
-      "t_approle_cert_ssh\"\220\005\n\031VaultAppRoleCertX" +
+      "\007\001\300\363\263\007\001\0226\n\004caID\030\006 \001(\tB(\362\370\263\007#\260\363\263\007\001\312\363\263\007\031\302\364" +
+      "\263\007\024\n\014json_gateway\022\004caId\022C\n\010caPoolID\030\005 \001(" +
+      "\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gatew" +
+      "ay\022\010caPoolId\022[\n\024issuedCertTTLMinutes\030\007 \001" +
+      "(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gate" +
+      "way\022\024issuedCertTtlMinutes\022C\n\010location\030\004 " +
+      "\001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gat" +
+      "eway\022\010location\022E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-" +
+      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tproj" +
+      "ectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
+      "\263\007\001:F\372\370\263\007A\250\363\263\007\001\312\363\263\0077\302\364\263\007\022\n\003cli\022\013gcpCertX" +
+      "509\302\364\263\007\033\n\014json_gateway\022\013gcpCertX509\"\212\010\n\021" +
+      "KeyfactorSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014ca_f" +
+      "ile_path\030\006 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014js" +
+      "on_gateway\022\ncaFilePath\022[\n\025certificate_fi" +
+      "le_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001\300\363\263\007\001\312\363\263\007(\302\364\263\007#" +
+      "\n\014json_gateway\022\023certificateFilePath\022t\n\"d" +
+      "efault_certificate_authority_name\030\n \001(\tB" +
+      "H\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007/\n\014json_gateway" +
+      "\022\037defaultCertificateAuthorityName\022p\n def" +
+      "ault_certificate_profile_name\030\010 \001(\tBF\362\370\263" +
+      "\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014json_gateway\022\035de" +
+      "faultCertificateProfileName\022m\n\037default_e" +
+      "nd_entity_profile_name\030\t \001(\tBD\362\370\263\007?\260\363\263\007\001" +
+      "\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_gateway\022\033defaultEn" +
+      "dEntityProfileName\022Y\n\027enrollment_code_en" +
+      "v_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_" +
+      "gateway\022\024enrollmentCodeEnvVar\022a\n\033enrollm" +
+      "ent_username_env_var\030\013 \001(\tB<\362\370\263\0077\260\363\263\007\001\312\363" +
+      "\263\007-\302\364\263\007(\n\014json_gateway\022\030enrollmentUserna" +
+      "meEnvVar\022F\n\rkey_file_path\030\005 \001(\tB/\362\370\263\007*\260\363" +
+      "\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013keyFilePath" +
+      "\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress" +
+      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:H" +
+      "\372\370\263\007C\250\363\263\007\001\312\363\263\0079\302\364\263\007\023\n\003cli\022\014keyfactorSSH\302" +
+      "\364\263\007\034\n\014json_gateway\022\014keyfactorSSH\"\215\010\n\022Key" +
+      "factorX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014ca_fil" +
+      "e_path\030\006 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json" +
+      "_gateway\022\ncaFilePath\022[\n\025certificate_file" +
+      "_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001\300\363\263\007\001\312\363\263\007(\302\364\263\007#\n\014" +
+      "json_gateway\022\023certificateFilePath\022t\n\"def" +
+      "ault_certificate_authority_name\030\n \001(\tBH\362" +
+      "\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007/\n\014json_gateway\022\037" +
+      "defaultCertificateAuthorityName\022p\n defau" +
+      "lt_certificate_profile_name\030\010 \001(\tBF\362\370\263\007A" +
+      "\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014json_gateway\022\035defa" +
+      "ultCertificateProfileName\022m\n\037default_end" +
+      "_entity_profile_name\030\t \001(\tBD\362\370\263\007?\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_gateway\022\033defaultEndE" +
+      "ntityProfileName\022Y\n\027enrollment_code_env_" +
+      "var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_ga" +
+      "teway\022\024enrollmentCodeEnvVar\022a\n\033enrollmen" +
+      "t_username_env_var\030\013 \001(\tB<\362\370\263\0077\260\363\263\007\001\312\363\263\007" +
+      "-\302\364\263\007(\n\014json_gateway\022\030enrollmentUsername" +
+      "EnvVar\022F\n\rkey_file_path\030\005 \001(\tB/\362\370\263\007*\260\363\263\007" +
+      "\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013keyFilePath\022N" +
+      "\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022$" +
+      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:J\372\370" +
+      "\263\007E\250\363\263\007\001\312\363\263\007;\302\364\263\007\024\n\003cli\022\rkeyfactorX509\302\364" +
+      "\263\007\035\n\014json_gateway\022\rkeyfactorX509\"\357\002\n\020Vau" +
+      "ltAWSEC2Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
+      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespac" +
+      "e\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gate" +
+      "way\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6" +
+      "\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022" +
+      "\rserverAddress\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n" +
+      "\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013v" +
+      "aultAWSEC2\302\364\263\007\033\n\014json_gateway\022\013vaultAWSE" +
+      "C2\302\364\263\007#\n\022terraform-provider\022\rvault_aws_e" +
+      "c2\"\216\005\n\027VaultAWSEC2CertSSHStore\022\026\n\002id\030\001 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
+      "\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263" +
+      "\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024is" +
+      "suedCertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362" +
+      "\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnames" +
+      "pace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001" +
+      "\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAdd" +
+      "ress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole" +
+      "\022O\n\017ssh_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoin" +
+      "t\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\213\001" +
+      "\372\370\263\007\205\001\250\363\263\007\001\312\363\263\007{\210\364\263\007\001\302\364\263\007\031\n\003cli\022\022vaultAW" +
+      "SEC2CertSSH\302\364\263\007\"\n\014json_gateway\022\022vaultAWS" +
+      "EC2CertSSH\302\364\263\007,\n\022terraform-provider\022\026vau" +
+      "lt_aws_ec2_cert_ssh\"\222\005\n\030VaultAWSEC2CertX" +
       "509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name" +
       "\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTL" +
       "Minutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$" +
@@ -45815,114 +54305,199 @@ public final class SecretStoresTypesPlumbing {
       "s\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json" +
       "_gateway\022\rserverAddress\022J\n\014signing_role\030" +
       "\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_g" +
-      "ateway\022\013signingRole\022\"\n\004tags\030\010 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001:\213\001\372\370\263\007\205\001\250\363\263\007\001\312\363\263\007{\302\364\263\007\033\n" +
-      "\003cli\022\024vaultAppRoleCertX509\302\364\263\007$\n\014json_ga" +
-      "teway\022\024vaultAppRoleCertX509\302\364\263\007-\n\022terraf" +
-      "orm-provider\022\027vault_approle_cert_x509\"\314\004" +
-      "\n\rVaultTLSStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cer" +
-      "t_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json" +
-      "_gateway\022\ncaCertPath\022Q\n\020client_cert_path" +
-      "\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_" +
-      "gateway\022\016clientCertPath\022O\n\017client_key_pa" +
-      "th\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014jso" +
-      "n_gateway\022\rclientKeyPath\022@\n\tnamespace\030\010 " +
-      "\001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022" +
-      "\tnamespace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\007" +
-      "1\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rser" +
-      "verAddress\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
-      "\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\312\363\263\007U\302\364\263\007\017\n\003cli\022\010vault" +
-      "TLS\302\364\263\007\030\n\014json_gateway\022\010vaultTLS\302\364\263\007\037\n\022t" +
-      "erraform-provider\022\tvault_tls\"\344\006\n\024VaultTL" +
-      "SCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
-      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_" +
-      "path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_g" +
-      "ateway\022\ncaCertPath\022Q\n\020client_cert_path\030\005" +
-      " \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_ga" +
-      "teway\022\016clientCertPath\022O\n\017client_key_path" +
-      "\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_" +
-      "gateway\022\rclientKeyPath\022[\n\024issuedCertTTLM" +
-      "inutes\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n" +
-      "\014json_gateway\022\024issuedCertTtlMinutes\022@\n\tn" +
-      "amespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014js" +
-      "on_gateway\022\tnamespace\022N\n\016server_address\030" +
-      "\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_g" +
-      "ateway\022\rserverAddress\022J\n\014signing_role\030\n " +
-      "\001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gat" +
-      "eway\022\013signingRole\022O\n\017ssh_mount_point\030\t \001" +
-      "(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gate" +
-      "way\022\rsshMountPoint\022\"\n\004tags\030\007 \001(\0132\010.v1.Ta" +
-      "gsB\n\362\370\263\007\005\260\363\263\007\001:{\372\370\263\007v\250\363\263\007\001\312\363\263\007l\302\364\263\007\026\n\003cl" +
-      "i\022\017vaultTLSCertSSH\302\364\263\007\037\n\014json_gateway\022\017v" +
-      "aultTLSCertSSH\302\364\263\007(\n\022terraform-provider\022" +
-      "\022vault_tls_cert_ssh\"\350\006\n\025VaultTLSCertX509" +
-      "Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
-      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001" +
-      "(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\n" +
-      "caCertPath\022Q\n\020client_cert_path\030\005 \001(\tB7\362\370" +
-      "\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016c" +
-      "lientCertPath\022O\n\017client_key_path\030\006 \001(\tB6" +
-      "\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022" +
-      "\rclientKeyPath\022[\n\024issuedCertTTLMinutes\030\013" +
-      " \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_ga" +
-      "teway\022\024issuedCertTtlMinutes\022@\n\tnamespace" +
-      "\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatew" +
-      "ay\022\tnamespace\022O\n\017pki_mount_point\030\t \001(\tB6" +
-      "\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022" +
-      "\rpkiMountPoint\022N\n\016server_address\030\003 \001(\tB6" +
-      "\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022" +
-      "\rserverAddress\022J\n\014signing_role\030\n \001(\tB4\362\370" +
-      "\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013s" +
-      "igningRole\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
-      "\005\260\363\263\007\001:~\372\370\263\007y\250\363\263\007\001\312\363\263\007o\302\364\263\007\027\n\003cli\022\020vault" +
-      "TLSCertX509\302\364\263\007 \n\014json_gateway\022\020vaultTLS" +
-      "CertX509\302\364\263\007)\n\022terraform-provider\022\023vault" +
-      "_tls_cert_x509\"\352\002\n\017VaultTokenStore\022\026\n\002id" +
-      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001" +
-      "\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016s" +
-      "erver_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
-      "\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022\"\n\004t" +
-      "ags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363" +
-      "\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cli\022\nvaultToken\302\364\263\007\032\n\014jso" +
-      "n_gateway\022\nvaultToken\302\364\263\007!\n\022terraform-pr" +
-      "ovider\022\013vault_token\"\203\005\n\026VaultTokenCertSS" +
-      "HStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMi" +
-      "nutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014" +
-      "json_gateway\022\024issuedCertTtlMinutes\022@\n\tna" +
-      "mespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014jso" +
-      "n_gateway\022\tnamespace\022N\n\016server_address\030\003" +
-      " \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_ga" +
-      "teway\022\rserverAddress\022J\n\014signing_role\030\007 \001" +
-      "(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gate" +
-      "way\022\013signingRole\022O\n\017ssh_mount_point\030\006 \001(" +
-      "\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatew" +
-      "ay\022\rsshMountPoint\022\"\n\004tags\030\004 \001(\0132\010.v1.Tag" +
-      "sB\n\362\370\263\007\005\260\363\263\007\001:\201\001\372\370\263\007|\250\363\263\007\001\312\363\263\007r\302\364\263\007\030\n\003cl" +
-      "i\022\021vaultTokenCertSSH\302\364\263\007!\n\014json_gateway\022" +
-      "\021vaultTokenCertSSH\302\364\263\007*\n\022terraform-provi" +
-      "der\022\024vault_token_cert_ssh\"\207\005\n\027VaultToken" +
-      "CertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
-      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCe" +
-      "rtTTLMinutes\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)" +
-      "\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMinute" +
-      "s\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263" +
-      "\007\031\n\014json_gateway\022\tnamespace\022O\n\017pki_mount" +
-      "_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n" +
-      "\014json_gateway\022\rpkiMountPoint\022N\n\016server_a" +
+      "ateway\022\013signingRole\022\"\n\004tags\030\004 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001:\216\001\372\370\263\007\210\001\250\363\263\007\001\312\363\263\007~\210\364\263\007\001\302" +
+      "\364\263\007\032\n\003cli\022\023vaultAWSEC2CertX509\302\364\263\007#\n\014jso" +
+      "n_gateway\022\023vaultAWSEC2CertX509\302\364\263\007-\n\022ter" +
+      "raform-provider\022\027vault_aws_ec2_cert_x509" +
+      "\"\357\002\n\020VaultAWSIAMStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\t" +
+      "namespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014j" +
+      "son_gateway\022\tnamespace\022N\n\016server_address" +
+      "\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_" +
+      "gateway\022\rserverAddress\022\"\n\004tags\030\010 \001(\0132\010.v" +
+      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022" +
+      "\n\003cli\022\013vaultAWSIAM\302\364\263\007\033\n\014json_gateway\022\013v" +
+      "aultAWSIAM\302\364\263\007#\n\022terraform-provider\022\rvau" +
+      "lt_aws_iam\"\216\005\n\027VaultAWSIAMCertSSHStore\022\026" +
+      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
+      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t " +
+      "\001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gat" +
+      "eway\022\024issuedCertTtlMinutes\022@\n\tnamespace\030" +
+      "\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatewa" +
+      "y\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6\362\370" +
+      "\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rs" +
+      "erverAddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007" +
+      "/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013sig" +
+      "ningRole\022O\n\017ssh_mount_point\030\006 \001(\tB6\362\370\263\0071" +
+      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshM" +
+      "ountPoint\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
+      "\260\363\263\007\001:\213\001\372\370\263\007\205\001\250\363\263\007\001\312\363\263\007{\210\364\263\007\001\302\364\263\007\031\n\003cli\022" +
+      "\022vaultAWSIAMCertSSH\302\364\263\007\"\n\014json_gateway\022\022" +
+      "vaultAWSIAMCertSSH\302\364\263\007,\n\022terraform-provi" +
+      "der\022\026vault_aws_iam_cert_ssh\"\222\005\n\030VaultAWS" +
+      "IAMCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issue" +
+      "dCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363" +
+      "\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMin" +
+      "utes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036" +
+      "\302\364\263\007\031\n\014json_gateway\022\tnamespace\022O\n\017pki_mo" +
+      "unt_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
+      "\007\035\n\014json_gateway\022\rpkiMountPoint\022N\n\016serve" +
+      "r_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
+      "\007\035\n\014json_gateway\022\rserverAddress\022J\n\014signi" +
+      "ng_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033" +
+      "\n\014json_gateway\022\013signingRole\022\"\n\004tags\030\004 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\216\001\372\370\263\007\210\001\250\363\263\007\001\312\363\263" +
+      "\007~\210\364\263\007\001\302\364\263\007\032\n\003cli\022\023vaultAWSIAMCertX509\302\364" +
+      "\263\007#\n\014json_gateway\022\023vaultAWSIAMCertX509\302\364" +
+      "\263\007-\n\022terraform-provider\022\027vault_aws_iam_c" +
+      "ert_x509\"\362\002\n\021VaultAppRoleStore\022\026\n\002id\030\001 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
+      "\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007" +
+      "\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016serve" +
+      "r_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
+      "\007\035\n\014json_gateway\022\rserverAddress\022\"\n\004tags\030" +
+      "\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001\312" +
+      "\363\263\007a\302\364\263\007\023\n\003cli\022\014vaultAppRole\302\364\263\007\034\n\014json_" +
+      "gateway\022\014vaultAppRole\302\364\263\007#\n\022terraform-pr" +
+      "ovider\022\rvault_approle\"\214\005\n\030VaultAppRoleCe" +
+      "rtSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
+      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertT" +
+      "TLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263" +
+      "\007$\n\014json_gateway\022\024issuedCertTtlMinutes\022@" +
+      "\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n" +
+      "\014json_gateway\022\tnamespace\022N\n\016server_addre" +
+      "ss\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014jso" +
+      "n_gateway\022\rserverAddress\022J\n\014signing_role" +
+      "\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_" +
+      "gateway\022\013signingRole\022O\n\017ssh_mount_point\030" +
+      "\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_g" +
+      "ateway\022\rsshMountPoint\022\"\n\004tags\030\010 \001(\0132\010.v1" +
+      ".TagsB\n\362\370\263\007\005\260\363\263\007\001:\210\001\372\370\263\007\202\001\250\363\263\007\001\312\363\263\007x\302\364\263\007" +
+      "\032\n\003cli\022\023vaultAppRoleCertSSH\302\364\263\007#\n\014json_g" +
+      "ateway\022\023vaultAppRoleCertSSH\302\364\263\007,\n\022terraf" +
+      "orm-provider\022\026vault_approle_cert_ssh\"\220\005\n" +
+      "\031VaultAppRoleCertX509Store\022\026\n\002id\030\001 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007" +
+      "\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363" +
+      "\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issued" +
+      "CertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(" +
+      "\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace" +
+      "\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMountPoin" +
+      "t\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddres" +
+      "s\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022\"\n" +
+      "\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\213\001\372\370\263\007" +
+      "\205\001\250\363\263\007\001\312\363\263\007{\302\364\263\007\033\n\003cli\022\024vaultAppRoleCert" +
+      "X509\302\364\263\007$\n\014json_gateway\022\024vaultAppRoleCer" +
+      "tX509\302\364\263\007-\n\022terraform-provider\022\027vault_ap" +
+      "prole_cert_x509\"\314\004\n\rVaultTLSStore\022\026\n\002id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263" +
+      "\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q" +
+      "\n\020client_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCertPat" +
+      "h\022O\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyPa" +
+      "th\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364" +
+      "\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016server_a" +
       "ddress\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n" +
-      "\014json_gateway\022\rserverAddress\022J\n\014signing_" +
-      "role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014j" +
-      "son_gateway\022\013signingRole\022\"\n\004tags\030\004 \001(\0132\010" +
-      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\204\001\372\370\263\007\177\250\363\263\007\001\312\363\263\007u\302\364" +
-      "\263\007\031\n\003cli\022\022vaultTokenCertX509\302\364\263\007\"\n\014json_" +
-      "gateway\022\022vaultTokenCertX509\302\364\263\007+\n\022terraf" +
-      "orm-provider\022\025vault_token_cert_x509Bm\n\031c" +
-      "om.strongdm.api.plumbingB\031SecretStoresTy" +
-      "pesPlumbingZ5github.com/strongdm/strongd" +
-      "m-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\014json_gateway\022\rserverAddress\022\"\n\004tags\030\007 \001" +
+      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\312\363\263\007" +
+      "U\302\364\263\007\017\n\003cli\022\010vaultTLS\302\364\263\007\030\n\014json_gateway" +
+      "\022\010vaultTLS\302\364\263\007\037\n\022terraform-provider\022\tvau" +
+      "lt_tls\"\344\006\n\024VaultTLSCertSSHStore\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001" +
+      "\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020" +
+      "client_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCertPath\022" +
+      "O\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyPath" +
+      "\022[\n\024issuedCertTTLMinutes\030\013 \001(\005B=\362\370\263\0078\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedC" +
+      "ertTtlMinutes\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260" +
+      "\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022" +
+      "N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022" +
+      "J\n\014signing_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363" +
+      "\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017s" +
+      "sh_mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n\004" +
+      "tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:{\372\370\263\007v\250" +
+      "\363\263\007\001\312\363\263\007l\302\364\263\007\026\n\003cli\022\017vaultTLSCertSSH\302\364\263\007" +
+      "\037\n\014json_gateway\022\017vaultTLSCertSSH\302\364\263\007(\n\022t" +
+      "erraform-provider\022\022vault_tls_cert_ssh\"\350\006" +
+      "\n\025VaultTLSCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D" +
+      "\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263" +
+      "\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020client_c" +
+      "ert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007" +
+      "\036\n\014json_gateway\022\016clientCertPath\022O\n\017clien" +
+      "t_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364" +
+      "\263\007\035\n\014json_gateway\022\rclientKeyPath\022[\n\024issu" +
+      "edCertTTLMinutes\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMi" +
+      "nutes\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007" +
+      "\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022O\n\017pki_m" +
+      "ount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364" +
+      "\263\007\035\n\014json_gateway\022\rpkiMountPoint\022N\n\016serv" +
+      "er_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364" +
+      "\263\007\035\n\014json_gateway\022\rserverAddress\022J\n\014sign" +
+      "ing_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007" +
+      "\033\n\014json_gateway\022\013signingRole\022\"\n\004tags\030\007 \001" +
+      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:~\372\370\263\007y\250\363\263\007\001\312\363\263\007" +
+      "o\302\364\263\007\027\n\003cli\022\020vaultTLSCertX509\302\364\263\007 \n\014json" +
+      "_gateway\022\020vaultTLSCertX509\302\364\263\007)\n\022terrafo" +
+      "rm-provider\022\023vault_tls_cert_x509\"\352\002\n\017Vau" +
+      "ltTokenStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004",
+      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace" +
+      "\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatew" +
+      "ay\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6\362" +
+      "\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\r" +
+      "serverAddress\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cli\022\nva" +
+      "ultToken\302\364\263\007\032\n\014json_gateway\022\nvaultToken\302" +
+      "\364\263\007!\n\022terraform-provider\022\013vault_token\"\203\005" +
+      "\n\026VaultTokenCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
+      "[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007" +
+      "\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCe" +
+      "rtTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363" +
+      "\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N" +
+      "\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022J" +
+      "\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017ss" +
+      "h_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
+      "\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n\004t" +
+      "ags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\201\001\372\370\263\007|\250" +
+      "\363\263\007\001\312\363\263\007r\302\364\263\007\030\n\003cli\022\021vaultTokenCertSSH\302\364" +
+      "\263\007!\n\014json_gateway\022\021vaultTokenCertSSH\302\364\263\007" +
+      "*\n\022terraform-provider\022\024vault_token_cert_" +
+      "ssh\"\207\005\n\027VaultTokenCertX509Store\022\026\n\002id\030\001 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
+      "\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\010 \001(\005B=\362\370" +
+      "\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024i" +
+      "ssuedCertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-" +
+      "\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tname" +
+      "space\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMoun" +
+      "tPoint\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverA" +
+      "ddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001" +
+      "\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRo" +
+      "le\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\204" +
+      "\001\372\370\263\007\177\250\363\263\007\001\312\363\263\007u\302\364\263\007\031\n\003cli\022\022vaultTokenCe" +
+      "rtX509\302\364\263\007\"\n\014json_gateway\022\022vaultTokenCer" +
+      "tX509\302\364\263\007+\n\022terraform-provider\022\025vault_to" +
+      "ken_cert_x509Bm\n\031com.strongdm.api.plumbi" +
+      "ngB\031SecretStoresTypesPlumbingZ5github.co" +
+      "m/strongdm/strongdm-sdk-go/v3/internal/v" +
+      "1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45935,7 +54510,7 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_SecretStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretStore_descriptor,
-        new java.lang.String[] { "Aws", "AwsCertX509", "ActiveDirectory", "Azure", "CyberarkConjur", "CyberarkPam", "CyberarkPamExperimental", "Delinea", "Gcp", "GcpCertX509", "KeyfactorSsh", "KeyfactorX509", "VaultAwsec2", "VaultAwsiam", "VaultAppRole", "VaultAppRoleCertSsh", "VaultAppRoleCertX509", "VaultTls", "VaultTlsCertSsh", "VaultTlsCertX509", "VaultToken", "VaultTokenCertSsh", "VaultTokenCertX509", "SecretStore", });
+        new java.lang.String[] { "Aws", "AwsCertX509", "ActiveDirectory", "Azure", "CyberarkConjur", "CyberarkPam", "CyberarkPamExperimental", "Delinea", "Gcp", "GcpCertX509", "KeyfactorSsh", "KeyfactorX509", "VaultAwsec2", "VaultAwsec2CertSsh", "VaultAwsec2CertX509", "VaultAwsiam", "VaultAwsiamCertSsh", "VaultAwsiamCertX509", "VaultAppRole", "VaultAppRoleCertSsh", "VaultAppRoleCertX509", "VaultTls", "VaultTlsCertSsh", "VaultTlsCertX509", "VaultToken", "VaultTokenCertSsh", "VaultTokenCertX509", "SecretStore", });
     internal_static_v1_AWSStore_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_AWSStore_fieldAccessorTable = new
@@ -46014,62 +54589,86 @@ public final class SecretStoresTypesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSEC2Store_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
-    internal_static_v1_VaultAWSIAMStore_descriptor =
+    internal_static_v1_VaultAWSEC2CertSSHStore_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_v1_VaultAWSEC2CertSSHStore_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_VaultAWSEC2CertSSHStore_descriptor,
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
+    internal_static_v1_VaultAWSEC2CertX509Store_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_v1_VaultAWSEC2CertX509Store_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_VaultAWSEC2CertX509Store_descriptor,
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
+    internal_static_v1_VaultAWSIAMStore_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_v1_VaultAWSIAMStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSIAMStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
+    internal_static_v1_VaultAWSIAMCertSSHStore_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_v1_VaultAWSIAMCertSSHStore_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_VaultAWSIAMCertSSHStore_descriptor,
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
+    internal_static_v1_VaultAWSIAMCertX509Store_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_v1_VaultAWSIAMCertX509Store_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_VaultAWSIAMCertX509Store_descriptor,
+        new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultAppRoleStore_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_v1_VaultAppRoleStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultAppRoleCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_v1_VaultAppRoleCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultAppRoleCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_v1_VaultAppRoleCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTLSStore_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_v1_VaultTLSStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTLSCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_v1_VaultTLSCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTLSCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_v1_VaultTLSCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTokenStore_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_v1_VaultTokenStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTokenCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_v1_VaultTokenCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTokenCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_v1_VaultTokenCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertX509Store_descriptor,
