@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * MTLSMysql is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class MTLSMysql implements Resource {
   private String bindInterface;
   /**
