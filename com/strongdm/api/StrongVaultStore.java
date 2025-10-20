@@ -17,7 +17,11 @@
 
 package com.strongdm.api;
 
-public class AWSStore implements SecretStore {
+/**
+ * StrongVaultStore is currently unstable, and its API may change, or it may be removed, without a
+ * major version bump.
+ */
+public class StrongVaultStore implements SecretStore {
   private String id;
   /** Unique identifier of the SecretStore. */
   public String getId() {
@@ -36,42 +40,6 @@ public class AWSStore implements SecretStore {
   /** Unique human-readable name of the SecretStore. */
   public void setName(String in) {
     this.name = in;
-  }
-
-  private String region;
-  /** The AWS region to target e.g. us-east-1 */
-  public String getRegion() {
-    return this.region;
-  }
-  /** The AWS region to target e.g. us-east-1 */
-  public void setRegion(String in) {
-    this.region = in;
-  }
-
-  private String roleArn;
-  /** The role to assume after logging in. */
-  public String getRoleArn() {
-    return this.roleArn;
-  }
-  /** The role to assume after logging in. */
-  public void setRoleArn(String in) {
-    this.roleArn = in;
-  }
-
-  private String roleExternalId;
-  /**
-   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
-   * provided.
-   */
-  public String getRoleExternalId() {
-    return this.roleExternalId;
-  }
-  /**
-   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
-   * provided.
-   */
-  public void setRoleExternalId(String in) {
-    this.roleExternalId = in;
   }
 
   private java.util.Map<String, String> tags;

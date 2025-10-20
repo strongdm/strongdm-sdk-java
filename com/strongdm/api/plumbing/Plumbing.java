@@ -1494,6 +1494,8 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
   }
@@ -1511,6 +1513,12 @@ public class Plumbing {
     }
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
@@ -22744,6 +22752,9 @@ public class Plumbing {
     if (plumbing.hasKeyfactorX509()) {
       return convertKeyfactorX509StoreToPorcelain(plumbing.getKeyfactorX509());
     }
+    if (plumbing.hasStrongVault()) {
+      return convertStrongVaultStoreToPorcelain(plumbing.getStrongVault());
+    }
     if (plumbing.hasVaultAppRole()) {
       return convertVaultAppRoleStoreToPorcelain(plumbing.getVaultAppRole());
     }
@@ -22863,6 +22874,12 @@ public class Plumbing {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setKeyfactorX509(
           convertKeyfactorX509StoreToPlumbing((com.strongdm.api.KeyfactorX509Store) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.StrongVaultStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setStrongVault(
+          convertStrongVaultStoreToPlumbing((com.strongdm.api.StrongVaultStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.VaultAppRoleStore) {
@@ -23686,6 +23703,53 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertSnowsightToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.StrongVaultStore convertStrongVaultStoreToPorcelain(
+      StrongVaultStore plumbing) {
+    com.strongdm.api.StrongVaultStore porcelain = new com.strongdm.api.StrongVaultStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static StrongVaultStore convertStrongVaultStoreToPlumbing(
+      com.strongdm.api.StrongVaultStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    StrongVaultStore.Builder builder = StrongVaultStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.StrongVaultStore> convertRepeatedStrongVaultStoreToPorcelain(
+      Collection<StrongVaultStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.StrongVaultStore>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertStrongVaultStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<StrongVaultStore> convertRepeatedStrongVaultStoreToPlumbing(
+      Collection<com.strongdm.api.StrongVaultStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<StrongVaultStore>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertStrongVaultStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
