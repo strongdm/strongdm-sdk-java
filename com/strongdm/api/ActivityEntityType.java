@@ -46,4 +46,5 @@ public final class ActivityEntityType {
   public static final String CERTIFICATE_AUTHORITY = "certificate_authority";
   public static final String POLICY = "policy";
   public static final String PROXY_CLUSTER_KEY = "proxy_cluster_key";
+  public static final String TRUST_DOMAIN = "trust_domain";
 }

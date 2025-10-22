@@ -161,6 +161,9 @@ public final class ActivityVerb {
   public static final String SECRET_ENGINE_UPDATED = "secret engine updated";
   public static final String SECRET_ENGINE_ROTATED = "secret engine's credentials updated";
   public static final String SECRET_ENGINE_DELETED = "secret engine deleted";
+  public static final String TRUST_DOMAIN_CREATED = "trust domain created";
+  public static final String TRUST_DOMAIN_UPDATED = "trust domain updated";
+  public static final String TRUST_DOMAIN_DELETED = "trust domain deleted";
   public static final String REMOTE_IDENTITY_GROUP_CREATED = "remote identity group created";
   public static final String REMOTE_IDENTITY_GROUP_UPDATED = "remote identity group updated";
   public static final String REMOTE_IDENTITY_GROUP_DELETED = "remote identity group deleted";
