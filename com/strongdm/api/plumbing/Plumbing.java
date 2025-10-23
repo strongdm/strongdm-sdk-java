@@ -9024,6 +9024,101 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.ElasticacheRedisIAM convertElasticacheRedisIAMToPorcelain(
+      ElasticacheRedisIAM plumbing) {
+    com.strongdm.api.ElasticacheRedisIAM porcelain = new com.strongdm.api.ElasticacheRedisIAM();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleAssumptionArn((plumbing.getRoleAssumptionArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static ElasticacheRedisIAM convertElasticacheRedisIAMToPlumbing(
+      com.strongdm.api.ElasticacheRedisIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ElasticacheRedisIAM.Builder builder = ElasticacheRedisIAM.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleAssumptionArn() != null) {
+      builder.setRoleAssumptionArn((porcelain.getRoleAssumptionArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ElasticacheRedisIAM>
+      convertRepeatedElasticacheRedisIAMToPorcelain(Collection<ElasticacheRedisIAM> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ElasticacheRedisIAM>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertElasticacheRedisIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ElasticacheRedisIAM> convertRepeatedElasticacheRedisIAMToPlumbing(
+      Collection<com.strongdm.api.ElasticacheRedisIAM> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ElasticacheRedisIAM>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertElasticacheRedisIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.EntraID convertEntraIDToPorcelain(EntraID plumbing) {
     com.strongdm.api.EntraID porcelain = new com.strongdm.api.EntraID();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -19813,6 +19908,9 @@ public class Plumbing {
     if (plumbing.hasElasticacheRedis()) {
       return convertElasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
     }
+    if (plumbing.hasElasticacheRedisIam()) {
+      return convertElasticacheRedisIAMToPorcelain(plumbing.getElasticacheRedisIam());
+    }
     if (plumbing.hasEntraId()) {
       return convertEntraIDToPorcelain(plumbing.getEntraId());
     }
@@ -20290,6 +20388,12 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setElasticacheRedis(
           convertElasticacheRedisToPlumbing((com.strongdm.api.ElasticacheRedis) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.ElasticacheRedisIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setElasticacheRedisIam(
+          convertElasticacheRedisIAMToPlumbing((com.strongdm.api.ElasticacheRedisIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.EntraID) {
