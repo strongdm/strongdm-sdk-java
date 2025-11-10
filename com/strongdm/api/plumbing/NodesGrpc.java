@@ -31,9 +31,11 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
- * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
- * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
+ * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+ * There are three types of nodes:
+ * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
+ * 2. **Gateway:** a relay that also listens for connections from StrongDM clients
+ * 3. **Proxy Cluster:** a cluster of workers that together mediate access from clients to resources
  * </pre>
  */
 @javax.annotation.Generated(
@@ -201,6 +203,37 @@ public final class NodesGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest,
+      com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse> getTCPProbeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TCPProbe",
+      requestType = com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.class,
+      responseType = com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest,
+      com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse> getTCPProbeMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest, com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse> getTCPProbeMethod;
+    if ((getTCPProbeMethod = NodesGrpc.getTCPProbeMethod) == null) {
+      synchronized (NodesGrpc.class) {
+        if ((getTCPProbeMethod = NodesGrpc.getTCPProbeMethod) == null) {
+          NodesGrpc.getTCPProbeMethod = getTCPProbeMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest, com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TCPProbe"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NodesMethodDescriptorSupplier("TCPProbe"))
+              .build();
+        }
+      }
+    }
+    return getTCPProbeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -247,9 +280,11 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
-   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
-   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
+   * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+   * There are three types of nodes:
+   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
+   * 2. **Gateway:** a relay that also listens for connections from StrongDM clients
+   * 3. **Proxy Cluster:** a cluster of workers that together mediate access from clients to resources
    * </pre>
    */
   public static abstract class NodesImplBase implements io.grpc.BindableService {
@@ -304,6 +339,17 @@ public final class NodesGrpc {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * TCPProbe instructs a Node to connect to an address via TCP and report the
+     * result.
+     * </pre>
+     */
+    public void tCPProbe(com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getTCPProbeMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -341,15 +387,24 @@ public final class NodesGrpc {
                 com.strongdm.api.plumbing.NodesPlumbing.NodeListRequest,
                 com.strongdm.api.plumbing.NodesPlumbing.NodeListResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getTCPProbeMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest,
+                com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse>(
+                  this, METHODID_TCPPROBE)))
           .build();
     }
   }
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
-   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
-   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
+   * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+   * There are three types of nodes:
+   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
+   * 2. **Gateway:** a relay that also listens for connections from StrongDM clients
+   * 3. **Proxy Cluster:** a cluster of workers that together mediate access from clients to resources
    * </pre>
    */
   public static final class NodesStub extends io.grpc.stub.AbstractAsyncStub<NodesStub> {
@@ -418,13 +473,27 @@ public final class NodesGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * TCPProbe instructs a Node to connect to an address via TCP and report the
+     * result.
+     * </pre>
+     */
+    public void tCPProbe(com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getTCPProbeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
-   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
-   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
+   * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+   * There are three types of nodes:
+   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
+   * 2. **Gateway:** a relay that also listens for connections from StrongDM clients
+   * 3. **Proxy Cluster:** a cluster of workers that together mediate access from clients to resources
    * </pre>
    */
   public static final class NodesBlockingStub extends io.grpc.stub.AbstractBlockingStub<NodesBlockingStub> {
@@ -488,13 +557,26 @@ public final class NodesGrpc {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * TCPProbe instructs a Node to connect to an address via TCP and report the
+     * result.
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse tCPProbe(com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getTCPProbeMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
-   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
-   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
+   * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+   * There are three types of nodes:
+   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
+   * 2. **Gateway:** a relay that also listens for connections from StrongDM clients
+   * 3. **Proxy Cluster:** a cluster of workers that together mediate access from clients to resources
    * </pre>
    */
   public static final class NodesFutureStub extends io.grpc.stub.AbstractFutureStub<NodesFutureStub> {
@@ -563,6 +645,18 @@ public final class NodesGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * TCPProbe instructs a Node to connect to an address via TCP and report the
+     * result.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse> tCPProbe(
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getTCPProbeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
@@ -570,6 +664,7 @@ public final class NodesGrpc {
   private static final int METHODID_UPDATE = 2;
   private static final int METHODID_DELETE = 3;
   private static final int METHODID_LIST = 4;
+  private static final int METHODID_TCPPROBE = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -607,6 +702,10 @@ public final class NodesGrpc {
         case METHODID_LIST:
           serviceImpl.list((com.strongdm.api.plumbing.NodesPlumbing.NodeListRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.NodesPlumbing.NodeListResponse>) responseObserver);
+          break;
+        case METHODID_TCPPROBE:
+          serviceImpl.tCPProbe((com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -674,6 +773,7 @@ public final class NodesGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListMethod())
+              .addMethod(getTCPProbeMethod())
               .build();
         }
       }

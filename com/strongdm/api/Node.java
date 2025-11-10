@@ -18,10 +18,11 @@
 package com.strongdm.api;
 
 /**
- * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
- * There are two types of nodes: 1. **Relay:** creates connectivity to your datasources, while
- * maintaining the egress-only nature of your firewall 1. **Gateways:** a relay that also listens
- * for connections from strongDM clients
+ * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+ * There are three types of nodes: 1. **Relay:** creates connectivity to your datasources, while
+ * maintaining the egress-only nature of your firewall 2. **Gateway:** a relay that also listens for
+ * connections from StrongDM clients 3. **Proxy Cluster:** a cluster of workers that together
+ * mediate access from clients to resources
  */
 public interface Node {
   /** Returns the unique identifier of the Node. */

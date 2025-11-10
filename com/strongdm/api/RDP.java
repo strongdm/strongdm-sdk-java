@@ -96,6 +96,32 @@ public class RDP implements Resource {
     this.id = in;
   }
 
+  private String identityAliasHealthcheckUsername;
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own identity
+   * alias username.
+   */
+  public String getIdentityAliasHealthcheckUsername() {
+    return this.identityAliasHealthcheckUsername;
+  }
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own identity
+   * alias username.
+   */
+  public void setIdentityAliasHealthcheckUsername(String in) {
+    this.identityAliasHealthcheckUsername = in;
+  }
+
+  private String identitySetId;
+  /** if provided use identity_set to map username to secret store path */
+  public String getIdentitySetId() {
+    return this.identitySetId;
+  }
+  /** if provided use identity_set to map username to secret store path */
+  public void setIdentitySetId(String in) {
+    this.identitySetId = in;
+  }
+
   private boolean lockRequired;
   /**
    * When set, require a resource lock to access the resource to ensure it can only be used by one

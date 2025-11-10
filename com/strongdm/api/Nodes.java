@@ -32,11 +32,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /**
- * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
- * There are two types of nodes: - **Gateways** are the entry points into network. They listen for
- * connection from the strongDM client, and provide access to databases and servers. - **Relays**
- * are used to extend the strongDM network into segmented subnets. They provide access to databases
- * and servers but do not listen for incoming connections.
+ * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+ * There are three types of nodes: 1. **Relay:** creates connectivity to your datasources, while
+ * maintaining the egress-only nature of your firewall 2. **Gateway:** a relay that also listens for
+ * connections from StrongDM clients 3. **Proxy Cluster:** a cluster of workers that together
+ * mediate access from clients to resources
  */
 public class Nodes implements SnapshotNodes {
   private final NodesGrpc.NodesBlockingStub stub;
@@ -233,5 +233,36 @@ public class Nodes implements SnapshotNodes {
     Iterator<Node> iterator = new PageIterator<>(pageFetcher);
 
     return () -> iterator;
+  }
+  /** TCPProbe instructs a Node to connect to an address via TCP and report the result. */
+  public NodeTCPProbeResponse tcpProbe(String nodeId, String host, int port) throws RpcException {
+    NodesPlumbing.NodeTCPProbeRequest.Builder builder =
+        NodesPlumbing.NodeTCPProbeRequest.newBuilder();
+    builder.setNodeId((nodeId));
+    builder.setHost((host));
+    builder.setPort((port));
+    NodesPlumbing.NodeTCPProbeRequest req = builder.build();
+    NodesPlumbing.NodeTCPProbeResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Nodes.TCPProbe", req))
+                .tCPProbe(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
+          tries++;
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertNodeTCPProbeResponseToPorcelain(plumbingResponse);
   }
 }

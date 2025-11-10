@@ -2108,6 +2108,33 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getTargetsBytes(int index);
+
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this gRPC method
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    boolean hasCustom();
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this gRPC method
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    com.strongdm.api.plumbing.Options.CustomOptions getCustom();
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this gRPC method
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     */
+    com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder();
   }
   /**
    * Protobuf type {@code v1.MethodOptions}
@@ -2175,6 +2202,19 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               deprecationDate_ = s;
+              break;
+            }
+            case 15530442: {
+              com.strongdm.api.plumbing.Options.CustomOptions.Builder subBuilder = null;
+              if (custom_ != null) {
+                subBuilder = custom_.toBuilder();
+              }
+              custom_ = input.readMessage(com.strongdm.api.plumbing.Options.CustomOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(custom_);
+                custom_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 15531210: {
@@ -2412,6 +2452,44 @@ public final class Options {
       return targets_.getByteString(index);
     }
 
+    public static final int CUSTOM_FIELD_NUMBER = 1941305;
+    private com.strongdm.api.plumbing.Options.CustomOptions custom_;
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this gRPC method
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustom() {
+      return custom_ != null;
+    }
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this gRPC method
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Options.CustomOptions getCustom() {
+      return custom_ == null ? com.strongdm.api.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+    }
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this gRPC method
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
+      return getCustom();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2435,6 +2513,9 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deprecationDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941302, deprecationDate_);
       }
+      if (custom_ != null) {
+        output.writeMessage(1941305, getCustom());
+      }
       for (int i = 0; i < targets_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941401, targets_.getRaw(i));
       }
@@ -2455,6 +2536,10 @@ public final class Options {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deprecationDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941302, deprecationDate_);
+      }
+      if (custom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1941305, getCustom());
       }
       {
         int dataSize = 0;
@@ -2487,6 +2572,11 @@ public final class Options {
           .equals(other.getDeprecationDate())) return false;
       if (!getTargetsList()
           .equals(other.getTargetsList())) return false;
+      if (hasCustom() != other.hasCustom()) return false;
+      if (hasCustom()) {
+        if (!getCustom()
+            .equals(other.getCustom())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2507,6 +2597,10 @@ public final class Options {
       if (getTargetsCount() > 0) {
         hash = (37 * hash) + TARGETS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetsList().hashCode();
+      }
+      if (hasCustom()) {
+        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+        hash = (53 * hash) + getCustom().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2649,6 +2743,12 @@ public final class Options {
 
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (customBuilder_ == null) {
+          custom_ = null;
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
         return this;
       }
 
@@ -2684,6 +2784,11 @@ public final class Options {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.targets_ = targets_;
+        if (customBuilder_ == null) {
+          result.custom_ = custom_;
+        } else {
+          result.custom_ = customBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2753,6 +2858,9 @@ public final class Options {
             targets_.addAll(other.targets_);
           }
           onChanged();
+        }
+        if (other.hasCustom()) {
+          mergeCustom(other.getCustom());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3216,6 +3324,161 @@ public final class Options {
         targets_.add(value);
         onChanged();
         return this;
+      }
+
+      private com.strongdm.api.plumbing.Options.CustomOptions custom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Options.CustomOptions, com.strongdm.api.plumbing.Options.CustomOptions.Builder, com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder> customBuilder_;
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       * @return Whether the custom field is set.
+       */
+      public boolean hasCustom() {
+        return customBuilder_ != null || custom_ != null;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       * @return The custom.
+       */
+      public com.strongdm.api.plumbing.Options.CustomOptions getCustom() {
+        if (customBuilder_ == null) {
+          return custom_ == null ? com.strongdm.api.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+        } else {
+          return customBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(com.strongdm.api.plumbing.Options.CustomOptions value) {
+        if (customBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          custom_ = value;
+          onChanged();
+        } else {
+          customBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(
+          com.strongdm.api.plumbing.Options.CustomOptions.Builder builderForValue) {
+        if (customBuilder_ == null) {
+          custom_ = builderForValue.build();
+          onChanged();
+        } else {
+          customBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder mergeCustom(com.strongdm.api.plumbing.Options.CustomOptions value) {
+        if (customBuilder_ == null) {
+          if (custom_ != null) {
+            custom_ =
+              com.strongdm.api.plumbing.Options.CustomOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
+          } else {
+            custom_ = value;
+          }
+          onChanged();
+        } else {
+          customBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder clearCustom() {
+        if (customBuilder_ == null) {
+          custom_ = null;
+          onChanged();
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.plumbing.Options.CustomOptions.Builder getCustomBuilder() {
+        
+        onChanged();
+        return getCustomFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
+        if (customBuilder_ != null) {
+          return customBuilder_.getMessageOrBuilder();
+        } else {
+          return custom_ == null ?
+              com.strongdm.api.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+        }
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this gRPC method
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Options.CustomOptions, com.strongdm.api.plumbing.Options.CustomOptions.Builder, com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder> 
+          getCustomFieldBuilder() {
+        if (customBuilder_ == null) {
+          customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Options.CustomOptions, com.strongdm.api.plumbing.Options.CustomOptions.Builder, com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder>(
+                  getCustom(),
+                  getParentForChildren(),
+                  isClean());
+          custom_ = null;
+        }
+        return customBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11684,65 +11947,66 @@ java.lang.String defaultValue);
       "refix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t\022#\n\031disa" +
       "ble_snapshot_vertical\030\233\277v \001(\010\0220\n&json_ga" +
       "teway_register_with_constructor\030\235\277v \001(\010:" +
-      "\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"x\n\rMethodOption" +
-      "s\022\020\n\006method\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020de" +
-      "precation_date\030\266\276v \001(\t\022\021\n\007targets\030\231\277v \003(" +
-      "\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\362\001\n\016MessageOp" +
-      "tions\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v " +
-      "\001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022\021\n\007targets\030" +
-      "\272\276v \003(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.T" +
-      "erraformDocs\022#\n\006custom\030\271\276v \001(\0132\021.v1.Cust" +
-      "omOptions\022#\n\031terraform_datasource_only\030\273" +
-      "\276v \001(\010:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"@\n\014Oneof" +
-      "Options\022\027\n\rcommon_fields\030\205\277v \003(\t:\027\372\370\263\007\022\322" +
-      "\363\263\007\r!json_gateway\"\245\004\n\014FieldOptions\022\023\n\tpo" +
-      "rcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010\022\022\n\010r" +
-      "equired\030\270\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n" +
-      "\tread_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v " +
-      "\001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023terraform_forc" +
-      "e_new\030\274\276v \001(\010\022\035\n\023terraform_sensitive\030\276\276v" +
-      " \001(\010\022&\n\034terraform_diff_suppress_func\030\307\276v" +
-      " \001(\t\022\034\n\022terraform_computed\030\312\276v \001(\010\022#\n\006cu" +
-      "stom\030\271\276v \001(\0132\021.v1.CustomOptions\022D\n\022read_" +
-      "only_override\030\300\276v \003(\0132&.v1.FieldOptions." +
-      "ReadOnlyOverrideEntry\022\023\n\tcondition\030\313\276v \001" +
-      "(\t\022\024\n\nconditions\030\315\276v \003(\t\022\025\n\013expect_file\030" +
-      "\314\276v \001(\010\0327\n\025ReadOnlyOverrideEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!jso" +
-      "n_gateway\"\217\005\n\rCustomOptions\022\023\n\tconverter" +
-      "\030\275\276v \001(\t\022O\n\027porcelain_type_override\030\276\276v " +
-      "\003(\0132,.v1.CustomOptions.PorcelainTypeOver" +
-      "rideEntry\022O\n\027porcelain_name_override\030\310\276v" +
-      " \003(\0132,.v1.CustomOptions.PorcelainNameOve" +
-      "rrideEntry\022B\n\020comment_override\030\323\276v \003(\0132&" +
-      ".v1.CustomOptions.CommentOverrideEntry\022H" +
-      "\n\023deprecated_override\030\300\276v \003(\0132).v1.Custo" +
-      "mOptions.DeprecatedOverrideEntry\022\035\n\023terr" +
-      "aform_elem_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276v " +
-      "\001(\010\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032PorcelainNa" +
-      "meOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOve" +
-      "rrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\002" +
-      "8\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\rTerraform" +
-      "Docs\022\037\n\025resource_example_path\030\264\276v \001(\t\022\"\n" +
-      "\030data_source_example_path\030\265\276v \001(\t:\027\372\370\263\007\022" +
-      "\322\363\263\007\r!json_gateway:E\n\014file_options\022\034.goo" +
-      "gle.protobuf.FileOptions\030\250\302v \001(\0132\017.v1.Fi" +
-      "leOptions:N\n\017service_options\022\037.google.pr" +
-      "otobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Servi" +
-      "ceOptions:K\n\016method_options\022\036.google.pro" +
-      "tobuf.MethodOptions\030\220\277v \001(\0132\021.v1.MethodO" +
-      "ptions:N\n\017message_options\022\037.google.proto" +
-      "buf.MessageOptions\030\217\277v \001(\0132\022.v1.MessageO" +
-      "ptions:H\n\roneof_options\022\035.google.protobu" +
-      "f.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptions" +
-      ":H\n\rfield_options\022\035.google.protobuf.Fiel" +
-      "dOptions\030\216\277v \001(\0132\020.v1.FieldOptionsBR\n\031co" +
-      "m.strongdm.api.plumbingZ5github.com/stro" +
-      "ngdm/strongdm-sdk-go/v3/internal/v1;v1b\006" +
-      "proto3"
+      "\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\235\001\n\rMethodOptio" +
+      "ns\022\020\n\006method\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020d" +
+      "eprecation_date\030\266\276v \001(\t\022\021\n\007targets\030\231\277v \003" +
+      "(\t\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOptions:" +
+      "\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\362\001\n\016MessageOpti" +
+      "ons\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(" +
+      "\005\022\027\n\roptions_field\030\267\276v \001(\t\022\021\n\007targets\030\272\276" +
+      "v \003(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Ter" +
+      "raformDocs\022#\n\006custom\030\271\276v \001(\0132\021.v1.Custom" +
+      "Options\022#\n\031terraform_datasource_only\030\273\276v" +
+      " \001(\010:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"@\n\014OneofOp" +
+      "tions\022\027\n\rcommon_fields\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263" +
+      "\007\r!json_gateway\"\245\004\n\014FieldOptions\022\023\n\tporc" +
+      "elain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010\022\022\n\010req" +
+      "uired\030\270\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tr" +
+      "ead_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(" +
+      "\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023terraform_force_" +
+      "new\030\274\276v \001(\010\022\035\n\023terraform_sensitive\030\276\276v \001" +
+      "(\010\022&\n\034terraform_diff_suppress_func\030\307\276v \001" +
+      "(\t\022\034\n\022terraform_computed\030\312\276v \001(\010\022#\n\006cust" +
+      "om\030\271\276v \001(\0132\021.v1.CustomOptions\022D\n\022read_on" +
+      "ly_override\030\300\276v \003(\0132&.v1.FieldOptions.Re" +
+      "adOnlyOverrideEntry\022\023\n\tcondition\030\313\276v \001(\t" +
+      "\022\024\n\nconditions\030\315\276v \003(\t\022\025\n\013expect_file\030\314\276" +
+      "v \001(\010\0327\n\025ReadOnlyOverrideEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_" +
+      "gateway\"\217\005\n\rCustomOptions\022\023\n\tconverter\030\275" +
+      "\276v \001(\t\022O\n\027porcelain_type_override\030\276\276v \003(" +
+      "\0132,.v1.CustomOptions.PorcelainTypeOverri" +
+      "deEntry\022O\n\027porcelain_name_override\030\310\276v \003" +
+      "(\0132,.v1.CustomOptions.PorcelainNameOverr" +
+      "ideEntry\022B\n\020comment_override\030\323\276v \003(\0132&.v" +
+      "1.CustomOptions.CommentOverrideEntry\022H\n\023" +
+      "deprecated_override\030\300\276v \003(\0132).v1.CustomO" +
+      "ptions.DeprecatedOverrideEntry\022\035\n\023terraf" +
+      "orm_elem_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276v \001(" +
+      "\010\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032PorcelainName" +
+      "OverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverr" +
+      "ideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001" +
+      ":\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\rTerraformDo" +
+      "cs\022\037\n\025resource_example_path\030\264\276v \001(\t\022\"\n\030d" +
+      "ata_source_example_path\030\265\276v \001(\t:\027\372\370\263\007\022\322\363" +
+      "\263\007\r!json_gateway:E\n\014file_options\022\034.googl" +
+      "e.protobuf.FileOptions\030\250\302v \001(\0132\017.v1.File" +
+      "Options:N\n\017service_options\022\037.google.prot" +
+      "obuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Service" +
+      "Options:K\n\016method_options\022\036.google.proto" +
+      "buf.MethodOptions\030\220\277v \001(\0132\021.v1.MethodOpt" +
+      "ions:N\n\017message_options\022\037.google.protobu" +
+      "f.MessageOptions\030\217\277v \001(\0132\022.v1.MessageOpt" +
+      "ions:H\n\roneof_options\022\035.google.protobuf." +
+      "OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:H" +
+      "\n\rfield_options\022\035.google.protobuf.FieldO" +
+      "ptions\030\216\277v \001(\0132\020.v1.FieldOptionsBR\n\031com." +
+      "strongdm.api.plumbingZ5github.com/strong" +
+      "dm/strongdm-sdk-go/v3/internal/v1;v1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11766,7 +12030,7 @@ java.lang.String defaultValue);
     internal_static_v1_MethodOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MethodOptions_descriptor,
-        new java.lang.String[] { "Method", "Url", "DeprecationDate", "Targets", });
+        new java.lang.String[] { "Method", "Url", "DeprecationDate", "Targets", "Custom", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new

@@ -15856,6 +15856,55 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.NodeTCPProbeResponse convertNodeTCPProbeResponseToPorcelain(
+      NodeTCPProbeResponse plumbing) {
+    com.strongdm.api.NodeTCPProbeResponse porcelain = new com.strongdm.api.NodeTCPProbeResponse();
+    porcelain.setError((plumbing.getError()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setSucceeded((plumbing.getSucceeded()));
+    return porcelain;
+  }
+
+  public static NodeTCPProbeResponse convertNodeTCPProbeResponseToPlumbing(
+      com.strongdm.api.NodeTCPProbeResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    NodeTCPProbeResponse.Builder builder = NodeTCPProbeResponse.newBuilder();
+    if (porcelain.getError() != null) {
+      builder.setError((porcelain.getError()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    builder.setSucceeded(porcelain.getSucceeded());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.NodeTCPProbeResponse>
+      convertRepeatedNodeTCPProbeResponseToPorcelain(Collection<NodeTCPProbeResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.NodeTCPProbeResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertNodeTCPProbeResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<NodeTCPProbeResponse> convertRepeatedNodeTCPProbeResponseToPlumbing(
+      Collection<com.strongdm.api.NodeTCPProbeResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<NodeTCPProbeResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertNodeTCPProbeResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.NodeUpdateResponse convertNodeUpdateResponseToPorcelain(
       NodeUpdateResponse plumbing) {
     com.strongdm.api.NodeUpdateResponse porcelain = new com.strongdm.api.NodeUpdateResponse();
@@ -18144,6 +18193,8 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setLockRequired((plumbing.getLockRequired()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
@@ -18175,6 +18226,13 @@ public class Plumbing {
     }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIdentityAliasHealthcheckUsername() != null) {
+      builder.setIdentityAliasHealthcheckUsername(
+          (porcelain.getIdentityAliasHealthcheckUsername()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
     }
     builder.setLockRequired(porcelain.getLockRequired());
     if (porcelain.getName() != null) {

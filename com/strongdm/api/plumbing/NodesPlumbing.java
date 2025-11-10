@@ -11020,6 +11020,2392 @@ public final class NodesPlumbing {
 
   }
 
+  public interface NodeTCPProbeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.NodeTCPProbeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The ID of the node which will perform the TCP probe.
+     * </pre>
+     *
+     * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The nodeId.
+     */
+    java.lang.String getNodeId();
+    /**
+     * <pre>
+     * The ID of the node which will perform the TCP probe.
+     * </pre>
+     *
+     * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeId.
+     */
+    com.google.protobuf.ByteString
+        getNodeIdBytes();
+
+    /**
+     * <pre>
+     * The host to probe.
+     * </pre>
+     *
+     * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+     * @return The host.
+     */
+    java.lang.String getHost();
+    /**
+     * <pre>
+     * The host to probe.
+     * </pre>
+     *
+     * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for host.
+     */
+    com.google.protobuf.ByteString
+        getHostBytes();
+
+    /**
+     * <pre>
+     * The port number to probe.
+     * </pre>
+     *
+     * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+     * @return The port.
+     */
+    int getPort();
+  }
+  /**
+   * <pre>
+   * NodeTCPProbeRequest instructs a Node to connect to an address via TCP and
+   * report the result.
+   * </pre>
+   *
+   * Protobuf type {@code v1.NodeTCPProbeRequest}
+   */
+  public static final class NodeTCPProbeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.NodeTCPProbeRequest)
+      NodeTCPProbeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NodeTCPProbeRequest.newBuilder() to construct.
+    private NodeTCPProbeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NodeTCPProbeRequest() {
+      nodeId_ = "";
+      host_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeTCPProbeRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NodeTCPProbeRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nodeId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              host_ = s;
+              break;
+            }
+            case 32: {
+
+              port_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.class, com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int NODE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nodeId_;
+    /**
+     * <pre>
+     * The ID of the node which will perform the TCP probe.
+     * </pre>
+     *
+     * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The nodeId.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeId() {
+      java.lang.Object ref = nodeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the node which will perform the TCP probe.
+     * </pre>
+     *
+     * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeIdBytes() {
+      java.lang.Object ref = nodeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_FIELD_NUMBER = 3;
+    private volatile java.lang.Object host_;
+    /**
+     * <pre>
+     * The host to probe.
+     * </pre>
+     *
+     * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+     * @return The host.
+     */
+    @java.lang.Override
+    public java.lang.String getHost() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        host_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The host to probe.
+     * </pre>
+     *
+     * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for host.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostBytes() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        host_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 4;
+    private int port_;
+    /**
+     * <pre>
+     * The port number to probe.
+     * </pre>
+     *
+     * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+     * @return The port.
+     */
+    @java.lang.Override
+    public int getPort() {
+      return port_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nodeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, host_);
+      }
+      if (port_ != 0) {
+        output.writeInt32(4, port_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nodeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, host_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, port_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest other = (com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getNodeId()
+          .equals(other.getNodeId())) return false;
+      if (!getHost()
+          .equals(other.getHost())) return false;
+      if (getPort()
+          != other.getPort()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + NODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeId().hashCode();
+      hash = (37 * hash) + HOST_FIELD_NUMBER;
+      hash = (53 * hash) + getHost().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * NodeTCPProbeRequest instructs a Node to connect to an address via TCP and
+     * report the result.
+     * </pre>
+     *
+     * Protobuf type {@code v1.NodeTCPProbeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.NodeTCPProbeRequest)
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.class, com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        nodeId_ = "";
+
+        host_ = "";
+
+        port_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest build() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest buildPartial() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest result = new com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.nodeId_ = nodeId_;
+        result.host_ = host_;
+        result.port_ = port_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest other) {
+        if (other == com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getNodeId().isEmpty()) {
+          nodeId_ = other.nodeId_;
+          onChanged();
+        }
+        if (!other.getHost().isEmpty()) {
+          host_ = other.host_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.CreateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object nodeId_ = "";
+      /**
+       * <pre>
+       * The ID of the node which will perform the TCP probe.
+       * </pre>
+       *
+       * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The nodeId.
+       */
+      public java.lang.String getNodeId() {
+        java.lang.Object ref = nodeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the node which will perform the TCP probe.
+       * </pre>
+       *
+       * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for nodeId.
+       */
+      public com.google.protobuf.ByteString
+          getNodeIdBytes() {
+        java.lang.Object ref = nodeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the node which will perform the TCP probe.
+       * </pre>
+       *
+       * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The nodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nodeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the node which will perform the TCP probe.
+       * </pre>
+       *
+       * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeId() {
+        
+        nodeId_ = getDefaultInstance().getNodeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the node which will perform the TCP probe.
+       * </pre>
+       *
+       * <code>string node_id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for nodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nodeId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object host_ = "";
+      /**
+       * <pre>
+       * The host to probe.
+       * </pre>
+       *
+       * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+       * @return The host.
+       */
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          host_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The host to probe.
+       * </pre>
+       *
+       * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for host.
+       */
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The host to probe.
+       * </pre>
+       *
+       * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The host to probe.
+       * </pre>
+       *
+       * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHost() {
+        
+        host_ = getDefaultInstance().getHost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The host to probe.
+       * </pre>
+       *
+       * <code>string host = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        host_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_ ;
+      /**
+       * <pre>
+       * The port number to probe.
+       * </pre>
+       *
+       * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+       * @return The port.
+       */
+      @java.lang.Override
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <pre>
+       * The port number to probe.
+       * </pre>
+       *
+       * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+        
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The port number to probe.
+       * </pre>
+       *
+       * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+        
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.NodeTCPProbeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.NodeTCPProbeRequest)
+    private static final com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest();
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NodeTCPProbeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<NodeTCPProbeRequest>() {
+      @java.lang.Override
+      public NodeTCPProbeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NodeTCPProbeRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NodeTCPProbeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NodeTCPProbeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NodeTCPProbeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.NodeTCPProbeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * True if the node was able to connect to the target address.
+     * </pre>
+     *
+     * <code>bool succeeded = 2 [(.v1.field_options) = { ... }</code>
+     * @return The succeeded.
+     */
+    boolean getSucceeded();
+
+    /**
+     * <pre>
+     * The connection error reported by the node, or the empty string if the probe succeeded.
+     * </pre>
+     *
+     * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <pre>
+     * The connection error reported by the node, or the empty string if the probe succeeded.
+     * </pre>
+     *
+     * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * NodeTCPProbeResponse reports the result of a TCP probe.
+   * </pre>
+   *
+   * Protobuf type {@code v1.NodeTCPProbeResponse}
+   */
+  public static final class NodeTCPProbeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.NodeTCPProbeResponse)
+      NodeTCPProbeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NodeTCPProbeResponse.newBuilder() to construct.
+    private NodeTCPProbeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NodeTCPProbeResponse() {
+      error_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeTCPProbeResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NodeTCPProbeResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.CreateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              succeeded_ = input.readBool();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              error_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.class, com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int SUCCEEDED_FIELD_NUMBER = 2;
+    private boolean succeeded_;
+    /**
+     * <pre>
+     * True if the node was able to connect to the target address.
+     * </pre>
+     *
+     * <code>bool succeeded = 2 [(.v1.field_options) = { ... }</code>
+     * @return The succeeded.
+     */
+    @java.lang.Override
+    public boolean getSucceeded() {
+      return succeeded_;
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 3;
+    private volatile java.lang.Object error_;
+    /**
+     * <pre>
+     * The connection error reported by the node, or the empty string if the probe succeeded.
+     * </pre>
+     *
+     * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The connection error reported by the node, or the empty string if the probe succeeded.
+     * </pre>
+     *
+     * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (succeeded_ != false) {
+        output.writeBool(2, succeeded_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, error_);
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(4, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (succeeded_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, succeeded_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, error_);
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse other = (com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (getSucceeded()
+          != other.getSucceeded()) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + SUCCEEDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSucceeded());
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * NodeTCPProbeResponse reports the result of a TCP probe.
+     * </pre>
+     *
+     * Protobuf type {@code v1.NodeTCPProbeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.NodeTCPProbeResponse)
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.class, com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        succeeded_ = false;
+
+        error_ = "";
+
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.internal_static_v1_NodeTCPProbeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse build() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse buildPartial() {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse result = new com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.succeeded_ = succeeded_;
+        result.error_ = error_;
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse other) {
+        if (other == com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.getSucceeded() != false) {
+          setSucceeded(other.getSucceeded());
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          onChanged();
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.CreateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.CreateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private boolean succeeded_ ;
+      /**
+       * <pre>
+       * True if the node was able to connect to the target address.
+       * </pre>
+       *
+       * <code>bool succeeded = 2 [(.v1.field_options) = { ... }</code>
+       * @return The succeeded.
+       */
+      @java.lang.Override
+      public boolean getSucceeded() {
+        return succeeded_;
+      }
+      /**
+       * <pre>
+       * True if the node was able to connect to the target address.
+       * </pre>
+       *
+       * <code>bool succeeded = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The succeeded to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSucceeded(boolean value) {
+        
+        succeeded_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the node was able to connect to the target address.
+       * </pre>
+       *
+       * <code>bool succeeded = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSucceeded() {
+        
+        succeeded_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <pre>
+       * The connection error reported by the node, or the empty string if the probe succeeded.
+       * </pre>
+       *
+       * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The connection error reported by the node, or the empty string if the probe succeeded.
+       * </pre>
+       *
+       * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The connection error reported by the node, or the empty string if the probe succeeded.
+       * </pre>
+       *
+       * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        error_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The connection error reported by the node, or the empty string if the probe succeeded.
+       * </pre>
+       *
+       * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        
+        error_ = getDefaultInstance().getError();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The connection error reported by the node, or the empty string if the probe succeeded.
+       * </pre>
+       *
+       * <code>string error = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        error_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.NodeTCPProbeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.NodeTCPProbeResponse)
+    private static final com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse();
+    }
+
+    public static com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NodeTCPProbeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<NodeTCPProbeResponse>() {
+      @java.lang.Override
+      public NodeTCPProbeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NodeTCPProbeResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NodeTCPProbeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NodeTCPProbeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.NodesPlumbing.NodeTCPProbeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface NodeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.Node)
       com.google.protobuf.MessageOrBuilder {
@@ -11073,10 +13459,11 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-   * There are two types of nodes:
+   * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+   * There are three types of nodes:
    * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
-   * 1. **Gateways:** a relay that also listens for connections from strongDM clients
+   * 2. **Gateway:** a relay that also listens for connections from StrongDM clients
+   * 3. **Proxy Cluster:** a cluster of workers that together mediate access from clients to resources
    * </pre>
    *
    * Protobuf type {@code v1.Node}
@@ -11535,10 +13922,11 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-     * There are two types of nodes:
+     * Nodes make up the StrongDM network, and allow your users to connect securely to your resources.
+     * There are three types of nodes:
      * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
-     * 1. **Gateways:** a relay that also listens for connections from strongDM clients
+     * 2. **Gateway:** a relay that also listens for connections from StrongDM clients
+     * 3. **Proxy Cluster:** a cluster of workers that together mediate access from clients to resources
      * </pre>
      *
      * Protobuf type {@code v1.Node}
@@ -24056,6 +26444,16 @@ public final class NodesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_NodeListResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_NodeTCPProbeRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_NodeTCPProbeRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_NodeTCPProbeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_NodeTCPProbeResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_Node_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24138,80 +26536,93 @@ public final class NodesPlumbing {
       "esponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.Node" +
       "B\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
       "teLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
-      "\263\007\022\262\364\263\007\r!json_gateway\"\224\002\n\004Node\022&\n\005relay\030" +
-      "\001 \001(\0132\t.v1.RelayB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007gatewa" +
-      "y\030\002 \001(\0132\013.v1.GatewayB\n\362\370\263\007\005\260\363\263\007\001H\000\0225\n\rpr" +
-      "oxy_cluster\030\003 \001(\0132\020.v1.ProxyClusterB\n\362\370\263" +
-      "\007\005\260\363\263\007\001H\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_examples/no" +
-      "de_resource.txt\252\363\263\007 tf_examples/node_dat" +
-      "a_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022\034\252\370\263\007\t\252\370\263" +
-      "\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\250\004\n\005Relay\022\026\n\002id\030\001 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263" +
-      "\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004tags\030\004 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filte" +
-      "r\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\006 \001(\tB\017\362\370\263" +
-      "\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\007 \001(\tB\017\362\370\263\007\n\260\363\263" +
-      "\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007" +
-      "\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_" +
-      "private\022t\n\023maintenance_windows\030\013 \003(\0132\031.v" +
-      "1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-" +
-      "\302\364\263\007(\n\022terraform-provider\022\022maintenance_w" +
-      "indow\022L\n\020discovery_config\030\014 \001(\0132\027.v1.Nod" +
-      "eDiscoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_priv" +
-      "ate:\n\372\370\263\007\005\250\363\263\007\001\"\204\005\n\007Gateway\022\026\n\002id\030\001 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263" +
-      "\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*" +
-      "\262\364\263\007\023!terraform-provider\022,\n\016listen_addre" +
-      "ss\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_a" +
-      "ddress\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004ta" +
-      "gs\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gatewa" +
-      "y_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\010 \001" +
-      "(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262" +
-      "\364\263\007\ngo_private\022t\n\023maintenance_windows\030\r " +
-      "\003(\0132\031.v1.NodeMaintenanceWindowB<\362\370\263\0077\260\363\263" +
-      "\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-provider\022\022mainte" +
-      "nance_window\022L\n\020discovery_config\030\016 \001(\0132\027" +
-      ".v1.NodeDiscoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\n" +
-      "go_private:\n\372\370\263\007\005\250\363\263\007\001\"\333\002\n\014ProxyCluster\022" +
-      "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022 \n\007address\030\003 \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\300\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022t\n\023maintenance_windows\030\005 \003(\0132\031.v1.N" +
-      "odeMaintenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263" +
-      "\007(\n\022terraform-provider\022\022maintenance_wind" +
-      "ow\022L\n\020discovery_config\030\006 \001(\0132\027.v1.NodeDi" +
-      "scoveryConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n\025NodeMaintenanceWindow\022!" +
-      "\n\rcron_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020req" +
-      "uire_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363" +
-      "\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-provider\022\010TypeL" +
-      "ist\372\363\263\007\035nodeMaintenanceWindowElemType\"\303\001" +
-      "\n\023NodeDiscoveryConfig\022\033\n\007enabled\030\001 \001(\010B\n" +
-      "\362\370\263\007\005\260\363\263\007\001\0225\n\006period\030\002 \001(\0132\031.google.prot" +
-      "obuf.DurationB\n\362\370\263\007\005\260\363\263\007\001\022=\n\014enabledType" +
-      "s\030\003 \003(\0132\033.v1.NodeDiscoveryTypeConfigB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"N\n\027N" +
-      "odeDiscoveryTypeConfig\022\030\n\004type\030\001 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\207\004\n\005" +
-      "Nodes\022Z\n\006Create\022\025.v1.NodeCreateRequest\032\026" +
-      ".v1.NodeCreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371" +
-      "\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1.NodeGetReq" +
-      "uest\032\023.v1.NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get" +
-      "\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006Update\022\025.v1." +
-      "NodeUpdateRequest\032\026.v1.NodeUpdateRespons" +
-      "e\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}" +
-      "\022a\n\006Delete\022\025.v1.NodeDeleteRequest\032\026.v1.N" +
-      "odeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023" +
-      "\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023.v1.NodeLis" +
-      "tRequest\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363\263" +
-      "\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\0323\312\371\263\007\t\302\371\263\007\004Node" +
-      "\312\371\263\007\007\322\371\263\007\002n-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBa\n" +
-      "\031com.strongdm.api.plumbingB\rNodesPlumbin" +
-      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
-      "3/internal/v1;v1b\006proto3"
+      "\263\007\022\262\364\263\007\r!json_gateway\"\217\001\n\023NodeTCPProbeRe" +
+      "quest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMe" +
+      "tadata\022\033\n\007node_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004h" +
+      "ost\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\004 \001(\005B\n\362\370\263" +
+      "\007\005\260\363\263\007\001\"\353\001\n\024NodeTCPProbeResponse\0224\n\004meta" +
+      "\030\001 \001(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\tsucceeded\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\031\n" +
+      "\005error\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limit\030\004" +
+      " \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005" +
+      "\250\363\263\007\001\"\224\002\n\004Node\022&\n\005relay\030\001 \001(\0132\t.v1.Relay" +
+      "B\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007gateway\030\002 \001(\0132\013.v1.Gat" +
+      "ewayB\n\362\370\263\007\005\260\363\263\007\001H\000\0225\n\rproxy_cluster\030\003 \001(" +
+      "\0132\020.v1.ProxyClusterB\n\362\370\263\007\005\260\363\263\007\001H\000:[\372\370\263\007L" +
+      "\302\363\263\007G\242\363\263\007\035tf_examples/node_resource.txt\252" +
+      "\363\263\007 tf_examples/node_data_source.txt\372\370\263\007" +
+      "\005\250\363\263\007\001B$\n\004node\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004" +
+      "name\"\250\004\n\005Relay\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035" +
+      "\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003" +
+      " \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terrafo" +
+      "rm-provider\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\005 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022\037\n\006device\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010" +
+      "location\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007versi" +
+      "on\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\tB" +
+      "\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t\n\023maint" +
+      "enance_windows\030\013 \003(\0132\031.v1.NodeMaintenanc" +
+      "eWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform" +
+      "-provider\022\022maintenance_window\022L\n\020discove" +
+      "ry_config\030\014 \001(\0132\027.v1.NodeDiscoveryConfig" +
+      "B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007\001\"" +
+      "\204\005\n\007Gateway\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
+      "ame\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(" +
+      "\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-" +
+      "provider\022,\n\016listen_address\030\004 \001(\tB\024\362\370\263\007\017\260" +
+      "\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_address\030\005 \001(\tB\024\362\370" +
+      "\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\007 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364" +
+      "\263\007\001\022!\n\010location\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 " +
+      "\n\007version\030\n \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid" +
+      "\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\022t" +
+      "\n\023maintenance_windows\030\r \003(\0132\031.v1.NodeMai" +
+      "ntenanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022te" +
+      "rraform-provider\022\022maintenance_window\022L\n\020" +
+      "discovery_config\030\016 \001(\0132\027.v1.NodeDiscover" +
+      "yConfigB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007" +
+      "\005\250\363\263\007\001\"\333\002\n\014ProxyCluster\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022 " +
+      "\n\007address\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags" +
+      "\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022t\n\023maintena" +
+      "nce_windows\030\005 \003(\0132\031.v1.NodeMaintenanceWi" +
+      "ndowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terraform-pr" +
+      "ovider\022\022maintenance_window\022L\n\020discovery_" +
+      "config\030\006 \001(\0132\027.v1.NodeDiscoveryConfigB\031\362" +
+      "\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007\001\"\266\001\n" +
+      "\025NodeMaintenanceWindow\022!\n\rcron_schedule\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_idleness\030\002 " +
+      "\001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022t" +
+      "erraform-provider\022\010TypeList\372\363\263\007\035nodeMain" +
+      "tenanceWindowElemType\"\303\001\n\023NodeDiscoveryC" +
+      "onfig\022\033\n\007enabled\030\001 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\0225\n\006pe" +
+      "riod\030\002 \001(\0132\031.google.protobuf.DurationB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022=\n\014enabledTypes\030\003 \003(\0132\033.v1.Nod" +
+      "eDiscoveryTypeConfigB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250" +
+      "\363\263\007\001\322\363\263\007\ngo_private\"N\n\027NodeDiscoveryType" +
+      "Config\022\030\n\004type\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250" +
+      "\363\263\007\001\322\363\263\007\ngo_private2\223\005\n\005Nodes\022Z\n\006Create\022" +
+      "\025.v1.NodeCreateRequest\032\026.v1.NodeCreateRe" +
+      "sponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/node" +
+      "s\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeGe" +
+      "tResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/no" +
+      "des/{id}\022^\n\006Update\022\025.v1.NodeUpdateReques" +
+      "t\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363\263\007\003put" +
+      "\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete\022\025.v1." +
+      "NodeDeleteRequest\032\026.v1.NodeDeleteRespons" +
+      "e\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{" +
+      "id}\022S\n\004List\022\023.v1.NodeListRequest\032\024.v1.No" +
+      "deListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/" +
+      "v1/nodes\022\211\001\n\010TCPProbe\022\027.v1.NodeTCPProbeR" +
+      "equest\032\030.v1.NodeTCPProbeResponse\"J\202\371\263\007\t\242" +
+      "\363\263\007\004post\202\371\263\007\030\252\363\263\007\023/v1/nodes/tcp-probe\202\371\263" +
+      "\007\032\312\363\263\007\025\302\364\263\007\020\n\004java\022\010tcpProbe\0323\312\371\263\007\t\302\371\263\007\004" +
+      "Node\312\371\263\007\007\322\371\263\007\002n-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cl" +
+      "iBa\n\031com.strongdm.api.plumbingB\rNodesPlu" +
+      "mbingZ5github.com/strongdm/strongdm-sdk-" +
+      "go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24281,44 +26692,56 @@ public final class NodesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeListResponse_descriptor,
         new java.lang.String[] { "Meta", "Nodes", "RateLimit", });
-    internal_static_v1_Node_descriptor =
+    internal_static_v1_NodeTCPProbeRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_v1_NodeTCPProbeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_NodeTCPProbeRequest_descriptor,
+        new java.lang.String[] { "Meta", "NodeId", "Host", "Port", });
+    internal_static_v1_NodeTCPProbeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_v1_NodeTCPProbeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_NodeTCPProbeResponse_descriptor,
+        new java.lang.String[] { "Meta", "Succeeded", "Error", "RateLimit", });
+    internal_static_v1_Node_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Node_descriptor,
         new java.lang.String[] { "Relay", "Gateway", "ProxyCluster", "Node", });
     internal_static_v1_Relay_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
         new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", "DiscoveryConfig", });
     internal_static_v1_Gateway_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
         new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "MaintenanceWindows", "DiscoveryConfig", });
     internal_static_v1_ProxyCluster_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_v1_ProxyCluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ProxyCluster_descriptor,
         new java.lang.String[] { "Id", "Name", "Address", "Tags", "MaintenanceWindows", "DiscoveryConfig", });
     internal_static_v1_NodeMaintenanceWindow_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeMaintenanceWindow_descriptor,
         new java.lang.String[] { "CronSchedule", "RequireIdleness", });
     internal_static_v1_NodeDiscoveryConfig_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_v1_NodeDiscoveryConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeDiscoveryConfig_descriptor,
         new java.lang.String[] { "Enabled", "Period", "EnabledTypes", });
     internal_static_v1_NodeDiscoveryTypeConfig_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_v1_NodeDiscoveryTypeConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NodeDiscoveryTypeConfig_descriptor,
