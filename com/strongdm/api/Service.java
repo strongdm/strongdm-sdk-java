@@ -17,11 +17,23 @@
 
 package com.strongdm.api;
 
+import java.util.Date;
+
 /**
  * A Service is a service account that can connect to resources they are granted directly, or
  * granted via roles. Services are typically automated jobs.
  */
 public class Service implements Account {
+  private Date createdAt;
+  /** CreatedAt is the timestamp when the service was created */
+  public Date getCreatedAt() {
+    return this.createdAt;
+  }
+  /** CreatedAt is the timestamp when the service was created */
+  public void setCreatedAt(Date in) {
+    this.createdAt = in;
+  }
+
   private String id;
   /** Unique identifier of the Service. */
   public String getId() {

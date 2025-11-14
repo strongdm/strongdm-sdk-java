@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+import java.util.Date;
+
 /** A User can connect to resources they are granted directly, or granted via roles. */
 public class User implements Account {
   private String scim;
@@ -27,6 +29,16 @@ public class User implements Account {
   /** SCIM contains the raw SCIM metadata for the user. This is a read-only field. */
   public void setSCIM(String in) {
     this.scim = in;
+  }
+
+  private Date createdAt;
+  /** CreatedAt is the timestamp when the user was created */
+  public Date getCreatedAt() {
+    return this.createdAt;
+  }
+  /** CreatedAt is the timestamp when the user was created */
+  public void setCreatedAt(Date in) {
+    this.createdAt = in;
   }
 
   private String email;

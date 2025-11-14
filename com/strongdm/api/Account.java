@@ -17,6 +17,8 @@
 
 package com.strongdm.api;
 
+import java.util.Date;
+
 /**
  * Accounts are users that have access to strongDM. The types of accounts are: 1. **Users:** humans
  * who are authenticated through username and password or SSO. 2. **Service Accounts:** machines
@@ -34,4 +36,8 @@ public interface Account {
   java.util.Map<String, String> getTags();
   /** Sets the tags of the Account. */
   void setTags(java.util.Map<String, String> tags);
+  /** Returns the created at of the Account. */
+  Date getCreatedAt();
+  /** Sets the created at of the Account. */
+  void setCreatedAt(Date createdAt);
 }

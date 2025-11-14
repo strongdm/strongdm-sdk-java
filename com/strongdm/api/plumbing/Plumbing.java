@@ -15396,6 +15396,99 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.MysqlEngine convertMysqlEngineToPorcelain(MysqlEngine plumbing) {
+    com.strongdm.api.MysqlEngine porcelain = new com.strongdm.api.MysqlEngine();
+    porcelain.setAfterReadTtl(Plumbing.convertDurationToPorcelain(plumbing.getAfterReadTtl()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPolicy(Plumbing.convertSecretEnginePolicyToPorcelain(plumbing.getPolicy()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPublicKey(Plumbing.convertBytesToPorcelain(plumbing.getPublicKey()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSecretStoreRootPath((plumbing.getSecretStoreRootPath()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTls((plumbing.getTls()));
+    porcelain.setTlsSkipVerify((plumbing.getTlsSkipVerify()));
+    porcelain.setTtl(Plumbing.convertDurationToPorcelain(plumbing.getTtl()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static MysqlEngine convertMysqlEngineToPlumbing(com.strongdm.api.MysqlEngine porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MysqlEngine.Builder builder = MysqlEngine.newBuilder();
+    if (porcelain.getAfterReadTtl() != null) {
+      builder.setAfterReadTtl(Plumbing.convertDurationToPlumbing(porcelain.getAfterReadTtl()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    builder.setKeyRotationIntervalDays(porcelain.getKeyRotationIntervalDays());
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy(Plumbing.convertSecretEnginePolicyToPlumbing(porcelain.getPolicy()));
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey(Plumbing.convertBytesToPlumbing(porcelain.getPublicKey()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSecretStoreRootPath() != null) {
+      builder.setSecretStoreRootPath((porcelain.getSecretStoreRootPath()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTls(porcelain.getTls());
+    builder.setTlsSkipVerify(porcelain.getTlsSkipVerify());
+    if (porcelain.getTtl() != null) {
+      builder.setTtl(Plumbing.convertDurationToPlumbing(porcelain.getTtl()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.MysqlEngine> convertRepeatedMysqlEngineToPorcelain(
+      Collection<MysqlEngine> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MysqlEngine>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertMysqlEngineToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MysqlEngine> convertRepeatedMysqlEngineToPlumbing(
+      Collection<com.strongdm.api.MysqlEngine> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MysqlEngine>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertMysqlEngineToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Neptune convertNeptuneToPorcelain(Neptune plumbing) {
     com.strongdm.api.Neptune porcelain = new com.strongdm.api.Neptune();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -22202,6 +22295,9 @@ public class Plumbing {
     if (plumbing.hasKeyValue()) {
       return convertKeyValueEngineToPorcelain(plumbing.getKeyValue());
     }
+    if (plumbing.hasMysql()) {
+      return convertMysqlEngineToPorcelain(plumbing.getMysql());
+    }
     if (plumbing.hasPostgres()) {
       return convertPostgresEngineToPorcelain(plumbing.getPostgres());
     }
@@ -22224,6 +22320,11 @@ public class Plumbing {
       SecretEngine.Builder builder = SecretEngine.newBuilder();
       builder.setKeyValue(
           convertKeyValueEngineToPlumbing((com.strongdm.api.KeyValueEngine) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.MysqlEngine) {
+      SecretEngine.Builder builder = SecretEngine.newBuilder();
+      builder.setMysql(convertMysqlEngineToPlumbing((com.strongdm.api.MysqlEngine) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.PostgresEngine) {
@@ -23560,6 +23661,7 @@ public class Plumbing {
 
   public static com.strongdm.api.Service convertServiceToPorcelain(Service plumbing) {
     com.strongdm.api.Service porcelain = new com.strongdm.api.Service();
+    porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setSuspended((plumbing.getSuspended()));
@@ -23572,6 +23674,9 @@ public class Plumbing {
       return null;
     }
     Service.Builder builder = Service.newBuilder();
+    if (porcelain.getCreatedAt() != null) {
+      builder.setCreatedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCreatedAt()));
+    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
@@ -24208,6 +24313,7 @@ public class Plumbing {
   public static com.strongdm.api.Token convertTokenToPorcelain(Token plumbing) {
     com.strongdm.api.Token porcelain = new com.strongdm.api.Token();
     porcelain.setAccountType((plumbing.getAccountType()));
+    porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
     porcelain.setDeadline(Plumbing.convertTimestampToPorcelain(plumbing.getDeadline()));
     porcelain.setDuration(Plumbing.convertDurationToPorcelain(plumbing.getDuration()));
     porcelain.setId((plumbing.getId()));
@@ -24226,6 +24332,9 @@ public class Plumbing {
     Token.Builder builder = Token.newBuilder();
     if (porcelain.getAccountType() != null) {
       builder.setAccountType((porcelain.getAccountType()));
+    }
+    if (porcelain.getCreatedAt() != null) {
+      builder.setCreatedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCreatedAt()));
     }
     if (porcelain.getDeadline() != null) {
       builder.setDeadline(Plumbing.convertTimestampToPlumbing(porcelain.getDeadline()));
@@ -24395,6 +24504,7 @@ public class Plumbing {
   public static com.strongdm.api.User convertUserToPorcelain(User plumbing) {
     com.strongdm.api.User porcelain = new com.strongdm.api.User();
     porcelain.setSCIM((plumbing.getSCIM()));
+    porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
     porcelain.setEmail((plumbing.getEmail()));
     porcelain.setExternalId((plumbing.getExternalId()));
     porcelain.setFirstName((plumbing.getFirstName()));
@@ -24417,6 +24527,9 @@ public class Plumbing {
     User.Builder builder = User.newBuilder();
     if (porcelain.getSCIM() != null) {
       builder.setSCIM((porcelain.getSCIM()));
+    }
+    if (porcelain.getCreatedAt() != null) {
+      builder.setCreatedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCreatedAt()));
     }
     if (porcelain.getEmail() != null) {
       builder.setEmail((porcelain.getEmail()));

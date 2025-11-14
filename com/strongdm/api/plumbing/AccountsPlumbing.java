@@ -12883,6 +12883,33 @@ public final class AccountsPlumbing {
      */
     com.google.protobuf.ByteString
         getResolvedManagerIdBytes();
+
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the user was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the user was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the user was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -13039,6 +13066,19 @@ public final class AccountsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               resolvedManagerId_ = s;
+              break;
+            }
+            case 130: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -13701,6 +13741,44 @@ public final class AccountsPlumbing {
       }
     }
 
+    public static final int CREATED_AT_FIELD_NUMBER = 16;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the user was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the user was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the user was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13760,6 +13838,9 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedManagerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, resolvedManagerId_);
       }
+      if (createdAt_ != null) {
+        output.writeMessage(16, getCreatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13817,6 +13898,10 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedManagerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, resolvedManagerId_);
       }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getCreatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13865,6 +13950,11 @@ public final class AccountsPlumbing {
           .equals(other.getManagerId())) return false;
       if (!getResolvedManagerId()
           .equals(other.getResolvedManagerId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13910,6 +14000,10 @@ public final class AccountsPlumbing {
       hash = (53 * hash) + getManagerId().hashCode();
       hash = (37 * hash) + RESOLVED_MANAGER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getResolvedManagerId().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14082,6 +14176,12 @@ public final class AccountsPlumbing {
 
         resolvedManagerId_ = "";
 
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -14127,6 +14227,11 @@ public final class AccountsPlumbing {
         result.sCIM_ = sCIM_;
         result.managerId_ = managerId_;
         result.resolvedManagerId_ = resolvedManagerId_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -14231,6 +14336,9 @@ public final class AccountsPlumbing {
         if (!other.getResolvedManagerId().isEmpty()) {
           resolvedManagerId_ = other.resolvedManagerId_;
           onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15668,6 +15776,161 @@ public final class AccountsPlumbing {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the user was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15801,6 +16064,33 @@ public final class AccountsPlumbing {
      * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the service was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the service was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the service was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -15880,6 +16170,19 @@ public final class AccountsPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(tags_);
                 tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
               }
 
               break;
@@ -16063,6 +16366,44 @@ public final class AccountsPlumbing {
       return getTags();
     }
 
+    public static final int CREATED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the service was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the service was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the service was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16089,6 +16430,9 @@ public final class AccountsPlumbing {
       if (tags_ != null) {
         output.writeMessage(4, getTags());
       }
+      if (createdAt_ != null) {
+        output.writeMessage(5, getCreatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16111,6 +16455,10 @@ public final class AccountsPlumbing {
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTags());
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCreatedAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16138,6 +16486,11 @@ public final class AccountsPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16159,6 +16512,10 @@ public final class AccountsPlumbing {
       if (hasTags()) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
+      }
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -16310,6 +16667,12 @@ public final class AccountsPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -16343,6 +16706,11 @@ public final class AccountsPlumbing {
           result.tags_ = tags_;
         } else {
           result.tags_ = tagsBuilder_.build();
+        }
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -16405,6 +16773,9 @@ public final class AccountsPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16824,6 +17195,161 @@ public final class AccountsPlumbing {
         }
         return tagsBuilder_;
       }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the service was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 5 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17099,6 +17625,33 @@ public final class AccountsPlumbing {
      * <code>.google.protobuf.Duration duration = 9 [(.v1.field_options) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the token was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the token was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the token was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -17235,6 +17788,19 @@ public final class AccountsPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(duration_);
                 duration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
               }
 
               break;
@@ -17632,6 +18198,44 @@ public final class AccountsPlumbing {
       return getDuration();
     }
 
+    public static final int CREATED_AT_FIELD_NUMBER = 10;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the token was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the token was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * CreatedAt is the timestamp when the token was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17672,6 +18276,9 @@ public final class AccountsPlumbing {
       }
       if (duration_ != null) {
         output.writeMessage(9, getDuration());
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(10, getCreatedAt());
       }
       unknownFields.writeTo(output);
     }
@@ -17719,6 +18326,10 @@ public final class AccountsPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getDuration());
       }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getCreatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17764,6 +18375,11 @@ public final class AccountsPlumbing {
         if (!getDuration()
             .equals(other.getDuration())) return false;
       }
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17803,6 +18419,10 @@ public final class AccountsPlumbing {
       if (hasDuration()) {
         hash = (37 * hash) + DURATION_FIELD_NUMBER;
         hash = (53 * hash) + getDuration().hashCode();
+      }
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -17976,6 +18596,12 @@ public final class AccountsPlumbing {
           duration_ = null;
           durationBuilder_ = null;
         }
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -18031,6 +18657,11 @@ public final class AccountsPlumbing {
           result.duration_ = duration_;
         } else {
           result.duration_ = durationBuilder_.build();
+        }
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -18116,6 +18747,9 @@ public final class AccountsPlumbing {
         }
         if (other.hasDuration()) {
           mergeDuration(other.getDuration());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19243,6 +19877,161 @@ public final class AccountsPlumbing {
         }
         return durationBuilder_;
       }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * CreatedAt is the timestamp when the token was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 10 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19420,70 +20209,76 @@ public final class AccountsPlumbing {
       "ccounts\030\002 \003(\0132\013.v1.AccountB\n\362\370\263\007\005\270\363\263\007\001\022W" +
       "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat" +
       "aB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_" +
-      "gateway\"\224\002\n\007Account\022$\n\004user\030\001 \001(\0132\010.v1.U" +
+      "gateway\"\250\002\n\007Account\022$\n\004user\030\001 \001(\0132\010.v1.U" +
       "serB\n\362\370\263\007\005\260\363\263\007\001H\000\022*\n\007service\030\002 \001(\0132\013.v1." +
       "ServiceB\n\362\370\263\007\005\260\363\263\007\001H\000\022&\n\005token\030\003 \001(\0132\t.v" +
       "1.TokenB\n\362\370\263\007\005\260\363\263\007\001H\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007R\302\363" +
       "\263\007M\242\363\263\007 tf_examples/account_resource.txt" +
       "\252\363\263\007#tf_examples/account_data_source.txt" +
-      "B,\n\007account\022!\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263" +
-      "\007\004tags\"\222\010\n\004User\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\036\n\005email\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst" +
-      "_name\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\tlast_nam" +
-      "e\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022*\n\tsuspended\030\005 " +
-      "\001(\010B\027\362\370\263\007\022\262\364\263\007\r!json_gateway\022\"\n\004tags\030\006 \001" +
-      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0226\n\020permission_l" +
-      "evel\030\007 \001(\tB\034\362\370\263\007\027\230\364\263\007\001\262\364\263\007\r!json_gateway" +
-      "\022#\n\nmanaged_by\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022\037\n" +
-      "\013external_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\333\001\n\013suspe" +
-      "ndedRO\030\n \001(\010B\305\001\362\370\263\007\277\001\260\363\263\007\001\312\363\263\007\257\001\302\364\263\007\017\n\002g" +
-      "o\022\tSuspended\302\364\263\007\020\n\003cli\022\tsuspended\302\364\263\007\021\n\004" +
-      "ruby\022\tsuspended\302\364\263\007\023\n\006python\022\tsuspended\302" +
-      "\364\263\007\021\n\004java\022\tSuspended\302\364\263\007\037\n\022terraform-pr" +
-      "ovider\022\tsuspended\302\364\263\007\031\n\014json_gateway\022\tsu" +
-      "spended\230\364\263\007\001\022\220\002\n\022permission_levelRW\030\013 \001(" +
-      "\tB\363\001\362\370\263\007\355\001\260\363\263\007\001\312\363\263\007\335\001\302\364\263\007\025\n\002go\022\017Permissi" +
-      "onLevel\302\364\263\007\027\n\003cli\022\020permission-level\302\364\263\007\030" +
-      "\n\004ruby\022\020permission_level\302\364\263\007\032\n\006python\022\020p" +
-      "ermission_level\302\364\263\007\027\n\004java\022\017PermissionLe" +
-      "vel\302\364\263\007&\n\022terraform-provider\022\020permission" +
-      "_level\302\364\263\007\037\n\014json_gateway\022\017permissionLev" +
-      "el\320\364\263\007\001\022?\n\010password\030\014 \001(\tB-\362\370\263\007(\260\363\263\007\001\350\363\263" +
-      "\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022#\n\004SCIM" +
-      "\030\r \001(\tB\025\362\370\263\007\020\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\022$\n\nmanager" +
-      "_id\030\016 \001(\tB\020\362\370\263\007\013\260\363\263\007\001\262\364\263\007\001*\0222\n\023resolved_" +
-      "manager_id\030\017 \001(\tB\025\362\370\263\007\020\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*:" +
-      "\n\372\370\263\007\005\250\363\263\007\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035" +
-      "\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\201\003" +
-      "\n\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030" +
-      "\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(" +
-      "\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.prot" +
-      "obuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006" +
-      " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022 \n\014account_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
-      "\n\013permissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010durat" +
-      "ion\030\t \001(\0132\031.google.protobuf.DurationB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:\017\372\370\263\007\n\250\363\263\007\001\330\363\263\007\0012\272\004\n\010Accounts\022c" +
-      "\n\006Create\022\030.v1.AccountCreateRequest\032\031.v1." +
-      "AccountCreateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263" +
-      "\007\021\252\363\263\007\014/v1/accounts\022^\n\003Get\022\025.v1.AccountG" +
-      "etRequest\032\026.v1.AccountGetResponse\"(\202\371\263\007\010" +
-      "\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006U" +
-      "pdate\022\030.v1.AccountUpdateRequest\032\031.v1.Acc" +
-      "ountUpdateResponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363" +
-      "\263\007\021/v1/accounts/{id}\022j\n\006Delete\022\030.v1.Acco" +
-      "untDeleteRequest\032\031.v1.AccountDeleteRespo" +
-      "nse\"+\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accou" +
-      "nts/{id}\022\\\n\004List\022\026.v1.AccountListRequest" +
-      "\032\027.v1.AccountListResponse\"#\202\371\263\007\010\242\363\263\007\003get" +
-      "\202\371\263\007\021\252\363\263\007\014/v1/accounts\0326\312\371\263\007\014\302\371\263\007\007Accoun" +
-      "t\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd" +
-      "\n\031com.strongdm.api.plumbingB\020AccountsPlu" +
-      "mbingZ5github.com/strongdm/strongdm-sdk-" +
-      "go/v3/internal/v1;v1b\006proto3"
+      "B@\n\007account\0225\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263" +
+      "\007\004tags\252\370\263\007\017\252\370\263\007\ncreated_at\"\331\010\n\004User\022\026\n\002i" +
+      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005email\030\002 \001(\tB\017\362\370\263\007" +
+      "\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst_name\030\003 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001\022\"\n\tlast_name\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
+      "\363\263\007\001\022*\n\tsuspended\030\005 \001(\010B\027\362\370\263\007\022\262\364\263\007\r!json" +
+      "_gateway\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\0226\n\020permission_level\030\007 \001(\tB\034\362\370\263\007\027\230\364\263" +
+      "\007\001\262\364\263\007\r!json_gateway\022#\n\nmanaged_by\030\010 \001(\t" +
+      "B\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022\037\n\013external_id\030\t \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\333\001\n\013suspendedRO\030\n \001(\010B\305\001\362\370\263\007\277" +
+      "\001\260\363\263\007\001\312\363\263\007\257\001\302\364\263\007\017\n\002go\022\tSuspended\302\364\263\007\020\n\003c" +
+      "li\022\tsuspended\302\364\263\007\021\n\004ruby\022\tsuspended\302\364\263\007\023" +
+      "\n\006python\022\tsuspended\302\364\263\007\021\n\004java\022\tSuspende" +
+      "d\302\364\263\007\037\n\022terraform-provider\022\tsuspended\302\364\263" +
+      "\007\031\n\014json_gateway\022\tsuspended\230\364\263\007\001\022\220\002\n\022per" +
+      "mission_levelRW\030\013 \001(\tB\363\001\362\370\263\007\355\001\260\363\263\007\001\312\363\263\007\335" +
+      "\001\302\364\263\007\025\n\002go\022\017PermissionLevel\302\364\263\007\027\n\003cli\022\020p" +
+      "ermission-level\302\364\263\007\030\n\004ruby\022\020permission_l" +
+      "evel\302\364\263\007\032\n\006python\022\020permission_level\302\364\263\007\027" +
+      "\n\004java\022\017PermissionLevel\302\364\263\007&\n\022terraform-" +
+      "provider\022\020permission_level\302\364\263\007\037\n\014json_ga" +
+      "teway\022\017permissionLevel\320\364\263\007\001\022?\n\010password\030" +
+      "\014 \001(\tB-\362\370\263\007(\260\363\263\007\001\350\363\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraf" +
+      "orm-provider\022#\n\004SCIM\030\r \001(\tB\025\362\370\263\007\020\260\363\263\007\001\230\364" +
+      "\263\007\001\262\364\263\007\001*\022$\n\nmanager_id\030\016 \001(\tB\020\362\370\263\007\013\260\363\263\007" +
+      "\001\262\364\263\007\001*\0222\n\023resolved_manager_id\030\017 \001(\tB\025\362\370" +
+      "\263\007\020\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\022E\n\ncreated_at\030\020 \001(\0132" +
+      "\032.google.protobuf.TimestampB\025\362\370\263\007\020\260\363\263\007\001\230" +
+      "\364\263\007\001\262\364\263\007\001*:\n\372\370\263\007\005\250\363\263\007\001\"\320\001\n\007Service\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\n" +
+      "created_at\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tampB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\302\003\n\005To" +
+      "ken\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.protobuf" +
+      ".TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\013" +
+      "2\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022 \n\014account_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013pe" +
+      "rmissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030" +
+      "\t \001(\0132\031.google.protobuf.DurationB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022?\n\ncreated_at\030\n \001(\0132\032.google.protob" +
+      "uf.TimestampB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\017\372\370\263\007\n\250\363\263\007" +
+      "\001\330\363\263\007\0012\272\004\n\010Accounts\022c\n\006Create\022\030.v1.Accou" +
+      "ntCreateRequest\032\031.v1.AccountCreateRespon" +
+      "se\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/accounts" +
+      "\022^\n\003Get\022\025.v1.AccountGetRequest\032\026.v1.Acco" +
+      "untGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/" +
+      "v1/accounts/{id}\022g\n\006Update\022\030.v1.AccountU" +
+      "pdateRequest\032\031.v1.AccountUpdateResponse\"" +
+      "(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id" +
+      "}\022j\n\006Delete\022\030.v1.AccountDeleteRequest\032\031." +
+      "v1.AccountDeleteResponse\"+\202\371\263\007\013\242\363\263\007\006dele" +
+      "te\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004List\022\026." +
+      "v1.AccountListRequest\032\027.v1.AccountListRe" +
+      "sponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/accou" +
+      "nts\0326\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\006\312" +
+      "\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd\n\031com.strongdm.api." +
+      "plumbingB\020AccountsPlumbingZ5github.com/s" +
+      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19565,19 +20360,19 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", "SCIM", "ManagerId", "ResolvedManagerId", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", "SCIM", "ManagerId", "ResolvedManagerId", "CreatedAt", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Service_descriptor,
-        new java.lang.String[] { "Id", "Name", "Suspended", "Tags", });
+        new java.lang.String[] { "Id", "Name", "Suspended", "Tags", "CreatedAt", });
     internal_static_v1_Token_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_v1_Token_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Token_descriptor,
-        new java.lang.String[] { "Id", "Name", "Suspended", "Tags", "Rekeyed", "Deadline", "AccountType", "Permissions", "Duration", });
+        new java.lang.String[] { "Id", "Name", "Suspended", "Tags", "Rekeyed", "Deadline", "AccountType", "Permissions", "Duration", "CreatedAt", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

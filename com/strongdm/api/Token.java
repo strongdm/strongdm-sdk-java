@@ -36,6 +36,16 @@ public class Token implements Account {
     this.accountType = in;
   }
 
+  private Date createdAt;
+  /** CreatedAt is the timestamp when the token was created */
+  public Date getCreatedAt() {
+    return this.createdAt;
+  }
+  /** CreatedAt is the timestamp when the token was created */
+  public void setCreatedAt(Date in) {
+    this.createdAt = in;
+  }
+
   private Date deadline;
   /** The timestamp when the Token will expire. */
   public Date getDeadline() {
