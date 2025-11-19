@@ -19,7 +19,7 @@ package com.strongdm.api;
 
 import java.time.Duration;
 
-public class PostgresEngine implements SecretEngine {
+public class SqlserverEngine implements SecretEngine {
   private Duration afterReadTtl;
   /**
    * The default time-to-live duration of the password after it's read. Once the ttl has passed, a
@@ -47,11 +47,11 @@ public class PostgresEngine implements SecretEngine {
   }
 
   private String hostname;
-  /** Hostname is the hostname or IP address of the Postgres server. */
+  /** Hostname is the hostname or IP address of the SQL Server. */
   public String getHostname() {
     return this.hostname;
   }
-  /** Hostname is the hostname or IP address of the Postgres server. */
+  /** Hostname is the hostname or IP address of the SQL Server. */
   public void setHostname(String in) {
     this.hostname = in;
   }
@@ -87,11 +87,11 @@ public class PostgresEngine implements SecretEngine {
   }
 
   private String password;
-  /** Password is the password to connect to the Postgres server. */
+  /** Password is the password to connect to the SQL Server server. */
   public String getPassword() {
     return this.password;
   }
-  /** Password is the password to connect to the Postgres server. */
+  /** Password is the password to connect to the SQL Server server. */
   public void setPassword(String in) {
     this.password = in;
   }
@@ -107,11 +107,11 @@ public class PostgresEngine implements SecretEngine {
   }
 
   private int port;
-  /** Port is the port number of the Postgres server. */
+  /** Port is the port number of the SQL Server server. */
   public int getPort() {
     return this.port;
   }
-  /** Port is the port number of the Postgres server. */
+  /** Port is the port number of the SQL Server server. */
   public void setPort(int in) {
     this.port = in;
   }
@@ -166,13 +166,23 @@ public class PostgresEngine implements SecretEngine {
   }
 
   private boolean tls;
-  /** TLS enables TLS/SSL when connecting to the Postgres server. */
+  /** TLS enables TLS/SSL when connecting to the SQL Server server. */
   public boolean getTls() {
     return this.tls;
   }
-  /** TLS enables TLS/SSL when connecting to the Postgres server. */
+  /** TLS enables TLS/SSL when connecting to the SQL Server server. */
   public void setTls(boolean in) {
     this.tls = in;
+  }
+
+  private boolean tlsSkipVerify;
+  /** TLS disable certificate verification */
+  public boolean getTlsSkipVerify() {
+    return this.tlsSkipVerify;
+  }
+  /** TLS disable certificate verification */
+  public void setTlsSkipVerify(boolean in) {
+    this.tlsSkipVerify = in;
   }
 
   private Duration ttl;
@@ -192,11 +202,11 @@ public class PostgresEngine implements SecretEngine {
   }
 
   private String username;
-  /** Username is the username to connect to the Postgres server. */
+  /** Username is the username to connect to the SQL Server. */
   public String getUsername() {
     return this.username;
   }
-  /** Username is the username to connect to the Postgres server. */
+  /** Username is the username to connect to the SQL Server. */
   public void setUsername(String in) {
     this.username = in;
   }

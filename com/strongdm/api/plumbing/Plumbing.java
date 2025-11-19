@@ -22301,6 +22301,9 @@ public class Plumbing {
     if (plumbing.hasPostgres()) {
       return convertPostgresEngineToPorcelain(plumbing.getPostgres());
     }
+    if (plumbing.hasSqlserver()) {
+      return convertSqlserverEngineToPorcelain(plumbing.getSqlserver());
+    }
     throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
 
@@ -22331,6 +22334,12 @@ public class Plumbing {
       SecretEngine.Builder builder = SecretEngine.newBuilder();
       builder.setPostgres(
           convertPostgresEngineToPlumbing((com.strongdm.api.PostgresEngine) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.SqlserverEngine) {
+      SecretEngine.Builder builder = SecretEngine.newBuilder();
+      builder.setSqlserver(
+          convertSqlserverEngineToPlumbing((com.strongdm.api.SqlserverEngine) porcelain));
       return builder.build();
     }
     return null;
@@ -23970,6 +23979,101 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertSnowsightToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.SqlserverEngine convertSqlserverEngineToPorcelain(
+      SqlserverEngine plumbing) {
+    com.strongdm.api.SqlserverEngine porcelain = new com.strongdm.api.SqlserverEngine();
+    porcelain.setAfterReadTtl(Plumbing.convertDurationToPorcelain(plumbing.getAfterReadTtl()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPolicy(Plumbing.convertSecretEnginePolicyToPorcelain(plumbing.getPolicy()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPublicKey(Plumbing.convertBytesToPorcelain(plumbing.getPublicKey()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSecretStoreRootPath((plumbing.getSecretStoreRootPath()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTls((plumbing.getTls()));
+    porcelain.setTlsSkipVerify((plumbing.getTlsSkipVerify()));
+    porcelain.setTtl(Plumbing.convertDurationToPorcelain(plumbing.getTtl()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static SqlserverEngine convertSqlserverEngineToPlumbing(
+      com.strongdm.api.SqlserverEngine porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SqlserverEngine.Builder builder = SqlserverEngine.newBuilder();
+    if (porcelain.getAfterReadTtl() != null) {
+      builder.setAfterReadTtl(Plumbing.convertDurationToPlumbing(porcelain.getAfterReadTtl()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    builder.setKeyRotationIntervalDays(porcelain.getKeyRotationIntervalDays());
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    if (porcelain.getPolicy() != null) {
+      builder.setPolicy(Plumbing.convertSecretEnginePolicyToPlumbing(porcelain.getPolicy()));
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey(Plumbing.convertBytesToPlumbing(porcelain.getPublicKey()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSecretStoreRootPath() != null) {
+      builder.setSecretStoreRootPath((porcelain.getSecretStoreRootPath()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTls(porcelain.getTls());
+    builder.setTlsSkipVerify(porcelain.getTlsSkipVerify());
+    if (porcelain.getTtl() != null) {
+      builder.setTtl(Plumbing.convertDurationToPlumbing(porcelain.getTtl()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.SqlserverEngine> convertRepeatedSqlserverEngineToPorcelain(
+      Collection<SqlserverEngine> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.SqlserverEngine>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertSqlserverEngineToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SqlserverEngine> convertRepeatedSqlserverEngineToPlumbing(
+      Collection<com.strongdm.api.SqlserverEngine> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<SqlserverEngine>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertSqlserverEngineToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
