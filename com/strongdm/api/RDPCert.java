@@ -40,17 +40,19 @@ public class RDPCert implements Resource {
 
   private String dcHostnames;
   /**
-   * Comma-separated list of Active Directory Domain Controller hostnames for LDAPS SID resolution.
-   * Utilized for strong certificate mapping in full enforcement mode when the identity alias does
-   * not specify a SID.
+   * Comma-separated list of Active Directory Domain Controller hostnames. Required in on-premises
+   * AD environments for Kerberos Network Level Authentication (NLA), and for LDAPS SID resolution
+   * for strong certificate mapping in full enforcement mode when the identity alias does not
+   * specify a SID. Unused for Entra ID.
    */
   public String getDcHostnames() {
     return this.dcHostnames;
   }
   /**
-   * Comma-separated list of Active Directory Domain Controller hostnames for LDAPS SID resolution.
-   * Utilized for strong certificate mapping in full enforcement mode when the identity alias does
-   * not specify a SID.
+   * Comma-separated list of Active Directory Domain Controller hostnames. Required in on-premises
+   * AD environments for Kerberos Network Level Authentication (NLA), and for LDAPS SID resolution
+   * for strong certificate mapping in full enforcement mode when the identity alias does not
+   * specify a SID. Unused for Entra ID.
    */
   public void setDcHostnames(String in) {
     this.dcHostnames = in;
@@ -98,15 +100,15 @@ public class RDPCert implements Resource {
 
   private String identityAliasHealthcheckUsername;
   /**
-   * The username to use for healthchecks, when clients otherwise connect with their own identity
-   * alias username.
+   * Username of the AD service account for health checks, and LDAPS SID resolution if necessary.
+   * Required for on-premises AD environments, unused for Entra ID.
    */
   public String getIdentityAliasHealthcheckUsername() {
     return this.identityAliasHealthcheckUsername;
   }
   /**
-   * The username to use for healthchecks, when clients otherwise connect with their own identity
-   * alias username.
+   * Username of the AD service account for health checks, and LDAPS SID resolution if necessary.
+   * Required for on-premises AD environments, unused for Entra ID.
    */
   public void setIdentityAliasHealthcheckUsername(String in) {
     this.identityAliasHealthcheckUsername = in;
@@ -194,17 +196,37 @@ public class RDPCert implements Resource {
     this.secretStoreId = in;
   }
 
+  private String serverFqdn;
+  /**
+   * Fully-qualified DNS name of the target Windows server, including the AD domain. Must match the
+   * Service Principal Name (SPN) of the server in AD. Required in on-premises AD environments for
+   * Kerberos Network Level Authentication (NLA), unused for Entra ID.
+   */
+  public String getServerFqdn() {
+    return this.serverFqdn;
+  }
+  /**
+   * Fully-qualified DNS name of the target Windows server, including the AD domain. Must match the
+   * Service Principal Name (SPN) of the server in AD. Required in on-premises AD environments for
+   * Kerberos Network Level Authentication (NLA), unused for Entra ID.
+   */
+  public void setServerFqdn(String in) {
+    this.serverFqdn = in;
+  }
+
   private String sid;
   /**
-   * Windows Security Identifier (SID) of the configured Username, required for strong certificate
-   * mapping in full enforcement mode.
+   * Windows Security Identifier (SID) of the configured Username, or AD service account if using
+   * LDAPS SID resolution. Required in on-premises AD environments for strong certificate mapping in
+   * full enforcement mode, unused for Entra ID.
    */
   public String getSid() {
     return this.sid;
   }
   /**
-   * Windows Security Identifier (SID) of the configured Username, required for strong certificate
-   * mapping in full enforcement mode.
+   * Windows Security Identifier (SID) of the configured Username, or AD service account if using
+   * LDAPS SID resolution. Required in on-premises AD environments for strong certificate mapping in
+   * full enforcement mode, unused for Entra ID.
    */
   public void setSid(String in) {
     this.sid = in;

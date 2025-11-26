@@ -18390,6 +18390,7 @@ public class Plumbing {
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setServerFqdn((plumbing.getServerFqdn()));
     porcelain.setSid((plumbing.getSid()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -18436,6 +18437,9 @@ public class Plumbing {
     }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getServerFqdn() != null) {
+      builder.setServerFqdn((porcelain.getServerFqdn()));
     }
     if (porcelain.getSid() != null) {
       builder.setSid((porcelain.getSid()));
