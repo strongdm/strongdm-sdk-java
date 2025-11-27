@@ -44,6 +44,8 @@ public final class ActivityVerb {
   public static final String ADMIN_TOKEN_CLONED = "admin token cloned";
   public static final String ADMIN_TOKEN_SUSPENDED = "admin token suspended";
   public static final String ADMIN_TOKEN_REINSTATED = "admin token reinstated";
+  public static final String USER_O_AUTH_TOKEN_UPSERTED = "user oauth token for resource upserted";
+  public static final String USER_O_AUTH_TOKEN_DELETED = "user oauth token for resource deleted";
   public static final String SSO_USER_LOGGED_INTO_THE_UI =
       "user logged into the Admin UI using SSO";
   public static final String SSO_USER_LOGGED_INTO_THE_CLIENT =
