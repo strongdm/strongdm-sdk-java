@@ -93,11 +93,11 @@ public class MCP implements Resource {
   }
 
   private String password;
-  /** The password to authenticate with. */
+  /** OAuth App Client Secret */
   public String getPassword() {
     return this.password;
   }
-  /** The password to authenticate with. */
+  /** OAuth App Client Secret */
   public void setPassword(String in) {
     this.password = in;
   }
@@ -183,5 +183,15 @@ public class MCP implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private String username;
+  /** OAuth App Client ID */
+  public String getUsername() {
+    return this.username;
+  }
+  /** OAuth App Client ID */
+  public void setUsername(String in) {
+    this.username = in;
   }
 }
