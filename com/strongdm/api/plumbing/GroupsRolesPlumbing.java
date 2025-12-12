@@ -10160,7 +10160,7 @@ public final class GroupsRolesPlumbing {
       "\001(\tB#\362\370\263\007\036\260\363\263\007\001\230\364\263\007\001\262\364\263\007\ngo_private\320\364\263\007\001" +
       ":p\372\370\263\007k\250\363\263\007\001\302\363\263\007S\242\363\263\007#tf_examples/group_" +
       "role_resource.txt\252\363\263\007&tf_examples/group_" +
-      "role_data_source.txt\322\363\263\007\001*\322\363\263\007\003cli2\352\003\n\013G" +
+      "role_data_source.txt\322\363\263\007\001*\322\363\263\007\003cli2\364\003\n\013G" +
       "roupsRoles\022j\n\006Create\022\032.v1.GroupRoleCreat" +
       "eRequest\032\033.v1.GroupRoleCreateResponse\"\'\202" +
       "\371\263\007\t\242\363\263\007\004post\202\371\263\007\024\252\363\263\007\017/v1/groupsroles\022e" +
@@ -10171,12 +10171,12 @@ public final class GroupsRolesPlumbing {
       "Response\".\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\031\252\363\263\007\024/v1/" +
       "groupsroles/{id}\022c\n\004List\022\030.v1.GroupRoleL" +
       "istRequest\032\031.v1.GroupRoleListResponse\"&\202" +
-      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007\017/v1/groupsroles\0320\312" +
+      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007\017/v1/groupsroles\032:\312" +
       "\371\263\007+\302\371\263\007\tGroupRole\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\ngro" +
-      "uprole-B\177\n\031com.strongdm.api.plumbingB\023Gr" +
-      "oupsRolesPlumbingZ5github.com/strongdm/s" +
-      "trongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264" +
-      "\007\001*\302\222\264\007\010\242\214\264\007\003clib\006proto3"
+      "uprole-\312\371\263\007\005\350\371\263\007\001B\177\n\031com.strongdm.api.pl" +
+      "umbingB\023GroupsRolesPlumbingZ5github.com/" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
+      "v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\010\242\214\264\007\003clib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

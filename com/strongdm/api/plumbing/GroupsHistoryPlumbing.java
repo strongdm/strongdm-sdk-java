@@ -3807,16 +3807,16 @@ public final class GroupsHistoryPlumbing {
       "$\n\005group\030\003 \001(\0132\t.v1.GroupB\n\362\370\263\007\005\260\363\263\007\001\022:\n" +
       "\ndeleted_at\030\004 \001(\0132\032.google.protobuf.Time" +
       "stampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*" +
-      "\372\370\263\007\030\322\363\263\007\023!terraform-provider2\307\001\n\rGroups" +
+      "\372\370\263\007\030\322\363\263\007\023!terraform-provider2\321\001\n\rGroups" +
       "History\022l\n\004List\022\033.v1.GroupHistoryListReq" +
       "uest\032\034.v1.GroupHistoryListResponse\")\202\371\263\007" +
-      "\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/groups-history\032H\312" +
+      "\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/groups-history\032R\312" +
       "\371\263\007\021\302\371\263\007\014GroupHistory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007" +
-      "\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\221\001\n\031com." +
-      "strongdm.api.plumbingB\025GroupsHistoryPlum" +
-      "bingZ5github.com/strongdm/strongdm-sdk-g" +
-      "o/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023" +
-      "!terraform-providerb\006proto3"
+      "\001*\312\371\263\007\030\312\371\263\007\023!terraform-provider\312\371\263\007\005\350\371\263\007" +
+      "\001B\221\001\n\031com.strongdm.api.plumbingB\025GroupsH" +
+      "istoryPlumbingZ5github.com/strongdm/stro" +
+      "ngdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*" +
+      "\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -17073,7 +17073,7 @@ public final class GroupsPlumbing {
       "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:f\372\370\263\007a\250\363\263\007\001\302\363\263\007I\242\363" +
       "\263\007\036tf_examples/group_resource.txt\252\363\263\007!tf" +
       "_examples/group_data_source.txt\322\363\263\007\001*\322\363\263" +
-      "\007\003cli2\222\005\n\006Groups\022]\n\006Create\022\026.v1.GroupCre" +
+      "\007\003cli2\234\005\n\006Groups\022]\n\006Create\022\026.v1.GroupCre" +
       "ateRequest\032\027.v1.GroupCreateResponse\"\"\202\371\263" +
       "\007\t\242\363\263\007\004post\202\371\263\007\017\252\363\263\007\n/v1/groups\022\203\001\n\017Crea" +
       "teFromRoles\022\037.v1.GroupCreateFromRolesReq" +
@@ -17088,11 +17088,12 @@ public final class GroupsPlumbing {
       "eleteResponse\")\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\024\252\363\263\007" +
       "\017/v1/groups/{id}\022V\n\004List\022\024.v1.GroupListR" +
       "equest\032\025.v1.GroupListResponse\"!\202\371\263\007\010\242\363\263\007" +
-      "\003get\202\371\263\007\017\252\363\263\007\n/v1/groups\032(\312\371\263\007#\302\371\263\007\005Grou" +
-      "p\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\006group-Bz\n\031com.strong" +
-      "dm.api.plumbingB\016GroupsPlumbingZ5github." +
-      "com/strongdm/strongdm-sdk-go/v3/internal" +
-      "/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\010\242\214\264\007\003clib\006proto3"
+      "\003get\202\371\263\007\017\252\363\263\007\n/v1/groups\0322\312\371\263\007#\302\371\263\007\005Grou" +
+      "p\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\006group-\312\371\263\007\005\350\371\263\007\001Bz\n\031" +
+      "com.strongdm.api.plumbingB\016GroupsPlumbin" +
+      "gZ5github.com/strongdm/strongdm-sdk-go/v" +
+      "3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\010\242\214\264\007\003cli" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

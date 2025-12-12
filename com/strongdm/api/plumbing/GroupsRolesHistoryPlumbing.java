@@ -3808,17 +3808,17 @@ public final class GroupsRolesHistoryPlumbing {
       "e\030\003 \001(\0132\r.v1.GroupRoleB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nde" +
       "leted_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
       "mpB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263" +
-      "\007\030\322\363\263\007\023!terraform-provider2\335\001\n\022GroupsRol" +
+      "\007\030\322\363\263\007\023!terraform-provider2\347\001\n\022GroupsRol" +
       "esHistory\022y\n\004List\022\037.v1.GroupRoleHistoryL" +
       "istRequest\032 .v1.GroupRoleHistoryListResp" +
       "onse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/groupsr" +
-      "oles-history\032L\312\371\263\007\025\302\371\263\007\020GroupRoleHistory" +
+      "oles-history\032V\312\371\263\007\025\302\371\263\007\020GroupRoleHistory" +
       "\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terrafor" +
-      "m-providerB\226\001\n\031com.strongdm.api.plumbing" +
-      "B\032GroupsRolesHistoryPlumbingZ5github.com" +
-      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
-      ";v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provi" +
-      "derb\006proto3"
+      "m-provider\312\371\263\007\005\350\371\263\007\001B\226\001\n\031com.strongdm.ap" +
+      "i.plumbingB\032GroupsRolesHistoryPlumbingZ5" +
+      "github.com/strongdm/strongdm-sdk-go/v3/i" +
+      "nternal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terra" +
+      "form-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

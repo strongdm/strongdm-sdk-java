@@ -16049,6 +16049,85 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.OktaGroups convertOktaGroupsToPorcelain(OktaGroups plumbing) {
+    com.strongdm.api.OktaGroups porcelain = new com.strongdm.api.OktaGroups();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDomain((plumbing.getDomain()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPrivilegeLevels((plumbing.getPrivilegeLevels()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static OktaGroups convertOktaGroupsToPlumbing(com.strongdm.api.OktaGroups porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    OktaGroups.Builder builder = OktaGroups.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDomain() != null) {
+      builder.setDomain((porcelain.getDomain()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPrivilegeLevels() != null) {
+      builder.setPrivilegeLevels((porcelain.getPrivilegeLevels()));
+    }
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.OktaGroups> convertRepeatedOktaGroupsToPorcelain(
+      Collection<OktaGroups> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.OktaGroups>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertOktaGroupsToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<OktaGroups> convertRepeatedOktaGroupsToPlumbing(
+      Collection<com.strongdm.api.OktaGroups> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<OktaGroups>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertOktaGroupsToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Oracle convertOracleToPorcelain(Oracle plumbing) {
     com.strongdm.api.Oracle porcelain = new com.strongdm.api.Oracle();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -20162,6 +20241,9 @@ public class Plumbing {
     if (plumbing.hasNeptuneIam()) {
       return convertNeptuneIAMToPorcelain(plumbing.getNeptuneIam());
     }
+    if (plumbing.hasOktaGroups()) {
+      return convertOktaGroupsToPorcelain(plumbing.getOktaGroups());
+    }
     if (plumbing.hasOracle()) {
       return convertOracleToPorcelain(plumbing.getOracle());
     }
@@ -20721,6 +20803,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.NeptuneIAM) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setNeptuneIam(convertNeptuneIAMToPlumbing((com.strongdm.api.NeptuneIAM) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.OktaGroups) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setOktaGroups(convertOktaGroupsToPlumbing((com.strongdm.api.OktaGroups) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Oracle) {

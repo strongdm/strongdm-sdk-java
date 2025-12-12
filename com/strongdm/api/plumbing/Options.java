@@ -27,6 +27,7 @@ public final class Options {
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.oneofOptions);
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.enumOptions);
   }
 
   public static void registerAllExtensions(
@@ -8650,6 +8651,977 @@ public final class Options {
 
   }
 
+  public interface EnumOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.EnumOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @return A list containing the targets.
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
+
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this enum.
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    boolean hasCustom();
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this enum.
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    com.strongdm.api.plumbing.Options.CustomOptions getCustom();
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this enum.
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     */
+    com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.EnumOptions}
+   */
+  public static final class EnumOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.EnumOptions)
+      EnumOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnumOptions.newBuilder() to construct.
+    private EnumOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnumOptions() {
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnumOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnumOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 15530442: {
+              com.strongdm.api.plumbing.Options.CustomOptions.Builder subBuilder = null;
+              if (custom_ != null) {
+                subBuilder = custom_.toBuilder();
+              }
+              custom_ = input.readMessage(com.strongdm.api.plumbing.Options.CustomOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(custom_);
+                custom_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 15530642: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.Options.internal_static_v1_EnumOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.Options.internal_static_v1_EnumOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.Options.EnumOptions.class, com.strongdm.api.plumbing.Options.EnumOptions.Builder.class);
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 1941330;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @return A list containing the targets.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <pre>
+     * targets indicates that the enum should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941330;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
+    }
+
+    public static final int CUSTOM_FIELD_NUMBER = 1941305;
+    private com.strongdm.api.plumbing.Options.CustomOptions custom_;
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this enum.
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustom() {
+      return custom_ != null;
+    }
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this enum.
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Options.CustomOptions getCustom() {
+      return custom_ == null ? com.strongdm.api.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+    }
+    /**
+     * <pre>
+     * custom includes options for customizing the generation of this enum.
+     * </pre>
+     *
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
+      return getCustom();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (custom_ != null) {
+        output.writeMessage(1941305, getCustom());
+      }
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941330, targets_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (custom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1941305, getCustom());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.Options.EnumOptions)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.Options.EnumOptions other = (com.strongdm.api.plumbing.Options.EnumOptions) obj;
+
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
+      if (hasCustom() != other.hasCustom()) return false;
+      if (hasCustom()) {
+        if (!getCustom()
+            .equals(other.getCustom())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
+      if (hasCustom()) {
+        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+        hash = (53 * hash) + getCustom().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.Options.EnumOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.Options.EnumOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.EnumOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.EnumOptions)
+        com.strongdm.api.plumbing.Options.EnumOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.Options.internal_static_v1_EnumOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.Options.internal_static_v1_EnumOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.Options.EnumOptions.class, com.strongdm.api.plumbing.Options.EnumOptions.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.Options.EnumOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (customBuilder_ == null) {
+          custom_ = null;
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.Options.internal_static_v1_EnumOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Options.EnumOptions getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.Options.EnumOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Options.EnumOptions build() {
+        com.strongdm.api.plumbing.Options.EnumOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.Options.EnumOptions buildPartial() {
+        com.strongdm.api.plumbing.Options.EnumOptions result = new com.strongdm.api.plumbing.Options.EnumOptions(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
+        if (customBuilder_ == null) {
+          result.custom_ = custom_;
+        } else {
+          result.custom_ = customBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.Options.EnumOptions) {
+          return mergeFrom((com.strongdm.api.plumbing.Options.EnumOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.Options.EnumOptions other) {
+        if (other == com.strongdm.api.plumbing.Options.EnumOptions.getDefaultInstance()) return this;
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
+        if (other.hasCustom()) {
+          mergeCustom(other.getCustom());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.Options.EnumOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.Options.EnumOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @param value The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the enum should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941330;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Options.CustomOptions custom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Options.CustomOptions, com.strongdm.api.plumbing.Options.CustomOptions.Builder, com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder> customBuilder_;
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       * @return Whether the custom field is set.
+       */
+      public boolean hasCustom() {
+        return customBuilder_ != null || custom_ != null;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       * @return The custom.
+       */
+      public com.strongdm.api.plumbing.Options.CustomOptions getCustom() {
+        if (customBuilder_ == null) {
+          return custom_ == null ? com.strongdm.api.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+        } else {
+          return customBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(com.strongdm.api.plumbing.Options.CustomOptions value) {
+        if (customBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          custom_ = value;
+          onChanged();
+        } else {
+          customBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(
+          com.strongdm.api.plumbing.Options.CustomOptions.Builder builderForValue) {
+        if (customBuilder_ == null) {
+          custom_ = builderForValue.build();
+          onChanged();
+        } else {
+          customBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder mergeCustom(com.strongdm.api.plumbing.Options.CustomOptions value) {
+        if (customBuilder_ == null) {
+          if (custom_ != null) {
+            custom_ =
+              com.strongdm.api.plumbing.Options.CustomOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
+          } else {
+            custom_ = value;
+          }
+          onChanged();
+        } else {
+          customBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder clearCustom() {
+        if (customBuilder_ == null) {
+          custom_ = null;
+          onChanged();
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.plumbing.Options.CustomOptions.Builder getCustomBuilder() {
+        
+        onChanged();
+        return getCustomFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
+        if (customBuilder_ != null) {
+          return customBuilder_.getMessageOrBuilder();
+        } else {
+          return custom_ == null ?
+              com.strongdm.api.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+        }
+      }
+      /**
+       * <pre>
+       * custom includes options for customizing the generation of this enum.
+       * </pre>
+       *
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Options.CustomOptions, com.strongdm.api.plumbing.Options.CustomOptions.Builder, com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder> 
+          getCustomFieldBuilder() {
+        if (customBuilder_ == null) {
+          customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Options.CustomOptions, com.strongdm.api.plumbing.Options.CustomOptions.Builder, com.strongdm.api.plumbing.Options.CustomOptionsOrBuilder>(
+                  getCustom(),
+                  getParentForChildren(),
+                  isClean());
+          custom_ = null;
+        }
+        return customBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.EnumOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.EnumOptions)
+    private static final com.strongdm.api.plumbing.Options.EnumOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.Options.EnumOptions();
+    }
+
+    public static com.strongdm.api.plumbing.Options.EnumOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnumOptions>
+        PARSER = new com.google.protobuf.AbstractParser<EnumOptions>() {
+      @java.lang.Override
+      public EnumOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnumOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnumOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnumOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Options.EnumOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CustomOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.CustomOptions)
       com.google.protobuf.MessageOrBuilder {
@@ -11866,6 +12838,17 @@ java.lang.String defaultValue);
           .newFileScopedGeneratedExtension(
         com.strongdm.api.plumbing.Options.FieldOptions.class,
         com.strongdm.api.plumbing.Options.FieldOptions.getDefaultInstance());
+  public static final int ENUM_OPTIONS_FIELD_NUMBER = 1941382;
+  /**
+   * <code>extend .google.protobuf.EnumOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.EnumOptions,
+      com.strongdm.api.plumbing.Options.EnumOptions> enumOptions = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        com.strongdm.api.plumbing.Options.EnumOptions.class,
+        com.strongdm.api.plumbing.Options.EnumOptions.getDefaultInstance());
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_FileOptions_descriptor;
   private static final 
@@ -11901,6 +12884,11 @@ java.lang.String defaultValue);
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_EnumOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_EnumOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_CustomOptions_descriptor;
   private static final 
@@ -11973,40 +12961,44 @@ java.lang.String defaultValue);
       "\022\024\n\nconditions\030\315\276v \003(\t\022\025\n\013expect_file\030\314\276" +
       "v \001(\010\0327\n\025ReadOnlyOverrideEntry\022\013\n\003key\030\001 " +
       "\001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_" +
-      "gateway\"\217\005\n\rCustomOptions\022\023\n\tconverter\030\275" +
-      "\276v \001(\t\022O\n\027porcelain_type_override\030\276\276v \003(" +
-      "\0132,.v1.CustomOptions.PorcelainTypeOverri" +
-      "deEntry\022O\n\027porcelain_name_override\030\310\276v \003" +
-      "(\0132,.v1.CustomOptions.PorcelainNameOverr" +
-      "ideEntry\022B\n\020comment_override\030\323\276v \003(\0132&.v" +
-      "1.CustomOptions.CommentOverrideEntry\022H\n\023" +
-      "deprecated_override\030\300\276v \003(\0132).v1.CustomO" +
-      "ptions.DeprecatedOverrideEntry\022\035\n\023terraf" +
-      "orm_elem_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276v \001(" +
-      "\010\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032PorcelainName" +
-      "OverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverr" +
-      "ideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001" +
-      ":\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\rTerraformDo" +
-      "cs\022\037\n\025resource_example_path\030\264\276v \001(\t\022\"\n\030d" +
-      "ata_source_example_path\030\265\276v \001(\t:\027\372\370\263\007\022\322\363" +
-      "\263\007\r!json_gateway:E\n\014file_options\022\034.googl" +
-      "e.protobuf.FileOptions\030\250\302v \001(\0132\017.v1.File" +
-      "Options:N\n\017service_options\022\037.google.prot" +
-      "obuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Service" +
-      "Options:K\n\016method_options\022\036.google.proto" +
-      "buf.MethodOptions\030\220\277v \001(\0132\021.v1.MethodOpt" +
-      "ions:N\n\017message_options\022\037.google.protobu" +
-      "f.MessageOptions\030\217\277v \001(\0132\022.v1.MessageOpt" +
-      "ions:H\n\roneof_options\022\035.google.protobuf." +
-      "OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:H" +
-      "\n\rfield_options\022\035.google.protobuf.FieldO" +
-      "ptions\030\216\277v \001(\0132\020.v1.FieldOptionsBR\n\031com." +
-      "strongdm.api.plumbingZ5github.com/strong" +
-      "dm/strongdm-sdk-go/v3/internal/v1;v1b\006pr" +
-      "oto3"
+      "gateway\"^\n\013EnumOptions\022\021\n\007targets\030\322\276v \003(" +
+      "\t\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOptions:\027" +
+      "\372\370\263\007\022\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOption" +
+      "s\022\023\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_type" +
+      "_override\030\276\276v \003(\0132,.v1.CustomOptions.Por" +
+      "celainTypeOverrideEntry\022O\n\027porcelain_nam" +
+      "e_override\030\310\276v \003(\0132,.v1.CustomOptions.Po" +
+      "rcelainNameOverrideEntry\022B\n\020comment_over" +
+      "ride\030\323\276v \003(\0132&.v1.CustomOptions.CommentO" +
+      "verrideEntry\022H\n\023deprecated_override\030\300\276v " +
+      "\003(\0132).v1.CustomOptions.DeprecatedOverrid" +
+      "eEntry\022\035\n\023terraform_elem_type\030\277\276v \001(\t\022\022\n" +
+      "\010unstable\030\301\276v \001(\010\032<\n\032PorcelainTypeOverri" +
+      "deEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
+      "<\n\032PorcelainNameOverrideEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverride" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n" +
+      "\027DeprecatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gatewa" +
+      "y\"m\n\rTerraformDocs\022\037\n\025resource_example_p" +
+      "ath\030\264\276v \001(\t\022\"\n\030data_source_example_path\030" +
+      "\265\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file" +
+      "_options\022\034.google.protobuf.FileOptions\030\250" +
+      "\302v \001(\0132\017.v1.FileOptions:N\n\017service_optio" +
+      "ns\022\037.google.protobuf.ServiceOptions\030\231\277v " +
+      "\001(\0132\022.v1.ServiceOptions:K\n\016method_option" +
+      "s\022\036.google.protobuf.MethodOptions\030\220\277v \001(" +
+      "\0132\021.v1.MethodOptions:N\n\017message_options\022" +
+      "\037.google.protobuf.MessageOptions\030\217\277v \001(\013" +
+      "2\022.v1.MessageOptions:H\n\roneof_options\022\035." +
+      "google.protobuf.OneofOptions\030\205\277v \001(\0132\020.v" +
+      "1.OneofOptions:H\n\rfield_options\022\035.google" +
+      ".protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fiel" +
+      "dOptions:E\n\014enum_options\022\034.google.protob" +
+      "uf.EnumOptions\030\206\277v \001(\0132\017.v1.EnumOptionsB" +
+      "R\n\031com.strongdm.api.plumbingZ5github.com" +
+      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
+      ";v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12055,8 +13047,14 @@ java.lang.String defaultValue);
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_v1_CustomOptions_descriptor =
+    internal_static_v1_EnumOptions_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_EnumOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_EnumOptions_descriptor,
+        new java.lang.String[] { "Targets", "Custom", });
+    internal_static_v1_CustomOptions_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_v1_CustomOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_CustomOptions_descriptor,
@@ -12086,7 +13084,7 @@ java.lang.String defaultValue);
         internal_static_v1_CustomOptions_DeprecatedOverrideEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_v1_TerraformDocs_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_v1_TerraformDocs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_TerraformDocs_descriptor,
@@ -12097,6 +13095,7 @@ java.lang.String defaultValue);
     messageOptions.internalInit(descriptor.getExtensions().get(3));
     oneofOptions.internalInit(descriptor.getExtensions().get(4));
     fieldOptions.internalInit(descriptor.getExtensions().get(5));
+    enumOptions.internalInit(descriptor.getExtensions().get(6));
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);

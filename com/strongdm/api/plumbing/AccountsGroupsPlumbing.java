@@ -9523,7 +9523,7 @@ public final class AccountsGroupsPlumbing {
       " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\302\363\263\007Y\242\363" +
       "\263\007&tf_examples/account_group_resource.tx" +
       "t\252\363\263\007)tf_examples/account_group_data_sou" +
-      "rce.txt\322\363\263\007\001*\322\363\263\007\003cli2\227\004\n\016AccountsGroups" +
+      "rce.txt\322\363\263\007\001*\322\363\263\007\003cli2\241\004\n\016AccountsGroups" +
       "\022s\n\006Create\022\035.v1.AccountGroupCreateReques" +
       "t\032\036.v1.AccountGroupCreateResponse\"*\202\371\263\007\t" +
       "\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/v1/accountsgroups\022n\n" +
@@ -9535,12 +9535,12 @@ public final class AccountsGroupsPlumbing {
       "\202\371\263\007\034\252\363\263\007\027/v1/accountsgroups/{id}\022l\n\004Lis" +
       "t\022\033.v1.AccountGroupListRequest\032\034.v1.Acco" +
       "untGroupListResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027" +
-      "\252\363\263\007\022/v1/accountsgroups\0326\312\371\263\0071\302\371\263\007\014Accou" +
-      "ntGroup\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\raccountgroup-B" +
-      "\202\001\n\031com.strongdm.api.plumbingB\026AccountsG" +
-      "roupsPlumbingZ5github.com/strongdm/stron" +
-      "gdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302" +
-      "\222\264\007\010\242\214\264\007\003clib\006proto3"
+      "\252\363\263\007\022/v1/accountsgroups\032@\312\371\263\0071\302\371\263\007\014Accou" +
+      "ntGroup\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\raccountgroup-\312" +
+      "\371\263\007\005\350\371\263\007\001B\202\001\n\031com.strongdm.api.plumbingB" +
+      "\026AccountsGroupsPlumbingZ5github.com/stro" +
+      "ngdm/strongdm-sdk-go/v3/internal/v1;v1\302\222" +
+      "\264\007\006\242\214\264\007\001*\302\222\264\007\010\242\214\264\007\003clib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
