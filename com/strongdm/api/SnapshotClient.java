@@ -84,6 +84,13 @@ public class SnapshotClient {
     return this.parent.approvalWorkflows;
   }
   /**
+   * A Discovery Connector is a configuration object for performing Resource Scans in remote systems
+   * such as AWS, GCP, Azure, and other systems.
+   */
+  public SnapshotDiscoveryConnectors discoveryConnectors() {
+    return this.parent.discoveryConnectors;
+  }
+  /**
    * A Role has a list of access rules which determine which Resources the members of the Role have
    * access to. An Account can be a member of multiple Roles via AccountAttachments.
    */

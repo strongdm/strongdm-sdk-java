@@ -110,6 +110,8 @@ public final class Permission {
   public static final String CREDENTIAL_WRITE = "credential:write";
   public static final String POLICY_READ = "policy:read";
   public static final String POLICY_WRITE = "policy:write";
+  public static final String DISCOVERY_CONNECTOR_READ = "discoveryconnector:read";
+  public static final String DISCOVERY_CONNECTOR_WRITE = "discoveryconnector:write";
   public static final String MANAGED_SECRET_CREATE = "managedsecret:create";
   public static final String MANAGED_SECRET_LIST = "managedsecret:list";
   public static final String MANAGED_SECRET_DELETE = "managedsecret:delete";

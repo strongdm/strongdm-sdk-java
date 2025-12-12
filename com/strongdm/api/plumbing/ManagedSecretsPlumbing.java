@@ -26241,7 +26241,7 @@ public final class ManagedSecretsPlumbing {
       "llow_repeat\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022&\n\022exclude" +
       "_characters\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007" +
       "\001\")\n\033ManagedSecretRotationPolicy:\n\372\370\263\007\005\250" +
-      "\363\263\007\0012\314\013\n\016ManagedSecrets\022o\n\004List\022\034.v1.Man" +
+      "\363\263\007\0012\326\013\n\016ManagedSecrets\022o\n\004List\022\034.v1.Man" +
       "agedSecretListRequest\032\035.v1.ManagedSecret" +
       "ListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1" +
       "/managed-secrets\022|\n\013ListByActor\022\034.v1.Man" +
@@ -26276,12 +26276,12 @@ public final class ManagedSecretsPlumbing {
       "ecrets/{id}/validate\022t\n\004Logs\022\034.v1.Manage" +
       "dSecretLogsRequest\032\035.v1.ManagedSecretLog" +
       "sResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/ma" +
-      "naged-secrets-logs\032G\312\371\263\007\022\302\371\263\007\rManagedSec" +
+      "naged-secrets-logs\032Q\312\371\263\007\022\302\371\263\007\rManagedSec" +
       "ret\312\371\263\007\010\322\371\263\007\003ms-\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263" +
-      "\007\t\312\371\263\007\004!cliBj\n\031com.strongdm.api.plumbing" +
-      "B\026ManagedSecretsPlumbingZ5github.com/str" +
-      "ongdm/strongdm-sdk-go/v3/internal/v1;v1b" +
-      "\006proto3"
+      "\007\t\312\371\263\007\004!cli\312\371\263\007\005\350\371\263\007\001Bj\n\031com.strongdm.ap" +
+      "i.plumbingB\026ManagedSecretsPlumbingZ5gith" +
+      "ub.com/strongdm/strongdm-sdk-go/v3/inter" +
+      "nal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

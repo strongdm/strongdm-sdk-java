@@ -17735,7 +17735,7 @@ public final class SecretEnginesPlumbing {
       "ateRequestMetadata\022W\n\nrate_limit\030\002 \001(\0132\025" +
       ".v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364" +
       "\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\0012" +
-      "\242\t\n\rSecretEngines\022l\n\004List\022\033.v1.SecretEng" +
+      "\254\t\n\rSecretEngines\022l\n\004List\022\033.v1.SecretEng" +
       "ineListRequest\032\034.v1.SecretEngineListResp" +
       "onse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/secret-" +
       "engines\022n\n\003Get\022\032.v1.SecretEngineGetReque" +
@@ -17763,11 +17763,11 @@ public final class SecretEnginesPlumbing {
       "/healthcheck\022~\n\006Rotate\022\035.v1.SecretEngine" +
       "RotateRequest\032\036.v1.SecretEngineRotateRes" +
       "ponse\"5\202\371\263\007\010\242\363\263\007\003put\202\371\263\007#\252\363\263\007\036/v1/secret" +
-      "-engines/{id}/rotate\032.\312\371\263\007\021\302\371\263\007\014SecretEn" +
-      "gine\312\371\263\007\t\322\371\263\007\004eng-\312\371\263\007\005\330\371\263\007\001Bi\n\031com.stro" +
-      "ngdm.api.plumbingB\025SecretEnginesPlumbing" +
-      "Z5github.com/strongdm/strongdm-sdk-go/v3" +
-      "/internal/v1;v1b\006proto3"
+      "-engines/{id}/rotate\0328\312\371\263\007\021\302\371\263\007\014SecretEn" +
+      "gine\312\371\263\007\t\322\371\263\007\004eng-\312\371\263\007\005\330\371\263\007\001\312\371\263\007\005\350\371\263\007\001Bi" +
+      "\n\031com.strongdm.api.plumbingB\025SecretEngin" +
+      "esPlumbingZ5github.com/strongdm/strongdm" +
+      "-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

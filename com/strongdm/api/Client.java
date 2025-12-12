@@ -229,6 +229,16 @@ public class Client {
     return this.controlPanel;
   }
 
+  protected final DiscoveryConnectors discoveryConnectors;
+
+  /**
+   * A Discovery Connector is a configuration object for performing Resource Scans in remote systems
+   * such as AWS, GCP, Azure, and other systems.
+   */
+  public DiscoveryConnectors discoveryConnectors() {
+    return this.discoveryConnectors;
+  }
+
   protected final Roles roles;
 
   /**
@@ -634,6 +644,7 @@ public class Client {
     this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
     this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
     this.controlPanel = new ControlPanel(this.channel, this);
+    this.discoveryConnectors = new DiscoveryConnectors(this.channel, this);
     this.roles = new Roles(this.channel, this);
     this.groups = new Groups(this.channel, this);
     this.groupsHistory = new GroupsHistory(this.channel, this);
@@ -718,6 +729,7 @@ public class Client {
       this.approvalWorkflows = new ApprovalWorkflows(this.channel, this);
       this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
+      this.discoveryConnectors = new DiscoveryConnectors(this.channel, this);
       this.roles = new Roles(this.channel, this);
       this.groups = new Groups(this.channel, this);
       this.groupsHistory = new GroupsHistory(this.channel, this);

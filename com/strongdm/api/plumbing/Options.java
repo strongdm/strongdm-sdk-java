@@ -5164,6 +5164,28 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getCommonFieldsBytes(int index);
+
+    /**
+     * <pre>
+     * filter_name specifies the filter field name for this oneof in terraform data sources.
+     * If not specified, defaults to "type".
+     * </pre>
+     *
+     * <code>string filter_name = 1941382;</code>
+     * @return The filterName.
+     */
+    java.lang.String getFilterName();
+    /**
+     * <pre>
+     * filter_name specifies the filter field name for this oneof in terraform data sources.
+     * If not specified, defaults to "type".
+     * </pre>
+     *
+     * <code>string filter_name = 1941382;</code>
+     * @return The bytes for filterName.
+     */
+    com.google.protobuf.ByteString
+        getFilterNameBytes();
   }
   /**
    * Protobuf type {@code v1.OneofOptions}
@@ -5179,6 +5201,7 @@ public final class Options {
     }
     private OneofOptions() {
       commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      filterName_ = "";
     }
 
     @java.lang.Override
@@ -5219,6 +5242,12 @@ public final class Options {
                 mutable_bitField0_ |= 0x00000001;
               }
               commonFields_.add(s);
+              break;
+            }
+            case 15531058: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filterName_ = s;
               break;
             }
             default: {
@@ -5309,6 +5338,54 @@ public final class Options {
       return commonFields_.getByteString(index);
     }
 
+    public static final int FILTER_NAME_FIELD_NUMBER = 1941382;
+    private volatile java.lang.Object filterName_;
+    /**
+     * <pre>
+     * filter_name specifies the filter field name for this oneof in terraform data sources.
+     * If not specified, defaults to "type".
+     * </pre>
+     *
+     * <code>string filter_name = 1941382;</code>
+     * @return The filterName.
+     */
+    @java.lang.Override
+    public java.lang.String getFilterName() {
+      java.lang.Object ref = filterName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filterName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * filter_name specifies the filter field name for this oneof in terraform data sources.
+     * If not specified, defaults to "type".
+     * </pre>
+     *
+     * <code>string filter_name = 1941382;</code>
+     * @return The bytes for filterName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterNameBytes() {
+      java.lang.Object ref = filterName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filterName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5325,6 +5402,9 @@ public final class Options {
                         throws java.io.IOException {
       for (int i = 0; i < commonFields_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941381, commonFields_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941382, filterName_);
       }
       unknownFields.writeTo(output);
     }
@@ -5343,6 +5423,9 @@ public final class Options {
         size += dataSize;
         size += 4 * getCommonFieldsList().size();
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941382, filterName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5360,6 +5443,8 @@ public final class Options {
 
       if (!getCommonFieldsList()
           .equals(other.getCommonFieldsList())) return false;
+      if (!getFilterName()
+          .equals(other.getFilterName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5375,6 +5460,8 @@ public final class Options {
         hash = (37 * hash) + COMMON_FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getCommonFieldsList().hashCode();
       }
+      hash = (37 * hash) + FILTER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFilterName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5510,6 +5597,8 @@ public final class Options {
         super.clear();
         commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        filterName_ = "";
+
         return this;
       }
 
@@ -5542,6 +5631,7 @@ public final class Options {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.commonFields_ = commonFields_;
+        result.filterName_ = filterName_;
         onBuilt();
         return result;
       }
@@ -5598,6 +5688,10 @@ public final class Options {
             ensureCommonFieldsIsMutable();
             commonFields_.addAll(other.commonFields_);
           }
+          onChanged();
+        }
+        if (!other.getFilterName().isEmpty()) {
+          filterName_ = other.filterName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5772,6 +5866,107 @@ public final class Options {
   checkByteStringIsUtf8(value);
         ensureCommonFieldsIsMutable();
         commonFields_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filterName_ = "";
+      /**
+       * <pre>
+       * filter_name specifies the filter field name for this oneof in terraform data sources.
+       * If not specified, defaults to "type".
+       * </pre>
+       *
+       * <code>string filter_name = 1941382;</code>
+       * @return The filterName.
+       */
+      public java.lang.String getFilterName() {
+        java.lang.Object ref = filterName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filterName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * filter_name specifies the filter field name for this oneof in terraform data sources.
+       * If not specified, defaults to "type".
+       * </pre>
+       *
+       * <code>string filter_name = 1941382;</code>
+       * @return The bytes for filterName.
+       */
+      public com.google.protobuf.ByteString
+          getFilterNameBytes() {
+        java.lang.Object ref = filterName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filterName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * filter_name specifies the filter field name for this oneof in terraform data sources.
+       * If not specified, defaults to "type".
+       * </pre>
+       *
+       * <code>string filter_name = 1941382;</code>
+       * @param value The filterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filterName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * filter_name specifies the filter field name for this oneof in terraform data sources.
+       * If not specified, defaults to "type".
+       * </pre>
+       *
+       * <code>string filter_name = 1941382;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilterName() {
+        
+        filterName_ = getDefaultInstance().getFilterName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * filter_name specifies the filter field name for this oneof in terraform data sources.
+       * If not specified, defaults to "type".
+       * </pre>
+       *
+       * <code>string filter_name = 1941382;</code>
+       * @param value The bytes for filterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filterName_ = value;
         onChanged();
         return this;
       }
@@ -12945,60 +13140,60 @@ java.lang.String defaultValue);
       "v \003(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Ter" +
       "raformDocs\022#\n\006custom\030\271\276v \001(\0132\021.v1.Custom" +
       "Options\022#\n\031terraform_datasource_only\030\273\276v" +
-      " \001(\010:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"@\n\014OneofOp" +
-      "tions\022\027\n\rcommon_fields\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263" +
-      "\007\r!json_gateway\"\245\004\n\014FieldOptions\022\023\n\tporc" +
-      "elain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010\022\022\n\010req" +
-      "uired\030\270\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tr" +
-      "ead_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(" +
-      "\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023terraform_force_" +
-      "new\030\274\276v \001(\010\022\035\n\023terraform_sensitive\030\276\276v \001" +
-      "(\010\022&\n\034terraform_diff_suppress_func\030\307\276v \001" +
-      "(\t\022\034\n\022terraform_computed\030\312\276v \001(\010\022#\n\006cust" +
-      "om\030\271\276v \001(\0132\021.v1.CustomOptions\022D\n\022read_on" +
-      "ly_override\030\300\276v \003(\0132&.v1.FieldOptions.Re" +
-      "adOnlyOverrideEntry\022\023\n\tcondition\030\313\276v \001(\t" +
-      "\022\024\n\nconditions\030\315\276v \003(\t\022\025\n\013expect_file\030\314\276" +
-      "v \001(\010\0327\n\025ReadOnlyOverrideEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_" +
-      "gateway\"^\n\013EnumOptions\022\021\n\007targets\030\322\276v \003(" +
-      "\t\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOptions:\027" +
-      "\372\370\263\007\022\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOption" +
-      "s\022\023\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_type" +
-      "_override\030\276\276v \003(\0132,.v1.CustomOptions.Por" +
-      "celainTypeOverrideEntry\022O\n\027porcelain_nam" +
-      "e_override\030\310\276v \003(\0132,.v1.CustomOptions.Po" +
-      "rcelainNameOverrideEntry\022B\n\020comment_over" +
-      "ride\030\323\276v \003(\0132&.v1.CustomOptions.CommentO" +
-      "verrideEntry\022H\n\023deprecated_override\030\300\276v " +
-      "\003(\0132).v1.CustomOptions.DeprecatedOverrid" +
-      "eEntry\022\035\n\023terraform_elem_type\030\277\276v \001(\t\022\022\n" +
-      "\010unstable\030\301\276v \001(\010\032<\n\032PorcelainTypeOverri" +
-      "deEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "<\n\032PorcelainNameOverrideEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverride" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n" +
-      "\027DeprecatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gatewa" +
-      "y\"m\n\rTerraformDocs\022\037\n\025resource_example_p" +
-      "ath\030\264\276v \001(\t\022\"\n\030data_source_example_path\030" +
-      "\265\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file" +
-      "_options\022\034.google.protobuf.FileOptions\030\250" +
-      "\302v \001(\0132\017.v1.FileOptions:N\n\017service_optio" +
-      "ns\022\037.google.protobuf.ServiceOptions\030\231\277v " +
-      "\001(\0132\022.v1.ServiceOptions:K\n\016method_option" +
-      "s\022\036.google.protobuf.MethodOptions\030\220\277v \001(" +
-      "\0132\021.v1.MethodOptions:N\n\017message_options\022" +
-      "\037.google.protobuf.MessageOptions\030\217\277v \001(\013" +
-      "2\022.v1.MessageOptions:H\n\roneof_options\022\035." +
-      "google.protobuf.OneofOptions\030\205\277v \001(\0132\020.v" +
-      "1.OneofOptions:H\n\rfield_options\022\035.google" +
-      ".protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fiel" +
-      "dOptions:E\n\014enum_options\022\034.google.protob" +
-      "uf.EnumOptions\030\206\277v \001(\0132\017.v1.EnumOptionsB" +
-      "R\n\031com.strongdm.api.plumbingZ5github.com" +
-      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
-      ";v1b\006proto3"
+      " \001(\010:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"W\n\014OneofOp" +
+      "tions\022\027\n\rcommon_fields\030\205\277v \003(\t\022\025\n\013filter" +
+      "_name\030\206\277v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\245" +
+      "\004\n\014FieldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010" +
+      "iterable\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\n" +
+      "write_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022" +
+      "\027\n\ris_credential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v " +
+      "\003(\t\022\035\n\023terraform_force_new\030\274\276v \001(\010\022\035\n\023te" +
+      "rraform_sensitive\030\276\276v \001(\010\022&\n\034terraform_d" +
+      "iff_suppress_func\030\307\276v \001(\t\022\034\n\022terraform_c" +
+      "omputed\030\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v1.C" +
+      "ustomOptions\022D\n\022read_only_override\030\300\276v \003" +
+      "(\0132&.v1.FieldOptions.ReadOnlyOverrideEnt" +
+      "ry\022\023\n\tcondition\030\313\276v \001(\t\022\024\n\nconditions\030\315\276" +
+      "v \003(\t\022\025\n\013expect_file\030\314\276v \001(\010\0327\n\025ReadOnly" +
+      "OverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"^\n\013EnumOp" +
+      "tions\022\021\n\007targets\030\322\276v \003(\t\022#\n\006custom\030\271\276v \001" +
+      "(\0132\021.v1.CustomOptions:\027\372\370\263\007\022\322\363\263\007\r!json_g" +
+      "ateway\"\217\005\n\rCustomOptions\022\023\n\tconverter\030\275\276" +
+      "v \001(\t\022O\n\027porcelain_type_override\030\276\276v \003(\013" +
+      "2,.v1.CustomOptions.PorcelainTypeOverrid" +
+      "eEntry\022O\n\027porcelain_name_override\030\310\276v \003(" +
+      "\0132,.v1.CustomOptions.PorcelainNameOverri" +
+      "deEntry\022B\n\020comment_override\030\323\276v \003(\0132&.v1" +
+      ".CustomOptions.CommentOverrideEntry\022H\n\023d" +
+      "eprecated_override\030\300\276v \003(\0132).v1.CustomOp" +
+      "tions.DeprecatedOverrideEntry\022\035\n\023terrafo" +
+      "rm_elem_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276v \001(\010" +
+      "\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032PorcelainNameO" +
+      "verrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverri" +
+      "deEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:" +
+      "\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\rTerraformDoc" +
+      "s\022\037\n\025resource_example_path\030\264\276v \001(\t\022\"\n\030da" +
+      "ta_source_example_path\030\265\276v \001(\t:\027\372\370\263\007\022\322\363\263" +
+      "\007\r!json_gateway:E\n\014file_options\022\034.google" +
+      ".protobuf.FileOptions\030\250\302v \001(\0132\017.v1.FileO" +
+      "ptions:N\n\017service_options\022\037.google.proto" +
+      "buf.ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceO" +
+      "ptions:K\n\016method_options\022\036.google.protob" +
+      "uf.MethodOptions\030\220\277v \001(\0132\021.v1.MethodOpti" +
+      "ons:N\n\017message_options\022\037.google.protobuf" +
+      ".MessageOptions\030\217\277v \001(\0132\022.v1.MessageOpti" +
+      "ons:H\n\roneof_options\022\035.google.protobuf.O" +
+      "neofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:H\n" +
+      "\rfield_options\022\035.google.protobuf.FieldOp" +
+      "tions\030\216\277v \001(\0132\020.v1.FieldOptions:E\n\014enum_" +
+      "options\022\034.google.protobuf.EnumOptions\030\206\277" +
+      "v \001(\0132\017.v1.EnumOptionsBR\n\031com.strongdm.a" +
+      "pi.plumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13034,7 +13229,7 @@ java.lang.String defaultValue);
     internal_static_v1_OneofOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_OneofOptions_descriptor,
-        new java.lang.String[] { "CommonFields", });
+        new java.lang.String[] { "CommonFields", "FilterName", });
     internal_static_v1_FieldOptions_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_v1_FieldOptions_fieldAccessorTable = new

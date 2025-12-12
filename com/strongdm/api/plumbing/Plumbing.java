@@ -52,6 +52,7 @@ import com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.*;
 import com.strongdm.api.plumbing.ControlPanelPlumbing.*;
+import com.strongdm.api.plumbing.DiscoveryConnectorsPlumbing.*;
 import com.strongdm.api.plumbing.DriversPlumbing.*;
 import com.strongdm.api.plumbing.GroupsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.GroupsPlumbing.*;
@@ -112,6 +113,21 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Plumbing {
+
+  // Helper to convert Iterable to List for use with protobuf builders
+  public static <T> List<T> iterableToList(Iterable<T> iterable) {
+    if (iterable == null) {
+      return new ArrayList<>();
+    }
+    if (iterable instanceof List) {
+      return (List<T>) iterable;
+    }
+    List<T> list = new ArrayList<>();
+    for (T item : iterable) {
+      list.add(item);
+    }
+    return list;
+  }
 
   public static String quoteFilterArgs(String filter, Object... args) throws BadRequestException {
     String[] parts =
@@ -1203,6 +1219,71 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertAWSCertX509StoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AWSConnector convertAWSConnectorToPorcelain(
+      AWSConnector plumbing) {
+    com.strongdm.api.AWSConnector porcelain = new com.strongdm.api.AWSConnector();
+    porcelain.setAccountIds((plumbing.getAccountIdsList()));
+    porcelain.setDescription((plumbing.getDescription()));
+    porcelain.setExcludeTags(Plumbing.convertRepeatedTagToPorcelain(plumbing.getExcludeTagsList()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIncludeTags(Plumbing.convertRepeatedTagToPorcelain(plumbing.getIncludeTagsList()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setRoleName((plumbing.getRoleName()));
+    porcelain.setScanPeriod((plumbing.getScanPeriod()));
+    porcelain.setServices((plumbing.getServicesList()));
+    return porcelain;
+  }
+
+  public static AWSConnector convertAWSConnectorToPlumbing(
+      com.strongdm.api.AWSConnector porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWSConnector.Builder builder = AWSConnector.newBuilder();
+    builder.addAllAccountIds((porcelain.getAccountIds()));
+    if (porcelain.getDescription() != null) {
+      builder.setDescription((porcelain.getDescription()));
+    }
+    builder.addAllExcludeTags(
+        Plumbing.convertRepeatedTagToPlumbing(iterableToList(porcelain.getExcludeTags())));
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    builder.addAllIncludeTags(
+        Plumbing.convertRepeatedTagToPlumbing(iterableToList(porcelain.getIncludeTags())));
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getRoleName() != null) {
+      builder.setRoleName((porcelain.getRoleName()));
+    }
+    if (porcelain.getScanPeriod() != null) {
+      builder.setScanPeriod((porcelain.getScanPeriod()));
+    }
+    builder.addAllServices((iterableToList(porcelain.getServices())));
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AWSConnector> convertRepeatedAWSConnectorToPorcelain(
+      Collection<AWSConnector> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AWSConnector>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAWSConnectorToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWSConnector> convertRepeatedAWSConnectorToPlumbing(
+      Collection<com.strongdm.api.AWSConnector> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AWSConnector>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAWSConnectorToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -6336,6 +6417,75 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AzureConnector convertAzureConnectorToPorcelain(
+      AzureConnector plumbing) {
+    com.strongdm.api.AzureConnector porcelain = new com.strongdm.api.AzureConnector();
+    porcelain.setClientId((plumbing.getClientId()));
+    porcelain.setDescription((plumbing.getDescription()));
+    porcelain.setExcludeTags(Plumbing.convertRepeatedTagToPorcelain(plumbing.getExcludeTagsList()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIncludeTags(Plumbing.convertRepeatedTagToPorcelain(plumbing.getIncludeTagsList()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setScanPeriod((plumbing.getScanPeriod()));
+    porcelain.setServices((plumbing.getServicesList()));
+    porcelain.setSubscriptionIds((plumbing.getSubscriptionIdsList()));
+    porcelain.setTenantId((plumbing.getTenantId()));
+    return porcelain;
+  }
+
+  public static AzureConnector convertAzureConnectorToPlumbing(
+      com.strongdm.api.AzureConnector porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AzureConnector.Builder builder = AzureConnector.newBuilder();
+    if (porcelain.getClientId() != null) {
+      builder.setClientId((porcelain.getClientId()));
+    }
+    if (porcelain.getDescription() != null) {
+      builder.setDescription((porcelain.getDescription()));
+    }
+    builder.addAllExcludeTags(
+        Plumbing.convertRepeatedTagToPlumbing(iterableToList(porcelain.getExcludeTags())));
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    builder.addAllIncludeTags(
+        Plumbing.convertRepeatedTagToPlumbing(iterableToList(porcelain.getIncludeTags())));
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getScanPeriod() != null) {
+      builder.setScanPeriod((porcelain.getScanPeriod()));
+    }
+    builder.addAllServices((iterableToList(porcelain.getServices())));
+    builder.addAllSubscriptionIds((porcelain.getSubscriptionIds()));
+    if (porcelain.getTenantId() != null) {
+      builder.setTenantId((porcelain.getTenantId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AzureConnector> convertRepeatedAzureConnectorToPorcelain(
+      Collection<AzureConnector> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.AzureConnector>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertAzureConnectorToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AzureConnector> convertRepeatedAzureConnectorToPlumbing(
+      Collection<com.strongdm.api.AzureConnector> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<AzureConnector>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertAzureConnectorToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AzureMysql convertAzureMysqlToPorcelain(AzureMysql plumbing) {
     com.strongdm.api.AzureMysql porcelain = new com.strongdm.api.AzureMysql();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -7457,6 +7607,487 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertCockroachToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.Connector convertConnectorToPorcelain(Connector plumbing) {
+    if (plumbing == null) {
+      return null;
+    }
+    if (plumbing.hasAws()) {
+      return convertAWSConnectorToPorcelain(plumbing.getAws());
+    }
+    if (plumbing.hasAzure()) {
+      return convertAzureConnectorToPorcelain(plumbing.getAzure());
+    }
+    if (plumbing.hasGcp()) {
+      return convertGCPConnectorToPorcelain(plumbing.getGcp());
+    }
+    throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
+  }
+
+  public static Connector convertConnectorToPlumbing(com.strongdm.api.Connector porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    if (porcelain instanceof com.strongdm.api.AWSConnector) {
+      Connector.Builder builder = Connector.newBuilder();
+      builder.setAws(convertAWSConnectorToPlumbing((com.strongdm.api.AWSConnector) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AzureConnector) {
+      Connector.Builder builder = Connector.newBuilder();
+      builder.setAzure(
+          convertAzureConnectorToPlumbing((com.strongdm.api.AzureConnector) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.GCPConnector) {
+      Connector.Builder builder = Connector.newBuilder();
+      builder.setGcp(convertGCPConnectorToPlumbing((com.strongdm.api.GCPConnector) porcelain));
+      return builder.build();
+    }
+    return null;
+  }
+
+  public static List<com.strongdm.api.Connector> convertRepeatedConnectorToPorcelain(
+      Collection<Connector> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Connector>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Connector> convertRepeatedConnectorToPlumbing(
+      Collection<com.strongdm.api.Connector> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Connector>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorCreateRequest convertConnectorCreateRequestToPorcelain(
+      ConnectorCreateRequest plumbing) {
+    com.strongdm.api.ConnectorCreateRequest porcelain =
+        new com.strongdm.api.ConnectorCreateRequest();
+    porcelain.setConnector(Plumbing.convertConnectorToPorcelain(plumbing.getConnector()));
+    return porcelain;
+  }
+
+  public static ConnectorCreateRequest convertConnectorCreateRequestToPlumbing(
+      com.strongdm.api.ConnectorCreateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorCreateRequest.Builder builder = ConnectorCreateRequest.newBuilder();
+    if (porcelain.getConnector() != null) {
+      builder.setConnector(Plumbing.convertConnectorToPlumbing(porcelain.getConnector()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorCreateRequest>
+      convertRepeatedConnectorCreateRequestToPorcelain(
+          Collection<ConnectorCreateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorCreateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorCreateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorCreateRequest> convertRepeatedConnectorCreateRequestToPlumbing(
+      Collection<com.strongdm.api.ConnectorCreateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorCreateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorCreateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorCreateResponse convertConnectorCreateResponseToPorcelain(
+      ConnectorCreateResponse plumbing) {
+    com.strongdm.api.ConnectorCreateResponse porcelain =
+        new com.strongdm.api.ConnectorCreateResponse();
+    porcelain.setConnector(Plumbing.convertConnectorToPorcelain(plumbing.getConnector()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ConnectorCreateResponse convertConnectorCreateResponseToPlumbing(
+      com.strongdm.api.ConnectorCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorCreateResponse.Builder builder = ConnectorCreateResponse.newBuilder();
+    if (porcelain.getConnector() != null) {
+      builder.setConnector(Plumbing.convertConnectorToPlumbing(porcelain.getConnector()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorCreateResponse>
+      convertRepeatedConnectorCreateResponseToPorcelain(
+          Collection<ConnectorCreateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorCreateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorCreateResponse> convertRepeatedConnectorCreateResponseToPlumbing(
+      Collection<com.strongdm.api.ConnectorCreateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorCreateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorDeleteRequest convertConnectorDeleteRequestToPorcelain(
+      ConnectorDeleteRequest plumbing) {
+    com.strongdm.api.ConnectorDeleteRequest porcelain =
+        new com.strongdm.api.ConnectorDeleteRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static ConnectorDeleteRequest convertConnectorDeleteRequestToPlumbing(
+      com.strongdm.api.ConnectorDeleteRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorDeleteRequest.Builder builder = ConnectorDeleteRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorDeleteRequest>
+      convertRepeatedConnectorDeleteRequestToPorcelain(
+          Collection<ConnectorDeleteRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorDeleteRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorDeleteRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorDeleteRequest> convertRepeatedConnectorDeleteRequestToPlumbing(
+      Collection<com.strongdm.api.ConnectorDeleteRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorDeleteRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorDeleteRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorDeleteResponse convertConnectorDeleteResponseToPorcelain(
+      ConnectorDeleteResponse plumbing) {
+    com.strongdm.api.ConnectorDeleteResponse porcelain =
+        new com.strongdm.api.ConnectorDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ConnectorDeleteResponse convertConnectorDeleteResponseToPlumbing(
+      com.strongdm.api.ConnectorDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorDeleteResponse.Builder builder = ConnectorDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorDeleteResponse>
+      convertRepeatedConnectorDeleteResponseToPorcelain(
+          Collection<ConnectorDeleteResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorDeleteResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorDeleteResponse> convertRepeatedConnectorDeleteResponseToPlumbing(
+      Collection<com.strongdm.api.ConnectorDeleteResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorDeleteResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorGetRequest convertConnectorGetRequestToPorcelain(
+      ConnectorGetRequest plumbing) {
+    com.strongdm.api.ConnectorGetRequest porcelain = new com.strongdm.api.ConnectorGetRequest();
+    porcelain.setId((plumbing.getId()));
+    return porcelain;
+  }
+
+  public static ConnectorGetRequest convertConnectorGetRequestToPlumbing(
+      com.strongdm.api.ConnectorGetRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorGetRequest.Builder builder = ConnectorGetRequest.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorGetRequest>
+      convertRepeatedConnectorGetRequestToPorcelain(Collection<ConnectorGetRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorGetRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorGetRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorGetRequest> convertRepeatedConnectorGetRequestToPlumbing(
+      Collection<com.strongdm.api.ConnectorGetRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorGetRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorGetRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorGetResponse convertConnectorGetResponseToPorcelain(
+      ConnectorGetResponse plumbing) {
+    com.strongdm.api.ConnectorGetResponse porcelain = new com.strongdm.api.ConnectorGetResponse();
+    porcelain.setConnector(Plumbing.convertConnectorToPorcelain(plumbing.getConnector()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ConnectorGetResponse convertConnectorGetResponseToPlumbing(
+      com.strongdm.api.ConnectorGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorGetResponse.Builder builder = ConnectorGetResponse.newBuilder();
+    if (porcelain.getConnector() != null) {
+      builder.setConnector(Plumbing.convertConnectorToPlumbing(porcelain.getConnector()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorGetResponse>
+      convertRepeatedConnectorGetResponseToPorcelain(Collection<ConnectorGetResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorGetResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorGetResponse> convertRepeatedConnectorGetResponseToPlumbing(
+      Collection<com.strongdm.api.ConnectorGetResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorGetResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorListRequest convertConnectorListRequestToPorcelain(
+      ConnectorListRequest plumbing) {
+    com.strongdm.api.ConnectorListRequest porcelain = new com.strongdm.api.ConnectorListRequest();
+    porcelain.setFilter((plumbing.getFilter()));
+    return porcelain;
+  }
+
+  public static ConnectorListRequest convertConnectorListRequestToPlumbing(
+      com.strongdm.api.ConnectorListRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorListRequest.Builder builder = ConnectorListRequest.newBuilder();
+    if (porcelain.getFilter() != null) {
+      builder.setFilter((porcelain.getFilter()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorListRequest>
+      convertRepeatedConnectorListRequestToPorcelain(Collection<ConnectorListRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorListRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorListRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorListRequest> convertRepeatedConnectorListRequestToPlumbing(
+      Collection<com.strongdm.api.ConnectorListRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorListRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorListRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorListResponse convertConnectorListResponseToPorcelain(
+      ConnectorListResponse plumbing) {
+    com.strongdm.api.ConnectorListResponse porcelain = new com.strongdm.api.ConnectorListResponse();
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ConnectorListResponse convertConnectorListResponseToPlumbing(
+      com.strongdm.api.ConnectorListResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorListResponse.Builder builder = ConnectorListResponse.newBuilder();
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorListResponse>
+      convertRepeatedConnectorListResponseToPorcelain(Collection<ConnectorListResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorListResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorListResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorListResponse> convertRepeatedConnectorListResponseToPlumbing(
+      Collection<com.strongdm.api.ConnectorListResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorListResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorListResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorUpdateRequest convertConnectorUpdateRequestToPorcelain(
+      ConnectorUpdateRequest plumbing) {
+    com.strongdm.api.ConnectorUpdateRequest porcelain =
+        new com.strongdm.api.ConnectorUpdateRequest();
+    porcelain.setConnector(Plumbing.convertConnectorToPorcelain(plumbing.getConnector()));
+    return porcelain;
+  }
+
+  public static ConnectorUpdateRequest convertConnectorUpdateRequestToPlumbing(
+      com.strongdm.api.ConnectorUpdateRequest porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorUpdateRequest.Builder builder = ConnectorUpdateRequest.newBuilder();
+    if (porcelain.getConnector() != null) {
+      builder.setConnector(Plumbing.convertConnectorToPlumbing(porcelain.getConnector()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorUpdateRequest>
+      convertRepeatedConnectorUpdateRequestToPorcelain(
+          Collection<ConnectorUpdateRequest> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorUpdateRequest>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorUpdateRequestToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorUpdateRequest> convertRepeatedConnectorUpdateRequestToPlumbing(
+      Collection<com.strongdm.api.ConnectorUpdateRequest> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorUpdateRequest>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorUpdateRequestToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ConnectorUpdateResponse convertConnectorUpdateResponseToPorcelain(
+      ConnectorUpdateResponse plumbing) {
+    com.strongdm.api.ConnectorUpdateResponse porcelain =
+        new com.strongdm.api.ConnectorUpdateResponse();
+    porcelain.setConnector(Plumbing.convertConnectorToPorcelain(plumbing.getConnector()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ConnectorUpdateResponse convertConnectorUpdateResponseToPlumbing(
+      com.strongdm.api.ConnectorUpdateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConnectorUpdateResponse.Builder builder = ConnectorUpdateResponse.newBuilder();
+    if (porcelain.getConnector() != null) {
+      builder.setConnector(Plumbing.convertConnectorToPlumbing(porcelain.getConnector()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConnectorUpdateResponse>
+      convertRepeatedConnectorUpdateResponseToPorcelain(
+          Collection<ConnectorUpdateResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ConnectorUpdateResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertConnectorUpdateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConnectorUpdateResponse> convertRepeatedConnectorUpdateResponseToPlumbing(
+      Collection<com.strongdm.api.ConnectorUpdateResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ConnectorUpdateResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertConnectorUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -9355,6 +9986,79 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertGCPCertX509StoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GCPConnector convertGCPConnectorToPorcelain(
+      GCPConnector plumbing) {
+    com.strongdm.api.GCPConnector porcelain = new com.strongdm.api.GCPConnector();
+    porcelain.setDescription((plumbing.getDescription()));
+    porcelain.setExcludeTags(Plumbing.convertRepeatedTagToPorcelain(plumbing.getExcludeTagsList()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIncludeTags(Plumbing.convertRepeatedTagToPorcelain(plumbing.getIncludeTagsList()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPoolId((plumbing.getPoolId()));
+    porcelain.setProjectIds((plumbing.getProjectIdsList()));
+    porcelain.setProjectNumber((plumbing.getProjectNumber()));
+    porcelain.setProviderId((plumbing.getProviderId()));
+    porcelain.setScanPeriod((plumbing.getScanPeriod()));
+    porcelain.setServices((plumbing.getServicesList()));
+    return porcelain;
+  }
+
+  public static GCPConnector convertGCPConnectorToPlumbing(
+      com.strongdm.api.GCPConnector porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GCPConnector.Builder builder = GCPConnector.newBuilder();
+    if (porcelain.getDescription() != null) {
+      builder.setDescription((porcelain.getDescription()));
+    }
+    builder.addAllExcludeTags(
+        Plumbing.convertRepeatedTagToPlumbing(iterableToList(porcelain.getExcludeTags())));
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    builder.addAllIncludeTags(
+        Plumbing.convertRepeatedTagToPlumbing(iterableToList(porcelain.getIncludeTags())));
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPoolId() != null) {
+      builder.setPoolId((porcelain.getPoolId()));
+    }
+    builder.addAllProjectIds((porcelain.getProjectIds()));
+    if (porcelain.getProjectNumber() != null) {
+      builder.setProjectNumber((porcelain.getProjectNumber()));
+    }
+    if (porcelain.getProviderId() != null) {
+      builder.setProviderId((porcelain.getProviderId()));
+    }
+    if (porcelain.getScanPeriod() != null) {
+      builder.setScanPeriod((porcelain.getScanPeriod()));
+    }
+    builder.addAllServices((iterableToList(porcelain.getServices())));
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GCPConnector> convertRepeatedGCPConnectorToPorcelain(
+      Collection<GCPConnector> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GCPConnector>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGCPConnectorToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GCPConnector> convertRepeatedGCPConnectorToPlumbing(
+      Collection<com.strongdm.api.GCPConnector> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GCPConnector>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGCPConnectorToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
