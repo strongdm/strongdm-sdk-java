@@ -22720,6 +22720,7 @@ public class Plumbing {
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
     porcelain.setKeyType((plumbing.getKeyType()));
+    porcelain.setLockRequired((plumbing.getLockRequired()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortForwarding((plumbing.getPortForwarding()));
@@ -22755,6 +22756,7 @@ public class Plumbing {
     if (porcelain.getKeyType() != null) {
       builder.setKeyType((porcelain.getKeyType()));
     }
+    builder.setLockRequired(porcelain.getLockRequired());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -22813,6 +22815,7 @@ public class Plumbing {
     porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
     porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
     porcelain.setKeyType((plumbing.getKeyType()));
+    porcelain.setLockRequired((plumbing.getLockRequired()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortForwarding((plumbing.getPortForwarding()));
@@ -22854,6 +22857,7 @@ public class Plumbing {
     if (porcelain.getKeyType() != null) {
       builder.setKeyType((porcelain.getKeyType()));
     }
+    builder.setLockRequired(porcelain.getLockRequired());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -22909,6 +22913,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setIdentityAliasHealthcheckUsername((plumbing.getIdentityAliasHealthcheckUsername()));
     porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
+    porcelain.setLockRequired((plumbing.getLockRequired()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortForwarding((plumbing.getPortForwarding()));
@@ -22949,6 +22954,7 @@ public class Plumbing {
     if (porcelain.getIdentitySetId() != null) {
       builder.setIdentitySetId((porcelain.getIdentitySetId()));
     }
+    builder.setLockRequired(porcelain.getLockRequired());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -23004,6 +23010,7 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setLockRequired((plumbing.getLockRequired()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
@@ -23036,6 +23043,7 @@ public class Plumbing {
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
+    builder.setLockRequired(porcelain.getLockRequired());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }

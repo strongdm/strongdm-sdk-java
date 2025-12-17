@@ -9543,6 +9543,33 @@ public final class AccessRequestsPlumbing {
      * <code>.v1.EntraGroupPrivileges entraGroups = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.AccessRequestsPlumbing.EntraGroupPrivilegesOrBuilder getEntraGroupsOrBuilder();
+
+    /**
+     * <pre>
+     * Okta Group privileges.
+     * </pre>
+     *
+     * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the oktaGroups field is set.
+     */
+    boolean hasOktaGroups();
+    /**
+     * <pre>
+     * Okta Group privileges.
+     * </pre>
+     *
+     * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+     * @return The oktaGroups.
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges getOktaGroups();
+    /**
+     * <pre>
+     * Okta Group privileges.
+     * </pre>
+     *
+     * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder getOktaGroupsOrBuilder();
   }
   /**
    * <pre>
@@ -9615,6 +9642,19 @@ public final class AccessRequestsPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(entraGroups_);
                 entraGroups_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder subBuilder = null;
+              if (oktaGroups_ != null) {
+                subBuilder = oktaGroups_.toBuilder();
+              }
+              oktaGroups_ = input.readMessage(com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oktaGroups_);
+                oktaGroups_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9729,6 +9769,44 @@ public final class AccessRequestsPlumbing {
       return getEntraGroups();
     }
 
+    public static final int OKTAGROUPS_FIELD_NUMBER = 3;
+    private com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges oktaGroups_;
+    /**
+     * <pre>
+     * Okta Group privileges.
+     * </pre>
+     *
+     * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the oktaGroups field is set.
+     */
+    @java.lang.Override
+    public boolean hasOktaGroups() {
+      return oktaGroups_ != null;
+    }
+    /**
+     * <pre>
+     * Okta Group privileges.
+     * </pre>
+     *
+     * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+     * @return The oktaGroups.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges getOktaGroups() {
+      return oktaGroups_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.getDefaultInstance() : oktaGroups_;
+    }
+    /**
+     * <pre>
+     * Okta Group privileges.
+     * </pre>
+     *
+     * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder getOktaGroupsOrBuilder() {
+      return getOktaGroups();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9749,6 +9827,9 @@ public final class AccessRequestsPlumbing {
       if (entraGroups_ != null) {
         output.writeMessage(2, getEntraGroups());
       }
+      if (oktaGroups_ != null) {
+        output.writeMessage(3, getOktaGroups());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9765,6 +9846,10 @@ public final class AccessRequestsPlumbing {
       if (entraGroups_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEntraGroups());
+      }
+      if (oktaGroups_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOktaGroups());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9791,6 +9876,11 @@ public final class AccessRequestsPlumbing {
         if (!getEntraGroups()
             .equals(other.getEntraGroups())) return false;
       }
+      if (hasOktaGroups() != other.hasOktaGroups()) return false;
+      if (hasOktaGroups()) {
+        if (!getOktaGroups()
+            .equals(other.getOktaGroups())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9809,6 +9899,10 @@ public final class AccessRequestsPlumbing {
       if (hasEntraGroups()) {
         hash = (37 * hash) + ENTRAGROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getEntraGroups().hashCode();
+      }
+      if (hasOktaGroups()) {
+        hash = (37 * hash) + OKTAGROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getOktaGroups().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9959,6 +10053,12 @@ public final class AccessRequestsPlumbing {
           entraGroups_ = null;
           entraGroupsBuilder_ = null;
         }
+        if (oktaGroupsBuilder_ == null) {
+          oktaGroups_ = null;
+        } else {
+          oktaGroups_ = null;
+          oktaGroupsBuilder_ = null;
+        }
         return this;
       }
 
@@ -9994,6 +10094,11 @@ public final class AccessRequestsPlumbing {
           result.entraGroups_ = entraGroups_;
         } else {
           result.entraGroups_ = entraGroupsBuilder_.build();
+        }
+        if (oktaGroupsBuilder_ == null) {
+          result.oktaGroups_ = oktaGroups_;
+        } else {
+          result.oktaGroups_ = oktaGroupsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10048,6 +10153,9 @@ public final class AccessRequestsPlumbing {
         }
         if (other.hasEntraGroups()) {
           mergeEntraGroups(other.getEntraGroups());
+        }
+        if (other.hasOktaGroups()) {
+          mergeOktaGroups(other.getOktaGroups());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10386,6 +10494,161 @@ public final class AccessRequestsPlumbing {
           entraGroups_ = null;
         }
         return entraGroupsBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges oktaGroups_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder> oktaGroupsBuilder_;
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the oktaGroups field is set.
+       */
+      public boolean hasOktaGroups() {
+        return oktaGroupsBuilder_ != null || oktaGroups_ != null;
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       * @return The oktaGroups.
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges getOktaGroups() {
+        if (oktaGroupsBuilder_ == null) {
+          return oktaGroups_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.getDefaultInstance() : oktaGroups_;
+        } else {
+          return oktaGroupsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setOktaGroups(com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges value) {
+        if (oktaGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oktaGroups_ = value;
+          onChanged();
+        } else {
+          oktaGroupsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setOktaGroups(
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder builderForValue) {
+        if (oktaGroupsBuilder_ == null) {
+          oktaGroups_ = builderForValue.build();
+          onChanged();
+        } else {
+          oktaGroupsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeOktaGroups(com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges value) {
+        if (oktaGroupsBuilder_ == null) {
+          if (oktaGroups_ != null) {
+            oktaGroups_ =
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.newBuilder(oktaGroups_).mergeFrom(value).buildPartial();
+          } else {
+            oktaGroups_ = value;
+          }
+          onChanged();
+        } else {
+          oktaGroupsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearOktaGroups() {
+        if (oktaGroupsBuilder_ == null) {
+          oktaGroups_ = null;
+          onChanged();
+        } else {
+          oktaGroups_ = null;
+          oktaGroupsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder getOktaGroupsBuilder() {
+        
+        onChanged();
+        return getOktaGroupsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder getOktaGroupsOrBuilder() {
+        if (oktaGroupsBuilder_ != null) {
+          return oktaGroupsBuilder_.getMessageOrBuilder();
+        } else {
+          return oktaGroups_ == null ?
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.getDefaultInstance() : oktaGroups_;
+        }
+      }
+      /**
+       * <pre>
+       * Okta Group privileges.
+       * </pre>
+       *
+       * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder> 
+          getOktaGroupsFieldBuilder() {
+        if (oktaGroupsBuilder_ == null) {
+          oktaGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder>(
+                  getOktaGroups(),
+                  getParentForChildren(),
+                  isClean());
+          oktaGroups_ = null;
+        }
+        return oktaGroupsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11856,6 +12119,714 @@ public final class AccessRequestsPlumbing {
 
   }
 
+  public interface OktaGroupPrivilegesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.OktaGroupPrivileges)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the groups.
+     */
+    java.util.List<java.lang.String>
+        getGroupsList();
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of groups.
+     */
+    int getGroupsCount();
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The groups at the given index.
+     */
+    java.lang.String getGroups(int index);
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the groups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getGroupsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code v1.OktaGroupPrivileges}
+   */
+  public static final class OktaGroupPrivileges extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.OktaGroupPrivileges)
+      OktaGroupPrivilegesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OktaGroupPrivileges.newBuilder() to construct.
+    private OktaGroupPrivileges(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OktaGroupPrivileges() {
+      groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OktaGroupPrivileges();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OktaGroupPrivileges(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                groups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              groups_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          groups_ = groups_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_OktaGroupPrivileges_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_OktaGroupPrivileges_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder.class);
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList groups_;
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the groups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of groups.
+     */
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The groups at the given index.
+     */
+    public java.lang.String getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <pre>
+     * The okta groups
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the groups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getGroupsBytes(int index) {
+      return groups_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groups_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < groups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(groups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getGroupsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges other = (com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges) obj;
+
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.OktaGroupPrivileges}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.OktaGroupPrivileges)
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_OktaGroupPrivileges_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_OktaGroupPrivileges_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_OktaGroupPrivileges_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges build() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges buildPartial() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges result = new com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          groups_ = groups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.groups_ = groups_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges) {
+          return mergeFrom((com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges other) {
+        if (other == com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges.getDefaultInstance()) return this;
+        if (!other.groups_.isEmpty()) {
+          if (groups_.isEmpty()) {
+            groups_ = other.groups_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureGroupsIsMutable();
+            groups_.addAll(other.groups_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groups_ = new com.google.protobuf.LazyStringArrayList(groups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the groups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getGroupsList() {
+        return groups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return The count of groups.
+       */
+      public int getGroupsCount() {
+        return groups_.size();
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The groups at the given index.
+       */
+      public java.lang.String getGroups(int index) {
+        return groups_.get(index);
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the groups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getGroupsBytes(int index) {
+        return groups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The groups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGroupsIsMutable();
+        groups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGroupsIsMutable();
+        groups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param values The groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, groups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroups() {
+        groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The okta groups
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureGroupsIsMutable();
+        groups_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.OktaGroupPrivileges)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.OktaGroupPrivileges)
+    private static final com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges();
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OktaGroupPrivileges>
+        PARSER = new com.google.protobuf.AbstractParser<OktaGroupPrivileges>() {
+      @java.lang.Override
+      public OktaGroupPrivileges parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OktaGroupPrivileges(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OktaGroupPrivileges> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OktaGroupPrivileges> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivileges getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AccessRequestConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.AccessRequestConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -13116,7 +14087,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -13128,7 +14099,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated int getResourceIdsCount();
@@ -13139,7 +14110,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -13151,7 +14122,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -13385,7 +14356,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -13399,7 +14370,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated public int getResourceIdsCount() {
@@ -13412,7 +14383,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -13426,7 +14397,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=291
+     *     See access_requests.proto;l=309
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -14031,7 +15002,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @return A list containing the resourceIds.
        */
       @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -14045,7 +15016,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @return The count of resourceIds.
        */
       @java.lang.Deprecated public int getResourceIdsCount() {
@@ -14058,7 +15029,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @param index The index of the element to return.
        * @return The resourceIds at the given index.
        */
@@ -14072,7 +15043,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @param index The index of the value to return.
        * @return The bytes of the resourceIds at the given index.
        */
@@ -14087,7 +15058,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @param index The index to set the value at.
        * @param value The resourceIds to set.
        * @return This builder for chaining.
@@ -14109,7 +15080,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @param value The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -14130,7 +15101,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @param values The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -14149,7 +15120,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResourceIds() {
@@ -14165,7 +15136,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=291
+       *     See access_requests.proto;l=309
        * @param value The bytes of the resourceIds to add.
        * @return This builder for chaining.
        */
@@ -14717,6 +15688,11 @@ public final class AccessRequestsPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_EntraGroupPrivileges_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_OktaGroupPrivileges_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_OktaGroupPrivileges_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccessRequestConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14778,41 +15754,44 @@ public final class AccessRequestsPlumbing {
       "legesMessageB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022" +
       "@\n\035privileges_requirement_status\030\t \001(\tB\031" +
       "\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\020\372\370\263\007\013\250\363\263\007\001\322\363\263" +
-      "\007\001*\"\243\001\n\021PrivilegesMessage\0228\n\nkubernetes\030" +
+      "\007\001*\"\334\001\n\021PrivilegesMessage\0228\n\nkubernetes\030" +
       "\001 \001(\0132\030.v1.KubernetesPrivilegesB\n\362\370\263\007\005\260\363" +
       "\263\007\001\0229\n\013entraGroups\030\002 \001(\0132\030.v1.EntraGroup" +
-      "PrivilegesB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ng" +
-      "o_private\"M\n\024KubernetesPrivileges\022\032\n\006gro" +
-      "ups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo" +
-      "_private\"M\n\024EntraGroupPrivileges\022\032\n\006grou" +
-      "ps\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
-      "private\"\303\001\n\023AccessRequestConfig\022$\n\013resou" +
-      "rce_id\030\001 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030" +
-      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032." +
-      "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n" +
-      "\010duration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322" +
-      "\363\263\007\001*\"\313\003\n\032RequestAccessRequestConfig\022\'\n\014" +
-      "resource_ids\030\001 \003(\tB\021\030\001\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n" +
-      "\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030" +
-      "\003 \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014" +
-      "access_rules\030\005 \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363" +
-      "\263\007\014access_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263" +
-      "\007\031\n\ngo_private\022\013AccessRules\362\363\263\007\033\n\014go_ter" +
-      "raform\022\013AccessRules\362\363\263\007\030\n\004java\022\020List<Acc" +
-      "essRule>\362\363\263\007\"\n\014json_gateway\022\022models.Acce" +
-      "ssRules\272\364\263\007\027accessRulesDiffSuppress\320\364\263\007\001" +
-      ":\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\331\001\n\016AccessRe" +
-      "quests\022o\n\004List\022\034.v1.AccessRequestListReq" +
-      "uest\032\035.v1.AccessRequestListResponse\"*\202\371\263" +
-      "\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/access-requests\032" +
-      "V\312\371\263\007\022\302\371\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263" +
-      "\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provider\312\371\263" +
-      "\007\005\350\371\263\007\001B\222\001\n\031com.strongdm.api.plumbingB\026A" +
-      "ccessRequestsPlumbingZ5github.com/strong" +
-      "dm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007" +
-      "\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006pr" +
-      "oto3"
+      "PrivilegesB\n\362\370\263\007\005\260\363\263\007\001\0227\n\noktaGroups\030\003 \001" +
+      "(\0132\027.v1.OktaGroupPrivilegesB\n\362\370\263\007\005\260\363\263\007\001:" +
+      "\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"M\n\024Kubernetes" +
+      "Privileges\022\032\n\006groups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031" +
+      "\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"M\n\024EntraGroupP" +
+      "rivileges\022\032\n\006groups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372" +
+      "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"L\n\023OktaGroupPri" +
+      "vileges\022\032\n\006groups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263" +
+      "\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\303\001\n\023AccessRequest" +
+      "Config\022$\n\013resource_id\030\001 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
+      "\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstar" +
+      "t_from\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\313\003\n\032RequestAccessRe" +
+      "questConfig\022\'\n\014resource_ids\030\001 \003(\tB\021\030\001\362\370\263" +
+      "\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022:\n\nstart_from\030\003 \001(\0132\032.google.protobuf.T" +
+      "imestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\005 \001(\tB\333\001\362\370\263\007" +
+      "\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules\362\363\263\007\021\n\002go\022" +
+      "\013AccessRules\362\363\263\007\031\n\ngo_private\022\013AccessRul" +
+      "es\362\363\263\007\033\n\014go_terraform\022\013AccessRules\362\363\263\007\030\n" +
+      "\004java\022\020List<AccessRule>\362\363\263\007\"\n\014json_gatew" +
+      "ay\022\022models.AccessRules\272\364\263\007\027accessRulesDi" +
+      "ffSuppress\320\364\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priva" +
+      "te2\331\001\n\016AccessRequests\022o\n\004List\022\034.v1.Acces" +
+      "sRequestListRequest\032\035.v1.AccessRequestLi" +
+      "stResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/a" +
+      "ccess-requests\032V\312\371\263\007\022\302\371\263\007\rAccessRequest\312" +
+      "\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraf" +
+      "orm-provider\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.strongdm." +
+      "api.plumbingB\026AccessRequestsPlumbingZ5gi" +
+      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
+      "ernal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terrafo" +
+      "rm-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14858,7 +15837,7 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_PrivilegesMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_PrivilegesMessage_descriptor,
-        new java.lang.String[] { "Kubernetes", "EntraGroups", });
+        new java.lang.String[] { "Kubernetes", "EntraGroups", "OktaGroups", });
     internal_static_v1_KubernetesPrivileges_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_v1_KubernetesPrivileges_fieldAccessorTable = new
@@ -14871,14 +15850,20 @@ public final class AccessRequestsPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_EntraGroupPrivileges_descriptor,
         new java.lang.String[] { "Groups", });
-    internal_static_v1_AccessRequestConfig_descriptor =
+    internal_static_v1_OktaGroupPrivileges_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_v1_OktaGroupPrivileges_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_OktaGroupPrivileges_descriptor,
+        new java.lang.String[] { "Groups", });
+    internal_static_v1_AccessRequestConfig_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_v1_AccessRequestConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequestConfig_descriptor,
         new java.lang.String[] { "ResourceId", "Reason", "StartFrom", "Duration", });
     internal_static_v1_RequestAccessRequestConfig_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RequestAccessRequestConfig_descriptor,

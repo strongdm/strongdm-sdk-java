@@ -130,6 +130,22 @@ public class SSHCert implements Resource {
     this.keyType = in;
   }
 
+  private boolean lockRequired;
+  /**
+   * When set, require a resource lock to access the resource to ensure it can only be used by one
+   * user at a time.
+   */
+  public boolean getLockRequired() {
+    return this.lockRequired;
+  }
+  /**
+   * When set, require a resource lock to access the resource to ensure it can only be used by one
+   * user at a time.
+   */
+  public void setLockRequired(boolean in) {
+    this.lockRequired = in;
+  }
+
   private String name;
   /** Unique human-readable name of the Resource. */
   public String getName() {
