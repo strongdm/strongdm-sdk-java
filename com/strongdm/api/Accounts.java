@@ -68,6 +68,8 @@ public class Accounts implements SnapshotAccounts {
         AccountsPlumbing.AccountCreateRequest.newBuilder();
     builder.setAccount(Plumbing.convertAccountToPlumbing(account));
     AccountsPlumbing.AccountCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Accounts.Create", req);
     AccountsPlumbing.AccountCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -89,6 +91,9 @@ public class Accounts implements SnapshotAccounts {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Accounts.Create", req, plumbingResponse);
     return Plumbing.convertAccountCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one Account by ID. */
@@ -102,6 +107,8 @@ public class Accounts implements SnapshotAccounts {
     }
     builder.setId((id));
     AccountsPlumbing.AccountGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Accounts.Get", req);
     AccountsPlumbing.AccountGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -123,6 +130,9 @@ public class Accounts implements SnapshotAccounts {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Accounts.Get", req, plumbingResponse);
     return Plumbing.convertAccountGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of an Account by ID. */
@@ -131,6 +141,8 @@ public class Accounts implements SnapshotAccounts {
         AccountsPlumbing.AccountUpdateRequest.newBuilder();
     builder.setAccount(Plumbing.convertAccountToPlumbing(account));
     AccountsPlumbing.AccountUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Accounts.Update", req);
     AccountsPlumbing.AccountUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -152,6 +164,9 @@ public class Accounts implements SnapshotAccounts {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Accounts.Update", req, plumbingResponse);
     return Plumbing.convertAccountUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes an Account by ID. */
@@ -160,6 +175,8 @@ public class Accounts implements SnapshotAccounts {
         AccountsPlumbing.AccountDeleteRequest.newBuilder();
     builder.setId((id));
     AccountsPlumbing.AccountDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Accounts.Delete", req);
     AccountsPlumbing.AccountDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -181,6 +198,9 @@ public class Accounts implements SnapshotAccounts {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Accounts.Delete", req, plumbingResponse);
     return Plumbing.convertAccountDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of Accounts matching a given set of criteria. */

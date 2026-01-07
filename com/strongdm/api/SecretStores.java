@@ -64,6 +64,8 @@ public class SecretStores implements SnapshotSecretStores {
         SecretStoresPlumbing.SecretStoreCreateRequest.newBuilder();
     builder.setSecretStore(Plumbing.convertSecretStoreToPlumbing(secretStore));
     SecretStoresPlumbing.SecretStoreCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretStores.Create", req);
     SecretStoresPlumbing.SecretStoreCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -85,6 +87,9 @@ public class SecretStores implements SnapshotSecretStores {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretStores.Create", req, plumbingResponse);
     return Plumbing.convertSecretStoreCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one SecretStore by ID. */
@@ -98,6 +103,8 @@ public class SecretStores implements SnapshotSecretStores {
     }
     builder.setId((id));
     SecretStoresPlumbing.SecretStoreGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretStores.Get", req);
     SecretStoresPlumbing.SecretStoreGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -119,6 +126,9 @@ public class SecretStores implements SnapshotSecretStores {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretStores.Get", req, plumbingResponse);
     return Plumbing.convertSecretStoreGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a SecretStore by ID. */
@@ -127,6 +137,8 @@ public class SecretStores implements SnapshotSecretStores {
         SecretStoresPlumbing.SecretStoreUpdateRequest.newBuilder();
     builder.setSecretStore(Plumbing.convertSecretStoreToPlumbing(secretStore));
     SecretStoresPlumbing.SecretStoreUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretStores.Update", req);
     SecretStoresPlumbing.SecretStoreUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -148,6 +160,9 @@ public class SecretStores implements SnapshotSecretStores {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretStores.Update", req, plumbingResponse);
     return Plumbing.convertSecretStoreUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a SecretStore by ID. */
@@ -156,6 +171,8 @@ public class SecretStores implements SnapshotSecretStores {
         SecretStoresPlumbing.SecretStoreDeleteRequest.newBuilder();
     builder.setId((id));
     SecretStoresPlumbing.SecretStoreDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretStores.Delete", req);
     SecretStoresPlumbing.SecretStoreDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -177,6 +194,9 @@ public class SecretStores implements SnapshotSecretStores {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretStores.Delete", req, plumbingResponse);
     return Plumbing.convertSecretStoreDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of SecretStores matching a given set of criteria. */

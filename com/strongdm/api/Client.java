@@ -48,6 +48,8 @@ public class Client {
   private double retryFactor = 1.6;
   private double retryJitter = 0.2;
   protected Date snapshotDate;
+  private final MethodInterceptor interceptor;
+  private final SecretEncryptionInterceptor encryptionInterceptor;
   protected final AccessRequests accessRequests;
 
   /** AccessRequests are requests for access to a resource that may match a Workflow. */
@@ -621,6 +623,8 @@ public class Client {
     this.pageLimit = client.pageLimit;
     this.channel = client.channel;
     this.snapshotDate = client.snapshotDate;
+    this.interceptor = client.interceptor;
+    this.encryptionInterceptor = client.encryptionInterceptor;
     this.accessRequests = new AccessRequests(this.channel, this);
     this.accessRequestEventsHistory = new AccessRequestEventsHistory(this.channel, this);
     this.accessRequestsHistory = new AccessRequestsHistory(this.channel, this);
@@ -697,6 +701,9 @@ public class Client {
     this.apiSecretKey = Base64.getDecoder().decode(apiSecretKey.trim());
     this.pageLimit = options.getPageLimit();
     this.retryRateLimitErrors = options.getRetryRateLimitErrors();
+    this.interceptor = new MethodInterceptor();
+    this.encryptionInterceptor = new SecretEncryptionInterceptor(this);
+    this.encryptionInterceptor.setup(this.interceptor);
     try {
       NettyChannelBuilder builder =
           NettyChannelBuilder.forAddress(options.getHost(), options.getPort());
@@ -787,6 +794,11 @@ public class Client {
   protected io.grpc.CallCredentials getCallCredentials(
       String methodName, com.google.protobuf.Message req) {
     return new SigningCallCredential(this.apiAccessKey, this.sign(methodName, req.toByteArray()));
+  }
+
+  // Package-private getter for method interceptor
+  MethodInterceptor getInterceptor() {
+    return this.interceptor;
   }
 
   public String sign(String methodName, byte[] message) {

@@ -67,6 +67,8 @@ public class AccountGrants implements SnapshotAccountGrants {
         AccountGrantsPlumbing.AccountGrantCreateRequest.newBuilder();
     builder.setAccountGrant(Plumbing.convertAccountGrantToPlumbing(accountGrant));
     AccountGrantsPlumbing.AccountGrantCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountGrants.Create", req);
     AccountGrantsPlumbing.AccountGrantCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -88,6 +90,9 @@ public class AccountGrants implements SnapshotAccountGrants {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("AccountGrants.Create", req, plumbingResponse);
     return Plumbing.convertAccountGrantCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one AccountGrant by ID. */
@@ -101,6 +106,8 @@ public class AccountGrants implements SnapshotAccountGrants {
     }
     builder.setId((id));
     AccountGrantsPlumbing.AccountGrantGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountGrants.Get", req);
     AccountGrantsPlumbing.AccountGrantGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -122,6 +129,9 @@ public class AccountGrants implements SnapshotAccountGrants {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("AccountGrants.Get", req, plumbingResponse);
     return Plumbing.convertAccountGrantGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a AccountGrant by ID. */
@@ -130,6 +140,8 @@ public class AccountGrants implements SnapshotAccountGrants {
         AccountGrantsPlumbing.AccountGrantDeleteRequest.newBuilder();
     builder.setId((id));
     AccountGrantsPlumbing.AccountGrantDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountGrants.Delete", req);
     AccountGrantsPlumbing.AccountGrantDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -151,6 +163,9 @@ public class AccountGrants implements SnapshotAccountGrants {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("AccountGrants.Delete", req, plumbingResponse);
     return Plumbing.convertAccountGrantDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of AccountGrants matching a given set of criteria. */

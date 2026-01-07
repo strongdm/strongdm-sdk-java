@@ -67,6 +67,8 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
         WorkflowRolesPlumbing.WorkflowRolesCreateRequest.newBuilder();
     builder.setWorkflowRole(Plumbing.convertWorkflowRoleToPlumbing(workflowRole));
     WorkflowRolesPlumbing.WorkflowRolesCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("WorkflowRoles.Create", req);
     WorkflowRolesPlumbing.WorkflowRolesCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -88,6 +90,9 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("WorkflowRoles.Create", req, plumbingResponse);
     return Plumbing.convertWorkflowRolesCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one workflow role by ID. */
@@ -101,6 +106,8 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
     }
     builder.setId((id));
     WorkflowRolesPlumbing.WorkflowRoleGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("WorkflowRoles.Get", req);
     WorkflowRolesPlumbing.WorkflowRoleGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -122,6 +129,9 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("WorkflowRoles.Get", req, plumbingResponse);
     return Plumbing.convertWorkflowRoleGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete deletes a workflow role */
@@ -130,6 +140,8 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
         WorkflowRolesPlumbing.WorkflowRolesDeleteRequest.newBuilder();
     builder.setId((id));
     WorkflowRolesPlumbing.WorkflowRolesDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("WorkflowRoles.Delete", req);
     WorkflowRolesPlumbing.WorkflowRolesDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -151,6 +163,9 @@ public class WorkflowRoles implements SnapshotWorkflowRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("WorkflowRoles.Delete", req, plumbingResponse);
     return Plumbing.convertWorkflowRolesDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Lists existing workflow roles. */

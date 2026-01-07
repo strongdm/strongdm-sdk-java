@@ -68,6 +68,8 @@ public class Nodes implements SnapshotNodes {
     NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
     builder.setNode(Plumbing.convertNodeToPlumbing(node));
     NodesPlumbing.NodeCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Nodes.Create", req);
     NodesPlumbing.NodeCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -89,6 +91,9 @@ public class Nodes implements SnapshotNodes {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Nodes.Create", req, plumbingResponse);
     return Plumbing.convertNodeCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one Node by ID. */
@@ -101,6 +106,8 @@ public class Nodes implements SnapshotNodes {
     }
     builder.setId((id));
     NodesPlumbing.NodeGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Nodes.Get", req);
     NodesPlumbing.NodeGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -122,6 +129,9 @@ public class Nodes implements SnapshotNodes {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Nodes.Get", req, plumbingResponse);
     return Plumbing.convertNodeGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a Node by ID. */
@@ -129,6 +139,8 @@ public class Nodes implements SnapshotNodes {
     NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
     builder.setNode(Plumbing.convertNodeToPlumbing(node));
     NodesPlumbing.NodeUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Nodes.Update", req);
     NodesPlumbing.NodeUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -150,6 +162,9 @@ public class Nodes implements SnapshotNodes {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Nodes.Update", req, plumbingResponse);
     return Plumbing.convertNodeUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a Node by ID. */
@@ -157,6 +172,8 @@ public class Nodes implements SnapshotNodes {
     NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
     builder.setId((id));
     NodesPlumbing.NodeDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Nodes.Delete", req);
     NodesPlumbing.NodeDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -178,6 +195,9 @@ public class Nodes implements SnapshotNodes {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Nodes.Delete", req, plumbingResponse);
     return Plumbing.convertNodeDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of Nodes matching a given set of criteria. */
@@ -242,6 +262,8 @@ public class Nodes implements SnapshotNodes {
     builder.setHost((host));
     builder.setPort((port));
     NodesPlumbing.NodeTCPProbeRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Nodes.TCPProbe", req);
     NodesPlumbing.NodeTCPProbeResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -263,6 +285,9 @@ public class Nodes implements SnapshotNodes {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Nodes.TCPProbe", req, plumbingResponse);
     return Plumbing.convertNodeTCPProbeResponseToPorcelain(plumbingResponse);
   }
 }

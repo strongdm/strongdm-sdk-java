@@ -67,6 +67,8 @@ public class IdentitySets implements SnapshotIdentitySets {
         IdentitySetsPlumbing.IdentitySetCreateRequest.newBuilder();
     builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(identitySet));
     IdentitySetsPlumbing.IdentitySetCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentitySets.Create", req);
     IdentitySetsPlumbing.IdentitySetCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -88,6 +90,9 @@ public class IdentitySets implements SnapshotIdentitySets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentitySets.Create", req, plumbingResponse);
     return Plumbing.convertIdentitySetCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one IdentitySet by ID. */
@@ -101,6 +106,8 @@ public class IdentitySets implements SnapshotIdentitySets {
     }
     builder.setId((id));
     IdentitySetsPlumbing.IdentitySetGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentitySets.Get", req);
     IdentitySetsPlumbing.IdentitySetGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -122,6 +129,9 @@ public class IdentitySets implements SnapshotIdentitySets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentitySets.Get", req, plumbingResponse);
     return Plumbing.convertIdentitySetGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a IdentitySet by ID. */
@@ -130,6 +140,8 @@ public class IdentitySets implements SnapshotIdentitySets {
         IdentitySetsPlumbing.IdentitySetUpdateRequest.newBuilder();
     builder.setIdentitySet(Plumbing.convertIdentitySetToPlumbing(identitySet));
     IdentitySetsPlumbing.IdentitySetUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentitySets.Update", req);
     IdentitySetsPlumbing.IdentitySetUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -151,6 +163,9 @@ public class IdentitySets implements SnapshotIdentitySets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentitySets.Update", req, plumbingResponse);
     return Plumbing.convertIdentitySetUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a IdentitySet by ID. */
@@ -159,6 +174,8 @@ public class IdentitySets implements SnapshotIdentitySets {
         IdentitySetsPlumbing.IdentitySetDeleteRequest.newBuilder();
     builder.setId((id));
     IdentitySetsPlumbing.IdentitySetDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentitySets.Delete", req);
     IdentitySetsPlumbing.IdentitySetDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -180,6 +197,9 @@ public class IdentitySets implements SnapshotIdentitySets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentitySets.Delete", req, plumbingResponse);
     return Plumbing.convertIdentitySetDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of IdentitySets matching a given set of criteria. */

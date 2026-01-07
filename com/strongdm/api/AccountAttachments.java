@@ -67,6 +67,8 @@ public class AccountAttachments implements SnapshotAccountAttachments {
         AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.newBuilder();
     builder.setAccountAttachment(Plumbing.convertAccountAttachmentToPlumbing(accountAttachment));
     AccountAttachmentsPlumbing.AccountAttachmentCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountAttachments.Create", req);
     AccountAttachmentsPlumbing.AccountAttachmentCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -89,6 +91,11 @@ public class AccountAttachments implements SnapshotAccountAttachments {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("AccountAttachments.Create", req, plumbingResponse);
     return Plumbing.convertAccountAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one AccountAttachment by ID. */
@@ -102,6 +109,8 @@ public class AccountAttachments implements SnapshotAccountAttachments {
     }
     builder.setId((id));
     AccountAttachmentsPlumbing.AccountAttachmentGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountAttachments.Get", req);
     AccountAttachmentsPlumbing.AccountAttachmentGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -123,6 +132,9 @@ public class AccountAttachments implements SnapshotAccountAttachments {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("AccountAttachments.Get", req, plumbingResponse);
     return Plumbing.convertAccountAttachmentGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a AccountAttachment by ID. */
@@ -131,6 +143,8 @@ public class AccountAttachments implements SnapshotAccountAttachments {
         AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest.newBuilder();
     builder.setId((id));
     AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountAttachments.Delete", req);
     AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -153,6 +167,11 @@ public class AccountAttachments implements SnapshotAccountAttachments {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("AccountAttachments.Delete", req, plumbingResponse);
     return Plumbing.convertAccountAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of AccountAttachments matching a given set of criteria. */

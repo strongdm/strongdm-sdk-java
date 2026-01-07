@@ -65,6 +65,8 @@ public class Roles implements SnapshotRoles {
     RolesPlumbing.RoleCreateRequest.Builder builder = RolesPlumbing.RoleCreateRequest.newBuilder();
     builder.setRole(Plumbing.convertRoleToPlumbing(role));
     RolesPlumbing.RoleCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Roles.Create", req);
     RolesPlumbing.RoleCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -86,6 +88,9 @@ public class Roles implements SnapshotRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Roles.Create", req, plumbingResponse);
     return Plumbing.convertRoleCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one Role by ID. */
@@ -98,6 +103,8 @@ public class Roles implements SnapshotRoles {
     }
     builder.setId((id));
     RolesPlumbing.RoleGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Roles.Get", req);
     RolesPlumbing.RoleGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -119,6 +126,9 @@ public class Roles implements SnapshotRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Roles.Get", req, plumbingResponse);
     return Plumbing.convertRoleGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a Role by ID. */
@@ -126,6 +136,8 @@ public class Roles implements SnapshotRoles {
     RolesPlumbing.RoleUpdateRequest.Builder builder = RolesPlumbing.RoleUpdateRequest.newBuilder();
     builder.setRole(Plumbing.convertRoleToPlumbing(role));
     RolesPlumbing.RoleUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Roles.Update", req);
     RolesPlumbing.RoleUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -147,6 +159,9 @@ public class Roles implements SnapshotRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Roles.Update", req, plumbingResponse);
     return Plumbing.convertRoleUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a Role by ID. */
@@ -154,6 +169,8 @@ public class Roles implements SnapshotRoles {
     RolesPlumbing.RoleDeleteRequest.Builder builder = RolesPlumbing.RoleDeleteRequest.newBuilder();
     builder.setId((id));
     RolesPlumbing.RoleDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Roles.Delete", req);
     RolesPlumbing.RoleDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -175,6 +192,9 @@ public class Roles implements SnapshotRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Roles.Delete", req, plumbingResponse);
     return Plumbing.convertRoleDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of Roles matching a given set of criteria. */

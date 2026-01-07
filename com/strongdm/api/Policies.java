@@ -66,6 +66,8 @@ public class Policies implements SnapshotPolicies {
         PoliciesPlumbing.PolicyCreateRequest.newBuilder();
     builder.setPolicy(Plumbing.convertPolicyToPlumbing(policy));
     PoliciesPlumbing.PolicyCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Policies.Create", req);
     PoliciesPlumbing.PolicyCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -87,6 +89,9 @@ public class Policies implements SnapshotPolicies {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Policies.Create", req, plumbingResponse);
     return Plumbing.convertPolicyCreateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a Policy by ID. */
@@ -95,6 +100,8 @@ public class Policies implements SnapshotPolicies {
         PoliciesPlumbing.PolicyDeleteRequest.newBuilder();
     builder.setId((id));
     PoliciesPlumbing.PolicyDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Policies.Delete", req);
     PoliciesPlumbing.PolicyDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -116,6 +123,9 @@ public class Policies implements SnapshotPolicies {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Policies.Delete", req, plumbingResponse);
     return Plumbing.convertPolicyDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a Policy by ID. */
@@ -124,6 +134,8 @@ public class Policies implements SnapshotPolicies {
         PoliciesPlumbing.PolicyUpdateRequest.newBuilder();
     builder.setPolicy(Plumbing.convertPolicyToPlumbing(policy));
     PoliciesPlumbing.PolicyUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Policies.Update", req);
     PoliciesPlumbing.PolicyUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -145,6 +157,9 @@ public class Policies implements SnapshotPolicies {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Policies.Update", req, plumbingResponse);
     return Plumbing.convertPolicyUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one Policy by ID. */
@@ -158,6 +173,8 @@ public class Policies implements SnapshotPolicies {
     }
     builder.setId((id));
     PoliciesPlumbing.PolicyGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Policies.Get", req);
     PoliciesPlumbing.PolicyGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -179,6 +196,9 @@ public class Policies implements SnapshotPolicies {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Policies.Get", req, plumbingResponse);
     return Plumbing.convertPolicyGetResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of Policy matching a given set of criteria */

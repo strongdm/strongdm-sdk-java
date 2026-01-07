@@ -71,6 +71,8 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
         ApprovalWorkflowsPlumbing.ApprovalWorkflowCreateRequest.newBuilder();
     builder.setApprovalWorkflow(Plumbing.convertApprovalWorkflowToPlumbing(approvalWorkflow));
     ApprovalWorkflowsPlumbing.ApprovalWorkflowCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflows.Create", req);
     ApprovalWorkflowsPlumbing.ApprovalWorkflowCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -93,6 +95,11 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflows.Create", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one approval workflow by ID. */
@@ -106,6 +113,8 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
     }
     builder.setId((id));
     ApprovalWorkflowsPlumbing.ApprovalWorkflowGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflows.Get", req);
     ApprovalWorkflowsPlumbing.ApprovalWorkflowGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -127,6 +136,9 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ApprovalWorkflows.Get", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete deletes an existing approval workflow. */
@@ -135,6 +147,8 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
         ApprovalWorkflowsPlumbing.ApprovalWorkflowDeleteRequest.newBuilder();
     builder.setId((id));
     ApprovalWorkflowsPlumbing.ApprovalWorkflowDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflows.Delete", req);
     ApprovalWorkflowsPlumbing.ApprovalWorkflowDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -157,6 +171,11 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflows.Delete", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Update updates an existing approval workflow. */
@@ -166,6 +185,8 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
         ApprovalWorkflowsPlumbing.ApprovalWorkflowUpdateRequest.newBuilder();
     builder.setApprovalWorkflow(Plumbing.convertApprovalWorkflowToPlumbing(approvalWorkflow));
     ApprovalWorkflowsPlumbing.ApprovalWorkflowUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflows.Update", req);
     ApprovalWorkflowsPlumbing.ApprovalWorkflowUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -188,6 +209,11 @@ public class ApprovalWorkflows implements SnapshotApprovalWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflows.Update", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Lists existing approval workflows. */

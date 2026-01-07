@@ -71,6 +71,8 @@ public class Activities {
     }
     builder.setId((id));
     ActivitiesPlumbing.ActivityGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Activities.Get", req);
     ActivitiesPlumbing.ActivityGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -92,6 +94,9 @@ public class Activities {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Activities.Get", req, plumbingResponse);
     return Plumbing.convertActivityGetResponseToPorcelain(plumbingResponse);
   }
   /**

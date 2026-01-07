@@ -181,6 +181,8 @@ public class ManagedSecrets {
         ManagedSecretsPlumbing.ManagedSecretCreateRequest.newBuilder();
     builder.setManagedSecret(Plumbing.convertManagedSecretToPlumbing(managedSecret));
     ManagedSecretsPlumbing.ManagedSecretCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Create", req);
     ManagedSecretsPlumbing.ManagedSecretCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -202,6 +204,9 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ManagedSecrets.Create", req, plumbingResponse);
     return Plumbing.convertManagedSecretCreateResponseToPorcelain(plumbingResponse);
   }
   /** Update updates a Managed Secret */
@@ -210,6 +215,8 @@ public class ManagedSecrets {
         ManagedSecretsPlumbing.ManagedSecretUpdateRequest.newBuilder();
     builder.setManagedSecret(Plumbing.convertManagedSecretToPlumbing(managedSecret));
     ManagedSecretsPlumbing.ManagedSecretUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Update", req);
     ManagedSecretsPlumbing.ManagedSecretUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -231,6 +238,9 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ManagedSecrets.Update", req, plumbingResponse);
     return Plumbing.convertManagedSecretUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Rotate forces rotation of Managed Secret */
@@ -239,6 +249,8 @@ public class ManagedSecrets {
         ManagedSecretsPlumbing.ManagedSecretRotateRequest.newBuilder();
     builder.setId((id));
     ManagedSecretsPlumbing.ManagedSecretRotateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Rotate", req);
     ManagedSecretsPlumbing.ManagedSecretRotateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -260,6 +272,9 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ManagedSecrets.Rotate", req, plumbingResponse);
     return Plumbing.convertManagedSecretRotateResponseToPorcelain(plumbingResponse);
   }
   /** Delete deletes a Managed Secret */
@@ -268,6 +283,8 @@ public class ManagedSecrets {
         ManagedSecretsPlumbing.ManagedSecretDeleteRequest.newBuilder();
     builder.setId((id));
     ManagedSecretsPlumbing.ManagedSecretDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Delete", req);
     ManagedSecretsPlumbing.ManagedSecretDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -289,6 +306,9 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ManagedSecrets.Delete", req, plumbingResponse);
     return Plumbing.convertManagedSecretDeleteResponseToPorcelain(plumbingResponse);
   }
   /** ForceDelete deletes a Managed Secret regardless of errors on external system */
@@ -297,6 +317,8 @@ public class ManagedSecrets {
         ManagedSecretsPlumbing.ManagedSecretDeleteRequest.newBuilder();
     builder.setId((id));
     ManagedSecretsPlumbing.ManagedSecretDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.ForceDelete", req);
     ManagedSecretsPlumbing.ManagedSecretDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -319,6 +341,11 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ManagedSecrets.ForceDelete", req, plumbingResponse);
     return Plumbing.convertManagedSecretDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Get gets details of a Managed Secret without sensitive data */
@@ -332,6 +359,8 @@ public class ManagedSecrets {
     }
     builder.setId((id));
     ManagedSecretsPlumbing.ManagedSecretGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Get", req);
     ManagedSecretsPlumbing.ManagedSecretGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -353,6 +382,9 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ManagedSecrets.Get", req, plumbingResponse);
     return Plumbing.convertManagedSecretGetResponseToPorcelain(plumbingResponse);
   }
   /** Retrieve returns Managed Secret with sensitive data */
@@ -362,6 +394,8 @@ public class ManagedSecrets {
     builder.setId((id));
     builder.setPublicKey(Plumbing.convertBytesToPlumbing(publicKey));
     ManagedSecretsPlumbing.ManagedSecretRetrieveRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Retrieve", req);
     ManagedSecretsPlumbing.ManagedSecretRetrieveResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -383,6 +417,9 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ManagedSecrets.Retrieve", req, plumbingResponse);
     return Plumbing.convertManagedSecretRetrieveResponseToPorcelain(plumbingResponse);
   }
   /** Validate returns the result of testing the stored credential against the secret engine. */
@@ -391,6 +428,8 @@ public class ManagedSecrets {
         ManagedSecretsPlumbing.ManagedSecretValidateRequest.newBuilder();
     builder.setId((id));
     ManagedSecretsPlumbing.ManagedSecretValidateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Validate", req);
     ManagedSecretsPlumbing.ManagedSecretValidateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -412,6 +451,9 @@ public class ManagedSecrets {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ManagedSecrets.Validate", req, plumbingResponse);
     return Plumbing.convertManagedSecretValidateResponseToPorcelain(plumbingResponse);
   }
   /** Logs returns the audit records for the managed secret. This may be replaced in the future. */

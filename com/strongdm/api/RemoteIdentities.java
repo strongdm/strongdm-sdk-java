@@ -68,6 +68,8 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
         RemoteIdentitiesPlumbing.RemoteIdentityCreateRequest.newBuilder();
     builder.setRemoteIdentity(Plumbing.convertRemoteIdentityToPlumbing(remoteIdentity));
     RemoteIdentitiesPlumbing.RemoteIdentityCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("RemoteIdentities.Create", req);
     RemoteIdentitiesPlumbing.RemoteIdentityCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -89,6 +91,9 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("RemoteIdentities.Create", req, plumbingResponse);
     return Plumbing.convertRemoteIdentityCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one RemoteIdentity by ID. */
@@ -102,6 +107,8 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
     }
     builder.setId((id));
     RemoteIdentitiesPlumbing.RemoteIdentityGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("RemoteIdentities.Get", req);
     RemoteIdentitiesPlumbing.RemoteIdentityGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -123,6 +130,9 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("RemoteIdentities.Get", req, plumbingResponse);
     return Plumbing.convertRemoteIdentityGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a RemoteIdentity by ID. */
@@ -131,6 +141,8 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
         RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest.newBuilder();
     builder.setRemoteIdentity(Plumbing.convertRemoteIdentityToPlumbing(remoteIdentity));
     RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("RemoteIdentities.Update", req);
     RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -152,6 +164,9 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("RemoteIdentities.Update", req, plumbingResponse);
     return Plumbing.convertRemoteIdentityUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a RemoteIdentity by ID. */
@@ -160,6 +175,8 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
         RemoteIdentitiesPlumbing.RemoteIdentityDeleteRequest.newBuilder();
     builder.setId((id));
     RemoteIdentitiesPlumbing.RemoteIdentityDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("RemoteIdentities.Delete", req);
     RemoteIdentitiesPlumbing.RemoteIdentityDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -181,6 +198,9 @@ public class RemoteIdentities implements SnapshotRemoteIdentities {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("RemoteIdentities.Delete", req, plumbingResponse);
     return Plumbing.convertRemoteIdentityDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of RemoteIdentities matching a given set of criteria. */

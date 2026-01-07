@@ -64,6 +64,8 @@ public class AccountsGroups implements SnapshotAccountsGroups {
         AccountsGroupsPlumbing.AccountGroupCreateRequest.newBuilder();
     builder.setAccountGroup(Plumbing.convertAccountGroupToPlumbing(accountGroup));
     AccountsGroupsPlumbing.AccountGroupCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountsGroups.Create", req);
     AccountsGroupsPlumbing.AccountGroupCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -85,6 +87,9 @@ public class AccountsGroups implements SnapshotAccountsGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("AccountsGroups.Create", req, plumbingResponse);
     return Plumbing.convertAccountGroupCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one AccountGroup by ID. */
@@ -98,6 +103,8 @@ public class AccountsGroups implements SnapshotAccountsGroups {
     }
     builder.setId((id));
     AccountsGroupsPlumbing.AccountGroupGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountsGroups.Get", req);
     AccountsGroupsPlumbing.AccountGroupGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -119,6 +126,9 @@ public class AccountsGroups implements SnapshotAccountsGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("AccountsGroups.Get", req, plumbingResponse);
     return Plumbing.convertAccountGroupGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes an AccountGroup by ID. */
@@ -127,6 +137,8 @@ public class AccountsGroups implements SnapshotAccountsGroups {
         AccountsGroupsPlumbing.AccountGroupDeleteRequest.newBuilder();
     builder.setId((id));
     AccountsGroupsPlumbing.AccountGroupDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("AccountsGroups.Delete", req);
     AccountsGroupsPlumbing.AccountGroupDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -148,6 +160,9 @@ public class AccountsGroups implements SnapshotAccountsGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("AccountsGroups.Delete", req, plumbingResponse);
     return Plumbing.convertAccountGroupDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of AccountGroups matching a given set of criteria. */

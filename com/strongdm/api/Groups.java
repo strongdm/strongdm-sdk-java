@@ -64,6 +64,8 @@ public class Groups implements SnapshotGroups {
         GroupsPlumbing.GroupCreateRequest.newBuilder();
     builder.setGroup(Plumbing.convertGroupToPlumbing(group));
     GroupsPlumbing.GroupCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Groups.Create", req);
     GroupsPlumbing.GroupCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -85,6 +87,9 @@ public class Groups implements SnapshotGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Groups.Create", req, plumbingResponse);
     return Plumbing.convertGroupCreateResponseToPorcelain(plumbingResponse);
   }
   /** */
@@ -95,6 +100,8 @@ public class Groups implements SnapshotGroups {
     builder.addAllRoleIds((roleIds));
     builder.setCommit((commit));
     GroupsPlumbing.GroupCreateFromRolesRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Groups.CreateFromRoles", req);
     GroupsPlumbing.GroupCreateFromRolesResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -116,6 +123,9 @@ public class Groups implements SnapshotGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Groups.CreateFromRoles", req, plumbingResponse);
     return Plumbing.convertGroupCreateFromRolesResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one Group by ID. */
@@ -128,6 +138,8 @@ public class Groups implements SnapshotGroups {
     }
     builder.setId((id));
     GroupsPlumbing.GroupGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Groups.Get", req);
     GroupsPlumbing.GroupGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -149,6 +161,9 @@ public class Groups implements SnapshotGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Groups.Get", req, plumbingResponse);
     return Plumbing.convertGroupGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a Group by ID. */
@@ -157,6 +172,8 @@ public class Groups implements SnapshotGroups {
         GroupsPlumbing.GroupUpdateRequest.newBuilder();
     builder.setGroup(Plumbing.convertGroupToPlumbing(group));
     GroupsPlumbing.GroupUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Groups.Update", req);
     GroupsPlumbing.GroupUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -178,6 +195,9 @@ public class Groups implements SnapshotGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Groups.Update", req, plumbingResponse);
     return Plumbing.convertGroupUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a Group by ID. */
@@ -186,6 +206,8 @@ public class Groups implements SnapshotGroups {
         GroupsPlumbing.GroupDeleteRequest.newBuilder();
     builder.setId((id));
     GroupsPlumbing.GroupDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Groups.Delete", req);
     GroupsPlumbing.GroupDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -207,6 +229,9 @@ public class Groups implements SnapshotGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Groups.Delete", req, plumbingResponse);
     return Plumbing.convertGroupDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of Groups matching a given set of criteria. */

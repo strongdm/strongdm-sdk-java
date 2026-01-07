@@ -69,6 +69,8 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
         DiscoveryConnectorsPlumbing.ConnectorCreateRequest.newBuilder();
     builder.setConnector(Plumbing.convertConnectorToPlumbing(connector));
     DiscoveryConnectorsPlumbing.ConnectorCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("DiscoveryConnectors.Create", req);
     DiscoveryConnectorsPlumbing.ConnectorCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -91,6 +93,11 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("DiscoveryConnectors.Create", req, plumbingResponse);
     return Plumbing.convertConnectorCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one Connector by ID */
@@ -104,6 +111,8 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
     }
     builder.setId((id));
     DiscoveryConnectorsPlumbing.ConnectorGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("DiscoveryConnectors.Get", req);
     DiscoveryConnectorsPlumbing.ConnectorGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -125,6 +134,9 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("DiscoveryConnectors.Get", req, plumbingResponse);
     return Plumbing.convertConnectorGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a Connector by ID. */
@@ -133,6 +145,8 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
         DiscoveryConnectorsPlumbing.ConnectorUpdateRequest.newBuilder();
     builder.setConnector(Plumbing.convertConnectorToPlumbing(connector));
     DiscoveryConnectorsPlumbing.ConnectorUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("DiscoveryConnectors.Update", req);
     DiscoveryConnectorsPlumbing.ConnectorUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -155,6 +169,11 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("DiscoveryConnectors.Update", req, plumbingResponse);
     return Plumbing.convertConnectorUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a Connector by ID. */
@@ -163,6 +182,8 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
         DiscoveryConnectorsPlumbing.ConnectorDeleteRequest.newBuilder();
     builder.setId((id));
     DiscoveryConnectorsPlumbing.ConnectorDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("DiscoveryConnectors.Delete", req);
     DiscoveryConnectorsPlumbing.ConnectorDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -185,6 +206,11 @@ public class DiscoveryConnectors implements SnapshotDiscoveryConnectors {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("DiscoveryConnectors.Delete", req, plumbingResponse);
     return Plumbing.convertConnectorDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of Connectors matching a given set of criteria. */

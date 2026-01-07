@@ -122,6 +122,8 @@ public class Resources implements SnapshotResources {
         ResourcesPlumbing.ResourceCreateRequest.newBuilder();
     builder.setResource(Plumbing.convertResourceToPlumbing(resource));
     ResourcesPlumbing.ResourceCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Resources.Create", req);
     ResourcesPlumbing.ResourceCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -143,6 +145,9 @@ public class Resources implements SnapshotResources {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Resources.Create", req, plumbingResponse);
     return Plumbing.convertResourceCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one Resource by ID. */
@@ -156,6 +161,8 @@ public class Resources implements SnapshotResources {
     }
     builder.setId((id));
     ResourcesPlumbing.ResourceGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Resources.Get", req);
     ResourcesPlumbing.ResourceGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -177,6 +184,9 @@ public class Resources implements SnapshotResources {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Resources.Get", req, plumbingResponse);
     return Plumbing.convertResourceGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a Resource by ID. */
@@ -185,6 +195,8 @@ public class Resources implements SnapshotResources {
         ResourcesPlumbing.ResourceUpdateRequest.newBuilder();
     builder.setResource(Plumbing.convertResourceToPlumbing(resource));
     ResourcesPlumbing.ResourceUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Resources.Update", req);
     ResourcesPlumbing.ResourceUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -206,6 +218,9 @@ public class Resources implements SnapshotResources {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Resources.Update", req, plumbingResponse);
     return Plumbing.convertResourceUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a Resource by ID. */
@@ -214,6 +229,8 @@ public class Resources implements SnapshotResources {
         ResourcesPlumbing.ResourceDeleteRequest.newBuilder();
     builder.setId((id));
     ResourcesPlumbing.ResourceDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Resources.Delete", req);
     ResourcesPlumbing.ResourceDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -235,6 +252,9 @@ public class Resources implements SnapshotResources {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Resources.Delete", req, plumbingResponse);
     return Plumbing.convertResourceDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of Resources matching a given set of criteria. */
@@ -302,6 +322,8 @@ public class Resources implements SnapshotResources {
         ResourcesPlumbing.ResourceHealthcheckRequest.newBuilder();
     builder.setId((id));
     ResourcesPlumbing.ResourceHealthcheckRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Resources.Healthcheck", req);
     ResourcesPlumbing.ResourceHealthcheckResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -323,6 +345,9 @@ public class Resources implements SnapshotResources {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Resources.Healthcheck", req, plumbingResponse);
     return Plumbing.convertResourceHealthcheckResponseToPorcelain(plumbingResponse);
   }
 }

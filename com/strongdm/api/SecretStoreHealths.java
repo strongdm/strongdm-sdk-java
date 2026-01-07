@@ -126,6 +126,8 @@ public class SecretStoreHealths {
         SecretStoreHealthsPlumbing.SecretStoreHealthcheckRequest.newBuilder();
     builder.setSecretStoreId((secretStoreId));
     SecretStoreHealthsPlumbing.SecretStoreHealthcheckRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretStoreHealths.Healthcheck", req);
     SecretStoreHealthsPlumbing.SecretStoreHealthcheckResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -148,6 +150,11 @@ public class SecretStoreHealths {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("SecretStoreHealths.Healthcheck", req, plumbingResponse);
     return Plumbing.convertSecretStoreHealthcheckResponseToPorcelain(plumbingResponse);
   }
 }

@@ -127,6 +127,8 @@ public class SecretEngines {
     }
     builder.setId((id));
     SecretEnginesPlumbing.SecretEngineGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretEngines.Get", req);
     SecretEnginesPlumbing.SecretEngineGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -148,6 +150,9 @@ public class SecretEngines {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretEngines.Get", req, plumbingResponse);
     return Plumbing.convertSecretEngineGetResponseToPorcelain(plumbingResponse);
   }
   /** Create creates a secret engine */
@@ -156,6 +161,8 @@ public class SecretEngines {
         SecretEnginesPlumbing.SecretEngineCreateRequest.newBuilder();
     builder.setSecretEngine(Plumbing.convertSecretEngineToPlumbing(secretEngine));
     SecretEnginesPlumbing.SecretEngineCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretEngines.Create", req);
     SecretEnginesPlumbing.SecretEngineCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -177,6 +184,9 @@ public class SecretEngines {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretEngines.Create", req, plumbingResponse);
     return Plumbing.convertSecretEngineCreateResponseToPorcelain(plumbingResponse);
   }
   /** Update updates a secret engine */
@@ -185,6 +195,8 @@ public class SecretEngines {
         SecretEnginesPlumbing.SecretEngineUpdateRequest.newBuilder();
     builder.setSecretEngine(Plumbing.convertSecretEngineToPlumbing(secretEngine));
     SecretEnginesPlumbing.SecretEngineUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretEngines.Update", req);
     SecretEnginesPlumbing.SecretEngineUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -206,6 +218,9 @@ public class SecretEngines {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretEngines.Update", req, plumbingResponse);
     return Plumbing.convertSecretEngineUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete deletes a secret engine */
@@ -214,6 +229,8 @@ public class SecretEngines {
         SecretEnginesPlumbing.SecretEngineDeleteRequest.newBuilder();
     builder.setId((id));
     SecretEnginesPlumbing.SecretEngineDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretEngines.Delete", req);
     SecretEnginesPlumbing.SecretEngineDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -235,6 +252,9 @@ public class SecretEngines {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretEngines.Delete", req, plumbingResponse);
     return Plumbing.convertSecretEngineDeleteResponseToPorcelain(plumbingResponse);
   }
   /**
@@ -306,6 +326,8 @@ public class SecretEngines {
         SecretEnginesPlumbing.GenerateKeysRequest.newBuilder();
     builder.setSecretEngineId((secretEngineId));
     SecretEnginesPlumbing.GenerateKeysRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretEngines.GenerateKeys", req);
     SecretEnginesPlumbing.GenerateKeysResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -328,6 +350,11 @@ public class SecretEngines {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("SecretEngines.GenerateKeys", req, plumbingResponse);
     return Plumbing.convertGenerateKeysResponseToPorcelain(plumbingResponse);
   }
   /** Healthcheck triggers a healthcheck for all nodes serving a secret engine */
@@ -336,6 +363,8 @@ public class SecretEngines {
         SecretEnginesPlumbing.HealthcheckRequest.newBuilder();
     builder.setSecretEngineId((secretEngineId));
     SecretEnginesPlumbing.HealthcheckRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretEngines.Healthcheck", req);
     SecretEnginesPlumbing.HealthcheckResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -358,6 +387,11 @@ public class SecretEngines {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("SecretEngines.Healthcheck", req, plumbingResponse);
     return Plumbing.convertHealthcheckResponseToPorcelain(plumbingResponse);
   }
   /** Rotate rotates secret engine's credentials */
@@ -368,6 +402,8 @@ public class SecretEngines {
     builder.setId((id));
     builder.setPasswordPolicy(Plumbing.convertSecretEnginePasswordPolicyToPlumbing(passwordPolicy));
     SecretEnginesPlumbing.SecretEngineRotateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("SecretEngines.Rotate", req);
     SecretEnginesPlumbing.SecretEngineRotateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -389,6 +425,9 @@ public class SecretEngines {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("SecretEngines.Rotate", req, plumbingResponse);
     return Plumbing.convertSecretEngineRotateResponseToPorcelain(plumbingResponse);
   }
 }

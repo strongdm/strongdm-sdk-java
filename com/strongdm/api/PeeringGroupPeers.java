@@ -65,6 +65,8 @@ public class PeeringGroupPeers {
         PeeringGroupPeersPlumbing.PeeringGroupPeerCreateRequest.newBuilder();
     builder.setPeeringGroupPeer(Plumbing.convertPeeringGroupPeerToPlumbing(peeringGroupPeer));
     PeeringGroupPeersPlumbing.PeeringGroupPeerCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("PeeringGroupPeers.Create", req);
     PeeringGroupPeersPlumbing.PeeringGroupPeerCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -87,6 +89,11 @@ public class PeeringGroupPeers {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("PeeringGroupPeers.Create", req, plumbingResponse);
     return Plumbing.convertPeeringGroupPeerCreateResponseToPorcelain(plumbingResponse);
   }
   /** Delete unlinks two peering groups. */
@@ -95,6 +102,8 @@ public class PeeringGroupPeers {
         PeeringGroupPeersPlumbing.PeeringGroupPeerDeleteRequest.newBuilder();
     builder.setId((id));
     PeeringGroupPeersPlumbing.PeeringGroupPeerDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("PeeringGroupPeers.Delete", req);
     PeeringGroupPeersPlumbing.PeeringGroupPeerDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -117,6 +126,11 @@ public class PeeringGroupPeers {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("PeeringGroupPeers.Delete", req, plumbingResponse);
     return Plumbing.convertPeeringGroupPeerDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Get reads the information of one peering group link. */
@@ -130,6 +144,8 @@ public class PeeringGroupPeers {
     }
     builder.setId((id));
     PeeringGroupPeersPlumbing.PeeringGroupPeerGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("PeeringGroupPeers.Get", req);
     PeeringGroupPeersPlumbing.PeeringGroupPeerGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -151,6 +167,9 @@ public class PeeringGroupPeers {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("PeeringGroupPeers.Get", req, plumbingResponse);
     return Plumbing.convertPeeringGroupPeerGetResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of peering group links. */

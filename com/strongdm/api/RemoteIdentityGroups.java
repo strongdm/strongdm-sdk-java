@@ -75,6 +75,8 @@ public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
     }
     builder.setId((id));
     RemoteIdentityGroupsPlumbing.RemoteIdentityGroupGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("RemoteIdentityGroups.Get", req);
     RemoteIdentityGroupsPlumbing.RemoteIdentityGroupGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -97,6 +99,11 @@ public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("RemoteIdentityGroups.Get", req, plumbingResponse);
     return Plumbing.convertRemoteIdentityGroupGetResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of RemoteIdentityGroups matching a given set of criteria. */

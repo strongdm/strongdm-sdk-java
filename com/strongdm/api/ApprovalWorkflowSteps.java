@@ -69,6 +69,8 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
     builder.setApprovalWorkflowStep(
         Plumbing.convertApprovalWorkflowStepToPlumbing(approvalWorkflowStep));
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflowSteps.Create", req);
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -91,6 +93,11 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflowSteps.Create", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowStepCreateResponseToPorcelain(plumbingResponse);
   }
   /** Deprecated: Get reads one approval workflow step by ID. */
@@ -104,6 +111,8 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
     }
     builder.setId((id));
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflowSteps.Get", req);
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -126,6 +135,11 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflowSteps.Get", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowStepGetResponseToPorcelain(plumbingResponse);
   }
   /** Deprecated: Delete deletes an existing approval workflow step. */
@@ -134,6 +148,8 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
         ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteRequest.newBuilder();
     builder.setId((id));
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflowSteps.Delete", req);
     ApprovalWorkflowStepsPlumbing.ApprovalWorkflowStepDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -156,6 +172,11 @@ public class ApprovalWorkflowSteps implements SnapshotApprovalWorkflowSteps {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflowSteps.Delete", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowStepDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Deprecated: Lists existing approval workflow steps. */

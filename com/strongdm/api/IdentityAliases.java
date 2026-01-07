@@ -67,6 +67,8 @@ public class IdentityAliases implements SnapshotIdentityAliases {
         IdentityAliasesPlumbing.IdentityAliasCreateRequest.newBuilder();
     builder.setIdentityAlias(Plumbing.convertIdentityAliasToPlumbing(identityAlias));
     IdentityAliasesPlumbing.IdentityAliasCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentityAliases.Create", req);
     IdentityAliasesPlumbing.IdentityAliasCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -88,6 +90,9 @@ public class IdentityAliases implements SnapshotIdentityAliases {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentityAliases.Create", req, plumbingResponse);
     return Plumbing.convertIdentityAliasCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one IdentityAlias by ID. */
@@ -101,6 +106,8 @@ public class IdentityAliases implements SnapshotIdentityAliases {
     }
     builder.setId((id));
     IdentityAliasesPlumbing.IdentityAliasGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentityAliases.Get", req);
     IdentityAliasesPlumbing.IdentityAliasGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -122,6 +129,9 @@ public class IdentityAliases implements SnapshotIdentityAliases {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentityAliases.Get", req, plumbingResponse);
     return Plumbing.convertIdentityAliasGetResponseToPorcelain(plumbingResponse);
   }
   /** Update replaces all the fields of a IdentityAlias by ID. */
@@ -130,6 +140,8 @@ public class IdentityAliases implements SnapshotIdentityAliases {
         IdentityAliasesPlumbing.IdentityAliasUpdateRequest.newBuilder();
     builder.setIdentityAlias(Plumbing.convertIdentityAliasToPlumbing(identityAlias));
     IdentityAliasesPlumbing.IdentityAliasUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentityAliases.Update", req);
     IdentityAliasesPlumbing.IdentityAliasUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -151,6 +163,9 @@ public class IdentityAliases implements SnapshotIdentityAliases {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentityAliases.Update", req, plumbingResponse);
     return Plumbing.convertIdentityAliasUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a IdentityAlias by ID. */
@@ -159,6 +174,8 @@ public class IdentityAliases implements SnapshotIdentityAliases {
         IdentityAliasesPlumbing.IdentityAliasDeleteRequest.newBuilder();
     builder.setId((id));
     IdentityAliasesPlumbing.IdentityAliasDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("IdentityAliases.Delete", req);
     IdentityAliasesPlumbing.IdentityAliasDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -180,6 +197,9 @@ public class IdentityAliases implements SnapshotIdentityAliases {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("IdentityAliases.Delete", req, plumbingResponse);
     return Plumbing.convertIdentityAliasDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of IdentityAliases matching a given set of criteria. */

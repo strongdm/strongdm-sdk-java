@@ -69,6 +69,8 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
     builder.setApprovalWorkflowApprover(
         Plumbing.convertApprovalWorkflowApproverToPlumbing(approvalWorkflowApprover));
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflowApprovers.Create", req);
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -91,6 +93,11 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflowApprovers.Create", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowApproverCreateResponseToPorcelain(plumbingResponse);
   }
   /** Deprecated: Get reads one approval workflow approver by ID. */
@@ -104,6 +111,8 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
     }
     builder.setId((id));
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflowApprovers.Get", req);
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -126,6 +135,11 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflowApprovers.Get", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowApproverGetResponseToPorcelain(plumbingResponse);
   }
   /** Deprecated: Delete deletes an existing approval workflow approver. */
@@ -134,6 +148,8 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
         ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverDeleteRequest.newBuilder();
     builder.setId((id));
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ApprovalWorkflowApprovers.Delete", req);
     ApprovalWorkflowApproversPlumbing.ApprovalWorkflowApproverDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -156,6 +172,11 @@ public class ApprovalWorkflowApprovers implements SnapshotApprovalWorkflowApprov
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ApprovalWorkflowApprovers.Delete", req, plumbingResponse);
     return Plumbing.convertApprovalWorkflowApproverDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Deprecated: Lists existing approval workflow approvers. */

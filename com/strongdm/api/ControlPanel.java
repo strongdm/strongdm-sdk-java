@@ -56,6 +56,8 @@ public class ControlPanel {
     ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest.Builder builder =
         ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest.newBuilder();
     ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ControlPanel.GetSSHCAPublicKey", req);
     ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -78,6 +80,11 @@ public class ControlPanel {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ControlPanel.GetSSHCAPublicKey", req, plumbingResponse);
     return Plumbing.convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(plumbingResponse);
   }
   /** GetRDPCAPublicKey retrieves the RDP CA public key. */
@@ -85,6 +92,8 @@ public class ControlPanel {
     ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest.Builder builder =
         ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest.newBuilder();
     ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ControlPanel.GetRDPCAPublicKey", req);
     ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -107,6 +116,11 @@ public class ControlPanel {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ControlPanel.GetRDPCAPublicKey", req, plumbingResponse);
     return Plumbing.convertControlPanelGetRDPCAPublicKeyResponseToPorcelain(plumbingResponse);
   }
   /** VerifyJWT reports whether the given JWT token (x-sdm-token) is valid. */
@@ -115,6 +129,8 @@ public class ControlPanel {
         ControlPanelPlumbing.ControlPanelVerifyJWTRequest.newBuilder();
     builder.setToken((token));
     ControlPanelPlumbing.ControlPanelVerifyJWTRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ControlPanel.VerifyJWT", req);
     ControlPanelPlumbing.ControlPanelVerifyJWTResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -136,6 +152,9 @@ public class ControlPanel {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ControlPanel.VerifyJWT", req, plumbingResponse);
     return Plumbing.convertControlPanelVerifyJWTResponseToPorcelain(plumbingResponse);
   }
 }

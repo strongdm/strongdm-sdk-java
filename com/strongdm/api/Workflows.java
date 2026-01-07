@@ -67,6 +67,8 @@ public class Workflows implements SnapshotWorkflows {
         WorkflowsPlumbing.WorkflowCreateRequest.newBuilder();
     builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(workflow));
     WorkflowsPlumbing.WorkflowCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Workflows.Create", req);
     WorkflowsPlumbing.WorkflowCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -88,6 +90,9 @@ public class Workflows implements SnapshotWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Workflows.Create", req, plumbingResponse);
     return Plumbing.convertWorkflowCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one workflow by ID. */
@@ -101,6 +106,8 @@ public class Workflows implements SnapshotWorkflows {
     }
     builder.setId((id));
     WorkflowsPlumbing.WorkflowGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Workflows.Get", req);
     WorkflowsPlumbing.WorkflowGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -122,6 +129,9 @@ public class Workflows implements SnapshotWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Workflows.Get", req, plumbingResponse);
     return Plumbing.convertWorkflowGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete deletes an existing workflow. */
@@ -130,6 +140,8 @@ public class Workflows implements SnapshotWorkflows {
         WorkflowsPlumbing.WorkflowDeleteRequest.newBuilder();
     builder.setId((id));
     WorkflowsPlumbing.WorkflowDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Workflows.Delete", req);
     WorkflowsPlumbing.WorkflowDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -151,6 +163,9 @@ public class Workflows implements SnapshotWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Workflows.Delete", req, plumbingResponse);
     return Plumbing.convertWorkflowDeleteResponseToPorcelain(plumbingResponse);
   }
   /** Update updates an existing workflow. */
@@ -159,6 +174,8 @@ public class Workflows implements SnapshotWorkflows {
         WorkflowsPlumbing.WorkflowUpdateRequest.newBuilder();
     builder.setWorkflow(Plumbing.convertWorkflowToPlumbing(workflow));
     WorkflowsPlumbing.WorkflowUpdateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("Workflows.Update", req);
     WorkflowsPlumbing.WorkflowUpdateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -180,6 +197,9 @@ public class Workflows implements SnapshotWorkflows {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("Workflows.Update", req, plumbingResponse);
     return Plumbing.convertWorkflowUpdateResponseToPorcelain(plumbingResponse);
   }
   /** Lists existing workflows. */

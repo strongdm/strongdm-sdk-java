@@ -64,6 +64,8 @@ public class GroupsRoles implements SnapshotGroupsRoles {
         GroupsRolesPlumbing.GroupRoleCreateRequest.newBuilder();
     builder.setGroupRole(Plumbing.convertGroupRoleToPlumbing(groupRole));
     GroupsRolesPlumbing.GroupRoleCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("GroupsRoles.Create", req);
     GroupsRolesPlumbing.GroupRoleCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -85,6 +87,9 @@ public class GroupsRoles implements SnapshotGroupsRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("GroupsRoles.Create", req, plumbingResponse);
     return Plumbing.convertGroupRoleCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one GroupRole by ID. */
@@ -98,6 +103,8 @@ public class GroupsRoles implements SnapshotGroupsRoles {
     }
     builder.setId((id));
     GroupsRolesPlumbing.GroupRoleGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("GroupsRoles.Get", req);
     GroupsRolesPlumbing.GroupRoleGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -119,6 +126,9 @@ public class GroupsRoles implements SnapshotGroupsRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("GroupsRoles.Get", req, plumbingResponse);
     return Plumbing.convertGroupRoleGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a GroupRole by ID. */
@@ -127,6 +137,8 @@ public class GroupsRoles implements SnapshotGroupsRoles {
         GroupsRolesPlumbing.GroupRoleDeleteRequest.newBuilder();
     builder.setId((id));
     GroupsRolesPlumbing.GroupRoleDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("GroupsRoles.Delete", req);
     GroupsRolesPlumbing.GroupRoleDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -148,6 +160,9 @@ public class GroupsRoles implements SnapshotGroupsRoles {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("GroupsRoles.Delete", req, plumbingResponse);
     return Plumbing.convertGroupRoleDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of GroupRoles matching a given set of criteria. */

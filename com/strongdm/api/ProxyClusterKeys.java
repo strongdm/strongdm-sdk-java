@@ -68,6 +68,8 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
         ProxyClusterKeysPlumbing.ProxyClusterKeyCreateRequest.newBuilder();
     builder.setProxyClusterKey(Plumbing.convertProxyClusterKeyToPlumbing(proxyClusterKey));
     ProxyClusterKeysPlumbing.ProxyClusterKeyCreateRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ProxyClusterKeys.Create", req);
     ProxyClusterKeysPlumbing.ProxyClusterKeyCreateResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -89,6 +91,9 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ProxyClusterKeys.Create", req, plumbingResponse);
     return Plumbing.convertProxyClusterKeyCreateResponseToPorcelain(plumbingResponse);
   }
   /** Get reads one ProxyClusterKey by ID. */
@@ -102,6 +107,8 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
     }
     builder.setId((id));
     ProxyClusterKeysPlumbing.ProxyClusterKeyGetRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ProxyClusterKeys.Get", req);
     ProxyClusterKeysPlumbing.ProxyClusterKeyGetResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -123,6 +130,9 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ProxyClusterKeys.Get", req, plumbingResponse);
     return Plumbing.convertProxyClusterKeyGetResponseToPorcelain(plumbingResponse);
   }
   /** Delete removes a ProxyClusterKey by ID. */
@@ -131,6 +141,8 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
         ProxyClusterKeysPlumbing.ProxyClusterKeyDeleteRequest.newBuilder();
     builder.setId((id));
     ProxyClusterKeysPlumbing.ProxyClusterKeyDeleteRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ProxyClusterKeys.Delete", req);
     ProxyClusterKeysPlumbing.ProxyClusterKeyDeleteResponse plumbingResponse;
     int tries = 0;
     while (true) {
@@ -152,6 +164,9 @@ public class ProxyClusterKeys implements SnapshotProxyClusterKeys {
       }
       break;
     }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent.getInterceptor().executeAfter("ProxyClusterKeys.Delete", req, plumbingResponse);
     return Plumbing.convertProxyClusterKeyDeleteResponseToPorcelain(plumbingResponse);
   }
   /** List gets a list of ProxyClusterKeys matching a given set of criteria. */
