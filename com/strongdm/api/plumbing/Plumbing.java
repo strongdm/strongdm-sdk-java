@@ -9997,12 +9997,13 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setIncludeTags(Plumbing.convertRepeatedTagToPorcelain(plumbing.getIncludeTagsList()));
     porcelain.setName((plumbing.getName()));
-    porcelain.setPoolId((plumbing.getPoolId()));
     porcelain.setProjectIds((plumbing.getProjectIdsList()));
-    porcelain.setProjectNumber((plumbing.getProjectNumber()));
-    porcelain.setProviderId((plumbing.getProviderId()));
     porcelain.setScanPeriod((plumbing.getScanPeriod()));
     porcelain.setServices((plumbing.getServicesList()));
+    porcelain.setWorkloadPoolId((plumbing.getWorkloadPoolId()));
+    porcelain.setWorkloadProjectId((plumbing.getWorkloadProjectId()));
+    porcelain.setWorkloadProjectNumber((plumbing.getWorkloadProjectNumber()));
+    porcelain.setWorkloadProviderId((plumbing.getWorkloadProviderId()));
     return porcelain;
   }
 
@@ -10025,20 +10026,23 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
-    if (porcelain.getPoolId() != null) {
-      builder.setPoolId((porcelain.getPoolId()));
-    }
     builder.addAllProjectIds((porcelain.getProjectIds()));
-    if (porcelain.getProjectNumber() != null) {
-      builder.setProjectNumber((porcelain.getProjectNumber()));
-    }
-    if (porcelain.getProviderId() != null) {
-      builder.setProviderId((porcelain.getProviderId()));
-    }
     if (porcelain.getScanPeriod() != null) {
       builder.setScanPeriod((porcelain.getScanPeriod()));
     }
     builder.addAllServices((iterableToList(porcelain.getServices())));
+    if (porcelain.getWorkloadPoolId() != null) {
+      builder.setWorkloadPoolId((porcelain.getWorkloadPoolId()));
+    }
+    if (porcelain.getWorkloadProjectId() != null) {
+      builder.setWorkloadProjectId((porcelain.getWorkloadProjectId()));
+    }
+    if (porcelain.getWorkloadProjectNumber() != null) {
+      builder.setWorkloadProjectNumber((porcelain.getWorkloadProjectNumber()));
+    }
+    if (porcelain.getWorkloadProviderId() != null) {
+      builder.setWorkloadProviderId((porcelain.getWorkloadProviderId()));
+    }
     return builder.build();
   }
 

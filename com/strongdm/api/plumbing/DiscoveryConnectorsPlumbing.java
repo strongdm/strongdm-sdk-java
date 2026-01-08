@@ -18315,66 +18315,6 @@ public final class DiscoveryConnectorsPlumbing {
 
     /**
      * <pre>
-     * ProjectNumber is the GCP Project the Workload Pool is defined in
-     * </pre>
-     *
-     * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-     * @return The projectNumber.
-     */
-    java.lang.String getProjectNumber();
-    /**
-     * <pre>
-     * ProjectNumber is the GCP Project the Workload Pool is defined in
-     * </pre>
-     *
-     * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for projectNumber.
-     */
-    com.google.protobuf.ByteString
-        getProjectNumberBytes();
-
-    /**
-     * <pre>
-     * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-     * @return The providerId.
-     */
-    java.lang.String getProviderId();
-    /**
-     * <pre>
-     * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for providerId.
-     */
-    com.google.protobuf.ByteString
-        getProviderIdBytes();
-
-    /**
-     * <pre>
-     * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-     * @return The poolId.
-     */
-    java.lang.String getPoolId();
-    /**
-     * <pre>
-     * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for poolId.
-     */
-    com.google.protobuf.ByteString
-        getPoolIdBytes();
-
-    /**
-     * <pre>
      * ProjectIds is the list of GCP Projects the connector will scan
      * </pre>
      *
@@ -18413,6 +18353,86 @@ public final class DiscoveryConnectorsPlumbing {
      */
     com.google.protobuf.ByteString
         getProjectIdsBytes(int index);
+
+    /**
+     * <pre>
+     * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+     * @return The workloadProjectNumber.
+     */
+    java.lang.String getWorkloadProjectNumber();
+    /**
+     * <pre>
+     * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadProjectNumber.
+     */
+    com.google.protobuf.ByteString
+        getWorkloadProjectNumberBytes();
+
+    /**
+     * <pre>
+     * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The workloadProjectId.
+     */
+    java.lang.String getWorkloadProjectId();
+    /**
+     * <pre>
+     * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadProjectId.
+     */
+    com.google.protobuf.ByteString
+        getWorkloadProjectIdBytes();
+
+    /**
+     * <pre>
+     * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The workloadProviderId.
+     */
+    java.lang.String getWorkloadProviderId();
+    /**
+     * <pre>
+     * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadProviderId.
+     */
+    com.google.protobuf.ByteString
+        getWorkloadProviderIdBytes();
+
+    /**
+     * <pre>
+     * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+     * @return The workloadPoolId.
+     */
+    java.lang.String getWorkloadPoolId();
+    /**
+     * <pre>
+     * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadPoolId.
+     */
+    com.google.protobuf.ByteString
+        getWorkloadPoolIdBytes();
   }
   /**
    * Protobuf type {@code v1.GCPConnector}
@@ -18434,10 +18454,11 @@ public final class DiscoveryConnectorsPlumbing {
       services_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       includeTags_ = java.util.Collections.emptyList();
       excludeTags_ = java.util.Collections.emptyList();
-      projectNumber_ = "";
-      providerId_ = "";
-      poolId_ = "";
       projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      workloadProjectNumber_ = "";
+      workloadProjectId_ = "";
+      workloadProviderId_ = "";
+      workloadPoolId_ = "";
     }
 
     @java.lang.Override
@@ -18522,24 +18543,6 @@ public final class DiscoveryConnectorsPlumbing {
                   input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tag.parser(), extensionRegistry));
               break;
             }
-            case 162: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              projectNumber_ = s;
-              break;
-            }
-            case 170: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              providerId_ = s;
-              break;
-            }
-            case 178: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              poolId_ = s;
-              break;
-            }
             case 186: {
               java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000008) != 0)) {
@@ -18547,6 +18550,30 @@ public final class DiscoveryConnectorsPlumbing {
                 mutable_bitField0_ |= 0x00000008;
               }
               projectIds_.add(s);
+              break;
+            }
+            case 194: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              workloadProjectNumber_ = s;
+              break;
+            }
+            case 202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              workloadProjectId_ = s;
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              workloadProviderId_ = s;
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              workloadPoolId_ = s;
               break;
             }
             default: {
@@ -18960,144 +18987,6 @@ public final class DiscoveryConnectorsPlumbing {
       return excludeTags_.get(index);
     }
 
-    public static final int PROJECT_NUMBER_FIELD_NUMBER = 20;
-    private volatile java.lang.Object projectNumber_;
-    /**
-     * <pre>
-     * ProjectNumber is the GCP Project the Workload Pool is defined in
-     * </pre>
-     *
-     * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-     * @return The projectNumber.
-     */
-    @java.lang.Override
-    public java.lang.String getProjectNumber() {
-      java.lang.Object ref = projectNumber_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        projectNumber_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ProjectNumber is the GCP Project the Workload Pool is defined in
-     * </pre>
-     *
-     * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for projectNumber.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProjectNumberBytes() {
-      java.lang.Object ref = projectNumber_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        projectNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PROVIDER_ID_FIELD_NUMBER = 21;
-    private volatile java.lang.Object providerId_;
-    /**
-     * <pre>
-     * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-     * @return The providerId.
-     */
-    @java.lang.Override
-    public java.lang.String getProviderId() {
-      java.lang.Object ref = providerId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        providerId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for providerId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProviderIdBytes() {
-      java.lang.Object ref = providerId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        providerId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int POOL_ID_FIELD_NUMBER = 22;
-    private volatile java.lang.Object poolId_;
-    /**
-     * <pre>
-     * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-     * @return The poolId.
-     */
-    @java.lang.Override
-    public java.lang.String getPoolId() {
-      java.lang.Object ref = poolId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        poolId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-     * </pre>
-     *
-     * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for poolId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPoolIdBytes() {
-      java.lang.Object ref = poolId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        poolId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int PROJECT_IDS_FIELD_NUMBER = 23;
     private com.google.protobuf.LazyStringList projectIds_;
     /**
@@ -19149,6 +19038,190 @@ public final class DiscoveryConnectorsPlumbing {
       return projectIds_.getByteString(index);
     }
 
+    public static final int WORKLOAD_PROJECT_NUMBER_FIELD_NUMBER = 24;
+    private volatile java.lang.Object workloadProjectNumber_;
+    /**
+     * <pre>
+     * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+     * @return The workloadProjectNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkloadProjectNumber() {
+      java.lang.Object ref = workloadProjectNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workloadProjectNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadProjectNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkloadProjectNumberBytes() {
+      java.lang.Object ref = workloadProjectNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workloadProjectNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WORKLOAD_PROJECT_ID_FIELD_NUMBER = 25;
+    private volatile java.lang.Object workloadProjectId_;
+    /**
+     * <pre>
+     * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The workloadProjectId.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkloadProjectId() {
+      java.lang.Object ref = workloadProjectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workloadProjectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+     * </pre>
+     *
+     * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadProjectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkloadProjectIdBytes() {
+      java.lang.Object ref = workloadProjectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workloadProjectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WORKLOAD_PROVIDER_ID_FIELD_NUMBER = 26;
+    private volatile java.lang.Object workloadProviderId_;
+    /**
+     * <pre>
+     * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The workloadProviderId.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkloadProviderId() {
+      java.lang.Object ref = workloadProviderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workloadProviderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadProviderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkloadProviderIdBytes() {
+      java.lang.Object ref = workloadProviderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workloadProviderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WORKLOAD_POOL_ID_FIELD_NUMBER = 27;
+    private volatile java.lang.Object workloadPoolId_;
+    /**
+     * <pre>
+     * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+     * @return The workloadPoolId.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkloadPoolId() {
+      java.lang.Object ref = workloadPoolId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workloadPoolId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+     * </pre>
+     *
+     * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for workloadPoolId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkloadPoolIdBytes() {
+      java.lang.Object ref = workloadPoolId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workloadPoolId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19184,17 +19257,20 @@ public final class DiscoveryConnectorsPlumbing {
       for (int i = 0; i < excludeTags_.size(); i++) {
         output.writeMessage(7, excludeTags_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectNumber_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, projectNumber_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, providerId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, poolId_);
-      }
       for (int i = 0; i < projectIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, projectIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadProjectNumber_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, workloadProjectNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadProjectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, workloadProjectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadProviderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, workloadProviderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadPoolId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, workloadPoolId_);
       }
       unknownFields.writeTo(output);
     }
@@ -19233,15 +19309,6 @@ public final class DiscoveryConnectorsPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, excludeTags_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectNumber_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, projectNumber_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, providerId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, poolId_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < projectIds_.size(); i++) {
@@ -19249,6 +19316,18 @@ public final class DiscoveryConnectorsPlumbing {
         }
         size += dataSize;
         size += 2 * getProjectIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadProjectNumber_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, workloadProjectNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadProjectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, workloadProjectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadProviderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, workloadProviderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workloadPoolId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, workloadPoolId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19279,14 +19358,16 @@ public final class DiscoveryConnectorsPlumbing {
           .equals(other.getIncludeTagsList())) return false;
       if (!getExcludeTagsList()
           .equals(other.getExcludeTagsList())) return false;
-      if (!getProjectNumber()
-          .equals(other.getProjectNumber())) return false;
-      if (!getProviderId()
-          .equals(other.getProviderId())) return false;
-      if (!getPoolId()
-          .equals(other.getPoolId())) return false;
       if (!getProjectIdsList()
           .equals(other.getProjectIdsList())) return false;
+      if (!getWorkloadProjectNumber()
+          .equals(other.getWorkloadProjectNumber())) return false;
+      if (!getWorkloadProjectId()
+          .equals(other.getWorkloadProjectId())) return false;
+      if (!getWorkloadProviderId()
+          .equals(other.getWorkloadProviderId())) return false;
+      if (!getWorkloadPoolId()
+          .equals(other.getWorkloadPoolId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19318,16 +19399,18 @@ public final class DiscoveryConnectorsPlumbing {
         hash = (37 * hash) + EXCLUDE_TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getExcludeTagsList().hashCode();
       }
-      hash = (37 * hash) + PROJECT_NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getProjectNumber().hashCode();
-      hash = (37 * hash) + PROVIDER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getProviderId().hashCode();
-      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPoolId().hashCode();
       if (getProjectIdsCount() > 0) {
         hash = (37 * hash) + PROJECT_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getProjectIdsList().hashCode();
       }
+      hash = (37 * hash) + WORKLOAD_PROJECT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkloadProjectNumber().hashCode();
+      hash = (37 * hash) + WORKLOAD_PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkloadProjectId().hashCode();
+      hash = (37 * hash) + WORKLOAD_PROVIDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkloadProviderId().hashCode();
+      hash = (37 * hash) + WORKLOAD_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkloadPoolId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -19485,14 +19568,16 @@ public final class DiscoveryConnectorsPlumbing {
         } else {
           excludeTagsBuilder_.clear();
         }
-        projectNumber_ = "";
-
-        providerId_ = "";
-
-        poolId_ = "";
-
         projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
+        workloadProjectNumber_ = "";
+
+        workloadProjectId_ = "";
+
+        workloadProviderId_ = "";
+
+        workloadPoolId_ = "";
+
         return this;
       }
 
@@ -19547,14 +19632,15 @@ public final class DiscoveryConnectorsPlumbing {
         } else {
           result.excludeTags_ = excludeTagsBuilder_.build();
         }
-        result.projectNumber_ = projectNumber_;
-        result.providerId_ = providerId_;
-        result.poolId_ = poolId_;
         if (((bitField0_ & 0x00000008) != 0)) {
           projectIds_ = projectIds_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.projectIds_ = projectIds_;
+        result.workloadProjectNumber_ = workloadProjectNumber_;
+        result.workloadProjectId_ = workloadProjectId_;
+        result.workloadProviderId_ = workloadProviderId_;
+        result.workloadPoolId_ = workloadPoolId_;
         onBuilt();
         return result;
       }
@@ -19681,18 +19767,6 @@ public final class DiscoveryConnectorsPlumbing {
             }
           }
         }
-        if (!other.getProjectNumber().isEmpty()) {
-          projectNumber_ = other.projectNumber_;
-          onChanged();
-        }
-        if (!other.getProviderId().isEmpty()) {
-          providerId_ = other.providerId_;
-          onChanged();
-        }
-        if (!other.getPoolId().isEmpty()) {
-          poolId_ = other.poolId_;
-          onChanged();
-        }
         if (!other.projectIds_.isEmpty()) {
           if (projectIds_.isEmpty()) {
             projectIds_ = other.projectIds_;
@@ -19701,6 +19775,22 @@ public final class DiscoveryConnectorsPlumbing {
             ensureProjectIdsIsMutable();
             projectIds_.addAll(other.projectIds_);
           }
+          onChanged();
+        }
+        if (!other.getWorkloadProjectNumber().isEmpty()) {
+          workloadProjectNumber_ = other.workloadProjectNumber_;
+          onChanged();
+        }
+        if (!other.getWorkloadProjectId().isEmpty()) {
+          workloadProjectId_ = other.workloadProjectId_;
+          onChanged();
+        }
+        if (!other.getWorkloadProviderId().isEmpty()) {
+          workloadProviderId_ = other.workloadProviderId_;
+          onChanged();
+        }
+        if (!other.getWorkloadPoolId().isEmpty()) {
+          workloadPoolId_ = other.workloadPoolId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -20923,294 +21013,6 @@ public final class DiscoveryConnectorsPlumbing {
         return excludeTagsBuilder_;
       }
 
-      private java.lang.Object projectNumber_ = "";
-      /**
-       * <pre>
-       * ProjectNumber is the GCP Project the Workload Pool is defined in
-       * </pre>
-       *
-       * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-       * @return The projectNumber.
-       */
-      public java.lang.String getProjectNumber() {
-        java.lang.Object ref = projectNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          projectNumber_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ProjectNumber is the GCP Project the Workload Pool is defined in
-       * </pre>
-       *
-       * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for projectNumber.
-       */
-      public com.google.protobuf.ByteString
-          getProjectNumberBytes() {
-        java.lang.Object ref = projectNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          projectNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ProjectNumber is the GCP Project the Workload Pool is defined in
-       * </pre>
-       *
-       * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-       * @param value The projectNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProjectNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        projectNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ProjectNumber is the GCP Project the Workload Pool is defined in
-       * </pre>
-       *
-       * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProjectNumber() {
-        
-        projectNumber_ = getDefaultInstance().getProjectNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ProjectNumber is the GCP Project the Workload Pool is defined in
-       * </pre>
-       *
-       * <code>string project_number = 20 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for projectNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProjectNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        projectNumber_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object providerId_ = "";
-      /**
-       * <pre>
-       * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-       * @return The providerId.
-       */
-      public java.lang.String getProviderId() {
-        java.lang.Object ref = providerId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          providerId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for providerId.
-       */
-      public com.google.protobuf.ByteString
-          getProviderIdBytes() {
-        java.lang.Object ref = providerId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          providerId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-       * @param value The providerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProviderId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        providerId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProviderId() {
-        
-        providerId_ = getDefaultInstance().getProviderId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string provider_id = 21 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for providerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProviderIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        providerId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object poolId_ = "";
-      /**
-       * <pre>
-       * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-       * @return The poolId.
-       */
-      public java.lang.String getPoolId() {
-        java.lang.Object ref = poolId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          poolId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for poolId.
-       */
-      public com.google.protobuf.ByteString
-          getPoolIdBytes() {
-        java.lang.Object ref = poolId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          poolId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-       * @param value The poolId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPoolId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        poolId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPoolId() {
-        
-        poolId_ = getDefaultInstance().getPoolId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * PoolId is the GCP Workload Pool Identifier used to authenticate our JWT
-       * </pre>
-       *
-       * <code>string pool_id = 22 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for poolId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPoolIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        poolId_ = value;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.LazyStringList projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProjectIdsIsMutable() {
         if (!((bitField0_ & 0x00000008) != 0)) {
@@ -21353,6 +21155,390 @@ public final class DiscoveryConnectorsPlumbing {
   checkByteStringIsUtf8(value);
         ensureProjectIdsIsMutable();
         projectIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object workloadProjectNumber_ = "";
+      /**
+       * <pre>
+       * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+       * @return The workloadProjectNumber.
+       */
+      public java.lang.String getWorkloadProjectNumber() {
+        java.lang.Object ref = workloadProjectNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workloadProjectNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for workloadProjectNumber.
+       */
+      public com.google.protobuf.ByteString
+          getWorkloadProjectNumberBytes() {
+        java.lang.Object ref = workloadProjectNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workloadProjectNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+       * @param value The workloadProjectNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadProjectNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        workloadProjectNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkloadProjectNumber() {
+        
+        workloadProjectNumber_ = getDefaultInstance().getWorkloadProjectNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_number = 24 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for workloadProjectNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadProjectNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        workloadProjectNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object workloadProjectId_ = "";
+      /**
+       * <pre>
+       * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+       * @return The workloadProjectId.
+       */
+      public java.lang.String getWorkloadProjectId() {
+        java.lang.Object ref = workloadProjectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workloadProjectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for workloadProjectId.
+       */
+      public com.google.protobuf.ByteString
+          getWorkloadProjectIdBytes() {
+        java.lang.Object ref = workloadProjectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workloadProjectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+       * @param value The workloadProjectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        workloadProjectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkloadProjectId() {
+        
+        workloadProjectId_ = getDefaultInstance().getWorkloadProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadProjectId is the GCP Project ID where the Workload Pool is defined
+       * </pre>
+       *
+       * <code>string workload_project_id = 25 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for workloadProjectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        workloadProjectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object workloadProviderId_ = "";
+      /**
+       * <pre>
+       * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+       * @return The workloadProviderId.
+       */
+      public java.lang.String getWorkloadProviderId() {
+        java.lang.Object ref = workloadProviderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workloadProviderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for workloadProviderId.
+       */
+      public com.google.protobuf.ByteString
+          getWorkloadProviderIdBytes() {
+        java.lang.Object ref = workloadProviderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workloadProviderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The workloadProviderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadProviderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        workloadProviderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkloadProviderId() {
+        
+        workloadProviderId_ = getDefaultInstance().getWorkloadProviderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_provider_id = 26 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for workloadProviderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadProviderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        workloadProviderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object workloadPoolId_ = "";
+      /**
+       * <pre>
+       * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+       * @return The workloadPoolId.
+       */
+      public java.lang.String getWorkloadPoolId() {
+        java.lang.Object ref = workloadPoolId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workloadPoolId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for workloadPoolId.
+       */
+      public com.google.protobuf.ByteString
+          getWorkloadPoolIdBytes() {
+        java.lang.Object ref = workloadPoolId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workloadPoolId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+       * @param value The workloadPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadPoolId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        workloadPoolId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkloadPoolId() {
+        
+        workloadPoolId_ = getDefaultInstance().getWorkloadPoolId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT
+       * </pre>
+       *
+       * <code>string workload_pool_id = 27 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for workloadPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkloadPoolIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        workloadPoolId_ = value;
         onChanged();
         return this;
       }
@@ -21560,38 +21746,40 @@ public final class DiscoveryConnectorsPlumbing {
       "tion_ids\030\026 \003(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001:W\372\370" +
       "\263\007R\250\363\263\007\001\312\363\263\007:\302\364\263\007\033\n\022terraform-provider\022\005" +
       "azure\302\364\263\007\025\n\014json_gateway\022\005azure\322\363\263\007\001*\322\363\263" +
-      "\007\003cli\"\373\003\n\014GCPConnector\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
+      "\007\003cli\"\311\004\n\014GCPConnector\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
       "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n" +
       "\013description\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013scan_p" +
       "eriod\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010services\030\005 \003(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\014include_tags\030\006 \003(\0132\007.v1" +
       ".TagB\n\362\370\263\007\005\260\363\263\007\001\022)\n\014exclude_tags\030\007 \003(\0132\007" +
-      ".v1.TagB\n\362\370\263\007\005\260\363\263\007\001\022,\n\016project_number\030\024 " +
-      "\001(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001\022)\n\013provider_id" +
-      "\030\025 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001\022%\n\007pool_id\030" +
-      "\026 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001\022)\n\013project_i" +
-      "ds\030\027 \003(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001:S\372\370\263\007N\250\363\263" +
-      "\007\001\312\363\263\0076\302\364\263\007\031\n\022terraform-provider\022\003gcp\302\364\263" +
-      "\007\023\n\014json_gateway\022\003gcp\322\363\263\007\001*\322\363\263\007\003cli2\327\004\n\023" +
-      "DiscoveryConnectors\022i\n\006Create\022\032.v1.Conne" +
-      "ctorCreateRequest\032\033.v1.ConnectorCreateRe" +
-      "sponse\"&\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\023\252\363\263\007\016/v1/conn" +
-      "ectors\022d\n\003Get\022\027.v1.ConnectorGetRequest\032\030" +
-      ".v1.ConnectorGetResponse\"*\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007\030\252\363\263\007\023/v1/connectors/{id}\022m\n\006Update\022\032" +
-      ".v1.ConnectorUpdateRequest\032\033.v1.Connecto" +
-      "rUpdateResponse\"*\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\030\252\363\263\007\023" +
-      "/v1/connectors/{id}\022p\n\006Delete\022\032.v1.Conne" +
-      "ctorDeleteRequest\032\033.v1.ConnectorDeleteRe" +
-      "sponse\"-\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\030\252\363\263\007\023/v1/co" +
-      "nnectors/{id}\022b\n\004List\022\030.v1.ConnectorList" +
-      "Request\032\031.v1.ConnectorListResponse\"%\202\371\263\007" +
-      "\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/connectors\032*\312\371\263\007%" +
-      "\302\371\263\007\tConnector\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\004con-B\207\001" +
-      "\n\031com.strongdm.api.plumbingB\033DiscoveryCo" +
-      "nnectorsPlumbingZ5github.com/strongdm/st" +
-      "rongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007" +
-      "\001*\302\222\264\007\010\242\214\264\007\003clib\006proto3"
+      ".v1.TagB\n\362\370\263\007\005\260\363\263\007\001\022)\n\013project_ids\030\027 \003(\t" +
+      "B\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001\0225\n\027workload_proje" +
+      "ct_number\030\030 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001\0221\n" +
+      "\023workload_project_id\030\031 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363" +
+      "\263\007\005\210\364\263\007\001\0222\n\024workload_provider_id\030\032 \001(\tB\024" +
+      "\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001\022.\n\020workload_pool_id" +
+      "\030\033 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001:S\372\370\263\007N\250\363\263\007\001" +
+      "\312\363\263\0076\302\364\263\007\031\n\022terraform-provider\022\003gcp\302\364\263\007\023" +
+      "\n\014json_gateway\022\003gcp\322\363\263\007\001*\322\363\263\007\003cli2\327\004\n\023Di" +
+      "scoveryConnectors\022i\n\006Create\022\032.v1.Connect" +
+      "orCreateRequest\032\033.v1.ConnectorCreateResp" +
+      "onse\"&\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\023\252\363\263\007\016/v1/connec" +
+      "tors\022d\n\003Get\022\027.v1.ConnectorGetRequest\032\030.v" +
+      "1.ConnectorGetResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\030\252\363\263\007\023/v1/connectors/{id}\022m\n\006Update\022\032.v" +
+      "1.ConnectorUpdateRequest\032\033.v1.ConnectorU" +
+      "pdateResponse\"*\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\030\252\363\263\007\023/v" +
+      "1/connectors/{id}\022p\n\006Delete\022\032.v1.Connect" +
+      "orDeleteRequest\032\033.v1.ConnectorDeleteResp" +
+      "onse\"-\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\030\252\363\263\007\023/v1/conn" +
+      "ectors/{id}\022b\n\004List\022\030.v1.ConnectorListRe" +
+      "quest\032\031.v1.ConnectorListResponse\"%\202\371\263\007\010\242" +
+      "\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/connectors\032*\312\371\263\007%\302\371" +
+      "\263\007\tConnector\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\004con-B\207\001\n\031" +
+      "com.strongdm.api.plumbingB\033DiscoveryConn" +
+      "ectorsPlumbingZ5github.com/strongdm/stro" +
+      "ngdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*" +
+      "\302\222\264\007\010\242\214\264\007\003clib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21683,7 +21871,7 @@ public final class DiscoveryConnectorsPlumbing {
     internal_static_v1_GCPConnector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GCPConnector_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "ScanPeriod", "Services", "IncludeTags", "ExcludeTags", "ProjectNumber", "ProviderId", "PoolId", "ProjectIds", });
+        new java.lang.String[] { "Id", "Name", "Description", "ScanPeriod", "Services", "IncludeTags", "ExcludeTags", "ProjectIds", "WorkloadProjectNumber", "WorkloadProjectId", "WorkloadProviderId", "WorkloadPoolId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

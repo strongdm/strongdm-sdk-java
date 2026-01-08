@@ -82,16 +82,6 @@ public class GCPConnector implements Connector {
     this.name = in;
   }
 
-  private String poolId;
-  /** PoolId is the GCP Workload Pool Identifier used to authenticate our JWT */
-  public String getPoolId() {
-    return this.poolId;
-  }
-  /** PoolId is the GCP Workload Pool Identifier used to authenticate our JWT */
-  public void setPoolId(String in) {
-    this.poolId = in;
-  }
-
   private List<String> projectIds;
   /** ProjectIds is the list of GCP Projects the connector will scan */
   public List<String> getProjectIds() {
@@ -100,26 +90,6 @@ public class GCPConnector implements Connector {
   /** ProjectIds is the list of GCP Projects the connector will scan */
   public void setProjectIds(List<String> in) {
     this.projectIds = in;
-  }
-
-  private String projectNumber;
-  /** ProjectNumber is the GCP Project the Workload Pool is defined in */
-  public String getProjectNumber() {
-    return this.projectNumber;
-  }
-  /** ProjectNumber is the GCP Project the Workload Pool is defined in */
-  public void setProjectNumber(String in) {
-    this.projectNumber = in;
-  }
-
-  private String providerId;
-  /** ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT */
-  public String getProviderId() {
-    return this.providerId;
-  }
-  /** ProviderId is the GCP Workload Provider Identifier used to authenticate our JWT */
-  public void setProviderId(String in) {
-    this.providerId = in;
   }
 
   private String scanPeriod;
@@ -140,5 +110,45 @@ public class GCPConnector implements Connector {
   /** Services is a list of services this connector should scan. */
   public void setServices(Iterable<String> in) {
     this.services = in;
+  }
+
+  private String workloadPoolId;
+  /** WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT */
+  public String getWorkloadPoolId() {
+    return this.workloadPoolId;
+  }
+  /** WorkloadPoolId is the GCP Workload Pool Identifier used to authenticate our JWT */
+  public void setWorkloadPoolId(String in) {
+    this.workloadPoolId = in;
+  }
+
+  private String workloadProjectId;
+  /** WorkloadProjectId is the GCP Project ID where the Workload Pool is defined */
+  public String getWorkloadProjectId() {
+    return this.workloadProjectId;
+  }
+  /** WorkloadProjectId is the GCP Project ID where the Workload Pool is defined */
+  public void setWorkloadProjectId(String in) {
+    this.workloadProjectId = in;
+  }
+
+  private String workloadProjectNumber;
+  /** WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined */
+  public String getWorkloadProjectNumber() {
+    return this.workloadProjectNumber;
+  }
+  /** WorkloadProjectNumber is the GCP Project Number where the Workload Pool is defined */
+  public void setWorkloadProjectNumber(String in) {
+    this.workloadProjectNumber = in;
+  }
+
+  private String workloadProviderId;
+  /** WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT */
+  public String getWorkloadProviderId() {
+    return this.workloadProviderId;
+  }
+  /** WorkloadProviderId is the GCP Workload Provider Identifier used to authenticate our JWT */
+  public void setWorkloadProviderId(String in) {
+    this.workloadProviderId = in;
   }
 }
