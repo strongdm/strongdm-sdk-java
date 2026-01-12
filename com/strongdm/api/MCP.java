@@ -92,6 +92,26 @@ public class MCP implements Resource {
     this.name = in;
   }
 
+  private String oauthAuthEndpoint;
+  /** The OAuth 2.0 authorization endpoint URL. */
+  public String getOauthAuthEndpoint() {
+    return this.oauthAuthEndpoint;
+  }
+  /** The OAuth 2.0 authorization endpoint URL. */
+  public void setOauthAuthEndpoint(String in) {
+    this.oauthAuthEndpoint = in;
+  }
+
+  private String oauthTokenEndpoint;
+  /** The OAuth 2.0 token endpoint URL. */
+  public String getOauthTokenEndpoint() {
+    return this.oauthTokenEndpoint;
+  }
+  /** The OAuth 2.0 token endpoint URL. */
+  public void setOauthTokenEndpoint(String in) {
+    this.oauthTokenEndpoint = in;
+  }
+
   private String password;
   /** OAuth App Client Secret */
   public String getPassword() {
