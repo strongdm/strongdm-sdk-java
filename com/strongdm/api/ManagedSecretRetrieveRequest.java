@@ -28,14 +28,4 @@ public class ManagedSecretRetrieveRequest {
   public void setId(String in) {
     this.id = in;
   }
-
-  private byte[] publicKey;
-  /** Public key to encrypt a sensitive value with */
-  public byte[] getPublicKey() {
-    return this.publicKey;
-  }
-  /** Public key to encrypt a sensitive value with */
-  public void setPublicKey(byte[] in) {
-    this.publicKey = in;
-  }
 }

@@ -14888,7 +14888,6 @@ public class Plumbing {
     com.strongdm.api.ManagedSecretRetrieveRequest porcelain =
         new com.strongdm.api.ManagedSecretRetrieveRequest();
     porcelain.setId((plumbing.getId()));
-    porcelain.setPublicKey(Plumbing.convertBytesToPorcelain(plumbing.getPublicKey()));
     return porcelain;
   }
 
@@ -14900,9 +14899,6 @@ public class Plumbing {
     ManagedSecretRetrieveRequest.Builder builder = ManagedSecretRetrieveRequest.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getPublicKey() != null) {
-      builder.setPublicKey(Plumbing.convertBytesToPlumbing(porcelain.getPublicKey()));
     }
     return builder.build();
   }

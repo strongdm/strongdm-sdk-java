@@ -388,11 +388,10 @@ public class ManagedSecrets {
     return Plumbing.convertManagedSecretGetResponseToPorcelain(plumbingResponse);
   }
   /** Retrieve returns Managed Secret with sensitive data */
-  public ManagedSecretRetrieveResponse retrieve(String id, byte[] publicKey) throws RpcException {
+  public ManagedSecretRetrieveResponse retrieve(String id) throws RpcException {
     ManagedSecretsPlumbing.ManagedSecretRetrieveRequest.Builder builder =
         ManagedSecretsPlumbing.ManagedSecretRetrieveRequest.newBuilder();
     builder.setId((id));
-    builder.setPublicKey(Plumbing.convertBytesToPlumbing(publicKey));
     ManagedSecretsPlumbing.ManagedSecretRetrieveRequest req = builder.build();
     // Execute before interceptor hooks
     req = this.parent.getInterceptor().executeBefore("ManagedSecrets.Retrieve", req);
