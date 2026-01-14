@@ -154,16 +154,6 @@ public class MongoReplicaSet implements Resource {
     this.proxyClusterId = in;
   }
 
-  private String replicaSet;
-  /** The name of the mongo replicaset. */
-  public String getReplicaSet() {
-    return this.replicaSet;
-  }
-  /** The name of the mongo replicaset. */
-  public void setReplicaSet(String in) {
-    this.replicaSet = in;
-  }
-
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {

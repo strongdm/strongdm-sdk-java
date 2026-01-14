@@ -18,20 +18,10 @@
 package com.strongdm.api;
 
 /**
- * MongoLegacyReplicaset is currently unstable, and its API may change, or it may be removed,
- * without a major version bump.
+ * GoogleSpanner is currently unstable, and its API may change, or it may be removed, without a
+ * major version bump.
  */
-public class MongoLegacyReplicaset implements Resource {
-  private String authDatabase;
-  /** The authentication database to use. */
-  public String getAuthDatabase() {
-    return this.authDatabase;
-  }
-  /** The authentication database to use. */
-  public void setAuthDatabase(String in) {
-    this.authDatabase = in;
-  }
-
+public class GoogleSpanner implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -52,14 +42,20 @@ public class MongoLegacyReplicaset implements Resource {
     this.bindInterface = in;
   }
 
-  private boolean connectToReplica;
-  /** Set to connect to a replica instead of the primary node. */
-  public boolean getConnectToReplica() {
-    return this.connectToReplica;
+  private String database;
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
+  public String getDatabase() {
+    return this.database;
   }
-  /** Set to connect to a replica instead of the primary node. */
-  public void setConnectToReplica(boolean in) {
-    this.connectToReplica = in;
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
+  public void setDatabase(String in) {
+    this.database = in;
   }
 
   private String egressFilter;
@@ -72,6 +68,16 @@ public class MongoLegacyReplicaset implements Resource {
     this.egressFilter = in;
   }
 
+  private String endpoint;
+  /** The endpoint to dial e.g. spanner.googleapis.com */
+  public String getEndpoint() {
+    return this.endpoint;
+  }
+  /** The endpoint to dial e.g. spanner.googleapis.com */
+  public void setEndpoint(String in) {
+    this.endpoint = in;
+  }
+
   private boolean healthy;
   /** True if the datasource is reachable and the credentials are valid. */
   public boolean getHealthy() {
@@ -80,16 +86,6 @@ public class MongoLegacyReplicaset implements Resource {
   /** True if the datasource is reachable and the credentials are valid. */
   public void setHealthy(boolean in) {
     this.healthy = in;
-  }
-
-  private String hostname;
-  /** The host to dial to initiate a connection from the egress node to this resource. */
-  public String getHostname() {
-    return this.hostname;
-  }
-  /** The host to dial to initiate a connection from the egress node to this resource. */
-  public void setHostname(String in) {
-    this.hostname = in;
   }
 
   private String id;
@@ -102,6 +98,16 @@ public class MongoLegacyReplicaset implements Resource {
     this.id = in;
   }
 
+  private String instance;
+  /** The Spanner instance ID within the GCP project. */
+  public String getInstance() {
+    return this.instance;
+  }
+  /** The Spanner instance ID within the GCP project. */
+  public void setInstance(String in) {
+    this.instance = in;
+  }
+
   private String name;
   /** Unique human-readable name of the Resource. */
   public String getName() {
@@ -110,16 +116,6 @@ public class MongoLegacyReplicaset implements Resource {
   /** Unique human-readable name of the Resource. */
   public void setName(String in) {
     this.name = in;
-  }
-
-  private String password;
-  /** The password to authenticate with. */
-  public String getPassword() {
-    return this.password;
-  }
-  /** The password to authenticate with. */
-  public void setPassword(String in) {
-    this.password = in;
   }
 
   private int port;
@@ -148,6 +144,16 @@ public class MongoLegacyReplicaset implements Resource {
     this.portOverride = in;
   }
 
+  private String project;
+  /** The GCP project ID containing the Spanner database. */
+  public String getProject() {
+    return this.project;
+  }
+  /** The GCP project ID containing the Spanner database. */
+  public void setProject(String in) {
+    this.project = in;
+  }
+
   private String proxyClusterId;
   /** ID of the proxy cluster for this resource, if any. */
   public String getProxyClusterId() {
@@ -166,6 +172,24 @@ public class MongoLegacyReplicaset implements Resource {
   /** ID of the secret store containing credentials for this resource, if any. */
   public void setSecretStoreId(String in) {
     this.secretStoreId = in;
+  }
+
+  private String serviceAccountToImpersonate;
+  /**
+   * Optional service account email to impersonate. When set, the relay's Application Default
+   * Credentials will impersonate this service account to access Spanner. This allows role
+   * separation where the relay uses one service account but operates as another.
+   */
+  public String getServiceAccountToImpersonate() {
+    return this.serviceAccountToImpersonate;
+  }
+  /**
+   * Optional service account email to impersonate. When set, the relay's Application Default
+   * Credentials will impersonate this service account to access Spanner. This allows role
+   * separation where the relay uses one service account but operates as another.
+   */
+  public void setServiceAccountToImpersonate(String in) {
+    this.serviceAccountToImpersonate = in;
   }
 
   private String subdomain;
@@ -203,25 +227,5 @@ public class MongoLegacyReplicaset implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private boolean tlsRequired;
-  /** If set, TLS must be used to connect to this resource. */
-  public boolean getTlsRequired() {
-    return this.tlsRequired;
-  }
-  /** If set, TLS must be used to connect to this resource. */
-  public void setTlsRequired(boolean in) {
-    this.tlsRequired = in;
-  }
-
-  private String username;
-  /** The username to authenticate with. */
-  public String getUsername() {
-    return this.username;
-  }
-  /** The username to authenticate with. */
-  public void setUsername(String in) {
-    this.username = in;
   }
 }
