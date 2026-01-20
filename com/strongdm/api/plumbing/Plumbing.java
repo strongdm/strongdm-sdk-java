@@ -14011,6 +14011,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setOauthAuthEndpoint((plumbing.getOauthAuthEndpoint()));
+    porcelain.setOauthRegisterEndpoint((plumbing.getOauthRegisterEndpoint()));
     porcelain.setOauthTokenEndpoint((plumbing.getOauthTokenEndpoint()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
@@ -14046,6 +14047,9 @@ public class Plumbing {
     }
     if (porcelain.getOauthAuthEndpoint() != null) {
       builder.setOauthAuthEndpoint((porcelain.getOauthAuthEndpoint()));
+    }
+    if (porcelain.getOauthRegisterEndpoint() != null) {
+      builder.setOauthRegisterEndpoint((porcelain.getOauthRegisterEndpoint()));
     }
     if (porcelain.getOauthTokenEndpoint() != null) {
       builder.setOauthTokenEndpoint((porcelain.getOauthTokenEndpoint()));
