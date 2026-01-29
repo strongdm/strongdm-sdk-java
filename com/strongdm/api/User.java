@@ -51,6 +51,16 @@ public class User implements Account {
     this.email = in;
   }
 
+  private String employeeNumber;
+  /** Internal employee ID used to identify the user. */
+  public String getEmployeeNumber() {
+    return this.employeeNumber;
+  }
+  /** Internal employee ID used to identify the user. */
+  public void setEmployeeNumber(String in) {
+    this.employeeNumber = in;
+  }
+
   private String externalId;
   /**
    * External ID is an alternative unique ID this user is represented by within an external service.

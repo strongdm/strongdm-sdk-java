@@ -12910,6 +12910,26 @@ public final class AccountsPlumbing {
      * <code>.google.protobuf.Timestamp created_at = 16 [(.v1.field_options) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Internal employee ID used to identify the user.
+     * </pre>
+     *
+     * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+     * @return The employeeNumber.
+     */
+    java.lang.String getEmployeeNumber();
+    /**
+     * <pre>
+     * Internal employee ID used to identify the user.
+     * </pre>
+     *
+     * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for employeeNumber.
+     */
+    com.google.protobuf.ByteString
+        getEmployeeNumberBytes();
   }
   /**
    * <pre>
@@ -12941,6 +12961,7 @@ public final class AccountsPlumbing {
       sCIM_ = "";
       managerId_ = "";
       resolvedManagerId_ = "";
+      employeeNumber_ = "";
     }
 
     @java.lang.Override
@@ -13079,6 +13100,12 @@ public final class AccountsPlumbing {
                 createdAt_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              employeeNumber_ = s;
               break;
             }
             default: {
@@ -13779,6 +13806,52 @@ public final class AccountsPlumbing {
       return getCreatedAt();
     }
 
+    public static final int EMPLOYEE_NUMBER_FIELD_NUMBER = 17;
+    private volatile java.lang.Object employeeNumber_;
+    /**
+     * <pre>
+     * Internal employee ID used to identify the user.
+     * </pre>
+     *
+     * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+     * @return The employeeNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getEmployeeNumber() {
+      java.lang.Object ref = employeeNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        employeeNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Internal employee ID used to identify the user.
+     * </pre>
+     *
+     * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for employeeNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmployeeNumberBytes() {
+      java.lang.Object ref = employeeNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        employeeNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13841,6 +13914,9 @@ public final class AccountsPlumbing {
       if (createdAt_ != null) {
         output.writeMessage(16, getCreatedAt());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeNumber_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, employeeNumber_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13902,6 +13978,9 @@ public final class AccountsPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getCreatedAt());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeNumber_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, employeeNumber_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13955,6 +14034,8 @@ public final class AccountsPlumbing {
         if (!getCreatedAt()
             .equals(other.getCreatedAt())) return false;
       }
+      if (!getEmployeeNumber()
+          .equals(other.getEmployeeNumber())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14004,6 +14085,8 @@ public final class AccountsPlumbing {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
       }
+      hash = (37 * hash) + EMPLOYEE_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getEmployeeNumber().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14182,6 +14265,8 @@ public final class AccountsPlumbing {
           createdAt_ = null;
           createdAtBuilder_ = null;
         }
+        employeeNumber_ = "";
+
         return this;
       }
 
@@ -14232,6 +14317,7 @@ public final class AccountsPlumbing {
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
+        result.employeeNumber_ = employeeNumber_;
         onBuilt();
         return result;
       }
@@ -14339,6 +14425,10 @@ public final class AccountsPlumbing {
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
+        }
+        if (!other.getEmployeeNumber().isEmpty()) {
+          employeeNumber_ = other.employeeNumber_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15930,6 +16020,102 @@ public final class AccountsPlumbing {
           createdAt_ = null;
         }
         return createdAtBuilder_;
+      }
+
+      private java.lang.Object employeeNumber_ = "";
+      /**
+       * <pre>
+       * Internal employee ID used to identify the user.
+       * </pre>
+       *
+       * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+       * @return The employeeNumber.
+       */
+      public java.lang.String getEmployeeNumber() {
+        java.lang.Object ref = employeeNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          employeeNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Internal employee ID used to identify the user.
+       * </pre>
+       *
+       * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for employeeNumber.
+       */
+      public com.google.protobuf.ByteString
+          getEmployeeNumberBytes() {
+        java.lang.Object ref = employeeNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          employeeNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Internal employee ID used to identify the user.
+       * </pre>
+       *
+       * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+       * @param value The employeeNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        employeeNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal employee ID used to identify the user.
+       * </pre>
+       *
+       * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmployeeNumber() {
+        
+        employeeNumber_ = getDefaultInstance().getEmployeeNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal employee ID used to identify the user.
+       * </pre>
+       *
+       * <code>string employee_number = 17 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for employeeNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        employeeNumber_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -20216,7 +20402,7 @@ public final class AccountsPlumbing {
       "\263\007M\242\363\263\007 tf_examples/account_resource.txt" +
       "\252\363\263\007#tf_examples/account_data_source.txt" +
       "B@\n\007account\0225\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263" +
-      "\007\004tags\252\370\263\007\017\252\370\263\007\ncreated_at\"\331\010\n\004User\022\026\n\002i" +
+      "\007\004tags\252\370\263\007\017\252\370\263\007\ncreated_at\"\204\t\n\004User\022\026\n\002i" +
       "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005email\030\002 \001(\tB\017\362\370\263\007" +
       "\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst_name\030\003 \001(\tB\017\362\370\263\007\n\260\363" +
       "\263\007\001\300\363\263\007\001\022\"\n\tlast_name\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
@@ -20244,41 +20430,42 @@ public final class AccountsPlumbing {
       "\001\262\364\263\007\001*\0222\n\023resolved_manager_id\030\017 \001(\tB\025\362\370" +
       "\263\007\020\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\022E\n\ncreated_at\030\020 \001(\0132" +
       "\032.google.protobuf.TimestampB\025\362\370\263\007\020\260\363\263\007\001\230" +
-      "\364\263\007\001\262\364\263\007\001*:\n\372\370\263\007\005\250\363\263\007\001\"\320\001\n\007Service\022\026\n\002id" +
-      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\n" +
-      "created_at\030\005 \001(\0132\032.google.protobuf.Times" +
-      "tampB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\302\003\n\005To" +
-      "ken\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(" +
-      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.protobuf" +
-      ".TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 \001(\013" +
-      "2\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022 \n\014account_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013pe" +
-      "rmissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030" +
-      "\t \001(\0132\031.google.protobuf.DurationB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022?\n\ncreated_at\030\n \001(\0132\032.google.protob" +
-      "uf.TimestampB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\017\372\370\263\007\n\250\363\263\007" +
-      "\001\330\363\263\007\0012\272\004\n\010Accounts\022c\n\006Create\022\030.v1.Accou" +
-      "ntCreateRequest\032\031.v1.AccountCreateRespon" +
-      "se\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/accounts" +
-      "\022^\n\003Get\022\025.v1.AccountGetRequest\032\026.v1.Acco" +
-      "untGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/" +
-      "v1/accounts/{id}\022g\n\006Update\022\030.v1.AccountU" +
-      "pdateRequest\032\031.v1.AccountUpdateResponse\"" +
-      "(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id" +
-      "}\022j\n\006Delete\022\030.v1.AccountDeleteRequest\032\031." +
-      "v1.AccountDeleteResponse\"+\202\371\263\007\013\242\363\263\007\006dele" +
-      "te\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004List\022\026." +
-      "v1.AccountListRequest\032\027.v1.AccountListRe" +
-      "sponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/accou" +
-      "nts\0326\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263\007\006\312" +
-      "\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd\n\031com.strongdm.api." +
-      "plumbingB\020AccountsPlumbingZ5github.com/s" +
-      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
-      "1b\006proto3"
+      "\364\263\007\001\262\364\263\007\001*\022)\n\017employee_number\030\021 \001(\tB\020\362\370\263" +
+      "\007\013\260\363\263\007\001\262\364\263\007\001*:\n\372\370\263\007\005\250\363\263\007\001\"\320\001\n\007Service\022\026\n" +
+      "\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263" +
+      "\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "?\n\ncreated_at\030\005 \001(\0132\032.google.protobuf.Ti" +
+      "mestampB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\302\003\n" +
+      "\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\0227\n\007rekeyed\030\005 \001(\0132\032.google.proto" +
+      "buf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0228\n\010deadline\030\006 " +
+      "\001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022 \n\014account_type\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n" +
+      "\013permissions\030\010 \003(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010durati" +
+      "on\030\t \001(\0132\031.google.protobuf.DurationB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022?\n\ncreated_at\030\n \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\017\372\370\263\007\n\250" +
+      "\363\263\007\001\330\363\263\007\0012\272\004\n\010Accounts\022c\n\006Create\022\030.v1.Ac" +
+      "countCreateRequest\032\031.v1.AccountCreateRes" +
+      "ponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/accou" +
+      "nts\022^\n\003Get\022\025.v1.AccountGetRequest\032\026.v1.A" +
+      "ccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263" +
+      "\007\021/v1/accounts/{id}\022g\n\006Update\022\030.v1.Accou" +
+      "ntUpdateRequest\032\031.v1.AccountUpdateRespon" +
+      "se\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/accounts/" +
+      "{id}\022j\n\006Delete\022\030.v1.AccountDeleteRequest" +
+      "\032\031.v1.AccountDeleteResponse\"+\202\371\263\007\013\242\363\263\007\006d" +
+      "elete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004List" +
+      "\022\026.v1.AccountListRequest\032\027.v1.AccountLis" +
+      "tResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/ac" +
+      "counts\0326\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-\312\371\263" +
+      "\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBd\n\031com.strongdm.a" +
+      "pi.plumbingB\020AccountsPlumbingZ5github.co" +
+      "m/strongdm/strongdm-sdk-go/v3/internal/v" +
+      "1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20360,7 +20547,7 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", "SCIM", "ManagerId", "ResolvedManagerId", "CreatedAt", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", "SuspendedRO", "PermissionLevelRW", "Password", "SCIM", "ManagerId", "ResolvedManagerId", "CreatedAt", "EmployeeNumber", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new

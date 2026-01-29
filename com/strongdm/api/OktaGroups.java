@@ -42,6 +42,16 @@ public class OktaGroups implements Resource {
     this.bindInterface = in;
   }
 
+  private boolean discoveryEnabled;
+  /** If true, configures discovery of the Okta org to be run from a node. */
+  public boolean getDiscoveryEnabled() {
+    return this.discoveryEnabled;
+  }
+  /** If true, configures discovery of the Okta org to be run from a node. */
+  public void setDiscoveryEnabled(boolean in) {
+    this.discoveryEnabled = in;
+  }
+
   private String domain;
   /** Represents the Okta Org Client URL */
   public String getDomain() {
@@ -60,6 +70,16 @@ public class OktaGroups implements Resource {
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public void setEgressFilter(String in) {
     this.egressFilter = in;
+  }
+
+  private String groupNames;
+  /** comma separated list of group names to filter by. Supports wildcards (*) */
+  public String getGroupNames() {
+    return this.groupNames;
+  }
+  /** comma separated list of group names to filter by. Supports wildcards (*) */
+  public void setGroupNames(String in) {
+    this.groupNames = in;
   }
 
   private boolean healthy;

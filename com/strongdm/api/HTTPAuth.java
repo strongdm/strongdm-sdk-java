@@ -48,6 +48,16 @@ public class HTTPAuth implements Resource {
     this.bindInterface = in;
   }
 
+  private CustomHeaders customHeaders;
+  /** Additional HTTP headers to include in requests. */
+  public CustomHeaders getCustomHeaders() {
+    return this.customHeaders;
+  }
+  /** Additional HTTP headers to include in requests. */
+  public void setCustomHeaders(CustomHeaders in) {
+    this.customHeaders = in;
+  }
+
   private String defaultPath;
   /** Automatically redirect to this path upon connecting. */
   public String getDefaultPath() {

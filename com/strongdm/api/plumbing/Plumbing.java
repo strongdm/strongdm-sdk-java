@@ -52,6 +52,7 @@ import com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.*;
 import com.strongdm.api.plumbing.ControlPanelPlumbing.*;
+import com.strongdm.api.plumbing.CustomHeadersPlumbing.*;
 import com.strongdm.api.plumbing.DiscoveryConnectorsPlumbing.*;
 import com.strongdm.api.plumbing.DriversPlumbing.*;
 import com.strongdm.api.plumbing.GroupsHistoryPlumbing.*;
@@ -8454,6 +8455,90 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.CustomHeader convertCustomHeaderToPorcelain(
+      CustomHeader plumbing) {
+    com.strongdm.api.CustomHeader porcelain = new com.strongdm.api.CustomHeader();
+    porcelain.setName((plumbing.getName()));
+    porcelain.setSecret((plumbing.getSecret()));
+    porcelain.setValue((plumbing.getValue()));
+    return porcelain;
+  }
+
+  public static CustomHeader convertCustomHeaderToPlumbing(
+      com.strongdm.api.CustomHeader porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    CustomHeader.Builder builder = CustomHeader.newBuilder();
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setSecret(porcelain.getSecret());
+    if (porcelain.getValue() != null) {
+      builder.setValue((porcelain.getValue()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.CustomHeader> convertRepeatedCustomHeaderToPorcelain(
+      Collection<CustomHeader> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.CustomHeader>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertCustomHeaderToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<CustomHeader> convertRepeatedCustomHeaderToPlumbing(
+      Collection<com.strongdm.api.CustomHeader> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<CustomHeader>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertCustomHeaderToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.CustomHeaders convertCustomHeadersToPorcelain(
+      CustomHeaders plumbing) {
+    com.strongdm.api.CustomHeaders porcelain = new com.strongdm.api.CustomHeaders();
+    porcelain.setCustomHeaders(
+        Plumbing.convertRepeatedCustomHeaderToPorcelain(plumbing.getCustomHeadersList()));
+    return porcelain;
+  }
+
+  public static CustomHeaders convertCustomHeadersToPlumbing(
+      com.strongdm.api.CustomHeaders porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    CustomHeaders.Builder builder = CustomHeaders.newBuilder();
+    builder.addAllCustomHeaders(
+        Plumbing.convertRepeatedCustomHeaderToPlumbing(porcelain.getCustomHeaders()));
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.CustomHeaders> convertRepeatedCustomHeadersToPorcelain(
+      Collection<CustomHeaders> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.CustomHeaders>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertCustomHeadersToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<CustomHeaders> convertRepeatedCustomHeadersToPlumbing(
+      Collection<com.strongdm.api.CustomHeaders> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<CustomHeaders>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertCustomHeadersToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.CyberarkConjurStore convertCyberarkConjurStoreToPorcelain(
       CyberarkConjurStore plumbing) {
     com.strongdm.api.CyberarkConjurStore porcelain = new com.strongdm.api.CyberarkConjurStore();
@@ -11992,6 +12077,8 @@ public class Plumbing {
     com.strongdm.api.HTTPAuth porcelain = new com.strongdm.api.HTTPAuth();
     porcelain.setAuthHeader((plumbing.getAuthHeader()));
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setCustomHeaders(
+        Plumbing.convertCustomHeadersToPorcelain(plumbing.getCustomHeaders()));
     porcelain.setDefaultPath((plumbing.getDefaultPath()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
@@ -12019,6 +12106,10 @@ public class Plumbing {
     }
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getCustomHeaders() != null) {
+      builder.setCustomHeaders(
+          Plumbing.convertCustomHeadersToPlumbing(porcelain.getCustomHeaders()));
     }
     if (porcelain.getDefaultPath() != null) {
       builder.setDefaultPath((porcelain.getDefaultPath()));
@@ -12085,6 +12176,8 @@ public class Plumbing {
       HTTPBasicAuth plumbing) {
     com.strongdm.api.HTTPBasicAuth porcelain = new com.strongdm.api.HTTPBasicAuth();
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setCustomHeaders(
+        Plumbing.convertCustomHeadersToPorcelain(plumbing.getCustomHeaders()));
     porcelain.setDefaultPath((plumbing.getDefaultPath()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
@@ -12112,6 +12205,10 @@ public class Plumbing {
     HTTPBasicAuth.Builder builder = HTTPBasicAuth.newBuilder();
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getCustomHeaders() != null) {
+      builder.setCustomHeaders(
+          Plumbing.convertCustomHeadersToPlumbing(porcelain.getCustomHeaders()));
     }
     if (porcelain.getDefaultPath() != null) {
       builder.setDefaultPath((porcelain.getDefaultPath()));
@@ -12183,6 +12280,8 @@ public class Plumbing {
   public static com.strongdm.api.HTTPNoAuth convertHTTPNoAuthToPorcelain(HTTPNoAuth plumbing) {
     com.strongdm.api.HTTPNoAuth porcelain = new com.strongdm.api.HTTPNoAuth();
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setCustomHeaders(
+        Plumbing.convertCustomHeadersToPorcelain(plumbing.getCustomHeaders()));
     porcelain.setDefaultPath((plumbing.getDefaultPath()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
@@ -12207,6 +12306,10 @@ public class Plumbing {
     HTTPNoAuth.Builder builder = HTTPNoAuth.newBuilder();
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getCustomHeaders() != null) {
+      builder.setCustomHeaders(
+          Plumbing.convertCustomHeadersToPlumbing(porcelain.getCustomHeaders()));
     }
     if (porcelain.getDefaultPath() != null) {
       builder.setDefaultPath((porcelain.getDefaultPath()));
@@ -16849,8 +16952,10 @@ public class Plumbing {
   public static com.strongdm.api.OktaGroups convertOktaGroupsToPorcelain(OktaGroups plumbing) {
     com.strongdm.api.OktaGroups porcelain = new com.strongdm.api.OktaGroups();
     porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
     porcelain.setDomain((plumbing.getDomain()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setGroupNames((plumbing.getGroupNames()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
@@ -16871,11 +16976,15 @@ public class Plumbing {
     if (porcelain.getBindInterface() != null) {
       builder.setBindInterface((porcelain.getBindInterface()));
     }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
     if (porcelain.getDomain() != null) {
       builder.setDomain((porcelain.getDomain()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getGroupNames() != null) {
+      builder.setGroupNames((porcelain.getGroupNames()));
     }
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getId() != null) {
@@ -25519,6 +25628,7 @@ public class Plumbing {
     porcelain.setSCIM((plumbing.getSCIM()));
     porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
     porcelain.setEmail((plumbing.getEmail()));
+    porcelain.setEmployeeNumber((plumbing.getEmployeeNumber()));
     porcelain.setExternalId((plumbing.getExternalId()));
     porcelain.setFirstName((plumbing.getFirstName()));
     porcelain.setId((plumbing.getId()));
@@ -25546,6 +25656,9 @@ public class Plumbing {
     }
     if (porcelain.getEmail() != null) {
       builder.setEmail((porcelain.getEmail()));
+    }
+    if (porcelain.getEmployeeNumber() != null) {
+      builder.setEmployeeNumber((porcelain.getEmployeeNumber()));
     }
     if (porcelain.getExternalId() != null) {
       builder.setExternalId((porcelain.getExternalId()));
