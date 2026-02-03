@@ -18,10 +18,10 @@
 package com.strongdm.api;
 
 /**
- * MCP is currently unstable, and its API may change, or it may be removed, without a major version
- * bump.
+ * MCPDCR is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
  */
-public class MCP implements Resource {
+public class MCPDCR implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -102,6 +102,16 @@ public class MCP implements Resource {
     this.oauthAuthEndpoint = in;
   }
 
+  private String oauthRegisterEndpoint;
+  /** The OAuth 2.0 dynamic client registration endpoint URL. */
+  public String getOauthRegisterEndpoint() {
+    return this.oauthRegisterEndpoint;
+  }
+  /** The OAuth 2.0 dynamic client registration endpoint URL. */
+  public void setOauthRegisterEndpoint(String in) {
+    this.oauthRegisterEndpoint = in;
+  }
+
   private String oauthTokenEndpoint;
   /** The OAuth 2.0 token endpoint URL. */
   public String getOauthTokenEndpoint() {
@@ -110,16 +120,6 @@ public class MCP implements Resource {
   /** The OAuth 2.0 token endpoint URL. */
   public void setOauthTokenEndpoint(String in) {
     this.oauthTokenEndpoint = in;
-  }
-
-  private String password;
-  /** OAuth App Client Secret */
-  public String getPassword() {
-    return this.password;
-  }
-  /** OAuth App Client Secret */
-  public void setPassword(String in) {
-    this.password = in;
   }
 
   private int portOverride;
@@ -193,15 +193,5 @@ public class MCP implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private String username;
-  /** OAuth App Client ID */
-  public String getUsername() {
-    return this.username;
-  }
-  /** OAuth App Client ID */
-  public void setUsername(String in) {
-    this.username = in;
   }
 }
