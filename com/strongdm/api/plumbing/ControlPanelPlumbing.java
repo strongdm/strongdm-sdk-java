@@ -5638,6 +5638,2408 @@ public final class ControlPanelPlumbing {
 
   }
 
+  public interface ControlPanelGetOrgURLInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ControlPanelGetOrgURLInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.GetRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder();
+  }
+  /**
+   * <pre>
+   * ControlPanelGetOrgURLInfoRequest represents a request for organization
+   * URL configuration.
+   * </pre>
+   *
+   * Protobuf type {@code v1.ControlPanelGetOrgURLInfoRequest}
+   */
+  public static final class ControlPanelGetOrgURLInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ControlPanelGetOrgURLInfoRequest)
+      ControlPanelGetOrgURLInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ControlPanelGetOrgURLInfoRequest.newBuilder() to construct.
+    private ControlPanelGetOrgURLInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ControlPanelGetOrgURLInfoRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ControlPanelGetOrgURLInfoRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ControlPanelGetOrgURLInfoRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.GetRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.class, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.GetRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest other = (com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ControlPanelGetOrgURLInfoRequest represents a request for organization
+     * URL configuration.
+     * </pre>
+     *
+     * Protobuf type {@code v1.ControlPanelGetOrgURLInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ControlPanelGetOrgURLInfoRequest)
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.class, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest build() {
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest buildPartial() {
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest result = new com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest) {
+          return mergeFrom((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest other) {
+        if (other == com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.GetRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetRequestMetadata, com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.GetRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.GetRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.GetRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetRequestMetadata, com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.GetRequestMetadata, com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.plumbing.Spec.GetRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ControlPanelGetOrgURLInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ControlPanelGetOrgURLInfoRequest)
+    private static final com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest();
+    }
+
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ControlPanelGetOrgURLInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ControlPanelGetOrgURLInfoRequest>() {
+      @java.lang.Override
+      public ControlPanelGetOrgURLInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ControlPanelGetOrgURLInfoRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ControlPanelGetOrgURLInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ControlPanelGetOrgURLInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ControlPanelGetOrgURLInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ControlPanelGetOrgURLInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.plumbing.Spec.GetResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The base URL of the organization, e.g. https://app.strongdm.com
+     * </pre>
+     *
+     * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+     * @return The baseUrl.
+     */
+    java.lang.String getBaseUrl();
+    /**
+     * <pre>
+     * The base URL of the organization, e.g. https://app.strongdm.com
+     * </pre>
+     *
+     * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for baseUrl.
+     */
+    com.google.protobuf.ByteString
+        getBaseUrlBytes();
+
+    /**
+     * <pre>
+     * The organization's website subdomain, used to construct URLs.
+     * </pre>
+     *
+     * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+     * @return The websitesSubdomain.
+     */
+    java.lang.String getWebsitesSubdomain();
+    /**
+     * <pre>
+     * The organization's website subdomain, used to construct URLs.
+     * </pre>
+     *
+     * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for websitesSubdomain.
+     */
+    com.google.protobuf.ByteString
+        getWebsitesSubdomainBytes();
+
+    /**
+     * <pre>
+     * The OIDC issuer URL for the organization, used for OIDC federation
+     * with cloud providers
+     * </pre>
+     *
+     * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+     * @return The oidcIssuerUrl.
+     */
+    java.lang.String getOidcIssuerUrl();
+    /**
+     * <pre>
+     * The OIDC issuer URL for the organization, used for OIDC federation
+     * with cloud providers
+     * </pre>
+     *
+     * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for oidcIssuerUrl.
+     */
+    com.google.protobuf.ByteString
+        getOidcIssuerUrlBytes();
+
+    /**
+     * <pre>
+     * The SAML metadata URL for the organization, used for SAML SSO configuration.
+     * </pre>
+     *
+     * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+     * @return The samlMetadataUrl.
+     */
+    java.lang.String getSamlMetadataUrl();
+    /**
+     * <pre>
+     * The SAML metadata URL for the organization, used for SAML SSO configuration.
+     * </pre>
+     *
+     * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for samlMetadataUrl.
+     */
+    com.google.protobuf.ByteString
+        getSamlMetadataUrlBytes();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * ControlPanelGetOrgURLInfoResponse represents the response containing
+   * organization URL configuration.
+   * </pre>
+   *
+   * Protobuf type {@code v1.ControlPanelGetOrgURLInfoResponse}
+   */
+  public static final class ControlPanelGetOrgURLInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ControlPanelGetOrgURLInfoResponse)
+      ControlPanelGetOrgURLInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ControlPanelGetOrgURLInfoResponse.newBuilder() to construct.
+    private ControlPanelGetOrgURLInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ControlPanelGetOrgURLInfoResponse() {
+      baseUrl_ = "";
+      websitesSubdomain_ = "";
+      oidcIssuerUrl_ = "";
+      samlMetadataUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ControlPanelGetOrgURLInfoResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ControlPanelGetOrgURLInfoResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.plumbing.Spec.GetResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              baseUrl_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              websitesSubdomain_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              oidcIssuerUrl_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              samlMetadataUrl_ = s;
+              break;
+            }
+            case 50: {
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.class, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.plumbing.Spec.GetResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int BASE_URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object baseUrl_;
+    /**
+     * <pre>
+     * The base URL of the organization, e.g. https://app.strongdm.com
+     * </pre>
+     *
+     * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+     * @return The baseUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseUrl() {
+      java.lang.Object ref = baseUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The base URL of the organization, e.g. https://app.strongdm.com
+     * </pre>
+     *
+     * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for baseUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseUrlBytes() {
+      java.lang.Object ref = baseUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBSITES_SUBDOMAIN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object websitesSubdomain_;
+    /**
+     * <pre>
+     * The organization's website subdomain, used to construct URLs.
+     * </pre>
+     *
+     * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+     * @return The websitesSubdomain.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsitesSubdomain() {
+      java.lang.Object ref = websitesSubdomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        websitesSubdomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The organization's website subdomain, used to construct URLs.
+     * </pre>
+     *
+     * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for websitesSubdomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsitesSubdomainBytes() {
+      java.lang.Object ref = websitesSubdomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        websitesSubdomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OIDC_ISSUER_URL_FIELD_NUMBER = 4;
+    private volatile java.lang.Object oidcIssuerUrl_;
+    /**
+     * <pre>
+     * The OIDC issuer URL for the organization, used for OIDC federation
+     * with cloud providers
+     * </pre>
+     *
+     * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+     * @return The oidcIssuerUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getOidcIssuerUrl() {
+      java.lang.Object ref = oidcIssuerUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oidcIssuerUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The OIDC issuer URL for the organization, used for OIDC federation
+     * with cloud providers
+     * </pre>
+     *
+     * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for oidcIssuerUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOidcIssuerUrlBytes() {
+      java.lang.Object ref = oidcIssuerUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oidcIssuerUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SAML_METADATA_URL_FIELD_NUMBER = 5;
+    private volatile java.lang.Object samlMetadataUrl_;
+    /**
+     * <pre>
+     * The SAML metadata URL for the organization, used for SAML SSO configuration.
+     * </pre>
+     *
+     * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+     * @return The samlMetadataUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getSamlMetadataUrl() {
+      java.lang.Object ref = samlMetadataUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        samlMetadataUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The SAML metadata URL for the organization, used for SAML SSO configuration.
+     * </pre>
+     *
+     * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for samlMetadataUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSamlMetadataUrlBytes() {
+      java.lang.Object ref = samlMetadataUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        samlMetadataUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 6;
+    private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, baseUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(websitesSubdomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, websitesSubdomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oidcIssuerUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oidcIssuerUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(samlMetadataUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, samlMetadataUrl_);
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(6, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, baseUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(websitesSubdomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, websitesSubdomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oidcIssuerUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oidcIssuerUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(samlMetadataUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, samlMetadataUrl_);
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse other = (com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getBaseUrl()
+          .equals(other.getBaseUrl())) return false;
+      if (!getWebsitesSubdomain()
+          .equals(other.getWebsitesSubdomain())) return false;
+      if (!getOidcIssuerUrl()
+          .equals(other.getOidcIssuerUrl())) return false;
+      if (!getSamlMetadataUrl()
+          .equals(other.getSamlMetadataUrl())) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + BASE_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseUrl().hashCode();
+      hash = (37 * hash) + WEBSITES_SUBDOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getWebsitesSubdomain().hashCode();
+      hash = (37 * hash) + OIDC_ISSUER_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getOidcIssuerUrl().hashCode();
+      hash = (37 * hash) + SAML_METADATA_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getSamlMetadataUrl().hashCode();
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ControlPanelGetOrgURLInfoResponse represents the response containing
+     * organization URL configuration.
+     * </pre>
+     *
+     * Protobuf type {@code v1.ControlPanelGetOrgURLInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ControlPanelGetOrgURLInfoResponse)
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.class, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        baseUrl_ = "";
+
+        websitesSubdomain_ = "";
+
+        oidcIssuerUrl_ = "";
+
+        samlMetadataUrl_ = "";
+
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.internal_static_v1_ControlPanelGetOrgURLInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse build() {
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse buildPartial() {
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse result = new com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.baseUrl_ = baseUrl_;
+        result.websitesSubdomain_ = websitesSubdomain_;
+        result.oidcIssuerUrl_ = oidcIssuerUrl_;
+        result.samlMetadataUrl_ = samlMetadataUrl_;
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse) {
+          return mergeFrom((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse other) {
+        if (other == com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getBaseUrl().isEmpty()) {
+          baseUrl_ = other.baseUrl_;
+          onChanged();
+        }
+        if (!other.getWebsitesSubdomain().isEmpty()) {
+          websitesSubdomain_ = other.websitesSubdomain_;
+          onChanged();
+        }
+        if (!other.getOidcIssuerUrl().isEmpty()) {
+          oidcIssuerUrl_ = other.oidcIssuerUrl_;
+          onChanged();
+        }
+        if (!other.getSamlMetadataUrl().isEmpty()) {
+          samlMetadataUrl_ = other.samlMetadataUrl_;
+          onChanged();
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.GetResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetResponseMetadata, com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.plumbing.Spec.GetResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.plumbing.Spec.GetResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.plumbing.Spec.GetResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.GetResponseMetadata, com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.GetResponseMetadata, com.strongdm.api.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.plumbing.Spec.GetResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object baseUrl_ = "";
+      /**
+       * <pre>
+       * The base URL of the organization, e.g. https://app.strongdm.com
+       * </pre>
+       *
+       * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+       * @return The baseUrl.
+       */
+      public java.lang.String getBaseUrl() {
+        java.lang.Object ref = baseUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The base URL of the organization, e.g. https://app.strongdm.com
+       * </pre>
+       *
+       * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for baseUrl.
+       */
+      public com.google.protobuf.ByteString
+          getBaseUrlBytes() {
+        java.lang.Object ref = baseUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The base URL of the organization, e.g. https://app.strongdm.com
+       * </pre>
+       *
+       * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The baseUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        baseUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The base URL of the organization, e.g. https://app.strongdm.com
+       * </pre>
+       *
+       * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseUrl() {
+        
+        baseUrl_ = getDefaultInstance().getBaseUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The base URL of the organization, e.g. https://app.strongdm.com
+       * </pre>
+       *
+       * <code>string base_url = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for baseUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        baseUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object websitesSubdomain_ = "";
+      /**
+       * <pre>
+       * The organization's website subdomain, used to construct URLs.
+       * </pre>
+       *
+       * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+       * @return The websitesSubdomain.
+       */
+      public java.lang.String getWebsitesSubdomain() {
+        java.lang.Object ref = websitesSubdomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          websitesSubdomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The organization's website subdomain, used to construct URLs.
+       * </pre>
+       *
+       * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for websitesSubdomain.
+       */
+      public com.google.protobuf.ByteString
+          getWebsitesSubdomainBytes() {
+        java.lang.Object ref = websitesSubdomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          websitesSubdomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The organization's website subdomain, used to construct URLs.
+       * </pre>
+       *
+       * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The websitesSubdomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsitesSubdomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        websitesSubdomain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The organization's website subdomain, used to construct URLs.
+       * </pre>
+       *
+       * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsitesSubdomain() {
+        
+        websitesSubdomain_ = getDefaultInstance().getWebsitesSubdomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The organization's website subdomain, used to construct URLs.
+       * </pre>
+       *
+       * <code>string websites_subdomain = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for websitesSubdomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsitesSubdomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        websitesSubdomain_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object oidcIssuerUrl_ = "";
+      /**
+       * <pre>
+       * The OIDC issuer URL for the organization, used for OIDC federation
+       * with cloud providers
+       * </pre>
+       *
+       * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+       * @return The oidcIssuerUrl.
+       */
+      public java.lang.String getOidcIssuerUrl() {
+        java.lang.Object ref = oidcIssuerUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oidcIssuerUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The OIDC issuer URL for the organization, used for OIDC federation
+       * with cloud providers
+       * </pre>
+       *
+       * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for oidcIssuerUrl.
+       */
+      public com.google.protobuf.ByteString
+          getOidcIssuerUrlBytes() {
+        java.lang.Object ref = oidcIssuerUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oidcIssuerUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The OIDC issuer URL for the organization, used for OIDC federation
+       * with cloud providers
+       * </pre>
+       *
+       * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The oidcIssuerUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOidcIssuerUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        oidcIssuerUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The OIDC issuer URL for the organization, used for OIDC federation
+       * with cloud providers
+       * </pre>
+       *
+       * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOidcIssuerUrl() {
+        
+        oidcIssuerUrl_ = getDefaultInstance().getOidcIssuerUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The OIDC issuer URL for the organization, used for OIDC federation
+       * with cloud providers
+       * </pre>
+       *
+       * <code>string oidc_issuer_url = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for oidcIssuerUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOidcIssuerUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        oidcIssuerUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object samlMetadataUrl_ = "";
+      /**
+       * <pre>
+       * The SAML metadata URL for the organization, used for SAML SSO configuration.
+       * </pre>
+       *
+       * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+       * @return The samlMetadataUrl.
+       */
+      public java.lang.String getSamlMetadataUrl() {
+        java.lang.Object ref = samlMetadataUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          samlMetadataUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The SAML metadata URL for the organization, used for SAML SSO configuration.
+       * </pre>
+       *
+       * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for samlMetadataUrl.
+       */
+      public com.google.protobuf.ByteString
+          getSamlMetadataUrlBytes() {
+        java.lang.Object ref = samlMetadataUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          samlMetadataUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The SAML metadata URL for the organization, used for SAML SSO configuration.
+       * </pre>
+       *
+       * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The samlMetadataUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSamlMetadataUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        samlMetadataUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The SAML metadata URL for the organization, used for SAML SSO configuration.
+       * </pre>
+       *
+       * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSamlMetadataUrl() {
+        
+        samlMetadataUrl_ = getDefaultInstance().getSamlMetadataUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The SAML metadata URL for the organization, used for SAML SSO configuration.
+       * </pre>
+       *
+       * <code>string saml_metadata_url = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for samlMetadataUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSamlMetadataUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        samlMetadataUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 6 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.Spec.RateLimitMetadata, com.strongdm.api.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ControlPanelGetOrgURLInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ControlPanelGetOrgURLInfoResponse)
+    private static final com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse();
+    }
+
+    public static com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ControlPanelGetOrgURLInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ControlPanelGetOrgURLInfoResponse>() {
+      @java.lang.Override
+      public ControlPanelGetOrgURLInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ControlPanelGetOrgURLInfoResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ControlPanelGetOrgURLInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ControlPanelGetOrgURLInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_ControlPanelGetSSHCAPublicKeyRequest_descriptor;
   private static final 
@@ -5668,6 +8070,16 @@ public final class ControlPanelPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_ControlPanelVerifyJWTResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_ControlPanelGetOrgURLInfoRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ControlPanelGetOrgURLInfoRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_ControlPanelGetOrgURLInfoResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ControlPanelGetOrgURLInfoResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5701,15 +8113,29 @@ public final class ControlPanelPlumbing {
       "\007\001\022\031\n\005valid\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_li" +
       "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260" +
       "\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n" +
-      "\372\370\263\007\005\250\363\263\007\0012\320\003\n\014ControlPanel\022\231\001\n\021GetSSHCA" +
-      "PublicKey\022(.v1.ControlPanelGetSSHCAPubli" +
-      "cKeyRequest\032).v1.ControlPanelGetSSHCAPub" +
-      "licKeyResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/" +
-      "v1/control-panel/ssh/ca\022\231\001\n\021GetRDPCAPubl" +
-      "icKey\022(.v1.ControlPanelGetRDPCAPublicKey" +
-      "Request\032).v1.ControlPanelGetRDPCAPublicK" +
-      "eyResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/c" +
-      "ontrol-panel/rdp/ca\022\207\001\n\tVerifyJWT\022 .v1.C" +
+      "\372\370\263\007\005\250\363\263\007\001\"H\n ControlPanelGetOrgURLInfoR" +
+      "equest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMeta" +
+      "data\"\315\002\n!ControlPanelGetOrgURLInfoRespon" +
+      "se\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadat" +
+      "aB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010base_url\030\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022&\n\022websites_subdomain\030\003 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022#\n\017oidc_issuer_url\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022%\n\021saml_metadata_url\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "W\n\nrate_limit\030\006 \001(\0132\025.v1.RateLimitMetada" +
+      "taB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json" +
+      "_gateway:\n\372\370\263\007\005\250\363\263\007\0012\346\004\n\014ControlPanel\022\231\001" +
+      "\n\021GetSSHCAPublicKey\022(.v1.ControlPanelGet" +
+      "SSHCAPublicKeyRequest\032).v1.ControlPanelG" +
+      "etSSHCAPublicKeyResponse\"/\202\371\263\007\010\242\363\263\007\003get\202" +
+      "\371\263\007\035\252\363\263\007\030/v1/control-panel/ssh/ca\022\231\001\n\021Ge" +
+      "tRDPCAPublicKey\022(.v1.ControlPanelGetRDPC" +
+      "APublicKeyRequest\032).v1.ControlPanelGetRD" +
+      "PCAPublicKeyResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035" +
+      "\252\363\263\007\030/v1/control-panel/rdp/ca\022\223\001\n\rGetOrg" +
+      "URLInfo\022$.v1.ControlPanelGetOrgURLInfoRe" +
+      "quest\032%.v1.ControlPanelGetOrgURLInfoResp" +
+      "onse\"5\202\371\263\007\010\242\363\263\007\003get\202\371\263\007#\252\363\263\007\036/v1/control" +
+      "-panel/org-url-info\022\207\001\n\tVerifyJWT\022 .v1.C" +
       "ontrolPanelVerifyJWTRequest\032!.v1.Control" +
       "PanelVerifyJWTResponse\"5\202\371\263\007\t\242\363\263\007\004post\202\371" +
       "\263\007\"\252\363\263\007\035/v1/control-panel/http/verifyBh\n" +
@@ -5759,6 +8185,18 @@ public final class ControlPanelPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ControlPanelVerifyJWTResponse_descriptor,
         new java.lang.String[] { "Meta", "Valid", "RateLimit", });
+    internal_static_v1_ControlPanelGetOrgURLInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_ControlPanelGetOrgURLInfoRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ControlPanelGetOrgURLInfoRequest_descriptor,
+        new java.lang.String[] { "Meta", });
+    internal_static_v1_ControlPanelGetOrgURLInfoResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_v1_ControlPanelGetOrgURLInfoResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ControlPanelGetOrgURLInfoResponse_descriptor,
+        new java.lang.String[] { "Meta", "BaseUrl", "WebsitesSubdomain", "OidcIssuerUrl", "SamlMetadataUrl", "RateLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

@@ -51,6 +51,7 @@ import com.strongdm.api.plumbing.ApprovalWorkflowStepsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowStepsPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ApprovalWorkflowsPlumbing.*;
+import com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.*;
 import com.strongdm.api.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.plumbing.CustomHeadersPlumbing.*;
 import com.strongdm.api.plumbing.DiscoveryConnectorsPlumbing.*;
@@ -81,6 +82,7 @@ import com.strongdm.api.plumbing.RemoteIdentitiesPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentityGroupsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.RemoteIdentityGroupsPlumbing.*;
 import com.strongdm.api.plumbing.ReplaysPlumbing.*;
+import com.strongdm.api.plumbing.ResourceTypePlumbing.*;
 import com.strongdm.api.plumbing.ResourcesHistoryPlumbing.*;
 import com.strongdm.api.plumbing.ResourcesPlumbing.*;
 import com.strongdm.api.plumbing.RoleResourcesHistoryPlumbing.*;
@@ -499,6 +501,42 @@ public class Plumbing {
       obj.put("privileges", jsonPrivileges);
     }
     return obj.toString();
+  }
+
+  public static com.strongdm.api.ResourceType convertResourceTypeToPorcelain(
+      ResourceType plumbing) {
+    if (plumbing == null) {
+      return null;
+    }
+    return com.strongdm.api.ResourceType.fromValue(plumbing.getNumber());
+  }
+
+  public static ResourceType convertResourceTypeToPlumbing(
+      com.strongdm.api.ResourceType porcelain) {
+    if (porcelain == null) {
+      return ResourceType.values()[0];
+    }
+    return ResourceType.forNumber(porcelain.getValue());
+  }
+
+  public static List<com.strongdm.api.ResourceType> convertRepeatedResourceTypeToPorcelain(
+      Collection<ResourceType> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ResourceType>();
+    }
+    return plumbings.stream()
+        .map(Plumbing::convertResourceTypeToPorcelain)
+        .collect(Collectors.toList());
+  }
+
+  public static List<ResourceType> convertRepeatedResourceTypeToPlumbing(
+      Collection<com.strongdm.api.ResourceType> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ResourceType>();
+    }
+    return porcelains.stream()
+        .map(Plumbing::convertResourceTypeToPlumbing)
+        .collect(Collectors.toList());
   }
 
   public static com.strongdm.api.AKS convertAKSToPorcelain(AKS plumbing) {
@@ -8089,6 +8127,71 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertConnectorUpdateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.ControlPanelGetOrgURLInfoResponse
+      convertControlPanelGetOrgURLInfoResponseToPorcelain(
+          ControlPanelGetOrgURLInfoResponse plumbing) {
+    com.strongdm.api.ControlPanelGetOrgURLInfoResponse porcelain =
+        new com.strongdm.api.ControlPanelGetOrgURLInfoResponse();
+    porcelain.setBaseUrl((plumbing.getBaseUrl()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setOidcIssuerUrl((plumbing.getOidcIssuerUrl()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setSamlMetadataUrl((plumbing.getSamlMetadataUrl()));
+    porcelain.setWebsitesSubdomain((plumbing.getWebsitesSubdomain()));
+    return porcelain;
+  }
+
+  public static ControlPanelGetOrgURLInfoResponse
+      convertControlPanelGetOrgURLInfoResponseToPlumbing(
+          com.strongdm.api.ControlPanelGetOrgURLInfoResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ControlPanelGetOrgURLInfoResponse.Builder builder =
+        ControlPanelGetOrgURLInfoResponse.newBuilder();
+    if (porcelain.getBaseUrl() != null) {
+      builder.setBaseUrl((porcelain.getBaseUrl()));
+    }
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getOidcIssuerUrl() != null) {
+      builder.setOidcIssuerUrl((porcelain.getOidcIssuerUrl()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getSamlMetadataUrl() != null) {
+      builder.setSamlMetadataUrl((porcelain.getSamlMetadataUrl()));
+    }
+    if (porcelain.getWebsitesSubdomain() != null) {
+      builder.setWebsitesSubdomain((porcelain.getWebsitesSubdomain()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ControlPanelGetOrgURLInfoResponse>
+      convertRepeatedControlPanelGetOrgURLInfoResponseToPorcelain(
+          Collection<ControlPanelGetOrgURLInfoResponse> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.ControlPanelGetOrgURLInfoResponse>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertControlPanelGetOrgURLInfoResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ControlPanelGetOrgURLInfoResponse>
+      convertRepeatedControlPanelGetOrgURLInfoResponseToPlumbing(
+          Collection<com.strongdm.api.ControlPanelGetOrgURLInfoResponse> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<ControlPanelGetOrgURLInfoResponse>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertControlPanelGetOrgURLInfoResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

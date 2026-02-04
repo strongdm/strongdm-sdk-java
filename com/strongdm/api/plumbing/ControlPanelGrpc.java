@@ -106,6 +106,37 @@ public final class ControlPanelGrpc {
     return getGetRDPCAPublicKeyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest,
+      com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse> getGetOrgURLInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOrgURLInfo",
+      requestType = com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.class,
+      responseType = com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest,
+      com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse> getGetOrgURLInfoMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse> getGetOrgURLInfoMethod;
+    if ((getGetOrgURLInfoMethod = ControlPanelGrpc.getGetOrgURLInfoMethod) == null) {
+      synchronized (ControlPanelGrpc.class) {
+        if ((getGetOrgURLInfoMethod = ControlPanelGrpc.getGetOrgURLInfoMethod) == null) {
+          ControlPanelGrpc.getGetOrgURLInfoMethod = getGetOrgURLInfoMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest, com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrgURLInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ControlPanelMethodDescriptorSupplier("GetOrgURLInfo"))
+              .build();
+        }
+      }
+    }
+    return getGetOrgURLInfoMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest,
       com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> getVerifyJWTMethod;
 
@@ -210,6 +241,17 @@ public final class ControlPanelGrpc {
 
     /**
      * <pre>
+     * GetOrgURLInfo retrieves URL configuration for the organization.
+     * This includes the base URL, website subdomain, OIDC issuer URL, and SAML metadata URL.
+     * </pre>
+     */
+    public void getOrgURLInfo(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetOrgURLInfoMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
      * </pre>
      */
@@ -234,6 +276,13 @@ public final class ControlPanelGrpc {
                 com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest,
                 com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse>(
                   this, METHODID_GET_RDPCAPUBLIC_KEY)))
+          .addMethod(
+            getGetOrgURLInfoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest,
+                com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse>(
+                  this, METHODID_GET_ORG_URLINFO)))
           .addMethod(
             getVerifyJWTMethod(),
             asyncUnaryCall(
@@ -286,6 +335,18 @@ public final class ControlPanelGrpc {
 
     /**
      * <pre>
+     * GetOrgURLInfo retrieves URL configuration for the organization.
+     * This includes the base URL, website subdomain, OIDC issuer URL, and SAML metadata URL.
+     * </pre>
+     */
+    public void getOrgURLInfo(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetOrgURLInfoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
      * </pre>
      */
@@ -331,6 +392,17 @@ public final class ControlPanelGrpc {
     public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse getRDPCAPublicKey(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetRDPCAPublicKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetOrgURLInfo retrieves URL configuration for the organization.
+     * This includes the base URL, website subdomain, OIDC issuer URL, and SAML metadata URL.
+     * </pre>
+     */
+    public com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse getOrgURLInfo(com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetOrgURLInfoMethod(), getCallOptions(), request);
     }
 
     /**
@@ -385,6 +457,18 @@ public final class ControlPanelGrpc {
 
     /**
      * <pre>
+     * GetOrgURLInfo retrieves URL configuration for the organization.
+     * This includes the base URL, website subdomain, OIDC issuer URL, and SAML metadata URL.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse> getOrgURLInfo(
+        com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetOrgURLInfoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
      * </pre>
      */
@@ -397,7 +481,8 @@ public final class ControlPanelGrpc {
 
   private static final int METHODID_GET_SSHCAPUBLIC_KEY = 0;
   private static final int METHODID_GET_RDPCAPUBLIC_KEY = 1;
-  private static final int METHODID_VERIFY_JWT = 2;
+  private static final int METHODID_GET_ORG_URLINFO = 2;
+  private static final int METHODID_VERIFY_JWT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -423,6 +508,10 @@ public final class ControlPanelGrpc {
         case METHODID_GET_RDPCAPUBLIC_KEY:
           serviceImpl.getRDPCAPublicKey((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetRDPCAPublicKeyResponse>) responseObserver);
+          break;
+        case METHODID_GET_ORG_URLINFO:
+          serviceImpl.getOrgURLInfo((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse>) responseObserver);
           break;
         case METHODID_VERIFY_JWT:
           serviceImpl.verifyJWT((com.strongdm.api.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest) request,
@@ -491,6 +580,7 @@ public final class ControlPanelGrpc {
               .setSchemaDescriptor(new ControlPanelFileDescriptorSupplier())
               .addMethod(getGetSSHCAPublicKeyMethod())
               .addMethod(getGetRDPCAPublicKeyMethod())
+              .addMethod(getGetOrgURLInfoMethod())
               .addMethod(getVerifyJWTMethod())
               .build();
         }

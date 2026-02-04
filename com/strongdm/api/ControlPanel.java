@@ -123,6 +123,45 @@ public class ControlPanel {
             .executeAfter("ControlPanel.GetRDPCAPublicKey", req, plumbingResponse);
     return Plumbing.convertControlPanelGetRDPCAPublicKeyResponseToPorcelain(plumbingResponse);
   }
+  /**
+   * GetOrgURLInfo retrieves URL configuration for the organization. This includes the base URL,
+   * website subdomain, OIDC issuer URL, and SAML metadata URL.
+   */
+  public ControlPanelGetOrgURLInfoResponse getOrgURLInfo() throws RpcException {
+    ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.Builder builder =
+        ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest.newBuilder();
+    ControlPanelPlumbing.ControlPanelGetOrgURLInfoRequest req = builder.build();
+    // Execute before interceptor hooks
+    req = this.parent.getInterceptor().executeBefore("ControlPanel.GetOrgURLInfo", req);
+    ControlPanelPlumbing.ControlPanelGetOrgURLInfoResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(
+                    this.parent.getCallCredentials("ControlPanel.GetOrgURLInfo", req))
+                .getOrgURLInfo(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e, this.deadline)) {
+          tries++;
+          try {
+            Thread.sleep(this.parent.exponentialBackoff(tries, this.deadline));
+          } catch (Exception ignored) {
+          }
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    // Execute after interceptor hooks
+    plumbingResponse =
+        this.parent
+            .getInterceptor()
+            .executeAfter("ControlPanel.GetOrgURLInfo", req, plumbingResponse);
+    return Plumbing.convertControlPanelGetOrgURLInfoResponseToPorcelain(plumbingResponse);
+  }
   /** VerifyJWT reports whether the given JWT token (x-sdm-token) is valid. */
   public ControlPanelVerifyJWTResponse verifyJWT(String token) throws RpcException {
     ControlPanelPlumbing.ControlPanelVerifyJWTRequest.Builder builder =
