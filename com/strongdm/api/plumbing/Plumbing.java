@@ -3493,6 +3493,7 @@ public class Plumbing {
     porcelain.setMaxBackoffDuration(
         Plumbing.convertDurationToPorcelain(plumbing.getMaxBackoffDuration()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setNodeSelector((plumbing.getNodeSelector()));
     porcelain.setPolicy(Plumbing.convertSecretEnginePolicyToPorcelain(plumbing.getPolicy()));
     porcelain.setPublicKey(Plumbing.convertBytesToPorcelain(plumbing.getPublicKey()));
     porcelain.setRequestTimeout((plumbing.getRequestTimeout()));
@@ -3538,6 +3539,9 @@ public class Plumbing {
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNodeSelector() != null) {
+      builder.setNodeSelector((porcelain.getNodeSelector()));
     }
     if (porcelain.getPolicy() != null) {
       builder.setPolicy(Plumbing.convertSecretEnginePolicyToPlumbing(porcelain.getPolicy()));
@@ -13299,6 +13303,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setNodeSelector((plumbing.getNodeSelector()));
     porcelain.setPublicKey(Plumbing.convertBytesToPorcelain(plumbing.getPublicKey()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSecretStoreRootPath((plumbing.getSecretStoreRootPath()));
@@ -13318,6 +13323,9 @@ public class Plumbing {
     builder.setKeyRotationIntervalDays(porcelain.getKeyRotationIntervalDays());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNodeSelector() != null) {
+      builder.setNodeSelector((porcelain.getNodeSelector()));
     }
     if (porcelain.getPublicKey() != null) {
       builder.setPublicKey(Plumbing.convertBytesToPlumbing(porcelain.getPublicKey()));
@@ -16490,6 +16498,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setNodeSelector((plumbing.getNodeSelector()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPolicy(Plumbing.convertSecretEnginePolicyToPorcelain(plumbing.getPolicy()));
     porcelain.setPort((plumbing.getPort()));
@@ -16524,6 +16533,9 @@ public class Plumbing {
     builder.setKeyRotationIntervalDays(porcelain.getKeyRotationIntervalDays());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNodeSelector() != null) {
+      builder.setNodeSelector((porcelain.getNodeSelector()));
     }
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
@@ -18785,6 +18797,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setNodeSelector((plumbing.getNodeSelector()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPolicy(Plumbing.convertSecretEnginePolicyToPorcelain(plumbing.getPolicy()));
     porcelain.setPort((plumbing.getPort()));
@@ -18819,6 +18832,9 @@ public class Plumbing {
     builder.setKeyRotationIntervalDays(porcelain.getKeyRotationIntervalDays());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNodeSelector() != null) {
+      builder.setNodeSelector((porcelain.getNodeSelector()));
     }
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
@@ -25199,6 +25215,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setKeyRotationIntervalDays((plumbing.getKeyRotationIntervalDays()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setNodeSelector((plumbing.getNodeSelector()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPolicy(Plumbing.convertSecretEnginePolicyToPorcelain(plumbing.getPolicy()));
     porcelain.setPort((plumbing.getPort()));
@@ -25234,6 +25251,9 @@ public class Plumbing {
     builder.setKeyRotationIntervalDays(porcelain.getKeyRotationIntervalDays());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNodeSelector() != null) {
+      builder.setNodeSelector((porcelain.getNodeSelector()));
     }
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));

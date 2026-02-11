@@ -2108,6 +2108,26 @@ public final class SecretEngineTypesPlumbing {
      * @return The keyRotationIntervalDays.
      */
     int getKeyRotationIntervalDays();
+
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    java.lang.String getNodeSelector();
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    com.google.protobuf.ByteString
+        getNodeSelectorBytes();
   }
   /**
    * Protobuf type {@code v1.ActiveDirectoryEngine}
@@ -2134,6 +2154,7 @@ public final class SecretEngineTypesPlumbing {
       secretStoreId_ = "";
       secretStoreRootPath_ = "";
       publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      nodeSelector_ = "";
     }
 
     @java.lang.Override
@@ -2217,6 +2238,12 @@ public final class SecretEngineTypesPlumbing {
             case 72: {
 
               keyRotationIntervalDays_ = input.readInt32();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nodeSelector_ = s;
               break;
             }
             case 818: {
@@ -3170,6 +3197,52 @@ public final class SecretEngineTypesPlumbing {
       return keyRotationIntervalDays_;
     }
 
+    public static final int NODE_SELECTOR_FIELD_NUMBER = 10;
+    private volatile java.lang.Object nodeSelector_;
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeSelector() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeSelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeSelectorBytes() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeSelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3207,6 +3280,9 @@ public final class SecretEngineTypesPlumbing {
       }
       if (keyRotationIntervalDays_ != 0) {
         output.writeInt32(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 102, url_);
@@ -3288,6 +3364,9 @@ public final class SecretEngineTypesPlumbing {
       if (keyRotationIntervalDays_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, url_);
@@ -3419,6 +3498,8 @@ public final class SecretEngineTypesPlumbing {
           .equals(other.getPublicKey())) return false;
       if (getKeyRotationIntervalDays()
           != other.getKeyRotationIntervalDays()) return false;
+      if (!getNodeSelector()
+          .equals(other.getNodeSelector())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3489,6 +3570,8 @@ public final class SecretEngineTypesPlumbing {
       hash = (53 * hash) + getPublicKey().hashCode();
       hash = (37 * hash) + KEY_ROTATION_INTERVAL_DAYS_FIELD_NUMBER;
       hash = (53 * hash) + getKeyRotationIntervalDays();
+      hash = (37 * hash) + NODE_SELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeSelector().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3688,6 +3771,8 @@ public final class SecretEngineTypesPlumbing {
 
         keyRotationIntervalDays_ = 0;
 
+        nodeSelector_ = "";
+
         return this;
       }
 
@@ -3757,6 +3842,7 @@ public final class SecretEngineTypesPlumbing {
         }
         result.publicKey_ = publicKey_;
         result.keyRotationIntervalDays_ = keyRotationIntervalDays_;
+        result.nodeSelector_ = nodeSelector_;
         onBuilt();
         return result;
       }
@@ -3884,6 +3970,10 @@ public final class SecretEngineTypesPlumbing {
         }
         if (other.getKeyRotationIntervalDays() != 0) {
           setKeyRotationIntervalDays(other.getKeyRotationIntervalDays());
+        }
+        if (!other.getNodeSelector().isEmpty()) {
+          nodeSelector_ = other.nodeSelector_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6057,6 +6147,102 @@ public final class SecretEngineTypesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object nodeSelector_ = "";
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The nodeSelector.
+       */
+      public java.lang.String getNodeSelector() {
+        java.lang.Object ref = nodeSelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeSelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for nodeSelector.
+       */
+      public com.google.protobuf.ByteString
+          getNodeSelectorBytes() {
+        java.lang.Object ref = nodeSelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeSelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeSelector() {
+        
+        nodeSelector_ = getDefaultInstance().getNodeSelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6260,6 +6446,26 @@ public final class SecretEngineTypesPlumbing {
      * @return The keyRotationIntervalDays.
      */
     int getKeyRotationIntervalDays();
+
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    java.lang.String getNodeSelector();
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    com.google.protobuf.ByteString
+        getNodeSelectorBytes();
   }
   /**
    * Protobuf type {@code v1.KeyValueEngine}
@@ -6280,6 +6486,7 @@ public final class SecretEngineTypesPlumbing {
       secretStoreId_ = "";
       secretStoreRootPath_ = "";
       publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      nodeSelector_ = "";
     }
 
     @java.lang.Override
@@ -6363,6 +6570,12 @@ public final class SecretEngineTypesPlumbing {
             case 72: {
 
               keyRotationIntervalDays_ = input.readInt32();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nodeSelector_ = s;
               break;
             }
             default: {
@@ -6697,6 +6910,52 @@ public final class SecretEngineTypesPlumbing {
       return keyRotationIntervalDays_;
     }
 
+    public static final int NODE_SELECTOR_FIELD_NUMBER = 10;
+    private volatile java.lang.Object nodeSelector_;
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeSelector() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeSelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeSelectorBytes() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeSelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6735,6 +6994,9 @@ public final class SecretEngineTypesPlumbing {
       if (keyRotationIntervalDays_ != 0) {
         output.writeInt32(9, keyRotationIntervalDays_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nodeSelector_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6771,6 +7033,9 @@ public final class SecretEngineTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, keyRotationIntervalDays_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nodeSelector_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6805,6 +7070,8 @@ public final class SecretEngineTypesPlumbing {
           .equals(other.getPublicKey())) return false;
       if (getKeyRotationIntervalDays()
           != other.getKeyRotationIntervalDays()) return false;
+      if (!getNodeSelector()
+          .equals(other.getNodeSelector())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6834,6 +7101,8 @@ public final class SecretEngineTypesPlumbing {
       hash = (53 * hash) + getPublicKey().hashCode();
       hash = (37 * hash) + KEY_ROTATION_INTERVAL_DAYS_FIELD_NUMBER;
       hash = (53 * hash) + getKeyRotationIntervalDays();
+      hash = (37 * hash) + NODE_SELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeSelector().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6987,6 +7256,8 @@ public final class SecretEngineTypesPlumbing {
 
         keyRotationIntervalDays_ = 0;
 
+        nodeSelector_ = "";
+
         return this;
       }
 
@@ -7025,6 +7296,7 @@ public final class SecretEngineTypesPlumbing {
         }
         result.publicKey_ = publicKey_;
         result.keyRotationIntervalDays_ = keyRotationIntervalDays_;
+        result.nodeSelector_ = nodeSelector_;
         onBuilt();
         return result;
       }
@@ -7101,6 +7373,10 @@ public final class SecretEngineTypesPlumbing {
         }
         if (other.getKeyRotationIntervalDays() != 0) {
           setKeyRotationIntervalDays(other.getKeyRotationIntervalDays());
+        }
+        if (!other.getNodeSelector().isEmpty()) {
+          nodeSelector_ = other.nodeSelector_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7854,6 +8130,102 @@ public final class SecretEngineTypesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object nodeSelector_ = "";
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The nodeSelector.
+       */
+      public java.lang.String getNodeSelector() {
+        java.lang.Object ref = nodeSelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeSelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for nodeSelector.
+       */
+      public com.google.protobuf.ByteString
+          getNodeSelectorBytes() {
+        java.lang.Object ref = nodeSelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeSelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeSelector() {
+        
+        nodeSelector_ = getDefaultInstance().getNodeSelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8248,6 +8620,26 @@ public final class SecretEngineTypesPlumbing {
      * @return The keyRotationIntervalDays.
      */
     int getKeyRotationIntervalDays();
+
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    java.lang.String getNodeSelector();
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    com.google.protobuf.ByteString
+        getNodeSelectorBytes();
   }
   /**
    * Protobuf type {@code v1.MysqlEngine}
@@ -8272,6 +8664,7 @@ public final class SecretEngineTypesPlumbing {
       secretStoreId_ = "";
       secretStoreRootPath_ = "";
       publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      nodeSelector_ = "";
     }
 
     @java.lang.Override
@@ -8355,6 +8748,12 @@ public final class SecretEngineTypesPlumbing {
             case 72: {
 
               keyRotationIntervalDays_ = input.readInt32();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nodeSelector_ = s;
               break;
             }
             case 810: {
@@ -9110,6 +9509,52 @@ public final class SecretEngineTypesPlumbing {
       return keyRotationIntervalDays_;
     }
 
+    public static final int NODE_SELECTOR_FIELD_NUMBER = 10;
+    private volatile java.lang.Object nodeSelector_;
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeSelector() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeSelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeSelectorBytes() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeSelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9147,6 +9592,9 @@ public final class SecretEngineTypesPlumbing {
       }
       if (keyRotationIntervalDays_ != 0) {
         output.writeInt32(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 101, hostname_);
@@ -9213,6 +9661,9 @@ public final class SecretEngineTypesPlumbing {
       if (keyRotationIntervalDays_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, hostname_);
@@ -9313,6 +9764,8 @@ public final class SecretEngineTypesPlumbing {
           .equals(other.getPublicKey())) return false;
       if (getKeyRotationIntervalDays()
           != other.getKeyRotationIntervalDays()) return false;
+      if (!getNodeSelector()
+          .equals(other.getNodeSelector())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9370,6 +9823,8 @@ public final class SecretEngineTypesPlumbing {
       hash = (53 * hash) + getPublicKey().hashCode();
       hash = (37 * hash) + KEY_ROTATION_INTERVAL_DAYS_FIELD_NUMBER;
       hash = (53 * hash) + getKeyRotationIntervalDays();
+      hash = (37 * hash) + NODE_SELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeSelector().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9555,6 +10010,8 @@ public final class SecretEngineTypesPlumbing {
 
         keyRotationIntervalDays_ = 0;
 
+        nodeSelector_ = "";
+
         return this;
       }
 
@@ -9615,6 +10072,7 @@ public final class SecretEngineTypesPlumbing {
         }
         result.publicKey_ = publicKey_;
         result.keyRotationIntervalDays_ = keyRotationIntervalDays_;
+        result.nodeSelector_ = nodeSelector_;
         onBuilt();
         return result;
       }
@@ -9725,6 +10183,10 @@ public final class SecretEngineTypesPlumbing {
         }
         if (other.getKeyRotationIntervalDays() != 0) {
           setKeyRotationIntervalDays(other.getKeyRotationIntervalDays());
+        }
+        if (!other.getNodeSelector().isEmpty()) {
+          nodeSelector_ = other.nodeSelector_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11456,6 +11918,102 @@ public final class SecretEngineTypesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object nodeSelector_ = "";
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The nodeSelector.
+       */
+      public java.lang.String getNodeSelector() {
+        java.lang.Object ref = nodeSelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeSelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for nodeSelector.
+       */
+      public com.google.protobuf.ByteString
+          getNodeSelectorBytes() {
+        java.lang.Object ref = nodeSelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeSelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeSelector() {
+        
+        nodeSelector_ = getDefaultInstance().getNodeSelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11840,6 +12398,26 @@ public final class SecretEngineTypesPlumbing {
      * @return The keyRotationIntervalDays.
      */
     int getKeyRotationIntervalDays();
+
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    java.lang.String getNodeSelector();
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    com.google.protobuf.ByteString
+        getNodeSelectorBytes();
   }
   /**
    * Protobuf type {@code v1.PostgresEngine}
@@ -11864,6 +12442,7 @@ public final class SecretEngineTypesPlumbing {
       secretStoreId_ = "";
       secretStoreRootPath_ = "";
       publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      nodeSelector_ = "";
     }
 
     @java.lang.Override
@@ -11947,6 +12526,12 @@ public final class SecretEngineTypesPlumbing {
             case 72: {
 
               keyRotationIntervalDays_ = input.readInt32();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nodeSelector_ = s;
               break;
             }
             case 810: {
@@ -12682,6 +13267,52 @@ public final class SecretEngineTypesPlumbing {
       return keyRotationIntervalDays_;
     }
 
+    public static final int NODE_SELECTOR_FIELD_NUMBER = 10;
+    private volatile java.lang.Object nodeSelector_;
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeSelector() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeSelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeSelectorBytes() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeSelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12719,6 +13350,9 @@ public final class SecretEngineTypesPlumbing {
       }
       if (keyRotationIntervalDays_ != 0) {
         output.writeInt32(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 101, hostname_);
@@ -12782,6 +13416,9 @@ public final class SecretEngineTypesPlumbing {
       if (keyRotationIntervalDays_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, hostname_);
@@ -12876,6 +13513,8 @@ public final class SecretEngineTypesPlumbing {
           .equals(other.getPublicKey())) return false;
       if (getKeyRotationIntervalDays()
           != other.getKeyRotationIntervalDays()) return false;
+      if (!getNodeSelector()
+          .equals(other.getNodeSelector())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12930,6 +13569,8 @@ public final class SecretEngineTypesPlumbing {
       hash = (53 * hash) + getPublicKey().hashCode();
       hash = (37 * hash) + KEY_ROTATION_INTERVAL_DAYS_FIELD_NUMBER;
       hash = (53 * hash) + getKeyRotationIntervalDays();
+      hash = (37 * hash) + NODE_SELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeSelector().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13113,6 +13754,8 @@ public final class SecretEngineTypesPlumbing {
 
         keyRotationIntervalDays_ = 0;
 
+        nodeSelector_ = "";
+
         return this;
       }
 
@@ -13172,6 +13815,7 @@ public final class SecretEngineTypesPlumbing {
         }
         result.publicKey_ = publicKey_;
         result.keyRotationIntervalDays_ = keyRotationIntervalDays_;
+        result.nodeSelector_ = nodeSelector_;
         onBuilt();
         return result;
       }
@@ -13279,6 +13923,10 @@ public final class SecretEngineTypesPlumbing {
         }
         if (other.getKeyRotationIntervalDays() != 0) {
           setKeyRotationIntervalDays(other.getKeyRotationIntervalDays());
+        }
+        if (!other.getNodeSelector().isEmpty()) {
+          nodeSelector_ = other.nodeSelector_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14967,6 +15615,102 @@ public final class SecretEngineTypesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object nodeSelector_ = "";
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The nodeSelector.
+       */
+      public java.lang.String getNodeSelector() {
+        java.lang.Object ref = nodeSelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeSelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for nodeSelector.
+       */
+      public com.google.protobuf.ByteString
+          getNodeSelectorBytes() {
+        java.lang.Object ref = nodeSelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeSelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeSelector() {
+        
+        nodeSelector_ = getDefaultInstance().getNodeSelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15361,6 +16105,26 @@ public final class SecretEngineTypesPlumbing {
      * @return The keyRotationIntervalDays.
      */
     int getKeyRotationIntervalDays();
+
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    java.lang.String getNodeSelector();
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    com.google.protobuf.ByteString
+        getNodeSelectorBytes();
   }
   /**
    * Protobuf type {@code v1.SqlserverEngine}
@@ -15385,6 +16149,7 @@ public final class SecretEngineTypesPlumbing {
       secretStoreId_ = "";
       secretStoreRootPath_ = "";
       publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      nodeSelector_ = "";
     }
 
     @java.lang.Override
@@ -15468,6 +16233,12 @@ public final class SecretEngineTypesPlumbing {
             case 72: {
 
               keyRotationIntervalDays_ = input.readInt32();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nodeSelector_ = s;
               break;
             }
             case 810: {
@@ -16223,6 +16994,52 @@ public final class SecretEngineTypesPlumbing {
       return keyRotationIntervalDays_;
     }
 
+    public static final int NODE_SELECTOR_FIELD_NUMBER = 10;
+    private volatile java.lang.Object nodeSelector_;
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The nodeSelector.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeSelector() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeSelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * node selector is used to narrow down the nodes used to communicate with with secret engine
+     * </pre>
+     *
+     * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for nodeSelector.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeSelectorBytes() {
+      java.lang.Object ref = nodeSelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeSelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16260,6 +17077,9 @@ public final class SecretEngineTypesPlumbing {
       }
       if (keyRotationIntervalDays_ != 0) {
         output.writeInt32(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 101, hostname_);
@@ -16326,6 +17146,9 @@ public final class SecretEngineTypesPlumbing {
       if (keyRotationIntervalDays_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, keyRotationIntervalDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeSelector_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nodeSelector_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, hostname_);
@@ -16426,6 +17249,8 @@ public final class SecretEngineTypesPlumbing {
           .equals(other.getPublicKey())) return false;
       if (getKeyRotationIntervalDays()
           != other.getKeyRotationIntervalDays()) return false;
+      if (!getNodeSelector()
+          .equals(other.getNodeSelector())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16483,6 +17308,8 @@ public final class SecretEngineTypesPlumbing {
       hash = (53 * hash) + getPublicKey().hashCode();
       hash = (37 * hash) + KEY_ROTATION_INTERVAL_DAYS_FIELD_NUMBER;
       hash = (53 * hash) + getKeyRotationIntervalDays();
+      hash = (37 * hash) + NODE_SELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeSelector().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16668,6 +17495,8 @@ public final class SecretEngineTypesPlumbing {
 
         keyRotationIntervalDays_ = 0;
 
+        nodeSelector_ = "";
+
         return this;
       }
 
@@ -16728,6 +17557,7 @@ public final class SecretEngineTypesPlumbing {
         }
         result.publicKey_ = publicKey_;
         result.keyRotationIntervalDays_ = keyRotationIntervalDays_;
+        result.nodeSelector_ = nodeSelector_;
         onBuilt();
         return result;
       }
@@ -16838,6 +17668,10 @@ public final class SecretEngineTypesPlumbing {
         }
         if (other.getKeyRotationIntervalDays() != 0) {
           setKeyRotationIntervalDays(other.getKeyRotationIntervalDays());
+        }
+        if (!other.getNodeSelector().isEmpty()) {
+          nodeSelector_ = other.nodeSelector_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -18569,6 +19403,102 @@ public final class SecretEngineTypesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object nodeSelector_ = "";
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The nodeSelector.
+       */
+      public java.lang.String getNodeSelector() {
+        java.lang.Object ref = nodeSelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeSelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for nodeSelector.
+       */
+      public com.google.protobuf.ByteString
+          getNodeSelectorBytes() {
+        java.lang.Object ref = nodeSelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeSelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeSelector() {
+        
+        nodeSelector_ = getDefaultInstance().getNodeSelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * node selector is used to narrow down the nodes used to communicate with with secret engine
+       * </pre>
+       *
+       * <code>string node_selector = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for nodeSelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeSelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nodeSelector_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -18663,8 +19593,8 @@ public final class SecretEngineTypesPlumbing {
     java.lang.String[] descriptorData = {
       "\n\031secret_engine_types.proto\022\002v1\032\roptions" +
       ".proto\032\ntags.proto\032\032secret_engine_policy" +
-      ".proto\032\036google/protobuf/duration.proto\"\365" +
-      "\004\n\014SecretEngine\022q\n\020active_directory\030\314\002 \001" +
+      ".proto\032\036google/protobuf/duration.proto\"\262" +
+      "\005\n\014SecretEngine\022q\n\020active_directory\030\314\002 \001" +
       "(\0132\031.v1.ActiveDirectoryEngineB9\362\370\263\007*\312\363\263\007" +
       "%\302\364\263\007 \n\014json_gateway\022\020active_directory\362\370" +
       "\263\007\005\260\363\263\007\001H\000\022\\\n\tkey_value\030\313\002 \001(\0132\022.v1.KeyV" +
@@ -18676,52 +19606,42 @@ public final class SecretEngineTypesPlumbing {
       "\263\007\030\n\014json_gateway\022\010postgres\362\370\263\007\005\260\363\263\007\001H\000\022" +
       "]\n\tsqlserver\030\317\002 \001(\0132\023.v1.SqlserverEngine" +
       "B2\362\370\263\007#\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tsqlserv" +
-      "er\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370\263\007\005\250\363\263\007\001Bz\n\rsecret_eng" +
-      "ine\022i\252\370\263\007\t\252\370\263\007\004name\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\024\252\370" +
-      "\263\007\017secret_store_id\252\370\263\007\033\252\370\263\007\026secret_store" +
-      "_root_path\252\370\263\007\017\252\370\263\007\npublic_key\"\341\014\n\025Activ" +
-      "eDirectoryEngine\022d\n\016after_read_ttl\030\364\007 \001(" +
-      "\0132\031.google.protobuf.DurationB0\362\370\263\007+\260\363\263\007\001" +
-      "\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014afterReadTtl\022?" +
-      "\n\006binddn\030l \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007" +
-      "\026\n\014json_gateway\022\006binddn\022C\n\010bindpass\030m \001(" +
-      "\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gatew" +
-      "ay\022\010bindpass\022D\n\013certificate\030k \001(\tB/\362\370\263\007*" +
-      "\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013certifica" +
-      "te\022Q\n\022connection_timeout\030g \001(\rB5\362\370\263\0070\260\363\263" +
-      "\007\001\312\363\263\007&\302\364\263\007!\n\014json_gateway\022\021connectionTi" +
-      "meout\022`\n\032do_not_validate_timestamps\030\367\007 \001" +
-      "(\010B;\362\370\263\0076\260\363\263\007\001\312\363\263\007,\302\364\263\007\'\n\014json_gateway\022\027" +
-      "doNotValidateTimestamps\022E\n\014insecure_tls\030" +
-      "j \001(\010B/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gatewa" +
-      "y\022\013insecureTls\022p\n\024max_backoff_duration\030\370" +
-      "\007 \001(\0132\031.google.protobuf.DurationB6\362\370\263\0071\260" +
-      "\363\263\007\001\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022maxBackoff" +
-      "Duration\022S\n\006policy\030\366\007 \001(\0132\026.v1.SecretEng" +
-      "inePolicyB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_ga" +
-      "teway\022\006policy\022K\n\017request_timeout\030h \001(\rB2" +
-      "\362\370\263\007-\260\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016requ" +
-      "estTimeout\022?\n\tstart_tls\030i \001(\010B,\362\370\263\007\'\260\363\263\007" +
-      "\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010startTls\022P\n\003t" +
-      "tl\030\365\007 \001(\0132\031.google.protobuf.DurationB\'\362\370" +
-      "\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003ttl\022A\n" +
-      "\tupndomain\030\363\007 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n" +
-      "\014json_gateway\022\tupndomain\0229\n\003url\030f \001(\tB,\362" +
-      "\370\263\007\'\260\363\263\007\001\300\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003" +
-      "url\022;\n\006userdn\030\362\007 \001(\tB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263" +
-      "\007\026\n\014json_gateway\022\006userdn\022\026\n\002id\030\001 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
-      "!\n\004type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017se" +
-      "cret_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026" +
-      "secret_store_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\300\363\263\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\0222\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364" +
-      "\263\007\001*\262\364\263\007\004!cli\022.\n\032key_rotation_interval_d" +
-      "ays\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001:{\372\370\263\007v\250\363\263\007\001\312\363\263\007l\302\364" +
-      "\263\007\027\n\003cli\022\020active_directory\302\364\263\007 \n\014json_ga" +
-      "teway\022\020active_directory\302\364\263\007&\n\022terraform-" +
-      "provider\022\020active_directory\"\265\003\n\016KeyValueE" +
-      "ngine\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
+      "er\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370\263\007\005\250\363\263\007\001B\266\001\n\rsecret_en" +
+      "gine\022\244\001\252\370\263\007\t\252\370\263\007\004name\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\024" +
+      "\252\370\263\007\017secret_store_id\252\370\263\007\033\252\370\263\007\026secret_sto" +
+      "re_root_path\252\370\263\007\017\252\370\263\007\npublic_key\252\370\263\007\022\252\370\263" +
+      "\007\rnode_selector\252\370\263\007\037\252\370\263\007\032key_rotation_in" +
+      "terval_days\"\204\r\n\025ActiveDirectoryEngine\022d\n" +
+      "\016after_read_ttl\030\364\007 \001(\0132\031.google.protobuf" +
+      ".DurationB0\362\370\263\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007\034\n\014json_ga" +
+      "teway\022\014afterReadTtl\022?\n\006binddn\030l \001(\tB/\362\370\263" +
+      "\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006bi" +
+      "nddn\022C\n\010bindpass\030m \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010bindpass\022D\n\013cer" +
+      "tificate\030k \001(\tB/\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014js" +
+      "on_gateway\022\013certificate\022Q\n\022connection_ti" +
+      "meout\030g \001(\rB5\362\370\263\0070\260\363\263\007\001\312\363\263\007&\302\364\263\007!\n\014json_" +
+      "gateway\022\021connectionTimeout\022`\n\032do_not_val" +
+      "idate_timestamps\030\367\007 \001(\010B;\362\370\263\0076\260\363\263\007\001\312\363\263\007," +
+      "\302\364\263\007\'\n\014json_gateway\022\027doNotValidateTimest" +
+      "amps\022E\n\014insecure_tls\030j \001(\010B/\362\370\263\007*\260\363\263\007\001\312\363" +
+      "\263\007 \302\364\263\007\033\n\014json_gateway\022\013insecureTls\022p\n\024m" +
+      "ax_backoff_duration\030\370\007 \001(\0132\031.google.prot" +
+      "obuf.DurationB6\362\370\263\0071\260\363\263\007\001\312\363\263\007\'\302\364\263\007\"\n\014jso" +
+      "n_gateway\022\022maxBackoffDuration\022S\n\006policy\030" +
+      "\366\007 \001(\0132\026.v1.SecretEnginePolicyB*\362\370\263\007%\260\363\263" +
+      "\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006policy\022K\n\017re" +
+      "quest_timeout\030h \001(\rB2\362\370\263\007-\260\363\263\007\001\312\363\263\007#\302\364\263\007" +
+      "\036\n\014json_gateway\022\016requestTimeout\022?\n\tstart" +
+      "_tls\030i \001(\010B,\362\370\263\007\'\260\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_g" +
+      "ateway\022\010startTls\022P\n\003ttl\030\365\007 \001(\0132\031.google." +
+      "protobuf.DurationB\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n" +
+      "\014json_gateway\022\003ttl\022A\n\tupndomain\030\363\007 \001(\tB-" +
+      "\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tupnd" +
+      "omain\0229\n\003url\030f \001(\tB,\362\370\263\007\'\260\363\263\007\001\300\363\263\007\001\312\363\263\007\030" +
+      "\302\364\263\007\023\n\014json_gateway\022\003url\022;\n\006userdn\030\362\007 \001(" +
+      "\tB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006u" +
+      "serdn\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 " +
       "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263\007" +
       "\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secret_store_id\030\005 \001(\t" +
       "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026secret_store_root_p" +
@@ -18729,85 +19649,11 @@ public final class SecretEngineTypesPlumbing {
       "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222\n\npublic_key\030\010 \001" +
       "(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032ke" +
       "y_rotation_interval_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263" +
-      "\007\001:f\372\370\263\007a\250\363\263\007\001\312\363\263\007W\302\364\263\007\020\n\003cli\022\tkey_value" +
-      "\302\364\263\007\031\n\014json_gateway\022\tkey_value\302\364\263\007\037\n\022ter" +
-      "raform-provider\022\tkey_value\"\222\t\n\013MysqlEngi" +
-      "ne\022c\n\016after_read_ttl\030i \001(\0132\031.google.prot" +
-      "obuf.DurationB0\362\370\263\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007\034\n\014jso" +
-      "n_gateway\022\014afterReadTtl\022C\n\010database\030l \001(" +
-      "\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gatew" +
-      "ay\022\010database\022C\n\010hostname\030e \001(\tB1\362\370\263\007,\260\363\263" +
-      "\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010hostnam" +
-      "e\022C\n\010password\030g \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
-      "\035\302\364\263\007\030\n\014json_gateway\022\010password\022R\n\006policy" +
-      "\030k \001(\0132\026.v1.SecretEnginePolicyB*\362\370\263\007%\260\363\263" +
-      "\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006policy\022;\n\004po" +
-      "rt\030h \001(\rB-\362\370\263\007(\260\363\263\007\001\300\363\263\007\001\312\363\263\007\031\302\364\263\007\024\n\014jso" +
-      "n_gateway\022\004port\0224\n\003tls\030m \001(\010B\'\362\370\263\007\"\260\363\263\007\001" +
-      "\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003tls\022K\n\017tls_ski" +
-      "p_verify\030\362\007 \001(\010B1\362\370\263\007,\260\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rtlsSkipVerify\022O\n\003ttl\030j \001(\0132" +
-      "\031.google.protobuf.DurationB\'\362\370\263\007\"\260\363\263\007\001\312\363" +
-      "\263\007\030\302\364\263\007\023\n\014json_gateway\022\003ttl\022C\n\010username\030" +
-      "f \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_g" +
-      "ateway\022\010username\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030" +
-      "\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secret_sto" +
-      "re_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026secret_s" +
-      "tore_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n" +
-      "\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222\n\npub" +
-      "lic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007" +
-      "\004!cli\022.\n\032key_rotation_interval_days\030\t \001(" +
-      "\005B\n\362\370\263\007\005\260\363\263\007\001:h\372\370\263\007c\250\363\263\007\001\312\363\263\007Y\302\364\263\007\014\n\003cli" +
-      "\022\005mysql\302\364\263\007\025\n\014json_gateway\022\005mysql\302\364\263\007)\n\022" +
-      "terraform-provider\022\023mysql_secret_engine\"" +
-      "\321\010\n\016PostgresEngine\022c\n\016after_read_ttl\030i \001" +
-      "(\0132\031.google.protobuf.DurationB0\362\370\263\007+\260\363\263\007" +
-      "\001\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014afterReadTtl\022" +
-      "C\n\010database\030l \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302" +
-      "\364\263\007\030\n\014json_gateway\022\010database\022C\n\010hostname" +
-      "\030e \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_" +
-      "gateway\022\010hostname\022C\n\010password\030g \001(\tB1\362\370\263" +
-      "\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010pa" +
-      "ssword\022R\n\006policy\030k \001(\0132\026.v1.SecretEngine" +
-      "PolicyB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gatew" +
-      "ay\022\006policy\022;\n\004port\030h \001(\rB-\362\370\263\007(\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\031\302\364\263\007\024\n\014json_gateway\022\004port\0224\n\003tls\030m" +
-      " \001(\010B\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway" +
-      "\022\003tls\022O\n\003ttl\030j \001(\0132\031.google.protobuf.Dur" +
-      "ationB\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gatewa" +
-      "y\022\003ttl\022C\n\010username\030f \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010username\022\026\n\002i" +
-      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007" +
-      "\004!cli\022(\n\017secret_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263" +
-      "\007\001\300\363\263\007\001\022/\n\026secret_store_root_path\030\006 \001(\tB" +
-      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\0222\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260" +
-      "\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032key_rotation" +
-      "_interval_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001:q\372\370\263\007l\250" +
-      "\363\263\007\001\312\363\263\007b\302\364\263\007\017\n\003cli\022\010postgres\302\364\263\007\030\n\014json" +
-      "_gateway\022\010postgres\302\364\263\007,\n\022terraform-provi" +
-      "der\022\026postgres_secret_engine\"\242\t\n\017Sqlserve" +
-      "rEngine\022c\n\016after_read_ttl\030i \001(\0132\031.google" +
-      ".protobuf.DurationB0\362\370\263\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007\034" +
-      "\n\014json_gateway\022\014afterReadTtl\022C\n\010database" +
-      "\030l \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_" +
-      "gateway\022\010database\022C\n\010hostname\030e \001(\tB1\362\370\263" +
-      "\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010ho" +
-      "stname\022C\n\010password\030g \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010password\022R\n\006p" +
-      "olicy\030k \001(\0132\026.v1.SecretEnginePolicyB*\362\370\263" +
-      "\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006policy\022" +
-      ";\n\004port\030h \001(\rB-\362\370\263\007(\260\363\263\007\001\300\363\263\007\001\312\363\263\007\031\302\364\263\007\024" +
-      "\n\014json_gateway\022\004port\0224\n\003tls\030m \001(\010B\'\362\370\263\007\"" +
-      "\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003tls\022K\n\017tl" +
-      "s_skip_verify\030\362\007 \001(\010B1\362\370\263\007,\260\363\263\007\001\312\363\263\007\"\302\364\263" +
-      "\007\035\n\014json_gateway\022\rtlsSkipVerify\022O\n\003ttl\030j" +
-      " \001(\0132\031.google.protobuf.DurationB\'\362\370\263\007\"\260\363" +
-      "\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003ttl\022C\n\010user" +
-      "name\030f \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014j" +
-      "son_gateway\022\010username\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005" +
+      "\007\001\022!\n\rnode_selector\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001:{\372" +
+      "\370\263\007v\250\363\263\007\001\312\363\263\007l\302\364\263\007\027\n\003cli\022\020active_directo" +
+      "ry\302\364\263\007 \n\014json_gateway\022\020active_directory\302" +
+      "\364\263\007&\n\022terraform-provider\022\020active_directo" +
+      "ry\"\330\003\n\016KeyValueEngine\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005" +
       "\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004" +
       "type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secre" +
       "t_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026sec" +
@@ -18815,13 +19661,103 @@ public final class SecretEngineTypesPlumbing {
       "\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222" +
       "\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001" +
       "*\262\364\263\007\004!cli\022.\n\032key_rotation_interval_days" +
-      "\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001:t\372\370\263\007o\250\363\263\007\001\312\363\263\007e\302\364\263\007\020" +
-      "\n\003cli\022\tsqlserver\302\364\263\007\031\n\014json_gateway\022\tsql" +
-      "server\302\364\263\007-\n\022terraform-provider\022\027sqlserv" +
-      "er_secret_engineBm\n\031com.strongdm.api.plu" +
-      "mbingB\031SecretEngineTypesPlumbingZ5github" +
-      ".com/strongdm/strongdm-sdk-go/v3/interna" +
-      "l/v1;v1b\006proto3"
+      "\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\rnode_selector\030\n \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001:f\372\370\263\007a\250\363\263\007\001\312\363\263\007W\302\364\263\007\020\n\003cli" +
+      "\022\tkey_value\302\364\263\007\031\n\014json_gateway\022\tkey_valu" +
+      "e\302\364\263\007\037\n\022terraform-provider\022\tkey_value\"\265\t" +
+      "\n\013MysqlEngine\022c\n\016after_read_ttl\030i \001(\0132\031." +
+      "google.protobuf.DurationB0\362\370\263\007+\260\363\263\007\001\312\363\263\007" +
+      "!\302\364\263\007\034\n\014json_gateway\022\014afterReadTtl\022C\n\010da" +
+      "tabase\030l \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n" +
+      "\014json_gateway\022\010database\022C\n\010hostname\030e \001(" +
+      "\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gatew" +
+      "ay\022\010hostname\022C\n\010password\030g \001(\tB1\362\370\263\007,\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010passwor" +
+      "d\022R\n\006policy\030k \001(\0132\026.v1.SecretEnginePolic" +
+      "yB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006p" +
+      "olicy\022;\n\004port\030h \001(\rB-\362\370\263\007(\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
+      "\031\302\364\263\007\024\n\014json_gateway\022\004port\0224\n\003tls\030m \001(\010B" +
+      "\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003tls" +
+      "\022K\n\017tls_skip_verify\030\362\007 \001(\010B1\362\370\263\007,\260\363\263\007\001\312\363" +
+      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rtlsSkipVerify\022O\n" +
+      "\003ttl\030j \001(\0132\031.google.protobuf.DurationB\'\362" +
+      "\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003ttl\022C" +
+      "\n\010username\030f \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364" +
+      "\263\007\030\n\014json_gateway\022\010username\022\026\n\002id\030\001 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
+      "\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n" +
+      "\017secret_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
+      "/\n\026secret_store_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\0222\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007" +
+      "\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032key_rotation_interva" +
+      "l_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\rnode_selecto" +
+      "r\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001:h\372\370\263\007c\250\363\263\007\001\312\363\263\007Y\302\364\263\007" +
+      "\014\n\003cli\022\005mysql\302\364\263\007\025\n\014json_gateway\022\005mysql\302" +
+      "\364\263\007)\n\022terraform-provider\022\023mysql_secret_e" +
+      "ngine\"\364\010\n\016PostgresEngine\022c\n\016after_read_t" +
+      "tl\030i \001(\0132\031.google.protobuf.DurationB0\362\370\263" +
+      "\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014afterRe" +
+      "adTtl\022C\n\010database\030l \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010database\022C\n\010ho" +
+      "stname\030e \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n" +
+      "\014json_gateway\022\010hostname\022C\n\010password\030g \001(" +
+      "\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gatew" +
+      "ay\022\010password\022R\n\006policy\030k \001(\0132\026.v1.Secret" +
+      "EnginePolicyB*\362\370\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json" +
+      "_gateway\022\006policy\022;\n\004port\030h \001(\rB-\362\370\263\007(\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007\031\302\364\263\007\024\n\014json_gateway\022\004port\0224\n" +
+      "\003tls\030m \001(\010B\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_g" +
+      "ateway\022\003tls\022O\n\003ttl\030j \001(\0132\031.google.protob" +
+      "uf.DurationB\'\362\370\263\007\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_" +
+      "gateway\022\003ttl\022C\n\010username\030f \001(\tB1\362\370\263\007,\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010usernam" +
+      "e\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB" +
+      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\004type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263" +
+      "\007\001\262\364\263\007\004!cli\022(\n\017secret_store_id\030\005 \001(\tB\017\362\370" +
+      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026secret_store_root_path\030" +
+      "\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\007 \001(\0132\010.v" +
+      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0222\n\npublic_key\030\010 \001(\014B\036" +
+      "\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\004!cli\022.\n\032key_ro" +
+      "tation_interval_days\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!" +
+      "\n\rnode_selector\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001:q\372\370\263\007l" +
+      "\250\363\263\007\001\312\363\263\007b\302\364\263\007\017\n\003cli\022\010postgres\302\364\263\007\030\n\014jso" +
+      "n_gateway\022\010postgres\302\364\263\007,\n\022terraform-prov" +
+      "ider\022\026postgres_secret_engine\"\305\t\n\017Sqlserv" +
+      "erEngine\022c\n\016after_read_ttl\030i \001(\0132\031.googl" +
+      "e.protobuf.DurationB0\362\370\263\007+\260\363\263\007\001\312\363\263\007!\302\364\263\007" +
+      "\034\n\014json_gateway\022\014afterReadTtl\022C\n\010databas" +
+      "e\030l \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json" +
+      "_gateway\022\010database\022C\n\010hostname\030e \001(\tB1\362\370" +
+      "\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010h" +
+      "ostname\022C\n\010password\030g \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010password\022R\n\006" +
+      "policy\030k \001(\0132\026.v1.SecretEnginePolicyB*\362\370" +
+      "\263\007%\260\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006policy" +
+      "\022;\n\004port\030h \001(\rB-\362\370\263\007(\260\363\263\007\001\300\363\263\007\001\312\363\263\007\031\302\364\263\007" +
+      "\024\n\014json_gateway\022\004port\0224\n\003tls\030m \001(\010B\'\362\370\263\007" +
+      "\"\260\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003tls\022K\n\017t" +
+      "ls_skip_verify\030\362\007 \001(\010B1\362\370\263\007,\260\363\263\007\001\312\363\263\007\"\302\364" +
+      "\263\007\035\n\014json_gateway\022\rtlsSkipVerify\022O\n\003ttl\030" +
+      "j \001(\0132\031.google.protobuf.DurationB\'\362\370\263\007\"\260" +
+      "\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003ttl\022C\n\010use" +
+      "rname\030f \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014" +
+      "json_gateway\022\010username\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n" +
+      "\004type\030\003 \001(\tB\023\362\370\263\007\016\260\363\263\007\001\262\364\263\007\004!cli\022(\n\017secr" +
+      "et_store_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022/\n\026se" +
+      "cret_store_root_path\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
+      "\263\007\001\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "2\n\npublic_key\030\010 \001(\014B\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007\001\262\364\263\007" +
+      "\001*\262\364\263\007\004!cli\022.\n\032key_rotation_interval_day" +
+      "s\030\t \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\rnode_selector\030\n \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001:t\372\370\263\007o\250\363\263\007\001\312\363\263\007e\302\364\263\007\020\n\003cl" +
+      "i\022\tsqlserver\302\364\263\007\031\n\014json_gateway\022\tsqlserv" +
+      "er\302\364\263\007-\n\022terraform-provider\022\027sqlserver_s" +
+      "ecret_engineBm\n\031com.strongdm.api.plumbin" +
+      "gB\031SecretEngineTypesPlumbingZ5github.com" +
+      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
+      ";v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18842,31 +19778,31 @@ public final class SecretEngineTypesPlumbing {
     internal_static_v1_ActiveDirectoryEngine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ActiveDirectoryEngine_descriptor,
-        new java.lang.String[] { "AfterReadTtl", "Binddn", "Bindpass", "Certificate", "ConnectionTimeout", "DoNotValidateTimestamps", "InsecureTls", "MaxBackoffDuration", "Policy", "RequestTimeout", "StartTls", "Ttl", "Upndomain", "Url", "Userdn", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
+        new java.lang.String[] { "AfterReadTtl", "Binddn", "Bindpass", "Certificate", "ConnectionTimeout", "DoNotValidateTimestamps", "InsecureTls", "MaxBackoffDuration", "Policy", "RequestTimeout", "StartTls", "Ttl", "Upndomain", "Url", "Userdn", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", "NodeSelector", });
     internal_static_v1_KeyValueEngine_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_KeyValueEngine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KeyValueEngine_descriptor,
-        new java.lang.String[] { "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
+        new java.lang.String[] { "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", "NodeSelector", });
     internal_static_v1_MysqlEngine_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MysqlEngine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MysqlEngine_descriptor,
-        new java.lang.String[] { "AfterReadTtl", "Database", "Hostname", "Password", "Policy", "Port", "Tls", "TlsSkipVerify", "Ttl", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
+        new java.lang.String[] { "AfterReadTtl", "Database", "Hostname", "Password", "Policy", "Port", "Tls", "TlsSkipVerify", "Ttl", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", "NodeSelector", });
     internal_static_v1_PostgresEngine_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_PostgresEngine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_PostgresEngine_descriptor,
-        new java.lang.String[] { "AfterReadTtl", "Database", "Hostname", "Password", "Policy", "Port", "Tls", "Ttl", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
+        new java.lang.String[] { "AfterReadTtl", "Database", "Hostname", "Password", "Policy", "Port", "Tls", "Ttl", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", "NodeSelector", });
     internal_static_v1_SqlserverEngine_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_v1_SqlserverEngine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SqlserverEngine_descriptor,
-        new java.lang.String[] { "AfterReadTtl", "Database", "Hostname", "Password", "Policy", "Port", "Tls", "TlsSkipVerify", "Ttl", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", });
+        new java.lang.String[] { "AfterReadTtl", "Database", "Hostname", "Password", "Policy", "Port", "Tls", "TlsSkipVerify", "Ttl", "Username", "Id", "Name", "Type", "SecretStoreId", "SecretStoreRootPath", "Tags", "PublicKey", "KeyRotationIntervalDays", "NodeSelector", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

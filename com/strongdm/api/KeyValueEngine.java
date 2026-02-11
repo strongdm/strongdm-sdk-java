@@ -48,6 +48,16 @@ public class KeyValueEngine implements SecretEngine {
     this.name = in;
   }
 
+  private String nodeSelector;
+  /** node selector is used to narrow down the nodes used to communicate with with secret engine */
+  public String getNodeSelector() {
+    return this.nodeSelector;
+  }
+  /** node selector is used to narrow down the nodes used to communicate with with secret engine */
+  public void setNodeSelector(String in) {
+    this.nodeSelector = in;
+  }
+
   private byte[] publicKey;
   /** Public key linked with a secret engine */
   public byte[] getPublicKey() {

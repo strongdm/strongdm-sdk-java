@@ -41,4 +41,12 @@ public interface SecretEngine {
   byte[] getPublicKey();
   /** Sets the public key of the SecretEngine. */
   void setPublicKey(byte[] publicKey);
+  /** Returns the node selector of the SecretEngine. */
+  String getNodeSelector();
+  /** Sets the node selector of the SecretEngine. */
+  void setNodeSelector(String nodeSelector);
+  /** Returns the key rotation interval days of the SecretEngine. */
+  int getKeyRotationIntervalDays();
+  /** Sets the key rotation interval days of the SecretEngine. */
+  void setKeyRotationIntervalDays(int keyRotationIntervalDays);
 }

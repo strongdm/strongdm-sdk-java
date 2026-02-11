@@ -86,6 +86,16 @@ public class MysqlEngine implements SecretEngine {
     this.name = in;
   }
 
+  private String nodeSelector;
+  /** node selector is used to narrow down the nodes used to communicate with with secret engine */
+  public String getNodeSelector() {
+    return this.nodeSelector;
+  }
+  /** node selector is used to narrow down the nodes used to communicate with with secret engine */
+  public void setNodeSelector(String in) {
+    this.nodeSelector = in;
+  }
+
   private String password;
   /** Password is the password to connect to the MySQL server. */
   public String getPassword() {
