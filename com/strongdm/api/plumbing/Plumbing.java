@@ -8976,6 +8976,91 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.Databricks convertDatabricksToPorcelain(Databricks plumbing) {
+    com.strongdm.api.Databricks porcelain = new com.strongdm.api.Databricks();
+    porcelain.setAccessToken((plumbing.getAccessToken()));
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setHttpPath((plumbing.getHttpPath()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSchema((plumbing.getSchema()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static Databricks convertDatabricksToPlumbing(com.strongdm.api.Databricks porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Databricks.Builder builder = Databricks.newBuilder();
+    if (porcelain.getAccessToken() != null) {
+      builder.setAccessToken((porcelain.getAccessToken()));
+    }
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getHttpPath() != null) {
+      builder.setHttpPath((porcelain.getHttpPath()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSchema() != null) {
+      builder.setSchema((porcelain.getSchema()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Databricks> convertRepeatedDatabricksToPorcelain(
+      Collection<Databricks> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Databricks>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertDatabricksToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Databricks> convertRepeatedDatabricksToPlumbing(
+      Collection<com.strongdm.api.Databricks> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Databricks>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertDatabricksToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.DeleteResponseMetadata convertDeleteResponseMetadataToPorcelain(
       DeleteResponseMetadata plumbing) {
     com.strongdm.api.DeleteResponseMetadata porcelain =
@@ -21217,6 +21302,9 @@ public class Plumbing {
     if (plumbing.hasCouchbaseWebUi()) {
       return convertCouchbaseWebUIToPorcelain(plumbing.getCouchbaseWebUi());
     }
+    if (plumbing.hasDatabricks()) {
+      return convertDatabricksToPorcelain(plumbing.getDatabricks());
+    }
     if (plumbing.hasDb2I()) {
       return convertDB2IToPorcelain(plumbing.getDb2I());
     }
@@ -21677,6 +21765,11 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setCouchbaseWebUi(
           convertCouchbaseWebUIToPlumbing((com.strongdm.api.CouchbaseWebUI) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.Databricks) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setDatabricks(convertDatabricksToPlumbing((com.strongdm.api.Databricks) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.DB2I) {
