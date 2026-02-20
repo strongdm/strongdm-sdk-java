@@ -22,6 +22,8 @@ public final class Permission {
   public static final String ACCESS_REQUEST_REQUESTER = "accessrequest:requester";
   public static final String ACCOUNT_GROUP_READ = "accountgroup:read";
   public static final String ACCOUNT_GROUP_WRITE = "accountgroup:write";
+  public static final String ADMIN_ROLE_READ = "adminrole:read";
+  public static final String ADMIN_ROLE_WRITE = "adminrole:write";
   public static final String APPROVAL_FLOW_EDIT = "approvalflow:edit";
   public static final String APPROVAL_FLOW_LIST = "approvalflow:list";
   public static final String BILLING_READ = "billing:read";
