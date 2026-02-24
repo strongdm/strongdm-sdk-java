@@ -14310,6 +14310,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setOauthAuthEndpoint((plumbing.getOauthAuthEndpoint()));
+    porcelain.setOauthScopes((plumbing.getOauthScopes()));
     porcelain.setOauthTokenEndpoint((plumbing.getOauthTokenEndpoint()));
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
@@ -14344,6 +14345,9 @@ public class Plumbing {
     }
     if (porcelain.getOauthAuthEndpoint() != null) {
       builder.setOauthAuthEndpoint((porcelain.getOauthAuthEndpoint()));
+    }
+    if (porcelain.getOauthScopes() != null) {
+      builder.setOauthScopes((porcelain.getOauthScopes()));
     }
     if (porcelain.getOauthTokenEndpoint() != null) {
       builder.setOauthTokenEndpoint((porcelain.getOauthTokenEndpoint()));
@@ -14400,6 +14404,7 @@ public class Plumbing {
     porcelain.setName((plumbing.getName()));
     porcelain.setOauthAuthEndpoint((plumbing.getOauthAuthEndpoint()));
     porcelain.setOauthRegisterEndpoint((plumbing.getOauthRegisterEndpoint()));
+    porcelain.setOauthScopes((plumbing.getOauthScopes()));
     porcelain.setOauthTokenEndpoint((plumbing.getOauthTokenEndpoint()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
@@ -14435,6 +14440,9 @@ public class Plumbing {
     }
     if (porcelain.getOauthRegisterEndpoint() != null) {
       builder.setOauthRegisterEndpoint((porcelain.getOauthRegisterEndpoint()));
+    }
+    if (porcelain.getOauthScopes() != null) {
+      builder.setOauthScopes((porcelain.getOauthScopes()));
     }
     if (porcelain.getOauthTokenEndpoint() != null) {
       builder.setOauthTokenEndpoint((porcelain.getOauthTokenEndpoint()));

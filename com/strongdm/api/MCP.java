@@ -102,6 +102,16 @@ public class MCP implements Resource {
     this.oauthAuthEndpoint = in;
   }
 
+  private String oauthScopes;
+  /** Space-separated list of OAuth scopes to request. */
+  public String getOauthScopes() {
+    return this.oauthScopes;
+  }
+  /** Space-separated list of OAuth scopes to request. */
+  public void setOauthScopes(String in) {
+    this.oauthScopes = in;
+  }
+
   private String oauthTokenEndpoint;
   /** The OAuth 2.0 token endpoint URL. */
   public String getOauthTokenEndpoint() {
