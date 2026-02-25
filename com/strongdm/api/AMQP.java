@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * AMQP is currently unstable, and its API may change, or it may be removed, without a major version
- * bump.
- */
 public class AMQP implements Resource {
   private String bindInterface;
   /**
