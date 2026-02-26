@@ -241,6 +241,36 @@ public class Client {
     return this.discoveryConnectors;
   }
 
+  protected final GrantedAccountEntitlements grantedAccountEntitlements;
+
+  /**
+   * GrantedAccountEntitlements enumerates the resources to which an account has been granted
+   * access. The GrantedAccountEntitlements service is read-only.
+   */
+  public GrantedAccountEntitlements grantedAccountEntitlements() {
+    return this.grantedAccountEntitlements;
+  }
+
+  protected final GrantedResourceEntitlements grantedResourceEntitlements;
+
+  /**
+   * GrantedResourceEntitlements enumerates the accounts that have been granted access to a given
+   * resource. The GrantedResourceEntitlements service is read-only.
+   */
+  public GrantedResourceEntitlements grantedResourceEntitlements() {
+    return this.grantedResourceEntitlements;
+  }
+
+  protected final GrantedRoleEntitlements grantedRoleEntitlements;
+
+  /**
+   * GrantedRoleEntitlements enumerates the resources to which a role grants access. The
+   * GrantedRoleEntitlements service is read-only.
+   */
+  public GrantedRoleEntitlements grantedRoleEntitlements() {
+    return this.grantedRoleEntitlements;
+  }
+
   protected final Roles roles;
 
   /**
@@ -649,6 +679,9 @@ public class Client {
     this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
     this.controlPanel = new ControlPanel(this.channel, this);
     this.discoveryConnectors = new DiscoveryConnectors(this.channel, this);
+    this.grantedAccountEntitlements = new GrantedAccountEntitlements(this.channel, this);
+    this.grantedResourceEntitlements = new GrantedResourceEntitlements(this.channel, this);
+    this.grantedRoleEntitlements = new GrantedRoleEntitlements(this.channel, this);
     this.roles = new Roles(this.channel, this);
     this.groups = new Groups(this.channel, this);
     this.groupsHistory = new GroupsHistory(this.channel, this);
@@ -737,6 +770,9 @@ public class Client {
       this.approvalWorkflowsHistory = new ApprovalWorkflowsHistory(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
       this.discoveryConnectors = new DiscoveryConnectors(this.channel, this);
+      this.grantedAccountEntitlements = new GrantedAccountEntitlements(this.channel, this);
+      this.grantedResourceEntitlements = new GrantedResourceEntitlements(this.channel, this);
+      this.grantedRoleEntitlements = new GrantedRoleEntitlements(this.channel, this);
       this.roles = new Roles(this.channel, this);
       this.groups = new Groups(this.channel, this);
       this.groupsHistory = new GroupsHistory(this.channel, this);

@@ -37,6 +37,7 @@ public final class Permission {
   public static final String DEPRECATED_DATASOURCE_GRANT = "datasource:grant";
   public static final String DISCOVERY_CONNECTOR_READ = "discoveryconnector:read";
   public static final String DISCOVERY_CONNECTOR_WRITE = "discoveryconnector:write";
+  public static final String ENTITLEMENTS_READ = "entitlements:read";
   public static final String GRANT_READ = "grant:read";
   public static final String GRANT_WRITE = "grant:write";
   public static final String GROUP_READ = "group:read";

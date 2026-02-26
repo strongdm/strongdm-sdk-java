@@ -56,6 +56,9 @@ import com.strongdm.api.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.plumbing.CustomHeadersPlumbing.*;
 import com.strongdm.api.plumbing.DiscoveryConnectorsPlumbing.*;
 import com.strongdm.api.plumbing.DriversPlumbing.*;
+import com.strongdm.api.plumbing.GrantedAccountEntitlementsPlumbing.*;
+import com.strongdm.api.plumbing.GrantedResourceEntitlementsPlumbing.*;
+import com.strongdm.api.plumbing.GrantedRoleEntitlementsPlumbing.*;
 import com.strongdm.api.plumbing.GroupsHistoryPlumbing.*;
 import com.strongdm.api.plumbing.GroupsPlumbing.*;
 import com.strongdm.api.plumbing.GroupsRolesHistoryPlumbing.*;
@@ -11085,6 +11088,223 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.GrantedAccountEntitlement
+      convertGrantedAccountEntitlementToPorcelain(GrantedAccountEntitlement plumbing) {
+    com.strongdm.api.GrantedAccountEntitlement porcelain =
+        new com.strongdm.api.GrantedAccountEntitlement();
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setLastAccessed(Plumbing.convertTimestampToPorcelain(plumbing.getLastAccessed()));
+    porcelain.setMappedIdentities(
+        Plumbing.convertMappedIdentitiesToPorcelain(plumbing.getMappedIdentities()));
+    porcelain.setOriginId((plumbing.getOriginId()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    return porcelain;
+  }
+
+  public static GrantedAccountEntitlement convertGrantedAccountEntitlementToPlumbing(
+      com.strongdm.api.GrantedAccountEntitlement porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GrantedAccountEntitlement.Builder builder = GrantedAccountEntitlement.newBuilder();
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getLastAccessed() != null) {
+      builder.setLastAccessed(Plumbing.convertTimestampToPlumbing(porcelain.getLastAccessed()));
+    }
+    if (porcelain.getMappedIdentities() != null) {
+      builder.setMappedIdentities(
+          Plumbing.convertMappedIdentitiesToPlumbing(porcelain.getMappedIdentities()));
+    }
+    if (porcelain.getOriginId() != null) {
+      builder.setOriginId((porcelain.getOriginId()));
+    }
+    if (porcelain.getResourceId() != null) {
+      builder.setResourceId((porcelain.getResourceId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GrantedAccountEntitlement>
+      convertRepeatedGrantedAccountEntitlementToPorcelain(
+          Collection<GrantedAccountEntitlement> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GrantedAccountEntitlement>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGrantedAccountEntitlementToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GrantedAccountEntitlement> convertRepeatedGrantedAccountEntitlementToPlumbing(
+      Collection<com.strongdm.api.GrantedAccountEntitlement> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GrantedAccountEntitlement>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGrantedAccountEntitlementToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GrantedEntitlementKubernetesPrivileges
+      convertGrantedEntitlementKubernetesPrivilegesToPorcelain(
+          GrantedEntitlementKubernetesPrivileges plumbing) {
+    com.strongdm.api.GrantedEntitlementKubernetesPrivileges porcelain =
+        new com.strongdm.api.GrantedEntitlementKubernetesPrivileges();
+    porcelain.setGroups((plumbing.getGroupsList()));
+    return porcelain;
+  }
+
+  public static GrantedEntitlementKubernetesPrivileges
+      convertGrantedEntitlementKubernetesPrivilegesToPlumbing(
+          com.strongdm.api.GrantedEntitlementKubernetesPrivileges porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GrantedEntitlementKubernetesPrivileges.Builder builder =
+        GrantedEntitlementKubernetesPrivileges.newBuilder();
+    builder.addAllGroups((porcelain.getGroups()));
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GrantedEntitlementKubernetesPrivileges>
+      convertRepeatedGrantedEntitlementKubernetesPrivilegesToPorcelain(
+          Collection<GrantedEntitlementKubernetesPrivileges> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GrantedEntitlementKubernetesPrivileges>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGrantedEntitlementKubernetesPrivilegesToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GrantedEntitlementKubernetesPrivileges>
+      convertRepeatedGrantedEntitlementKubernetesPrivilegesToPlumbing(
+          Collection<com.strongdm.api.GrantedEntitlementKubernetesPrivileges> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GrantedEntitlementKubernetesPrivileges>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGrantedEntitlementKubernetesPrivilegesToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GrantedResourceEntitlement
+      convertGrantedResourceEntitlementToPorcelain(GrantedResourceEntitlement plumbing) {
+    com.strongdm.api.GrantedResourceEntitlement porcelain =
+        new com.strongdm.api.GrantedResourceEntitlement();
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setLastAccessed(Plumbing.convertTimestampToPorcelain(plumbing.getLastAccessed()));
+    porcelain.setMappedIdentities(
+        Plumbing.convertMappedIdentitiesToPorcelain(plumbing.getMappedIdentities()));
+    porcelain.setOriginId((plumbing.getOriginId()));
+    return porcelain;
+  }
+
+  public static GrantedResourceEntitlement convertGrantedResourceEntitlementToPlumbing(
+      com.strongdm.api.GrantedResourceEntitlement porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GrantedResourceEntitlement.Builder builder = GrantedResourceEntitlement.newBuilder();
+    if (porcelain.getAccountId() != null) {
+      builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getLastAccessed() != null) {
+      builder.setLastAccessed(Plumbing.convertTimestampToPlumbing(porcelain.getLastAccessed()));
+    }
+    if (porcelain.getMappedIdentities() != null) {
+      builder.setMappedIdentities(
+          Plumbing.convertMappedIdentitiesToPlumbing(porcelain.getMappedIdentities()));
+    }
+    if (porcelain.getOriginId() != null) {
+      builder.setOriginId((porcelain.getOriginId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GrantedResourceEntitlement>
+      convertRepeatedGrantedResourceEntitlementToPorcelain(
+          Collection<GrantedResourceEntitlement> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GrantedResourceEntitlement>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGrantedResourceEntitlementToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GrantedResourceEntitlement>
+      convertRepeatedGrantedResourceEntitlementToPlumbing(
+          Collection<com.strongdm.api.GrantedResourceEntitlement> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GrantedResourceEntitlement>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGrantedResourceEntitlementToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.GrantedRoleEntitlement convertGrantedRoleEntitlementToPorcelain(
+      GrantedRoleEntitlement plumbing) {
+    com.strongdm.api.GrantedRoleEntitlement porcelain =
+        new com.strongdm.api.GrantedRoleEntitlement();
+    porcelain.setGroupId((plumbing.getGroupId()));
+    porcelain.setLastAccessed(Plumbing.convertTimestampToPorcelain(plumbing.getLastAccessed()));
+    porcelain.setMappedIdentities(
+        Plumbing.convertMappedIdentitiesToPorcelain(plumbing.getMappedIdentities()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    return porcelain;
+  }
+
+  public static GrantedRoleEntitlement convertGrantedRoleEntitlementToPlumbing(
+      com.strongdm.api.GrantedRoleEntitlement porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GrantedRoleEntitlement.Builder builder = GrantedRoleEntitlement.newBuilder();
+    if (porcelain.getGroupId() != null) {
+      builder.setGroupId((porcelain.getGroupId()));
+    }
+    if (porcelain.getLastAccessed() != null) {
+      builder.setLastAccessed(Plumbing.convertTimestampToPlumbing(porcelain.getLastAccessed()));
+    }
+    if (porcelain.getMappedIdentities() != null) {
+      builder.setMappedIdentities(
+          Plumbing.convertMappedIdentitiesToPlumbing(porcelain.getMappedIdentities()));
+    }
+    if (porcelain.getResourceId() != null) {
+      builder.setResourceId((porcelain.getResourceId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GrantedRoleEntitlement>
+      convertRepeatedGrantedRoleEntitlementToPorcelain(
+          Collection<GrantedRoleEntitlement> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GrantedRoleEntitlement>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGrantedRoleEntitlementToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GrantedRoleEntitlement> convertRepeatedGrantedRoleEntitlementToPlumbing(
+      Collection<com.strongdm.api.GrantedRoleEntitlement> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GrantedRoleEntitlement>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGrantedRoleEntitlementToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.Greenplum convertGreenplumToPorcelain(Greenplum plumbing) {
     com.strongdm.api.Greenplum porcelain = new com.strongdm.api.Greenplum();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -15777,6 +15997,49 @@ public class Plumbing {
     }
     return porcelains.stream()
         .map(porcelain -> convertManagedSecretValidateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.MappedIdentities convertMappedIdentitiesToPorcelain(
+      MappedIdentities plumbing) {
+    com.strongdm.api.MappedIdentities porcelain = new com.strongdm.api.MappedIdentities();
+    porcelain.setKubernetes(
+        Plumbing.convertGrantedEntitlementKubernetesPrivilegesToPorcelain(
+            plumbing.getKubernetes()));
+    return porcelain;
+  }
+
+  public static MappedIdentities convertMappedIdentitiesToPlumbing(
+      com.strongdm.api.MappedIdentities porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MappedIdentities.Builder builder = MappedIdentities.newBuilder();
+    if (porcelain.getKubernetes() != null) {
+      builder.setKubernetes(
+          Plumbing.convertGrantedEntitlementKubernetesPrivilegesToPlumbing(
+              porcelain.getKubernetes()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.MappedIdentities> convertRepeatedMappedIdentitiesToPorcelain(
+      Collection<MappedIdentities> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.MappedIdentities>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertMappedIdentitiesToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MappedIdentities> convertRepeatedMappedIdentitiesToPlumbing(
+      Collection<com.strongdm.api.MappedIdentities> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<MappedIdentities>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertMappedIdentitiesToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

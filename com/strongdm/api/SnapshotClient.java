@@ -91,6 +91,27 @@ public class SnapshotClient {
     return this.parent.discoveryConnectors;
   }
   /**
+   * GrantedAccountEntitlements enumerates the resources to which an account has been granted
+   * access. The GrantedAccountEntitlements service is read-only.
+   */
+  public SnapshotGrantedAccountEntitlements grantedAccountEntitlements() {
+    return this.parent.grantedAccountEntitlements;
+  }
+  /**
+   * GrantedResourceEntitlements enumerates the accounts that have been granted access to a given
+   * resource. The GrantedResourceEntitlements service is read-only.
+   */
+  public SnapshotGrantedResourceEntitlements grantedResourceEntitlements() {
+    return this.parent.grantedResourceEntitlements;
+  }
+  /**
+   * GrantedRoleEntitlements enumerates the resources to which a role grants access. The
+   * GrantedRoleEntitlements service is read-only.
+   */
+  public SnapshotGrantedRoleEntitlements grantedRoleEntitlements() {
+    return this.parent.grantedRoleEntitlements;
+  }
+  /**
    * A Role has a list of access rules which determine which Resources the members of the Role have
    * access to. An Account can be a member of multiple Roles via AccountAttachments.
    */
