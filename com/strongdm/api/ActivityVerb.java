@@ -253,6 +253,7 @@ public final class ActivityVerb {
   public static final String SUSPENDED_USER_ENROLL_ATTEMPT_FROM_THE_UI =
       "attempt to enroll by a suspended user from the Admin UI";
   public static final String RESOURCE_LOCKED = "user locked a resource";
+  public static final String RESOURCE_LOCK_EXTENDED = "user extended a resource lock";
   public static final String RESOURCE_UNLOCKED = "user unlocked a resource";
   public static final String RESOURCE_FORCE_UNLOCKED = "admin force-unlocked a resource";
   public static final String RESOURCE_LOCK_REJECTED = "user lock rejected for a resource";
