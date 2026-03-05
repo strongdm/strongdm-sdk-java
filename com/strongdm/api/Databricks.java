@@ -17,6 +17,10 @@
 
 package com.strongdm.api;
 
+/**
+ * Databricks is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
 public class Databricks implements Resource {
   private String accessToken;
   /** Databricks Personal Access Token (PAT) */
