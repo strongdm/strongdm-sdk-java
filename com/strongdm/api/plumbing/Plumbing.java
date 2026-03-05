@@ -2514,6 +2514,7 @@ public class Plumbing {
   public static com.strongdm.api.AccountGrant convertAccountGrantToPorcelain(
       AccountGrant plumbing) {
     com.strongdm.api.AccountGrant porcelain = new com.strongdm.api.AccountGrant();
+    porcelain.setAccessRequestId((plumbing.getAccessRequestId()));
     porcelain.setAccessRule(Plumbing.convertAccessRuleToPorcelain(plumbing.getAccessRule()));
     porcelain.setAccountId((plumbing.getAccountId()));
     porcelain.setId((plumbing.getId()));
@@ -2529,6 +2530,9 @@ public class Plumbing {
       return null;
     }
     AccountGrant.Builder builder = AccountGrant.newBuilder();
+    if (porcelain.getAccessRequestId() != null) {
+      builder.setAccessRequestId((porcelain.getAccessRequestId()));
+    }
     if (porcelain.getAccessRule() != null) {
       builder.setAccessRule(Plumbing.convertAccessRuleToPlumbing(porcelain.getAccessRule()));
     }

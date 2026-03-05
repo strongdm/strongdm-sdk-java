@@ -8579,6 +8579,26 @@ public final class AccountGrantsPlumbing {
      */
     com.google.protobuf.ByteString
         getAccessRuleBytes();
+
+    /**
+     * <pre>
+     * The access request ID that created this AccountGrant, if any.
+     * </pre>
+     *
+     * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+     * @return The accessRequestId.
+     */
+    java.lang.String getAccessRequestId();
+    /**
+     * <pre>
+     * The access request ID that created this AccountGrant, if any.
+     * </pre>
+     *
+     * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessRequestId.
+     */
+    com.google.protobuf.ByteString
+        getAccessRequestIdBytes();
   }
   /**
    * <pre>
@@ -8601,6 +8621,7 @@ public final class AccountGrantsPlumbing {
       resourceId_ = "";
       accountId_ = "";
       accessRule_ = "";
+      accessRequestId_ = "";
     }
 
     @java.lang.Override
@@ -8681,6 +8702,12 @@ public final class AccountGrantsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               accessRule_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessRequestId_ = s;
               break;
             }
             default: {
@@ -8977,6 +9004,52 @@ public final class AccountGrantsPlumbing {
       }
     }
 
+    public static final int ACCESS_REQUEST_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object accessRequestId_;
+    /**
+     * <pre>
+     * The access request ID that created this AccountGrant, if any.
+     * </pre>
+     *
+     * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+     * @return The accessRequestId.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessRequestId() {
+      java.lang.Object ref = accessRequestId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessRequestId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The access request ID that created this AccountGrant, if any.
+     * </pre>
+     *
+     * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessRequestId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessRequestIdBytes() {
+      java.lang.Object ref = accessRequestId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessRequestId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9009,6 +9082,9 @@ public final class AccountGrantsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRule_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, accessRule_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRequestId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, accessRequestId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9037,6 +9113,9 @@ public final class AccountGrantsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRule_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, accessRule_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRequestId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, accessRequestId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9071,6 +9150,8 @@ public final class AccountGrantsPlumbing {
       }
       if (!getAccessRule()
           .equals(other.getAccessRule())) return false;
+      if (!getAccessRequestId()
+          .equals(other.getAccessRequestId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9098,6 +9179,8 @@ public final class AccountGrantsPlumbing {
       }
       hash = (37 * hash) + ACCESS_RULE_FIELD_NUMBER;
       hash = (53 * hash) + getAccessRule().hashCode();
+      hash = (37 * hash) + ACCESS_REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessRequestId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9255,6 +9338,8 @@ public final class AccountGrantsPlumbing {
         }
         accessRule_ = "";
 
+        accessRequestId_ = "";
+
         return this;
       }
 
@@ -9295,6 +9380,7 @@ public final class AccountGrantsPlumbing {
           result.validUntil_ = validUntilBuilder_.build();
         }
         result.accessRule_ = accessRule_;
+        result.accessRequestId_ = accessRequestId_;
         onBuilt();
         return result;
       }
@@ -9363,6 +9449,10 @@ public final class AccountGrantsPlumbing {
         }
         if (!other.getAccessRule().isEmpty()) {
           accessRule_ = other.accessRule_;
+          onChanged();
+        }
+        if (!other.getAccessRequestId().isEmpty()) {
+          accessRequestId_ = other.accessRequestId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -10087,6 +10177,102 @@ public final class AccountGrantsPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object accessRequestId_ = "";
+      /**
+       * <pre>
+       * The access request ID that created this AccountGrant, if any.
+       * </pre>
+       *
+       * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+       * @return The accessRequestId.
+       */
+      public java.lang.String getAccessRequestId() {
+        java.lang.Object ref = accessRequestId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessRequestId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The access request ID that created this AccountGrant, if any.
+       * </pre>
+       *
+       * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accessRequestId.
+       */
+      public com.google.protobuf.ByteString
+          getAccessRequestIdBytes() {
+        java.lang.Object ref = accessRequestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessRequestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The access request ID that created this AccountGrant, if any.
+       * </pre>
+       *
+       * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The accessRequestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRequestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessRequestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The access request ID that created this AccountGrant, if any.
+       * </pre>
+       *
+       * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessRequestId() {
+        
+        accessRequestId_ = getDefaultInstance().getAccessRequestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The access request ID that created this AccountGrant, if any.
+       * </pre>
+       *
+       * <code>string access_request_id = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accessRequestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessRequestId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10227,7 +10413,7 @@ public final class AccountGrantsPlumbing {
       "onseMetadata\0224\n\016account_grants\030\002 \003(\0132\020.v" +
       "1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit" +
       "\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\374\003\n\014" +
+      "\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\250\004\n\014" +
       "AccountGrant\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\013" +
       "resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nac" +
       "count_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022:\n\nstart" +
@@ -10239,25 +10425,26 @@ public final class AccountGrantsPlumbing {
       "_private\022\nAccessRule\362\363\263\007\032\n\014go_terraform\022" +
       "\nAccessRule\362\363\263\007\022\n\004java\022\nAccessRule\362\363\263\007!\n" +
       "\014json_gateway\022\021models.AccessRule\272\364\263\007\026acc" +
-      "essRuleDiffSuppress\320\364\263\007\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007" +
-      "\001*\322\363\263\007\023!terraform-provider2\253\004\n\rAccountGr" +
-      "ants\022s\n\006Create\022\035.v1.AccountGrantCreateRe" +
-      "quest\032\036.v1.AccountGrantCreateResponse\"*\202" +
-      "\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/v1/account-grant" +
-      "s\022n\n\003Get\022\032.v1.AccountGrantGetRequest\032\033.v" +
-      "1.AccountGrantGetResponse\".\202\371\263\007\010\242\363\263\007\003get" +
-      "\202\371\263\007\034\252\363\263\007\027/v1/account-grants/{id}\022z\n\006Del" +
-      "ete\022\035.v1.AccountGrantDeleteRequest\032\036.v1." +
-      "AccountGrantDeleteResponse\"1\202\371\263\007\013\242\363\263\007\006de" +
-      "lete\202\371\263\007\034\252\363\263\007\027/v1/account-grants/{id}\022l\n" +
-      "\004List\022\033.v1.AccountGrantListRequest\032\034.v1." +
-      "AccountGrantListResponse\")\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007\027\252\363\263\007\022/v1/account-grants\032K\312\371\263\007\021\302\371\263\007\014A" +
-      "ccountGrant\312\371\263\007\010\322\371\263\007\003ag-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030" +
-      "\312\371\263\007\023!terraform-providerBi\n\031com.strongdm" +
-      ".api.plumbingB\025AccountGrantsPlumbingZ5gi" +
-      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
-      "ernal/v1;v1b\006proto3"
+      "essRuleDiffSuppress\320\364\263\007\001\022*\n\021access_reque" +
+      "st_id\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:(\372\370\263\007#\250\363\263\007\001" +
+      "\322\363\263\007\001*\322\363\263\007\023!terraform-provider2\253\004\n\rAccou" +
+      "ntGrants\022s\n\006Create\022\035.v1.AccountGrantCrea" +
+      "teRequest\032\036.v1.AccountGrantCreateRespons" +
+      "e\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/v1/account-g" +
+      "rants\022n\n\003Get\022\032.v1.AccountGrantGetRequest" +
+      "\032\033.v1.AccountGrantGetResponse\".\202\371\263\007\010\242\363\263\007" +
+      "\003get\202\371\263\007\034\252\363\263\007\027/v1/account-grants/{id}\022z\n" +
+      "\006Delete\022\035.v1.AccountGrantDeleteRequest\032\036" +
+      ".v1.AccountGrantDeleteResponse\"1\202\371\263\007\013\242\363\263" +
+      "\007\006delete\202\371\263\007\034\252\363\263\007\027/v1/account-grants/{id" +
+      "}\022l\n\004List\022\033.v1.AccountGrantListRequest\032\034" +
+      ".v1.AccountGrantListResponse\")\202\371\263\007\010\242\363\263\007\003" +
+      "get\202\371\263\007\027\252\363\263\007\022/v1/account-grants\032K\312\371\263\007\021\302\371" +
+      "\263\007\014AccountGrant\312\371\263\007\010\322\371\263\007\003ag-\312\371\263\007\006\312\371\263\007\001*\312" +
+      "\371\263\007\030\312\371\263\007\023!terraform-providerBi\n\031com.stro" +
+      "ngdm.api.plumbingB\025AccountGrantsPlumbing" +
+      "Z5github.com/strongdm/strongdm-sdk-go/v3" +
+      "/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10319,7 +10506,7 @@ public final class AccountGrantsPlumbing {
     internal_static_v1_AccountGrant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountGrant_descriptor,
-        new java.lang.String[] { "Id", "ResourceId", "AccountId", "StartFrom", "ValidUntil", "AccessRule", });
+        new java.lang.String[] { "Id", "ResourceId", "AccountId", "StartFrom", "ValidUntil", "AccessRule", "AccessRequestId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

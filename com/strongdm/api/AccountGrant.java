@@ -24,6 +24,16 @@ import java.util.Date;
  * connect to that resource.
  */
 public class AccountGrant {
+  private String accessRequestId;
+  /** The access request ID that created this AccountGrant, if any. */
+  public String getAccessRequestId() {
+    return this.accessRequestId;
+  }
+  /** The access request ID that created this AccountGrant, if any. */
+  public void setAccessRequestId(String in) {
+    this.accessRequestId = in;
+  }
+
   private AccessRule accessRule;
   /** The access rule associated with this AccountGrant. */
   public AccessRule getAccessRule() {
