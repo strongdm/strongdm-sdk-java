@@ -326,6 +326,10 @@ public final class ResourceTypePlumbing {
      */
     RESOURCE_TYPE_KUBERNETES_USER_IMPERSONATION(812),
     /**
+     * <code>RESOURCE_TYPE_MCP_NO_AUTH = 4703;</code>
+     */
+    RESOURCE_TYPE_MCP_NO_AUTH(4703),
+    /**
      * <code>RESOURCE_TYPE_MCP = 4700;</code>
      */
     RESOURCE_TYPE_MCP(4700),
@@ -333,10 +337,6 @@ public final class ResourceTypePlumbing {
      * <code>RESOURCE_TYPE_MCPDCR = 4701;</code>
      */
     RESOURCE_TYPE_MCPDCR(4701),
-    /**
-     * <code>RESOURCE_TYPE_MCP_NO_AUTH = 4703;</code>
-     */
-    RESOURCE_TYPE_MCP_NO_AUTH(4703),
     /**
      * <code>RESOURCE_TYPE_MCPPAT = 4702;</code>
      */
@@ -825,6 +825,10 @@ public final class ResourceTypePlumbing {
      */
     public static final int RESOURCE_TYPE_KUBERNETES_USER_IMPERSONATION_VALUE = 812;
     /**
+     * <code>RESOURCE_TYPE_MCP_NO_AUTH = 4703;</code>
+     */
+    public static final int RESOURCE_TYPE_MCP_NO_AUTH_VALUE = 4703;
+    /**
      * <code>RESOURCE_TYPE_MCP = 4700;</code>
      */
     public static final int RESOURCE_TYPE_MCP_VALUE = 4700;
@@ -832,10 +836,6 @@ public final class ResourceTypePlumbing {
      * <code>RESOURCE_TYPE_MCPDCR = 4701;</code>
      */
     public static final int RESOURCE_TYPE_MCPDCR_VALUE = 4701;
-    /**
-     * <code>RESOURCE_TYPE_MCP_NO_AUTH = 4703;</code>
-     */
-    public static final int RESOURCE_TYPE_MCP_NO_AUTH_VALUE = 4703;
     /**
      * <code>RESOURCE_TYPE_MCPPAT = 4702;</code>
      */
@@ -1127,9 +1127,9 @@ public final class ResourceTypePlumbing {
         case 804: return RESOURCE_TYPE_KUBERNETES_SERVICE_ACCOUNT;
         case 808: return RESOURCE_TYPE_KUBERNETES_SERVICE_ACCOUNT_USER_IMPERSONATION;
         case 812: return RESOURCE_TYPE_KUBERNETES_USER_IMPERSONATION;
+        case 4703: return RESOURCE_TYPE_MCP_NO_AUTH;
         case 4700: return RESOURCE_TYPE_MCP;
         case 4701: return RESOURCE_TYPE_MCPDCR;
-        case 4703: return RESOURCE_TYPE_MCP_NO_AUTH;
         case 4702: return RESOURCE_TYPE_MCPPAT;
         case 1106: return RESOURCE_TYPE_MTLS_MY_SQL;
         case 1306: return RESOURCE_TYPE_MTLS_POSTGRES;
@@ -1310,9 +1310,9 @@ public final class ResourceTypePlumbing {
       "ICE_ACCOUNT\020\244\006\022@\n;RESOURCE_TYPE_KUBERNET" +
       "ES_SERVICE_ACCOUNT_USER_IMPERSONATION\020\250\006" +
       "\0220\n+RESOURCE_TYPE_KUBERNETES_USER_IMPERS" +
-      "ONATION\020\254\006\022\026\n\021RESOURCE_TYPE_MCP\020\334$\022\031\n\024RE" +
-      "SOURCE_TYPE_MCPDCR\020\335$\022\036\n\031RESOURCE_TYPE_M" +
-      "CP_NO_AUTH\020\337$\022\031\n\024RESOURCE_TYPE_MCPPAT\020\336$" +
+      "ONATION\020\254\006\022\036\n\031RESOURCE_TYPE_MCP_NO_AUTH\020" +
+      "\337$\022\026\n\021RESOURCE_TYPE_MCP\020\334$\022\031\n\024RESOURCE_T" +
+      "YPE_MCPDCR\020\335$\022\031\n\024RESOURCE_TYPE_MCPPAT\020\336$" +
       "\022\036\n\031RESOURCE_TYPE_MTLS_MY_SQL\020\322\010\022 \n\033RESO" +
       "URCE_TYPE_MTLS_POSTGRES\020\232\n\022\030\n\023RESOURCE_T" +
       "YPE_MARIA\020\317\010\022\034\n\027RESOURCE_TYPE_MEMCACHED\020" +

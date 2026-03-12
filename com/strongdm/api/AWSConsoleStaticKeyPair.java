@@ -244,4 +244,14 @@ public class AWSConsoleStaticKeyPair implements Resource {
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
   }
+
+  private boolean useHttps;
+  /** This option enforces HTTPS on the client, not resource connection */
+  public boolean getUseHttps() {
+    return this.useHttps;
+  }
+  /** This option enforces HTTPS on the client, not resource connection */
+  public void setUseHttps(boolean in) {
+    this.useHttps = in;
+  }
 }

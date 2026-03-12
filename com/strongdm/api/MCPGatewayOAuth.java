@@ -17,11 +17,7 @@
 
 package com.strongdm.api;
 
-/**
- * MCP is currently unstable, and its API may change, or it may be removed, without a major version
- * bump.
- */
-public class MCP implements Resource {
+public class MCPGatewayOAuth implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for

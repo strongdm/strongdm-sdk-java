@@ -21760,7 +21760,7 @@ public final class DiscoveryConnectorsPlumbing {
       "\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001\022.\n\020workload_pool_id" +
       "\030\033 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\312\363\263\007\005\210\364\263\007\001:S\372\370\263\007N\250\363\263\007\001" +
       "\312\363\263\0076\302\364\263\007\031\n\022terraform-provider\022\003gcp\302\364\263\007\023" +
-      "\n\014json_gateway\022\003gcp\322\363\263\007\001*\322\363\263\007\003cli2\327\004\n\023Di" +
+      "\n\014json_gateway\022\003gcp\322\363\263\007\001*\322\363\263\007\003cli2\334\004\n\023Di" +
       "scoveryConnectors\022i\n\006Create\022\032.v1.Connect" +
       "orCreateRequest\032\033.v1.ConnectorCreateResp" +
       "onse\"&\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\023\252\363\263\007\016/v1/connec" +
@@ -21774,12 +21774,12 @@ public final class DiscoveryConnectorsPlumbing {
       "onse\"-\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\030\252\363\263\007\023/v1/conn" +
       "ectors/{id}\022b\n\004List\022\030.v1.ConnectorListRe" +
       "quest\032\031.v1.ConnectorListResponse\"%\202\371\263\007\010\242" +
-      "\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/connectors\032*\312\371\263\007%\302\371" +
-      "\263\007\tConnector\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\004con-B\207\001\n\031" +
-      "com.strongdm.api.plumbingB\033DiscoveryConn" +
-      "ectorsPlumbingZ5github.com/strongdm/stro" +
-      "ngdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*" +
-      "\302\222\264\007\010\242\214\264\007\003clib\006proto3"
+      "\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/connectors\032/\312\371\263\007*\302\371" +
+      "\263\007\tConnector\312\371\263\007\001*\312\371\263\007\003cli\322\371\263\007\004con-\350\371\263\007\001" +
+      "B\207\001\n\031com.strongdm.api.plumbingB\033Discover" +
+      "yConnectorsPlumbingZ5github.com/strongdm" +
+      "/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242" +
+      "\214\264\007\001*\302\222\264\007\010\242\214\264\007\003clib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -199,6 +199,16 @@ public class HTTPNoAuth implements Resource {
     this.tags.putAll(in);
   }
 
+  private boolean tlsRequired;
+  /** This option enforces HTTPS on the client, not resource connection. */
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
+  }
+  /** This option enforces HTTPS on the client, not resource connection. */
+  public void setTlsRequired(boolean in) {
+    this.tlsRequired = in;
+  }
+
   private String url;
   /** The base address of your website without the path. */
   public String getUrl() {

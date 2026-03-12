@@ -3727,15 +3727,15 @@ public final class DiscoveryPlumbing {
       "created_at\030\005 \001(\0132\032.google.protobuf.Times" +
       "tampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\006 \001(\0132\032.g" +
       "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\036\372\370" +
-      "\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private2\230\001\n\013Discove" +
+      "\263\007\005\250\363\263\007\001\372\370\263\007\017\322\363\263\007\ngo_private2\242\001\n\013Discove" +
       "ryV2\022^\n\004List\022\030.v1.DiscoveryListRequest\032\031" +
       ".v1.DiscoveryListResponse\"!\202\371\263\007\010\242\363\263\007\003get" +
-      "\202\371\263\007\017\252\363\263\007\n/v1/assets\032)\312\371\263\007\020\302\371\263\007\013Discover" +
-      "yV2\312\371\263\007\017\312\371\263\007\ngo_privateB\226\001\n\031com.strongdm" +
-      ".api.plumbingB\021DiscoveryPlumbingZ5github" +
-      ".com/strongdm/strongdm-sdk-go/v3/interna" +
-      "l/v1;v1\302\222\264\007\017\242\214\264\007\ngo_private\302\222\264\007\030\242\214\264\007\023!te" +
-      "rraform-providerb\006proto3"
+      "\202\371\263\007\017\252\363\263\007\n/v1/assets\0323\312\371\263\007\020\302\371\263\007\013Discover" +
+      "yV2\312\371\263\007\017\312\371\263\007\ngo_private\312\371\263\007\005\350\371\263\007\001B\226\001\n\031co" +
+      "m.strongdm.api.plumbingB\021DiscoveryPlumbi" +
+      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
+      "v3/internal/v1;v1\302\222\264\007\017\242\214\264\007\ngo_private\302\222\264" +
+      "\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

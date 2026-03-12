@@ -18,10 +18,10 @@
 package com.strongdm.api;
 
 /**
- * MCPDCR is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
+ * MCPGatewayOAuthDCR is currently unstable, and its API may change, or it may be removed, without a
+ * major version bump.
  */
-public class MCPDCR implements Resource {
+public class MCPGatewayOAuthDCR implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for

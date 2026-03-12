@@ -13494,7 +13494,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
      * @return Whether the principalAll field is set.
      */
     boolean hasPrincipalAll();
@@ -13503,7 +13503,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
      * @return The principalAll.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getPrincipalAll();
@@ -13512,7 +13512,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder getPrincipalAllOrBuilder();
 
@@ -13521,7 +13521,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
      * @return Whether the principalByIds field is set.
      */
     boolean hasPrincipalByIds();
@@ -13530,7 +13530,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
      * @return The principalByIds.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getPrincipalByIds();
@@ -13539,7 +13539,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder();
 
@@ -13548,7 +13548,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
      * @return Whether the resourcesAll field is set.
      */
     boolean hasResourcesAll();
@@ -13557,7 +13557,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
      * @return The resourcesAll.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getResourcesAll();
@@ -13566,7 +13566,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder getResourcesAllOrBuilder();
 
@@ -13575,7 +13575,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
      * @return Whether the resourceByIds field is set.
      */
     boolean hasResourceByIds();
@@ -13584,7 +13584,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
      * @return The resourceByIds.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getResourceByIds();
@@ -13593,7 +13593,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder getResourceByIdsOrBuilder();
 
@@ -13602,7 +13602,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return Whether the resourceByTypeAndTags field is set.
      */
     boolean hasResourceByTypeAndTags();
@@ -13611,7 +13611,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return The resourceByTypeAndTags.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getResourceByTypeAndTags();
@@ -13620,7 +13620,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder();
 
@@ -13629,7 +13629,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return Whether the resourceByTypeTagsAndKubernetesGroups field is set.
      */
     boolean hasResourceByTypeTagsAndKubernetesGroups();
@@ -13638,7 +13638,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return The resourceByTypeTagsAndKubernetesGroups.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups();
@@ -13647,7 +13647,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder();
 
@@ -13656,7 +13656,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return Whether the resourceByOktaWithGroups field is set.
      */
     boolean hasResourceByOktaWithGroups();
@@ -13665,7 +13665,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return The resourceByOktaWithGroups.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getResourceByOktaWithGroups();
@@ -13674,7 +13674,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder();
 
@@ -13683,7 +13683,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return Whether the resourceByEntraWithGroups field is set.
      */
     boolean hasResourceByEntraWithGroups();
@@ -13692,7 +13692,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return The resourceByEntraWithGroups.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getResourceByEntraWithGroups();
@@ -13701,7 +13701,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder();
 
@@ -13710,7 +13710,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
      * @return Whether the conditionMfa field is set.
      */
     boolean hasConditionMfa();
@@ -13719,7 +13719,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
      * @return The conditionMfa.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getConditionMfa();
@@ -13728,7 +13728,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder getConditionMfaOrBuilder();
 
@@ -13737,7 +13737,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
      * @return Whether the conditionDeviceTrust field is set.
      */
     boolean hasConditionDeviceTrust();
@@ -13746,7 +13746,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
      * @return The conditionDeviceTrust.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getConditionDeviceTrust();
@@ -13755,7 +13755,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder();
 
@@ -13764,7 +13764,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
      * @return Whether the conditionLocation field is set.
      */
     boolean hasConditionLocation();
@@ -13773,7 +13773,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
      * @return The conditionLocation.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getConditionLocation();
@@ -13782,7 +13782,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder getConditionLocationOrBuilder();
 
@@ -13791,7 +13791,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
      * @return Whether the conditionIp field is set.
      */
     boolean hasConditionIp();
@@ -13800,7 +13800,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
      * @return The conditionIp.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getConditionIp();
@@ -13809,7 +13809,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder getConditionIpOrBuilder();
 
@@ -13818,7 +13818,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
      * @return Whether the conditionTime field is set.
      */
     boolean hasConditionTime();
@@ -13827,7 +13827,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
      * @return The conditionTime.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getConditionTime();
@@ -13836,7 +13836,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder getConditionTimeOrBuilder();
 
@@ -13845,7 +13845,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return Whether the conditionApprovalFlow field is set.
      */
     boolean hasConditionApprovalFlow();
@@ -13854,7 +13854,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return The conditionApprovalFlow.
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getConditionApprovalFlow();
@@ -13863,15 +13863,17 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder();
+
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.KindCase getKindCase();
   }
   /**
    * <pre>
    * AuthorizationPolicyItem represents a single rule item in an authorization policy.
-   * Only one of the fields should be set: one principal scope, one resource scope, or
-   * one condition. Setting multiple fields on a single item is invalid.
+   * Exactly one variant should be set: one principal scope, one resource scope, or
+   * one condition.
    * Enum constants for item fields are defined in the following locations:
    *   - Resource types (resource_by_type_and_tags.type): see ResourceType in resourcetypes.proto
    *   - Device trust operators and levels: AuthorizationPolicyDeviceTrust* enums below
@@ -13927,184 +13929,198 @@ public final class AuthorizationPoliciesPlumbing {
               break;
             case 10: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder subBuilder = null;
-              if (principalAll_ != null) {
-                subBuilder = principalAll_.toBuilder();
+              if (kindCase_ == 1) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_).toBuilder();
               }
-              principalAll_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(principalAll_);
-                principalAll_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 1;
               break;
             }
             case 18: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder subBuilder = null;
-              if (principalByIds_ != null) {
-                subBuilder = principalByIds_.toBuilder();
+              if (kindCase_ == 2) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_).toBuilder();
               }
-              principalByIds_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(principalByIds_);
-                principalByIds_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 2;
               break;
             }
             case 26: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder subBuilder = null;
-              if (resourcesAll_ != null) {
-                subBuilder = resourcesAll_.toBuilder();
+              if (kindCase_ == 3) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_).toBuilder();
               }
-              resourcesAll_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(resourcesAll_);
-                resourcesAll_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 3;
               break;
             }
             case 34: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder subBuilder = null;
-              if (resourceByIds_ != null) {
-                subBuilder = resourceByIds_.toBuilder();
+              if (kindCase_ == 4) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_).toBuilder();
               }
-              resourceByIds_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(resourceByIds_);
-                resourceByIds_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 4;
               break;
             }
             case 42: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder subBuilder = null;
-              if (resourceByTypeAndTags_ != null) {
-                subBuilder = resourceByTypeAndTags_.toBuilder();
+              if (kindCase_ == 5) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_).toBuilder();
               }
-              resourceByTypeAndTags_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(resourceByTypeAndTags_);
-                resourceByTypeAndTags_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 5;
               break;
             }
             case 50: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder subBuilder = null;
-              if (resourceByTypeTagsAndKubernetesGroups_ != null) {
-                subBuilder = resourceByTypeTagsAndKubernetesGroups_.toBuilder();
+              if (kindCase_ == 6) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_).toBuilder();
               }
-              resourceByTypeTagsAndKubernetesGroups_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(resourceByTypeTagsAndKubernetesGroups_);
-                resourceByTypeTagsAndKubernetesGroups_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 6;
               break;
             }
             case 58: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder subBuilder = null;
-              if (resourceByOktaWithGroups_ != null) {
-                subBuilder = resourceByOktaWithGroups_.toBuilder();
+              if (kindCase_ == 7) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_).toBuilder();
               }
-              resourceByOktaWithGroups_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(resourceByOktaWithGroups_);
-                resourceByOktaWithGroups_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 7;
               break;
             }
             case 66: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder subBuilder = null;
-              if (resourceByEntraWithGroups_ != null) {
-                subBuilder = resourceByEntraWithGroups_.toBuilder();
+              if (kindCase_ == 8) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_).toBuilder();
               }
-              resourceByEntraWithGroups_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(resourceByEntraWithGroups_);
-                resourceByEntraWithGroups_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 8;
               break;
             }
             case 74: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder subBuilder = null;
-              if (conditionMfa_ != null) {
-                subBuilder = conditionMfa_.toBuilder();
+              if (kindCase_ == 9) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_).toBuilder();
               }
-              conditionMfa_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(conditionMfa_);
-                conditionMfa_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 9;
               break;
             }
             case 82: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder subBuilder = null;
-              if (conditionDeviceTrust_ != null) {
-                subBuilder = conditionDeviceTrust_.toBuilder();
+              if (kindCase_ == 10) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_).toBuilder();
               }
-              conditionDeviceTrust_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(conditionDeviceTrust_);
-                conditionDeviceTrust_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 10;
               break;
             }
             case 90: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder subBuilder = null;
-              if (conditionLocation_ != null) {
-                subBuilder = conditionLocation_.toBuilder();
+              if (kindCase_ == 11) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_).toBuilder();
               }
-              conditionLocation_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(conditionLocation_);
-                conditionLocation_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 11;
               break;
             }
             case 98: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder subBuilder = null;
-              if (conditionIp_ != null) {
-                subBuilder = conditionIp_.toBuilder();
+              if (kindCase_ == 12) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_).toBuilder();
               }
-              conditionIp_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(conditionIp_);
-                conditionIp_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 12;
               break;
             }
             case 106: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder subBuilder = null;
-              if (conditionTime_ != null) {
-                subBuilder = conditionTime_.toBuilder();
+              if (kindCase_ == 13) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_).toBuilder();
               }
-              conditionTime_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(conditionTime_);
-                conditionTime_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 13;
               break;
             }
             case 114: {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder subBuilder = null;
-              if (conditionApprovalFlow_ != null) {
-                subBuilder = conditionApprovalFlow_.toBuilder();
+              if (kindCase_ == 14) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_).toBuilder();
               }
-              conditionApprovalFlow_ = input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.parser(), extensionRegistry);
+              kind_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(conditionApprovalFlow_);
-                conditionApprovalFlow_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_);
+                kind_ = subBuilder.buildPartial();
               }
-
+              kindCase_ = 14;
               break;
             }
             default: {
@@ -14141,536 +14157,671 @@ public final class AuthorizationPoliciesPlumbing {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder.class);
     }
 
+    private int kindCase_ = 0;
+    private java.lang.Object kind_;
+    public enum KindCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PRINCIPAL_ALL(1),
+      PRINCIPAL_BY_IDS(2),
+      RESOURCES_ALL(3),
+      RESOURCE_BY_IDS(4),
+      RESOURCE_BY_TYPE_AND_TAGS(5),
+      RESOURCE_BY_TYPE_TAGS_AND_KUBERNETES_GROUPS(6),
+      RESOURCE_BY_OKTA_WITH_GROUPS(7),
+      RESOURCE_BY_ENTRA_WITH_GROUPS(8),
+      CONDITION_MFA(9),
+      CONDITION_DEVICE_TRUST(10),
+      CONDITION_LOCATION(11),
+      CONDITION_IP(12),
+      CONDITION_TIME(13),
+      CONDITION_APPROVAL_FLOW(14),
+      KIND_NOT_SET(0);
+      private final int value;
+      private KindCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static KindCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static KindCase forNumber(int value) {
+        switch (value) {
+          case 1: return PRINCIPAL_ALL;
+          case 2: return PRINCIPAL_BY_IDS;
+          case 3: return RESOURCES_ALL;
+          case 4: return RESOURCE_BY_IDS;
+          case 5: return RESOURCE_BY_TYPE_AND_TAGS;
+          case 6: return RESOURCE_BY_TYPE_TAGS_AND_KUBERNETES_GROUPS;
+          case 7: return RESOURCE_BY_OKTA_WITH_GROUPS;
+          case 8: return RESOURCE_BY_ENTRA_WITH_GROUPS;
+          case 9: return CONDITION_MFA;
+          case 10: return CONDITION_DEVICE_TRUST;
+          case 11: return CONDITION_LOCATION;
+          case 12: return CONDITION_IP;
+          case 13: return CONDITION_TIME;
+          case 14: return CONDITION_APPROVAL_FLOW;
+          case 0: return KIND_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public KindCase
+    getKindCase() {
+      return KindCase.forNumber(
+          kindCase_);
+    }
+
     public static final int PRINCIPAL_ALL_FIELD_NUMBER = 1;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll principalAll_;
     /**
      * <pre>
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
      * @return Whether the principalAll field is set.
      */
     @java.lang.Override
     public boolean hasPrincipalAll() {
-      return principalAll_ != null;
+      return kindCase_ == 1;
     }
     /**
      * <pre>
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
      * @return The principalAll.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getPrincipalAll() {
-      return principalAll_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance() : principalAll_;
+      if (kindCase_ == 1) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder getPrincipalAllOrBuilder() {
-      return getPrincipalAll();
+      if (kindCase_ == 1) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
     }
 
     public static final int PRINCIPAL_BY_IDS_FIELD_NUMBER = 2;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds principalByIds_;
     /**
      * <pre>
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
      * @return Whether the principalByIds field is set.
      */
     @java.lang.Override
     public boolean hasPrincipalByIds() {
-      return principalByIds_ != null;
+      return kindCase_ == 2;
     }
     /**
      * <pre>
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
      * @return The principalByIds.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getPrincipalByIds() {
-      return principalByIds_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance() : principalByIds_;
+      if (kindCase_ == 2) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder() {
-      return getPrincipalByIds();
+      if (kindCase_ == 2) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
     }
 
     public static final int RESOURCES_ALL_FIELD_NUMBER = 3;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll resourcesAll_;
     /**
      * <pre>
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
      * @return Whether the resourcesAll field is set.
      */
     @java.lang.Override
     public boolean hasResourcesAll() {
-      return resourcesAll_ != null;
+      return kindCase_ == 3;
     }
     /**
      * <pre>
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
      * @return The resourcesAll.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getResourcesAll() {
-      return resourcesAll_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance() : resourcesAll_;
+      if (kindCase_ == 3) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder getResourcesAllOrBuilder() {
-      return getResourcesAll();
+      if (kindCase_ == 3) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_IDS_FIELD_NUMBER = 4;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds resourceByIds_;
     /**
      * <pre>
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
      * @return Whether the resourceByIds field is set.
      */
     @java.lang.Override
     public boolean hasResourceByIds() {
-      return resourceByIds_ != null;
+      return kindCase_ == 4;
     }
     /**
      * <pre>
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
      * @return The resourceByIds.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getResourceByIds() {
-      return resourceByIds_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance() : resourceByIds_;
+      if (kindCase_ == 4) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder getResourceByIdsOrBuilder() {
-      return getResourceByIds();
+      if (kindCase_ == 4) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_TYPE_AND_TAGS_FIELD_NUMBER = 5;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags resourceByTypeAndTags_;
     /**
      * <pre>
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return Whether the resourceByTypeAndTags field is set.
      */
     @java.lang.Override
     public boolean hasResourceByTypeAndTags() {
-      return resourceByTypeAndTags_ != null;
+      return kindCase_ == 5;
     }
     /**
      * <pre>
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return The resourceByTypeAndTags.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getResourceByTypeAndTags() {
-      return resourceByTypeAndTags_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance() : resourceByTypeAndTags_;
+      if (kindCase_ == 5) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder() {
-      return getResourceByTypeAndTags();
+      if (kindCase_ == 5) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_TYPE_TAGS_AND_KUBERNETES_GROUPS_FIELD_NUMBER = 6;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resourceByTypeTagsAndKubernetesGroups_;
     /**
      * <pre>
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return Whether the resourceByTypeTagsAndKubernetesGroups field is set.
      */
     @java.lang.Override
     public boolean hasResourceByTypeTagsAndKubernetesGroups() {
-      return resourceByTypeTagsAndKubernetesGroups_ != null;
+      return kindCase_ == 6;
     }
     /**
      * <pre>
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return The resourceByTypeTagsAndKubernetesGroups.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups() {
-      return resourceByTypeTagsAndKubernetesGroups_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance() : resourceByTypeTagsAndKubernetesGroups_;
+      if (kindCase_ == 6) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder() {
-      return getResourceByTypeTagsAndKubernetesGroups();
+      if (kindCase_ == 6) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_OKTA_WITH_GROUPS_FIELD_NUMBER = 7;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups resourceByOktaWithGroups_;
     /**
      * <pre>
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return Whether the resourceByOktaWithGroups field is set.
      */
     @java.lang.Override
     public boolean hasResourceByOktaWithGroups() {
-      return resourceByOktaWithGroups_ != null;
+      return kindCase_ == 7;
     }
     /**
      * <pre>
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return The resourceByOktaWithGroups.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getResourceByOktaWithGroups() {
-      return resourceByOktaWithGroups_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance() : resourceByOktaWithGroups_;
+      if (kindCase_ == 7) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
     }
     /**
      * <pre>
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder() {
-      return getResourceByOktaWithGroups();
+      if (kindCase_ == 7) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_ENTRA_WITH_GROUPS_FIELD_NUMBER = 8;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups resourceByEntraWithGroups_;
     /**
      * <pre>
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return Whether the resourceByEntraWithGroups field is set.
      */
     @java.lang.Override
     public boolean hasResourceByEntraWithGroups() {
-      return resourceByEntraWithGroups_ != null;
+      return kindCase_ == 8;
     }
     /**
      * <pre>
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return The resourceByEntraWithGroups.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getResourceByEntraWithGroups() {
-      return resourceByEntraWithGroups_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance() : resourceByEntraWithGroups_;
+      if (kindCase_ == 8) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
     }
     /**
      * <pre>
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder() {
-      return getResourceByEntraWithGroups();
+      if (kindCase_ == 8) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
     }
 
     public static final int CONDITION_MFA_FIELD_NUMBER = 9;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA conditionMfa_;
     /**
      * <pre>
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
      * @return Whether the conditionMfa field is set.
      */
     @java.lang.Override
     public boolean hasConditionMfa() {
-      return conditionMfa_ != null;
+      return kindCase_ == 9;
     }
     /**
      * <pre>
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
      * @return The conditionMfa.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getConditionMfa() {
-      return conditionMfa_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance() : conditionMfa_;
+      if (kindCase_ == 9) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
     }
     /**
      * <pre>
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder getConditionMfaOrBuilder() {
-      return getConditionMfa();
+      if (kindCase_ == 9) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
     }
 
     public static final int CONDITION_DEVICE_TRUST_FIELD_NUMBER = 10;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust conditionDeviceTrust_;
     /**
      * <pre>
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
      * @return Whether the conditionDeviceTrust field is set.
      */
     @java.lang.Override
     public boolean hasConditionDeviceTrust() {
-      return conditionDeviceTrust_ != null;
+      return kindCase_ == 10;
     }
     /**
      * <pre>
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
      * @return The conditionDeviceTrust.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getConditionDeviceTrust() {
-      return conditionDeviceTrust_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance() : conditionDeviceTrust_;
+      if (kindCase_ == 10) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
     }
     /**
      * <pre>
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder() {
-      return getConditionDeviceTrust();
+      if (kindCase_ == 10) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
     }
 
     public static final int CONDITION_LOCATION_FIELD_NUMBER = 11;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation conditionLocation_;
     /**
      * <pre>
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
      * @return Whether the conditionLocation field is set.
      */
     @java.lang.Override
     public boolean hasConditionLocation() {
-      return conditionLocation_ != null;
+      return kindCase_ == 11;
     }
     /**
      * <pre>
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
      * @return The conditionLocation.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getConditionLocation() {
-      return conditionLocation_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance() : conditionLocation_;
+      if (kindCase_ == 11) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
     }
     /**
      * <pre>
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder getConditionLocationOrBuilder() {
-      return getConditionLocation();
+      if (kindCase_ == 11) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
     }
 
     public static final int CONDITION_IP_FIELD_NUMBER = 12;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP conditionIp_;
     /**
      * <pre>
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
      * @return Whether the conditionIp field is set.
      */
     @java.lang.Override
     public boolean hasConditionIp() {
-      return conditionIp_ != null;
+      return kindCase_ == 12;
     }
     /**
      * <pre>
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
      * @return The conditionIp.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getConditionIp() {
-      return conditionIp_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance() : conditionIp_;
+      if (kindCase_ == 12) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
     }
     /**
      * <pre>
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder getConditionIpOrBuilder() {
-      return getConditionIp();
+      if (kindCase_ == 12) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
     }
 
     public static final int CONDITION_TIME_FIELD_NUMBER = 13;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime conditionTime_;
     /**
      * <pre>
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
      * @return Whether the conditionTime field is set.
      */
     @java.lang.Override
     public boolean hasConditionTime() {
-      return conditionTime_ != null;
+      return kindCase_ == 13;
     }
     /**
      * <pre>
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
      * @return The conditionTime.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getConditionTime() {
-      return conditionTime_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance() : conditionTime_;
+      if (kindCase_ == 13) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
     }
     /**
      * <pre>
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder getConditionTimeOrBuilder() {
-      return getConditionTime();
+      if (kindCase_ == 13) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
     }
 
     public static final int CONDITION_APPROVAL_FLOW_FIELD_NUMBER = 14;
-    private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow conditionApprovalFlow_;
     /**
      * <pre>
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return Whether the conditionApprovalFlow field is set.
      */
     @java.lang.Override
     public boolean hasConditionApprovalFlow() {
-      return conditionApprovalFlow_ != null;
+      return kindCase_ == 14;
     }
     /**
      * <pre>
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return The conditionApprovalFlow.
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getConditionApprovalFlow() {
-      return conditionApprovalFlow_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance() : conditionApprovalFlow_;
+      if (kindCase_ == 14) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
     }
     /**
      * <pre>
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
      */
     @java.lang.Override
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder() {
-      return getConditionApprovalFlow();
+      if (kindCase_ == 14) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14687,47 +14838,47 @@ public final class AuthorizationPoliciesPlumbing {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (principalAll_ != null) {
-        output.writeMessage(1, getPrincipalAll());
+      if (kindCase_ == 1) {
+        output.writeMessage(1, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_);
       }
-      if (principalByIds_ != null) {
-        output.writeMessage(2, getPrincipalByIds());
+      if (kindCase_ == 2) {
+        output.writeMessage(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_);
       }
-      if (resourcesAll_ != null) {
-        output.writeMessage(3, getResourcesAll());
+      if (kindCase_ == 3) {
+        output.writeMessage(3, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_);
       }
-      if (resourceByIds_ != null) {
-        output.writeMessage(4, getResourceByIds());
+      if (kindCase_ == 4) {
+        output.writeMessage(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_);
       }
-      if (resourceByTypeAndTags_ != null) {
-        output.writeMessage(5, getResourceByTypeAndTags());
+      if (kindCase_ == 5) {
+        output.writeMessage(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_);
       }
-      if (resourceByTypeTagsAndKubernetesGroups_ != null) {
-        output.writeMessage(6, getResourceByTypeTagsAndKubernetesGroups());
+      if (kindCase_ == 6) {
+        output.writeMessage(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_);
       }
-      if (resourceByOktaWithGroups_ != null) {
-        output.writeMessage(7, getResourceByOktaWithGroups());
+      if (kindCase_ == 7) {
+        output.writeMessage(7, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_);
       }
-      if (resourceByEntraWithGroups_ != null) {
-        output.writeMessage(8, getResourceByEntraWithGroups());
+      if (kindCase_ == 8) {
+        output.writeMessage(8, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_);
       }
-      if (conditionMfa_ != null) {
-        output.writeMessage(9, getConditionMfa());
+      if (kindCase_ == 9) {
+        output.writeMessage(9, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_);
       }
-      if (conditionDeviceTrust_ != null) {
-        output.writeMessage(10, getConditionDeviceTrust());
+      if (kindCase_ == 10) {
+        output.writeMessage(10, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_);
       }
-      if (conditionLocation_ != null) {
-        output.writeMessage(11, getConditionLocation());
+      if (kindCase_ == 11) {
+        output.writeMessage(11, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_);
       }
-      if (conditionIp_ != null) {
-        output.writeMessage(12, getConditionIp());
+      if (kindCase_ == 12) {
+        output.writeMessage(12, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_);
       }
-      if (conditionTime_ != null) {
-        output.writeMessage(13, getConditionTime());
+      if (kindCase_ == 13) {
+        output.writeMessage(13, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_);
       }
-      if (conditionApprovalFlow_ != null) {
-        output.writeMessage(14, getConditionApprovalFlow());
+      if (kindCase_ == 14) {
+        output.writeMessage(14, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_);
       }
       unknownFields.writeTo(output);
     }
@@ -14738,61 +14889,61 @@ public final class AuthorizationPoliciesPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (principalAll_ != null) {
+      if (kindCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPrincipalAll());
+          .computeMessageSize(1, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_);
       }
-      if (principalByIds_ != null) {
+      if (kindCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPrincipalByIds());
+          .computeMessageSize(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_);
       }
-      if (resourcesAll_ != null) {
+      if (kindCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getResourcesAll());
+          .computeMessageSize(3, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_);
       }
-      if (resourceByIds_ != null) {
+      if (kindCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getResourceByIds());
+          .computeMessageSize(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_);
       }
-      if (resourceByTypeAndTags_ != null) {
+      if (kindCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getResourceByTypeAndTags());
+          .computeMessageSize(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_);
       }
-      if (resourceByTypeTagsAndKubernetesGroups_ != null) {
+      if (kindCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getResourceByTypeTagsAndKubernetesGroups());
+          .computeMessageSize(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_);
       }
-      if (resourceByOktaWithGroups_ != null) {
+      if (kindCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getResourceByOktaWithGroups());
+          .computeMessageSize(7, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_);
       }
-      if (resourceByEntraWithGroups_ != null) {
+      if (kindCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getResourceByEntraWithGroups());
+          .computeMessageSize(8, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_);
       }
-      if (conditionMfa_ != null) {
+      if (kindCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getConditionMfa());
+          .computeMessageSize(9, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_);
       }
-      if (conditionDeviceTrust_ != null) {
+      if (kindCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getConditionDeviceTrust());
+          .computeMessageSize(10, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_);
       }
-      if (conditionLocation_ != null) {
+      if (kindCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getConditionLocation());
+          .computeMessageSize(11, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_);
       }
-      if (conditionIp_ != null) {
+      if (kindCase_ == 12) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getConditionIp());
+          .computeMessageSize(12, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_);
       }
-      if (conditionTime_ != null) {
+      if (kindCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getConditionTime());
+          .computeMessageSize(13, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_);
       }
-      if (conditionApprovalFlow_ != null) {
+      if (kindCase_ == 14) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getConditionApprovalFlow());
+          .computeMessageSize(14, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14809,75 +14960,66 @@ public final class AuthorizationPoliciesPlumbing {
       }
       com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem) obj;
 
-      if (hasPrincipalAll() != other.hasPrincipalAll()) return false;
-      if (hasPrincipalAll()) {
-        if (!getPrincipalAll()
-            .equals(other.getPrincipalAll())) return false;
-      }
-      if (hasPrincipalByIds() != other.hasPrincipalByIds()) return false;
-      if (hasPrincipalByIds()) {
-        if (!getPrincipalByIds()
-            .equals(other.getPrincipalByIds())) return false;
-      }
-      if (hasResourcesAll() != other.hasResourcesAll()) return false;
-      if (hasResourcesAll()) {
-        if (!getResourcesAll()
-            .equals(other.getResourcesAll())) return false;
-      }
-      if (hasResourceByIds() != other.hasResourceByIds()) return false;
-      if (hasResourceByIds()) {
-        if (!getResourceByIds()
-            .equals(other.getResourceByIds())) return false;
-      }
-      if (hasResourceByTypeAndTags() != other.hasResourceByTypeAndTags()) return false;
-      if (hasResourceByTypeAndTags()) {
-        if (!getResourceByTypeAndTags()
-            .equals(other.getResourceByTypeAndTags())) return false;
-      }
-      if (hasResourceByTypeTagsAndKubernetesGroups() != other.hasResourceByTypeTagsAndKubernetesGroups()) return false;
-      if (hasResourceByTypeTagsAndKubernetesGroups()) {
-        if (!getResourceByTypeTagsAndKubernetesGroups()
-            .equals(other.getResourceByTypeTagsAndKubernetesGroups())) return false;
-      }
-      if (hasResourceByOktaWithGroups() != other.hasResourceByOktaWithGroups()) return false;
-      if (hasResourceByOktaWithGroups()) {
-        if (!getResourceByOktaWithGroups()
-            .equals(other.getResourceByOktaWithGroups())) return false;
-      }
-      if (hasResourceByEntraWithGroups() != other.hasResourceByEntraWithGroups()) return false;
-      if (hasResourceByEntraWithGroups()) {
-        if (!getResourceByEntraWithGroups()
-            .equals(other.getResourceByEntraWithGroups())) return false;
-      }
-      if (hasConditionMfa() != other.hasConditionMfa()) return false;
-      if (hasConditionMfa()) {
-        if (!getConditionMfa()
-            .equals(other.getConditionMfa())) return false;
-      }
-      if (hasConditionDeviceTrust() != other.hasConditionDeviceTrust()) return false;
-      if (hasConditionDeviceTrust()) {
-        if (!getConditionDeviceTrust()
-            .equals(other.getConditionDeviceTrust())) return false;
-      }
-      if (hasConditionLocation() != other.hasConditionLocation()) return false;
-      if (hasConditionLocation()) {
-        if (!getConditionLocation()
-            .equals(other.getConditionLocation())) return false;
-      }
-      if (hasConditionIp() != other.hasConditionIp()) return false;
-      if (hasConditionIp()) {
-        if (!getConditionIp()
-            .equals(other.getConditionIp())) return false;
-      }
-      if (hasConditionTime() != other.hasConditionTime()) return false;
-      if (hasConditionTime()) {
-        if (!getConditionTime()
-            .equals(other.getConditionTime())) return false;
-      }
-      if (hasConditionApprovalFlow() != other.hasConditionApprovalFlow()) return false;
-      if (hasConditionApprovalFlow()) {
-        if (!getConditionApprovalFlow()
-            .equals(other.getConditionApprovalFlow())) return false;
+      if (!getKindCase().equals(other.getKindCase())) return false;
+      switch (kindCase_) {
+        case 1:
+          if (!getPrincipalAll()
+              .equals(other.getPrincipalAll())) return false;
+          break;
+        case 2:
+          if (!getPrincipalByIds()
+              .equals(other.getPrincipalByIds())) return false;
+          break;
+        case 3:
+          if (!getResourcesAll()
+              .equals(other.getResourcesAll())) return false;
+          break;
+        case 4:
+          if (!getResourceByIds()
+              .equals(other.getResourceByIds())) return false;
+          break;
+        case 5:
+          if (!getResourceByTypeAndTags()
+              .equals(other.getResourceByTypeAndTags())) return false;
+          break;
+        case 6:
+          if (!getResourceByTypeTagsAndKubernetesGroups()
+              .equals(other.getResourceByTypeTagsAndKubernetesGroups())) return false;
+          break;
+        case 7:
+          if (!getResourceByOktaWithGroups()
+              .equals(other.getResourceByOktaWithGroups())) return false;
+          break;
+        case 8:
+          if (!getResourceByEntraWithGroups()
+              .equals(other.getResourceByEntraWithGroups())) return false;
+          break;
+        case 9:
+          if (!getConditionMfa()
+              .equals(other.getConditionMfa())) return false;
+          break;
+        case 10:
+          if (!getConditionDeviceTrust()
+              .equals(other.getConditionDeviceTrust())) return false;
+          break;
+        case 11:
+          if (!getConditionLocation()
+              .equals(other.getConditionLocation())) return false;
+          break;
+        case 12:
+          if (!getConditionIp()
+              .equals(other.getConditionIp())) return false;
+          break;
+        case 13:
+          if (!getConditionTime()
+              .equals(other.getConditionTime())) return false;
+          break;
+        case 14:
+          if (!getConditionApprovalFlow()
+              .equals(other.getConditionApprovalFlow())) return false;
+          break;
+        case 0:
+        default:
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -14890,61 +15032,65 @@ public final class AuthorizationPoliciesPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPrincipalAll()) {
-        hash = (37 * hash) + PRINCIPAL_ALL_FIELD_NUMBER;
-        hash = (53 * hash) + getPrincipalAll().hashCode();
-      }
-      if (hasPrincipalByIds()) {
-        hash = (37 * hash) + PRINCIPAL_BY_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getPrincipalByIds().hashCode();
-      }
-      if (hasResourcesAll()) {
-        hash = (37 * hash) + RESOURCES_ALL_FIELD_NUMBER;
-        hash = (53 * hash) + getResourcesAll().hashCode();
-      }
-      if (hasResourceByIds()) {
-        hash = (37 * hash) + RESOURCE_BY_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getResourceByIds().hashCode();
-      }
-      if (hasResourceByTypeAndTags()) {
-        hash = (37 * hash) + RESOURCE_BY_TYPE_AND_TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getResourceByTypeAndTags().hashCode();
-      }
-      if (hasResourceByTypeTagsAndKubernetesGroups()) {
-        hash = (37 * hash) + RESOURCE_BY_TYPE_TAGS_AND_KUBERNETES_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getResourceByTypeTagsAndKubernetesGroups().hashCode();
-      }
-      if (hasResourceByOktaWithGroups()) {
-        hash = (37 * hash) + RESOURCE_BY_OKTA_WITH_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getResourceByOktaWithGroups().hashCode();
-      }
-      if (hasResourceByEntraWithGroups()) {
-        hash = (37 * hash) + RESOURCE_BY_ENTRA_WITH_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getResourceByEntraWithGroups().hashCode();
-      }
-      if (hasConditionMfa()) {
-        hash = (37 * hash) + CONDITION_MFA_FIELD_NUMBER;
-        hash = (53 * hash) + getConditionMfa().hashCode();
-      }
-      if (hasConditionDeviceTrust()) {
-        hash = (37 * hash) + CONDITION_DEVICE_TRUST_FIELD_NUMBER;
-        hash = (53 * hash) + getConditionDeviceTrust().hashCode();
-      }
-      if (hasConditionLocation()) {
-        hash = (37 * hash) + CONDITION_LOCATION_FIELD_NUMBER;
-        hash = (53 * hash) + getConditionLocation().hashCode();
-      }
-      if (hasConditionIp()) {
-        hash = (37 * hash) + CONDITION_IP_FIELD_NUMBER;
-        hash = (53 * hash) + getConditionIp().hashCode();
-      }
-      if (hasConditionTime()) {
-        hash = (37 * hash) + CONDITION_TIME_FIELD_NUMBER;
-        hash = (53 * hash) + getConditionTime().hashCode();
-      }
-      if (hasConditionApprovalFlow()) {
-        hash = (37 * hash) + CONDITION_APPROVAL_FLOW_FIELD_NUMBER;
-        hash = (53 * hash) + getConditionApprovalFlow().hashCode();
+      switch (kindCase_) {
+        case 1:
+          hash = (37 * hash) + PRINCIPAL_ALL_FIELD_NUMBER;
+          hash = (53 * hash) + getPrincipalAll().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + PRINCIPAL_BY_IDS_FIELD_NUMBER;
+          hash = (53 * hash) + getPrincipalByIds().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + RESOURCES_ALL_FIELD_NUMBER;
+          hash = (53 * hash) + getResourcesAll().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + RESOURCE_BY_IDS_FIELD_NUMBER;
+          hash = (53 * hash) + getResourceByIds().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + RESOURCE_BY_TYPE_AND_TAGS_FIELD_NUMBER;
+          hash = (53 * hash) + getResourceByTypeAndTags().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + RESOURCE_BY_TYPE_TAGS_AND_KUBERNETES_GROUPS_FIELD_NUMBER;
+          hash = (53 * hash) + getResourceByTypeTagsAndKubernetesGroups().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + RESOURCE_BY_OKTA_WITH_GROUPS_FIELD_NUMBER;
+          hash = (53 * hash) + getResourceByOktaWithGroups().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + RESOURCE_BY_ENTRA_WITH_GROUPS_FIELD_NUMBER;
+          hash = (53 * hash) + getResourceByEntraWithGroups().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + CONDITION_MFA_FIELD_NUMBER;
+          hash = (53 * hash) + getConditionMfa().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + CONDITION_DEVICE_TRUST_FIELD_NUMBER;
+          hash = (53 * hash) + getConditionDeviceTrust().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + CONDITION_LOCATION_FIELD_NUMBER;
+          hash = (53 * hash) + getConditionLocation().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + CONDITION_IP_FIELD_NUMBER;
+          hash = (53 * hash) + getConditionIp().hashCode();
+          break;
+        case 13:
+          hash = (37 * hash) + CONDITION_TIME_FIELD_NUMBER;
+          hash = (53 * hash) + getConditionTime().hashCode();
+          break;
+        case 14:
+          hash = (37 * hash) + CONDITION_APPROVAL_FLOW_FIELD_NUMBER;
+          hash = (53 * hash) + getConditionApprovalFlow().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -15044,8 +15190,8 @@ public final class AuthorizationPoliciesPlumbing {
     /**
      * <pre>
      * AuthorizationPolicyItem represents a single rule item in an authorization policy.
-     * Only one of the fields should be set: one principal scope, one resource scope, or
-     * one condition. Setting multiple fields on a single item is invalid.
+     * Exactly one variant should be set: one principal scope, one resource scope, or
+     * one condition.
      * Enum constants for item fields are defined in the following locations:
      *   - Resource types (resource_by_type_and_tags.type): see ResourceType in resourcetypes.proto
      *   - Device trust operators and levels: AuthorizationPolicyDeviceTrust* enums below
@@ -15092,90 +15238,8 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (principalAllBuilder_ == null) {
-          principalAll_ = null;
-        } else {
-          principalAll_ = null;
-          principalAllBuilder_ = null;
-        }
-        if (principalByIdsBuilder_ == null) {
-          principalByIds_ = null;
-        } else {
-          principalByIds_ = null;
-          principalByIdsBuilder_ = null;
-        }
-        if (resourcesAllBuilder_ == null) {
-          resourcesAll_ = null;
-        } else {
-          resourcesAll_ = null;
-          resourcesAllBuilder_ = null;
-        }
-        if (resourceByIdsBuilder_ == null) {
-          resourceByIds_ = null;
-        } else {
-          resourceByIds_ = null;
-          resourceByIdsBuilder_ = null;
-        }
-        if (resourceByTypeAndTagsBuilder_ == null) {
-          resourceByTypeAndTags_ = null;
-        } else {
-          resourceByTypeAndTags_ = null;
-          resourceByTypeAndTagsBuilder_ = null;
-        }
-        if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
-          resourceByTypeTagsAndKubernetesGroups_ = null;
-        } else {
-          resourceByTypeTagsAndKubernetesGroups_ = null;
-          resourceByTypeTagsAndKubernetesGroupsBuilder_ = null;
-        }
-        if (resourceByOktaWithGroupsBuilder_ == null) {
-          resourceByOktaWithGroups_ = null;
-        } else {
-          resourceByOktaWithGroups_ = null;
-          resourceByOktaWithGroupsBuilder_ = null;
-        }
-        if (resourceByEntraWithGroupsBuilder_ == null) {
-          resourceByEntraWithGroups_ = null;
-        } else {
-          resourceByEntraWithGroups_ = null;
-          resourceByEntraWithGroupsBuilder_ = null;
-        }
-        if (conditionMfaBuilder_ == null) {
-          conditionMfa_ = null;
-        } else {
-          conditionMfa_ = null;
-          conditionMfaBuilder_ = null;
-        }
-        if (conditionDeviceTrustBuilder_ == null) {
-          conditionDeviceTrust_ = null;
-        } else {
-          conditionDeviceTrust_ = null;
-          conditionDeviceTrustBuilder_ = null;
-        }
-        if (conditionLocationBuilder_ == null) {
-          conditionLocation_ = null;
-        } else {
-          conditionLocation_ = null;
-          conditionLocationBuilder_ = null;
-        }
-        if (conditionIpBuilder_ == null) {
-          conditionIp_ = null;
-        } else {
-          conditionIp_ = null;
-          conditionIpBuilder_ = null;
-        }
-        if (conditionTimeBuilder_ == null) {
-          conditionTime_ = null;
-        } else {
-          conditionTime_ = null;
-          conditionTimeBuilder_ = null;
-        }
-        if (conditionApprovalFlowBuilder_ == null) {
-          conditionApprovalFlow_ = null;
-        } else {
-          conditionApprovalFlow_ = null;
-          conditionApprovalFlowBuilder_ = null;
-        }
+        kindCase_ = 0;
+        kind_ = null;
         return this;
       }
 
@@ -15202,76 +15266,105 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem buildPartial() {
         com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem(this);
-        if (principalAllBuilder_ == null) {
-          result.principalAll_ = principalAll_;
-        } else {
-          result.principalAll_ = principalAllBuilder_.build();
+        if (kindCase_ == 1) {
+          if (principalAllBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = principalAllBuilder_.build();
+          }
         }
-        if (principalByIdsBuilder_ == null) {
-          result.principalByIds_ = principalByIds_;
-        } else {
-          result.principalByIds_ = principalByIdsBuilder_.build();
+        if (kindCase_ == 2) {
+          if (principalByIdsBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = principalByIdsBuilder_.build();
+          }
         }
-        if (resourcesAllBuilder_ == null) {
-          result.resourcesAll_ = resourcesAll_;
-        } else {
-          result.resourcesAll_ = resourcesAllBuilder_.build();
+        if (kindCase_ == 3) {
+          if (resourcesAllBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = resourcesAllBuilder_.build();
+          }
         }
-        if (resourceByIdsBuilder_ == null) {
-          result.resourceByIds_ = resourceByIds_;
-        } else {
-          result.resourceByIds_ = resourceByIdsBuilder_.build();
+        if (kindCase_ == 4) {
+          if (resourceByIdsBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = resourceByIdsBuilder_.build();
+          }
         }
-        if (resourceByTypeAndTagsBuilder_ == null) {
-          result.resourceByTypeAndTags_ = resourceByTypeAndTags_;
-        } else {
-          result.resourceByTypeAndTags_ = resourceByTypeAndTagsBuilder_.build();
+        if (kindCase_ == 5) {
+          if (resourceByTypeAndTagsBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = resourceByTypeAndTagsBuilder_.build();
+          }
         }
-        if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
-          result.resourceByTypeTagsAndKubernetesGroups_ = resourceByTypeTagsAndKubernetesGroups_;
-        } else {
-          result.resourceByTypeTagsAndKubernetesGroups_ = resourceByTypeTagsAndKubernetesGroupsBuilder_.build();
+        if (kindCase_ == 6) {
+          if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = resourceByTypeTagsAndKubernetesGroupsBuilder_.build();
+          }
         }
-        if (resourceByOktaWithGroupsBuilder_ == null) {
-          result.resourceByOktaWithGroups_ = resourceByOktaWithGroups_;
-        } else {
-          result.resourceByOktaWithGroups_ = resourceByOktaWithGroupsBuilder_.build();
+        if (kindCase_ == 7) {
+          if (resourceByOktaWithGroupsBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = resourceByOktaWithGroupsBuilder_.build();
+          }
         }
-        if (resourceByEntraWithGroupsBuilder_ == null) {
-          result.resourceByEntraWithGroups_ = resourceByEntraWithGroups_;
-        } else {
-          result.resourceByEntraWithGroups_ = resourceByEntraWithGroupsBuilder_.build();
+        if (kindCase_ == 8) {
+          if (resourceByEntraWithGroupsBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = resourceByEntraWithGroupsBuilder_.build();
+          }
         }
-        if (conditionMfaBuilder_ == null) {
-          result.conditionMfa_ = conditionMfa_;
-        } else {
-          result.conditionMfa_ = conditionMfaBuilder_.build();
+        if (kindCase_ == 9) {
+          if (conditionMfaBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = conditionMfaBuilder_.build();
+          }
         }
-        if (conditionDeviceTrustBuilder_ == null) {
-          result.conditionDeviceTrust_ = conditionDeviceTrust_;
-        } else {
-          result.conditionDeviceTrust_ = conditionDeviceTrustBuilder_.build();
+        if (kindCase_ == 10) {
+          if (conditionDeviceTrustBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = conditionDeviceTrustBuilder_.build();
+          }
         }
-        if (conditionLocationBuilder_ == null) {
-          result.conditionLocation_ = conditionLocation_;
-        } else {
-          result.conditionLocation_ = conditionLocationBuilder_.build();
+        if (kindCase_ == 11) {
+          if (conditionLocationBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = conditionLocationBuilder_.build();
+          }
         }
-        if (conditionIpBuilder_ == null) {
-          result.conditionIp_ = conditionIp_;
-        } else {
-          result.conditionIp_ = conditionIpBuilder_.build();
+        if (kindCase_ == 12) {
+          if (conditionIpBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = conditionIpBuilder_.build();
+          }
         }
-        if (conditionTimeBuilder_ == null) {
-          result.conditionTime_ = conditionTime_;
-        } else {
-          result.conditionTime_ = conditionTimeBuilder_.build();
+        if (kindCase_ == 13) {
+          if (conditionTimeBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = conditionTimeBuilder_.build();
+          }
         }
-        if (conditionApprovalFlowBuilder_ == null) {
-          result.conditionApprovalFlow_ = conditionApprovalFlow_;
-        } else {
-          result.conditionApprovalFlow_ = conditionApprovalFlowBuilder_.build();
+        if (kindCase_ == 14) {
+          if (conditionApprovalFlowBuilder_ == null) {
+            result.kind_ = kind_;
+          } else {
+            result.kind_ = conditionApprovalFlowBuilder_.build();
+          }
         }
+        result.kindCase_ = kindCase_;
         onBuilt();
         return result;
       }
@@ -15320,47 +15413,66 @@ public final class AuthorizationPoliciesPlumbing {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem other) {
         if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.getDefaultInstance()) return this;
-        if (other.hasPrincipalAll()) {
-          mergePrincipalAll(other.getPrincipalAll());
-        }
-        if (other.hasPrincipalByIds()) {
-          mergePrincipalByIds(other.getPrincipalByIds());
-        }
-        if (other.hasResourcesAll()) {
-          mergeResourcesAll(other.getResourcesAll());
-        }
-        if (other.hasResourceByIds()) {
-          mergeResourceByIds(other.getResourceByIds());
-        }
-        if (other.hasResourceByTypeAndTags()) {
-          mergeResourceByTypeAndTags(other.getResourceByTypeAndTags());
-        }
-        if (other.hasResourceByTypeTagsAndKubernetesGroups()) {
-          mergeResourceByTypeTagsAndKubernetesGroups(other.getResourceByTypeTagsAndKubernetesGroups());
-        }
-        if (other.hasResourceByOktaWithGroups()) {
-          mergeResourceByOktaWithGroups(other.getResourceByOktaWithGroups());
-        }
-        if (other.hasResourceByEntraWithGroups()) {
-          mergeResourceByEntraWithGroups(other.getResourceByEntraWithGroups());
-        }
-        if (other.hasConditionMfa()) {
-          mergeConditionMfa(other.getConditionMfa());
-        }
-        if (other.hasConditionDeviceTrust()) {
-          mergeConditionDeviceTrust(other.getConditionDeviceTrust());
-        }
-        if (other.hasConditionLocation()) {
-          mergeConditionLocation(other.getConditionLocation());
-        }
-        if (other.hasConditionIp()) {
-          mergeConditionIp(other.getConditionIp());
-        }
-        if (other.hasConditionTime()) {
-          mergeConditionTime(other.getConditionTime());
-        }
-        if (other.hasConditionApprovalFlow()) {
-          mergeConditionApprovalFlow(other.getConditionApprovalFlow());
+        switch (other.getKindCase()) {
+          case PRINCIPAL_ALL: {
+            mergePrincipalAll(other.getPrincipalAll());
+            break;
+          }
+          case PRINCIPAL_BY_IDS: {
+            mergePrincipalByIds(other.getPrincipalByIds());
+            break;
+          }
+          case RESOURCES_ALL: {
+            mergeResourcesAll(other.getResourcesAll());
+            break;
+          }
+          case RESOURCE_BY_IDS: {
+            mergeResourceByIds(other.getResourceByIds());
+            break;
+          }
+          case RESOURCE_BY_TYPE_AND_TAGS: {
+            mergeResourceByTypeAndTags(other.getResourceByTypeAndTags());
+            break;
+          }
+          case RESOURCE_BY_TYPE_TAGS_AND_KUBERNETES_GROUPS: {
+            mergeResourceByTypeTagsAndKubernetesGroups(other.getResourceByTypeTagsAndKubernetesGroups());
+            break;
+          }
+          case RESOURCE_BY_OKTA_WITH_GROUPS: {
+            mergeResourceByOktaWithGroups(other.getResourceByOktaWithGroups());
+            break;
+          }
+          case RESOURCE_BY_ENTRA_WITH_GROUPS: {
+            mergeResourceByEntraWithGroups(other.getResourceByEntraWithGroups());
+            break;
+          }
+          case CONDITION_MFA: {
+            mergeConditionMfa(other.getConditionMfa());
+            break;
+          }
+          case CONDITION_DEVICE_TRUST: {
+            mergeConditionDeviceTrust(other.getConditionDeviceTrust());
+            break;
+          }
+          case CONDITION_LOCATION: {
+            mergeConditionLocation(other.getConditionLocation());
+            break;
+          }
+          case CONDITION_IP: {
+            mergeConditionIp(other.getConditionIp());
+            break;
+          }
+          case CONDITION_TIME: {
+            mergeConditionTime(other.getConditionTime());
+            break;
+          }
+          case CONDITION_APPROVAL_FLOW: {
+            mergeConditionApprovalFlow(other.getConditionApprovalFlow());
+            break;
+          }
+          case KIND_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15390,8 +15502,22 @@ public final class AuthorizationPoliciesPlumbing {
         }
         return this;
       }
+      private int kindCase_ = 0;
+      private java.lang.Object kind_;
+      public KindCase
+          getKindCase() {
+        return KindCase.forNumber(
+            kindCase_);
+      }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll principalAll_;
+      public Builder clearKind() {
+        kindCase_ = 0;
+        kind_ = null;
+        onChanged();
+        return this;
+      }
+
+
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder> principalAllBuilder_;
       /**
@@ -15399,25 +15525,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        * @return Whether the principalAll field is set.
        */
+      @java.lang.Override
       public boolean hasPrincipalAll() {
-        return principalAllBuilder_ != null || principalAll_ != null;
+        return kindCase_ == 1;
       }
       /**
        * <pre>
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        * @return The principalAll.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getPrincipalAll() {
         if (principalAllBuilder_ == null) {
-          return principalAll_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance() : principalAll_;
+          if (kindCase_ == 1) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
         } else {
-          return principalAllBuilder_.getMessage();
+          if (kindCase_ == 1) {
+            return principalAllBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
         }
       }
       /**
@@ -15425,19 +15559,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        */
       public Builder setPrincipalAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll value) {
         if (principalAllBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          principalAll_ = value;
+          kind_ = value;
           onChanged();
         } else {
           principalAllBuilder_.setMessage(value);
         }
-
+        kindCase_ = 1;
         return this;
       }
       /**
@@ -15445,17 +15579,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        */
       public Builder setPrincipalAll(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder builderForValue) {
         if (principalAllBuilder_ == null) {
-          principalAll_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           principalAllBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 1;
         return this;
       }
       /**
@@ -15463,21 +15597,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        */
       public Builder mergePrincipalAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll value) {
         if (principalAllBuilder_ == null) {
-          if (principalAll_ != null) {
-            principalAll_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.newBuilder(principalAll_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 1 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            principalAll_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          principalAllBuilder_.mergeFrom(value);
+          if (kindCase_ == 1) {
+            principalAllBuilder_.mergeFrom(value);
+          } else {
+            principalAllBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 1;
         return this;
       }
       /**
@@ -15485,17 +15624,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        */
       public Builder clearPrincipalAll() {
         if (principalAllBuilder_ == null) {
-          principalAll_ = null;
-          onChanged();
+          if (kindCase_ == 1) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          principalAll_ = null;
-          principalAllBuilder_ = null;
+          if (kindCase_ == 1) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          principalAllBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -15503,11 +15647,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder getPrincipalAllBuilder() {
-        
-        onChanged();
         return getPrincipalAllFieldBuilder().getBuilder();
       }
       /**
@@ -15515,14 +15657,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder getPrincipalAllOrBuilder() {
-        if (principalAllBuilder_ != null) {
+        if ((kindCase_ == 1) && (principalAllBuilder_ != null)) {
           return principalAllBuilder_.getMessageOrBuilder();
         } else {
-          return principalAll_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance() : principalAll_;
+          if (kindCase_ == 1) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
         }
       }
       /**
@@ -15530,23 +15675,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder> 
           getPrincipalAllFieldBuilder() {
         if (principalAllBuilder_ == null) {
+          if (!(kindCase_ == 1)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+          }
           principalAllBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder>(
-                  getPrincipalAll(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_,
                   getParentForChildren(),
                   isClean());
-          principalAll_ = null;
+          kind_ = null;
         }
+        kindCase_ = 1;
+        onChanged();;
         return principalAllBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds principalByIds_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder> principalByIdsBuilder_;
       /**
@@ -15554,25 +15703,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        * @return Whether the principalByIds field is set.
        */
+      @java.lang.Override
       public boolean hasPrincipalByIds() {
-        return principalByIdsBuilder_ != null || principalByIds_ != null;
+        return kindCase_ == 2;
       }
       /**
        * <pre>
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        * @return The principalByIds.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getPrincipalByIds() {
         if (principalByIdsBuilder_ == null) {
-          return principalByIds_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance() : principalByIds_;
+          if (kindCase_ == 2) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
         } else {
-          return principalByIdsBuilder_.getMessage();
+          if (kindCase_ == 2) {
+            return principalByIdsBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
         }
       }
       /**
@@ -15580,19 +15737,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        */
       public Builder setPrincipalByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds value) {
         if (principalByIdsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          principalByIds_ = value;
+          kind_ = value;
           onChanged();
         } else {
           principalByIdsBuilder_.setMessage(value);
         }
-
+        kindCase_ = 2;
         return this;
       }
       /**
@@ -15600,17 +15757,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        */
       public Builder setPrincipalByIds(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder builderForValue) {
         if (principalByIdsBuilder_ == null) {
-          principalByIds_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           principalByIdsBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 2;
         return this;
       }
       /**
@@ -15618,21 +15775,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        */
       public Builder mergePrincipalByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds value) {
         if (principalByIdsBuilder_ == null) {
-          if (principalByIds_ != null) {
-            principalByIds_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.newBuilder(principalByIds_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 2 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            principalByIds_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          principalByIdsBuilder_.mergeFrom(value);
+          if (kindCase_ == 2) {
+            principalByIdsBuilder_.mergeFrom(value);
+          } else {
+            principalByIdsBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 2;
         return this;
       }
       /**
@@ -15640,17 +15802,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        */
       public Builder clearPrincipalByIds() {
         if (principalByIdsBuilder_ == null) {
-          principalByIds_ = null;
-          onChanged();
+          if (kindCase_ == 2) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          principalByIds_ = null;
-          principalByIdsBuilder_ = null;
+          if (kindCase_ == 2) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          principalByIdsBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -15658,11 +15825,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder getPrincipalByIdsBuilder() {
-        
-        onChanged();
         return getPrincipalByIdsFieldBuilder().getBuilder();
       }
       /**
@@ -15670,14 +15835,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder() {
-        if (principalByIdsBuilder_ != null) {
+        if ((kindCase_ == 2) && (principalByIdsBuilder_ != null)) {
           return principalByIdsBuilder_.getMessageOrBuilder();
         } else {
-          return principalByIds_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance() : principalByIds_;
+          if (kindCase_ == 2) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
         }
       }
       /**
@@ -15685,23 +15853,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder> 
           getPrincipalByIdsFieldBuilder() {
         if (principalByIdsBuilder_ == null) {
+          if (!(kindCase_ == 2)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+          }
           principalByIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder>(
-                  getPrincipalByIds(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_,
                   getParentForChildren(),
                   isClean());
-          principalByIds_ = null;
+          kind_ = null;
         }
+        kindCase_ = 2;
+        onChanged();;
         return principalByIdsBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll resourcesAll_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder> resourcesAllBuilder_;
       /**
@@ -15709,25 +15881,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        * @return Whether the resourcesAll field is set.
        */
+      @java.lang.Override
       public boolean hasResourcesAll() {
-        return resourcesAllBuilder_ != null || resourcesAll_ != null;
+        return kindCase_ == 3;
       }
       /**
        * <pre>
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        * @return The resourcesAll.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getResourcesAll() {
         if (resourcesAllBuilder_ == null) {
-          return resourcesAll_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance() : resourcesAll_;
+          if (kindCase_ == 3) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
         } else {
-          return resourcesAllBuilder_.getMessage();
+          if (kindCase_ == 3) {
+            return resourcesAllBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
         }
       }
       /**
@@ -15735,19 +15915,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        */
       public Builder setResourcesAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll value) {
         if (resourcesAllBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          resourcesAll_ = value;
+          kind_ = value;
           onChanged();
         } else {
           resourcesAllBuilder_.setMessage(value);
         }
-
+        kindCase_ = 3;
         return this;
       }
       /**
@@ -15755,17 +15935,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        */
       public Builder setResourcesAll(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder builderForValue) {
         if (resourcesAllBuilder_ == null) {
-          resourcesAll_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           resourcesAllBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 3;
         return this;
       }
       /**
@@ -15773,21 +15953,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        */
       public Builder mergeResourcesAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll value) {
         if (resourcesAllBuilder_ == null) {
-          if (resourcesAll_ != null) {
-            resourcesAll_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.newBuilder(resourcesAll_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 3 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            resourcesAll_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          resourcesAllBuilder_.mergeFrom(value);
+          if (kindCase_ == 3) {
+            resourcesAllBuilder_.mergeFrom(value);
+          } else {
+            resourcesAllBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 3;
         return this;
       }
       /**
@@ -15795,17 +15980,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        */
       public Builder clearResourcesAll() {
         if (resourcesAllBuilder_ == null) {
-          resourcesAll_ = null;
-          onChanged();
+          if (kindCase_ == 3) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          resourcesAll_ = null;
-          resourcesAllBuilder_ = null;
+          if (kindCase_ == 3) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          resourcesAllBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -15813,11 +16003,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder getResourcesAllBuilder() {
-        
-        onChanged();
         return getResourcesAllFieldBuilder().getBuilder();
       }
       /**
@@ -15825,14 +16013,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder getResourcesAllOrBuilder() {
-        if (resourcesAllBuilder_ != null) {
+        if ((kindCase_ == 3) && (resourcesAllBuilder_ != null)) {
           return resourcesAllBuilder_.getMessageOrBuilder();
         } else {
-          return resourcesAll_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance() : resourcesAll_;
+          if (kindCase_ == 3) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
         }
       }
       /**
@@ -15840,23 +16031,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder> 
           getResourcesAllFieldBuilder() {
         if (resourcesAllBuilder_ == null) {
+          if (!(kindCase_ == 3)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+          }
           resourcesAllBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder>(
-                  getResourcesAll(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_,
                   getParentForChildren(),
                   isClean());
-          resourcesAll_ = null;
+          kind_ = null;
         }
+        kindCase_ = 3;
+        onChanged();;
         return resourcesAllBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds resourceByIds_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder> resourceByIdsBuilder_;
       /**
@@ -15864,25 +16059,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        * @return Whether the resourceByIds field is set.
        */
+      @java.lang.Override
       public boolean hasResourceByIds() {
-        return resourceByIdsBuilder_ != null || resourceByIds_ != null;
+        return kindCase_ == 4;
       }
       /**
        * <pre>
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        * @return The resourceByIds.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getResourceByIds() {
         if (resourceByIdsBuilder_ == null) {
-          return resourceByIds_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance() : resourceByIds_;
+          if (kindCase_ == 4) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
         } else {
-          return resourceByIdsBuilder_.getMessage();
+          if (kindCase_ == 4) {
+            return resourceByIdsBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
         }
       }
       /**
@@ -15890,19 +16093,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        */
       public Builder setResourceByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds value) {
         if (resourceByIdsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          resourceByIds_ = value;
+          kind_ = value;
           onChanged();
         } else {
           resourceByIdsBuilder_.setMessage(value);
         }
-
+        kindCase_ = 4;
         return this;
       }
       /**
@@ -15910,17 +16113,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        */
       public Builder setResourceByIds(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder builderForValue) {
         if (resourceByIdsBuilder_ == null) {
-          resourceByIds_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           resourceByIdsBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 4;
         return this;
       }
       /**
@@ -15928,21 +16131,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        */
       public Builder mergeResourceByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds value) {
         if (resourceByIdsBuilder_ == null) {
-          if (resourceByIds_ != null) {
-            resourceByIds_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.newBuilder(resourceByIds_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 4 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            resourceByIds_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          resourceByIdsBuilder_.mergeFrom(value);
+          if (kindCase_ == 4) {
+            resourceByIdsBuilder_.mergeFrom(value);
+          } else {
+            resourceByIdsBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 4;
         return this;
       }
       /**
@@ -15950,17 +16158,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        */
       public Builder clearResourceByIds() {
         if (resourceByIdsBuilder_ == null) {
-          resourceByIds_ = null;
-          onChanged();
+          if (kindCase_ == 4) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          resourceByIds_ = null;
-          resourceByIdsBuilder_ = null;
+          if (kindCase_ == 4) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          resourceByIdsBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -15968,11 +16181,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder getResourceByIdsBuilder() {
-        
-        onChanged();
         return getResourceByIdsFieldBuilder().getBuilder();
       }
       /**
@@ -15980,14 +16191,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder getResourceByIdsOrBuilder() {
-        if (resourceByIdsBuilder_ != null) {
+        if ((kindCase_ == 4) && (resourceByIdsBuilder_ != null)) {
           return resourceByIdsBuilder_.getMessageOrBuilder();
         } else {
-          return resourceByIds_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance() : resourceByIds_;
+          if (kindCase_ == 4) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
         }
       }
       /**
@@ -15995,23 +16209,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder> 
           getResourceByIdsFieldBuilder() {
         if (resourceByIdsBuilder_ == null) {
+          if (!(kindCase_ == 4)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+          }
           resourceByIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder>(
-                  getResourceByIds(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_,
                   getParentForChildren(),
                   isClean());
-          resourceByIds_ = null;
+          kind_ = null;
         }
+        kindCase_ = 4;
+        onChanged();;
         return resourceByIdsBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags resourceByTypeAndTags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder> resourceByTypeAndTagsBuilder_;
       /**
@@ -16019,25 +16237,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        * @return Whether the resourceByTypeAndTags field is set.
        */
+      @java.lang.Override
       public boolean hasResourceByTypeAndTags() {
-        return resourceByTypeAndTagsBuilder_ != null || resourceByTypeAndTags_ != null;
+        return kindCase_ == 5;
       }
       /**
        * <pre>
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        * @return The resourceByTypeAndTags.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getResourceByTypeAndTags() {
         if (resourceByTypeAndTagsBuilder_ == null) {
-          return resourceByTypeAndTags_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance() : resourceByTypeAndTags_;
+          if (kindCase_ == 5) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
         } else {
-          return resourceByTypeAndTagsBuilder_.getMessage();
+          if (kindCase_ == 5) {
+            return resourceByTypeAndTagsBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
         }
       }
       /**
@@ -16045,19 +16271,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       public Builder setResourceByTypeAndTags(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags value) {
         if (resourceByTypeAndTagsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          resourceByTypeAndTags_ = value;
+          kind_ = value;
           onChanged();
         } else {
           resourceByTypeAndTagsBuilder_.setMessage(value);
         }
-
+        kindCase_ = 5;
         return this;
       }
       /**
@@ -16065,17 +16291,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       public Builder setResourceByTypeAndTags(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder builderForValue) {
         if (resourceByTypeAndTagsBuilder_ == null) {
-          resourceByTypeAndTags_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           resourceByTypeAndTagsBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 5;
         return this;
       }
       /**
@@ -16083,21 +16309,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       public Builder mergeResourceByTypeAndTags(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags value) {
         if (resourceByTypeAndTagsBuilder_ == null) {
-          if (resourceByTypeAndTags_ != null) {
-            resourceByTypeAndTags_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.newBuilder(resourceByTypeAndTags_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 5 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            resourceByTypeAndTags_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          resourceByTypeAndTagsBuilder_.mergeFrom(value);
+          if (kindCase_ == 5) {
+            resourceByTypeAndTagsBuilder_.mergeFrom(value);
+          } else {
+            resourceByTypeAndTagsBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 5;
         return this;
       }
       /**
@@ -16105,17 +16336,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       public Builder clearResourceByTypeAndTags() {
         if (resourceByTypeAndTagsBuilder_ == null) {
-          resourceByTypeAndTags_ = null;
-          onChanged();
+          if (kindCase_ == 5) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          resourceByTypeAndTags_ = null;
-          resourceByTypeAndTagsBuilder_ = null;
+          if (kindCase_ == 5) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          resourceByTypeAndTagsBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -16123,11 +16359,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder getResourceByTypeAndTagsBuilder() {
-        
-        onChanged();
         return getResourceByTypeAndTagsFieldBuilder().getBuilder();
       }
       /**
@@ -16135,14 +16369,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder() {
-        if (resourceByTypeAndTagsBuilder_ != null) {
+        if ((kindCase_ == 5) && (resourceByTypeAndTagsBuilder_ != null)) {
           return resourceByTypeAndTagsBuilder_.getMessageOrBuilder();
         } else {
-          return resourceByTypeAndTags_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance() : resourceByTypeAndTags_;
+          if (kindCase_ == 5) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
         }
       }
       /**
@@ -16150,23 +16387,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder> 
           getResourceByTypeAndTagsFieldBuilder() {
         if (resourceByTypeAndTagsBuilder_ == null) {
+          if (!(kindCase_ == 5)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+          }
           resourceByTypeAndTagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder>(
-                  getResourceByTypeAndTags(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_,
                   getParentForChildren(),
                   isClean());
-          resourceByTypeAndTags_ = null;
+          kind_ = null;
         }
+        kindCase_ = 5;
+        onChanged();;
         return resourceByTypeAndTagsBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resourceByTypeTagsAndKubernetesGroups_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder> resourceByTypeTagsAndKubernetesGroupsBuilder_;
       /**
@@ -16174,25 +16415,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        * @return Whether the resourceByTypeTagsAndKubernetesGroups field is set.
        */
+      @java.lang.Override
       public boolean hasResourceByTypeTagsAndKubernetesGroups() {
-        return resourceByTypeTagsAndKubernetesGroupsBuilder_ != null || resourceByTypeTagsAndKubernetesGroups_ != null;
+        return kindCase_ == 6;
       }
       /**
        * <pre>
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        * @return The resourceByTypeTagsAndKubernetesGroups.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups() {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
-          return resourceByTypeTagsAndKubernetesGroups_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance() : resourceByTypeTagsAndKubernetesGroups_;
+          if (kindCase_ == 6) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
         } else {
-          return resourceByTypeTagsAndKubernetesGroupsBuilder_.getMessage();
+          if (kindCase_ == 6) {
+            return resourceByTypeTagsAndKubernetesGroupsBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
         }
       }
       /**
@@ -16200,19 +16449,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       public Builder setResourceByTypeTagsAndKubernetesGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups value) {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          resourceByTypeTagsAndKubernetesGroups_ = value;
+          kind_ = value;
           onChanged();
         } else {
           resourceByTypeTagsAndKubernetesGroupsBuilder_.setMessage(value);
         }
-
+        kindCase_ = 6;
         return this;
       }
       /**
@@ -16220,17 +16469,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       public Builder setResourceByTypeTagsAndKubernetesGroups(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder builderForValue) {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
-          resourceByTypeTagsAndKubernetesGroups_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           resourceByTypeTagsAndKubernetesGroupsBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 6;
         return this;
       }
       /**
@@ -16238,21 +16487,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       public Builder mergeResourceByTypeTagsAndKubernetesGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups value) {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
-          if (resourceByTypeTagsAndKubernetesGroups_ != null) {
-            resourceByTypeTagsAndKubernetesGroups_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.newBuilder(resourceByTypeTagsAndKubernetesGroups_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 6 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            resourceByTypeTagsAndKubernetesGroups_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          resourceByTypeTagsAndKubernetesGroupsBuilder_.mergeFrom(value);
+          if (kindCase_ == 6) {
+            resourceByTypeTagsAndKubernetesGroupsBuilder_.mergeFrom(value);
+          } else {
+            resourceByTypeTagsAndKubernetesGroupsBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 6;
         return this;
       }
       /**
@@ -16260,17 +16514,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       public Builder clearResourceByTypeTagsAndKubernetesGroups() {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
-          resourceByTypeTagsAndKubernetesGroups_ = null;
-          onChanged();
+          if (kindCase_ == 6) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          resourceByTypeTagsAndKubernetesGroups_ = null;
-          resourceByTypeTagsAndKubernetesGroupsBuilder_ = null;
+          if (kindCase_ == 6) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          resourceByTypeTagsAndKubernetesGroupsBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -16278,11 +16537,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder getResourceByTypeTagsAndKubernetesGroupsBuilder() {
-        
-        onChanged();
         return getResourceByTypeTagsAndKubernetesGroupsFieldBuilder().getBuilder();
       }
       /**
@@ -16290,14 +16547,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder() {
-        if (resourceByTypeTagsAndKubernetesGroupsBuilder_ != null) {
+        if ((kindCase_ == 6) && (resourceByTypeTagsAndKubernetesGroupsBuilder_ != null)) {
           return resourceByTypeTagsAndKubernetesGroupsBuilder_.getMessageOrBuilder();
         } else {
-          return resourceByTypeTagsAndKubernetesGroups_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance() : resourceByTypeTagsAndKubernetesGroups_;
+          if (kindCase_ == 6) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
         }
       }
       /**
@@ -16305,23 +16565,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder> 
           getResourceByTypeTagsAndKubernetesGroupsFieldBuilder() {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
+          if (!(kindCase_ == 6)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+          }
           resourceByTypeTagsAndKubernetesGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder>(
-                  getResourceByTypeTagsAndKubernetesGroups(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_,
                   getParentForChildren(),
                   isClean());
-          resourceByTypeTagsAndKubernetesGroups_ = null;
+          kind_ = null;
         }
+        kindCase_ = 6;
+        onChanged();;
         return resourceByTypeTagsAndKubernetesGroupsBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups resourceByOktaWithGroups_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder> resourceByOktaWithGroupsBuilder_;
       /**
@@ -16329,25 +16593,33 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        * @return Whether the resourceByOktaWithGroups field is set.
        */
+      @java.lang.Override
       public boolean hasResourceByOktaWithGroups() {
-        return resourceByOktaWithGroupsBuilder_ != null || resourceByOktaWithGroups_ != null;
+        return kindCase_ == 7;
       }
       /**
        * <pre>
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        * @return The resourceByOktaWithGroups.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getResourceByOktaWithGroups() {
         if (resourceByOktaWithGroupsBuilder_ == null) {
-          return resourceByOktaWithGroups_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance() : resourceByOktaWithGroups_;
+          if (kindCase_ == 7) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
         } else {
-          return resourceByOktaWithGroupsBuilder_.getMessage();
+          if (kindCase_ == 7) {
+            return resourceByOktaWithGroupsBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16355,19 +16627,19 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       public Builder setResourceByOktaWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups value) {
         if (resourceByOktaWithGroupsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          resourceByOktaWithGroups_ = value;
+          kind_ = value;
           onChanged();
         } else {
           resourceByOktaWithGroupsBuilder_.setMessage(value);
         }
-
+        kindCase_ = 7;
         return this;
       }
       /**
@@ -16375,17 +16647,17 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       public Builder setResourceByOktaWithGroups(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder builderForValue) {
         if (resourceByOktaWithGroupsBuilder_ == null) {
-          resourceByOktaWithGroups_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           resourceByOktaWithGroupsBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 7;
         return this;
       }
       /**
@@ -16393,21 +16665,26 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       public Builder mergeResourceByOktaWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups value) {
         if (resourceByOktaWithGroupsBuilder_ == null) {
-          if (resourceByOktaWithGroups_ != null) {
-            resourceByOktaWithGroups_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.newBuilder(resourceByOktaWithGroups_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 7 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            resourceByOktaWithGroups_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          resourceByOktaWithGroupsBuilder_.mergeFrom(value);
+          if (kindCase_ == 7) {
+            resourceByOktaWithGroupsBuilder_.mergeFrom(value);
+          } else {
+            resourceByOktaWithGroupsBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 7;
         return this;
       }
       /**
@@ -16415,17 +16692,22 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       public Builder clearResourceByOktaWithGroups() {
         if (resourceByOktaWithGroupsBuilder_ == null) {
-          resourceByOktaWithGroups_ = null;
-          onChanged();
+          if (kindCase_ == 7) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          resourceByOktaWithGroups_ = null;
-          resourceByOktaWithGroupsBuilder_ = null;
+          if (kindCase_ == 7) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          resourceByOktaWithGroupsBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -16433,11 +16715,9 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder getResourceByOktaWithGroupsBuilder() {
-        
-        onChanged();
         return getResourceByOktaWithGroupsFieldBuilder().getBuilder();
       }
       /**
@@ -16445,14 +16725,17 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder() {
-        if (resourceByOktaWithGroupsBuilder_ != null) {
+        if ((kindCase_ == 7) && (resourceByOktaWithGroupsBuilder_ != null)) {
           return resourceByOktaWithGroupsBuilder_.getMessageOrBuilder();
         } else {
-          return resourceByOktaWithGroups_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance() : resourceByOktaWithGroups_;
+          if (kindCase_ == 7) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16460,23 +16743,27 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder> 
           getResourceByOktaWithGroupsFieldBuilder() {
         if (resourceByOktaWithGroupsBuilder_ == null) {
+          if (!(kindCase_ == 7)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+          }
           resourceByOktaWithGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder>(
-                  getResourceByOktaWithGroups(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_,
                   getParentForChildren(),
                   isClean());
-          resourceByOktaWithGroups_ = null;
+          kind_ = null;
         }
+        kindCase_ = 7;
+        onChanged();;
         return resourceByOktaWithGroupsBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups resourceByEntraWithGroups_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder> resourceByEntraWithGroupsBuilder_;
       /**
@@ -16484,25 +16771,33 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        * @return Whether the resourceByEntraWithGroups field is set.
        */
+      @java.lang.Override
       public boolean hasResourceByEntraWithGroups() {
-        return resourceByEntraWithGroupsBuilder_ != null || resourceByEntraWithGroups_ != null;
+        return kindCase_ == 8;
       }
       /**
        * <pre>
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        * @return The resourceByEntraWithGroups.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getResourceByEntraWithGroups() {
         if (resourceByEntraWithGroupsBuilder_ == null) {
-          return resourceByEntraWithGroups_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance() : resourceByEntraWithGroups_;
+          if (kindCase_ == 8) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
         } else {
-          return resourceByEntraWithGroupsBuilder_.getMessage();
+          if (kindCase_ == 8) {
+            return resourceByEntraWithGroupsBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16510,19 +16805,19 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       public Builder setResourceByEntraWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups value) {
         if (resourceByEntraWithGroupsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          resourceByEntraWithGroups_ = value;
+          kind_ = value;
           onChanged();
         } else {
           resourceByEntraWithGroupsBuilder_.setMessage(value);
         }
-
+        kindCase_ = 8;
         return this;
       }
       /**
@@ -16530,17 +16825,17 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       public Builder setResourceByEntraWithGroups(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder builderForValue) {
         if (resourceByEntraWithGroupsBuilder_ == null) {
-          resourceByEntraWithGroups_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           resourceByEntraWithGroupsBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 8;
         return this;
       }
       /**
@@ -16548,21 +16843,26 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       public Builder mergeResourceByEntraWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups value) {
         if (resourceByEntraWithGroupsBuilder_ == null) {
-          if (resourceByEntraWithGroups_ != null) {
-            resourceByEntraWithGroups_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.newBuilder(resourceByEntraWithGroups_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 8 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            resourceByEntraWithGroups_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          resourceByEntraWithGroupsBuilder_.mergeFrom(value);
+          if (kindCase_ == 8) {
+            resourceByEntraWithGroupsBuilder_.mergeFrom(value);
+          } else {
+            resourceByEntraWithGroupsBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 8;
         return this;
       }
       /**
@@ -16570,17 +16870,22 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       public Builder clearResourceByEntraWithGroups() {
         if (resourceByEntraWithGroupsBuilder_ == null) {
-          resourceByEntraWithGroups_ = null;
-          onChanged();
+          if (kindCase_ == 8) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          resourceByEntraWithGroups_ = null;
-          resourceByEntraWithGroupsBuilder_ = null;
+          if (kindCase_ == 8) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          resourceByEntraWithGroupsBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -16588,11 +16893,9 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder getResourceByEntraWithGroupsBuilder() {
-        
-        onChanged();
         return getResourceByEntraWithGroupsFieldBuilder().getBuilder();
       }
       /**
@@ -16600,14 +16903,17 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder() {
-        if (resourceByEntraWithGroupsBuilder_ != null) {
+        if ((kindCase_ == 8) && (resourceByEntraWithGroupsBuilder_ != null)) {
           return resourceByEntraWithGroupsBuilder_.getMessageOrBuilder();
         } else {
-          return resourceByEntraWithGroups_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance() : resourceByEntraWithGroups_;
+          if (kindCase_ == 8) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16615,23 +16921,27 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder> 
           getResourceByEntraWithGroupsFieldBuilder() {
         if (resourceByEntraWithGroupsBuilder_ == null) {
+          if (!(kindCase_ == 8)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+          }
           resourceByEntraWithGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder>(
-                  getResourceByEntraWithGroups(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_,
                   getParentForChildren(),
                   isClean());
-          resourceByEntraWithGroups_ = null;
+          kind_ = null;
         }
+        kindCase_ = 8;
+        onChanged();;
         return resourceByEntraWithGroupsBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA conditionMfa_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder> conditionMfaBuilder_;
       /**
@@ -16639,25 +16949,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        * @return Whether the conditionMfa field is set.
        */
+      @java.lang.Override
       public boolean hasConditionMfa() {
-        return conditionMfaBuilder_ != null || conditionMfa_ != null;
+        return kindCase_ == 9;
       }
       /**
        * <pre>
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        * @return The conditionMfa.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getConditionMfa() {
         if (conditionMfaBuilder_ == null) {
-          return conditionMfa_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance() : conditionMfa_;
+          if (kindCase_ == 9) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
         } else {
-          return conditionMfaBuilder_.getMessage();
+          if (kindCase_ == 9) {
+            return conditionMfaBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
         }
       }
       /**
@@ -16665,19 +16983,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        */
       public Builder setConditionMfa(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA value) {
         if (conditionMfaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          conditionMfa_ = value;
+          kind_ = value;
           onChanged();
         } else {
           conditionMfaBuilder_.setMessage(value);
         }
-
+        kindCase_ = 9;
         return this;
       }
       /**
@@ -16685,17 +17003,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        */
       public Builder setConditionMfa(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder builderForValue) {
         if (conditionMfaBuilder_ == null) {
-          conditionMfa_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           conditionMfaBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 9;
         return this;
       }
       /**
@@ -16703,21 +17021,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        */
       public Builder mergeConditionMfa(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA value) {
         if (conditionMfaBuilder_ == null) {
-          if (conditionMfa_ != null) {
-            conditionMfa_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.newBuilder(conditionMfa_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 9 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            conditionMfa_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          conditionMfaBuilder_.mergeFrom(value);
+          if (kindCase_ == 9) {
+            conditionMfaBuilder_.mergeFrom(value);
+          } else {
+            conditionMfaBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 9;
         return this;
       }
       /**
@@ -16725,17 +17048,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        */
       public Builder clearConditionMfa() {
         if (conditionMfaBuilder_ == null) {
-          conditionMfa_ = null;
-          onChanged();
+          if (kindCase_ == 9) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          conditionMfa_ = null;
-          conditionMfaBuilder_ = null;
+          if (kindCase_ == 9) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          conditionMfaBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -16743,11 +17071,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder getConditionMfaBuilder() {
-        
-        onChanged();
         return getConditionMfaFieldBuilder().getBuilder();
       }
       /**
@@ -16755,14 +17081,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder getConditionMfaOrBuilder() {
-        if (conditionMfaBuilder_ != null) {
+        if ((kindCase_ == 9) && (conditionMfaBuilder_ != null)) {
           return conditionMfaBuilder_.getMessageOrBuilder();
         } else {
-          return conditionMfa_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance() : conditionMfa_;
+          if (kindCase_ == 9) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
         }
       }
       /**
@@ -16770,23 +17099,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder> 
           getConditionMfaFieldBuilder() {
         if (conditionMfaBuilder_ == null) {
+          if (!(kindCase_ == 9)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+          }
           conditionMfaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder>(
-                  getConditionMfa(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_,
                   getParentForChildren(),
                   isClean());
-          conditionMfa_ = null;
+          kind_ = null;
         }
+        kindCase_ = 9;
+        onChanged();;
         return conditionMfaBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust conditionDeviceTrust_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder> conditionDeviceTrustBuilder_;
       /**
@@ -16794,25 +17127,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        * @return Whether the conditionDeviceTrust field is set.
        */
+      @java.lang.Override
       public boolean hasConditionDeviceTrust() {
-        return conditionDeviceTrustBuilder_ != null || conditionDeviceTrust_ != null;
+        return kindCase_ == 10;
       }
       /**
        * <pre>
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        * @return The conditionDeviceTrust.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getConditionDeviceTrust() {
         if (conditionDeviceTrustBuilder_ == null) {
-          return conditionDeviceTrust_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance() : conditionDeviceTrust_;
+          if (kindCase_ == 10) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
         } else {
-          return conditionDeviceTrustBuilder_.getMessage();
+          if (kindCase_ == 10) {
+            return conditionDeviceTrustBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
         }
       }
       /**
@@ -16820,19 +17161,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        */
       public Builder setConditionDeviceTrust(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust value) {
         if (conditionDeviceTrustBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          conditionDeviceTrust_ = value;
+          kind_ = value;
           onChanged();
         } else {
           conditionDeviceTrustBuilder_.setMessage(value);
         }
-
+        kindCase_ = 10;
         return this;
       }
       /**
@@ -16840,17 +17181,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        */
       public Builder setConditionDeviceTrust(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder builderForValue) {
         if (conditionDeviceTrustBuilder_ == null) {
-          conditionDeviceTrust_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           conditionDeviceTrustBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 10;
         return this;
       }
       /**
@@ -16858,21 +17199,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        */
       public Builder mergeConditionDeviceTrust(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust value) {
         if (conditionDeviceTrustBuilder_ == null) {
-          if (conditionDeviceTrust_ != null) {
-            conditionDeviceTrust_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.newBuilder(conditionDeviceTrust_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 10 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            conditionDeviceTrust_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          conditionDeviceTrustBuilder_.mergeFrom(value);
+          if (kindCase_ == 10) {
+            conditionDeviceTrustBuilder_.mergeFrom(value);
+          } else {
+            conditionDeviceTrustBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 10;
         return this;
       }
       /**
@@ -16880,17 +17226,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        */
       public Builder clearConditionDeviceTrust() {
         if (conditionDeviceTrustBuilder_ == null) {
-          conditionDeviceTrust_ = null;
-          onChanged();
+          if (kindCase_ == 10) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          conditionDeviceTrust_ = null;
-          conditionDeviceTrustBuilder_ = null;
+          if (kindCase_ == 10) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          conditionDeviceTrustBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -16898,11 +17249,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder getConditionDeviceTrustBuilder() {
-        
-        onChanged();
         return getConditionDeviceTrustFieldBuilder().getBuilder();
       }
       /**
@@ -16910,14 +17259,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder() {
-        if (conditionDeviceTrustBuilder_ != null) {
+        if ((kindCase_ == 10) && (conditionDeviceTrustBuilder_ != null)) {
           return conditionDeviceTrustBuilder_.getMessageOrBuilder();
         } else {
-          return conditionDeviceTrust_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance() : conditionDeviceTrust_;
+          if (kindCase_ == 10) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
         }
       }
       /**
@@ -16925,23 +17277,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder> 
           getConditionDeviceTrustFieldBuilder() {
         if (conditionDeviceTrustBuilder_ == null) {
+          if (!(kindCase_ == 10)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+          }
           conditionDeviceTrustBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder>(
-                  getConditionDeviceTrust(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_,
                   getParentForChildren(),
                   isClean());
-          conditionDeviceTrust_ = null;
+          kind_ = null;
         }
+        kindCase_ = 10;
+        onChanged();;
         return conditionDeviceTrustBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation conditionLocation_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder> conditionLocationBuilder_;
       /**
@@ -16949,25 +17305,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        * @return Whether the conditionLocation field is set.
        */
+      @java.lang.Override
       public boolean hasConditionLocation() {
-        return conditionLocationBuilder_ != null || conditionLocation_ != null;
+        return kindCase_ == 11;
       }
       /**
        * <pre>
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        * @return The conditionLocation.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getConditionLocation() {
         if (conditionLocationBuilder_ == null) {
-          return conditionLocation_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance() : conditionLocation_;
+          if (kindCase_ == 11) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
         } else {
-          return conditionLocationBuilder_.getMessage();
+          if (kindCase_ == 11) {
+            return conditionLocationBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
         }
       }
       /**
@@ -16975,19 +17339,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        */
       public Builder setConditionLocation(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation value) {
         if (conditionLocationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          conditionLocation_ = value;
+          kind_ = value;
           onChanged();
         } else {
           conditionLocationBuilder_.setMessage(value);
         }
-
+        kindCase_ = 11;
         return this;
       }
       /**
@@ -16995,17 +17359,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        */
       public Builder setConditionLocation(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder builderForValue) {
         if (conditionLocationBuilder_ == null) {
-          conditionLocation_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           conditionLocationBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 11;
         return this;
       }
       /**
@@ -17013,21 +17377,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        */
       public Builder mergeConditionLocation(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation value) {
         if (conditionLocationBuilder_ == null) {
-          if (conditionLocation_ != null) {
-            conditionLocation_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.newBuilder(conditionLocation_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 11 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            conditionLocation_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          conditionLocationBuilder_.mergeFrom(value);
+          if (kindCase_ == 11) {
+            conditionLocationBuilder_.mergeFrom(value);
+          } else {
+            conditionLocationBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 11;
         return this;
       }
       /**
@@ -17035,17 +17404,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        */
       public Builder clearConditionLocation() {
         if (conditionLocationBuilder_ == null) {
-          conditionLocation_ = null;
-          onChanged();
+          if (kindCase_ == 11) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          conditionLocation_ = null;
-          conditionLocationBuilder_ = null;
+          if (kindCase_ == 11) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          conditionLocationBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -17053,11 +17427,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder getConditionLocationBuilder() {
-        
-        onChanged();
         return getConditionLocationFieldBuilder().getBuilder();
       }
       /**
@@ -17065,14 +17437,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder getConditionLocationOrBuilder() {
-        if (conditionLocationBuilder_ != null) {
+        if ((kindCase_ == 11) && (conditionLocationBuilder_ != null)) {
           return conditionLocationBuilder_.getMessageOrBuilder();
         } else {
-          return conditionLocation_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance() : conditionLocation_;
+          if (kindCase_ == 11) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
         }
       }
       /**
@@ -17080,23 +17455,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder> 
           getConditionLocationFieldBuilder() {
         if (conditionLocationBuilder_ == null) {
+          if (!(kindCase_ == 11)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+          }
           conditionLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder>(
-                  getConditionLocation(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_,
                   getParentForChildren(),
                   isClean());
-          conditionLocation_ = null;
+          kind_ = null;
         }
+        kindCase_ = 11;
+        onChanged();;
         return conditionLocationBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP conditionIp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder> conditionIpBuilder_;
       /**
@@ -17104,25 +17483,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        * @return Whether the conditionIp field is set.
        */
+      @java.lang.Override
       public boolean hasConditionIp() {
-        return conditionIpBuilder_ != null || conditionIp_ != null;
+        return kindCase_ == 12;
       }
       /**
        * <pre>
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        * @return The conditionIp.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getConditionIp() {
         if (conditionIpBuilder_ == null) {
-          return conditionIp_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance() : conditionIp_;
+          if (kindCase_ == 12) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
         } else {
-          return conditionIpBuilder_.getMessage();
+          if (kindCase_ == 12) {
+            return conditionIpBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
         }
       }
       /**
@@ -17130,19 +17517,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        */
       public Builder setConditionIp(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP value) {
         if (conditionIpBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          conditionIp_ = value;
+          kind_ = value;
           onChanged();
         } else {
           conditionIpBuilder_.setMessage(value);
         }
-
+        kindCase_ = 12;
         return this;
       }
       /**
@@ -17150,17 +17537,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        */
       public Builder setConditionIp(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder builderForValue) {
         if (conditionIpBuilder_ == null) {
-          conditionIp_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           conditionIpBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 12;
         return this;
       }
       /**
@@ -17168,21 +17555,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        */
       public Builder mergeConditionIp(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP value) {
         if (conditionIpBuilder_ == null) {
-          if (conditionIp_ != null) {
-            conditionIp_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.newBuilder(conditionIp_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 12 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            conditionIp_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          conditionIpBuilder_.mergeFrom(value);
+          if (kindCase_ == 12) {
+            conditionIpBuilder_.mergeFrom(value);
+          } else {
+            conditionIpBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 12;
         return this;
       }
       /**
@@ -17190,17 +17582,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        */
       public Builder clearConditionIp() {
         if (conditionIpBuilder_ == null) {
-          conditionIp_ = null;
-          onChanged();
+          if (kindCase_ == 12) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          conditionIp_ = null;
-          conditionIpBuilder_ = null;
+          if (kindCase_ == 12) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          conditionIpBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -17208,11 +17605,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder getConditionIpBuilder() {
-        
-        onChanged();
         return getConditionIpFieldBuilder().getBuilder();
       }
       /**
@@ -17220,14 +17615,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder getConditionIpOrBuilder() {
-        if (conditionIpBuilder_ != null) {
+        if ((kindCase_ == 12) && (conditionIpBuilder_ != null)) {
           return conditionIpBuilder_.getMessageOrBuilder();
         } else {
-          return conditionIp_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance() : conditionIp_;
+          if (kindCase_ == 12) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
         }
       }
       /**
@@ -17235,23 +17633,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder> 
           getConditionIpFieldBuilder() {
         if (conditionIpBuilder_ == null) {
+          if (!(kindCase_ == 12)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+          }
           conditionIpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder>(
-                  getConditionIp(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_,
                   getParentForChildren(),
                   isClean());
-          conditionIp_ = null;
+          kind_ = null;
         }
+        kindCase_ = 12;
+        onChanged();;
         return conditionIpBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime conditionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder> conditionTimeBuilder_;
       /**
@@ -17259,25 +17661,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        * @return Whether the conditionTime field is set.
        */
+      @java.lang.Override
       public boolean hasConditionTime() {
-        return conditionTimeBuilder_ != null || conditionTime_ != null;
+        return kindCase_ == 13;
       }
       /**
        * <pre>
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        * @return The conditionTime.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getConditionTime() {
         if (conditionTimeBuilder_ == null) {
-          return conditionTime_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance() : conditionTime_;
+          if (kindCase_ == 13) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
         } else {
-          return conditionTimeBuilder_.getMessage();
+          if (kindCase_ == 13) {
+            return conditionTimeBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
         }
       }
       /**
@@ -17285,19 +17695,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        */
       public Builder setConditionTime(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime value) {
         if (conditionTimeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          conditionTime_ = value;
+          kind_ = value;
           onChanged();
         } else {
           conditionTimeBuilder_.setMessage(value);
         }
-
+        kindCase_ = 13;
         return this;
       }
       /**
@@ -17305,17 +17715,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        */
       public Builder setConditionTime(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder builderForValue) {
         if (conditionTimeBuilder_ == null) {
-          conditionTime_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           conditionTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 13;
         return this;
       }
       /**
@@ -17323,21 +17733,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        */
       public Builder mergeConditionTime(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime value) {
         if (conditionTimeBuilder_ == null) {
-          if (conditionTime_ != null) {
-            conditionTime_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.newBuilder(conditionTime_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 13 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            conditionTime_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          conditionTimeBuilder_.mergeFrom(value);
+          if (kindCase_ == 13) {
+            conditionTimeBuilder_.mergeFrom(value);
+          } else {
+            conditionTimeBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 13;
         return this;
       }
       /**
@@ -17345,17 +17760,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        */
       public Builder clearConditionTime() {
         if (conditionTimeBuilder_ == null) {
-          conditionTime_ = null;
-          onChanged();
+          if (kindCase_ == 13) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          conditionTime_ = null;
-          conditionTimeBuilder_ = null;
+          if (kindCase_ == 13) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          conditionTimeBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -17363,11 +17783,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder getConditionTimeBuilder() {
-        
-        onChanged();
         return getConditionTimeFieldBuilder().getBuilder();
       }
       /**
@@ -17375,14 +17793,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder getConditionTimeOrBuilder() {
-        if (conditionTimeBuilder_ != null) {
+        if ((kindCase_ == 13) && (conditionTimeBuilder_ != null)) {
           return conditionTimeBuilder_.getMessageOrBuilder();
         } else {
-          return conditionTime_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance() : conditionTime_;
+          if (kindCase_ == 13) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
         }
       }
       /**
@@ -17390,23 +17811,27 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder> 
           getConditionTimeFieldBuilder() {
         if (conditionTimeBuilder_ == null) {
+          if (!(kindCase_ == 13)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+          }
           conditionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder>(
-                  getConditionTime(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_,
                   getParentForChildren(),
                   isClean());
-          conditionTime_ = null;
+          kind_ = null;
         }
+        kindCase_ = 13;
+        onChanged();;
         return conditionTimeBuilder_;
       }
 
-      private com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow conditionApprovalFlow_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder> conditionApprovalFlowBuilder_;
       /**
@@ -17414,25 +17839,33 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        * @return Whether the conditionApprovalFlow field is set.
        */
+      @java.lang.Override
       public boolean hasConditionApprovalFlow() {
-        return conditionApprovalFlowBuilder_ != null || conditionApprovalFlow_ != null;
+        return kindCase_ == 14;
       }
       /**
        * <pre>
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        * @return The conditionApprovalFlow.
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getConditionApprovalFlow() {
         if (conditionApprovalFlowBuilder_ == null) {
-          return conditionApprovalFlow_ == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance() : conditionApprovalFlow_;
+          if (kindCase_ == 14) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
         } else {
-          return conditionApprovalFlowBuilder_.getMessage();
+          if (kindCase_ == 14) {
+            return conditionApprovalFlowBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
         }
       }
       /**
@@ -17440,19 +17873,19 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       public Builder setConditionApprovalFlow(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow value) {
         if (conditionApprovalFlowBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          conditionApprovalFlow_ = value;
+          kind_ = value;
           onChanged();
         } else {
           conditionApprovalFlowBuilder_.setMessage(value);
         }
-
+        kindCase_ = 14;
         return this;
       }
       /**
@@ -17460,17 +17893,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       public Builder setConditionApprovalFlow(
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder builderForValue) {
         if (conditionApprovalFlowBuilder_ == null) {
-          conditionApprovalFlow_ = builderForValue.build();
+          kind_ = builderForValue.build();
           onChanged();
         } else {
           conditionApprovalFlowBuilder_.setMessage(builderForValue.build());
         }
-
+        kindCase_ = 14;
         return this;
       }
       /**
@@ -17478,21 +17911,26 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       public Builder mergeConditionApprovalFlow(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow value) {
         if (conditionApprovalFlowBuilder_ == null) {
-          if (conditionApprovalFlow_ != null) {
-            conditionApprovalFlow_ =
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.newBuilder(conditionApprovalFlow_).mergeFrom(value).buildPartial();
+          if (kindCase_ == 14 &&
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_)
+                .mergeFrom(value).buildPartial();
           } else {
-            conditionApprovalFlow_ = value;
+            kind_ = value;
           }
           onChanged();
         } else {
-          conditionApprovalFlowBuilder_.mergeFrom(value);
+          if (kindCase_ == 14) {
+            conditionApprovalFlowBuilder_.mergeFrom(value);
+          } else {
+            conditionApprovalFlowBuilder_.setMessage(value);
+          }
         }
-
+        kindCase_ = 14;
         return this;
       }
       /**
@@ -17500,17 +17938,22 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       public Builder clearConditionApprovalFlow() {
         if (conditionApprovalFlowBuilder_ == null) {
-          conditionApprovalFlow_ = null;
-          onChanged();
+          if (kindCase_ == 14) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
         } else {
-          conditionApprovalFlow_ = null;
-          conditionApprovalFlowBuilder_ = null;
+          if (kindCase_ == 14) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          conditionApprovalFlowBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -17518,11 +17961,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder getConditionApprovalFlowBuilder() {
-        
-        onChanged();
         return getConditionApprovalFlowFieldBuilder().getBuilder();
       }
       /**
@@ -17530,14 +17971,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        */
+      @java.lang.Override
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder() {
-        if (conditionApprovalFlowBuilder_ != null) {
+        if ((kindCase_ == 14) && (conditionApprovalFlowBuilder_ != null)) {
           return conditionApprovalFlowBuilder_.getMessageOrBuilder();
         } else {
-          return conditionApprovalFlow_ == null ?
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance() : conditionApprovalFlow_;
+          if (kindCase_ == 14) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
         }
       }
       /**
@@ -17545,19 +17989,24 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder> 
           getConditionApprovalFlowFieldBuilder() {
         if (conditionApprovalFlowBuilder_ == null) {
+          if (!(kindCase_ == 14)) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+          }
           conditionApprovalFlowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder>(
-                  getConditionApprovalFlow(),
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_,
                   getParentForChildren(),
                   isClean());
-          conditionApprovalFlow_ = null;
+          kind_ = null;
         }
+        kindCase_ = 14;
+        onChanged();;
         return conditionApprovalFlowBuilder_;
       }
       @java.lang.Override
@@ -22311,20 +22760,20 @@ public final class AuthorizationPoliciesPlumbing {
      * The Okta resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The resourceId.
      */
-    java.lang.String getId();
+    java.lang.String getResourceId();
     /**
      * <pre>
      * The Okta resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
-        getIdBytes();
+        getResourceIdBytes();
 
     /**
      * <pre>
@@ -22384,7 +22833,7 @@ public final class AuthorizationPoliciesPlumbing {
       super(builder);
     }
     private AuthorizationPolicyItemResourceByOktaWithGroups() {
-      id_ = "";
+      resourceId_ = "";
       groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -22422,7 +22871,7 @@ public final class AuthorizationPoliciesPlumbing {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              id_ = s;
+              resourceId_ = s;
               break;
             }
             case 18: {
@@ -22471,26 +22920,26 @@ public final class AuthorizationPoliciesPlumbing {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
     /**
      * <pre>
      * The Okta resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The resourceId.
      */
     @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        resourceId_ = s;
         return s;
       }
     }
@@ -22499,18 +22948,18 @@ public final class AuthorizationPoliciesPlumbing {
      * The Okta resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for resourceId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        resourceId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -22582,8 +23031,8 @@ public final class AuthorizationPoliciesPlumbing {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       for (int i = 0; i < groups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groups_.getRaw(i));
@@ -22597,8 +23046,8 @@ public final class AuthorizationPoliciesPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       {
         int dataSize = 0;
@@ -22623,8 +23072,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
       com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
       if (!getGroupsList()
           .equals(other.getGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -22638,8 +23087,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
       if (getGroupsCount() > 0) {
         hash = (37 * hash) + GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getGroupsList().hashCode();
@@ -22781,7 +23230,7 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        resourceId_ = "";
 
         groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -22812,7 +23261,7 @@ public final class AuthorizationPoliciesPlumbing {
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups buildPartial() {
         com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups(this);
         int from_bitField0_ = bitField0_;
-        result.id_ = id_;
+        result.resourceId_ = resourceId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           groups_ = groups_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -22866,8 +23315,8 @@ public final class AuthorizationPoliciesPlumbing {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups other) {
         if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
           onChanged();
         }
         if (!other.groups_.isEmpty()) {
@@ -22910,22 +23359,22 @@ public final class AuthorizationPoliciesPlumbing {
       }
       private int bitField0_;
 
-      private java.lang.Object id_ = "";
+      private java.lang.Object resourceId_ = "";
       /**
        * <pre>
        * The Okta resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The id.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The resourceId.
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          resourceId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22936,17 +23385,17 @@ public final class AuthorizationPoliciesPlumbing {
        * The Okta resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for id.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          id_ = b;
+          resourceId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -22957,17 +23406,17 @@ public final class AuthorizationPoliciesPlumbing {
        * The Okta resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The id to set.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The resourceId to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
+      public Builder setResourceId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        id_ = value;
+        resourceId_ = value;
         onChanged();
         return this;
       }
@@ -22976,12 +23425,12 @@ public final class AuthorizationPoliciesPlumbing {
        * The Okta resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearId() {
+      public Builder clearResourceId() {
         
-        id_ = getDefaultInstance().getId();
+        resourceId_ = getDefaultInstance().getResourceId();
         onChanged();
         return this;
       }
@@ -22990,18 +23439,18 @@ public final class AuthorizationPoliciesPlumbing {
        * The Okta resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for id to set.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
+      public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        id_ = value;
+        resourceId_ = value;
         onChanged();
         return this;
       }
@@ -23213,20 +23662,20 @@ public final class AuthorizationPoliciesPlumbing {
      * The Entra ID resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The resourceId.
      */
-    java.lang.String getId();
+    java.lang.String getResourceId();
     /**
      * <pre>
      * The Entra ID resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
-        getIdBytes();
+        getResourceIdBytes();
 
     /**
      * <pre>
@@ -23286,7 +23735,7 @@ public final class AuthorizationPoliciesPlumbing {
       super(builder);
     }
     private AuthorizationPolicyItemResourceByEntraWithGroups() {
-      id_ = "";
+      resourceId_ = "";
       groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -23324,7 +23773,7 @@ public final class AuthorizationPoliciesPlumbing {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              id_ = s;
+              resourceId_ = s;
               break;
             }
             case 18: {
@@ -23373,26 +23822,26 @@ public final class AuthorizationPoliciesPlumbing {
               com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
     /**
      * <pre>
      * The Entra ID resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The resourceId.
      */
     @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        resourceId_ = s;
         return s;
       }
     }
@@ -23401,18 +23850,18 @@ public final class AuthorizationPoliciesPlumbing {
      * The Entra ID resource ID.
      * </pre>
      *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
+     * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for resourceId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        resourceId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -23484,8 +23933,8 @@ public final class AuthorizationPoliciesPlumbing {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       for (int i = 0; i < groups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groups_.getRaw(i));
@@ -23499,8 +23948,8 @@ public final class AuthorizationPoliciesPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       {
         int dataSize = 0;
@@ -23525,8 +23974,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
       com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
       if (!getGroupsList()
           .equals(other.getGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -23540,8 +23989,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
       if (getGroupsCount() > 0) {
         hash = (37 * hash) + GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getGroupsList().hashCode();
@@ -23683,7 +24132,7 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        resourceId_ = "";
 
         groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -23714,7 +24163,7 @@ public final class AuthorizationPoliciesPlumbing {
       public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups buildPartial() {
         com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups(this);
         int from_bitField0_ = bitField0_;
-        result.id_ = id_;
+        result.resourceId_ = resourceId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           groups_ = groups_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -23768,8 +24217,8 @@ public final class AuthorizationPoliciesPlumbing {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups other) {
         if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
           onChanged();
         }
         if (!other.groups_.isEmpty()) {
@@ -23812,22 +24261,22 @@ public final class AuthorizationPoliciesPlumbing {
       }
       private int bitField0_;
 
-      private java.lang.Object id_ = "";
+      private java.lang.Object resourceId_ = "";
       /**
        * <pre>
        * The Entra ID resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The id.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The resourceId.
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          resourceId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -23838,17 +24287,17 @@ public final class AuthorizationPoliciesPlumbing {
        * The Entra ID resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for id.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          id_ = b;
+          resourceId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -23859,17 +24308,17 @@ public final class AuthorizationPoliciesPlumbing {
        * The Entra ID resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The id to set.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The resourceId to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
+      public Builder setResourceId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        id_ = value;
+        resourceId_ = value;
         onChanged();
         return this;
       }
@@ -23878,12 +24327,12 @@ public final class AuthorizationPoliciesPlumbing {
        * The Entra ID resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearId() {
+      public Builder clearResourceId() {
         
-        id_ = getDefaultInstance().getId();
+        resourceId_ = getDefaultInstance().getResourceId();
         onChanged();
         return this;
       }
@@ -23892,18 +24341,18 @@ public final class AuthorizationPoliciesPlumbing {
        * The Entra ID resource ID.
        * </pre>
        *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for id to set.
+       * <code>string resource_id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
+      public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        id_ = value;
+        resourceId_ = value;
         onChanged();
         return this;
       }
@@ -33155,19 +33604,19 @@ public final class AuthorizationPoliciesPlumbing {
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleDayOfWeekOrBuilder getDayOfWeekOrBuilder();
 
     /**
-     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
      * @return Whether the timeOfDay field is set.
      */
     boolean hasTimeOfDay();
     /**
-     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
      * @return The timeOfDay.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getTimeOfDay();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay getTimeOfDay();
     /**
-     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayOrBuilder();
 
     /**
      * <code>.v1.AuthorizationPolicyTimeRuleMonth month = 3;</code>
@@ -33198,6 +33647,36 @@ public final class AuthorizationPoliciesPlumbing {
      * <code>.v1.AuthorizationPolicyTimeRuleDaysOfMonth days_of_month = 4;</code>
      */
     com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleDaysOfMonthOrBuilder getDaysOfMonthOrBuilder();
+
+    /**
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+     * @return Whether the timeOfDayOutsideOf field is set.
+     */
+    boolean hasTimeOfDayOutsideOf();
+    /**
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+     * @return The timeOfDayOutsideOf.
+     */
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf getTimeOfDayOutsideOf();
+    /**
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+     */
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder getTimeOfDayOutsideOfOrBuilder();
+
+    /**
+     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+     * @return Whether the timeOfDayWithOperator field is set.
+     */
+    boolean hasTimeOfDayWithOperator();
+    /**
+     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+     * @return The timeOfDayWithOperator.
+     */
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getTimeOfDayWithOperator();
+    /**
+     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+     */
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayWithOperatorOrBuilder();
 
     public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRule.RuleCase getRuleCase();
   }
@@ -33266,14 +33745,14 @@ public final class AuthorizationPoliciesPlumbing {
               break;
             }
             case 18: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder subBuilder = null;
               if (ruleCase_ == 2) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_).toBuilder();
               }
               rule_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_);
                 rule_ = subBuilder.buildPartial();
               }
               ruleCase_ = 2;
@@ -33305,6 +33784,34 @@ public final class AuthorizationPoliciesPlumbing {
                 rule_ = subBuilder.buildPartial();
               }
               ruleCase_ = 4;
+              break;
+            }
+            case 42: {
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder subBuilder = null;
+              if (ruleCase_ == 5) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_).toBuilder();
+              }
+              rule_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_);
+                rule_ = subBuilder.buildPartial();
+              }
+              ruleCase_ = 5;
+              break;
+            }
+            case 50: {
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder subBuilder = null;
+              if (ruleCase_ == 6) {
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_).toBuilder();
+              }
+              rule_ =
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_);
+                rule_ = subBuilder.buildPartial();
+              }
+              ruleCase_ = 6;
               break;
             }
             default: {
@@ -33350,6 +33857,8 @@ public final class AuthorizationPoliciesPlumbing {
       TIME_OF_DAY(2),
       MONTH(3),
       DAYS_OF_MONTH(4),
+      TIME_OF_DAY_OUTSIDE_OF(5),
+      TIME_OF_DAY_WITH_OPERATOR(6),
       RULE_NOT_SET(0);
       private final int value;
       private RuleCase(int value) {
@@ -33371,6 +33880,8 @@ public final class AuthorizationPoliciesPlumbing {
           case 2: return TIME_OF_DAY;
           case 3: return MONTH;
           case 4: return DAYS_OF_MONTH;
+          case 5: return TIME_OF_DAY_OUTSIDE_OF;
+          case 6: return TIME_OF_DAY_WITH_OPERATOR;
           case 0: return RULE_NOT_SET;
           default: return null;
         }
@@ -33419,7 +33930,7 @@ public final class AuthorizationPoliciesPlumbing {
 
     public static final int TIME_OF_DAY_FIELD_NUMBER = 2;
     /**
-     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
      * @return Whether the timeOfDay field is set.
      */
     @java.lang.Override
@@ -33427,25 +33938,25 @@ public final class AuthorizationPoliciesPlumbing {
       return ruleCase_ == 2;
     }
     /**
-     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
      * @return The timeOfDay.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getTimeOfDay() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay getTimeOfDay() {
       if (ruleCase_ == 2) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
     }
     /**
-     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayOrBuilder() {
       if (ruleCase_ == 2) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
     }
 
     public static final int MONTH_FIELD_NUMBER = 3;
@@ -33510,6 +34021,68 @@ public final class AuthorizationPoliciesPlumbing {
       return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleDaysOfMonth.getDefaultInstance();
     }
 
+    public static final int TIME_OF_DAY_OUTSIDE_OF_FIELD_NUMBER = 5;
+    /**
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+     * @return Whether the timeOfDayOutsideOf field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeOfDayOutsideOf() {
+      return ruleCase_ == 5;
+    }
+    /**
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+     * @return The timeOfDayOutsideOf.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf getTimeOfDayOutsideOf() {
+      if (ruleCase_ == 5) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder getTimeOfDayOutsideOfOrBuilder() {
+      if (ruleCase_ == 5) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance();
+    }
+
+    public static final int TIME_OF_DAY_WITH_OPERATOR_FIELD_NUMBER = 6;
+    /**
+     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+     * @return Whether the timeOfDayWithOperator field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeOfDayWithOperator() {
+      return ruleCase_ == 6;
+    }
+    /**
+     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+     * @return The timeOfDayWithOperator.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getTimeOfDayWithOperator() {
+      if (ruleCase_ == 6) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayWithOperatorOrBuilder() {
+      if (ruleCase_ == 6) {
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+      }
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -33528,13 +34101,19 @@ public final class AuthorizationPoliciesPlumbing {
         output.writeMessage(1, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleDayOfWeek) rule_);
       }
       if (ruleCase_ == 2) {
-        output.writeMessage(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_);
+        output.writeMessage(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_);
       }
       if (ruleCase_ == 3) {
         output.writeMessage(3, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleMonth) rule_);
       }
       if (ruleCase_ == 4) {
         output.writeMessage(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleDaysOfMonth) rule_);
+      }
+      if (ruleCase_ == 5) {
+        output.writeMessage(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_);
+      }
+      if (ruleCase_ == 6) {
+        output.writeMessage(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_);
       }
       unknownFields.writeTo(output);
     }
@@ -33551,7 +34130,7 @@ public final class AuthorizationPoliciesPlumbing {
       }
       if (ruleCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_);
+          .computeMessageSize(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_);
       }
       if (ruleCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
@@ -33560,6 +34139,14 @@ public final class AuthorizationPoliciesPlumbing {
       if (ruleCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleDaysOfMonth) rule_);
+      }
+      if (ruleCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_);
+      }
+      if (ruleCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -33594,6 +34181,14 @@ public final class AuthorizationPoliciesPlumbing {
           if (!getDaysOfMonth()
               .equals(other.getDaysOfMonth())) return false;
           break;
+        case 5:
+          if (!getTimeOfDayOutsideOf()
+              .equals(other.getTimeOfDayOutsideOf())) return false;
+          break;
+        case 6:
+          if (!getTimeOfDayWithOperator()
+              .equals(other.getTimeOfDayWithOperator())) return false;
+          break;
         case 0:
         default:
       }
@@ -33624,6 +34219,14 @@ public final class AuthorizationPoliciesPlumbing {
         case 4:
           hash = (37 * hash) + DAYS_OF_MONTH_FIELD_NUMBER;
           hash = (53 * hash) + getDaysOfMonth().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + TIME_OF_DAY_OUTSIDE_OF_FIELD_NUMBER;
+          hash = (53 * hash) + getTimeOfDayOutsideOf().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + TIME_OF_DAY_WITH_OPERATOR_FIELD_NUMBER;
+          hash = (53 * hash) + getTimeOfDayWithOperator().hashCode();
           break;
         case 0:
         default:
@@ -33822,6 +34425,20 @@ public final class AuthorizationPoliciesPlumbing {
             result.rule_ = daysOfMonthBuilder_.build();
           }
         }
+        if (ruleCase_ == 5) {
+          if (timeOfDayOutsideOfBuilder_ == null) {
+            result.rule_ = rule_;
+          } else {
+            result.rule_ = timeOfDayOutsideOfBuilder_.build();
+          }
+        }
+        if (ruleCase_ == 6) {
+          if (timeOfDayWithOperatorBuilder_ == null) {
+            result.rule_ = rule_;
+          } else {
+            result.rule_ = timeOfDayWithOperatorBuilder_.build();
+          }
+        }
         result.ruleCase_ = ruleCase_;
         onBuilt();
         return result;
@@ -33886,6 +34503,14 @@ public final class AuthorizationPoliciesPlumbing {
           }
           case DAYS_OF_MONTH: {
             mergeDaysOfMonth(other.getDaysOfMonth());
+            break;
+          }
+          case TIME_OF_DAY_OUTSIDE_OF: {
+            mergeTimeOfDayOutsideOf(other.getTimeOfDayOutsideOf());
+            break;
+          }
+          case TIME_OF_DAY_WITH_OPERATOR: {
+            mergeTimeOfDayWithOperator(other.getTimeOfDayWithOperator());
             break;
           }
           case RULE_NOT_SET: {
@@ -34079,9 +34704,9 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder> timeOfDayBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder> timeOfDayBuilder_;
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        * @return Whether the timeOfDay field is set.
        */
       @java.lang.Override
@@ -34089,27 +34714,27 @@ public final class AuthorizationPoliciesPlumbing {
         return ruleCase_ == 2;
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        * @return The timeOfDay.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getTimeOfDay() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay getTimeOfDay() {
         if (timeOfDayBuilder_ == null) {
           if (ruleCase_ == 2) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
         } else {
           if (ruleCase_ == 2) {
             return timeOfDayBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
         }
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        */
-      public Builder setTimeOfDay(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay value) {
+      public Builder setTimeOfDay(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay value) {
         if (timeOfDayBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -34123,10 +34748,10 @@ public final class AuthorizationPoliciesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        */
       public Builder setTimeOfDay(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder builderForValue) {
         if (timeOfDayBuilder_ == null) {
           rule_ = builderForValue.build();
           onChanged();
@@ -34137,13 +34762,13 @@ public final class AuthorizationPoliciesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        */
-      public Builder mergeTimeOfDay(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay value) {
+      public Builder mergeTimeOfDay(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay value) {
         if (timeOfDayBuilder_ == null) {
           if (ruleCase_ == 2 &&
-              rule_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance()) {
-            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_)
+              rule_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance()) {
+            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_)
                 .mergeFrom(value).buildPartial();
           } else {
             rule_ = value;
@@ -34160,7 +34785,7 @@ public final class AuthorizationPoliciesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        */
       public Builder clearTimeOfDay() {
         if (timeOfDayBuilder_ == null) {
@@ -34179,38 +34804,38 @@ public final class AuthorizationPoliciesPlumbing {
         return this;
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder getTimeOfDayBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder getTimeOfDayBuilder() {
         return getTimeOfDayFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayOrBuilder() {
         if ((ruleCase_ == 2) && (timeOfDayBuilder_ != null)) {
           return timeOfDayBuilder_.getMessageOrBuilder();
         } else {
           if (ruleCase_ == 2) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
         }
       }
       /**
-       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay time_of_day = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder> 
           getTimeOfDayFieldBuilder() {
         if (timeOfDayBuilder_ == null) {
           if (!(ruleCase_ == 2)) {
-            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
           }
           timeOfDayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) rule_,
                   getParentForChildren(),
                   isClean());
           rule_ = null;
@@ -34502,6 +35127,290 @@ public final class AuthorizationPoliciesPlumbing {
         ruleCase_ = 4;
         onChanged();;
         return daysOfMonthBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder> timeOfDayOutsideOfBuilder_;
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       * @return Whether the timeOfDayOutsideOf field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeOfDayOutsideOf() {
+        return ruleCase_ == 5;
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       * @return The timeOfDayOutsideOf.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf getTimeOfDayOutsideOf() {
+        if (timeOfDayOutsideOfBuilder_ == null) {
+          if (ruleCase_ == 5) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance();
+        } else {
+          if (ruleCase_ == 5) {
+            return timeOfDayOutsideOfBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       */
+      public Builder setTimeOfDayOutsideOf(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf value) {
+        if (timeOfDayOutsideOfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rule_ = value;
+          onChanged();
+        } else {
+          timeOfDayOutsideOfBuilder_.setMessage(value);
+        }
+        ruleCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       */
+      public Builder setTimeOfDayOutsideOf(
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder builderForValue) {
+        if (timeOfDayOutsideOfBuilder_ == null) {
+          rule_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeOfDayOutsideOfBuilder_.setMessage(builderForValue.build());
+        }
+        ruleCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       */
+      public Builder mergeTimeOfDayOutsideOf(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf value) {
+        if (timeOfDayOutsideOfBuilder_ == null) {
+          if (ruleCase_ == 5 &&
+              rule_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance()) {
+            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            rule_ = value;
+          }
+          onChanged();
+        } else {
+          if (ruleCase_ == 5) {
+            timeOfDayOutsideOfBuilder_.mergeFrom(value);
+          } else {
+            timeOfDayOutsideOfBuilder_.setMessage(value);
+          }
+        }
+        ruleCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       */
+      public Builder clearTimeOfDayOutsideOf() {
+        if (timeOfDayOutsideOfBuilder_ == null) {
+          if (ruleCase_ == 5) {
+            ruleCase_ = 0;
+            rule_ = null;
+            onChanged();
+          }
+        } else {
+          if (ruleCase_ == 5) {
+            ruleCase_ = 0;
+            rule_ = null;
+          }
+          timeOfDayOutsideOfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       */
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder getTimeOfDayOutsideOfBuilder() {
+        return getTimeOfDayOutsideOfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder getTimeOfDayOutsideOfOrBuilder() {
+        if ((ruleCase_ == 5) && (timeOfDayOutsideOfBuilder_ != null)) {
+          return timeOfDayOutsideOfBuilder_.getMessageOrBuilder();
+        } else {
+          if (ruleCase_ == 5) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf time_of_day_outside_of = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder> 
+          getTimeOfDayOutsideOfFieldBuilder() {
+        if (timeOfDayOutsideOfBuilder_ == null) {
+          if (!(ruleCase_ == 5)) {
+            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance();
+          }
+          timeOfDayOutsideOfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) rule_,
+                  getParentForChildren(),
+                  isClean());
+          rule_ = null;
+        }
+        ruleCase_ = 5;
+        onChanged();;
+        return timeOfDayOutsideOfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder> timeOfDayWithOperatorBuilder_;
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       * @return Whether the timeOfDayWithOperator field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeOfDayWithOperator() {
+        return ruleCase_ == 6;
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       * @return The timeOfDayWithOperator.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getTimeOfDayWithOperator() {
+        if (timeOfDayWithOperatorBuilder_ == null) {
+          if (ruleCase_ == 6) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+        } else {
+          if (ruleCase_ == 6) {
+            return timeOfDayWithOperatorBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       */
+      public Builder setTimeOfDayWithOperator(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay value) {
+        if (timeOfDayWithOperatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rule_ = value;
+          onChanged();
+        } else {
+          timeOfDayWithOperatorBuilder_.setMessage(value);
+        }
+        ruleCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       */
+      public Builder setTimeOfDayWithOperator(
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder builderForValue) {
+        if (timeOfDayWithOperatorBuilder_ == null) {
+          rule_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeOfDayWithOperatorBuilder_.setMessage(builderForValue.build());
+        }
+        ruleCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       */
+      public Builder mergeTimeOfDayWithOperator(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay value) {
+        if (timeOfDayWithOperatorBuilder_ == null) {
+          if (ruleCase_ == 6 &&
+              rule_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance()) {
+            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            rule_ = value;
+          }
+          onChanged();
+        } else {
+          if (ruleCase_ == 6) {
+            timeOfDayWithOperatorBuilder_.mergeFrom(value);
+          } else {
+            timeOfDayWithOperatorBuilder_.setMessage(value);
+          }
+        }
+        ruleCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       */
+      public Builder clearTimeOfDayWithOperator() {
+        if (timeOfDayWithOperatorBuilder_ == null) {
+          if (ruleCase_ == 6) {
+            ruleCase_ = 0;
+            rule_ = null;
+            onChanged();
+          }
+        } else {
+          if (ruleCase_ == 6) {
+            ruleCase_ = 0;
+            rule_ = null;
+          }
+          timeOfDayWithOperatorBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       */
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder getTimeOfDayWithOperatorBuilder() {
+        return getTimeOfDayWithOperatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder getTimeOfDayWithOperatorOrBuilder() {
+        if ((ruleCase_ == 6) && (timeOfDayWithOperatorBuilder_ != null)) {
+          return timeOfDayWithOperatorBuilder_.getMessageOrBuilder();
+        } else {
+          if (ruleCase_ == 6) {
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_;
+          }
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.AuthorizationPolicyTimeRuleTimeOfDay time_of_day_with_operator = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder> 
+          getTimeOfDayWithOperatorFieldBuilder() {
+        if (timeOfDayWithOperatorBuilder_ == null) {
+          if (!(ruleCase_ == 6)) {
+            rule_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+          }
+          timeOfDayWithOperatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) rule_,
+                  getParentForChildren(),
+                  isClean());
+          rule_ = null;
+        }
+        ruleCase_ = 6;
+        onChanged();;
+        return timeOfDayWithOperatorBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -35514,8 +36423,8 @@ public final class AuthorizationPoliciesPlumbing {
 
   }
 
-  public interface AuthorizationPolicyTimeRuleTimeOfDayOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyTimeRuleTimeOfDay)
+  public interface LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -35560,28 +36469,28 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyTimeRuleTimeOfDay restricts access to a UTC time-of-day window.
+   * LegacyAuthorizationPolicyTimeRuleTimeOfDay restricts access to a UTC time-of-day window.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyTimeRuleTimeOfDay}
+   * Protobuf type {@code v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay}
    */
-  public static final class AuthorizationPolicyTimeRuleTimeOfDay extends
+  public static final class LegacyAuthorizationPolicyTimeRuleTimeOfDay extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyTimeRuleTimeOfDay)
-      AuthorizationPolicyTimeRuleTimeOfDayOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay)
+      LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyTimeRuleTimeOfDay.newBuilder() to construct.
-    private AuthorizationPolicyTimeRuleTimeOfDay(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use LegacyAuthorizationPolicyTimeRuleTimeOfDay.newBuilder() to construct.
+    private LegacyAuthorizationPolicyTimeRuleTimeOfDay(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyTimeRuleTimeOfDay() {
+    private LegacyAuthorizationPolicyTimeRuleTimeOfDay() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyTimeRuleTimeOfDay();
+      return new LegacyAuthorizationPolicyTimeRuleTimeOfDay();
     }
 
     @java.lang.Override
@@ -35589,7 +36498,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyTimeRuleTimeOfDay(
+    private LegacyAuthorizationPolicyTimeRuleTimeOfDay(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -35650,15 +36559,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder.class);
     }
 
     public static final int START_HOUR_FIELD_NUMBER = 1;
@@ -35782,10 +36691,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) obj;
 
       if (getStartHour()
           != other.getStartHour()) return false;
@@ -35819,69 +36728,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -35894,7 +36803,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -35911,29 +36820,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyTimeRuleTimeOfDay restricts access to a UTC time-of-day window.
+     * LegacyAuthorizationPolicyTimeRuleTimeOfDay restricts access to a UTC time-of-day window.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyTimeRuleTimeOfDay}
+     * Protobuf type {@code v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyTimeRuleTimeOfDay)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -35965,17 +36874,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -35983,8 +36892,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay(this);
         result.startHour_ = startHour_;
         result.startMinutes_ = startMinutes_;
         result.endHour_ = endHour_;
@@ -36027,16 +36936,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance()) return this;
         if (other.getStartHour() != 0) {
           setStartHour(other.getStartHour());
         }
@@ -36064,11 +36973,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -36241,6 +37150,1727 @@ public final class AuthorizationPoliciesPlumbing {
        * </pre>
        *
        * <code>int32 end_minutes = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndMinutes() {
+        
+        endMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDay)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay();
+    }
+
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LegacyAuthorizationPolicyTimeRuleTimeOfDay>
+        PARSER = new com.google.protobuf.AbstractParser<LegacyAuthorizationPolicyTimeRuleTimeOfDay>() {
+      @java.lang.Override
+      public LegacyAuthorizationPolicyTimeRuleTimeOfDay parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LegacyAuthorizationPolicyTimeRuleTimeOfDay(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LegacyAuthorizationPolicyTimeRuleTimeOfDay> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LegacyAuthorizationPolicyTimeRuleTimeOfDay> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDay getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Start hour (0-23) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 start_hour = 1 [(.v1.field_options) = { ... }</code>
+     * @return The startHour.
+     */
+    int getStartHour();
+
+    /**
+     * <pre>
+     * Start minutes (0-59) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 start_minutes = 2 [(.v1.field_options) = { ... }</code>
+     * @return The startMinutes.
+     */
+    int getStartMinutes();
+
+    /**
+     * <pre>
+     * End hour (0-23) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 end_hour = 3 [(.v1.field_options) = { ... }</code>
+     * @return The endHour.
+     */
+    int getEndHour();
+
+    /**
+     * <pre>
+     * End minutes (0-59) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 end_minutes = 4 [(.v1.field_options) = { ... }</code>
+     * @return The endMinutes.
+     */
+    int getEndMinutes();
+  }
+  /**
+   * <pre>
+   * LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf restricts access to times outside a UTC time-of-day window.
+   * </pre>
+   *
+   * Protobuf type {@code v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf}
+   */
+  public static final class LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf)
+      LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.newBuilder() to construct.
+    private LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              startHour_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              startMinutes_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              endHour_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              endMinutes_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder.class);
+    }
+
+    public static final int START_HOUR_FIELD_NUMBER = 1;
+    private int startHour_;
+    /**
+     * <pre>
+     * Start hour (0-23) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 start_hour = 1 [(.v1.field_options) = { ... }</code>
+     * @return The startHour.
+     */
+    @java.lang.Override
+    public int getStartHour() {
+      return startHour_;
+    }
+
+    public static final int START_MINUTES_FIELD_NUMBER = 2;
+    private int startMinutes_;
+    /**
+     * <pre>
+     * Start minutes (0-59) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 start_minutes = 2 [(.v1.field_options) = { ... }</code>
+     * @return The startMinutes.
+     */
+    @java.lang.Override
+    public int getStartMinutes() {
+      return startMinutes_;
+    }
+
+    public static final int END_HOUR_FIELD_NUMBER = 3;
+    private int endHour_;
+    /**
+     * <pre>
+     * End hour (0-23) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 end_hour = 3 [(.v1.field_options) = { ... }</code>
+     * @return The endHour.
+     */
+    @java.lang.Override
+    public int getEndHour() {
+      return endHour_;
+    }
+
+    public static final int END_MINUTES_FIELD_NUMBER = 4;
+    private int endMinutes_;
+    /**
+     * <pre>
+     * End minutes (0-59) of the excluded window.
+     * </pre>
+     *
+     * <code>int32 end_minutes = 4 [(.v1.field_options) = { ... }</code>
+     * @return The endMinutes.
+     */
+    @java.lang.Override
+    public int getEndMinutes() {
+      return endMinutes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startHour_ != 0) {
+        output.writeInt32(1, startHour_);
+      }
+      if (startMinutes_ != 0) {
+        output.writeInt32(2, startMinutes_);
+      }
+      if (endHour_ != 0) {
+        output.writeInt32(3, endHour_);
+      }
+      if (endMinutes_ != 0) {
+        output.writeInt32(4, endMinutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startHour_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, startHour_);
+      }
+      if (startMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, startMinutes_);
+      }
+      if (endHour_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, endHour_);
+      }
+      if (endMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, endMinutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) obj;
+
+      if (getStartHour()
+          != other.getStartHour()) return false;
+      if (getStartMinutes()
+          != other.getStartMinutes()) return false;
+      if (getEndHour()
+          != other.getEndHour()) return false;
+      if (getEndMinutes()
+          != other.getEndMinutes()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + START_HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + getStartHour();
+      hash = (37 * hash) + START_MINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getStartMinutes();
+      hash = (37 * hash) + END_HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + getEndHour();
+      hash = (37 * hash) + END_MINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getEndMinutes();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf restricts access to times outside a UTC time-of-day window.
+     * </pre>
+     *
+     * Protobuf type {@code v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        startHour_ = 0;
+
+        startMinutes_ = 0;
+
+        endHour_ = 0;
+
+        endMinutes_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf(this);
+        result.startHour_ = startHour_;
+        result.startMinutes_ = startMinutes_;
+        result.endHour_ = endHour_;
+        result.endMinutes_ = endMinutes_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf.getDefaultInstance()) return this;
+        if (other.getStartHour() != 0) {
+          setStartHour(other.getStartHour());
+        }
+        if (other.getStartMinutes() != 0) {
+          setStartMinutes(other.getStartMinutes());
+        }
+        if (other.getEndHour() != 0) {
+          setEndHour(other.getEndHour());
+        }
+        if (other.getEndMinutes() != 0) {
+          setEndMinutes(other.getEndMinutes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int startHour_ ;
+      /**
+       * <pre>
+       * Start hour (0-23) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 start_hour = 1 [(.v1.field_options) = { ... }</code>
+       * @return The startHour.
+       */
+      @java.lang.Override
+      public int getStartHour() {
+        return startHour_;
+      }
+      /**
+       * <pre>
+       * Start hour (0-23) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 start_hour = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The startHour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHour(int value) {
+        
+        startHour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start hour (0-23) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 start_hour = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartHour() {
+        
+        startHour_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int startMinutes_ ;
+      /**
+       * <pre>
+       * Start minutes (0-59) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 start_minutes = 2 [(.v1.field_options) = { ... }</code>
+       * @return The startMinutes.
+       */
+      @java.lang.Override
+      public int getStartMinutes() {
+        return startMinutes_;
+      }
+      /**
+       * <pre>
+       * Start minutes (0-59) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 start_minutes = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The startMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartMinutes(int value) {
+        
+        startMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start minutes (0-59) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 start_minutes = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartMinutes() {
+        
+        startMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int endHour_ ;
+      /**
+       * <pre>
+       * End hour (0-23) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 end_hour = 3 [(.v1.field_options) = { ... }</code>
+       * @return The endHour.
+       */
+      @java.lang.Override
+      public int getEndHour() {
+        return endHour_;
+      }
+      /**
+       * <pre>
+       * End hour (0-23) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 end_hour = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The endHour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndHour(int value) {
+        
+        endHour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End hour (0-23) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 end_hour = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndHour() {
+        
+        endHour_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int endMinutes_ ;
+      /**
+       * <pre>
+       * End minutes (0-59) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 end_minutes = 4 [(.v1.field_options) = { ... }</code>
+       * @return The endMinutes.
+       */
+      @java.lang.Override
+      public int getEndMinutes() {
+        return endMinutes_;
+      }
+      /**
+       * <pre>
+       * End minutes (0-59) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 end_minutes = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The endMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndMinutes(int value) {
+        
+        endMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End minutes (0-59) of the excluded window.
+       * </pre>
+       *
+       * <code>int32 end_minutes = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndMinutes() {
+        
+        endMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf();
+    }
+
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf>
+        PARSER = new com.google.protobuf.AbstractParser<LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf>() {
+      @java.lang.Override
+      public LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AuthorizationPolicyTimeRuleTimeOfDayOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyTimeRuleTimeOfDay)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The comparison operator (IS = between, IS_NOT = outside of).
+     * </pre>
+     *
+     * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+     * @return The enum numeric value on the wire for operator.
+     */
+    int getOperatorValue();
+    /**
+     * <pre>
+     * The comparison operator (IS = between, IS_NOT = outside of).
+     * </pre>
+     *
+     * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+     * @return The operator.
+     */
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator getOperator();
+
+    /**
+     * <pre>
+     * Start hour (0-23) of the window.
+     * </pre>
+     *
+     * <code>int32 start_hour = 2 [(.v1.field_options) = { ... }</code>
+     * @return The startHour.
+     */
+    int getStartHour();
+
+    /**
+     * <pre>
+     * Start minutes (0-59) of the window.
+     * </pre>
+     *
+     * <code>int32 start_minutes = 3 [(.v1.field_options) = { ... }</code>
+     * @return The startMinutes.
+     */
+    int getStartMinutes();
+
+    /**
+     * <pre>
+     * End hour (0-23) of the window.
+     * </pre>
+     *
+     * <code>int32 end_hour = 4 [(.v1.field_options) = { ... }</code>
+     * @return The endHour.
+     */
+    int getEndHour();
+
+    /**
+     * <pre>
+     * End minutes (0-59) of the window.
+     * </pre>
+     *
+     * <code>int32 end_minutes = 5 [(.v1.field_options) = { ... }</code>
+     * @return The endMinutes.
+     */
+    int getEndMinutes();
+  }
+  /**
+   * <pre>
+   * AuthorizationPolicyTimeRuleTimeOfDay restricts access to a UTC
+   * time-of-day window using an explicit operator.
+   * </pre>
+   *
+   * Protobuf type {@code v1.AuthorizationPolicyTimeRuleTimeOfDay}
+   */
+  public static final class AuthorizationPolicyTimeRuleTimeOfDay extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyTimeRuleTimeOfDay)
+      AuthorizationPolicyTimeRuleTimeOfDayOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AuthorizationPolicyTimeRuleTimeOfDay.newBuilder() to construct.
+    private AuthorizationPolicyTimeRuleTimeOfDay(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AuthorizationPolicyTimeRuleTimeOfDay() {
+      operator_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuthorizationPolicyTimeRuleTimeOfDay();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AuthorizationPolicyTimeRuleTimeOfDay(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              operator_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              startHour_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              startMinutes_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              endHour_ = input.readInt32();
+              break;
+            }
+            case 40: {
+
+              endMinutes_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder.class);
+    }
+
+    public static final int OPERATOR_FIELD_NUMBER = 1;
+    private int operator_;
+    /**
+     * <pre>
+     * The comparison operator (IS = between, IS_NOT = outside of).
+     * </pre>
+     *
+     * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+     * @return The enum numeric value on the wire for operator.
+     */
+    @java.lang.Override public int getOperatorValue() {
+      return operator_;
+    }
+    /**
+     * <pre>
+     * The comparison operator (IS = between, IS_NOT = outside of).
+     * </pre>
+     *
+     * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+     * @return The operator.
+     */
+    @java.lang.Override public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator getOperator() {
+      @SuppressWarnings("deprecation")
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator result = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator.valueOf(operator_);
+      return result == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator.UNRECOGNIZED : result;
+    }
+
+    public static final int START_HOUR_FIELD_NUMBER = 2;
+    private int startHour_;
+    /**
+     * <pre>
+     * Start hour (0-23) of the window.
+     * </pre>
+     *
+     * <code>int32 start_hour = 2 [(.v1.field_options) = { ... }</code>
+     * @return The startHour.
+     */
+    @java.lang.Override
+    public int getStartHour() {
+      return startHour_;
+    }
+
+    public static final int START_MINUTES_FIELD_NUMBER = 3;
+    private int startMinutes_;
+    /**
+     * <pre>
+     * Start minutes (0-59) of the window.
+     * </pre>
+     *
+     * <code>int32 start_minutes = 3 [(.v1.field_options) = { ... }</code>
+     * @return The startMinutes.
+     */
+    @java.lang.Override
+    public int getStartMinutes() {
+      return startMinutes_;
+    }
+
+    public static final int END_HOUR_FIELD_NUMBER = 4;
+    private int endHour_;
+    /**
+     * <pre>
+     * End hour (0-23) of the window.
+     * </pre>
+     *
+     * <code>int32 end_hour = 4 [(.v1.field_options) = { ... }</code>
+     * @return The endHour.
+     */
+    @java.lang.Override
+    public int getEndHour() {
+      return endHour_;
+    }
+
+    public static final int END_MINUTES_FIELD_NUMBER = 5;
+    private int endMinutes_;
+    /**
+     * <pre>
+     * End minutes (0-59) of the window.
+     * </pre>
+     *
+     * <code>int32 end_minutes = 5 [(.v1.field_options) = { ... }</code>
+     * @return The endMinutes.
+     */
+    @java.lang.Override
+    public int getEndMinutes() {
+      return endMinutes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (operator_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator.AUTHORIZATION_POLICY_TIME_OPERATOR_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, operator_);
+      }
+      if (startHour_ != 0) {
+        output.writeInt32(2, startHour_);
+      }
+      if (startMinutes_ != 0) {
+        output.writeInt32(3, startMinutes_);
+      }
+      if (endHour_ != 0) {
+        output.writeInt32(4, endHour_);
+      }
+      if (endMinutes_ != 0) {
+        output.writeInt32(5, endMinutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (operator_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator.AUTHORIZATION_POLICY_TIME_OPERATOR_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, operator_);
+      }
+      if (startHour_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, startHour_);
+      }
+      if (startMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, startMinutes_);
+      }
+      if (endHour_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, endHour_);
+      }
+      if (endMinutes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, endMinutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) obj;
+
+      if (operator_ != other.operator_) return false;
+      if (getStartHour()
+          != other.getStartHour()) return false;
+      if (getStartMinutes()
+          != other.getStartMinutes()) return false;
+      if (getEndHour()
+          != other.getEndHour()) return false;
+      if (getEndMinutes()
+          != other.getEndMinutes()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+      hash = (53 * hash) + operator_;
+      hash = (37 * hash) + START_HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + getStartHour();
+      hash = (37 * hash) + START_MINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getStartMinutes();
+      hash = (37 * hash) + END_HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + getEndHour();
+      hash = (37 * hash) + END_MINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getEndMinutes();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AuthorizationPolicyTimeRuleTimeOfDay restricts access to a UTC
+     * time-of-day window using an explicit operator.
+     * </pre>
+     *
+     * Protobuf type {@code v1.AuthorizationPolicyTimeRuleTimeOfDay}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyTimeRuleTimeOfDay)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDayOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        operator_ = 0;
+
+        startHour_ = 0;
+
+        startMinutes_ = 0;
+
+        endHour_ = 0;
+
+        endMinutes_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay(this);
+        result.operator_ = operator_;
+        result.startHour_ = startHour_;
+        result.startMinutes_ = startMinutes_;
+        result.endHour_ = endHour_;
+        result.endMinutes_ = endMinutes_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay.getDefaultInstance()) return this;
+        if (other.operator_ != 0) {
+          setOperatorValue(other.getOperatorValue());
+        }
+        if (other.getStartHour() != 0) {
+          setStartHour(other.getStartHour());
+        }
+        if (other.getStartMinutes() != 0) {
+          setStartMinutes(other.getStartMinutes());
+        }
+        if (other.getEndHour() != 0) {
+          setEndHour(other.getEndHour());
+        }
+        if (other.getEndMinutes() != 0) {
+          setEndMinutes(other.getEndMinutes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeRuleTimeOfDay) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int operator_ = 0;
+      /**
+       * <pre>
+       * The comparison operator (IS = between, IS_NOT = outside of).
+       * </pre>
+       *
+       * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+       * @return The enum numeric value on the wire for operator.
+       */
+      @java.lang.Override public int getOperatorValue() {
+        return operator_;
+      }
+      /**
+       * <pre>
+       * The comparison operator (IS = between, IS_NOT = outside of).
+       * </pre>
+       *
+       * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The enum numeric value on the wire for operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorValue(int value) {
+        
+        operator_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The comparison operator (IS = between, IS_NOT = outside of).
+       * </pre>
+       *
+       * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+       * @return The operator.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator getOperator() {
+        @SuppressWarnings("deprecation")
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator result = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator.valueOf(operator_);
+        return result == null ? com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The comparison operator (IS = between, IS_NOT = outside of).
+       * </pre>
+       *
+       * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperator(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyTimeOperator value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        operator_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The comparison operator (IS = between, IS_NOT = outside of).
+       * </pre>
+       *
+       * <code>.v1.AuthorizationPolicyTimeOperator operator = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperator() {
+        
+        operator_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int startHour_ ;
+      /**
+       * <pre>
+       * Start hour (0-23) of the window.
+       * </pre>
+       *
+       * <code>int32 start_hour = 2 [(.v1.field_options) = { ... }</code>
+       * @return The startHour.
+       */
+      @java.lang.Override
+      public int getStartHour() {
+        return startHour_;
+      }
+      /**
+       * <pre>
+       * Start hour (0-23) of the window.
+       * </pre>
+       *
+       * <code>int32 start_hour = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The startHour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHour(int value) {
+        
+        startHour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start hour (0-23) of the window.
+       * </pre>
+       *
+       * <code>int32 start_hour = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartHour() {
+        
+        startHour_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int startMinutes_ ;
+      /**
+       * <pre>
+       * Start minutes (0-59) of the window.
+       * </pre>
+       *
+       * <code>int32 start_minutes = 3 [(.v1.field_options) = { ... }</code>
+       * @return The startMinutes.
+       */
+      @java.lang.Override
+      public int getStartMinutes() {
+        return startMinutes_;
+      }
+      /**
+       * <pre>
+       * Start minutes (0-59) of the window.
+       * </pre>
+       *
+       * <code>int32 start_minutes = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The startMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartMinutes(int value) {
+        
+        startMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start minutes (0-59) of the window.
+       * </pre>
+       *
+       * <code>int32 start_minutes = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartMinutes() {
+        
+        startMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int endHour_ ;
+      /**
+       * <pre>
+       * End hour (0-23) of the window.
+       * </pre>
+       *
+       * <code>int32 end_hour = 4 [(.v1.field_options) = { ... }</code>
+       * @return The endHour.
+       */
+      @java.lang.Override
+      public int getEndHour() {
+        return endHour_;
+      }
+      /**
+       * <pre>
+       * End hour (0-23) of the window.
+       * </pre>
+       *
+       * <code>int32 end_hour = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The endHour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndHour(int value) {
+        
+        endHour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End hour (0-23) of the window.
+       * </pre>
+       *
+       * <code>int32 end_hour = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndHour() {
+        
+        endHour_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int endMinutes_ ;
+      /**
+       * <pre>
+       * End minutes (0-59) of the window.
+       * </pre>
+       *
+       * <code>int32 end_minutes = 5 [(.v1.field_options) = { ... }</code>
+       * @return The endMinutes.
+       */
+      @java.lang.Override
+      public int getEndMinutes() {
+        return endMinutes_;
+      }
+      /**
+       * <pre>
+       * End minutes (0-59) of the window.
+       * </pre>
+       *
+       * <code>int32 end_minutes = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The endMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndMinutes(int value) {
+        
+        endMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End minutes (0-59) of the window.
+       * </pre>
+       *
+       * <code>int32 end_minutes = 5 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearEndMinutes() {
@@ -38431,6 +41061,16 @@ public final class AuthorizationPoliciesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AuthorizationPolicyTimeRuleDayOfWeek_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -38513,204 +41153,217 @@ public final class AuthorizationPoliciesPlumbing {
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0226\n\005items\030\004 \003(\0132\033.v1.Aut" +
       "horizationPolicyItemB\n\362\370\263\007\005\260\363\263\007\001\0227\n\005stat" +
       "e\030\005 \001(\0162\034.v1.AuthorizationPolicyStateB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\227\n\n" +
-      "\027AuthorizationPolicyItem\022J\n\rprincipal_al" +
+      "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\222\t\n" +
+      "\027AuthorizationPolicyItem\022@\n\rprincipal_al" +
       "l\030\001 \001(\0132\'.v1.AuthorizationPolicyItemPrin" +
-      "cipalAllB\n\362\370\263\007\005\260\363\263\007\001\022O\n\020principal_by_ids" +
-      "\030\002 \001(\0132).v1.AuthorizationPolicyItemPrinc" +
-      "ipalByIdsB\n\362\370\263\007\005\260\363\263\007\001\022J\n\rresources_all\030\003" +
-      " \001(\0132\'.v1.AuthorizationPolicyItemResourc" +
-      "esAllB\n\362\370\263\007\005\260\363\263\007\001\022M\n\017resource_by_ids\030\004 \001" +
-      "(\0132(.v1.AuthorizationPolicyItemResourceB" +
-      "yIdsB\n\362\370\263\007\005\260\363\263\007\001\022_\n\031resource_by_type_and" +
+      "cipalAllH\000\022E\n\020principal_by_ids\030\002 \001(\0132).v" +
+      "1.AuthorizationPolicyItemPrincipalByIdsH" +
+      "\000\022@\n\rresources_all\030\003 \001(\0132\'.v1.Authorizat" +
+      "ionPolicyItemResourcesAllH\000\022C\n\017resource_" +
+      "by_ids\030\004 \001(\0132(.v1.AuthorizationPolicyIte" +
+      "mResourceByIdsH\000\022U\n\031resource_by_type_and" +
       "_tags\030\005 \001(\01320.v1.AuthorizationPolicyItem" +
-      "ResourceByTypeAndTagsB\n\362\370\263\007\005\260\363\263\007\001\022\201\001\n+re" +
-      "source_by_type_tags_and_kubernetes_group" +
-      "s\030\006 \001(\0132@.v1.AuthorizationPolicyItemReso" +
-      "urceByTypeTagsAndKubernetesGroupsB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022e\n\034resource_by_okta_with_groups\030\007 " +
-      "\001(\01323.v1.AuthorizationPolicyItemResource" +
-      "ByOktaWithGroupsB\n\362\370\263\007\005\260\363\263\007\001\022g\n\035resource" +
-      "_by_entra_with_groups\030\010 \001(\01324.v1.Authori" +
-      "zationPolicyItemResourceByEntraWithGroup" +
-      "sB\n\362\370\263\007\005\260\363\263\007\001\022J\n\rcondition_mfa\030\t \001(\0132\'.v" +
-      "1.AuthorizationPolicyItemConditionMFAB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022[\n\026condition_device_trust\030\n \001(" +
-      "\0132/.v1.AuthorizationPolicyItemConditionD" +
-      "eviceTrustB\n\362\370\263\007\005\260\363\263\007\001\022T\n\022condition_loca" +
-      "tion\030\013 \001(\0132,.v1.AuthorizationPolicyItemC" +
-      "onditionLocationB\n\362\370\263\007\005\260\363\263\007\001\022H\n\014conditio" +
-      "n_ip\030\014 \001(\0132&.v1.AuthorizationPolicyItemC" +
-      "onditionIPB\n\362\370\263\007\005\260\363\263\007\001\022L\n\016condition_time" +
-      "\030\r \001(\0132(.v1.AuthorizationPolicyItemCondi" +
-      "tionTimeB\n\362\370\263\007\005\260\363\263\007\001\022]\n\027condition_approv" +
-      "al_flow\030\016 \001(\01320.v1.AuthorizationPolicyIt" +
-      "emConditionApprovalFlowB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263" +
-      "\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"@\n#AuthorizationP" +
-      "olicyItemPrincipalAll:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo" +
-      "_private\"[\n%AuthorizationPolicyItemPrinc" +
-      "ipalByIds\022\027\n\003ids\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007" +
-      "\024\250\363\263\007\001\322\363\263\007\ngo_private\"@\n#AuthorizationPo" +
-      "licyItemResourcesAll:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
-      "private\"Z\n$AuthorizationPolicyItemResour" +
-      "ceByIds\022\027\n\003ids\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250" +
-      "\363\263\007\001\322\363\263\007\ngo_private\"\230\001\n,AuthorizationPol" +
-      "icyItemResourceByTypeAndTags\022*\n\004type\030\001 \001" +
-      "(\0162\020.v1.ResourceTypeB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004tags" +
-      "\030\002 \003(\0132\007.v1.TagB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322" +
-      "\363\263\007\ngo_private\"\317\001\n<AuthorizationPolicyIt" +
-      "emResourceByTypeTagsAndKubernetesGroups\022" +
-      "*\n\004type\030\001 \001(\0162\020.v1.ResourceTypeB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022!\n\004tags\030\002 \003(\0132\007.v1.TagB\n\362\370\263\007\005\260\363\263\007\001\022%" +
-      "\n\021kubernetes_groups\030\003 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372" +
-      "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\200\001\n/Authorizati" +
-      "onPolicyItemResourceByOktaWithGroups\022\026\n\002" +
-      "id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006groups\030\002 \003(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\201\001\n0" +
-      "AuthorizationPolicyItemResourceByEntraWi" +
-      "thGroups\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006grou" +
-      "ps\030\002 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
-      "private\"\207\001\n#AuthorizationPolicyItemCondi" +
-      "tionMFA\022\032\n\006reason\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025c" +
-      "ache_timeout_seconds\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\031" +
-      "\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\326\001\n+Authorizat" +
-      "ionPolicyItemConditionDeviceTrust\022H\n\010ope" +
-      "rator\030\001 \001(\0162*.v1.AuthorizationPolicyDevi" +
-      "ceTrustOperatorB\n\362\370\263\007\005\260\363\263\007\001\022B\n\005level\030\002 \001" +
-      "(\0162\'.v1.AuthorizationPolicyDeviceTrustLe" +
-      "velB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priva" +
-      "te\"\205\001\n(AuthorizationPolicyItemConditionL" +
-      "ocation\022>\n\005rules\030\001 \003(\0132#.v1.Authorizatio" +
-      "nPolicyLocationRuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363" +
-      "\263\007\001\322\363\263\007\ngo_private\"\365\001\n\037AuthorizationPoli" +
-      "cyLocationRule\0229\n\tcontinent\030\001 \001(\0132$.v1.A" +
-      "uthorizationPolicyContinentRuleH\000\0225\n\007cou" +
-      "ntry\030\002 \001(\0132\".v1.AuthorizationPolicyCount" +
-      "ryRuleH\000\022=\n\013subdivision\030\003 \001(\0132&.v1.Autho" +
-      "rizationPolicySubdivisionRuleH\000:\031\372\370\263\007\024\250\363" +
-      "\263\007\001\322\363\263\007\ngo_privateB\006\n\004rule\"\250\001\n Authoriza" +
-      "tionPolicyContinentRule\0222\n\010operator\030\001 \001(" +
-      "\0162\024.v1.LocationOperatorB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nc" +
-      "ontinents\030\002 \003(\0162\025.v1.LocationContinentB\n" +
-      "\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\243\001" +
-      "\n\036AuthorizationPolicyCountryRule\0222\n\010oper" +
-      "ator\030\001 \001(\0162\024.v1.LocationOperatorB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\0222\n\tcountries\030\002 \003(\0162\023.v1.LocationCou" +
-      "ntryB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priv" +
-      "ate\"\225\001\n\"AuthorizationPolicySubdivisionRu" +
-      "le\0222\n\010operator\030\001 \001(\0162\024.v1.LocationOperat" +
-      "orB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014subdivisions\030\002 \003(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"y\n\"A" +
-      "uthorizationPolicyItemConditionIP\0228\n\005rul" +
-      "es\030\001 \003(\0132\035.v1.AuthorizationPolicyIPRuleB" +
-      "\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\320" +
-      "\001\n\031AuthorizationPolicyIPRule\022?\n\010operator" +
-      "\030\001 \001(\0162!.v1.AuthorizationPolicyIPOperato" +
-      "rB\n\362\370\263\007\005\260\363\263\007\001\022=\n\007network\030\002 \001(\0162 .v1.Auth" +
-      "orizationPolicyIPNetworkB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004" +
-      "cidr\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ng" +
-      "o_private\"}\n$AuthorizationPolicyItemCond" +
-      "itionTime\022:\n\005rules\030\001 \003(\0132\037.v1.Authorizat" +
-      "ionPolicyTimeRuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007" +
-      "\001\322\363\263\007\ngo_private\"\276\002\n\033AuthorizationPolicy" +
-      "TimeRule\022?\n\013day_of_week\030\001 \001(\0132(.v1.Autho" +
-      "rizationPolicyTimeRuleDayOfWeekH\000\022?\n\013tim" +
-      "e_of_day\030\002 \001(\0132(.v1.AuthorizationPolicyT" +
-      "imeRuleTimeOfDayH\000\0225\n\005month\030\003 \001(\0132$.v1.A" +
-      "uthorizationPolicyTimeRuleMonthH\000\022C\n\rday" +
-      "s_of_month\030\004 \001(\0132*.v1.AuthorizationPolic" +
-      "yTimeRuleDaysOfMonthH\000:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ng" +
-      "o_privateB\006\n\004rule\"\300\001\n$AuthorizationPolic" +
-      "yTimeRuleDayOfWeek\022A\n\010operator\030\001 \001(\0162#.v" +
-      "1.AuthorizationPolicyTimeOperatorB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022:\n\004days\030\002 \003(\0162 .v1.AuthorizationPo" +
-      "licyDayOfWeekB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263" +
-      "\007\ngo_private\"\303\001\n$AuthorizationPolicyTime" +
-      "RuleTimeOfDay\022\036\n\nstart_hour\030\001 \001(\005B\n\362\370\263\007\005" +
+      "ResourceByTypeAndTagsH\000\022w\n+resource_by_t" +
+      "ype_tags_and_kubernetes_groups\030\006 \001(\0132@.v" +
+      "1.AuthorizationPolicyItemResourceByTypeT" +
+      "agsAndKubernetesGroupsH\000\022[\n\034resource_by_" +
+      "okta_with_groups\030\007 \001(\01323.v1.Authorizatio" +
+      "nPolicyItemResourceByOktaWithGroupsH\000\022]\n" +
+      "\035resource_by_entra_with_groups\030\010 \001(\01324.v" +
+      "1.AuthorizationPolicyItemResourceByEntra" +
+      "WithGroupsH\000\022@\n\rcondition_mfa\030\t \001(\0132\'.v1" +
+      ".AuthorizationPolicyItemConditionMFAH\000\022Q" +
+      "\n\026condition_device_trust\030\n \001(\0132/.v1.Auth" +
+      "orizationPolicyItemConditionDeviceTrustH" +
+      "\000\022J\n\022condition_location\030\013 \001(\0132,.v1.Autho" +
+      "rizationPolicyItemConditionLocationH\000\022>\n" +
+      "\014condition_ip\030\014 \001(\0132&.v1.AuthorizationPo" +
+      "licyItemConditionIPH\000\022B\n\016condition_time\030" +
+      "\r \001(\0132(.v1.AuthorizationPolicyItemCondit" +
+      "ionTimeH\000\022S\n\027condition_approval_flow\030\016 \001" +
+      "(\01320.v1.AuthorizationPolicyItemCondition" +
+      "ApprovalFlowH\000:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_privat" +
+      "eB\006\n\004kind\"@\n#AuthorizationPolicyItemPrin" +
+      "cipalAll:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"[\n%A" +
+      "uthorizationPolicyItemPrincipalByIds\022\027\n\003" +
+      "ids\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo" +
+      "_private\"@\n#AuthorizationPolicyItemResou" +
+      "rcesAll:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"Z\n$Au" +
+      "thorizationPolicyItemResourceByIds\022\027\n\003id" +
+      "s\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
+      "rivate\"\230\001\n,AuthorizationPolicyItemResour" +
+      "ceByTypeAndTags\022*\n\004type\030\001 \001(\0162\020.v1.Resou" +
+      "rceTypeB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004tags\030\002 \003(\0132\007.v1.T" +
+      "agB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_privat" +
+      "e\"\317\001\n<AuthorizationPolicyItemResourceByT" +
+      "ypeTagsAndKubernetesGroups\022*\n\004type\030\001 \001(\016" +
+      "2\020.v1.ResourceTypeB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004tags\030\002" +
+      " \003(\0132\007.v1.TagB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021kubernetes_" +
+      "groups\030\003 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007" +
+      "\ngo_private\"\211\001\n/AuthorizationPolicyItemR" +
+      "esourceByOktaWithGroups\022\037\n\013resource_id\030\001" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006groups\030\002 \003(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\212\001\n0Auth" +
+      "orizationPolicyItemResourceByEntraWithGr" +
+      "oups\022\037\n\013resource_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n" +
+      "\006groups\030\002 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263" +
+      "\007\ngo_private\"\207\001\n#AuthorizationPolicyItem" +
+      "ConditionMFA\022\032\n\006reason\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022)\n\025cache_timeout_seconds\030\002 \001(\005B\n\362\370\263\007\005\260\363" +
+      "\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\326\001\n+Autho" +
+      "rizationPolicyItemConditionDeviceTrust\022H" +
+      "\n\010operator\030\001 \001(\0162*.v1.AuthorizationPolic" +
+      "yDeviceTrustOperatorB\n\362\370\263\007\005\260\363\263\007\001\022B\n\005leve" +
+      "l\030\002 \001(\0162\'.v1.AuthorizationPolicyDeviceTr" +
+      "ustLevelB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
+      "private\"\205\001\n(AuthorizationPolicyItemCondi" +
+      "tionLocation\022>\n\005rules\030\001 \003(\0132#.v1.Authori" +
+      "zationPolicyLocationRuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370" +
+      "\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\365\001\n\037Authorizatio" +
+      "nPolicyLocationRule\0229\n\tcontinent\030\001 \001(\0132$" +
+      ".v1.AuthorizationPolicyContinentRuleH\000\0225" +
+      "\n\007country\030\002 \001(\0132\".v1.AuthorizationPolicy" +
+      "CountryRuleH\000\022=\n\013subdivision\030\003 \001(\0132&.v1." +
+      "AuthorizationPolicySubdivisionRuleH\000:\031\372\370" +
+      "\263\007\024\250\363\263\007\001\322\363\263\007\ngo_privateB\006\n\004rule\"\250\001\n Auth" +
+      "orizationPolicyContinentRule\0222\n\010operator" +
+      "\030\001 \001(\0162\024.v1.LocationOperatorB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\0225\n\ncontinents\030\002 \003(\0162\025.v1.LocationContin" +
+      "entB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priva" +
+      "te\"\243\001\n\036AuthorizationPolicyCountryRule\0222\n" +
+      "\010operator\030\001 \001(\0162\024.v1.LocationOperatorB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\0222\n\tcountries\030\002 \003(\0162\023.v1.Locati" +
+      "onCountryB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo" +
+      "_private\"\225\001\n\"AuthorizationPolicySubdivis" +
+      "ionRule\0222\n\010operator\030\001 \001(\0162\024.v1.LocationO" +
+      "peratorB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014subdivisions\030\002 \003(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private" +
+      "\"y\n\"AuthorizationPolicyItemConditionIP\0228" +
+      "\n\005rules\030\001 \003(\0132\035.v1.AuthorizationPolicyIP" +
+      "RuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priv" +
+      "ate\"\320\001\n\031AuthorizationPolicyIPRule\022?\n\010ope" +
+      "rator\030\001 \001(\0162!.v1.AuthorizationPolicyIPOp" +
+      "eratorB\n\362\370\263\007\005\260\363\263\007\001\022=\n\007network\030\002 \001(\0162 .v1" +
+      ".AuthorizationPolicyIPNetworkB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\030\n\004cidr\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322" +
+      "\363\263\007\ngo_private\"}\n$AuthorizationPolicyIte" +
+      "mConditionTime\022:\n\005rules\030\001 \003(\0132\037.v1.Autho" +
+      "rizationPolicyTimeRuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007" +
+      "\024\250\363\263\007\001\322\363\263\007\ngo_private\"\356\003\n\033AuthorizationP" +
+      "olicyTimeRule\022?\n\013day_of_week\030\001 \001(\0132(.v1." +
+      "AuthorizationPolicyTimeRuleDayOfWeekH\000\022E" +
+      "\n\013time_of_day\030\002 \001(\0132..v1.LegacyAuthoriza" +
+      "tionPolicyTimeRuleTimeOfDayH\000\0225\n\005month\030\003" +
+      " \001(\0132$.v1.AuthorizationPolicyTimeRuleMon" +
+      "thH\000\022C\n\rdays_of_month\030\004 \001(\0132*.v1.Authori" +
+      "zationPolicyTimeRuleDaysOfMonthH\000\022Y\n\026tim" +
+      "e_of_day_outside_of\030\005 \001(\01327.v1.LegacyAut" +
+      "horizationPolicyTimeRuleTimeOfDayOutside" +
+      "OfH\000\022M\n\031time_of_day_with_operator\030\006 \001(\0132" +
+      "(.v1.AuthorizationPolicyTimeRuleTimeOfDa" +
+      "yH\000:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_privateB\006\n\004rule\"\300" +
+      "\001\n$AuthorizationPolicyTimeRuleDayOfWeek\022" +
+      "A\n\010operator\030\001 \001(\0162#.v1.AuthorizationPoli" +
+      "cyTimeOperatorB\n\362\370\263\007\005\260\363\263\007\001\022:\n\004days\030\002 \003(\016" +
+      "2 .v1.AuthorizationPolicyDayOfWeekB\n\362\370\263\007" +
+      "\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\311\001\n*Le" +
+      "gacyAuthorizationPolicyTimeRuleTimeOfDay" +
+      "\022\036\n\nstart_hour\030\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\rstar" +
+      "t_minutes\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010end_hour\030" +
+      "\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013end_minutes\030\004 \001(\005B\n" +
+      "\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\322\001" +
+      "\n3LegacyAuthorizationPolicyTimeRuleTimeO" +
+      "fDayOutsideOf\022\036\n\nstart_hour\030\001 \001(\005B\n\362\370\263\007\005" +
       "\260\363\263\007\001\022!\n\rstart_minutes\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001" +
       "\022\034\n\010end_hour\030\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013end_mi" +
       "nutes\030\004 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\n" +
-      "go_private\"Y\n AuthorizationPolicyTimeRul" +
-      "eMonth\022\032\n\006months\030\001 \003(\005B\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007" +
-      "\024\250\363\263\007\001\322\363\263\007\ngo_private\"]\n&AuthorizationPo" +
-      "licyTimeRuleDaysOfMonth\022\030\n\004days\030\001 \003(\005B\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"o\n," +
-      "AuthorizationPolicyItemConditionApproval" +
-      "Flow\022$\n\020approval_flow_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private*\254\001\n\030Author" +
-      "izationPolicyState\022*\n&AUTHORIZATION_POLI" +
-      "CY_STATE_UNSPECIFIED\020\000\022%\n!AUTHORIZATION_" +
-      "POLICY_STATE_ACTIVE\020\001\022\'\n#AUTHORIZATION_P" +
-      "OLICY_STATE_INACTIVE\020\002\032\024\262\370\263\007\017\222\365\263\007\ngo_pri" +
-      "vate*\344\001\n&AuthorizationPolicyDeviceTrustO" +
-      "perator\022:\n6AUTHORIZATION_POLICY_DEVICE_T" +
-      "RUST_OPERATOR_UNSPECIFIED\020\000\0221\n-AUTHORIZA" +
-      "TION_POLICY_DEVICE_TRUST_OPERATOR_IS\020\001\0225" +
-      "\n1AUTHORIZATION_POLICY_DEVICE_TRUST_OPER" +
-      "ATOR_IS_NOT\020\002\032\024\262\370\263\007\017\222\365\263\007\ngo_private*\300\002\n#" +
-      "AuthorizationPolicyDeviceTrustLevel\0227\n3A" +
-      "UTHORIZATION_POLICY_DEVICE_TRUST_LEVEL_U" +
-      "NSPECIFIED\020\000\0220\n,AUTHORIZATION_POLICY_DEV" +
-      "ICE_TRUST_LEVEL_HIGH\020\001\022/\n+AUTHORIZATION_" +
-      "POLICY_DEVICE_TRUST_LEVEL_LOW\020\002\0222\n.AUTHO" +
-      "RIZATION_POLICY_DEVICE_TRUST_LEVEL_EXEMP" +
-      "T\020\003\0223\n/AUTHORIZATION_POLICY_DEVICE_TRUST" +
-      "_LEVEL_UNKNOWN\020\004\032\024\262\370\263\007\017\222\365\263\007\ngo_private*\203" +
-      "\001\n\020LocationOperator\022!\n\035LOCATION_OPERATOR" +
-      "_UNSPECIFIED\020\000\022\030\n\024LOCATION_OPERATOR_IN\020\001" +
-      "\022\034\n\030LOCATION_OPERATOR_NOT_IN\020\002\032\024\262\370\263\007\017\222\365\263" +
-      "\007\ngo_private*\352\001\n\035AuthorizationPolicyIPOp" +
-      "erator\0220\n,AUTHORIZATION_POLICY_IP_OPERAT" +
-      "OR_UNSPECIFIED\020\000\022\'\n#AUTHORIZATION_POLICY" +
-      "_IP_OPERATOR_IN\020\001\022+\n\'AUTHORIZATION_POLIC" +
-      "Y_IP_OPERATOR_NOT_IN\020\002\022+\n\'AUTHORIZATION_" +
-      "POLICY_IP_OPERATOR_EQUALS\020\003\032\024\262\370\263\007\017\222\365\263\007\ng" +
-      "o_private*\370\001\n\034AuthorizationPolicyIPNetwo" +
-      "rk\022/\n+AUTHORIZATION_POLICY_IP_NETWORK_UN" +
-      "SPECIFIED\020\000\022-\n)AUTHORIZATION_POLICY_IP_N" +
-      "ETWORK_CLIENT_IP\020\001\022.\n*AUTHORIZATION_POLI" +
-      "CY_IP_NETWORK_REQUEST_IP\020\002\0222\n.AUTHORIZAT" +
-      "ION_POLICY_IP_NETWORK_DESTINATION_IP\020\003\032\024" +
-      "\262\370\263\007\017\222\365\263\007\ngo_private*\305\001\n\037AuthorizationPo" +
-      "licyTimeOperator\0222\n.AUTHORIZATION_POLICY" +
-      "_TIME_OPERATOR_UNSPECIFIED\020\000\022)\n%AUTHORIZ" +
-      "ATION_POLICY_TIME_OPERATOR_IS\020\001\022-\n)AUTHO" +
-      "RIZATION_POLICY_TIME_OPERATOR_IS_NOT\020\002\032\024" +
-      "\262\370\263\007\017\222\365\263\007\ngo_private*\251\003\n\034AuthorizationPo" +
-      "licyDayOfWeek\0220\n,AUTHORIZATION_POLICY_DA" +
-      "Y_OF_WEEK_UNSPECIFIED\020\000\022+\n\'AUTHORIZATION" +
-      "_POLICY_DAY_OF_WEEK_SUNDAY\020\001\022+\n\'AUTHORIZ" +
-      "ATION_POLICY_DAY_OF_WEEK_MONDAY\020\002\022,\n(AUT" +
-      "HORIZATION_POLICY_DAY_OF_WEEK_TUESDAY\020\003\022" +
-      ".\n*AUTHORIZATION_POLICY_DAY_OF_WEEK_WEDN" +
-      "ESDAY\020\004\022-\n)AUTHORIZATION_POLICY_DAY_OF_W" +
-      "EEK_THURSDAY\020\005\022+\n\'AUTHORIZATION_POLICY_D" +
-      "AY_OF_WEEK_FRIDAY\020\006\022-\n)AUTHORIZATION_POL" +
-      "ICY_DAY_OF_WEEK_SATURDAY\020\007\032\024\262\370\263\007\017\222\365\263\007\ngo" +
-      "_private2\235\006\n\025AuthorizationPolicies\022\211\001\n\006C" +
-      "reate\022$.v1.AuthorizationPolicyCreateRequ" +
-      "est\032%.v1.AuthorizationPolicyCreateRespon" +
-      "se\"2\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\037\252\363\263\007\032/v1/authoriz" +
-      "ation-policies\022\204\001\n\003Get\022!.v1.Authorizatio" +
-      "nPolicyGetRequest\032\".v1.AuthorizationPoli" +
-      "cyGetResponse\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v" +
-      "1/authorization-policies/{id}\022\215\001\n\006Update" +
-      "\022$.v1.AuthorizationPolicyUpdateRequest\032%" +
-      ".v1.AuthorizationPolicyUpdateResponse\"6\202" +
-      "\371\263\007\010\242\363\263\007\003put\202\371\263\007$\252\363\263\007\037/v1/authorization-" +
-      "policies/{id}\022\220\001\n\006Delete\022$.v1.Authorizat" +
-      "ionPolicyDeleteRequest\032%.v1.Authorizatio" +
-      "nPolicyDeleteResponse\"9\202\371\263\007\013\242\363\263\007\006delete\202" +
-      "\371\263\007$\252\363\263\007\037/v1/authorization-policies/{id}" +
-      "\022\202\001\n\004List\022\".v1.AuthorizationPolicyListRe" +
-      "quest\032#.v1.AuthorizationPolicyListRespon" +
-      "se\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/authoriza" +
-      "tion-policies\032I\312\371\263\007\030\302\371\263\007\023AuthorizationPo" +
-      "licy\312\371\263\007\t\322\371\263\007\004apy-\312\371\263\007\017\312\371\263\007\ngo_private\312\371" +
-      "\263\007\005\330\371\263\007\001Bq\n\031com.strongdm.api.plumbingB\035A" +
-      "uthorizationPoliciesPlumbingZ5github.com" +
-      "/strongdm/strongdm-sdk-go/v3/internal/v1" +
-      ";v1b\006proto3"
+      "go_private\"\206\002\n$AuthorizationPolicyTimeRu" +
+      "leTimeOfDay\022A\n\010operator\030\001 \001(\0162#.v1.Autho" +
+      "rizationPolicyTimeOperatorB\n\362\370\263\007\005\260\363\263\007\001\022\036" +
+      "\n\nstart_hour\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\rstart_" +
+      "minutes\030\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010end_hour\030\004 " +
+      "\001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013end_minutes\030\005 \001(\005B\n\362\370" +
+      "\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"Y\n A" +
+      "uthorizationPolicyTimeRuleMonth\022\032\n\006month" +
+      "s\030\001 \003(\005B\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
+      "rivate\"]\n&AuthorizationPolicyTimeRuleDay" +
+      "sOfMonth\022\030\n\004days\030\001 \003(\005B\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007" +
+      "\024\250\363\263\007\001\322\363\263\007\ngo_private\"o\n,AuthorizationPo" +
+      "licyItemConditionApprovalFlow\022$\n\020approva" +
+      "l_flow_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322" +
+      "\363\263\007\ngo_private*\254\001\n\030AuthorizationPolicySt" +
+      "ate\022*\n&AUTHORIZATION_POLICY_STATE_UNSPEC" +
+      "IFIED\020\000\022%\n!AUTHORIZATION_POLICY_STATE_AC" +
+      "TIVE\020\001\022\'\n#AUTHORIZATION_POLICY_STATE_INA" +
+      "CTIVE\020\002\032\024\262\370\263\007\017\222\365\263\007\ngo_private*\344\001\n&Author" +
+      "izationPolicyDeviceTrustOperator\022:\n6AUTH" +
+      "ORIZATION_POLICY_DEVICE_TRUST_OPERATOR_U" +
+      "NSPECIFIED\020\000\0221\n-AUTHORIZATION_POLICY_DEV" +
+      "ICE_TRUST_OPERATOR_IS\020\001\0225\n1AUTHORIZATION" +
+      "_POLICY_DEVICE_TRUST_OPERATOR_IS_NOT\020\002\032\024" +
+      "\262\370\263\007\017\222\365\263\007\ngo_private*\300\002\n#AuthorizationPo" +
+      "licyDeviceTrustLevel\0227\n3AUTHORIZATION_PO" +
+      "LICY_DEVICE_TRUST_LEVEL_UNSPECIFIED\020\000\0220\n" +
+      ",AUTHORIZATION_POLICY_DEVICE_TRUST_LEVEL" +
+      "_HIGH\020\001\022/\n+AUTHORIZATION_POLICY_DEVICE_T" +
+      "RUST_LEVEL_LOW\020\002\0222\n.AUTHORIZATION_POLICY" +
+      "_DEVICE_TRUST_LEVEL_EXEMPT\020\003\0223\n/AUTHORIZ" +
+      "ATION_POLICY_DEVICE_TRUST_LEVEL_UNKNOWN\020" +
+      "\004\032\024\262\370\263\007\017\222\365\263\007\ngo_private*\203\001\n\020LocationOper" +
+      "ator\022!\n\035LOCATION_OPERATOR_UNSPECIFIED\020\000\022" +
+      "\030\n\024LOCATION_OPERATOR_IN\020\001\022\034\n\030LOCATION_OP" +
+      "ERATOR_NOT_IN\020\002\032\024\262\370\263\007\017\222\365\263\007\ngo_private*\352\001" +
+      "\n\035AuthorizationPolicyIPOperator\0220\n,AUTHO" +
+      "RIZATION_POLICY_IP_OPERATOR_UNSPECIFIED\020" +
+      "\000\022\'\n#AUTHORIZATION_POLICY_IP_OPERATOR_IN" +
+      "\020\001\022+\n\'AUTHORIZATION_POLICY_IP_OPERATOR_N" +
+      "OT_IN\020\002\022+\n\'AUTHORIZATION_POLICY_IP_OPERA" +
+      "TOR_EQUALS\020\003\032\024\262\370\263\007\017\222\365\263\007\ngo_private*\370\001\n\034A" +
+      "uthorizationPolicyIPNetwork\022/\n+AUTHORIZA" +
+      "TION_POLICY_IP_NETWORK_UNSPECIFIED\020\000\022-\n)" +
+      "AUTHORIZATION_POLICY_IP_NETWORK_CLIENT_I" +
+      "P\020\001\022.\n*AUTHORIZATION_POLICY_IP_NETWORK_R" +
+      "EQUEST_IP\020\002\0222\n.AUTHORIZATION_POLICY_IP_N" +
+      "ETWORK_DESTINATION_IP\020\003\032\024\262\370\263\007\017\222\365\263\007\ngo_pr" +
+      "ivate*\305\001\n\037AuthorizationPolicyTimeOperato" +
+      "r\0222\n.AUTHORIZATION_POLICY_TIME_OPERATOR_" +
+      "UNSPECIFIED\020\000\022)\n%AUTHORIZATION_POLICY_TI" +
+      "ME_OPERATOR_IS\020\001\022-\n)AUTHORIZATION_POLICY" +
+      "_TIME_OPERATOR_IS_NOT\020\002\032\024\262\370\263\007\017\222\365\263\007\ngo_pr" +
+      "ivate*\251\003\n\034AuthorizationPolicyDayOfWeek\0220" +
+      "\n,AUTHORIZATION_POLICY_DAY_OF_WEEK_UNSPE" +
+      "CIFIED\020\000\022+\n\'AUTHORIZATION_POLICY_DAY_OF_" +
+      "WEEK_SUNDAY\020\001\022+\n\'AUTHORIZATION_POLICY_DA" +
+      "Y_OF_WEEK_MONDAY\020\002\022,\n(AUTHORIZATION_POLI" +
+      "CY_DAY_OF_WEEK_TUESDAY\020\003\022.\n*AUTHORIZATIO" +
+      "N_POLICY_DAY_OF_WEEK_WEDNESDAY\020\004\022-\n)AUTH" +
+      "ORIZATION_POLICY_DAY_OF_WEEK_THURSDAY\020\005\022" +
+      "+\n\'AUTHORIZATION_POLICY_DAY_OF_WEEK_FRID" +
+      "AY\020\006\022-\n)AUTHORIZATION_POLICY_DAY_OF_WEEK" +
+      "_SATURDAY\020\007\032\024\262\370\263\007\017\222\365\263\007\ngo_private2\235\006\n\025Au" +
+      "thorizationPolicies\022\211\001\n\006Create\022$.v1.Auth" +
+      "orizationPolicyCreateRequest\032%.v1.Author" +
+      "izationPolicyCreateResponse\"2\202\371\263\007\t\242\363\263\007\004p" +
+      "ost\202\371\263\007\037\252\363\263\007\032/v1/authorization-policies\022" +
+      "\204\001\n\003Get\022!.v1.AuthorizationPolicyGetReque" +
+      "st\032\".v1.AuthorizationPolicyGetResponse\"6" +
+      "\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v1/authorization" +
+      "-policies/{id}\022\215\001\n\006Update\022$.v1.Authoriza" +
+      "tionPolicyUpdateRequest\032%.v1.Authorizati" +
+      "onPolicyUpdateResponse\"6\202\371\263\007\010\242\363\263\007\003put\202\371\263" +
+      "\007$\252\363\263\007\037/v1/authorization-policies/{id}\022\220" +
+      "\001\n\006Delete\022$.v1.AuthorizationPolicyDelete" +
+      "Request\032%.v1.AuthorizationPolicyDeleteRe" +
+      "sponse\"9\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007$\252\363\263\007\037/v1/au" +
+      "thorization-policies/{id}\022\202\001\n\004List\022\".v1." +
+      "AuthorizationPolicyListRequest\032#.v1.Auth" +
+      "orizationPolicyListResponse\"1\202\371\263\007\010\242\363\263\007\003g" +
+      "et\202\371\263\007\037\252\363\263\007\032/v1/authorization-policies\032I" +
+      "\312\371\263\007\030\302\371\263\007\023AuthorizationPolicy\312\371\263\007\t\322\371\263\007\004a" +
+      "py-\312\371\263\007\017\312\371\263\007\ngo_private\312\371\263\007\005\330\371\263\007\001Bq\n\031com" +
+      ".strongdm.api.plumbingB\035AuthorizationPol" +
+      "iciesPlumbingZ5github.com/strongdm/stron" +
+      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -38792,7 +41445,7 @@ public final class AuthorizationPoliciesPlumbing {
     internal_static_v1_AuthorizationPolicyItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyItem_descriptor,
-        new java.lang.String[] { "PrincipalAll", "PrincipalByIds", "ResourcesAll", "ResourceByIds", "ResourceByTypeAndTags", "ResourceByTypeTagsAndKubernetesGroups", "ResourceByOktaWithGroups", "ResourceByEntraWithGroups", "ConditionMfa", "ConditionDeviceTrust", "ConditionLocation", "ConditionIp", "ConditionTime", "ConditionApprovalFlow", });
+        new java.lang.String[] { "PrincipalAll", "PrincipalByIds", "ResourcesAll", "ResourceByIds", "ResourceByTypeAndTags", "ResourceByTypeTagsAndKubernetesGroups", "ResourceByOktaWithGroups", "ResourceByEntraWithGroups", "ConditionMfa", "ConditionDeviceTrust", "ConditionLocation", "ConditionIp", "ConditionTime", "ConditionApprovalFlow", "Kind", });
     internal_static_v1_AuthorizationPolicyItemPrincipalAll_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_AuthorizationPolicyItemPrincipalAll_fieldAccessorTable = new
@@ -38834,13 +41487,13 @@ public final class AuthorizationPoliciesPlumbing {
     internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_descriptor,
-        new java.lang.String[] { "Id", "Groups", });
+        new java.lang.String[] { "ResourceId", "Groups", });
     internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor,
-        new java.lang.String[] { "Id", "Groups", });
+        new java.lang.String[] { "ResourceId", "Groups", });
     internal_static_v1_AuthorizationPolicyItemConditionMFA_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_v1_AuthorizationPolicyItemConditionMFA_fieldAccessorTable = new
@@ -38906,33 +41559,45 @@ public final class AuthorizationPoliciesPlumbing {
     internal_static_v1_AuthorizationPolicyTimeRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyTimeRule_descriptor,
-        new java.lang.String[] { "DayOfWeek", "TimeOfDay", "Month", "DaysOfMonth", "Rule", });
+        new java.lang.String[] { "DayOfWeek", "TimeOfDay", "Month", "DaysOfMonth", "TimeOfDayOutsideOf", "TimeOfDayWithOperator", "Rule", });
     internal_static_v1_AuthorizationPolicyTimeRuleDayOfWeek_descriptor =
       getDescriptor().getMessageTypes().get(31);
     internal_static_v1_AuthorizationPolicyTimeRuleDayOfWeek_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyTimeRuleDayOfWeek_descriptor,
         new java.lang.String[] { "Operator", "Days", });
-    internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor =
+    internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_descriptor =
       getDescriptor().getMessageTypes().get(32);
+    internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDay_descriptor,
+        new java.lang.String[] { "StartHour", "StartMinutes", "EndHour", "EndMinutes", });
+    internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_LegacyAuthorizationPolicyTimeRuleTimeOfDayOutsideOf_descriptor,
+        new java.lang.String[] { "StartHour", "StartMinutes", "EndHour", "EndMinutes", });
+    internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor =
+      getDescriptor().getMessageTypes().get(34);
     internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyTimeRuleTimeOfDay_descriptor,
-        new java.lang.String[] { "StartHour", "StartMinutes", "EndHour", "EndMinutes", });
+        new java.lang.String[] { "Operator", "StartHour", "StartMinutes", "EndHour", "EndMinutes", });
     internal_static_v1_AuthorizationPolicyTimeRuleMonth_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_v1_AuthorizationPolicyTimeRuleMonth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyTimeRuleMonth_descriptor,
         new java.lang.String[] { "Months", });
     internal_static_v1_AuthorizationPolicyTimeRuleDaysOfMonth_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_v1_AuthorizationPolicyTimeRuleDaysOfMonth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyTimeRuleDaysOfMonth_descriptor,
         new java.lang.String[] { "Days", });
     internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor,
