@@ -182,6 +182,27 @@ public class SnapshotClient {
     return this.parent.remoteIdentityGroups;
   }
   /**
+   * RequestableAccountEntitlements enumerates the resources that an account is permitted to request
+   * access to. The RequestableAccountEntitlements service is read-only.
+   */
+  public SnapshotRequestableAccountEntitlements requestableAccountEntitlements() {
+    return this.parent.requestableAccountEntitlements;
+  }
+  /**
+   * RequestableResourceEntitlements enumerates the accounts that are permitted to request access to
+   * a given resource. The RequestableResourceEntitlements service is read-only.
+   */
+  public SnapshotRequestableResourceEntitlements requestableResourceEntitlements() {
+    return this.parent.requestableResourceEntitlements;
+  }
+  /**
+   * RequestableRoleEntitlements enumerates the resources that a role permits its members to request
+   * access to. The RequestableRoleEntitlements service is read-only.
+   */
+  public SnapshotRequestableRoleEntitlements requestableRoleEntitlements() {
+    return this.parent.requestableRoleEntitlements;
+  }
+  /**
    * Resources are databases, servers, clusters, websites, or clouds that strongDM delegates access
    * to.
    */

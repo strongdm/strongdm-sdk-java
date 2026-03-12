@@ -514,6 +514,36 @@ public class Client {
     return this.replays;
   }
 
+  protected final RequestableAccountEntitlements requestableAccountEntitlements;
+
+  /**
+   * RequestableAccountEntitlements enumerates the resources that an account is permitted to request
+   * access to. The RequestableAccountEntitlements service is read-only.
+   */
+  public RequestableAccountEntitlements requestableAccountEntitlements() {
+    return this.requestableAccountEntitlements;
+  }
+
+  protected final RequestableResourceEntitlements requestableResourceEntitlements;
+
+  /**
+   * RequestableResourceEntitlements enumerates the accounts that are permitted to request access to
+   * a given resource. The RequestableResourceEntitlements service is read-only.
+   */
+  public RequestableResourceEntitlements requestableResourceEntitlements() {
+    return this.requestableResourceEntitlements;
+  }
+
+  protected final RequestableRoleEntitlements requestableRoleEntitlements;
+
+  /**
+   * RequestableRoleEntitlements enumerates the resources that a role permits its members to request
+   * access to. The RequestableRoleEntitlements service is read-only.
+   */
+  public RequestableRoleEntitlements requestableRoleEntitlements() {
+    return this.requestableRoleEntitlements;
+  }
+
   protected final Resources resources;
 
   /**
@@ -709,6 +739,9 @@ public class Client {
     this.remoteIdentityGroups = new RemoteIdentityGroups(this.channel, this);
     this.remoteIdentityGroupsHistory = new RemoteIdentityGroupsHistory(this.channel, this);
     this.replays = new Replays(this.channel, this);
+    this.requestableAccountEntitlements = new RequestableAccountEntitlements(this.channel, this);
+    this.requestableResourceEntitlements = new RequestableResourceEntitlements(this.channel, this);
+    this.requestableRoleEntitlements = new RequestableRoleEntitlements(this.channel, this);
     this.resources = new Resources(this.channel, this);
     this.resourcesHistory = new ResourcesHistory(this.channel, this);
     this.roleResources = new RoleResources(this.channel, this);
@@ -800,6 +833,10 @@ public class Client {
       this.remoteIdentityGroups = new RemoteIdentityGroups(this.channel, this);
       this.remoteIdentityGroupsHistory = new RemoteIdentityGroupsHistory(this.channel, this);
       this.replays = new Replays(this.channel, this);
+      this.requestableAccountEntitlements = new RequestableAccountEntitlements(this.channel, this);
+      this.requestableResourceEntitlements =
+          new RequestableResourceEntitlements(this.channel, this);
+      this.requestableRoleEntitlements = new RequestableRoleEntitlements(this.channel, this);
       this.resources = new Resources(this.channel, this);
       this.resourcesHistory = new ResourcesHistory(this.channel, this);
       this.roleResources = new RoleResources(this.channel, this);
