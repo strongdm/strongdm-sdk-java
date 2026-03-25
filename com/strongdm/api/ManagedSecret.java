@@ -61,6 +61,16 @@ public class ManagedSecret {
     this.lastRotatedAt = in;
   }
 
+  private boolean lockRequired;
+  /** Whether the secret requires a lock to access */
+  public boolean getLockRequired() {
+    return this.lockRequired;
+  }
+  /** Whether the secret requires a lock to access */
+  public void setLockRequired(boolean in) {
+    this.lockRequired = in;
+  }
+
   private String name;
   /** Unique human-readable name of the Managed Secret. */
   public String getName() {

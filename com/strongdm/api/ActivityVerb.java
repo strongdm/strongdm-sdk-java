@@ -257,6 +257,11 @@ public final class ActivityVerb {
   public static final String RESOURCE_UNLOCKED = "user unlocked a resource";
   public static final String RESOURCE_FORCE_UNLOCKED = "admin force-unlocked a resource";
   public static final String RESOURCE_LOCK_REJECTED = "user lock rejected for a resource";
+  public static final String MANAGED_SECRET_LOCKED = "user locked a secret";
+  public static final String MANAGED_SECRET_UNLOCKED = "user unlocked a secret";
+  public static final String MANAGED_SECRET_FORCE_UNLOCKED = "admin force-unlocked a secret";
+  public static final String MANAGED_SECRET_LOCK_EXTENDED = "user extended a secret lock";
+  public static final String MANAGED_SECRET_LOCK_REJECTED = "user lock rejected for a secret";
   public static final String CONCURRENT_AUTHENTICATION_REVOKED_PER_ORG_SETTING =
       "concurrent authentications revoked per organization settings";
   public static final String PEERING_GROUP_TOGGLED = "peering group toggled";

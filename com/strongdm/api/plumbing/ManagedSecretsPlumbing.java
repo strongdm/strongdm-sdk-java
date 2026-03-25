@@ -21292,6 +21292,16 @@ public final class ManagedSecretsPlumbing {
      */
     com.google.protobuf.ByteString
         getConfigBytes();
+
+    /**
+     * <pre>
+     * Whether the secret requires a lock to access
+     * </pre>
+     *
+     * <code>bool lock_required = 11 [(.v1.field_options) = { ... }</code>
+     * @return The lockRequired.
+     */
+    boolean getLockRequired();
   }
   /**
    * <pre>
@@ -21433,6 +21443,11 @@ public final class ManagedSecretsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               config_ = s;
+              break;
+            }
+            case 88: {
+
+              lockRequired_ = input.readBool();
               break;
             }
             default: {
@@ -21866,6 +21881,21 @@ public final class ManagedSecretsPlumbing {
       }
     }
 
+    public static final int LOCK_REQUIRED_FIELD_NUMBER = 11;
+    private boolean lockRequired_;
+    /**
+     * <pre>
+     * Whether the secret requires a lock to access
+     * </pre>
+     *
+     * <code>bool lock_required = 11 [(.v1.field_options) = { ... }</code>
+     * @return The lockRequired.
+     */
+    @java.lang.Override
+    public boolean getLockRequired() {
+      return lockRequired_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21910,6 +21940,9 @@ public final class ManagedSecretsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(config_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, config_);
       }
+      if (lockRequired_ != false) {
+        output.writeBool(11, lockRequired_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -21953,6 +21986,10 @@ public final class ManagedSecretsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(config_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, config_);
+      }
+      if (lockRequired_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, lockRequired_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22001,6 +22038,8 @@ public final class ManagedSecretsPlumbing {
       }
       if (!getConfig()
           .equals(other.getConfig())) return false;
+      if (getLockRequired()
+          != other.getLockRequired()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -22040,6 +22079,9 @@ public final class ManagedSecretsPlumbing {
       }
       hash = (37 * hash) + CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getConfig().hashCode();
+      hash = (37 * hash) + LOCK_REQUIRED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLockRequired());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -22213,6 +22255,8 @@ public final class ManagedSecretsPlumbing {
         }
         config_ = "";
 
+        lockRequired_ = false;
+
         return this;
       }
 
@@ -22265,6 +22309,7 @@ public final class ManagedSecretsPlumbing {
           result.expiresAt_ = expiresAtBuilder_.build();
         }
         result.config_ = config_;
+        result.lockRequired_ = lockRequired_;
         onBuilt();
         return result;
       }
@@ -22347,6 +22392,9 @@ public final class ManagedSecretsPlumbing {
         if (!other.getConfig().isEmpty()) {
           config_ = other.config_;
           onChanged();
+        }
+        if (other.getLockRequired() != false) {
+          setLockRequired(other.getLockRequired());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -23519,6 +23567,49 @@ public final class ManagedSecretsPlumbing {
   checkByteStringIsUtf8(value);
         
         config_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean lockRequired_ ;
+      /**
+       * <pre>
+       * Whether the secret requires a lock to access
+       * </pre>
+       *
+       * <code>bool lock_required = 11 [(.v1.field_options) = { ... }</code>
+       * @return The lockRequired.
+       */
+      @java.lang.Override
+      public boolean getLockRequired() {
+        return lockRequired_;
+      }
+      /**
+       * <pre>
+       * Whether the secret requires a lock to access
+       * </pre>
+       *
+       * <code>bool lock_required = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The lockRequired to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockRequired(boolean value) {
+        
+        lockRequired_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the secret requires a lock to access
+       * </pre>
+       *
+       * <code>bool lock_required = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockRequired() {
+        
+        lockRequired_ = false;
         onChanged();
         return this;
       }
@@ -26217,7 +26308,7 @@ public final class ManagedSecretsPlumbing {
       "d_secret_id\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nac" +
       "count_id\030\005 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\006actio" +
       "n\030\006 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\036\n\005debug\030\007 \001(\tB" +
-      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\317\003\n\rManaged" +
+      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\362\003\n\rManaged" +
       "Secret\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
       " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022)\n\020secret_engine_i" +
       "d\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\036\n\005value\030\004 \001(\014B" +
@@ -26229,59 +26320,60 @@ public final class ManagedSecretsPlumbing {
       "mestampB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022?\n\nexpires_at\030\t" +
       " \001(\0132\032.google.protobuf.TimestampB\017\362\370\263\007\n\260" +
       "\363\263\007\001\230\364\263\007\001\022\037\n\006config\030\n \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263" +
-      "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\255\001\n\023ManagedSecretPolicy\022D" +
-      "\n\017rotation_policy\030\001 \001(\0132\037.v1.ManagedSecr" +
-      "etRotationPolicyB\n\362\370\263\007\005\260\363\263\007\001\022D\n\017password" +
-      "_policy\030\002 \001(\0132\037.v1.ManagedSecretPassword" +
-      "PolicyB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\370\001\n\033Manag" +
-      "edSecretPasswordPolicy\022\032\n\006length\030\001 \001(\rB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022&\n\022exclude_upper_case\030\002 \001(\010B\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022\036\n\nnum_digits\030\003 \001(\rB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\037\n\013num_symbols\030\004 \001(\rB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014a" +
-      "llow_repeat\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022&\n\022exclude" +
-      "_characters\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007" +
-      "\001\")\n\033ManagedSecretRotationPolicy:\n\372\370\263\007\005\250" +
-      "\363\263\007\0012\330\013\n\016ManagedSecrets\022o\n\004List\022\034.v1.Man" +
-      "agedSecretListRequest\032\035.v1.ManagedSecret" +
-      "ListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1" +
-      "/managed-secrets\022|\n\013ListByActor\022\034.v1.Man" +
-      "agedSecretListRequest\032\035.v1.ManagedSecret" +
-      "ListResponse\"0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1" +
-      "/managed-secrets/actor\022v\n\006Create\022\036.v1.Ma" +
-      "nagedSecretCreateRequest\032\037.v1.ManagedSec" +
-      "retCreateResponse\"+\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\030\252\363" +
-      "\263\007\023/v1/managed-secrets\022z\n\006Update\022\036.v1.Ma" +
-      "nagedSecretUpdateRequest\032\037.v1.ManagedSec" +
-      "retUpdateResponse\"/\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\035\252\363\263" +
-      "\007\030/v1/managed-secrets/{id}\022\201\001\n\006Rotate\022\036." +
-      "v1.ManagedSecretRotateRequest\032\037.v1.Manag" +
-      "edSecretRotateResponse\"6\202\371\263\007\010\242\363\263\007\003put\202\371\263" +
-      "\007$\252\363\263\007\037/v1/managed-secrets/{id}/rotate\022}" +
-      "\n\006Delete\022\036.v1.ManagedSecretDeleteRequest" +
-      "\032\037.v1.ManagedSecretDeleteResponse\"2\202\371\263\007\013" +
-      "\242\363\263\007\006delete\202\371\263\007\035\252\363\263\007\030/v1/managed-secrets" +
-      "/{id}\022\210\001\n\013ForceDelete\022\036.v1.ManagedSecret" +
-      "DeleteRequest\032\037.v1.ManagedSecretDeleteRe" +
-      "sponse\"8\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007#\252\363\263\007\036/v1/ma" +
-      "naged-secrets/{id}/force\022q\n\003Get\022\033.v1.Man" +
-      "agedSecretGetRequest\032\034.v1.ManagedSecretG" +
-      "etResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/m" +
-      "anaged-secrets/{id}\022\213\001\n\010Retrieve\022 .v1.Ma" +
-      "nagedSecretRetrieveRequest\032!.v1.ManagedS" +
-      "ecretRetrieveResponse\":\202\371\263\007\t\242\363\263\007\004post\202\371\263" +
-      "\007\'\252\363\263\007\"/v1/managed-secrets/{id}/sensitiv" +
-      "e\022\212\001\n\010Validate\022 .v1.ManagedSecretValidat" +
-      "eRequest\032!.v1.ManagedSecretValidateRespo" +
-      "nse\"9\202\371\263\007\t\242\363\263\007\004post\202\371\263\007&\252\363\263\007!/v1/managed" +
-      "-secrets/{id}/validate\022t\n\004Logs\022\034.v1.Mana" +
-      "gedSecretLogsRequest\032\035.v1.ManagedSecretL" +
-      "ogsResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/" +
-      "managed-secrets-logs\032Q\312\371\263\007\022\302\371\263\007\rManagedS" +
-      "ecret\312\371\263\007\010\322\371\263\007\003ms-\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312" +
-      "\371\263\007\t\312\371\263\007\004!cli\312\371\263\007\005\350\371\263\007\001Bj\n\031com.strongdm." +
-      "api.plumbingB\026ManagedSecretsPlumbingZ5gi" +
-      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
-      "ernal/v1;v1b\006proto3"
+      "\007\001\022!\n\rlock_required\030\013 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"\255\001\n\023ManagedSecretPolicy\022D\n\017rot" +
+      "ation_policy\030\001 \001(\0132\037.v1.ManagedSecretRot" +
+      "ationPolicyB\n\362\370\263\007\005\260\363\263\007\001\022D\n\017password_poli" +
+      "cy\030\002 \001(\0132\037.v1.ManagedSecretPasswordPolic" +
+      "yB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\370\001\n\033ManagedSec" +
+      "retPasswordPolicy\022\032\n\006length\030\001 \001(\rB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022&\n\022exclude_upper_case\030\002 \001(\010B\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\036\n\nnum_digits\030\003 \001(\rB\n\362\370\263\007\005\260\363\263\007\001\022\037\n" +
+      "\013num_symbols\030\004 \001(\rB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014allow_" +
+      "repeat\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022&\n\022exclude_char" +
+      "acters\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\")\n\033" +
+      "ManagedSecretRotationPolicy:\n\372\370\263\007\005\250\363\263\007\0012" +
+      "\330\013\n\016ManagedSecrets\022o\n\004List\022\034.v1.ManagedS" +
+      "ecretListRequest\032\035.v1.ManagedSecretListR" +
+      "esponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/mana" +
+      "ged-secrets\022|\n\013ListByActor\022\034.v1.ManagedS" +
+      "ecretListRequest\032\035.v1.ManagedSecretListR" +
+      "esponse\"0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/mana" +
+      "ged-secrets/actor\022v\n\006Create\022\036.v1.Managed" +
+      "SecretCreateRequest\032\037.v1.ManagedSecretCr" +
+      "eateResponse\"+\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\030\252\363\263\007\023/v" +
+      "1/managed-secrets\022z\n\006Update\022\036.v1.Managed" +
+      "SecretUpdateRequest\032\037.v1.ManagedSecretUp" +
+      "dateResponse\"/\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\035\252\363\263\007\030/v1" +
+      "/managed-secrets/{id}\022\201\001\n\006Rotate\022\036.v1.Ma" +
+      "nagedSecretRotateRequest\032\037.v1.ManagedSec" +
+      "retRotateResponse\"6\202\371\263\007\010\242\363\263\007\003put\202\371\263\007$\252\363\263" +
+      "\007\037/v1/managed-secrets/{id}/rotate\022}\n\006Del" +
+      "ete\022\036.v1.ManagedSecretDeleteRequest\032\037.v1" +
+      ".ManagedSecretDeleteResponse\"2\202\371\263\007\013\242\363\263\007\006" +
+      "delete\202\371\263\007\035\252\363\263\007\030/v1/managed-secrets/{id}" +
+      "\022\210\001\n\013ForceDelete\022\036.v1.ManagedSecretDelet" +
+      "eRequest\032\037.v1.ManagedSecretDeleteRespons" +
+      "e\"8\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007#\252\363\263\007\036/v1/managed" +
+      "-secrets/{id}/force\022q\n\003Get\022\033.v1.ManagedS" +
+      "ecretGetRequest\032\034.v1.ManagedSecretGetRes" +
+      "ponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/manage" +
+      "d-secrets/{id}\022\213\001\n\010Retrieve\022 .v1.Managed" +
+      "SecretRetrieveRequest\032!.v1.ManagedSecret" +
+      "RetrieveResponse\":\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\'\252\363\263" +
+      "\007\"/v1/managed-secrets/{id}/sensitive\022\212\001\n" +
+      "\010Validate\022 .v1.ManagedSecretValidateRequ" +
+      "est\032!.v1.ManagedSecretValidateResponse\"9" +
+      "\202\371\263\007\t\242\363\263\007\004post\202\371\263\007&\252\363\263\007!/v1/managed-secr" +
+      "ets/{id}/validate\022t\n\004Logs\022\034.v1.ManagedSe" +
+      "cretLogsRequest\032\035.v1.ManagedSecretLogsRe" +
+      "sponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/manag" +
+      "ed-secrets-logs\032Q\312\371\263\007\022\302\371\263\007\rManagedSecret" +
+      "\312\371\263\007\010\322\371\263\007\003ms-\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312" +
+      "\371\263\007\004!cli\312\371\263\007\005\350\371\263\007\001Bj\n\031com.strongdm.api.p" +
+      "lumbingB\026ManagedSecretsPlumbingZ5github." +
+      "com/strongdm/strongdm-sdk-go/v3/internal" +
+      "/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26410,7 +26502,7 @@ public final class ManagedSecretsPlumbing {
     internal_static_v1_ManagedSecret_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ManagedSecret_descriptor,
-        new java.lang.String[] { "Id", "Name", "SecretEngineId", "Value", "SecretStorePath", "Policy", "Tags", "LastRotatedAt", "ExpiresAt", "Config", });
+        new java.lang.String[] { "Id", "Name", "SecretEngineId", "Value", "SecretStorePath", "Policy", "Tags", "LastRotatedAt", "ExpiresAt", "Config", "LockRequired", });
     internal_static_v1_ManagedSecretPolicy_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_v1_ManagedSecretPolicy_fieldAccessorTable = new

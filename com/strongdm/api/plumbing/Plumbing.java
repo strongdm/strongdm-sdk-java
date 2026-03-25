@@ -15100,6 +15100,7 @@ public class Plumbing {
     porcelain.setExpiresAt(Plumbing.convertTimestampToPorcelain(plumbing.getExpiresAt()));
     porcelain.setId((plumbing.getId()));
     porcelain.setLastRotatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getLastRotatedAt()));
+    porcelain.setLockRequired((plumbing.getLockRequired()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPolicy(Plumbing.convertManagedSecretPolicyToPorcelain(plumbing.getPolicy()));
     porcelain.setSecretEngineId((plumbing.getSecretEngineId()));
@@ -15127,6 +15128,7 @@ public class Plumbing {
     if (porcelain.getLastRotatedAt() != null) {
       builder.setLastRotatedAt(Plumbing.convertTimestampToPlumbing(porcelain.getLastRotatedAt()));
     }
+    builder.setLockRequired(porcelain.getLockRequired());
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
