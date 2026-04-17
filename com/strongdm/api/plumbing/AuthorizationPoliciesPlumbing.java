@@ -11935,46 +11935,46 @@ public final class AuthorizationPoliciesPlumbing {
 
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem> 
-        getItemsList();
+    java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule> 
+        getRulesList();
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem getItems(int index);
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule getRules(int index);
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
-    int getItemsCount();
+    int getRulesCount();
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder> 
-        getItemsOrBuilderList();
+    java.util.List<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder> 
+        getRulesOrBuilderList();
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder getItemsOrBuilder(
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder getRulesOrBuilder(
         int index);
 
     /**
@@ -11998,7 +11998,7 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicy represents a policy with structured items.
+   * AuthorizationPolicy represents a policy with structured rules.
    * </pre>
    *
    * Protobuf type {@code v1.AuthorizationPolicy}
@@ -12016,7 +12016,7 @@ public final class AuthorizationPoliciesPlumbing {
       id_ = "";
       name_ = "";
       description_ = "";
-      items_ = java.util.Collections.emptyList();
+      rules_ = java.util.Collections.emptyList();
       state_ = 0;
     }
 
@@ -12071,11 +12071,11 @@ public final class AuthorizationPoliciesPlumbing {
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                items_ = new java.util.ArrayList<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem>();
+                rules_ = new java.util.ArrayList<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              items_.add(
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.parser(), extensionRegistry));
+              rules_.add(
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.parser(), extensionRegistry));
               break;
             }
             case 40: {
@@ -12102,7 +12102,7 @@ public final class AuthorizationPoliciesPlumbing {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          items_ = java.util.Collections.unmodifiableList(items_);
+          rules_ = java.util.Collections.unmodifiableList(rules_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -12259,64 +12259,64 @@ public final class AuthorizationPoliciesPlumbing {
       }
     }
 
-    public static final int ITEMS_FIELD_NUMBER = 4;
-    private java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem> items_;
+    public static final int RULES_FIELD_NUMBER = 4;
+    private java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule> rules_;
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem> getItemsList() {
-      return items_;
+    public java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule> getRulesList() {
+      return rules_;
     }
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder> 
-        getItemsOrBuilderList() {
-      return items_;
+    public java.util.List<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder> 
+        getRulesOrBuilderList() {
+      return rules_;
     }
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public int getItemsCount() {
-      return items_.size();
+    public int getRulesCount() {
+      return rules_.size();
     }
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem getItems(int index) {
-      return items_.get(index);
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule getRules(int index) {
+      return rules_.get(index);
     }
     /**
      * <pre>
-     * items contains the policy rules as a list of union types.
+     * rules contains the policy rules as a list of union types.
      * </pre>
      *
-     * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+     * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder getItemsOrBuilder(
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder getRulesOrBuilder(
         int index) {
-      return items_.get(index);
+      return rules_.get(index);
     }
 
     public static final int STATE_FIELD_NUMBER = 5;
@@ -12369,8 +12369,8 @@ public final class AuthorizationPoliciesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
-      for (int i = 0; i < items_.size(); i++) {
-        output.writeMessage(4, items_.get(i));
+      for (int i = 0; i < rules_.size(); i++) {
+        output.writeMessage(4, rules_.get(i));
       }
       if (state_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyState.AUTHORIZATION_POLICY_STATE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, state_);
@@ -12393,9 +12393,9 @@ public final class AuthorizationPoliciesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
-      for (int i = 0; i < items_.size(); i++) {
+      for (int i = 0; i < rules_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, items_.get(i));
+          .computeMessageSize(4, rules_.get(i));
       }
       if (state_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyState.AUTHORIZATION_POLICY_STATE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -12422,8 +12422,8 @@ public final class AuthorizationPoliciesPlumbing {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
-      if (!getItemsList()
-          .equals(other.getItemsList())) return false;
+      if (!getRulesList()
+          .equals(other.getRulesList())) return false;
       if (state_ != other.state_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -12442,9 +12442,9 @@ public final class AuthorizationPoliciesPlumbing {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
-      if (getItemsCount() > 0) {
-        hash = (37 * hash) + ITEMS_FIELD_NUMBER;
-        hash = (53 * hash) + getItemsList().hashCode();
+      if (getRulesCount() > 0) {
+        hash = (37 * hash) + RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getRulesList().hashCode();
       }
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + state_;
@@ -12545,7 +12545,7 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicy represents a policy with structured items.
+     * AuthorizationPolicy represents a policy with structured rules.
      * </pre>
      *
      * Protobuf type {@code v1.AuthorizationPolicy}
@@ -12580,7 +12580,7 @@ public final class AuthorizationPoliciesPlumbing {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getItemsFieldBuilder();
+          getRulesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -12592,11 +12592,11 @@ public final class AuthorizationPoliciesPlumbing {
 
         description_ = "";
 
-        if (itemsBuilder_ == null) {
-          items_ = java.util.Collections.emptyList();
+        if (rulesBuilder_ == null) {
+          rules_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          itemsBuilder_.clear();
+          rulesBuilder_.clear();
         }
         state_ = 0;
 
@@ -12630,14 +12630,14 @@ public final class AuthorizationPoliciesPlumbing {
         result.id_ = id_;
         result.name_ = name_;
         result.description_ = description_;
-        if (itemsBuilder_ == null) {
+        if (rulesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            items_ = java.util.Collections.unmodifiableList(items_);
+            rules_ = java.util.Collections.unmodifiableList(rules_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.items_ = items_;
+          result.rules_ = rules_;
         } else {
-          result.items_ = itemsBuilder_.build();
+          result.rules_ = rulesBuilder_.build();
         }
         result.state_ = state_;
         onBuilt();
@@ -12700,29 +12700,29 @@ public final class AuthorizationPoliciesPlumbing {
           description_ = other.description_;
           onChanged();
         }
-        if (itemsBuilder_ == null) {
-          if (!other.items_.isEmpty()) {
-            if (items_.isEmpty()) {
-              items_ = other.items_;
+        if (rulesBuilder_ == null) {
+          if (!other.rules_.isEmpty()) {
+            if (rules_.isEmpty()) {
+              rules_ = other.rules_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureItemsIsMutable();
-              items_.addAll(other.items_);
+              ensureRulesIsMutable();
+              rules_.addAll(other.rules_);
             }
             onChanged();
           }
         } else {
-          if (!other.items_.isEmpty()) {
-            if (itemsBuilder_.isEmpty()) {
-              itemsBuilder_.dispose();
-              itemsBuilder_ = null;
-              items_ = other.items_;
+          if (!other.rules_.isEmpty()) {
+            if (rulesBuilder_.isEmpty()) {
+              rulesBuilder_.dispose();
+              rulesBuilder_ = null;
+              rules_ = other.rules_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              itemsBuilder_ = 
+              rulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getItemsFieldBuilder() : null;
+                   getRulesFieldBuilder() : null;
             } else {
-              itemsBuilder_.addAllMessages(other.items_);
+              rulesBuilder_.addAllMessages(other.rules_);
             }
           }
         }
@@ -13047,316 +13047,316 @@ public final class AuthorizationPoliciesPlumbing {
         return this;
       }
 
-      private java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem> items_ =
+      private java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule> rules_ =
         java.util.Collections.emptyList();
-      private void ensureItemsIsMutable() {
+      private void ensureRulesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          items_ = new java.util.ArrayList<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem>(items_);
+          rules_ = new java.util.ArrayList<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule>(rules_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder> itemsBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder> rulesBuilder_;
 
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem> getItemsList() {
-        if (itemsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(items_);
+      public java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule> getRulesList() {
+        if (rulesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rules_);
         } else {
-          return itemsBuilder_.getMessageList();
+          return rulesBuilder_.getMessageList();
         }
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public int getItemsCount() {
-        if (itemsBuilder_ == null) {
-          return items_.size();
+      public int getRulesCount() {
+        if (rulesBuilder_ == null) {
+          return rules_.size();
         } else {
-          return itemsBuilder_.getCount();
+          return rulesBuilder_.getCount();
         }
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem getItems(int index) {
-        if (itemsBuilder_ == null) {
-          return items_.get(index);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule getRules(int index) {
+        if (rulesBuilder_ == null) {
+          return rules_.get(index);
         } else {
-          return itemsBuilder_.getMessage(index);
+          return rulesBuilder_.getMessage(index);
         }
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setItems(
-          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem value) {
-        if (itemsBuilder_ == null) {
+      public Builder setRules(
+          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule value) {
+        if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureItemsIsMutable();
-          items_.set(index, value);
+          ensureRulesIsMutable();
+          rules_.set(index, value);
           onChanged();
         } else {
-          itemsBuilder_.setMessage(index, value);
+          rulesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setItems(
-          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder builderForValue) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.set(index, builderForValue.build());
+      public Builder setRules(
+          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.set(index, builderForValue.build());
           onChanged();
         } else {
-          itemsBuilder_.setMessage(index, builderForValue.build());
+          rulesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addItems(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem value) {
-        if (itemsBuilder_ == null) {
+      public Builder addRules(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule value) {
+        if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureItemsIsMutable();
-          items_.add(value);
+          ensureRulesIsMutable();
+          rules_.add(value);
           onChanged();
         } else {
-          itemsBuilder_.addMessage(value);
+          rulesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addItems(
-          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem value) {
-        if (itemsBuilder_ == null) {
+      public Builder addRules(
+          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule value) {
+        if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureItemsIsMutable();
-          items_.add(index, value);
+          ensureRulesIsMutable();
+          rules_.add(index, value);
           onChanged();
         } else {
-          itemsBuilder_.addMessage(index, value);
+          rulesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addItems(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder builderForValue) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.add(builderForValue.build());
+      public Builder addRules(
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.add(builderForValue.build());
           onChanged();
         } else {
-          itemsBuilder_.addMessage(builderForValue.build());
+          rulesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addItems(
-          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder builderForValue) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.add(index, builderForValue.build());
+      public Builder addRules(
+          int index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.add(index, builderForValue.build());
           onChanged();
         } else {
-          itemsBuilder_.addMessage(index, builderForValue.build());
+          rulesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addAllItems(
-          java.lang.Iterable<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem> values) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
+      public Builder addAllRules(
+          java.lang.Iterable<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule> values) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, items_);
+              values, rules_);
           onChanged();
         } else {
-          itemsBuilder_.addAllMessages(values);
+          rulesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder clearItems() {
-        if (itemsBuilder_ == null) {
-          items_ = java.util.Collections.emptyList();
+      public Builder clearRules() {
+        if (rulesBuilder_ == null) {
+          rules_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          itemsBuilder_.clear();
+          rulesBuilder_.clear();
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public Builder removeItems(int index) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.remove(index);
+      public Builder removeRules(int index) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.remove(index);
           onChanged();
         } else {
-          itemsBuilder_.remove(index);
+          rulesBuilder_.remove(index);
         }
         return this;
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder getItemsBuilder(
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder getRulesBuilder(
           int index) {
-        return getItemsFieldBuilder().getBuilder(index);
+        return getRulesFieldBuilder().getBuilder(index);
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder getItemsOrBuilder(
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder getRulesOrBuilder(
           int index) {
-        if (itemsBuilder_ == null) {
-          return items_.get(index);  } else {
-          return itemsBuilder_.getMessageOrBuilder(index);
+        if (rulesBuilder_ == null) {
+          return rules_.get(index);  } else {
+          return rulesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder> 
-           getItemsOrBuilderList() {
-        if (itemsBuilder_ != null) {
-          return itemsBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder> 
+           getRulesOrBuilderList() {
+        if (rulesBuilder_ != null) {
+          return rulesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(items_);
+          return java.util.Collections.unmodifiableList(rules_);
         }
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder addItemsBuilder() {
-        return getItemsFieldBuilder().addBuilder(
-            com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.getDefaultInstance());
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder addRulesBuilder() {
+        return getRulesFieldBuilder().addBuilder(
+            com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.getDefaultInstance());
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder addItemsBuilder(
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder addRulesBuilder(
           int index) {
-        return getItemsFieldBuilder().addBuilder(
-            index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.getDefaultInstance());
+        return getRulesFieldBuilder().addBuilder(
+            index, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.getDefaultInstance());
       }
       /**
        * <pre>
-       * items contains the policy rules as a list of union types.
+       * rules contains the policy rules as a list of union types.
        * </pre>
        *
-       * <code>repeated .v1.AuthorizationPolicyItem items = 4 [(.v1.field_options) = { ... }</code>
+       * <code>repeated .v1.AuthorizationPolicyRule rules = 4 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder> 
-           getItemsBuilderList() {
-        return getItemsFieldBuilder().getBuilderList();
+      public java.util.List<com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder> 
+           getRulesBuilderList() {
+        return getRulesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder> 
-          getItemsFieldBuilder() {
-        if (itemsBuilder_ == null) {
-          itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder>(
-                  items_,
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder> 
+          getRulesFieldBuilder() {
+        if (rulesBuilder_ == null) {
+          rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder>(
+                  rules_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          items_ = null;
+          rules_ = null;
         }
-        return itemsBuilder_;
+        return rulesBuilder_;
       }
 
       private int state_ = 0;
@@ -13485,8 +13485,8 @@ public final class AuthorizationPoliciesPlumbing {
 
   }
 
-  public interface AuthorizationPolicyItemOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItem)
+  public interface AuthorizationPolicyRuleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRule)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13494,7 +13494,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
      * @return Whether the principalAll field is set.
      */
     boolean hasPrincipalAll();
@@ -13503,25 +13503,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
      * @return The principalAll.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getPrincipalAll();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll getPrincipalAll();
     /**
      * <pre>
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder getPrincipalAllOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAllOrBuilder getPrincipalAllOrBuilder();
 
     /**
      * <pre>
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
      * @return Whether the principalByIds field is set.
      */
     boolean hasPrincipalByIds();
@@ -13530,25 +13530,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
      * @return The principalByIds.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getPrincipalByIds();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds getPrincipalByIds();
     /**
      * <pre>
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder();
 
     /**
      * <pre>
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
      * @return Whether the resourcesAll field is set.
      */
     boolean hasResourcesAll();
@@ -13557,25 +13557,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
      * @return The resourcesAll.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getResourcesAll();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll getResourcesAll();
     /**
      * <pre>
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder getResourcesAllOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAllOrBuilder getResourcesAllOrBuilder();
 
     /**
      * <pre>
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
      * @return Whether the resourceByIds field is set.
      */
     boolean hasResourceByIds();
@@ -13584,25 +13584,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
      * @return The resourceByIds.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getResourceByIds();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds getResourceByIds();
     /**
      * <pre>
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder getResourceByIdsOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIdsOrBuilder getResourceByIdsOrBuilder();
 
     /**
      * <pre>
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return Whether the resourceByTypeAndTags field is set.
      */
     boolean hasResourceByTypeAndTags();
@@ -13611,25 +13611,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return The resourceByTypeAndTags.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getResourceByTypeAndTags();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags getResourceByTypeAndTags();
     /**
      * <pre>
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder();
 
     /**
      * <pre>
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return Whether the resourceByTypeTagsAndKubernetesGroups field is set.
      */
     boolean hasResourceByTypeTagsAndKubernetesGroups();
@@ -13638,25 +13638,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return The resourceByTypeTagsAndKubernetesGroups.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups();
     /**
      * <pre>
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder();
 
     /**
      * <pre>
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return Whether the resourceByOktaWithGroups field is set.
      */
     boolean hasResourceByOktaWithGroups();
@@ -13665,25 +13665,25 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return The resourceByOktaWithGroups.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getResourceByOktaWithGroups();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups getResourceByOktaWithGroups();
     /**
      * <pre>
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder();
 
     /**
      * <pre>
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return Whether the resourceByEntraWithGroups field is set.
      */
     boolean hasResourceByEntraWithGroups();
@@ -13692,25 +13692,25 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return The resourceByEntraWithGroups.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getResourceByEntraWithGroups();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups getResourceByEntraWithGroups();
     /**
      * <pre>
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder();
 
     /**
      * <pre>
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
      * @return Whether the conditionMfa field is set.
      */
     boolean hasConditionMfa();
@@ -13719,25 +13719,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
      * @return The conditionMfa.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getConditionMfa();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA getConditionMfa();
     /**
      * <pre>
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder getConditionMfaOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFAOrBuilder getConditionMfaOrBuilder();
 
     /**
      * <pre>
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
      * @return Whether the conditionDeviceTrust field is set.
      */
     boolean hasConditionDeviceTrust();
@@ -13746,25 +13746,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
      * @return The conditionDeviceTrust.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getConditionDeviceTrust();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust getConditionDeviceTrust();
     /**
      * <pre>
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder();
 
     /**
      * <pre>
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
      * @return Whether the conditionLocation field is set.
      */
     boolean hasConditionLocation();
@@ -13773,25 +13773,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
      * @return The conditionLocation.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getConditionLocation();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation getConditionLocation();
     /**
      * <pre>
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder getConditionLocationOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocationOrBuilder getConditionLocationOrBuilder();
 
     /**
      * <pre>
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
      * @return Whether the conditionIp field is set.
      */
     boolean hasConditionIp();
@@ -13800,25 +13800,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
      * @return The conditionIp.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getConditionIp();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP getConditionIp();
     /**
      * <pre>
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder getConditionIpOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIPOrBuilder getConditionIpOrBuilder();
 
     /**
      * <pre>
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
      * @return Whether the conditionTime field is set.
      */
     boolean hasConditionTime();
@@ -13827,25 +13827,25 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
      * @return The conditionTime.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getConditionTime();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime getConditionTime();
     /**
      * <pre>
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder getConditionTimeOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTimeOrBuilder getConditionTimeOrBuilder();
 
     /**
      * <pre>
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return Whether the conditionApprovalFlow field is set.
      */
     boolean hasConditionApprovalFlow();
@@ -13854,27 +13854,27 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return The conditionApprovalFlow.
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getConditionApprovalFlow();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow getConditionApprovalFlow();
     /**
      * <pre>
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
      */
-    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder();
+    com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder();
 
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.KindCase getKindCase();
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.KindCase getKindCase();
   }
   /**
    * <pre>
-   * AuthorizationPolicyItem represents a single rule item in an authorization policy.
+   * AuthorizationPolicyRule represents a single rule in an authorization policy.
    * Exactly one variant should be set: one principal scope, one resource scope, or
    * one condition.
-   * Enum constants for item fields are defined in the following locations:
+   * Enum constants for rule fields are defined in the following locations:
    *   - Resource types (resource_by_type_and_tags.type): see ResourceType in resourcetypes.proto
    *   - Device trust operators and levels: AuthorizationPolicyDeviceTrust* enums below
    *   - Location operators: LocationOperator enum below
@@ -13883,25 +13883,25 @@ public final class AuthorizationPoliciesPlumbing {
    *   - Time operators and days of week: AuthorizationPolicyTime*&#47;AuthorizationPolicyDayOfWeek enums below
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItem}
+   * Protobuf type {@code v1.AuthorizationPolicyRule}
    */
-  public static final class AuthorizationPolicyItem extends
+  public static final class AuthorizationPolicyRule extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItem)
-      AuthorizationPolicyItemOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRule)
+      AuthorizationPolicyRuleOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItem.newBuilder() to construct.
-    private AuthorizationPolicyItem(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRule.newBuilder() to construct.
+    private AuthorizationPolicyRule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItem() {
+    private AuthorizationPolicyRule() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItem();
+      return new AuthorizationPolicyRule();
     }
 
     @java.lang.Override
@@ -13909,7 +13909,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItem(
+    private AuthorizationPolicyRule(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13928,196 +13928,196 @@ public final class AuthorizationPoliciesPlumbing {
               done = true;
               break;
             case 10: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder subBuilder = null;
               if (kindCase_ == 1) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 1;
               break;
             }
             case 18: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder subBuilder = null;
               if (kindCase_ == 2) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 2;
               break;
             }
             case 26: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder subBuilder = null;
               if (kindCase_ == 3) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 3;
               break;
             }
             case 34: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder subBuilder = null;
               if (kindCase_ == 4) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 4;
               break;
             }
             case 42: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder subBuilder = null;
               if (kindCase_ == 5) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 5;
               break;
             }
             case 50: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder subBuilder = null;
               if (kindCase_ == 6) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 6;
               break;
             }
             case 58: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder subBuilder = null;
               if (kindCase_ == 7) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 7;
               break;
             }
             case 66: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder subBuilder = null;
               if (kindCase_ == 8) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 8;
               break;
             }
             case 74: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder subBuilder = null;
               if (kindCase_ == 9) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 9;
               break;
             }
             case 82: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder subBuilder = null;
               if (kindCase_ == 10) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 10;
               break;
             }
             case 90: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder subBuilder = null;
               if (kindCase_ == 11) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 11;
               break;
             }
             case 98: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder subBuilder = null;
               if (kindCase_ == 12) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 12;
               break;
             }
             case 106: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder subBuilder = null;
               if (kindCase_ == 13) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 13;
               break;
             }
             case 114: {
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder subBuilder = null;
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder subBuilder = null;
               if (kindCase_ == 14) {
-                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 14;
@@ -14146,15 +14146,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItem_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItem_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder.class);
     }
 
     private int kindCase_ = 0;
@@ -14228,7 +14228,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
      * @return Whether the principalAll field is set.
      */
     @java.lang.Override
@@ -14240,29 +14240,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
      * @return The principalAll.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getPrincipalAll() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll getPrincipalAll() {
       if (kindCase_ == 1) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches all principals.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder getPrincipalAllOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAllOrBuilder getPrincipalAllOrBuilder() {
       if (kindCase_ == 1) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance();
     }
 
     public static final int PRINCIPAL_BY_IDS_FIELD_NUMBER = 2;
@@ -14271,7 +14271,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
      * @return Whether the principalByIds field is set.
      */
     @java.lang.Override
@@ -14283,29 +14283,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
      * @return The principalByIds.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getPrincipalByIds() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds getPrincipalByIds() {
       if (kindCase_ == 2) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches specific principals by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+     * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder() {
       if (kindCase_ == 2) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance();
     }
 
     public static final int RESOURCES_ALL_FIELD_NUMBER = 3;
@@ -14314,7 +14314,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
      * @return Whether the resourcesAll field is set.
      */
     @java.lang.Override
@@ -14326,29 +14326,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
      * @return The resourcesAll.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getResourcesAll() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll getResourcesAll() {
       if (kindCase_ == 3) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches all resources.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder getResourcesAllOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAllOrBuilder getResourcesAllOrBuilder() {
       if (kindCase_ == 3) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_IDS_FIELD_NUMBER = 4;
@@ -14357,7 +14357,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
      * @return Whether the resourceByIds field is set.
      */
     @java.lang.Override
@@ -14369,29 +14369,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
      * @return The resourceByIds.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getResourceByIds() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds getResourceByIds() {
       if (kindCase_ == 4) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches specific resources by ID.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder getResourceByIdsOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIdsOrBuilder getResourceByIdsOrBuilder() {
       if (kindCase_ == 4) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_TYPE_AND_TAGS_FIELD_NUMBER = 5;
@@ -14400,7 +14400,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return Whether the resourceByTypeAndTags field is set.
      */
     @java.lang.Override
@@ -14412,29 +14412,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      * @return The resourceByTypeAndTags.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getResourceByTypeAndTags() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags getResourceByTypeAndTags() {
       if (kindCase_ == 5) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches resources by driver type and/or tags.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder() {
       if (kindCase_ == 5) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_TYPE_TAGS_AND_KUBERNETES_GROUPS_FIELD_NUMBER = 6;
@@ -14443,7 +14443,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return Whether the resourceByTypeTagsAndKubernetesGroups field is set.
      */
     @java.lang.Override
@@ -14455,29 +14455,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      * @return The resourceByTypeTagsAndKubernetesGroups.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups() {
       if (kindCase_ == 6) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
     }
     /**
      * <pre>
      * Matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder() {
       if (kindCase_ == 6) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_OKTA_WITH_GROUPS_FIELD_NUMBER = 7;
@@ -14486,7 +14486,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return Whether the resourceByOktaWithGroups field is set.
      */
     @java.lang.Override
@@ -14498,29 +14498,29 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      * @return The resourceByOktaWithGroups.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getResourceByOktaWithGroups() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups getResourceByOktaWithGroups() {
       if (kindCase_ == 7) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance();
     }
     /**
      * <pre>
      * References an exact Okta resource with Okta groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder() {
       if (kindCase_ == 7) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance();
     }
 
     public static final int RESOURCE_BY_ENTRA_WITH_GROUPS_FIELD_NUMBER = 8;
@@ -14529,7 +14529,7 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return Whether the resourceByEntraWithGroups field is set.
      */
     @java.lang.Override
@@ -14541,29 +14541,29 @@ public final class AuthorizationPoliciesPlumbing {
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      * @return The resourceByEntraWithGroups.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getResourceByEntraWithGroups() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups getResourceByEntraWithGroups() {
       if (kindCase_ == 8) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance();
     }
     /**
      * <pre>
      * References an exact Entra ID resource with Entra groups.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+     * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder() {
       if (kindCase_ == 8) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance();
     }
 
     public static final int CONDITION_MFA_FIELD_NUMBER = 9;
@@ -14572,7 +14572,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
      * @return Whether the conditionMfa field is set.
      */
     @java.lang.Override
@@ -14584,29 +14584,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
      * @return The conditionMfa.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getConditionMfa() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA getConditionMfa() {
       if (kindCase_ == 9) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance();
     }
     /**
      * <pre>
      * Requires multi-factor authentication.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder getConditionMfaOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFAOrBuilder getConditionMfaOrBuilder() {
       if (kindCase_ == 9) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance();
     }
 
     public static final int CONDITION_DEVICE_TRUST_FIELD_NUMBER = 10;
@@ -14615,7 +14615,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
      * @return Whether the conditionDeviceTrust field is set.
      */
     @java.lang.Override
@@ -14627,29 +14627,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
      * @return The conditionDeviceTrust.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getConditionDeviceTrust() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust getConditionDeviceTrust() {
       if (kindCase_ == 10) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance();
     }
     /**
      * <pre>
      * Requires a specific device trust level.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder() {
       if (kindCase_ == 10) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance();
     }
 
     public static final int CONDITION_LOCATION_FIELD_NUMBER = 11;
@@ -14658,7 +14658,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
      * @return Whether the conditionLocation field is set.
      */
     @java.lang.Override
@@ -14670,29 +14670,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
      * @return The conditionLocation.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getConditionLocation() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation getConditionLocation() {
       if (kindCase_ == 11) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance();
     }
     /**
      * <pre>
      * Restricts access by geolocation.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder getConditionLocationOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocationOrBuilder getConditionLocationOrBuilder() {
       if (kindCase_ == 11) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance();
     }
 
     public static final int CONDITION_IP_FIELD_NUMBER = 12;
@@ -14701,7 +14701,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
      * @return Whether the conditionIp field is set.
      */
     @java.lang.Override
@@ -14713,29 +14713,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
      * @return The conditionIp.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getConditionIp() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP getConditionIp() {
       if (kindCase_ == 12) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance();
     }
     /**
      * <pre>
      * Restricts access by IP address or range.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder getConditionIpOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIPOrBuilder getConditionIpOrBuilder() {
       if (kindCase_ == 12) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance();
     }
 
     public static final int CONDITION_TIME_FIELD_NUMBER = 13;
@@ -14744,7 +14744,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
      * @return Whether the conditionTime field is set.
      */
     @java.lang.Override
@@ -14756,29 +14756,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
      * @return The conditionTime.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getConditionTime() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime getConditionTime() {
       if (kindCase_ == 13) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance();
     }
     /**
      * <pre>
      * Restricts access by time of day or day of week.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder getConditionTimeOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTimeOrBuilder getConditionTimeOrBuilder() {
       if (kindCase_ == 13) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance();
     }
 
     public static final int CONDITION_APPROVAL_FLOW_FIELD_NUMBER = 14;
@@ -14787,7 +14787,7 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return Whether the conditionApprovalFlow field is set.
      */
     @java.lang.Override
@@ -14799,29 +14799,29 @@ public final class AuthorizationPoliciesPlumbing {
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
      * @return The conditionApprovalFlow.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getConditionApprovalFlow() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow getConditionApprovalFlow() {
       if (kindCase_ == 14) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance();
     }
     /**
      * <pre>
      * Requires an approval flow.
      * </pre>
      *
-     * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+     * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder() {
       if (kindCase_ == 14) {
-         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+         return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_;
       }
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14839,46 +14839,46 @@ public final class AuthorizationPoliciesPlumbing {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (kindCase_ == 1) {
-        output.writeMessage(1, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_);
+        output.writeMessage(1, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_);
       }
       if (kindCase_ == 2) {
-        output.writeMessage(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_);
+        output.writeMessage(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_);
       }
       if (kindCase_ == 3) {
-        output.writeMessage(3, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_);
+        output.writeMessage(3, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_);
       }
       if (kindCase_ == 4) {
-        output.writeMessage(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_);
+        output.writeMessage(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_);
       }
       if (kindCase_ == 5) {
-        output.writeMessage(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_);
+        output.writeMessage(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_);
       }
       if (kindCase_ == 6) {
-        output.writeMessage(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_);
+        output.writeMessage(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_);
       }
       if (kindCase_ == 7) {
-        output.writeMessage(7, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_);
+        output.writeMessage(7, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_);
       }
       if (kindCase_ == 8) {
-        output.writeMessage(8, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_);
+        output.writeMessage(8, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_);
       }
       if (kindCase_ == 9) {
-        output.writeMessage(9, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_);
+        output.writeMessage(9, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_);
       }
       if (kindCase_ == 10) {
-        output.writeMessage(10, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_);
+        output.writeMessage(10, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_);
       }
       if (kindCase_ == 11) {
-        output.writeMessage(11, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_);
+        output.writeMessage(11, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_);
       }
       if (kindCase_ == 12) {
-        output.writeMessage(12, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_);
+        output.writeMessage(12, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_);
       }
       if (kindCase_ == 13) {
-        output.writeMessage(13, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_);
+        output.writeMessage(13, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_);
       }
       if (kindCase_ == 14) {
-        output.writeMessage(14, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_);
+        output.writeMessage(14, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_);
       }
       unknownFields.writeTo(output);
     }
@@ -14891,59 +14891,59 @@ public final class AuthorizationPoliciesPlumbing {
       size = 0;
       if (kindCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_);
+          .computeMessageSize(1, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_);
       }
       if (kindCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_);
+          .computeMessageSize(2, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_);
       }
       if (kindCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_);
+          .computeMessageSize(3, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_);
       }
       if (kindCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_);
+          .computeMessageSize(4, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_);
       }
       if (kindCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_);
+          .computeMessageSize(5, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_);
       }
       if (kindCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_);
+          .computeMessageSize(6, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_);
       }
       if (kindCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_);
+          .computeMessageSize(7, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_);
       }
       if (kindCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_);
+          .computeMessageSize(8, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_);
       }
       if (kindCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_);
+          .computeMessageSize(9, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_);
       }
       if (kindCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_);
+          .computeMessageSize(10, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_);
       }
       if (kindCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_);
+          .computeMessageSize(11, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_);
       }
       if (kindCase_ == 12) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_);
+          .computeMessageSize(12, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_);
       }
       if (kindCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_);
+          .computeMessageSize(13, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_);
       }
       if (kindCase_ == 14) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_);
+          .computeMessageSize(14, (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14955,10 +14955,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule) obj;
 
       if (!getKindCase().equals(other.getKindCase())) return false;
       switch (kindCase_) {
@@ -15097,69 +15097,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15172,7 +15172,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -15189,10 +15189,10 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItem represents a single rule item in an authorization policy.
+     * AuthorizationPolicyRule represents a single rule in an authorization policy.
      * Exactly one variant should be set: one principal scope, one resource scope, or
      * one condition.
-     * Enum constants for item fields are defined in the following locations:
+     * Enum constants for rule fields are defined in the following locations:
      *   - Resource types (resource_by_type_and_tags.type): see ResourceType in resourcetypes.proto
      *   - Device trust operators and levels: AuthorizationPolicyDeviceTrust* enums below
      *   - Location operators: LocationOperator enum below
@@ -15201,26 +15201,26 @@ public final class AuthorizationPoliciesPlumbing {
      *   - Time operators and days of week: AuthorizationPolicyTime*&#47;AuthorizationPolicyDayOfWeek enums below
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItem}
+     * Protobuf type {@code v1.AuthorizationPolicyRule}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItem)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRule)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItem_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItem_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15246,17 +15246,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItem_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRule_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -15264,8 +15264,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule(this);
         if (kindCase_ == 1) {
           if (principalAllBuilder_ == null) {
             result.kind_ = kind_;
@@ -15403,16 +15403,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule.getDefaultInstance()) return this;
         switch (other.getKindCase()) {
           case PRINCIPAL_ALL: {
             mergePrincipalAll(other.getPrincipalAll());
@@ -15489,11 +15489,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -15519,13 +15519,13 @@ public final class AuthorizationPoliciesPlumbing {
 
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder> principalAllBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAllOrBuilder> principalAllBuilder_;
       /**
        * <pre>
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        * @return Whether the principalAll field is set.
        */
       @java.lang.Override
@@ -15537,21 +15537,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        * @return The principalAll.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getPrincipalAll() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll getPrincipalAll() {
         if (principalAllBuilder_ == null) {
           if (kindCase_ == 1) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance();
         } else {
           if (kindCase_ == 1) {
             return principalAllBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance();
         }
       }
       /**
@@ -15559,9 +15559,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        */
-      public Builder setPrincipalAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll value) {
+      public Builder setPrincipalAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll value) {
         if (principalAllBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15579,10 +15579,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        */
       public Builder setPrincipalAll(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder builderForValue) {
         if (principalAllBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -15597,13 +15597,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        */
-      public Builder mergePrincipalAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll value) {
+      public Builder mergePrincipalAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll value) {
         if (principalAllBuilder_ == null) {
           if (kindCase_ == 1 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -15624,7 +15624,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        */
       public Builder clearPrincipalAll() {
         if (principalAllBuilder_ == null) {
@@ -15647,9 +15647,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder getPrincipalAllBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder getPrincipalAllBuilder() {
         return getPrincipalAllFieldBuilder().getBuilder();
       }
       /**
@@ -15657,17 +15657,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder getPrincipalAllOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAllOrBuilder getPrincipalAllOrBuilder() {
         if ((kindCase_ == 1) && (principalAllBuilder_ != null)) {
           return principalAllBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 1) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance();
         }
       }
       /**
@@ -15675,18 +15675,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all principals.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalAll principal_all = 1;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalAll principal_all = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAllOrBuilder> 
           getPrincipalAllFieldBuilder() {
         if (principalAllBuilder_ == null) {
           if (!(kindCase_ == 1)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance();
           }
           principalAllBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAllOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -15697,13 +15697,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder> principalByIdsBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIdsOrBuilder> principalByIdsBuilder_;
       /**
        * <pre>
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        * @return Whether the principalByIds field is set.
        */
       @java.lang.Override
@@ -15715,21 +15715,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        * @return The principalByIds.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getPrincipalByIds() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds getPrincipalByIds() {
         if (principalByIdsBuilder_ == null) {
           if (kindCase_ == 2) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance();
         } else {
           if (kindCase_ == 2) {
             return principalByIdsBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance();
         }
       }
       /**
@@ -15737,9 +15737,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        */
-      public Builder setPrincipalByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds value) {
+      public Builder setPrincipalByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds value) {
         if (principalByIdsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15757,10 +15757,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        */
       public Builder setPrincipalByIds(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder builderForValue) {
         if (principalByIdsBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -15775,13 +15775,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        */
-      public Builder mergePrincipalByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds value) {
+      public Builder mergePrincipalByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds value) {
         if (principalByIdsBuilder_ == null) {
           if (kindCase_ == 2 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -15802,7 +15802,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        */
       public Builder clearPrincipalByIds() {
         if (principalByIdsBuilder_ == null) {
@@ -15825,9 +15825,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder getPrincipalByIdsBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder getPrincipalByIdsBuilder() {
         return getPrincipalByIdsFieldBuilder().getBuilder();
       }
       /**
@@ -15835,17 +15835,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIdsOrBuilder getPrincipalByIdsOrBuilder() {
         if ((kindCase_ == 2) && (principalByIdsBuilder_ != null)) {
           return principalByIdsBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 2) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance();
         }
       }
       /**
@@ -15853,18 +15853,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific principals by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemPrincipalByIds principal_by_ids = 2;</code>
+       * <code>.v1.AuthorizationPolicyRulePrincipalByIds principal_by_ids = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIdsOrBuilder> 
           getPrincipalByIdsFieldBuilder() {
         if (principalByIdsBuilder_ == null) {
           if (!(kindCase_ == 2)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance();
           }
           principalByIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIdsOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -15875,13 +15875,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder> resourcesAllBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAllOrBuilder> resourcesAllBuilder_;
       /**
        * <pre>
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        * @return Whether the resourcesAll field is set.
        */
       @java.lang.Override
@@ -15893,21 +15893,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        * @return The resourcesAll.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getResourcesAll() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll getResourcesAll() {
         if (resourcesAllBuilder_ == null) {
           if (kindCase_ == 3) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance();
         } else {
           if (kindCase_ == 3) {
             return resourcesAllBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance();
         }
       }
       /**
@@ -15915,9 +15915,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        */
-      public Builder setResourcesAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll value) {
+      public Builder setResourcesAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll value) {
         if (resourcesAllBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15935,10 +15935,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        */
       public Builder setResourcesAll(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder builderForValue) {
         if (resourcesAllBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -15953,13 +15953,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        */
-      public Builder mergeResourcesAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll value) {
+      public Builder mergeResourcesAll(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll value) {
         if (resourcesAllBuilder_ == null) {
           if (kindCase_ == 3 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -15980,7 +15980,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        */
       public Builder clearResourcesAll() {
         if (resourcesAllBuilder_ == null) {
@@ -16003,9 +16003,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder getResourcesAllBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder getResourcesAllBuilder() {
         return getResourcesAllFieldBuilder().getBuilder();
       }
       /**
@@ -16013,17 +16013,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder getResourcesAllOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAllOrBuilder getResourcesAllOrBuilder() {
         if ((kindCase_ == 3) && (resourcesAllBuilder_ != null)) {
           return resourcesAllBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 3) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance();
         }
       }
       /**
@@ -16031,18 +16031,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches all resources.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourcesAll resources_all = 3;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourcesAll resources_all = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAllOrBuilder> 
           getResourcesAllFieldBuilder() {
         if (resourcesAllBuilder_ == null) {
           if (!(kindCase_ == 3)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance();
           }
           resourcesAllBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAllOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -16053,13 +16053,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder> resourceByIdsBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIdsOrBuilder> resourceByIdsBuilder_;
       /**
        * <pre>
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        * @return Whether the resourceByIds field is set.
        */
       @java.lang.Override
@@ -16071,21 +16071,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        * @return The resourceByIds.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getResourceByIds() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds getResourceByIds() {
         if (resourceByIdsBuilder_ == null) {
           if (kindCase_ == 4) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance();
         } else {
           if (kindCase_ == 4) {
             return resourceByIdsBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance();
         }
       }
       /**
@@ -16093,9 +16093,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        */
-      public Builder setResourceByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds value) {
+      public Builder setResourceByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds value) {
         if (resourceByIdsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16113,10 +16113,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        */
       public Builder setResourceByIds(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder builderForValue) {
         if (resourceByIdsBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -16131,13 +16131,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        */
-      public Builder mergeResourceByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds value) {
+      public Builder mergeResourceByIds(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds value) {
         if (resourceByIdsBuilder_ == null) {
           if (kindCase_ == 4 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -16158,7 +16158,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        */
       public Builder clearResourceByIds() {
         if (resourceByIdsBuilder_ == null) {
@@ -16181,9 +16181,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder getResourceByIdsBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder getResourceByIdsBuilder() {
         return getResourceByIdsFieldBuilder().getBuilder();
       }
       /**
@@ -16191,17 +16191,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder getResourceByIdsOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIdsOrBuilder getResourceByIdsOrBuilder() {
         if ((kindCase_ == 4) && (resourceByIdsBuilder_ != null)) {
           return resourceByIdsBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 4) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance();
         }
       }
       /**
@@ -16209,18 +16209,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches specific resources by ID.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByIds resource_by_ids = 4;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByIds resource_by_ids = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIdsOrBuilder> 
           getResourceByIdsFieldBuilder() {
         if (resourceByIdsBuilder_ == null) {
           if (!(kindCase_ == 4)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance();
           }
           resourceByIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIdsOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -16231,13 +16231,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder> resourceByTypeAndTagsBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder> resourceByTypeAndTagsBuilder_;
       /**
        * <pre>
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        * @return Whether the resourceByTypeAndTags field is set.
        */
       @java.lang.Override
@@ -16249,21 +16249,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        * @return The resourceByTypeAndTags.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getResourceByTypeAndTags() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags getResourceByTypeAndTags() {
         if (resourceByTypeAndTagsBuilder_ == null) {
           if (kindCase_ == 5) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance();
         } else {
           if (kindCase_ == 5) {
             return resourceByTypeAndTagsBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance();
         }
       }
       /**
@@ -16271,9 +16271,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
-      public Builder setResourceByTypeAndTags(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags value) {
+      public Builder setResourceByTypeAndTags(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags value) {
         if (resourceByTypeAndTagsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16291,10 +16291,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       public Builder setResourceByTypeAndTags(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder builderForValue) {
         if (resourceByTypeAndTagsBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -16309,13 +16309,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
-      public Builder mergeResourceByTypeAndTags(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags value) {
+      public Builder mergeResourceByTypeAndTags(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags value) {
         if (resourceByTypeAndTagsBuilder_ == null) {
           if (kindCase_ == 5 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -16336,7 +16336,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       public Builder clearResourceByTypeAndTags() {
         if (resourceByTypeAndTagsBuilder_ == null) {
@@ -16359,9 +16359,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder getResourceByTypeAndTagsBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder getResourceByTypeAndTagsBuilder() {
         return getResourceByTypeAndTagsFieldBuilder().getBuilder();
       }
       /**
@@ -16369,17 +16369,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder getResourceByTypeAndTagsOrBuilder() {
         if ((kindCase_ == 5) && (resourceByTypeAndTagsBuilder_ != null)) {
           return resourceByTypeAndTagsBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 5) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance();
         }
       }
       /**
@@ -16387,18 +16387,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type and/or tags.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeAndTags resource_by_type_and_tags = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder> 
           getResourceByTypeAndTagsFieldBuilder() {
         if (resourceByTypeAndTagsBuilder_ == null) {
           if (!(kindCase_ == 5)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance();
           }
           resourceByTypeAndTagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -16409,13 +16409,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder> resourceByTypeTagsAndKubernetesGroupsBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder> resourceByTypeTagsAndKubernetesGroupsBuilder_;
       /**
        * <pre>
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        * @return Whether the resourceByTypeTagsAndKubernetesGroups field is set.
        */
       @java.lang.Override
@@ -16427,21 +16427,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        * @return The resourceByTypeTagsAndKubernetesGroups.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups getResourceByTypeTagsAndKubernetesGroups() {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
           if (kindCase_ == 6) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
         } else {
           if (kindCase_ == 6) {
             return resourceByTypeTagsAndKubernetesGroupsBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
         }
       }
       /**
@@ -16449,9 +16449,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
-      public Builder setResourceByTypeTagsAndKubernetesGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups value) {
+      public Builder setResourceByTypeTagsAndKubernetesGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups value) {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16469,10 +16469,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       public Builder setResourceByTypeTagsAndKubernetesGroups(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder builderForValue) {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -16487,13 +16487,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
-      public Builder mergeResourceByTypeTagsAndKubernetesGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups value) {
+      public Builder mergeResourceByTypeTagsAndKubernetesGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups value) {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
           if (kindCase_ == 6 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -16514,7 +16514,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       public Builder clearResourceByTypeTagsAndKubernetesGroups() {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
@@ -16537,9 +16537,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder getResourceByTypeTagsAndKubernetesGroupsBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder getResourceByTypeTagsAndKubernetesGroupsBuilder() {
         return getResourceByTypeTagsAndKubernetesGroupsFieldBuilder().getBuilder();
       }
       /**
@@ -16547,17 +16547,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder getResourceByTypeTagsAndKubernetesGroupsOrBuilder() {
         if ((kindCase_ == 6) && (resourceByTypeTagsAndKubernetesGroupsBuilder_ != null)) {
           return resourceByTypeTagsAndKubernetesGroupsBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 6) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
         }
       }
       /**
@@ -16565,18 +16565,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Matches resources by driver type, tags, and Kubernetes groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups resource_by_type_tags_and_kubernetes_groups = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder> 
           getResourceByTypeTagsAndKubernetesGroupsFieldBuilder() {
         if (resourceByTypeTagsAndKubernetesGroupsBuilder_ == null) {
           if (!(kindCase_ == 6)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
           }
           resourceByTypeTagsAndKubernetesGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -16587,13 +16587,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder> resourceByOktaWithGroupsBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder> resourceByOktaWithGroupsBuilder_;
       /**
        * <pre>
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        * @return Whether the resourceByOktaWithGroups field is set.
        */
       @java.lang.Override
@@ -16605,21 +16605,21 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        * @return The resourceByOktaWithGroups.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getResourceByOktaWithGroups() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups getResourceByOktaWithGroups() {
         if (resourceByOktaWithGroupsBuilder_ == null) {
           if (kindCase_ == 7) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance();
         } else {
           if (kindCase_ == 7) {
             return resourceByOktaWithGroupsBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16627,9 +16627,9 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
-      public Builder setResourceByOktaWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups value) {
+      public Builder setResourceByOktaWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups value) {
         if (resourceByOktaWithGroupsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16647,10 +16647,10 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       public Builder setResourceByOktaWithGroups(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder builderForValue) {
         if (resourceByOktaWithGroupsBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -16665,13 +16665,13 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
-      public Builder mergeResourceByOktaWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups value) {
+      public Builder mergeResourceByOktaWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups value) {
         if (resourceByOktaWithGroupsBuilder_ == null) {
           if (kindCase_ == 7 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -16692,7 +16692,7 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       public Builder clearResourceByOktaWithGroups() {
         if (resourceByOktaWithGroupsBuilder_ == null) {
@@ -16715,9 +16715,9 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder getResourceByOktaWithGroupsBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder getResourceByOktaWithGroupsBuilder() {
         return getResourceByOktaWithGroupsFieldBuilder().getBuilder();
       }
       /**
@@ -16725,17 +16725,17 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder getResourceByOktaWithGroupsOrBuilder() {
         if ((kindCase_ == 7) && (resourceByOktaWithGroupsBuilder_ != null)) {
           return resourceByOktaWithGroupsBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 7) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16743,18 +16743,18 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Okta resource with Okta groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByOktaWithGroups resource_by_okta_with_groups = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder> 
           getResourceByOktaWithGroupsFieldBuilder() {
         if (resourceByOktaWithGroupsBuilder_ == null) {
           if (!(kindCase_ == 7)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance();
           }
           resourceByOktaWithGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -16765,13 +16765,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder> resourceByEntraWithGroupsBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder> resourceByEntraWithGroupsBuilder_;
       /**
        * <pre>
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        * @return Whether the resourceByEntraWithGroups field is set.
        */
       @java.lang.Override
@@ -16783,21 +16783,21 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        * @return The resourceByEntraWithGroups.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getResourceByEntraWithGroups() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups getResourceByEntraWithGroups() {
         if (resourceByEntraWithGroupsBuilder_ == null) {
           if (kindCase_ == 8) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance();
         } else {
           if (kindCase_ == 8) {
             return resourceByEntraWithGroupsBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16805,9 +16805,9 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
-      public Builder setResourceByEntraWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups value) {
+      public Builder setResourceByEntraWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups value) {
         if (resourceByEntraWithGroupsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16825,10 +16825,10 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       public Builder setResourceByEntraWithGroups(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder builderForValue) {
         if (resourceByEntraWithGroupsBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -16843,13 +16843,13 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
-      public Builder mergeResourceByEntraWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups value) {
+      public Builder mergeResourceByEntraWithGroups(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups value) {
         if (resourceByEntraWithGroupsBuilder_ == null) {
           if (kindCase_ == 8 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -16870,7 +16870,7 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       public Builder clearResourceByEntraWithGroups() {
         if (resourceByEntraWithGroupsBuilder_ == null) {
@@ -16893,9 +16893,9 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder getResourceByEntraWithGroupsBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder getResourceByEntraWithGroupsBuilder() {
         return getResourceByEntraWithGroupsFieldBuilder().getBuilder();
       }
       /**
@@ -16903,17 +16903,17 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder getResourceByEntraWithGroupsOrBuilder() {
         if ((kindCase_ == 8) && (resourceByEntraWithGroupsBuilder_ != null)) {
           return resourceByEntraWithGroupsBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 8) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance();
         }
       }
       /**
@@ -16921,18 +16921,18 @@ public final class AuthorizationPoliciesPlumbing {
        * References an exact Entra ID resource with Entra groups.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
+       * <code>.v1.AuthorizationPolicyRuleResourceByEntraWithGroups resource_by_entra_with_groups = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder> 
           getResourceByEntraWithGroupsFieldBuilder() {
         if (resourceByEntraWithGroupsBuilder_ == null) {
           if (!(kindCase_ == 8)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance();
           }
           resourceByEntraWithGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -16943,13 +16943,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder> conditionMfaBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFAOrBuilder> conditionMfaBuilder_;
       /**
        * <pre>
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        * @return Whether the conditionMfa field is set.
        */
       @java.lang.Override
@@ -16961,21 +16961,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        * @return The conditionMfa.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getConditionMfa() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA getConditionMfa() {
         if (conditionMfaBuilder_ == null) {
           if (kindCase_ == 9) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance();
         } else {
           if (kindCase_ == 9) {
             return conditionMfaBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance();
         }
       }
       /**
@@ -16983,9 +16983,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        */
-      public Builder setConditionMfa(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA value) {
+      public Builder setConditionMfa(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA value) {
         if (conditionMfaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17003,10 +17003,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        */
       public Builder setConditionMfa(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder builderForValue) {
         if (conditionMfaBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -17021,13 +17021,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        */
-      public Builder mergeConditionMfa(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA value) {
+      public Builder mergeConditionMfa(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA value) {
         if (conditionMfaBuilder_ == null) {
           if (kindCase_ == 9 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -17048,7 +17048,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        */
       public Builder clearConditionMfa() {
         if (conditionMfaBuilder_ == null) {
@@ -17071,9 +17071,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder getConditionMfaBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder getConditionMfaBuilder() {
         return getConditionMfaFieldBuilder().getBuilder();
       }
       /**
@@ -17081,17 +17081,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder getConditionMfaOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFAOrBuilder getConditionMfaOrBuilder() {
         if ((kindCase_ == 9) && (conditionMfaBuilder_ != null)) {
           return conditionMfaBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 9) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance();
         }
       }
       /**
@@ -17099,18 +17099,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires multi-factor authentication.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionMFA condition_mfa = 9;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionMFA condition_mfa = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFAOrBuilder> 
           getConditionMfaFieldBuilder() {
         if (conditionMfaBuilder_ == null) {
           if (!(kindCase_ == 9)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance();
           }
           conditionMfaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFAOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -17121,13 +17121,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder> conditionDeviceTrustBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrustOrBuilder> conditionDeviceTrustBuilder_;
       /**
        * <pre>
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        * @return Whether the conditionDeviceTrust field is set.
        */
       @java.lang.Override
@@ -17139,21 +17139,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        * @return The conditionDeviceTrust.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getConditionDeviceTrust() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust getConditionDeviceTrust() {
         if (conditionDeviceTrustBuilder_ == null) {
           if (kindCase_ == 10) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance();
         } else {
           if (kindCase_ == 10) {
             return conditionDeviceTrustBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance();
         }
       }
       /**
@@ -17161,9 +17161,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        */
-      public Builder setConditionDeviceTrust(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust value) {
+      public Builder setConditionDeviceTrust(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust value) {
         if (conditionDeviceTrustBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17181,10 +17181,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        */
       public Builder setConditionDeviceTrust(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder builderForValue) {
         if (conditionDeviceTrustBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -17199,13 +17199,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        */
-      public Builder mergeConditionDeviceTrust(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust value) {
+      public Builder mergeConditionDeviceTrust(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust value) {
         if (conditionDeviceTrustBuilder_ == null) {
           if (kindCase_ == 10 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -17226,7 +17226,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        */
       public Builder clearConditionDeviceTrust() {
         if (conditionDeviceTrustBuilder_ == null) {
@@ -17249,9 +17249,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder getConditionDeviceTrustBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder getConditionDeviceTrustBuilder() {
         return getConditionDeviceTrustFieldBuilder().getBuilder();
       }
       /**
@@ -17259,17 +17259,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrustOrBuilder getConditionDeviceTrustOrBuilder() {
         if ((kindCase_ == 10) && (conditionDeviceTrustBuilder_ != null)) {
           return conditionDeviceTrustBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 10) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance();
         }
       }
       /**
@@ -17277,18 +17277,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires a specific device trust level.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionDeviceTrust condition_device_trust = 10;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionDeviceTrust condition_device_trust = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrustOrBuilder> 
           getConditionDeviceTrustFieldBuilder() {
         if (conditionDeviceTrustBuilder_ == null) {
           if (!(kindCase_ == 10)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance();
           }
           conditionDeviceTrustBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrustOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -17299,13 +17299,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder> conditionLocationBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocationOrBuilder> conditionLocationBuilder_;
       /**
        * <pre>
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        * @return Whether the conditionLocation field is set.
        */
       @java.lang.Override
@@ -17317,21 +17317,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        * @return The conditionLocation.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getConditionLocation() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation getConditionLocation() {
         if (conditionLocationBuilder_ == null) {
           if (kindCase_ == 11) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance();
         } else {
           if (kindCase_ == 11) {
             return conditionLocationBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance();
         }
       }
       /**
@@ -17339,9 +17339,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        */
-      public Builder setConditionLocation(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation value) {
+      public Builder setConditionLocation(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation value) {
         if (conditionLocationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17359,10 +17359,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        */
       public Builder setConditionLocation(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder builderForValue) {
         if (conditionLocationBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -17377,13 +17377,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        */
-      public Builder mergeConditionLocation(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation value) {
+      public Builder mergeConditionLocation(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation value) {
         if (conditionLocationBuilder_ == null) {
           if (kindCase_ == 11 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -17404,7 +17404,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        */
       public Builder clearConditionLocation() {
         if (conditionLocationBuilder_ == null) {
@@ -17427,9 +17427,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder getConditionLocationBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder getConditionLocationBuilder() {
         return getConditionLocationFieldBuilder().getBuilder();
       }
       /**
@@ -17437,17 +17437,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder getConditionLocationOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocationOrBuilder getConditionLocationOrBuilder() {
         if ((kindCase_ == 11) && (conditionLocationBuilder_ != null)) {
           return conditionLocationBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 11) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance();
         }
       }
       /**
@@ -17455,18 +17455,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by geolocation.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionLocation condition_location = 11;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionLocation condition_location = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocationOrBuilder> 
           getConditionLocationFieldBuilder() {
         if (conditionLocationBuilder_ == null) {
           if (!(kindCase_ == 11)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance();
           }
           conditionLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocationOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -17477,13 +17477,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder> conditionIpBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIPOrBuilder> conditionIpBuilder_;
       /**
        * <pre>
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        * @return Whether the conditionIp field is set.
        */
       @java.lang.Override
@@ -17495,21 +17495,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        * @return The conditionIp.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getConditionIp() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP getConditionIp() {
         if (conditionIpBuilder_ == null) {
           if (kindCase_ == 12) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance();
         } else {
           if (kindCase_ == 12) {
             return conditionIpBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance();
         }
       }
       /**
@@ -17517,9 +17517,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        */
-      public Builder setConditionIp(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP value) {
+      public Builder setConditionIp(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP value) {
         if (conditionIpBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17537,10 +17537,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        */
       public Builder setConditionIp(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder builderForValue) {
         if (conditionIpBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -17555,13 +17555,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        */
-      public Builder mergeConditionIp(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP value) {
+      public Builder mergeConditionIp(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP value) {
         if (conditionIpBuilder_ == null) {
           if (kindCase_ == 12 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -17582,7 +17582,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        */
       public Builder clearConditionIp() {
         if (conditionIpBuilder_ == null) {
@@ -17605,9 +17605,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder getConditionIpBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder getConditionIpBuilder() {
         return getConditionIpFieldBuilder().getBuilder();
       }
       /**
@@ -17615,17 +17615,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder getConditionIpOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIPOrBuilder getConditionIpOrBuilder() {
         if ((kindCase_ == 12) && (conditionIpBuilder_ != null)) {
           return conditionIpBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 12) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance();
         }
       }
       /**
@@ -17633,18 +17633,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by IP address or range.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionIP condition_ip = 12;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionIP condition_ip = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIPOrBuilder> 
           getConditionIpFieldBuilder() {
         if (conditionIpBuilder_ == null) {
           if (!(kindCase_ == 12)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance();
           }
           conditionIpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIPOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -17655,13 +17655,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder> conditionTimeBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTimeOrBuilder> conditionTimeBuilder_;
       /**
        * <pre>
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        * @return Whether the conditionTime field is set.
        */
       @java.lang.Override
@@ -17673,21 +17673,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        * @return The conditionTime.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getConditionTime() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime getConditionTime() {
         if (conditionTimeBuilder_ == null) {
           if (kindCase_ == 13) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance();
         } else {
           if (kindCase_ == 13) {
             return conditionTimeBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance();
         }
       }
       /**
@@ -17695,9 +17695,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        */
-      public Builder setConditionTime(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime value) {
+      public Builder setConditionTime(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime value) {
         if (conditionTimeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17715,10 +17715,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        */
       public Builder setConditionTime(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder builderForValue) {
         if (conditionTimeBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -17733,13 +17733,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        */
-      public Builder mergeConditionTime(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime value) {
+      public Builder mergeConditionTime(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime value) {
         if (conditionTimeBuilder_ == null) {
           if (kindCase_ == 13 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -17760,7 +17760,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        */
       public Builder clearConditionTime() {
         if (conditionTimeBuilder_ == null) {
@@ -17783,9 +17783,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder getConditionTimeBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder getConditionTimeBuilder() {
         return getConditionTimeFieldBuilder().getBuilder();
       }
       /**
@@ -17793,17 +17793,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder getConditionTimeOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTimeOrBuilder getConditionTimeOrBuilder() {
         if ((kindCase_ == 13) && (conditionTimeBuilder_ != null)) {
           return conditionTimeBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 13) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance();
         }
       }
       /**
@@ -17811,18 +17811,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Restricts access by time of day or day of week.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionTime condition_time = 13;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionTime condition_time = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTimeOrBuilder> 
           getConditionTimeFieldBuilder() {
         if (conditionTimeBuilder_ == null) {
           if (!(kindCase_ == 13)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance();
           }
           conditionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTimeOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -17833,13 +17833,13 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder> conditionApprovalFlowBuilder_;
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlowOrBuilder> conditionApprovalFlowBuilder_;
       /**
        * <pre>
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        * @return Whether the conditionApprovalFlow field is set.
        */
       @java.lang.Override
@@ -17851,21 +17851,21 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        * @return The conditionApprovalFlow.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getConditionApprovalFlow() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow getConditionApprovalFlow() {
         if (conditionApprovalFlowBuilder_ == null) {
           if (kindCase_ == 14) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance();
         } else {
           if (kindCase_ == 14) {
             return conditionApprovalFlowBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance();
         }
       }
       /**
@@ -17873,9 +17873,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        */
-      public Builder setConditionApprovalFlow(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow value) {
+      public Builder setConditionApprovalFlow(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow value) {
         if (conditionApprovalFlowBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17893,10 +17893,10 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       public Builder setConditionApprovalFlow(
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder builderForValue) {
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder builderForValue) {
         if (conditionApprovalFlowBuilder_ == null) {
           kind_ = builderForValue.build();
           onChanged();
@@ -17911,13 +17911,13 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        */
-      public Builder mergeConditionApprovalFlow(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow value) {
+      public Builder mergeConditionApprovalFlow(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow value) {
         if (conditionApprovalFlowBuilder_ == null) {
           if (kindCase_ == 14 &&
-              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance()) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_)
+              kind_ != com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance()) {
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.newBuilder((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_)
                 .mergeFrom(value).buildPartial();
           } else {
             kind_ = value;
@@ -17938,7 +17938,7 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       public Builder clearConditionApprovalFlow() {
         if (conditionApprovalFlowBuilder_ == null) {
@@ -17961,9 +17961,9 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        */
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder getConditionApprovalFlowBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder getConditionApprovalFlowBuilder() {
         return getConditionApprovalFlowFieldBuilder().getBuilder();
       }
       /**
@@ -17971,17 +17971,17 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder() {
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlowOrBuilder getConditionApprovalFlowOrBuilder() {
         if ((kindCase_ == 14) && (conditionApprovalFlowBuilder_ != null)) {
           return conditionApprovalFlowBuilder_.getMessageOrBuilder();
         } else {
           if (kindCase_ == 14) {
-            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_;
+            return (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_;
           }
-          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+          return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance();
         }
       }
       /**
@@ -17989,18 +17989,18 @@ public final class AuthorizationPoliciesPlumbing {
        * Requires an approval flow.
        * </pre>
        *
-       * <code>.v1.AuthorizationPolicyItemConditionApprovalFlow condition_approval_flow = 14;</code>
+       * <code>.v1.AuthorizationPolicyRuleConditionApprovalFlow condition_approval_flow = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder> 
+          com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlowOrBuilder> 
           getConditionApprovalFlowFieldBuilder() {
         if (conditionApprovalFlowBuilder_ == null) {
           if (!(kindCase_ == 14)) {
-            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+            kind_ = com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance();
           }
           conditionApprovalFlowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder>(
-                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) kind_,
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlowOrBuilder>(
+                  (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) kind_,
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -18022,74 +18022,74 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItem)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRule)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItem)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRule)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItem>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItem>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRule>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRule>() {
       @java.lang.Override
-      public AuthorizationPolicyItem parsePartialFrom(
+      public AuthorizationPolicyRule parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItem(input, extensionRegistry);
+        return new AuthorizationPolicyRule(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItem> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRule> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItem> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRule> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItem getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemPrincipalAllOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemPrincipalAll)
+  public interface AuthorizationPolicyRulePrincipalAllOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRulePrincipalAll)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemPrincipalAll matches all principals.
+   * AuthorizationPolicyRulePrincipalAll matches all principals.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemPrincipalAll}
+   * Protobuf type {@code v1.AuthorizationPolicyRulePrincipalAll}
    */
-  public static final class AuthorizationPolicyItemPrincipalAll extends
+  public static final class AuthorizationPolicyRulePrincipalAll extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemPrincipalAll)
-      AuthorizationPolicyItemPrincipalAllOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRulePrincipalAll)
+      AuthorizationPolicyRulePrincipalAllOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemPrincipalAll.newBuilder() to construct.
-    private AuthorizationPolicyItemPrincipalAll(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRulePrincipalAll.newBuilder() to construct.
+    private AuthorizationPolicyRulePrincipalAll(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemPrincipalAll() {
+    private AuthorizationPolicyRulePrincipalAll() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemPrincipalAll();
+      return new AuthorizationPolicyRulePrincipalAll();
     }
 
     @java.lang.Override
@@ -18097,7 +18097,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemPrincipalAll(
+    private AuthorizationPolicyRulePrincipalAll(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -18138,15 +18138,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalAll_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalAll_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalAll_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalAll_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18182,10 +18182,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -18203,69 +18203,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18278,7 +18278,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -18295,29 +18295,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemPrincipalAll matches all principals.
+     * AuthorizationPolicyRulePrincipalAll matches all principals.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemPrincipalAll}
+     * Protobuf type {@code v1.AuthorizationPolicyRulePrincipalAll}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemPrincipalAll)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAllOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRulePrincipalAll)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAllOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalAll_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalAll_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalAll_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalAll_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -18341,17 +18341,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalAll_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalAll_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -18359,8 +18359,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll(this);
         onBuilt();
         return result;
       }
@@ -18399,16 +18399,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -18424,11 +18424,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -18450,48 +18450,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemPrincipalAll)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRulePrincipalAll)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemPrincipalAll)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRulePrincipalAll)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemPrincipalAll>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemPrincipalAll>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRulePrincipalAll>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRulePrincipalAll>() {
       @java.lang.Override
-      public AuthorizationPolicyItemPrincipalAll parsePartialFrom(
+      public AuthorizationPolicyRulePrincipalAll parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemPrincipalAll(input, extensionRegistry);
+        return new AuthorizationPolicyRulePrincipalAll(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemPrincipalAll> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRulePrincipalAll> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemPrincipalAll> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRulePrincipalAll> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalAll getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalAll getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemPrincipalByIdsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemPrincipalByIds)
+  public interface AuthorizationPolicyRulePrincipalByIdsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRulePrincipalByIds)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -18537,21 +18537,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemPrincipalByIds matches specific principals by ID.
+   * AuthorizationPolicyRulePrincipalByIds matches specific principals by ID.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemPrincipalByIds}
+   * Protobuf type {@code v1.AuthorizationPolicyRulePrincipalByIds}
    */
-  public static final class AuthorizationPolicyItemPrincipalByIds extends
+  public static final class AuthorizationPolicyRulePrincipalByIds extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemPrincipalByIds)
-      AuthorizationPolicyItemPrincipalByIdsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRulePrincipalByIds)
+      AuthorizationPolicyRulePrincipalByIdsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemPrincipalByIds.newBuilder() to construct.
-    private AuthorizationPolicyItemPrincipalByIds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRulePrincipalByIds.newBuilder() to construct.
+    private AuthorizationPolicyRulePrincipalByIds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemPrincipalByIds() {
+    private AuthorizationPolicyRulePrincipalByIds() {
       ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -18559,7 +18559,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemPrincipalByIds();
+      return new AuthorizationPolicyRulePrincipalByIds();
     }
 
     @java.lang.Override
@@ -18567,7 +18567,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemPrincipalByIds(
+    private AuthorizationPolicyRulePrincipalByIds(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -18621,15 +18621,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalByIds_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalByIds_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalByIds_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalByIds_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder.class);
     }
 
     public static final int IDS_FIELD_NUMBER = 1;
@@ -18727,10 +18727,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) obj;
 
       if (!getIdsList()
           .equals(other.getIdsList())) return false;
@@ -18754,69 +18754,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18829,7 +18829,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -18846,29 +18846,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemPrincipalByIds matches specific principals by ID.
+     * AuthorizationPolicyRulePrincipalByIds matches specific principals by ID.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemPrincipalByIds}
+     * Protobuf type {@code v1.AuthorizationPolicyRulePrincipalByIds}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemPrincipalByIds)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIdsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRulePrincipalByIds)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIdsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalByIds_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalByIds_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalByIds_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalByIds_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -18894,17 +18894,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemPrincipalByIds_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRulePrincipalByIds_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -18912,8 +18912,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           ids_ = ids_.getUnmodifiableView();
@@ -18958,16 +18958,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds.getDefaultInstance()) return this;
         if (!other.ids_.isEmpty()) {
           if (ids_.isEmpty()) {
             ids_ = other.ids_;
@@ -18993,11 +18993,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -19166,74 +19166,74 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemPrincipalByIds)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRulePrincipalByIds)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemPrincipalByIds)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRulePrincipalByIds)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemPrincipalByIds>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemPrincipalByIds>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRulePrincipalByIds>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRulePrincipalByIds>() {
       @java.lang.Override
-      public AuthorizationPolicyItemPrincipalByIds parsePartialFrom(
+      public AuthorizationPolicyRulePrincipalByIds parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemPrincipalByIds(input, extensionRegistry);
+        return new AuthorizationPolicyRulePrincipalByIds(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemPrincipalByIds> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRulePrincipalByIds> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemPrincipalByIds> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRulePrincipalByIds> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemPrincipalByIds getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRulePrincipalByIds getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemResourcesAllOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemResourcesAll)
+  public interface AuthorizationPolicyRuleResourcesAllOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleResourcesAll)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemResourcesAll matches all resources.
+   * AuthorizationPolicyRuleResourcesAll matches all resources.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemResourcesAll}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleResourcesAll}
    */
-  public static final class AuthorizationPolicyItemResourcesAll extends
+  public static final class AuthorizationPolicyRuleResourcesAll extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemResourcesAll)
-      AuthorizationPolicyItemResourcesAllOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleResourcesAll)
+      AuthorizationPolicyRuleResourcesAllOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemResourcesAll.newBuilder() to construct.
-    private AuthorizationPolicyItemResourcesAll(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleResourcesAll.newBuilder() to construct.
+    private AuthorizationPolicyRuleResourcesAll(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemResourcesAll() {
+    private AuthorizationPolicyRuleResourcesAll() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemResourcesAll();
+      return new AuthorizationPolicyRuleResourcesAll();
     }
 
     @java.lang.Override
@@ -19241,7 +19241,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemResourcesAll(
+    private AuthorizationPolicyRuleResourcesAll(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19282,15 +19282,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourcesAll_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourcesAll_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourcesAll_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourcesAll_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -19326,10 +19326,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -19347,69 +19347,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19422,7 +19422,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -19439,29 +19439,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemResourcesAll matches all resources.
+     * AuthorizationPolicyRuleResourcesAll matches all resources.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemResourcesAll}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleResourcesAll}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemResourcesAll)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAllOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleResourcesAll)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAllOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourcesAll_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourcesAll_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourcesAll_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourcesAll_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -19485,17 +19485,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourcesAll_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourcesAll_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -19503,8 +19503,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll(this);
         onBuilt();
         return result;
       }
@@ -19543,16 +19543,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -19568,11 +19568,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -19594,48 +19594,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemResourcesAll)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleResourcesAll)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemResourcesAll)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleResourcesAll)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemResourcesAll>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemResourcesAll>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleResourcesAll>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleResourcesAll>() {
       @java.lang.Override
-      public AuthorizationPolicyItemResourcesAll parsePartialFrom(
+      public AuthorizationPolicyRuleResourcesAll parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemResourcesAll(input, extensionRegistry);
+        return new AuthorizationPolicyRuleResourcesAll(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemResourcesAll> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleResourcesAll> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemResourcesAll> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleResourcesAll> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourcesAll getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourcesAll getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemResourceByIdsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemResourceByIds)
+  public interface AuthorizationPolicyRuleResourceByIdsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleResourceByIds)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -19681,21 +19681,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemResourceByIds matches specific resources by ID.
+   * AuthorizationPolicyRuleResourceByIds matches specific resources by ID.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemResourceByIds}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByIds}
    */
-  public static final class AuthorizationPolicyItemResourceByIds extends
+  public static final class AuthorizationPolicyRuleResourceByIds extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemResourceByIds)
-      AuthorizationPolicyItemResourceByIdsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleResourceByIds)
+      AuthorizationPolicyRuleResourceByIdsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemResourceByIds.newBuilder() to construct.
-    private AuthorizationPolicyItemResourceByIds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleResourceByIds.newBuilder() to construct.
+    private AuthorizationPolicyRuleResourceByIds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemResourceByIds() {
+    private AuthorizationPolicyRuleResourceByIds() {
       ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -19703,7 +19703,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemResourceByIds();
+      return new AuthorizationPolicyRuleResourceByIds();
     }
 
     @java.lang.Override
@@ -19711,7 +19711,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemResourceByIds(
+    private AuthorizationPolicyRuleResourceByIds(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19765,15 +19765,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByIds_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByIds_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByIds_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByIds_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder.class);
     }
 
     public static final int IDS_FIELD_NUMBER = 1;
@@ -19871,10 +19871,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) obj;
 
       if (!getIdsList()
           .equals(other.getIdsList())) return false;
@@ -19898,69 +19898,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19973,7 +19973,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -19990,29 +19990,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemResourceByIds matches specific resources by ID.
+     * AuthorizationPolicyRuleResourceByIds matches specific resources by ID.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemResourceByIds}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByIds}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemResourceByIds)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIdsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleResourceByIds)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIdsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByIds_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByIds_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByIds_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByIds_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20038,17 +20038,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByIds_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByIds_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20056,8 +20056,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           ids_ = ids_.getUnmodifiableView();
@@ -20102,16 +20102,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds.getDefaultInstance()) return this;
         if (!other.ids_.isEmpty()) {
           if (ids_.isEmpty()) {
             ids_ = other.ids_;
@@ -20137,11 +20137,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -20310,48 +20310,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemResourceByIds)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleResourceByIds)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemResourceByIds)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleResourceByIds)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemResourceByIds>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemResourceByIds>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByIds>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleResourceByIds>() {
       @java.lang.Override
-      public AuthorizationPolicyItemResourceByIds parsePartialFrom(
+      public AuthorizationPolicyRuleResourceByIds parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemResourceByIds(input, extensionRegistry);
+        return new AuthorizationPolicyRuleResourceByIds(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemResourceByIds> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByIds> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemResourceByIds> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByIds> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByIds getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByIds getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemResourceByTypeAndTags)
+  public interface AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleResourceByTypeAndTags)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -20419,21 +20419,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemResourceByTypeAndTags matches resources by driver type and/or tags.
+   * AuthorizationPolicyRuleResourceByTypeAndTags matches resources by driver type and/or tags.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemResourceByTypeAndTags}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByTypeAndTags}
    */
-  public static final class AuthorizationPolicyItemResourceByTypeAndTags extends
+  public static final class AuthorizationPolicyRuleResourceByTypeAndTags extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemResourceByTypeAndTags)
-      AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleResourceByTypeAndTags)
+      AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemResourceByTypeAndTags.newBuilder() to construct.
-    private AuthorizationPolicyItemResourceByTypeAndTags(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleResourceByTypeAndTags.newBuilder() to construct.
+    private AuthorizationPolicyRuleResourceByTypeAndTags(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemResourceByTypeAndTags() {
+    private AuthorizationPolicyRuleResourceByTypeAndTags() {
       type_ = 0;
       tags_ = java.util.Collections.emptyList();
     }
@@ -20442,7 +20442,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemResourceByTypeAndTags();
+      return new AuthorizationPolicyRuleResourceByTypeAndTags();
     }
 
     @java.lang.Override
@@ -20450,7 +20450,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemResourceByTypeAndTags(
+    private AuthorizationPolicyRuleResourceByTypeAndTags(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -20510,15 +20510,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder.class);
     }
 
     public static final int TYPE_FIELD_NUMBER = 1;
@@ -20655,10 +20655,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) obj;
 
       if (type_ != other.type_) return false;
       if (!getTagsList()
@@ -20685,69 +20685,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20760,7 +20760,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -20777,29 +20777,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemResourceByTypeAndTags matches resources by driver type and/or tags.
+     * AuthorizationPolicyRuleResourceByTypeAndTags matches resources by driver type and/or tags.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemResourceByTypeAndTags}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByTypeAndTags}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemResourceByTypeAndTags)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTagsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleResourceByTypeAndTags)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTagsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20832,17 +20832,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20850,8 +20850,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags(this);
         int from_bitField0_ = bitField0_;
         result.type_ = type_;
         if (tagsBuilder_ == null) {
@@ -20901,16 +20901,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -20955,11 +20955,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -21368,48 +21368,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemResourceByTypeAndTags)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleResourceByTypeAndTags)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemResourceByTypeAndTags)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleResourceByTypeAndTags)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemResourceByTypeAndTags>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemResourceByTypeAndTags>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByTypeAndTags>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleResourceByTypeAndTags>() {
       @java.lang.Override
-      public AuthorizationPolicyItemResourceByTypeAndTags parsePartialFrom(
+      public AuthorizationPolicyRuleResourceByTypeAndTags parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemResourceByTypeAndTags(input, extensionRegistry);
+        return new AuthorizationPolicyRuleResourceByTypeAndTags(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemResourceByTypeAndTags> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByTypeAndTags> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemResourceByTypeAndTags> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByTypeAndTags> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeAndTags getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeAndTags getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups)
+  public interface AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -21518,21 +21518,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups matches resources by driver type, tags, and Kubernetes groups.
+   * AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups matches resources by driver type, tags, and Kubernetes groups.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups}
    */
-  public static final class AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups extends
+  public static final class AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups)
-      AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups)
+      AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.newBuilder() to construct.
-    private AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.newBuilder() to construct.
+    private AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups() {
+    private AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups() {
       type_ = 0;
       tags_ = java.util.Collections.emptyList();
       kubernetesGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -21542,7 +21542,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups();
+      return new AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups();
     }
 
     @java.lang.Override
@@ -21550,7 +21550,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups(
+    private AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -21622,15 +21622,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder.class);
     }
 
     public static final int TYPE_FIELD_NUMBER = 1;
@@ -21829,10 +21829,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) obj;
 
       if (type_ != other.type_) return false;
       if (!getTagsList()
@@ -21865,69 +21865,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21940,7 +21940,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -21957,29 +21957,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups matches resources by driver type, tags, and Kubernetes groups.
+     * AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups matches resources by driver type, tags, and Kubernetes groups.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroupsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroupsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -22014,17 +22014,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -22032,8 +22032,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups(this);
         int from_bitField0_ = bitField0_;
         result.type_ = type_;
         if (tagsBuilder_ == null) {
@@ -22088,16 +22088,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -22152,11 +22152,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -22711,48 +22711,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups>() {
       @java.lang.Override
-      public AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups parsePartialFrom(
+      public AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups(input, extensionRegistry);
+        return new AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemResourceByOktaWithGroups)
+  public interface AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleResourceByOktaWithGroups)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -22818,21 +22818,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemResourceByOktaWithGroups references an exact Okta resource and carries Okta groups.
+   * AuthorizationPolicyRuleResourceByOktaWithGroups references an exact Okta resource and carries Okta groups.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemResourceByOktaWithGroups}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByOktaWithGroups}
    */
-  public static final class AuthorizationPolicyItemResourceByOktaWithGroups extends
+  public static final class AuthorizationPolicyRuleResourceByOktaWithGroups extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemResourceByOktaWithGroups)
-      AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleResourceByOktaWithGroups)
+      AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemResourceByOktaWithGroups.newBuilder() to construct.
-    private AuthorizationPolicyItemResourceByOktaWithGroups(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleResourceByOktaWithGroups.newBuilder() to construct.
+    private AuthorizationPolicyRuleResourceByOktaWithGroups(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemResourceByOktaWithGroups() {
+    private AuthorizationPolicyRuleResourceByOktaWithGroups() {
       resourceId_ = "";
       groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -22841,7 +22841,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemResourceByOktaWithGroups();
+      return new AuthorizationPolicyRuleResourceByOktaWithGroups();
     }
 
     @java.lang.Override
@@ -22849,7 +22849,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemResourceByOktaWithGroups(
+    private AuthorizationPolicyRuleResourceByOktaWithGroups(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -22909,15 +22909,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder.class);
     }
 
     public static final int RESOURCE_ID_FIELD_NUMBER = 1;
@@ -23067,10 +23067,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) obj;
 
       if (!getResourceId()
           .equals(other.getResourceId())) return false;
@@ -23098,69 +23098,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -23173,7 +23173,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -23190,29 +23190,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemResourceByOktaWithGroups references an exact Okta resource and carries Okta groups.
+     * AuthorizationPolicyRuleResourceByOktaWithGroups references an exact Okta resource and carries Okta groups.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemResourceByOktaWithGroups}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByOktaWithGroups}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemResourceByOktaWithGroups)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroupsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleResourceByOktaWithGroups)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroupsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -23240,17 +23240,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -23258,8 +23258,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups(this);
         int from_bitField0_ = bitField0_;
         result.resourceId_ = resourceId_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -23305,16 +23305,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups.getDefaultInstance()) return this;
         if (!other.getResourceId().isEmpty()) {
           resourceId_ = other.resourceId_;
           onChanged();
@@ -23344,11 +23344,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -23613,48 +23613,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemResourceByOktaWithGroups)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleResourceByOktaWithGroups)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemResourceByOktaWithGroups)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleResourceByOktaWithGroups)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemResourceByOktaWithGroups>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemResourceByOktaWithGroups>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByOktaWithGroups>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleResourceByOktaWithGroups>() {
       @java.lang.Override
-      public AuthorizationPolicyItemResourceByOktaWithGroups parsePartialFrom(
+      public AuthorizationPolicyRuleResourceByOktaWithGroups parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemResourceByOktaWithGroups(input, extensionRegistry);
+        return new AuthorizationPolicyRuleResourceByOktaWithGroups(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemResourceByOktaWithGroups> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByOktaWithGroups> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemResourceByOktaWithGroups> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByOktaWithGroups> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByOktaWithGroups getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByOktaWithGroups getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemResourceByEntraWithGroups)
+  public interface AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleResourceByEntraWithGroups)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -23720,21 +23720,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemResourceByEntraWithGroups references an exact Entra ID resource and carries Entra groups.
+   * AuthorizationPolicyRuleResourceByEntraWithGroups references an exact Entra ID resource and carries Entra groups.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemResourceByEntraWithGroups}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByEntraWithGroups}
    */
-  public static final class AuthorizationPolicyItemResourceByEntraWithGroups extends
+  public static final class AuthorizationPolicyRuleResourceByEntraWithGroups extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemResourceByEntraWithGroups)
-      AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleResourceByEntraWithGroups)
+      AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemResourceByEntraWithGroups.newBuilder() to construct.
-    private AuthorizationPolicyItemResourceByEntraWithGroups(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleResourceByEntraWithGroups.newBuilder() to construct.
+    private AuthorizationPolicyRuleResourceByEntraWithGroups(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemResourceByEntraWithGroups() {
+    private AuthorizationPolicyRuleResourceByEntraWithGroups() {
       resourceId_ = "";
       groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -23743,7 +23743,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemResourceByEntraWithGroups();
+      return new AuthorizationPolicyRuleResourceByEntraWithGroups();
     }
 
     @java.lang.Override
@@ -23751,7 +23751,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemResourceByEntraWithGroups(
+    private AuthorizationPolicyRuleResourceByEntraWithGroups(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -23811,15 +23811,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder.class);
     }
 
     public static final int RESOURCE_ID_FIELD_NUMBER = 1;
@@ -23969,10 +23969,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) obj;
 
       if (!getResourceId()
           .equals(other.getResourceId())) return false;
@@ -24000,69 +24000,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24075,7 +24075,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -24092,29 +24092,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemResourceByEntraWithGroups references an exact Entra ID resource and carries Entra groups.
+     * AuthorizationPolicyRuleResourceByEntraWithGroups references an exact Entra ID resource and carries Entra groups.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemResourceByEntraWithGroups}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleResourceByEntraWithGroups}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemResourceByEntraWithGroups)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroupsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleResourceByEntraWithGroups)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroupsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -24142,17 +24142,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -24160,8 +24160,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups(this);
         int from_bitField0_ = bitField0_;
         result.resourceId_ = resourceId_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -24207,16 +24207,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups.getDefaultInstance()) return this;
         if (!other.getResourceId().isEmpty()) {
           resourceId_ = other.resourceId_;
           onChanged();
@@ -24246,11 +24246,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -24515,48 +24515,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemResourceByEntraWithGroups)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleResourceByEntraWithGroups)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemResourceByEntraWithGroups)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleResourceByEntraWithGroups)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemResourceByEntraWithGroups>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemResourceByEntraWithGroups>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByEntraWithGroups>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleResourceByEntraWithGroups>() {
       @java.lang.Override
-      public AuthorizationPolicyItemResourceByEntraWithGroups parsePartialFrom(
+      public AuthorizationPolicyRuleResourceByEntraWithGroups parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemResourceByEntraWithGroups(input, extensionRegistry);
+        return new AuthorizationPolicyRuleResourceByEntraWithGroups(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemResourceByEntraWithGroups> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByEntraWithGroups> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemResourceByEntraWithGroups> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleResourceByEntraWithGroups> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemResourceByEntraWithGroups getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleResourceByEntraWithGroups getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemConditionMFAOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemConditionMFA)
+  public interface AuthorizationPolicyRuleConditionMFAOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleConditionMFA)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -24591,21 +24591,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemConditionMFA represents a policy-level MFA requirement.
+   * AuthorizationPolicyRuleConditionMFA represents a policy-level MFA requirement.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemConditionMFA}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleConditionMFA}
    */
-  public static final class AuthorizationPolicyItemConditionMFA extends
+  public static final class AuthorizationPolicyRuleConditionMFA extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemConditionMFA)
-      AuthorizationPolicyItemConditionMFAOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleConditionMFA)
+      AuthorizationPolicyRuleConditionMFAOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemConditionMFA.newBuilder() to construct.
-    private AuthorizationPolicyItemConditionMFA(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleConditionMFA.newBuilder() to construct.
+    private AuthorizationPolicyRuleConditionMFA(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemConditionMFA() {
+    private AuthorizationPolicyRuleConditionMFA() {
       reason_ = "";
     }
 
@@ -24613,7 +24613,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemConditionMFA();
+      return new AuthorizationPolicyRuleConditionMFA();
     }
 
     @java.lang.Override
@@ -24621,7 +24621,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemConditionMFA(
+    private AuthorizationPolicyRuleConditionMFA(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -24673,15 +24673,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionMFA_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionMFA_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionMFA_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionMFA_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder.class);
     }
 
     public static final int REASON_FIELD_NUMBER = 1;
@@ -24791,10 +24791,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) obj;
 
       if (!getReason()
           .equals(other.getReason())) return false;
@@ -24820,69 +24820,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24895,7 +24895,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -24912,29 +24912,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemConditionMFA represents a policy-level MFA requirement.
+     * AuthorizationPolicyRuleConditionMFA represents a policy-level MFA requirement.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemConditionMFA}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleConditionMFA}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemConditionMFA)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFAOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleConditionMFA)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFAOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionMFA_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionMFA_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionMFA_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionMFA_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -24962,17 +24962,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionMFA_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionMFA_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -24980,8 +24980,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA(this);
         result.reason_ = reason_;
         result.cacheTimeoutSeconds_ = cacheTimeoutSeconds_;
         onBuilt();
@@ -25022,16 +25022,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA.getDefaultInstance()) return this;
         if (!other.getReason().isEmpty()) {
           reason_ = other.reason_;
           onChanged();
@@ -25054,11 +25054,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -25219,48 +25219,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemConditionMFA)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleConditionMFA)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemConditionMFA)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleConditionMFA)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemConditionMFA>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemConditionMFA>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleConditionMFA>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleConditionMFA>() {
       @java.lang.Override
-      public AuthorizationPolicyItemConditionMFA parsePartialFrom(
+      public AuthorizationPolicyRuleConditionMFA parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemConditionMFA(input, extensionRegistry);
+        return new AuthorizationPolicyRuleConditionMFA(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemConditionMFA> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleConditionMFA> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemConditionMFA> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleConditionMFA> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionMFA getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionMFA getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemConditionDeviceTrustOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemConditionDeviceTrust)
+  public interface AuthorizationPolicyRuleConditionDeviceTrustOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleConditionDeviceTrust)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -25303,21 +25303,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemConditionDeviceTrust represents a policy-level device trust requirement.
+   * AuthorizationPolicyRuleConditionDeviceTrust represents a policy-level device trust requirement.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemConditionDeviceTrust}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleConditionDeviceTrust}
    */
-  public static final class AuthorizationPolicyItemConditionDeviceTrust extends
+  public static final class AuthorizationPolicyRuleConditionDeviceTrust extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemConditionDeviceTrust)
-      AuthorizationPolicyItemConditionDeviceTrustOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleConditionDeviceTrust)
+      AuthorizationPolicyRuleConditionDeviceTrustOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemConditionDeviceTrust.newBuilder() to construct.
-    private AuthorizationPolicyItemConditionDeviceTrust(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleConditionDeviceTrust.newBuilder() to construct.
+    private AuthorizationPolicyRuleConditionDeviceTrust(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemConditionDeviceTrust() {
+    private AuthorizationPolicyRuleConditionDeviceTrust() {
       operator_ = 0;
       level_ = 0;
     }
@@ -25326,7 +25326,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemConditionDeviceTrust();
+      return new AuthorizationPolicyRuleConditionDeviceTrust();
     }
 
     @java.lang.Override
@@ -25334,7 +25334,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemConditionDeviceTrust(
+    private AuthorizationPolicyRuleConditionDeviceTrust(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -25387,15 +25387,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder.class);
     }
 
     public static final int OPERATOR_FIELD_NUMBER = 1;
@@ -25499,10 +25499,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) obj;
 
       if (operator_ != other.operator_) return false;
       if (level_ != other.level_) return false;
@@ -25526,69 +25526,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -25601,7 +25601,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -25618,29 +25618,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemConditionDeviceTrust represents a policy-level device trust requirement.
+     * AuthorizationPolicyRuleConditionDeviceTrust represents a policy-level device trust requirement.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemConditionDeviceTrust}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleConditionDeviceTrust}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemConditionDeviceTrust)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrustOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleConditionDeviceTrust)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrustOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -25668,17 +25668,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -25686,8 +25686,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust(this);
         result.operator_ = operator_;
         result.level_ = level_;
         onBuilt();
@@ -25728,16 +25728,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust.getDefaultInstance()) return this;
         if (other.operator_ != 0) {
           setOperatorValue(other.getOperatorValue());
         }
@@ -25759,11 +25759,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -25933,48 +25933,48 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemConditionDeviceTrust)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleConditionDeviceTrust)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemConditionDeviceTrust)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleConditionDeviceTrust)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemConditionDeviceTrust>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemConditionDeviceTrust>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleConditionDeviceTrust>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleConditionDeviceTrust>() {
       @java.lang.Override
-      public AuthorizationPolicyItemConditionDeviceTrust parsePartialFrom(
+      public AuthorizationPolicyRuleConditionDeviceTrust parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemConditionDeviceTrust(input, extensionRegistry);
+        return new AuthorizationPolicyRuleConditionDeviceTrust(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemConditionDeviceTrust> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleConditionDeviceTrust> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemConditionDeviceTrust> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleConditionDeviceTrust> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionDeviceTrust getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionDeviceTrust getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AuthorizationPolicyItemConditionLocationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemConditionLocation)
+  public interface AuthorizationPolicyRuleConditionLocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleConditionLocation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -26023,21 +26023,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemConditionLocation represents policy-level geolocation restrictions.
+   * AuthorizationPolicyRuleConditionLocation represents policy-level geolocation restrictions.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemConditionLocation}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleConditionLocation}
    */
-  public static final class AuthorizationPolicyItemConditionLocation extends
+  public static final class AuthorizationPolicyRuleConditionLocation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemConditionLocation)
-      AuthorizationPolicyItemConditionLocationOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleConditionLocation)
+      AuthorizationPolicyRuleConditionLocationOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemConditionLocation.newBuilder() to construct.
-    private AuthorizationPolicyItemConditionLocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleConditionLocation.newBuilder() to construct.
+    private AuthorizationPolicyRuleConditionLocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemConditionLocation() {
+    private AuthorizationPolicyRuleConditionLocation() {
       rules_ = java.util.Collections.emptyList();
     }
 
@@ -26045,7 +26045,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemConditionLocation();
+      return new AuthorizationPolicyRuleConditionLocation();
     }
 
     @java.lang.Override
@@ -26053,7 +26053,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemConditionLocation(
+    private AuthorizationPolicyRuleConditionLocation(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -26107,15 +26107,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionLocation_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionLocation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionLocation_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionLocation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder.class);
     }
 
     public static final int RULES_FIELD_NUMBER = 1;
@@ -26218,10 +26218,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) obj;
 
       if (!getRulesList()
           .equals(other.getRulesList())) return false;
@@ -26245,69 +26245,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26320,7 +26320,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -26337,29 +26337,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemConditionLocation represents policy-level geolocation restrictions.
+     * AuthorizationPolicyRuleConditionLocation represents policy-level geolocation restrictions.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemConditionLocation}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleConditionLocation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemConditionLocation)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocationOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleConditionLocation)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionLocation_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionLocation_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionLocation_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionLocation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -26390,17 +26390,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionLocation_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionLocation_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -26408,8 +26408,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation(this);
         int from_bitField0_ = bitField0_;
         if (rulesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -26458,16 +26458,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation.getDefaultInstance()) return this;
         if (rulesBuilder_ == null) {
           if (!other.rules_.isEmpty()) {
             if (rules_.isEmpty()) {
@@ -26509,11 +26509,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -26848,41 +26848,41 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemConditionLocation)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleConditionLocation)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemConditionLocation)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleConditionLocation)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemConditionLocation>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemConditionLocation>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleConditionLocation>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleConditionLocation>() {
       @java.lang.Override
-      public AuthorizationPolicyItemConditionLocation parsePartialFrom(
+      public AuthorizationPolicyRuleConditionLocation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemConditionLocation(input, extensionRegistry);
+        return new AuthorizationPolicyRuleConditionLocation(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemConditionLocation> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleConditionLocation> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemConditionLocation> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleConditionLocation> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionLocation getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionLocation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30854,8 +30854,8 @@ public final class AuthorizationPoliciesPlumbing {
 
   }
 
-  public interface AuthorizationPolicyItemConditionIPOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemConditionIP)
+  public interface AuthorizationPolicyRuleConditionIPOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleConditionIP)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -30904,21 +30904,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemConditionIP represents policy-level IP address/range restrictions.
+   * AuthorizationPolicyRuleConditionIP represents policy-level IP address/range restrictions.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemConditionIP}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleConditionIP}
    */
-  public static final class AuthorizationPolicyItemConditionIP extends
+  public static final class AuthorizationPolicyRuleConditionIP extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemConditionIP)
-      AuthorizationPolicyItemConditionIPOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleConditionIP)
+      AuthorizationPolicyRuleConditionIPOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemConditionIP.newBuilder() to construct.
-    private AuthorizationPolicyItemConditionIP(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleConditionIP.newBuilder() to construct.
+    private AuthorizationPolicyRuleConditionIP(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemConditionIP() {
+    private AuthorizationPolicyRuleConditionIP() {
       rules_ = java.util.Collections.emptyList();
     }
 
@@ -30926,7 +30926,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemConditionIP();
+      return new AuthorizationPolicyRuleConditionIP();
     }
 
     @java.lang.Override
@@ -30934,7 +30934,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemConditionIP(
+    private AuthorizationPolicyRuleConditionIP(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -30988,15 +30988,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionIP_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionIP_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionIP_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionIP_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder.class);
     }
 
     public static final int RULES_FIELD_NUMBER = 1;
@@ -31099,10 +31099,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) obj;
 
       if (!getRulesList()
           .equals(other.getRulesList())) return false;
@@ -31126,69 +31126,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31201,7 +31201,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -31218,29 +31218,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemConditionIP represents policy-level IP address/range restrictions.
+     * AuthorizationPolicyRuleConditionIP represents policy-level IP address/range restrictions.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemConditionIP}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleConditionIP}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemConditionIP)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIPOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleConditionIP)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIPOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionIP_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionIP_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionIP_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionIP_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -31271,17 +31271,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionIP_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionIP_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -31289,8 +31289,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP(this);
         int from_bitField0_ = bitField0_;
         if (rulesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -31339,16 +31339,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP.getDefaultInstance()) return this;
         if (rulesBuilder_ == null) {
           if (!other.rules_.isEmpty()) {
             if (rules_.isEmpty()) {
@@ -31390,11 +31390,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -31729,41 +31729,41 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemConditionIP)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleConditionIP)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemConditionIP)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleConditionIP)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemConditionIP>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemConditionIP>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleConditionIP>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleConditionIP>() {
       @java.lang.Override
-      public AuthorizationPolicyItemConditionIP parsePartialFrom(
+      public AuthorizationPolicyRuleConditionIP parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemConditionIP(input, extensionRegistry);
+        return new AuthorizationPolicyRuleConditionIP(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemConditionIP> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleConditionIP> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemConditionIP> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleConditionIP> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionIP getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionIP getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -32669,8 +32669,8 @@ public final class AuthorizationPoliciesPlumbing {
 
   }
 
-  public interface AuthorizationPolicyItemConditionTimeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemConditionTime)
+  public interface AuthorizationPolicyRuleConditionTimeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleConditionTime)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -32719,21 +32719,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemConditionTime represents policy-level time restrictions.
+   * AuthorizationPolicyRuleConditionTime represents policy-level time restrictions.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemConditionTime}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleConditionTime}
    */
-  public static final class AuthorizationPolicyItemConditionTime extends
+  public static final class AuthorizationPolicyRuleConditionTime extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemConditionTime)
-      AuthorizationPolicyItemConditionTimeOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleConditionTime)
+      AuthorizationPolicyRuleConditionTimeOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemConditionTime.newBuilder() to construct.
-    private AuthorizationPolicyItemConditionTime(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleConditionTime.newBuilder() to construct.
+    private AuthorizationPolicyRuleConditionTime(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemConditionTime() {
+    private AuthorizationPolicyRuleConditionTime() {
       rules_ = java.util.Collections.emptyList();
     }
 
@@ -32741,7 +32741,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemConditionTime();
+      return new AuthorizationPolicyRuleConditionTime();
     }
 
     @java.lang.Override
@@ -32749,7 +32749,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemConditionTime(
+    private AuthorizationPolicyRuleConditionTime(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -32803,15 +32803,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionTime_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionTime_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionTime_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionTime_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder.class);
     }
 
     public static final int RULES_FIELD_NUMBER = 1;
@@ -32914,10 +32914,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) obj;
 
       if (!getRulesList()
           .equals(other.getRulesList())) return false;
@@ -32941,69 +32941,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -33016,7 +33016,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -33033,29 +33033,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemConditionTime represents policy-level time restrictions.
+     * AuthorizationPolicyRuleConditionTime represents policy-level time restrictions.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemConditionTime}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleConditionTime}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemConditionTime)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTimeOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleConditionTime)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTimeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionTime_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionTime_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionTime_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionTime_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -33086,17 +33086,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionTime_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionTime_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -33104,8 +33104,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime(this);
         int from_bitField0_ = bitField0_;
         if (rulesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -33154,16 +33154,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime.getDefaultInstance()) return this;
         if (rulesBuilder_ == null) {
           if (!other.rules_.isEmpty()) {
             if (rules_.isEmpty()) {
@@ -33205,11 +33205,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -33544,41 +33544,41 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemConditionTime)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleConditionTime)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemConditionTime)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleConditionTime)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemConditionTime>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemConditionTime>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleConditionTime>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleConditionTime>() {
       @java.lang.Override
-      public AuthorizationPolicyItemConditionTime parsePartialFrom(
+      public AuthorizationPolicyRuleConditionTime parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemConditionTime(input, extensionRegistry);
+        return new AuthorizationPolicyRuleConditionTime(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemConditionTime> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleConditionTime> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemConditionTime> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleConditionTime> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionTime getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionTime getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -40286,8 +40286,8 @@ public final class AuthorizationPoliciesPlumbing {
 
   }
 
-  public interface AuthorizationPolicyItemConditionApprovalFlowOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyItemConditionApprovalFlow)
+  public interface AuthorizationPolicyRuleConditionApprovalFlowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AuthorizationPolicyRuleConditionApprovalFlow)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -40312,21 +40312,21 @@ public final class AuthorizationPoliciesPlumbing {
   }
   /**
    * <pre>
-   * AuthorizationPolicyItemConditionApprovalFlow attaches an approval flow to the policy.
+   * AuthorizationPolicyRuleConditionApprovalFlow attaches an approval flow to the policy.
    * </pre>
    *
-   * Protobuf type {@code v1.AuthorizationPolicyItemConditionApprovalFlow}
+   * Protobuf type {@code v1.AuthorizationPolicyRuleConditionApprovalFlow}
    */
-  public static final class AuthorizationPolicyItemConditionApprovalFlow extends
+  public static final class AuthorizationPolicyRuleConditionApprovalFlow extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyItemConditionApprovalFlow)
-      AuthorizationPolicyItemConditionApprovalFlowOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.AuthorizationPolicyRuleConditionApprovalFlow)
+      AuthorizationPolicyRuleConditionApprovalFlowOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthorizationPolicyItemConditionApprovalFlow.newBuilder() to construct.
-    private AuthorizationPolicyItemConditionApprovalFlow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuthorizationPolicyRuleConditionApprovalFlow.newBuilder() to construct.
+    private AuthorizationPolicyRuleConditionApprovalFlow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthorizationPolicyItemConditionApprovalFlow() {
+    private AuthorizationPolicyRuleConditionApprovalFlow() {
       approvalFlowId_ = "";
     }
 
@@ -40334,7 +40334,7 @@ public final class AuthorizationPoliciesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthorizationPolicyItemConditionApprovalFlow();
+      return new AuthorizationPolicyRuleConditionApprovalFlow();
     }
 
     @java.lang.Override
@@ -40342,7 +40342,7 @@ public final class AuthorizationPoliciesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthorizationPolicyItemConditionApprovalFlow(
+    private AuthorizationPolicyRuleConditionApprovalFlow(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -40389,15 +40389,15 @@ public final class AuthorizationPoliciesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor;
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_fieldAccessorTable
+      return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder.class);
+              com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder.class);
     }
 
     public static final int APPROVAL_FLOW_ID_FIELD_NUMBER = 1;
@@ -40485,10 +40485,10 @@ public final class AuthorizationPoliciesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) obj;
+      com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow other = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) obj;
 
       if (!getApprovalFlowId()
           .equals(other.getApprovalFlowId())) return false;
@@ -40510,69 +40510,69 @@ public final class AuthorizationPoliciesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parseFrom(
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -40585,7 +40585,7 @@ public final class AuthorizationPoliciesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -40602,29 +40602,29 @@ public final class AuthorizationPoliciesPlumbing {
     }
     /**
      * <pre>
-     * AuthorizationPolicyItemConditionApprovalFlow attaches an approval flow to the policy.
+     * AuthorizationPolicyRuleConditionApprovalFlow attaches an approval flow to the policy.
      * </pre>
      *
-     * Protobuf type {@code v1.AuthorizationPolicyItemConditionApprovalFlow}
+     * Protobuf type {@code v1.AuthorizationPolicyRuleConditionApprovalFlow}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyItemConditionApprovalFlow)
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlowOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.AuthorizationPolicyRuleConditionApprovalFlow)
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_fieldAccessorTable
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.Builder.class);
+                com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.class, com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.newBuilder()
+      // Construct using com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -40650,17 +40650,17 @@ public final class AuthorizationPoliciesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor;
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow build() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow result = buildPartial();
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow build() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -40668,8 +40668,8 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow buildPartial() {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow(this);
+      public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow buildPartial() {
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow result = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow(this);
         result.approvalFlowId_ = approvalFlowId_;
         onBuilt();
         return result;
@@ -40709,16 +40709,16 @@ public final class AuthorizationPoliciesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) {
-          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow)other);
+        if (other instanceof com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) {
+          return mergeFrom((com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow other) {
-        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow other) {
+        if (other == com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow.getDefaultInstance()) return this;
         if (!other.getApprovalFlowId().isEmpty()) {
           approvalFlowId_ = other.approvalFlowId_;
           onChanged();
@@ -40738,11 +40738,11 @@ public final class AuthorizationPoliciesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow parsedMessage = null;
+        com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -40860,41 +40860,41 @@ public final class AuthorizationPoliciesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyItemConditionApprovalFlow)
+      // @@protoc_insertion_point(builder_scope:v1.AuthorizationPolicyRuleConditionApprovalFlow)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyItemConditionApprovalFlow)
-    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.AuthorizationPolicyRuleConditionApprovalFlow)
+    private static final com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow();
     }
 
-    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getDefaultInstance() {
+    public static com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthorizationPolicyItemConditionApprovalFlow>
-        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyItemConditionApprovalFlow>() {
+    private static final com.google.protobuf.Parser<AuthorizationPolicyRuleConditionApprovalFlow>
+        PARSER = new com.google.protobuf.AbstractParser<AuthorizationPolicyRuleConditionApprovalFlow>() {
       @java.lang.Override
-      public AuthorizationPolicyItemConditionApprovalFlow parsePartialFrom(
+      public AuthorizationPolicyRuleConditionApprovalFlow parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthorizationPolicyItemConditionApprovalFlow(input, extensionRegistry);
+        return new AuthorizationPolicyRuleConditionApprovalFlow(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthorizationPolicyItemConditionApprovalFlow> parser() {
+    public static com.google.protobuf.Parser<AuthorizationPolicyRuleConditionApprovalFlow> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthorizationPolicyItemConditionApprovalFlow> getParserForType() {
+    public com.google.protobuf.Parser<AuthorizationPolicyRuleConditionApprovalFlow> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyItemConditionApprovalFlow getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.AuthorizationPoliciesPlumbing.AuthorizationPolicyRuleConditionApprovalFlow getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -40956,65 +40956,65 @@ public final class AuthorizationPoliciesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AuthorizationPolicy_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItem_descriptor;
+    internal_static_v1_AuthorizationPolicyRule_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItem_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRule_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemPrincipalAll_descriptor;
+    internal_static_v1_AuthorizationPolicyRulePrincipalAll_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemPrincipalAll_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRulePrincipalAll_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemPrincipalByIds_descriptor;
+    internal_static_v1_AuthorizationPolicyRulePrincipalByIds_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemPrincipalByIds_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRulePrincipalByIds_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemResourcesAll_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleResourcesAll_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemResourcesAll_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleResourcesAll_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemResourceByIds_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleResourceByIds_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemResourceByIds_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleResourceByIds_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemConditionMFA_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleConditionMFA_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemConditionMFA_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleConditionMFA_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemConditionLocation_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleConditionLocation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemConditionLocation_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleConditionLocation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AuthorizationPolicyLocationRule_descriptor;
   private static final 
@@ -41036,20 +41036,20 @@ public final class AuthorizationPoliciesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AuthorizationPolicySubdivisionRule_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemConditionIP_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleConditionIP_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemConditionIP_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleConditionIP_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AuthorizationPolicyIPRule_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AuthorizationPolicyIPRule_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemConditionTime_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleConditionTime_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemConditionTime_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleConditionTime_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AuthorizationPolicyTimeRule_descriptor;
   private static final 
@@ -41086,10 +41086,10 @@ public final class AuthorizationPoliciesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AuthorizationPolicyTimeRuleDaysOfMonth_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor;
+    internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_fieldAccessorTable;
+      internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -41150,73 +41150,73 @@ public final class AuthorizationPoliciesPlumbing {
       "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\371\001\n\023Authorizati" +
       "onPolicy\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name" +
       "\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\037\n\013description\030\003" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0226\n\005items\030\004 \003(\0132\033.v1.Aut" +
-      "horizationPolicyItemB\n\362\370\263\007\005\260\363\263\007\001\0227\n\005stat" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0226\n\005rules\030\004 \003(\0132\033.v1.Aut" +
+      "horizationPolicyRuleB\n\362\370\263\007\005\260\363\263\007\001\0227\n\005stat" +
       "e\030\005 \001(\0162\034.v1.AuthorizationPolicyStateB\n\362" +
       "\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\222\t\n" +
-      "\027AuthorizationPolicyItem\022@\n\rprincipal_al" +
-      "l\030\001 \001(\0132\'.v1.AuthorizationPolicyItemPrin" +
+      "\027AuthorizationPolicyRule\022@\n\rprincipal_al" +
+      "l\030\001 \001(\0132\'.v1.AuthorizationPolicyRulePrin" +
       "cipalAllH\000\022E\n\020principal_by_ids\030\002 \001(\0132).v" +
-      "1.AuthorizationPolicyItemPrincipalByIdsH" +
+      "1.AuthorizationPolicyRulePrincipalByIdsH" +
       "\000\022@\n\rresources_all\030\003 \001(\0132\'.v1.Authorizat" +
-      "ionPolicyItemResourcesAllH\000\022C\n\017resource_" +
-      "by_ids\030\004 \001(\0132(.v1.AuthorizationPolicyIte" +
-      "mResourceByIdsH\000\022U\n\031resource_by_type_and" +
-      "_tags\030\005 \001(\01320.v1.AuthorizationPolicyItem" +
+      "ionPolicyRuleResourcesAllH\000\022C\n\017resource_" +
+      "by_ids\030\004 \001(\0132(.v1.AuthorizationPolicyRul" +
+      "eResourceByIdsH\000\022U\n\031resource_by_type_and" +
+      "_tags\030\005 \001(\01320.v1.AuthorizationPolicyRule" +
       "ResourceByTypeAndTagsH\000\022w\n+resource_by_t" +
       "ype_tags_and_kubernetes_groups\030\006 \001(\0132@.v" +
-      "1.AuthorizationPolicyItemResourceByTypeT" +
+      "1.AuthorizationPolicyRuleResourceByTypeT" +
       "agsAndKubernetesGroupsH\000\022[\n\034resource_by_" +
       "okta_with_groups\030\007 \001(\01323.v1.Authorizatio" +
-      "nPolicyItemResourceByOktaWithGroupsH\000\022]\n" +
+      "nPolicyRuleResourceByOktaWithGroupsH\000\022]\n" +
       "\035resource_by_entra_with_groups\030\010 \001(\01324.v" +
-      "1.AuthorizationPolicyItemResourceByEntra" +
+      "1.AuthorizationPolicyRuleResourceByEntra" +
       "WithGroupsH\000\022@\n\rcondition_mfa\030\t \001(\0132\'.v1" +
-      ".AuthorizationPolicyItemConditionMFAH\000\022Q" +
+      ".AuthorizationPolicyRuleConditionMFAH\000\022Q" +
       "\n\026condition_device_trust\030\n \001(\0132/.v1.Auth" +
-      "orizationPolicyItemConditionDeviceTrustH" +
+      "orizationPolicyRuleConditionDeviceTrustH" +
       "\000\022J\n\022condition_location\030\013 \001(\0132,.v1.Autho" +
-      "rizationPolicyItemConditionLocationH\000\022>\n" +
+      "rizationPolicyRuleConditionLocationH\000\022>\n" +
       "\014condition_ip\030\014 \001(\0132&.v1.AuthorizationPo" +
-      "licyItemConditionIPH\000\022B\n\016condition_time\030" +
-      "\r \001(\0132(.v1.AuthorizationPolicyItemCondit" +
+      "licyRuleConditionIPH\000\022B\n\016condition_time\030" +
+      "\r \001(\0132(.v1.AuthorizationPolicyRuleCondit" +
       "ionTimeH\000\022S\n\027condition_approval_flow\030\016 \001" +
-      "(\01320.v1.AuthorizationPolicyItemCondition" +
+      "(\01320.v1.AuthorizationPolicyRuleCondition" +
       "ApprovalFlowH\000:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_privat" +
-      "eB\006\n\004kind\"@\n#AuthorizationPolicyItemPrin" +
+      "eB\006\n\004kind\"@\n#AuthorizationPolicyRulePrin" +
       "cipalAll:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"[\n%A" +
-      "uthorizationPolicyItemPrincipalByIds\022\027\n\003" +
+      "uthorizationPolicyRulePrincipalByIds\022\027\n\003" +
       "ids\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo" +
-      "_private\"@\n#AuthorizationPolicyItemResou" +
+      "_private\"@\n#AuthorizationPolicyRuleResou" +
       "rcesAll:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"Z\n$Au" +
-      "thorizationPolicyItemResourceByIds\022\027\n\003id" +
+      "thorizationPolicyRuleResourceByIds\022\027\n\003id" +
       "s\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
-      "rivate\"\230\001\n,AuthorizationPolicyItemResour" +
+      "rivate\"\230\001\n,AuthorizationPolicyRuleResour" +
       "ceByTypeAndTags\022*\n\004type\030\001 \001(\0162\020.v1.Resou" +
       "rceTypeB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004tags\030\002 \003(\0132\007.v1.T" +
       "agB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_privat" +
-      "e\"\317\001\n<AuthorizationPolicyItemResourceByT" +
+      "e\"\317\001\n<AuthorizationPolicyRuleResourceByT" +
       "ypeTagsAndKubernetesGroups\022*\n\004type\030\001 \001(\016" +
       "2\020.v1.ResourceTypeB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004tags\030\002" +
       " \003(\0132\007.v1.TagB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021kubernetes_" +
       "groups\030\003 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007" +
-      "\ngo_private\"\211\001\n/AuthorizationPolicyItemR" +
+      "\ngo_private\"\211\001\n/AuthorizationPolicyRuleR" +
       "esourceByOktaWithGroups\022\037\n\013resource_id\030\001" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006groups\030\002 \003(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\212\001\n0Auth" +
-      "orizationPolicyItemResourceByEntraWithGr" +
+      "orizationPolicyRuleResourceByEntraWithGr" +
       "oups\022\037\n\013resource_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n" +
       "\006groups\030\002 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263" +
-      "\007\ngo_private\"\207\001\n#AuthorizationPolicyItem" +
+      "\007\ngo_private\"\207\001\n#AuthorizationPolicyRule" +
       "ConditionMFA\022\032\n\006reason\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
       "\022)\n\025cache_timeout_seconds\030\002 \001(\005B\n\362\370\263\007\005\260\363" +
       "\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\326\001\n+Autho" +
-      "rizationPolicyItemConditionDeviceTrust\022H" +
+      "rizationPolicyRuleConditionDeviceTrust\022H" +
       "\n\010operator\030\001 \001(\0162*.v1.AuthorizationPolic" +
       "yDeviceTrustOperatorB\n\362\370\263\007\005\260\363\263\007\001\022B\n\005leve" +
       "l\030\002 \001(\0162\'.v1.AuthorizationPolicyDeviceTr" +
       "ustLevelB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
-      "private\"\205\001\n(AuthorizationPolicyItemCondi" +
+      "private\"\205\001\n(AuthorizationPolicyRuleCondi" +
       "tionLocation\022>\n\005rules\030\001 \003(\0132#.v1.Authori" +
       "zationPolicyLocationRuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370" +
       "\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\365\001\n\037Authorizatio" +
@@ -41238,7 +41238,7 @@ public final class AuthorizationPoliciesPlumbing {
       "ionRule\0222\n\010operator\030\001 \001(\0162\024.v1.LocationO" +
       "peratorB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014subdivisions\030\002 \003(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private" +
-      "\"y\n\"AuthorizationPolicyItemConditionIP\0228" +
+      "\"y\n\"AuthorizationPolicyRuleConditionIP\0228" +
       "\n\005rules\030\001 \003(\0132\035.v1.AuthorizationPolicyIP" +
       "RuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priv" +
       "ate\"\320\001\n\031AuthorizationPolicyIPRule\022?\n\010ope" +
@@ -41246,8 +41246,8 @@ public final class AuthorizationPoliciesPlumbing {
       "eratorB\n\362\370\263\007\005\260\363\263\007\001\022=\n\007network\030\002 \001(\0162 .v1" +
       ".AuthorizationPolicyIPNetworkB\n\362\370\263\007\005\260\363\263\007" +
       "\001\022\030\n\004cidr\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322" +
-      "\363\263\007\ngo_private\"}\n$AuthorizationPolicyIte" +
-      "mConditionTime\022:\n\005rules\030\001 \003(\0132\037.v1.Autho" +
+      "\363\263\007\ngo_private\"}\n$AuthorizationPolicyRul" +
+      "eConditionTime\022:\n\005rules\030\001 \003(\0132\037.v1.Autho" +
       "rizationPolicyTimeRuleB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007" +
       "\024\250\363\263\007\001\322\363\263\007\ngo_private\"\356\003\n\033AuthorizationP" +
       "olicyTimeRule\022?\n\013day_of_week\030\001 \001(\0132(.v1." +
@@ -41289,7 +41289,7 @@ public final class AuthorizationPoliciesPlumbing {
       "rivate\"]\n&AuthorizationPolicyTimeRuleDay" +
       "sOfMonth\022\030\n\004days\030\001 \003(\005B\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007" +
       "\024\250\363\263\007\001\322\363\263\007\ngo_private\"o\n,AuthorizationPo" +
-      "licyItemConditionApprovalFlow\022$\n\020approva" +
+      "licyRuleConditionApprovalFlow\022$\n\020approva" +
       "l_flow_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322" +
       "\363\263\007\ngo_private*\254\001\n\030AuthorizationPolicySt" +
       "ate\022*\n&AUTHORIZATION_POLICY_STATE_UNSPEC" +
@@ -41439,78 +41439,78 @@ public final class AuthorizationPoliciesPlumbing {
     internal_static_v1_AuthorizationPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicy_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "Items", "State", });
-    internal_static_v1_AuthorizationPolicyItem_descriptor =
+        new java.lang.String[] { "Id", "Name", "Description", "Rules", "State", });
+    internal_static_v1_AuthorizationPolicyRule_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_v1_AuthorizationPolicyItem_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItem_descriptor,
+        internal_static_v1_AuthorizationPolicyRule_descriptor,
         new java.lang.String[] { "PrincipalAll", "PrincipalByIds", "ResourcesAll", "ResourceByIds", "ResourceByTypeAndTags", "ResourceByTypeTagsAndKubernetesGroups", "ResourceByOktaWithGroups", "ResourceByEntraWithGroups", "ConditionMfa", "ConditionDeviceTrust", "ConditionLocation", "ConditionIp", "ConditionTime", "ConditionApprovalFlow", "Kind", });
-    internal_static_v1_AuthorizationPolicyItemPrincipalAll_descriptor =
+    internal_static_v1_AuthorizationPolicyRulePrincipalAll_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_v1_AuthorizationPolicyItemPrincipalAll_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRulePrincipalAll_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemPrincipalAll_descriptor,
+        internal_static_v1_AuthorizationPolicyRulePrincipalAll_descriptor,
         new java.lang.String[] { });
-    internal_static_v1_AuthorizationPolicyItemPrincipalByIds_descriptor =
+    internal_static_v1_AuthorizationPolicyRulePrincipalByIds_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_v1_AuthorizationPolicyItemPrincipalByIds_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRulePrincipalByIds_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemPrincipalByIds_descriptor,
+        internal_static_v1_AuthorizationPolicyRulePrincipalByIds_descriptor,
         new java.lang.String[] { "Ids", });
-    internal_static_v1_AuthorizationPolicyItemResourcesAll_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleResourcesAll_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_v1_AuthorizationPolicyItemResourcesAll_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleResourcesAll_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemResourcesAll_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleResourcesAll_descriptor,
         new java.lang.String[] { });
-    internal_static_v1_AuthorizationPolicyItemResourceByIds_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleResourceByIds_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_v1_AuthorizationPolicyItemResourceByIds_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleResourceByIds_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemResourceByIds_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleResourceByIds_descriptor,
         new java.lang.String[] { "Ids", });
-    internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_descriptor =
       getDescriptor().getMessageTypes().get(16);
-    internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemResourceByTypeAndTags_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleResourceByTypeAndTags_descriptor,
         new java.lang.String[] { "Type", "Tags", });
-    internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_descriptor =
       getDescriptor().getMessageTypes().get(17);
-    internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemResourceByTypeTagsAndKubernetesGroups_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleResourceByTypeTagsAndKubernetesGroups_descriptor,
         new java.lang.String[] { "Type", "Tags", "KubernetesGroups", });
-    internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_descriptor =
       getDescriptor().getMessageTypes().get(18);
-    internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemResourceByOktaWithGroups_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleResourceByOktaWithGroups_descriptor,
         new java.lang.String[] { "ResourceId", "Groups", });
-    internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_descriptor =
       getDescriptor().getMessageTypes().get(19);
-    internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemResourceByEntraWithGroups_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleResourceByEntraWithGroups_descriptor,
         new java.lang.String[] { "ResourceId", "Groups", });
-    internal_static_v1_AuthorizationPolicyItemConditionMFA_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleConditionMFA_descriptor =
       getDescriptor().getMessageTypes().get(20);
-    internal_static_v1_AuthorizationPolicyItemConditionMFA_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleConditionMFA_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemConditionMFA_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleConditionMFA_descriptor,
         new java.lang.String[] { "Reason", "CacheTimeoutSeconds", });
-    internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_descriptor =
       getDescriptor().getMessageTypes().get(21);
-    internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemConditionDeviceTrust_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleConditionDeviceTrust_descriptor,
         new java.lang.String[] { "Operator", "Level", });
-    internal_static_v1_AuthorizationPolicyItemConditionLocation_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleConditionLocation_descriptor =
       getDescriptor().getMessageTypes().get(22);
-    internal_static_v1_AuthorizationPolicyItemConditionLocation_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleConditionLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemConditionLocation_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleConditionLocation_descriptor,
         new java.lang.String[] { "Rules", });
     internal_static_v1_AuthorizationPolicyLocationRule_descriptor =
       getDescriptor().getMessageTypes().get(23);
@@ -41536,11 +41536,11 @@ public final class AuthorizationPoliciesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicySubdivisionRule_descriptor,
         new java.lang.String[] { "Operator", "Subdivisions", });
-    internal_static_v1_AuthorizationPolicyItemConditionIP_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleConditionIP_descriptor =
       getDescriptor().getMessageTypes().get(27);
-    internal_static_v1_AuthorizationPolicyItemConditionIP_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleConditionIP_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemConditionIP_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleConditionIP_descriptor,
         new java.lang.String[] { "Rules", });
     internal_static_v1_AuthorizationPolicyIPRule_descriptor =
       getDescriptor().getMessageTypes().get(28);
@@ -41548,11 +41548,11 @@ public final class AuthorizationPoliciesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyIPRule_descriptor,
         new java.lang.String[] { "Operator", "Network", "Cidr", });
-    internal_static_v1_AuthorizationPolicyItemConditionTime_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleConditionTime_descriptor =
       getDescriptor().getMessageTypes().get(29);
-    internal_static_v1_AuthorizationPolicyItemConditionTime_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleConditionTime_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemConditionTime_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleConditionTime_descriptor,
         new java.lang.String[] { "Rules", });
     internal_static_v1_AuthorizationPolicyTimeRule_descriptor =
       getDescriptor().getMessageTypes().get(30);
@@ -41596,11 +41596,11 @@ public final class AuthorizationPoliciesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuthorizationPolicyTimeRuleDaysOfMonth_descriptor,
         new java.lang.String[] { "Days", });
-    internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor =
+    internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_descriptor =
       getDescriptor().getMessageTypes().get(37);
-    internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_fieldAccessorTable = new
+    internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AuthorizationPolicyItemConditionApprovalFlow_descriptor,
+        internal_static_v1_AuthorizationPolicyRuleConditionApprovalFlow_descriptor,
         new java.lang.String[] { "ApprovalFlowId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

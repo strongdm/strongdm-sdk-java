@@ -51,7 +51,10 @@ public final class Permission {
   public static final String MANAGED_SECRET_DELETE = "managedsecret:delete";
   public static final String MANAGED_SECRET_LIST = "managedsecret:list";
   public static final String MANAGED_SECRET_READ = "managedsecret:read";
+  public static final String MANAGED_SECRET_RETRIEVE = "managedsecret:retrieve";
+  public static final String MANAGED_SECRET_ROTATE = "managedsecret:rotate";
   public static final String MANAGED_SECRET_UPDATE = "managedsecret:update";
+  public static final String MANAGED_SECRET_VALIDATE = "managedsecret:validate";
   public static final String ORG_AUDIT_ACCESS_REQUESTS = "audit:accessrequests";
   public static final String ORG_AUDIT_ACCOUNT_GRANTS = "audit:accountgrants";
   public static final String ORG_AUDIT_ACTIVITIES = "audit:activities";

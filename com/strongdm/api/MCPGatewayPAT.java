@@ -170,4 +170,14 @@ public class MCPGatewayPAT implements Resource {
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
   }
+
+  private String url;
+  /** The URL to dial to initiate a connection from the egress node to this resource. */
+  public String getUrl() {
+    return this.url;
+  }
+  /** The URL to dial to initiate a connection from the egress node to this resource. */
+  public void setUrl(String in) {
+    this.url = in;
+  }
 }
