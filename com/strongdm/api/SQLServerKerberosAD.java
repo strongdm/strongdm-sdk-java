@@ -104,6 +104,32 @@ public class SQLServerKerberosAD implements Resource {
     this.id = in;
   }
 
+  private String identityAliasHealthcheckUsername;
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own identity
+   * alias username.
+   */
+  public String getIdentityAliasHealthcheckUsername() {
+    return this.identityAliasHealthcheckUsername;
+  }
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own identity
+   * alias username.
+   */
+  public void setIdentityAliasHealthcheckUsername(String in) {
+    this.identityAliasHealthcheckUsername = in;
+  }
+
+  private String identitySetId;
+  /** The ID of the identity set to use for identity connections. */
+  public String getIdentitySetId() {
+    return this.identitySetId;
+  }
+  /** The ID of the identity set to use for identity connections. */
+  public void setIdentitySetId(String in) {
+    this.identitySetId = in;
+  }
+
   private String keytab;
   /**
    * The keytab file in base64 format containing an entry with the principal name (username@realm)
