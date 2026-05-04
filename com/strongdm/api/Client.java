@@ -390,6 +390,18 @@ public class Client {
     return this.organizationHistory;
   }
 
+  protected final Organizations organizations;
+
+  /**
+   * Organizations exposes organization configuration. Most RPCs remain private to the go_private
+   * SDK; public MFA management is exposed to all public SDK targets. The terraform-provider target
+   * is opted out at the service level because the provider's data-source generator assumes every
+   * service has a List RPC; MFA is instead surfaced via a hand-written resource template.
+   */
+  public Organizations organizations() {
+    return this.organizations;
+  }
+
   protected final PeeringGroupNodes peeringGroupNodes;
 
   /**
@@ -726,6 +738,7 @@ public class Client {
     this.nodes = new Nodes(this.channel, this);
     this.nodesHistory = new NodesHistory(this.channel, this);
     this.organizationHistory = new OrganizationHistory(this.channel, this);
+    this.organizations = new Organizations(this.channel, this);
     this.peeringGroupNodes = new PeeringGroupNodes(this.channel, this);
     this.peeringGroupPeers = new PeeringGroupPeers(this.channel, this);
     this.peeringGroupResources = new PeeringGroupResources(this.channel, this);
@@ -820,6 +833,7 @@ public class Client {
       this.nodes = new Nodes(this.channel, this);
       this.nodesHistory = new NodesHistory(this.channel, this);
       this.organizationHistory = new OrganizationHistory(this.channel, this);
+      this.organizations = new Organizations(this.channel, this);
       this.peeringGroupNodes = new PeeringGroupNodes(this.channel, this);
       this.peeringGroupPeers = new PeeringGroupPeers(this.channel, this);
       this.peeringGroupResources = new PeeringGroupResources(this.channel, this);
