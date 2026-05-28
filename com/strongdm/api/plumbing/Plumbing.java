@@ -24123,6 +24123,7 @@ public class Plumbing {
     porcelain.setKrbConfig((plumbing.getKrbConfig()));
     porcelain.setName((plumbing.getName()));
     porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
@@ -24176,6 +24177,9 @@ public class Plumbing {
       builder.setName((porcelain.getName()));
     }
     builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getProxyClusterId() != null) {

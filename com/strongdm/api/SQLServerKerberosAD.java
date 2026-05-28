@@ -190,6 +190,16 @@ public class SQLServerKerberosAD implements Resource {
     this.overrideDatabase = in;
   }
 
+  private String password;
+  /** The password to authenticate with. */
+  public String getPassword() {
+    return this.password;
+  }
+  /** The password to authenticate with. */
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
   private int port;
   /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
