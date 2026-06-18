@@ -23866,7 +23866,7 @@ public final class NodesPlumbing {
       "\001\022$\n\020require_idleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:" +
       "T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007\036\n\022terraform-provide" +
       "r\022\010TypeList\372\363\263\007\035nodeMaintenanceWindowEle" +
-      "mType2\223\005\n\005Nodes\022Z\n\006Create\022\025.v1.NodeCreat" +
+      "mType2\252\005\n\005Nodes\022Z\n\006Create\022\025.v1.NodeCreat" +
       "eRequest\032\026.v1.NodeCreateResponse\"!\202\371\263\007\t\242" +
       "\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v1." +
       "NodeGetRequest\032\023.v1.NodeGetResponse\"%\202\371\263" +
@@ -23877,15 +23877,15 @@ public final class NodesPlumbing {
       "est\032\026.v1.NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006d" +
       "elete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022\023." +
       "v1.NodeListRequest\032\024.v1.NodeListResponse" +
-      "\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\022\211\001\n\010T" +
+      "\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\022\240\001\n\010T" +
       "CPProbe\022\027.v1.NodeTCPProbeRequest\032\030.v1.No" +
-      "deTCPProbeResponse\"J\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\030\252" +
-      "\363\263\007\023/v1/nodes/tcp-probe\202\371\263\007\032\312\363\263\007\025\302\364\263\007\020\n\004" +
-      "java\022\010tcpProbe\0323\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002" +
-      "n-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\t\312\371\263\007\004!cliBa\n\031com.stron" +
-      "gdm.api.plumbingB\rNodesPlumbingZ5github." +
-      "com/strongdm/strongdm-sdk-go/v3/internal" +
-      "/v1;v1b\006proto3"
+      "deTCPProbeResponse\"a\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\030\252" +
+      "\363\263\007\023/v1/nodes/tcp-probe\202\371\263\0071\312\363\263\007,\302\364\263\007\020\n\004" +
+      "java\022\010tcpProbe\302\364\263\007\022\n\006csharp\022\010TCPProbe\0323\312" +
+      "\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007" +
+      "\t\312\371\263\007\004!cliBa\n\031com.strongdm.api.plumbingB" +
+      "\rNodesPlumbingZ5github.com/strongdm/stro" +
+      "ngdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14056,31 +14056,33 @@ public final class OrganizationHistoryPlumbing {
       "CPAddress\022%\n\021local_socket_path\030\005 \001(\tB\n\362\370" +
       "\263\007\005\260\363\263\007\001\022\036\n\npublic_key\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
       "\0228\n\ncategories\030\007 \001(\0132\030.v1.LogCategoryCon" +
-      "figMapB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\274\003\n\024LogCa" +
+      "figMapB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\360\003\n\024LogCa" +
       "tegoryConfigMap\022/\n\007entries\030\001 \003(\0132\036.v1.Lo" +
       "gCategoryConfigMap.Entry\032[\n\005Entry\022\014\n\004nam" +
       "e\030\001 \001(\t\022%\n\006config\030\002 \001(\0132\025.v1.LogCategory" +
-      "Config:\035\372\370\263\007\030\322\363\263\007\001*\322\363\263\007\r!json_gateway:\225\002" +
-      "\372\370\263\007\217\002\312\363\263\007\361\001\352\363\263\007\027log_category_config_map" +
+      "Config:\035\372\370\263\007\030\322\363\263\007\001*\322\363\263\007\r!json_gateway:\311\002" +
+      "\372\370\263\007\303\002\312\363\263\007\245\002\352\363\263\007\027log_category_config_map" +
       "\362\363\263\007\032\n\002go\022\024LogCategoryConfigMap\362\363\263\007\"\n\ngo" +
       "_private\022\024LogCategoryConfigMap\362\363\263\007$\n\014go_" +
       "terraform\022\024LogCategoryConfigMap\362\363\263\0070\n\004ja" +
       "va\022(java.util.Map<String, LogCategoryCon" +
-      "fig>\362\363\263\007,\n\014json_gateway\022\034map[string]LogC" +
-      "ategoryConfig\322\363\263\007\001*\322\363\263\007\r!json_gateway\"o\n" +
-      "\021LogCategoryConfig\022\"\n\016remote_encoder\030\001 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026remote_discard_replays" +
-      "\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\357\001\n\023Organ" +
-      "izationHistory\022\200\001\n\004List\022\".v1.Organizatio" +
-      "nHistoryListRequest\032#.v1.OrganizationHis" +
-      "toryListResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007" +
-      "\030/v1/organization-history\032U\312\371\263\007\036\302\371\263\007\031Org" +
-      "anizationHistoryRecord\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263" +
-      "\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\227\001\n\031com" +
-      ".strongdm.api.plumbingB\033OrganizationHist" +
-      "oryPlumbingZ5github.com/strongdm/strongd" +
-      "m-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264" +
-      "\007\030\242\214\264\007\023!terraform-providerb\006proto3"
+      "fig>\362\363\263\007/\n\006csharp\022%Dictionary<string, Lo" +
+      "gCategoryConfig>\362\363\263\007,\n\014json_gateway\022\034map" +
+      "[string]LogCategoryConfig\322\363\263\007\001*\322\363\263\007\r!jso" +
+      "n_gateway\"o\n\021LogCategoryConfig\022\"\n\016remote" +
+      "_encoder\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026remote_dis" +
+      "card_replays\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263" +
+      "\007\0012\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1" +
+      ".OrganizationHistoryListRequest\032#.v1.Org" +
+      "anizationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003" +
+      "get\202\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312" +
+      "\371\263\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330" +
+      "\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-prov" +
+      "iderB\227\001\n\031com.strongdm.api.plumbingB\033Orga" +
+      "nizationHistoryPlumbingZ5github.com/stro" +
+      "ngdm/strongdm-sdk-go/v3/internal/v1;v1\302\222" +
+      "\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
