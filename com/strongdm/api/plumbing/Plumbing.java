@@ -251,6 +251,9 @@ public class Plumbing {
           case "type":
             rule.setType(object.getString("type"));
             break;
+          case "query":
+            rule.setQuery(object.getString("query"));
+            break;
           case "tags":
             JSONObject jsonTags = object.getJSONObject("tags");
             HashMap<String, String> tags = new HashMap<>();
@@ -343,6 +346,9 @@ public class Plumbing {
       if (rule.getType() != "") {
         obj.put("type", rule.getType());
       }
+      if (rule.getQuery() != "") {
+        obj.put("query", rule.getQuery());
+      }
       if (rule.getTags() != null) {
         JSONObject jsonTags = new JSONObject();
         for (Map.Entry<String, String> entry : rule.getTags().entrySet()) {
@@ -396,6 +402,9 @@ public class Plumbing {
           break;
         case "type":
           rule.setType(object.getString("type"));
+          break;
+        case "query":
+          rule.setQuery(object.getString("query"));
           break;
         case "tags":
           JSONObject jsonTags = object.getJSONObject("tags");
@@ -480,6 +489,9 @@ public class Plumbing {
     JSONObject obj = new JSONObject();
     if (porcelain.getType() != "") {
       obj.put("type", porcelain.getType());
+    }
+    if (porcelain.getQuery() != "") {
+      obj.put("query", porcelain.getQuery());
     }
     if (porcelain.getTags() != null) {
       JSONObject jsonTags = new JSONObject();

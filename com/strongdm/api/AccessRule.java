@@ -112,6 +112,29 @@ public class AccessRule {
     this.type = type;
   }
 
+  private String query = "";
+
+  /**
+   * A boolean tag query that identifies the Resources granted by this AccessRule. It combines tag
+   * conditions with the AND, OR, and NOT operators and parentheses for grouping, e.g. {@code
+   * env=prod AND (region=us OR region=eu) AND NOT deprecated}. Operator precedence, from highest to
+   * lowest, is: parentheses, NOT, AND, OR. A bare tag ({@code env}) matches any Resource carrying
+   * that tag regardless of value; {@code env=prod} matches a specific value. Query is mutually
+   * exclusive with the ids, type, and tags fields.
+   */
+  public String getQuery() {
+    return this.query;
+  }
+
+  /**
+   * Sets the boolean tag query that identifies the Resources granted by this AccessRule. See {@link
+   * #getQuery()} for the supported syntax. Query is mutually exclusive with the ids, type, and tags
+   * fields.
+   */
+  public void setQuery(String query) {
+    this.query = query;
+  }
+
   private Privileges privileges;
 
   public void setPrivileges(Privileges privileges) {
