@@ -7250,6 +7250,8 @@ public class Plumbing {
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setUrl((plumbing.getUrl()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
@@ -7290,6 +7292,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
     }
@@ -8398,6 +8404,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setTlsRequired((plumbing.getTlsRequired()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
@@ -8443,6 +8451,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     builder.setTlsRequired(porcelain.getTlsRequired());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
@@ -8484,6 +8496,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setUrl((plumbing.getUrl()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
@@ -8524,6 +8538,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
     }
@@ -12529,6 +12547,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setTlsRequired((plumbing.getTlsRequired()));
     porcelain.setUrl((plumbing.getUrl()));
     return porcelain;
@@ -12584,6 +12604,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     builder.setTlsRequired(porcelain.getTlsRequired());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
@@ -12631,6 +12655,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setTlsRequired((plumbing.getTlsRequired()));
     porcelain.setUrl((plumbing.getUrl()));
     porcelain.setUsername((plumbing.getUsername()));
@@ -12688,6 +12714,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     builder.setTlsRequired(porcelain.getTlsRequired());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
@@ -12736,6 +12766,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setTlsRequired((plumbing.getTlsRequired()));
     porcelain.setUrl((plumbing.getUrl()));
     return porcelain;
@@ -12788,6 +12820,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     builder.setTlsRequired(porcelain.getTlsRequired());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
@@ -14647,6 +14683,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setUrl((plumbing.getUrl()));
     return porcelain;
   }
@@ -14686,6 +14724,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
     }
@@ -14730,6 +14772,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setUrl((plumbing.getUrl()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
@@ -14782,6 +14826,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
     }
@@ -14829,6 +14877,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setUrl((plumbing.getUrl()));
     return porcelain;
   }
@@ -14880,6 +14930,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
     }
@@ -14921,6 +14975,8 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsCert((plumbing.getTlsCert()));
+    porcelain.setTlsInsecure((plumbing.getTlsInsecure()));
     porcelain.setUrl((plumbing.getUrl()));
     return porcelain;
   }
@@ -14963,6 +15019,10 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    if (porcelain.getTlsCert() != null) {
+      builder.setTlsCert((porcelain.getTlsCert()));
+    }
+    builder.setTlsInsecure(porcelain.getTlsInsecure());
     if (porcelain.getUrl() != null) {
       builder.setUrl((porcelain.getUrl()));
     }

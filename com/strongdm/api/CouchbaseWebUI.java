@@ -159,6 +159,26 @@ public class CouchbaseWebUI implements Resource {
     this.tags.putAll(in);
   }
 
+  private String tlsCert;
+  /** Custom TLS certificate for upstream connection. */
+  public String getTlsCert() {
+    return this.tlsCert;
+  }
+  /** Custom TLS certificate for upstream connection. */
+  public void setTlsCert(String in) {
+    this.tlsCert = in;
+  }
+
+  private boolean tlsInsecure;
+  /** Skip TLS certificate verification for the upstream connection. */
+  public boolean getTlsInsecure() {
+    return this.tlsInsecure;
+  }
+  /** Skip TLS certificate verification for the upstream connection. */
+  public void setTlsInsecure(boolean in) {
+    this.tlsInsecure = in;
+  }
+
   private String url;
   /** The base address of your website without the path. */
   public String getUrl() {

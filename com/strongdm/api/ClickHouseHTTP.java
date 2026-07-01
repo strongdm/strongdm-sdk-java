@@ -159,6 +159,26 @@ public class ClickHouseHTTP implements Resource {
     this.tags.putAll(in);
   }
 
+  private String tlsCert;
+  /** Custom TLS certificate for upstream connection. */
+  public String getTlsCert() {
+    return this.tlsCert;
+  }
+  /** Custom TLS certificate for upstream connection. */
+  public void setTlsCert(String in) {
+    this.tlsCert = in;
+  }
+
+  private boolean tlsInsecure;
+  /** Skip TLS certificate verification for the upstream connection. */
+  public boolean getTlsInsecure() {
+    return this.tlsInsecure;
+  }
+  /** Skip TLS certificate verification for the upstream connection. */
+  public void setTlsInsecure(boolean in) {
+    this.tlsInsecure = in;
+  }
+
   private String url;
   /** The URL to dial to initiate a connection from the egress node to this resource. */
   public String getUrl() {
