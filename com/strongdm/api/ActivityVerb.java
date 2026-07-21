@@ -274,6 +274,7 @@ public final class ActivityVerb {
   public static final String ORG_INTEGRATION_INSTALLED = "org integration installed";
   public static final String USER_INTEGRATION_AUTHORIZED = "user authorized integration";
   public static final String ORG_INTEGRATION_UNINSTALLED = "org integration uninstalled";
+  public static final String ORG_INTEGRATION_API_KEY_REVEALED = "org integration API key revealed";
   public static final String USER_INTEGRATION_DEAUTHORIZED = "user deauthorized integration";
   public static final String SERVICE_NOW_TOKEN_ADDED = "ServiceNow token created";
   public static final String SERVICE_NOW_TOKEN_DELETED = "ServiceNow token deleted";
