@@ -153,6 +153,21 @@ public final class SecretStoresTypesPlumbing {
     com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaStoreOrBuilder getDelineaOrBuilder();
 
     /**
+     * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+     * @return Whether the delineaDsv field is set.
+     */
+    boolean hasDelineaDsv();
+    /**
+     * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+     * @return The delineaDsv.
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore getDelineaDsv();
+    /**
+     * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStoreOrBuilder getDelineaDsvOrBuilder();
+
+    /**
      * <code>.v1.GCPStore gcp = 201 [(.v1.field_options) = { ... }</code>
      * @return Whether the gcp field is set.
      */
@@ -896,6 +911,20 @@ public final class SecretStoresTypesPlumbing {
               secretStoreCase_ = 2900;
               break;
             }
+            case 23210: {
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder subBuilder = null;
+              if (secretStoreCase_ == 2901) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 2901;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -943,6 +972,7 @@ public final class SecretStoresTypesPlumbing {
       CYBERARK_PAM(303),
       CYBERARK_PAM_EXPERIMENTAL(302),
       DELINEA(2900),
+      DELINEA_DSV(2901),
       GCP(201),
       GCP_CERT_X_509(202),
       KEYFACTOR_SSH(210),
@@ -988,6 +1018,7 @@ public final class SecretStoresTypesPlumbing {
           case 303: return CYBERARK_PAM;
           case 302: return CYBERARK_PAM_EXPERIMENTAL;
           case 2900: return DELINEA;
+          case 2901: return DELINEA_DSV;
           case 201: return GCP;
           case 202: return GCP_CERT_X_509;
           case 210: return KEYFACTOR_SSH;
@@ -1269,6 +1300,37 @@ public final class SecretStoresTypesPlumbing {
          return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaStore) secretStore_;
       }
       return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaStore.getDefaultInstance();
+    }
+
+    public static final int DELINEA_DSV_FIELD_NUMBER = 2901;
+    /**
+     * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+     * @return Whether the delineaDsv field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelineaDsv() {
+      return secretStoreCase_ == 2901;
+    }
+    /**
+     * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+     * @return The delineaDsv.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore getDelineaDsv() {
+      if (secretStoreCase_ == 2901) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStoreOrBuilder getDelineaDsvOrBuilder() {
+      if (secretStoreCase_ == 2901) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance();
     }
 
     public static final int GCP_FIELD_NUMBER = 201;
@@ -1989,6 +2051,9 @@ public final class SecretStoresTypesPlumbing {
       if (secretStoreCase_ == 2900) {
         output.writeMessage(2900, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaStore) secretStore_);
       }
+      if (secretStoreCase_ == 2901) {
+        output.writeMessage(2901, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2110,6 +2175,10 @@ public final class SecretStoresTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2900, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaStore) secretStore_);
       }
+      if (secretStoreCase_ == 2901) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2901, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2158,6 +2227,10 @@ public final class SecretStoresTypesPlumbing {
         case 2900:
           if (!getDelinea()
               .equals(other.getDelinea())) return false;
+          break;
+        case 2901:
+          if (!getDelineaDsv()
+              .equals(other.getDelineaDsv())) return false;
           break;
         case 201:
           if (!getGcp()
@@ -2285,6 +2358,10 @@ public final class SecretStoresTypesPlumbing {
         case 2900:
           hash = (37 * hash) + DELINEA_FIELD_NUMBER;
           hash = (53 * hash) + getDelinea().hashCode();
+          break;
+        case 2901:
+          hash = (37 * hash) + DELINEA_DSV_FIELD_NUMBER;
+          hash = (53 * hash) + getDelineaDsv().hashCode();
           break;
         case 201:
           hash = (37 * hash) + GCP_FIELD_NUMBER;
@@ -2591,6 +2668,13 @@ public final class SecretStoresTypesPlumbing {
             result.secretStore_ = delineaBuilder_.build();
           }
         }
+        if (secretStoreCase_ == 2901) {
+          if (delineaDsvBuilder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = delineaDsvBuilder_.build();
+          }
+        }
         if (secretStoreCase_ == 201) {
           if (gcpBuilder_ == null) {
             result.secretStore_ = secretStore_;
@@ -2811,6 +2895,10 @@ public final class SecretStoresTypesPlumbing {
           }
           case DELINEA: {
             mergeDelinea(other.getDelinea());
+            break;
+          }
+          case DELINEA_DSV: {
+            mergeDelineaDsv(other.getDelineaDsv());
             break;
           }
           case GCP: {
@@ -4075,6 +4163,148 @@ public final class SecretStoresTypesPlumbing {
         secretStoreCase_ = 2900;
         onChanged();;
         return delineaBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStoreOrBuilder> delineaDsvBuilder_;
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       * @return Whether the delineaDsv field is set.
+       */
+      @java.lang.Override
+      public boolean hasDelineaDsv() {
+        return secretStoreCase_ == 2901;
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       * @return The delineaDsv.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore getDelineaDsv() {
+        if (delineaDsvBuilder_ == null) {
+          if (secretStoreCase_ == 2901) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 2901) {
+            return delineaDsvBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDelineaDsv(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore value) {
+        if (delineaDsvBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          delineaDsvBuilder_.setMessage(value);
+        }
+        secretStoreCase_ = 2901;
+        return this;
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setDelineaDsv(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder builderForValue) {
+        if (delineaDsvBuilder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          delineaDsvBuilder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 2901;
+        return this;
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeDelineaDsv(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore value) {
+        if (delineaDsvBuilder_ == null) {
+          if (secretStoreCase_ == 2901 &&
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 2901) {
+            delineaDsvBuilder_.mergeFrom(value);
+          } else {
+            delineaDsvBuilder_.setMessage(value);
+          }
+        }
+        secretStoreCase_ = 2901;
+        return this;
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearDelineaDsv() {
+        if (delineaDsvBuilder_ == null) {
+          if (secretStoreCase_ == 2901) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 2901) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          delineaDsvBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder getDelineaDsvBuilder() {
+        return getDelineaDsvFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStoreOrBuilder getDelineaDsvOrBuilder() {
+        if ((secretStoreCase_ == 2901) && (delineaDsvBuilder_ != null)) {
+          return delineaDsvBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 2901) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.DelineaDSVStore delinea_dsv = 2901 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStoreOrBuilder> 
+          getDelineaDsvFieldBuilder() {
+        if (delineaDsvBuilder_ == null) {
+          if (!(secretStoreCase_ == 2901)) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance();
+          }
+          delineaDsvBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 2901;
+        onChanged();;
+        return delineaDsvBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -18107,6 +18337,1433 @@ public final class SecretStoresTypesPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaStore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DelineaDSVStoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.DelineaDSVStore)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+     * </pre>
+     *
+     * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+     * @return The tenant.
+     */
+    java.lang.String getTenant();
+    /**
+     * <pre>
+     * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+     * </pre>
+     *
+     * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for tenant.
+     */
+    com.google.protobuf.ByteString
+        getTenantBytes();
+
+    /**
+     * <pre>
+     * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+     * </pre>
+     *
+     * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tld.
+     */
+    java.lang.String getTld();
+    /**
+     * <pre>
+     * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+     * </pre>
+     *
+     * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for tld.
+     */
+    com.google.protobuf.ByteString
+        getTldBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.DelineaDSVStore}
+   */
+  public static final class DelineaDSVStore extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.DelineaDSVStore)
+      DelineaDSVStoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DelineaDSVStore.newBuilder() to construct.
+    private DelineaDSVStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DelineaDSVStore() {
+      id_ = "";
+      name_ = "";
+      tenant_ = "";
+      tld_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DelineaDSVStore();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DelineaDSVStore(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tenant_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tld_ = s;
+              break;
+            }
+            case 262170: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_DelineaDSVStore_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_DelineaDSVStore_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TENANT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object tenant_;
+    /**
+     * <pre>
+     * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+     * </pre>
+     *
+     * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+     * @return The tenant.
+     */
+    @java.lang.Override
+    public java.lang.String getTenant() {
+      java.lang.Object ref = tenant_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tenant_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+     * </pre>
+     *
+     * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for tenant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTenantBytes() {
+      java.lang.Object ref = tenant_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tenant_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TLD_FIELD_NUMBER = 4;
+    private volatile java.lang.Object tld_;
+    /**
+     * <pre>
+     * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+     * </pre>
+     *
+     * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tld.
+     */
+    @java.lang.Override
+    public java.lang.String getTld() {
+      java.lang.Object ref = tld_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tld_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+     * </pre>
+     *
+     * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for tld.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTldBytes() {
+      java.lang.Object ref = tld_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tld_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 32771;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tenant_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tenant_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tld_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tld_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(32771, getTags());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tenant_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tenant_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tld_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tld_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32771, getTags());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getTenant()
+          .equals(other.getTenant())) return false;
+      if (!getTld()
+          .equals(other.getTld())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TENANT_FIELD_NUMBER;
+      hash = (53 * hash) + getTenant().hashCode();
+      hash = (37 * hash) + TLD_FIELD_NUMBER;
+      hash = (53 * hash) + getTld().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.DelineaDSVStore}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.DelineaDSVStore)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_DelineaDSVStore_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_DelineaDSVStore_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        tenant_ = "";
+
+        tld_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_DelineaDSVStore_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.tenant_ = tenant_;
+        result.tld_ = tld_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getTenant().isEmpty()) {
+          tenant_ = other.tenant_;
+          onChanged();
+        }
+        if (!other.getTld().isEmpty()) {
+          tld_ = other.tld_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tenant_ = "";
+      /**
+       * <pre>
+       * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+       * </pre>
+       *
+       * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+       * @return The tenant.
+       */
+      public java.lang.String getTenant() {
+        java.lang.Object ref = tenant_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tenant_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+       * </pre>
+       *
+       * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for tenant.
+       */
+      public com.google.protobuf.ByteString
+          getTenantBytes() {
+        java.lang.Object ref = tenant_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tenant_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+       * </pre>
+       *
+       * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The tenant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTenant(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tenant_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+       * </pre>
+       *
+       * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTenant() {
+        
+        tenant_ = getDefaultInstance().getTenant();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The tenant name to target, e.g. "acme" for acme.secretsvaultcloud.com
+       * </pre>
+       *
+       * <code>string tenant = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for tenant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTenantBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tenant_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tld_ = "";
+      /**
+       * <pre>
+       * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+       * </pre>
+       *
+       * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tld.
+       */
+      public java.lang.String getTld() {
+        java.lang.Object ref = tld_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tld_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+       * </pre>
+       *
+       * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for tld.
+       */
+      public com.google.protobuf.ByteString
+          getTldBytes() {
+        java.lang.Object ref = tld_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tld_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+       * </pre>
+       *
+       * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The tld to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTld(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tld_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+       * </pre>
+       *
+       * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTld() {
+        
+        tld_ = getDefaultInstance().getTld();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The top level domain of the DSV instance, e.g. "com". Defaults to "com".
+       * </pre>
+       *
+       * <code>string tld = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for tld to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tld_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.DelineaDSVStore)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.DelineaDSVStore)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore();
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DelineaDSVStore>
+        PARSER = new com.google.protobuf.AbstractParser<DelineaDSVStore>() {
+      @java.lang.Override
+      public DelineaDSVStore parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DelineaDSVStore(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DelineaDSVStore> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DelineaDSVStore> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaDSVStore getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -55608,6 +57265,11 @@ public final class SecretStoresTypesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_DelineaStore_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_DelineaDSVStore_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_DelineaDSVStore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_GCPStore_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -55717,7 +57379,7 @@ public final class SecretStoresTypesPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\030secret_store_types.proto\022\002v1\032\roptions." +
-      "proto\032\ntags.proto\"\236\030\n\013SecretStore\022I\n\003aws" +
+      "proto\032\ntags.proto\"\200\031\n\013SecretStore\022I\n\003aws" +
       "\030\003 \001(\0132\014.v1.AWSStoreB,\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\014j" +
       "son_gateway\022\003aws\362\370\263\007\005\260\363\263\007\001H\000\022d\n\016aws_cert" +
       "_x_509\030\036 \001(\0132\024.v1.AWSCertX509StoreB4\362\370\263\007" +
@@ -55738,320 +57400,288 @@ public final class SecretStoresTypesPlumbing {
       "yberarkPAMExperimental\362\370\263\007\005\260\363\263\007\001H\000\022V\n\007de" +
       "linea\030\324\026 \001(\0132\020.v1.DelineaStoreB0\362\370\263\007!\312\363\263" +
       "\007\034\302\364\263\007\027\n\014json_gateway\022\007delinea\362\370\263\007\005\260\363\263\007\001" +
-      "H\000\022J\n\003gcp\030\311\001 \001(\0132\014.v1.GCPStoreB,\362\370\263\007\035\312\363\263" +
-      "\007\030\302\364\263\007\023\n\014json_gateway\022\003gcp\362\370\263\007\005\260\363\263\007\001H\000\022e" +
-      "\n\016gcp_cert_x_509\030\312\001 \001(\0132\024.v1.GCPCertX509" +
-      "StoreB4\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013gc" +
-      "pCertX509\362\370\263\007\005\260\363\263\007\001H\000\022f\n\rkeyfactor_ssh\030\322" +
-      "\001 \001(\0132\025.v1.KeyfactorSSHStoreB5\362\370\263\007&\312\363\263\007!" +
-      "\302\364\263\007\034\n\014json_gateway\022\014keyfactorSSH\362\370\263\007\005\260\363" +
-      "\263\007\001H\000\022j\n\017keyfactor_x_509\030\310\001 \001(\0132\026.v1.Key" +
-      "factorX509StoreB6\362\370\263\007\'\312\363\263\007\"\302\364\263\007\035\n\014json_g" +
-      "ateway\022\rkeyfactorX509\362\370\263\007\005\260\363\263\007\001H\000\022c\n\014str" +
-      "ong_vault\030\220\003 \001(\0132\024.v1.StrongVaultStoreB4" +
-      "\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013strongVau" +
-      "lt\362\370\263\007\005\260\363\263\007\001H\000\022c\n\rvault_awsec_2\030a \001(\0132\024." +
-      "v1.VaultAWSEC2StoreB4\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014js" +
-      "on_gateway\022\013vaultAWSEC2\362\370\263\007\005\260\363\263\007\001H\000\022z\n\026v" +
-      "ault_awsec_2_cert_ssh\030b \001(\0132\033.v1.VaultAW" +
-      "SEC2CertSSHStoreB;\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014json_" +
-      "gateway\022\022vaultAWSEC2CertSSH\362\370\263\007\005\260\363\263\007\001H\000\022" +
-      "~\n\030vault_awsec_2_cert_x_509\030d \001(\0132\034.v1.V" +
-      "aultAWSEC2CertX509StoreB<\362\370\263\007-\312\363\263\007(\302\364\263\007#" +
-      "\n\014json_gateway\022\023vaultAWSEC2CertX509\362\370\263\007\005" +
-      "\260\363\263\007\001H\000\022b\n\014vault_awsiam\030` \001(\0132\024.v1.Vault" +
-      "AWSIAMStoreB4\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014json_gatew" +
-      "ay\022\013vaultAWSIAM\362\370\263\007\005\260\363\263\007\001H\000\022y\n\025vault_aws" +
-      "iam_cert_ssh\030c \001(\0132\033.v1.VaultAWSIAMCertS" +
-      "SHStoreB;\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022" +
-      "vaultAWSIAMCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022}\n\027vault_" +
-      "awsiam_cert_x_509\030f \001(\0132\034.v1.VaultAWSIAM" +
-      "CertX509StoreB<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n\014json_gat" +
-      "eway\022\023vaultAWSIAMCertX509\362\370\263\007\005\260\363\263\007\001H\000\022f\n" +
-      "\016vault_app_role\030\004 \001(\0132\025.v1.VaultAppRoleS" +
-      "toreB5\362\370\263\007&\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014vau" +
-      "ltAppRole\362\370\263\007\005\260\363\263\007\001H\000\022}\n\027vault_app_role_" +
-      "cert_ssh\030^ \001(\0132\034.v1.VaultAppRoleCertSSHS" +
-      "toreB<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023vau" +
-      "ltAppRoleCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022\201\001\n\031vault_a" +
-      "pp_role_cert_x_509\030_ \001(\0132\035.v1.VaultAppRo" +
-      "leCertX509StoreB=\362\370\263\007.\312\363\263\007)\302\364\263\007$\n\014json_g" +
-      "ateway\022\024vaultAppRoleCertX509\362\370\263\007\005\260\363\263\007\001H\000" +
-      "\022Y\n\tvault_tls\030\001 \001(\0132\021.v1.VaultTLSStoreB1" +
-      "\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultTLS\362" +
-      "\370\263\007\005\260\363\263\007\001H\000\022p\n\022vault_tls_cert_ssh\030\\ \001(\0132" +
-      "\030.v1.VaultTLSCertSSHStoreB8\362\370\263\007)\312\363\263\007$\302\364\263" +
-      "\007\037\n\014json_gateway\022\017vaultTLSCertSSH\362\370\263\007\005\260\363" +
-      "\263\007\001H\000\022t\n\024vault_tls_cert_x_509\030] \001(\0132\031.v1" +
-      ".VaultTLSCertX509StoreB9\362\370\263\007*\312\363\263\007%\302\364\263\007 \n" +
-      "\014json_gateway\022\020vaultTLSCertX509\362\370\263\007\005\260\363\263\007" +
-      "\001H\000\022_\n\013vault_token\030\002 \001(\0132\023.v1.VaultToken" +
-      "StoreB3\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\nva" +
-      "ultToken\362\370\263\007\005\260\363\263\007\001H\000\022v\n\024vault_token_cert" +
-      "_ssh\030Z \001(\0132\032.v1.VaultTokenCertSSHStoreB:" +
-      "\362\370\263\007+\312\363\263\007&\302\364\263\007!\n\014json_gateway\022\021vaultToke" +
-      "nCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022z\n\026vault_token_cert" +
-      "_x_509\030[ \001(\0132\033.v1.VaultTokenCertX509Stor" +
-      "eB;\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022vaultT" +
-      "okenCertX509\362\370\263\007\005\260\363\263\007\001H\000:\n\372\370\263\007\005\250\363\263\007\001B,\n\014" +
-      "secret_store\022\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004na" +
-      "me\"\211\003\n\010AWSStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006region" +
-      "\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_" +
-      "gateway\022\006region\022=\n\010role_arn\030\005 \001(\tB+\362\370\263\007&" +
-      "\260\363\263\007\001\312\363\263\007\034\302\364\263\007\027\n\014json_gateway\022\007roleArn\022L" +
-      "\n\020role_external_id\030\006 \001(\tB2\362\370\263\007-\260\363\263\007\001\312\363\263\007" +
-      "#\302\364\263\007\036\n\014json_gateway\022\016roleExternalId\022\"\n\004" +
-      "tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250" +
-      "\363\263\007\001\312\363\263\007E\302\364\263\007\n\n\003cli\022\003aws\302\364\263\007\023\n\014json_gate" +
-      "way\022\003aws\302\364\263\007\031\n\022terraform-provider\022\003aws\"\346" +
-      "\004\n\020AWSCertX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022=\n\005ca" +
-      "Arn\030\005 \001(\tB.\362\370\263\007)\260\363\263\007\001\300\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\014js" +
-      "on_gateway\022\005caArn\022_\n\026certificateTemplate" +
-      "Arn\030\007 \001(\tB?\362\370\263\007:\260\363\263\007\001\300\363\263\007\001\312\363\263\007+\302\364\263\007&\n\014js" +
-      "on_gateway\022\026certificateTemplateArn\022[\n\024is" +
-      "suedCertTTLMinutes\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtl" +
-      "Minutes\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001" +
-      "\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006region\022I\n\013sign" +
-      "ingAlgo\030\006 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033" +
-      "\n\014json_gateway\022\013signingAlgo\022\"\n\004tags\030\004 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i\250\363\263\007\001\312\363\263\007_" +
-      "\302\364\263\007\022\n\003cli\022\013awsCertX509\302\364\263\007\033\n\014json_gatew" +
-      "ay\022\013awsCertX509\302\364\263\007#\n\022terraform-provider" +
-      "\022\raws_cert_x509\"\223\002\n\024ActiveDirectoryStore" +
-      "\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017" +
-      "\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022N\n\016server_address\030\003 \001(\tB" +
-      "6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway" +
-      "\022\rserverAddress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
-      "sB\n\362\370\263\007\005\260\363\263\007\001:N\372\370\263\007I\250\363\263\007\001\312\363\263\007?\302\364\263\007\026\n\003cli" +
-      "\022\017activeDirectory\302\364\263\007\037\n\014json_gateway\022\017ac" +
-      "tiveDirectory\"\353\001\n\nAzureStore\022\026\n\002id\030\001 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
-      "\263\007\001\022D\n\tvault_uri\030\003 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312" +
-      "\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultUri\022$\n\004tag" +
-      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001::\372\370\263\0075\250\363" +
-      "\263\007\001\312\363\263\007+\302\364\263\007\014\n\003cli\022\005azure\302\364\263\007\025\n\014json_gat" +
-      "eway\022\005azure\"\253\002\n\023CyberarkConjurStore\022\026\n\002i" +
-      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363" +
-      "\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004t" +
-      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:v\372\370\263\007q" +
-      "\250\363\263\007\001\312\363\263\007g\302\364\263\007\025\n\003cli\022\016cyberarkConjur\302\364\263\007" +
-      "\036\n\014json_gateway\022\016cyberarkConjur\302\364\263\007%\n\022te" +
-      "rraform-provider\022\017cyberark_conjur\"\237\002\n\020Cy" +
-      "berarkPAMStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035" +
+      "H\000\022`\n\013delinea_dsv\030\325\026 \001(\0132\023.v1.DelineaDSV" +
+      "StoreB3\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\nde" +
+      "lineaDSV\362\370\263\007\005\260\363\263\007\001H\000\022J\n\003gcp\030\311\001 \001(\0132\014.v1." +
+      "GCPStoreB,\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022" +
+      "\003gcp\362\370\263\007\005\260\363\263\007\001H\000\022e\n\016gcp_cert_x_509\030\312\001 \001(" +
+      "\0132\024.v1.GCPCertX509StoreB4\362\370\263\007%\312\363\263\007 \302\364\263\007\033" +
+      "\n\014json_gateway\022\013gcpCertX509\362\370\263\007\005\260\363\263\007\001H\000\022" +
+      "f\n\rkeyfactor_ssh\030\322\001 \001(\0132\025.v1.KeyfactorSS" +
+      "HStoreB5\362\370\263\007&\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014k" +
+      "eyfactorSSH\362\370\263\007\005\260\363\263\007\001H\000\022j\n\017keyfactor_x_5" +
+      "09\030\310\001 \001(\0132\026.v1.KeyfactorX509StoreB6\362\370\263\007\'" +
+      "\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rkeyfactorX509\362" +
+      "\370\263\007\005\260\363\263\007\001H\000\022c\n\014strong_vault\030\220\003 \001(\0132\024.v1." +
+      "StrongVaultStoreB4\362\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014json_" +
+      "gateway\022\013strongVault\362\370\263\007\005\260\363\263\007\001H\000\022c\n\rvaul" +
+      "t_awsec_2\030a \001(\0132\024.v1.VaultAWSEC2StoreB4\362" +
+      "\370\263\007%\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013vaultAWSEC" +
+      "2\362\370\263\007\005\260\363\263\007\001H\000\022z\n\026vault_awsec_2_cert_ssh\030" +
+      "b \001(\0132\033.v1.VaultAWSEC2CertSSHStoreB;\362\370\263\007" +
+      ",\312\363\263\007\'\302\364\263\007\"\n\014json_gateway\022\022vaultAWSEC2Ce" +
+      "rtSSH\362\370\263\007\005\260\363\263\007\001H\000\022~\n\030vault_awsec_2_cert_" +
+      "x_509\030d \001(\0132\034.v1.VaultAWSEC2CertX509Stor" +
+      "eB<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n\014json_gateway\022\023vaultA" +
+      "WSEC2CertX509\362\370\263\007\005\260\363\263\007\001H\000\022b\n\014vault_awsia" +
+      "m\030` \001(\0132\024.v1.VaultAWSIAMStoreB4\362\370\263\007%\312\363\263\007" +
+      " \302\364\263\007\033\n\014json_gateway\022\013vaultAWSIAM\362\370\263\007\005\260\363" +
+      "\263\007\001H\000\022y\n\025vault_awsiam_cert_ssh\030c \001(\0132\033.v" +
+      "1.VaultAWSIAMCertSSHStoreB;\362\370\263\007,\312\363\263\007\'\302\364\263" +
+      "\007\"\n\014json_gateway\022\022vaultAWSIAMCertSSH\362\370\263\007" +
+      "\005\260\363\263\007\001H\000\022}\n\027vault_awsiam_cert_x_509\030f \001(" +
+      "\0132\034.v1.VaultAWSIAMCertX509StoreB<\362\370\263\007-\312\363" +
+      "\263\007(\302\364\263\007#\n\014json_gateway\022\023vaultAWSIAMCertX" +
+      "509\362\370\263\007\005\260\363\263\007\001H\000\022f\n\016vault_app_role\030\004 \001(\0132" +
+      "\025.v1.VaultAppRoleStoreB5\362\370\263\007&\312\363\263\007!\302\364\263\007\034\n" +
+      "\014json_gateway\022\014vaultAppRole\362\370\263\007\005\260\363\263\007\001H\000\022" +
+      "}\n\027vault_app_role_cert_ssh\030^ \001(\0132\034.v1.Va" +
+      "ultAppRoleCertSSHStoreB<\362\370\263\007-\312\363\263\007(\302\364\263\007#\n" +
+      "\014json_gateway\022\023vaultAppRoleCertSSH\362\370\263\007\005\260" +
+      "\363\263\007\001H\000\022\201\001\n\031vault_app_role_cert_x_509\030_ \001" +
+      "(\0132\035.v1.VaultAppRoleCertX509StoreB=\362\370\263\007." +
+      "\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024vaultAppRoleCe" +
+      "rtX509\362\370\263\007\005\260\363\263\007\001H\000\022Y\n\tvault_tls\030\001 \001(\0132\021." +
+      "v1.VaultTLSStoreB1\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\014json_" +
+      "gateway\022\010vaultTLS\362\370\263\007\005\260\363\263\007\001H\000\022p\n\022vault_t" +
+      "ls_cert_ssh\030\\ \001(\0132\030.v1.VaultTLSCertSSHSt" +
+      "oreB8\362\370\263\007)\312\363\263\007$\302\364\263\007\037\n\014json_gateway\022\017vaul" +
+      "tTLSCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022t\n\024vault_tls_cer" +
+      "t_x_509\030] \001(\0132\031.v1.VaultTLSCertX509Store" +
+      "B9\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\014json_gateway\022\020vaultTL" +
+      "SCertX509\362\370\263\007\005\260\363\263\007\001H\000\022_\n\013vault_token\030\002 \001" +
+      "(\0132\023.v1.VaultTokenStoreB3\362\370\263\007$\312\363\263\007\037\302\364\263\007\032" +
+      "\n\014json_gateway\022\nvaultToken\362\370\263\007\005\260\363\263\007\001H\000\022v" +
+      "\n\024vault_token_cert_ssh\030Z \001(\0132\032.v1.VaultT" +
+      "okenCertSSHStoreB:\362\370\263\007+\312\363\263\007&\302\364\263\007!\n\014json_" +
+      "gateway\022\021vaultTokenCertSSH\362\370\263\007\005\260\363\263\007\001H\000\022z" +
+      "\n\026vault_token_cert_x_509\030[ \001(\0132\033.v1.Vaul" +
+      "tTokenCertX509StoreB;\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\014js" +
+      "on_gateway\022\022vaultTokenCertX509\362\370\263\007\005\260\363\263\007\001" +
+      "H\000:\n\372\370\263\007\005\250\363\263\007\001B,\n\014secret_store\022\034\252\370\263\007\t\252\370\263" +
+      "\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\211\003\n\010AWSStore\022\026\n\002id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006region\022=\n\010rol" +
+      "e_arn\030\005 \001(\tB+\362\370\263\007&\260\363\263\007\001\312\363\263\007\034\302\364\263\007\027\n\014json_" +
+      "gateway\022\007roleArn\022L\n\020role_external_id\030\006 \001" +
+      "(\tB2\362\370\263\007-\260\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016" +
+      "roleExternalId\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n" +
+      "\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\302\364\263\007\n\n\003cli\022\003a" +
+      "ws\302\364\263\007\023\n\014json_gateway\022\003aws\302\364\263\007\031\n\022terrafo" +
+      "rm-provider\022\003aws\"\346\004\n\020AWSCertX509Store\022\026\n" +
+      "\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263" +
+      "\007\n\260\363\263\007\001\300\363\263\007\001\022=\n\005caArn\030\005 \001(\tB.\362\370\263\007)\260\363\263\007\001\300" +
+      "\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\014json_gateway\022\005caArn\022_\n\026c" +
+      "ertificateTemplateArn\030\007 \001(\tB?\362\370\263\007:\260\363\263\007\001\300" +
+      "\363\263\007\001\312\363\263\007+\302\364\263\007&\n\014json_gateway\022\026certificat" +
+      "eTemplateArn\022[\n\024issuedCertTTLMinutes\030\010 \001" +
+      "(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gate" +
+      "way\022\024issuedCertTtlMinutes\022?\n\006region\030\003 \001(" +
+      "\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gatew" +
+      "ay\022\006region\022I\n\013signingAlgo\030\006 \001(\tB4\362\370\263\007/\260\363" +
+      "\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signin" +
+      "gAlgo\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
+      "\001:n\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013awsCertX50" +
+      "9\302\364\263\007\033\n\014json_gateway\022\013awsCertX509\302\364\263\007#\n\022" +
+      "terraform-provider\022\raws_cert_x509\"\223\002\n\024Ac" +
+      "tiveDirectoryStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022N\n\016ser" +
+      "ver_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302" +
+      "\364\263\007\035\n\014json_gateway\022\rserverAddress\022$\n\004tag" +
+      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:N\372\370\263\007I\250\363" +
+      "\263\007\001\312\363\263\007?\302\364\263\007\026\n\003cli\022\017activeDirectory\302\364\263\007\037" +
+      "\n\014json_gateway\022\017activeDirectory\"\353\001\n\nAzur" +
+      "eStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\tvault_uri\030\003 \001(\t" +
+      "B1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gatewa" +
+      "y\022\010vaultUri\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001::\372\370\263\0075\250\363\263\007\001\312\363\263\007+\302\364\263\007\014\n\003cli\022\005az" +
+      "ure\302\364\263\007\025\n\014json_gateway\022\005azure\"\253\002\n\023Cybera" +
+      "rkConjurStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
+      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003" +
+      " \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_ga" +
+      "teway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
+      "\n\362\370\263\007\005\260\363\263\007\001:v\372\370\263\007q\250\363\263\007\001\312\363\263\007g\302\364\263\007\025\n\003cli\022\016" +
+      "cyberarkConjur\302\364\263\007\036\n\014json_gateway\022\016cyber" +
+      "arkConjur\302\364\263\007%\n\022terraform-provider\022\017cybe" +
+      "rark_conjur\"\237\002\n\020CyberarkPAMStore\022\026\n\002id\030\001" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263" +
+      "\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004tags" +
+      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263" +
+      "\007\001\312\363\263\007^\302\364\263\007\022\n\003cli\022\013cyberarkPAM\302\364\263\007\033\n\014jso" +
+      "n_gateway\022\013cyberarkPAM\302\364\263\007\"\n\022terraform-p" +
+      "rovider\022\014cyberark_pam\"\330\002\n\034CyberarkPAMExp" +
+      "erimentalStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035" +
       "\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030" +
       "\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_g" +
       "ateway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263\007\001\312\363\263\007^\302\364\263\007\022\n\003cli\022" +
-      "\013cyberarkPAM\302\364\263\007\033\n\014json_gateway\022\013cyberar" +
-      "kPAM\302\364\263\007\"\n\022terraform-provider\022\014cyberark_" +
-      "pam\"\330\002\n\034CyberarkPAMExperimentalStore\022\026\n\002" +
-      "id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006appUrl\022$\n\004" +
-      "tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\231\001\372\370\263" +
-      "\007\223\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263\007\036\n\003cli\022\027cyberarkP" +
-      "AMExperimental\302\364\263\007\'\n\014json_gateway\022\027cyber" +
-      "arkPAMExperimental\302\364\263\007/\n\022terraform-provi" +
-      "der\022\031cyberark_pam_experimental\"\263\002\n\014Delin" +
-      "eaStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030" +
-      "\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022A\n\nserver_url\030\003 \001" +
-      "(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\t" +
-      "serverUrl\022C\n\013tenant_name\030\004 \001(\tB.\362\370\263\007)\260\363\263" +
-      "\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ntenantName\022$" +
-      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:>\372\370" +
-      "\263\0079\250\363\263\007\001\312\363\263\007/\302\364\263\007\016\n\003cli\022\007delinea\302\364\263\007\027\n\014j" +
-      "son_gateway\022\007delinea\"\346\001\n\010GCPStore\022\026\n\002id\030" +
-      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\300\363\263\007\001\022E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tprojectId\022" +
-      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:6\372" +
-      "\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cli\022\003gcp\302\364\263\007\023\n\014json" +
-      "_gateway\022\003gcp\"\235\004\n\020GCPCertX509Store\022\026\n\002id" +
-      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\300\363\263\007\001\0226\n\004caID\030\006 \001(\tB(\362\370\263\007#\260\363\263\007\001\312\363\263\007\031" +
-      "\302\364\263\007\024\n\014json_gateway\022\004caId\022C\n\010caPoolID\030\005 " +
-      "\001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_gat" +
-      "eway\022\010caPoolId\022[\n\024issuedCertTTLMinutes\030\007" +
-      " \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_ga" +
-      "teway\022\024issuedCertTtlMinutes\022C\n\010location\030" +
-      "\004 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_g" +
-      "ateway\022\010location\022E\n\tprojectID\030\003 \001(\tB2\362\370\263" +
-      "\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tpr" +
-      "ojectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:F\372\370\263\007A\250\363\263\007\001\312\363\263\0077\302\364\263\007\022\n\003cli\022\013gcpCer" +
-      "tX509\302\364\263\007\033\n\014json_gateway\022\013gcpCertX509\"\212\010" +
-      "\n\021KeyfactorSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014ca" +
-      "_file_path\030\006 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014" +
-      "json_gateway\022\ncaFilePath\022[\n\025certificate_" +
-      "file_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001\300\363\263\007\001\312\363\263\007(\302\364\263" +
-      "\007#\n\014json_gateway\022\023certificateFilePath\022t\n" +
-      "\"default_certificate_authority_name\030\n \001(" +
-      "\tBH\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007/\n\014json_gatew" +
-      "ay\022\037defaultCertificateAuthorityName\022p\n d" +
-      "efault_certificate_profile_name\030\010 \001(\tBF\362" +
-      "\370\263\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014json_gateway\022\035" +
-      "defaultCertificateProfileName\022m\n\037default" +
-      "_end_entity_profile_name\030\t \001(\tBD\362\370\263\007?\260\363\263" +
-      "\007\001\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_gateway\022\033default" +
-      "EndEntityProfileName\022Y\n\027enrollment_code_" +
-      "env_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014jso" +
-      "n_gateway\022\024enrollmentCodeEnvVar\022a\n\033enrol" +
-      "lment_username_env_var\030\013 \001(\tB<\362\370\263\0077\260\363\263\007\001" +
-      "\312\363\263\007-\302\364\263\007(\n\014json_gateway\022\030enrollmentUser" +
-      "nameEnvVar\022F\n\rkey_file_path\030\005 \001(\tB/\362\370\263\007*" +
-      "\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013keyFilePa" +
-      "th\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
-      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddre" +
-      "ss\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
-      ":H\372\370\263\007C\250\363\263\007\001\312\363\263\0079\302\364\263\007\023\n\003cli\022\014keyfactorSS" +
-      "H\302\364\263\007\034\n\014json_gateway\022\014keyfactorSSH\"\215\010\n\022K" +
-      "eyfactorX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014ca_f" +
-      "ile_path\030\006 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014js" +
-      "on_gateway\022\ncaFilePath\022[\n\025certificate_fi" +
-      "le_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001\300\363\263\007\001\312\363\263\007(\302\364\263\007#" +
-      "\n\014json_gateway\022\023certificateFilePath\022t\n\"d" +
-      "efault_certificate_authority_name\030\n \001(\tB" +
-      "H\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007/\n\014json_gateway" +
-      "\022\037defaultCertificateAuthorityName\022p\n def" +
-      "ault_certificate_profile_name\030\010 \001(\tBF\362\370\263" +
-      "\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014json_gateway\022\035de" +
-      "faultCertificateProfileName\022m\n\037default_e" +
-      "nd_entity_profile_name\030\t \001(\tBD\362\370\263\007?\260\363\263\007\001" +
-      "\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_gateway\022\033defaultEn" +
-      "dEntityProfileName\022Y\n\027enrollment_code_en" +
-      "v_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_" +
-      "gateway\022\024enrollmentCodeEnvVar\022a\n\033enrollm" +
-      "ent_username_env_var\030\013 \001(\tB<\362\370\263\0077\260\363\263\007\001\312\363" +
-      "\263\007-\302\364\263\007(\n\014json_gateway\022\030enrollmentUserna" +
-      "meEnvVar\022F\n\rkey_file_path\030\005 \001(\tB/\362\370\263\007*\260\363" +
-      "\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013keyFilePath" +
-      "\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress" +
-      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:J" +
-      "\372\370\263\007E\250\363\263\007\001\312\363\263\007;\302\364\263\007\024\n\003cli\022\rkeyfactorX509" +
-      "\302\364\263\007\035\n\014json_gateway\022\rkeyfactorX509\"\334\001\n\020S" +
-      "trongVaultStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\003" +
-      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363\263\007\001\312\363" +
-      "\263\007^\302\364\263\007\022\n\003cli\022\013strongVault\302\364\263\007\033\n\014json_ga" +
-      "teway\022\013strongVault\302\364\263\007\"\n\022terraform-provi" +
-      "der\022\014strong_vault\"\357\002\n\020VaultAWSEC2Store\022\026" +
+      "B\n\362\370\263\007\005\260\363\263\007\001:\231\001\372\370\263\007\223\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263" +
+      "\007\036\n\003cli\022\027cyberarkPAMExperimental\302\364\263\007\'\n\014j" +
+      "son_gateway\022\027cyberarkPAMExperimental\302\364\263\007" +
+      "/\n\022terraform-provider\022\031cyberark_pam_expe" +
+      "rimental\"\263\002\n\014DelineaStore\022\026\n\002id\030\001 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
+      "\022A\n\nserver_url\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263" +
+      "\007\031\n\014json_gateway\022\tserverUrl\022C\n\013tenant_na" +
+      "me\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gat" +
+      "eway\022\ntenantName\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001:>\372\370\263\0079\250\363\263\007\001\312\363\263\007/\302\364\263\007\016\n\003cl" +
+      "i\022\007delinea\302\364\263\007\027\n\014json_gateway\022\007delinea\"\260" +
+      "\002\n\017DelineaDSVStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006ten" +
+      "ant\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014js" +
+      "on_gateway\022\006tenant\0224\n\003tld\030\004 \001(\tB\'\362\370\263\007\"\260\363" +
+      "\263\007\001\312\363\263\007\030\302\364\263\007\023\n\014json_gateway\022\003tld\022$\n\004tags" +
+      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:I\372\370\263\007D\250\363\263" +
+      "\007\001\312\363\263\007:\210\364\263\007\001\302\364\263\007\021\n\003cli\022\ndelineaDSV\302\364\263\007\032\n" +
+      "\014json_gateway\022\ndelineaDSV\"\346\001\n\010GCPStore\022\026" +
       "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
-      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260" +
-      "\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022" +
-      "N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001" +
-      "\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022" +
-      "\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263" +
-      "\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013vaultAWSEC2\302\364\263\007\033" +
-      "\n\014json_gateway\022\013vaultAWSEC2\302\364\263\007#\n\022terraf" +
-      "orm-provider\022\rvault_aws_ec2\"\211\005\n\027VaultAWS" +
-      "EC2CertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issued" +
-      "CertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263" +
-      "\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMinu" +
-      "tes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302" +
-      "\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016server_" +
-      "address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035" +
-      "\n\014json_gateway\022\rserverAddress\022J\n\014signing" +
-      "_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014" +
-      "json_gateway\022\013signingRole\022O\n\017ssh_mount_p" +
-      "oint\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rsshMountPoint\022\"\n\004tags\030\004 \001(\013" +
-      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\206\001\372\370\263\007\200\001\250\363\263\007\001\312\363\263\007" +
-      "v\302\364\263\007\031\n\003cli\022\022vaultAWSEC2CertSSH\302\364\263\007\"\n\014js" +
-      "on_gateway\022\022vaultAWSEC2CertSSH\302\364\263\007,\n\022ter" +
-      "raform-provider\022\026vault_aws_ec2_cert_ssh\"" +
-      "\215\005\n\030VaultAWSEC2CertX509Store\022\026\n\002id\030\001 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
-      "\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078" +
-      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issu" +
-      "edCertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263" +
+      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022E\n\tprojectID\030\003 \001(\tB2\362\370\263\007-\260" +
+      "\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tproje" +
+      "ctId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:6\372\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cli\022\003gcp\302\364\263\007\023\n" +
+      "\014json_gateway\022\003gcp\"\235\004\n\020GCPCertX509Store\022" +
+      "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
+      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\0226\n\004caID\030\006 \001(\tB(\362\370\263\007#\260\363\263\007\001" +
+      "\312\363\263\007\031\302\364\263\007\024\n\014json_gateway\022\004caId\022C\n\010caPool" +
+      "ID\030\005 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014jso" +
+      "n_gateway\022\010caPoolId\022[\n\024issuedCertTTLMinu" +
+      "tes\030\007 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014js" +
+      "on_gateway\022\024issuedCertTtlMinutes\022C\n\010loca" +
+      "tion\030\004 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014j" +
+      "son_gateway\022\010location\022E\n\tprojectID\030\003 \001(\t" +
+      "B2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatewa" +
+      "y\022\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
+      "\362\370\263\007\005\260\363\263\007\001:F\372\370\263\007A\250\363\263\007\001\312\363\263\0077\302\364\263\007\022\n\003cli\022\013g" +
+      "cpCertX509\302\364\263\007\033\n\014json_gateway\022\013gcpCertX5" +
+      "09\"\212\010\n\021KeyfactorSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022" +
+      "D\n\014ca_file_path\030\006 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364" +
+      "\263\007\032\n\014json_gateway\022\ncaFilePath\022[\n\025certifi" +
+      "cate_file_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007(\302\364\263\007#\n\014json_gateway\022\023certificateFilePa" +
+      "th\022t\n\"default_certificate_authority_name" +
+      "\030\n \001(\tBH\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007/\n\014json_" +
+      "gateway\022\037defaultCertificateAuthorityName" +
+      "\022p\n default_certificate_profile_name\030\010 \001" +
+      "(\tBF\362\370\263\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014json_gate" +
+      "way\022\035defaultCertificateProfileName\022m\n\037de" +
+      "fault_end_entity_profile_name\030\t \001(\tBD\362\370\263" +
+      "\007?\260\363\263\007\001\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_gateway\022\033de" +
+      "faultEndEntityProfileName\022Y\n\027enrollment_" +
+      "code_env_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363\263\007)\302\364\263\007$" +
+      "\n\014json_gateway\022\024enrollmentCodeEnvVar\022a\n\033" +
+      "enrollment_username_env_var\030\013 \001(\tB<\362\370\263\0077" +
+      "\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\014json_gateway\022\030enrollmen" +
+      "tUsernameEnvVar\022F\n\rkey_file_path\030\005 \001(\tB/" +
+      "\362\370\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013keyF" +
+      "ilePath\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363" +
+      "\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserver" +
+      "Address\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
+      "\260\363\263\007\001:H\372\370\263\007C\250\363\263\007\001\312\363\263\0079\302\364\263\007\023\n\003cli\022\014keyfac" +
+      "torSSH\302\364\263\007\034\n\014json_gateway\022\014keyfactorSSH\"" +
+      "\215\010\n\022KeyfactorX509Store\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n" +
+      "\014ca_file_path\030\006 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007" +
+      "\032\n\014json_gateway\022\ncaFilePath\022[\n\025certifica" +
+      "te_file_path\030\004 \001(\tB<\362\370\263\0077\260\363\263\007\001\300\363\263\007\001\312\363\263\007(" +
+      "\302\364\263\007#\n\014json_gateway\022\023certificateFilePath" +
+      "\022t\n\"default_certificate_authority_name\030\n" +
+      " \001(\tBH\362\370\263\007C\260\363\263\007\001\300\363\263\007\001\312\363\263\0074\302\364\263\007/\n\014json_ga" +
+      "teway\022\037defaultCertificateAuthorityName\022p" +
+      "\n default_certificate_profile_name\030\010 \001(\t" +
+      "BF\362\370\263\007A\260\363\263\007\001\300\363\263\007\001\312\363\263\0072\302\364\263\007-\n\014json_gatewa" +
+      "y\022\035defaultCertificateProfileName\022m\n\037defa" +
+      "ult_end_entity_profile_name\030\t \001(\tBD\362\370\263\007?" +
+      "\260\363\263\007\001\300\363\263\007\001\312\363\263\0070\302\364\263\007+\n\014json_gateway\022\033defa" +
+      "ultEndEntityProfileName\022Y\n\027enrollment_co" +
+      "de_env_var\030\014 \001(\tB8\362\370\263\0073\260\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014" +
+      "json_gateway\022\024enrollmentCodeEnvVar\022a\n\033en" +
+      "rollment_username_env_var\030\013 \001(\tB<\362\370\263\0077\260\363" +
+      "\263\007\001\312\363\263\007-\302\364\263\007(\n\014json_gateway\022\030enrollmentU" +
+      "sernameEnvVar\022F\n\rkey_file_path\030\005 \001(\tB/\362\370" +
+      "\263\007*\260\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013keyFil" +
+      "ePath\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007" +
+      "\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAd" +
+      "dress\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
+      "\263\007\001:J\372\370\263\007E\250\363\263\007\001\312\363\263\007;\302\364\263\007\024\n\003cli\022\rkeyfacto" +
+      "rX509\302\364\263\007\035\n\014json_gateway\022\rkeyfactorX509\"" +
+      "\334\001\n\020StrongVaultStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004t" +
+      "ags\030\003 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:m\372\370\263\007h\250\363" +
+      "\263\007\001\312\363\263\007^\302\364\263\007\022\n\003cli\022\013strongVault\302\364\263\007\033\n\014js" +
+      "on_gateway\022\013strongVault\302\364\263\007\"\n\022terraform-" +
+      "provider\022\014strong_vault\"\357\002\n\020VaultAWSEC2St" +
+      "ore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362" +
+      "\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnames" +
+      "pace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001" +
+      "\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAdd" +
+      "ress\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      ":n\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013vaultAWSEC2" +
+      "\302\364\263\007\033\n\014json_gateway\022\013vaultAWSEC2\302\364\263\007#\n\022t" +
+      "erraform-provider\022\rvault_aws_ec2\"\211\005\n\027Vau" +
+      "ltAWSEC2CertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024i" +
+      "ssuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTt" +
+      "lMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312" +
+      "\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016se" +
+      "rver_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"" +
+      "\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022J\n\014si" +
+      "gning_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364" +
+      "\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017ssh_mo" +
+      "unt_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
+      "\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n\004tags\030" +
+      "\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\206\001\372\370\263\007\200\001\250\363\263\007" +
+      "\001\312\363\263\007v\302\364\263\007\031\n\003cli\022\022vaultAWSEC2CertSSH\302\364\263\007" +
+      "\"\n\014json_gateway\022\022vaultAWSEC2CertSSH\302\364\263\007," +
+      "\n\022terraform-provider\022\026vault_aws_ec2_cert" +
+      "_ssh\"\215\005\n\030VaultAWSEC2CertX509Store\022\026\n\002id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=" +
+      "\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022" +
+      "\024issuedCertTtlMinutes\022@\n\tnamespace\030\005 \001(\t" +
+      "B-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tna" +
+      "mespace\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260" +
+      "\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMo" +
+      "untPoint\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260" +
+      "\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserve" +
+      "rAddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signing" +
+      "Role\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      ":\211\001\372\370\263\007\203\001\250\363\263\007\001\312\363\263\007y\302\364\263\007\032\n\003cli\022\023vaultAWSE" +
+      "C2CertX509\302\364\263\007#\n\014json_gateway\022\023vaultAWSE" +
+      "C2CertX509\302\364\263\007-\n\022terraform-provider\022\027vau" +
+      "lt_aws_ec2_cert_x509\"\357\002\n\020VaultAWSIAMStor" +
+      "e\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB" +
+      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263" +
       "\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespa" +
-      "ce\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMountPo" +
-      "int\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddr" +
-      "ess\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022" +
-      "\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\211\001\372\370" +
-      "\263\007\203\001\250\363\263\007\001\312\363\263\007y\302\364\263\007\032\n\003cli\022\023vaultAWSEC2Cer" +
-      "tX509\302\364\263\007#\n\014json_gateway\022\023vaultAWSEC2Cer" +
-      "tX509\302\364\263\007-\n\022terraform-provider\022\027vault_aw" +
-      "s_ec2_cert_x509\"\357\002\n\020VaultAWSIAMStore\022\026\n\002" +
-      "id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263" +
-      "\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n" +
-      "\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022\"\n" +
-      "\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n\372\370\263\007i" +
-      "\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013vaultAWSIAM\302\364\263\007\033\n\014" +
-      "json_gateway\022\013vaultAWSIAM\302\364\263\007#\n\022terrafor" +
-      "m-provider\022\rvault_aws_iam\"\211\005\n\027VaultAWSIA" +
-      "MCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n" +
-      "\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCe" +
-      "rtTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)" +
-      "\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMinute" +
-      "s\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263" +
-      "\007\031\n\014json_gateway\022\tnamespace\022N\n\016server_ad" +
-      "dress\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014" +
-      "json_gateway\022\rserverAddress\022J\n\014signing_r" +
-      "ole\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014js" +
-      "on_gateway\022\013signingRole\022O\n\017ssh_mount_poi" +
-      "nt\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014jso" +
-      "n_gateway\022\rsshMountPoint\022\"\n\004tags\030\004 \001(\0132\010" +
-      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\206\001\372\370\263\007\200\001\250\363\263\007\001\312\363\263\007v\302" +
-      "\364\263\007\031\n\003cli\022\022vaultAWSIAMCertSSH\302\364\263\007\"\n\014json" +
-      "_gateway\022\022vaultAWSIAMCertSSH\302\364\263\007,\n\022terra" +
-      "form-provider\022\026vault_aws_iam_cert_ssh\"\215\005" +
-      "\n\030VaultAWSIAMCertX509Store\022\026\n\002id\030\001 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007" +
-      "\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363" +
-      "\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issued" +
-      "CertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(" +
-      "\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace" +
-      "\022O\n\017pki_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMountPoin" +
-      "t\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddres" +
-      "s\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001" +
-      "\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022\"\n" +
-      "\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\211\001\372\370\263\007" +
-      "\203\001\250\363\263\007\001\312\363\263\007y\302\364\263\007\032\n\003cli\022\023vaultAWSIAMCertX" +
-      "509\302\364\263\007#\n\014json_gateway\022\023vaultAWSIAMCertX" +
-      "509\302\364\263\007-\n\022terraform-provider\022\027vault_aws_" +
-      "iam_cert_x509\"\362\002\n\021VaultAppRoleStore\022\026\n\002i" +
-      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007" +
-      "\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016" +
-      "server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263" +
-      "\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022\"\n\004" +
-      "tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250" +
-      "\363\263\007\001\312\363\263\007a\302\364\263\007\023\n\003cli\022\014vaultAppRole\302\364\263\007\034\n\014" +
-      "json_gateway\022\014vaultAppRole\302\364\263\007#\n\022terrafo" +
-      "rm-provider\022\rvault_approle\"\214\005\n\030VaultAppR" +
-      "oleCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issued" +
-      "CertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263" +
-      "\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlMinu" +
-      "tes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302" +
-      "\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016server_" +
-      "address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035" +
-      "\n\014json_gateway\022\rserverAddress\022J\n\014signing" +
-      "_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014" +
-      "json_gateway\022\013signingRole\022O\n\017ssh_mount_p" +
-      "oint\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014j" +
-      "son_gateway\022\rsshMountPoint\022\"\n\004tags\030\010 \001(\013" +
-      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\210\001\372\370\263\007\202\001\250\363\263\007\001\312\363\263\007" +
-      "x\302\364\263\007\032\n\003cli\022\023vaultAppRoleCertSSH\302\364\263\007#\n\014j" +
-      "son_gateway\022\023vaultAppRoleCertSSH\302\364\263\007,\n\022t" +
-      "erraform-provider\022\026vault_approle_cert_ss" +
-      "h\"\220\005\n\031VaultAppRoleCertX509Store\022\026\n\002id\030\001 " +
+      "ce\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddre" +
+      "ss\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:n" +
+      "\372\370\263\007i\250\363\263\007\001\312\363\263\007_\302\364\263\007\022\n\003cli\022\013vaultAWSIAM\302\364" +
+      "\263\007\033\n\014json_gateway\022\013vaultAWSIAM\302\364\263\007#\n\022ter" +
+      "raform-provider\022\rvault_aws_iam\"\211\005\n\027Vault" +
+      "AWSIAMCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024iss" +
+      "uedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTtlM" +
+      "inutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263" +
+      "\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016serv" +
+      "er_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364" +
+      "\263\007\035\n\014json_gateway\022\rserverAddress\022J\n\014sign" +
+      "ing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007" +
+      "\033\n\014json_gateway\022\013signingRole\022O\n\017ssh_moun" +
+      "t_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035" +
+      "\n\014json_gateway\022\rsshMountPoint\022\"\n\004tags\030\004 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\206\001\372\370\263\007\200\001\250\363\263\007\001\312" +
+      "\363\263\007v\302\364\263\007\031\n\003cli\022\022vaultAWSIAMCertSSH\302\364\263\007\"\n" +
+      "\014json_gateway\022\022vaultAWSIAMCertSSH\302\364\263\007,\n\022" +
+      "terraform-provider\022\026vault_aws_iam_cert_s" +
+      "sh\"\215\005\n\030VaultAWSIAMCertX509Store\022\026\n\002id\030\001 " +
       "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
       "\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370" +
       "\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024i" +
@@ -56063,97 +57693,39 @@ public final class SecretStoresTypesPlumbing {
       "\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverA" +
       "ddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001" +
       "\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRo" +
-      "le\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\213" +
-      "\001\372\370\263\007\205\001\250\363\263\007\001\312\363\263\007{\302\364\263\007\033\n\003cli\022\024vaultAppRol" +
-      "eCertX509\302\364\263\007$\n\014json_gateway\022\024vaultAppRo" +
-      "leCertX509\302\364\263\007-\n\022terraform-provider\022\027vau" +
-      "lt_approle_cert_x509\"\314\004\n\rVaultTLSStore\022\026" +
-      "\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370" +
-      "\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263" +
-      "\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertP" +
-      "ath\022Q\n\020client_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007" +
-      "\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCe" +
-      "rtPath\022O\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363" +
-      "\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclient" +
-      "KeyPath\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363" +
-      "\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016ser" +
-      "ver_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302" +
-      "\364\263\007\035\n\014json_gateway\022\rserverAddress\022\"\n\004tag" +
-      "s\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007" +
-      "\001\312\363\263\007U\302\364\263\007\017\n\003cli\022\010vaultTLS\302\364\263\007\030\n\014json_ga" +
-      "teway\022\010vaultTLS\302\364\263\007\037\n\022terraform-provider" +
-      "\022\tvault_tls\"\344\006\n\024VaultTLSCertSSHStore\022\026\n\002" +
+      "le\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\211" +
+      "\001\372\370\263\007\203\001\250\363\263\007\001\312\363\263\007y\302\364\263\007\032\n\003cli\022\023vaultAWSIAM" +
+      "CertX509\302\364\263\007#\n\014json_gateway\022\023vaultAWSIAM" +
+      "CertX509\302\364\263\007-\n\022terraform-provider\022\027vault" +
+      "_aws_iam_cert_x509\"\362\002\n\021VaultAppRoleStore" +
+      "\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017" +
+      "\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007" +
+      "(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespac" +
+      "e\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddres" +
+      "s\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:p\372" +
+      "\370\263\007k\250\363\263\007\001\312\363\263\007a\302\364\263\007\023\n\003cli\022\014vaultAppRole\302\364" +
+      "\263\007\034\n\014json_gateway\022\014vaultAppRole\302\364\263\007#\n\022te" +
+      "rraform-provider\022\rvault_approle\"\214\005\n\030Vaul" +
+      "tAppRoleCertSSHStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024i" +
+      "ssuedCertTTLMinutes\030\t \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCertTt" +
+      "lMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312" +
+      "\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N\n\016se" +
+      "rver_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"" +
+      "\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022J\n\014si" +
+      "gning_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364" +
+      "\263\007\033\n\014json_gateway\022\013signingRole\022O\n\017ssh_mo" +
+      "unt_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263" +
+      "\007\035\n\014json_gateway\022\rsshMountPoint\022\"\n\004tags\030" +
+      "\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\210\001\372\370\263\007\202\001\250\363\263\007" +
+      "\001\312\363\263\007x\302\364\263\007\032\n\003cli\022\023vaultAppRoleCertSSH\302\364\263" +
+      "\007#\n\014json_gateway\022\023vaultAppRoleCertSSH\302\364\263" +
+      "\007,\n\022terraform-provider\022\026vault_approle_ce" +
+      "rt_ssh\"\220\005\n\031VaultAppRoleCertX509Store\022\026\n\002" +
       "id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)" +
-      "\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPat" +
-      "h\022Q\n\020client_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCert" +
-      "Path\022O\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007" +
-      "\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKe" +
-      "yPath\022[\n\024issuedCertTTLMinutes\030\013 \001(\005B=\362\370\263" +
-      "\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024is" +
-      "suedCertTtlMinutes\022@\n\tnamespace\030\010 \001(\tB-\362" +
-      "\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnames" +
-      "pace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001" +
-      "\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAdd" +
-      "ress\022J\n\014signing_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363" +
-      "\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole" +
-      "\022O\n\017ssh_mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoin" +
-      "t\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:{\372" +
-      "\370\263\007v\250\363\263\007\001\312\363\263\007l\302\364\263\007\026\n\003cli\022\017vaultTLSCertSS" +
-      "H\302\364\263\007\037\n\014json_gateway\022\017vaultTLSCertSSH\302\364\263" +
-      "\007(\n\022terraform-provider\022\022vault_tls_cert_s" +
-      "sh\"\350\006\n\025VaultTLSCertX509Store\022\026\n\002id\030\001 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363" +
-      "\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263" +
-      "\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020cli" +
-      "ent_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
-      "#\302\364\263\007\036\n\014json_gateway\022\016clientCertPath\022O\n\017" +
-      "client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyPath\022[\n" +
-      "\024issuedCertTTLMinutes\030\013 \001(\005B=\362\370\263\0078\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issuedCert" +
-      "TtlMinutes\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007" +
-      "\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022O\n\017",
-      "pki_mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMountPoint\022N\n" +
-      "\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363" +
-      "\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022J\n" +
-      "\014signing_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
-      " \302\364\263\007\033\n\014json_gateway\022\013signingRole\022\"\n\004tag" +
-      "s\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:~\372\370\263\007y\250\363\263\007" +
-      "\001\312\363\263\007o\302\364\263\007\027\n\003cli\022\020vaultTLSCertX509\302\364\263\007 \n" +
-      "\014json_gateway\022\020vaultTLSCertX509\302\364\263\007)\n\022te" +
-      "rraform-provider\022\023vault_tls_cert_x509\"\352\002" +
-      "\n\017VaultTokenStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tname" +
-      "space\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_" +
-      "gateway\022\tnamespace\022N\n\016server_address\030\003 \001" +
-      "(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gate" +
-      "way\022\rserverAddress\022\"\n\004tags\030\004 \001(\0132\010.v1.Ta" +
-      "gsB\n\362\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cl" +
-      "i\022\nvaultToken\302\364\263\007\032\n\014json_gateway\022\nvaultT" +
-      "oken\302\364\263\007!\n\022terraform-provider\022\013vault_tok" +
-      "en\"\203\005\n\026VaultTokenCertSSHStore\022\026\n\002id\030\001 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
-      "\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B=\362\370\263\007" +
-      "8\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024iss" +
-      "uedCertTtlMinutes\022@\n\tnamespace\030\005 \001(\tB-\362\370" +
-      "\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamesp" +
-      "ace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddr" +
-      "ess\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022" +
-      "O\n\017ssh_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007" +
-      "\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMountPoint" +
-      "\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:\201\001\372" +
-      "\370\263\007|\250\363\263\007\001\312\363\263\007r\302\364\263\007\030\n\003cli\022\021vaultTokenCert" +
-      "SSH\302\364\263\007!\n\014json_gateway\022\021vaultTokenCertSS" +
-      "H\302\364\263\007*\n\022terraform-provider\022\024vault_token_" +
-      "cert_ssh\"\207\005\n\027VaultTokenCertX509Store\022\026\n\002" +
-      "id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\010 \001(" +
+      "\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(" +
       "\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gatew" +
       "ay\022\024issuedCertTtlMinutes\022@\n\tnamespace\030\005 " +
       "\001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022" +
@@ -56163,14 +57735,114 @@ public final class SecretStoresTypesPlumbing {
       "\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rse" +
       "rverAddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/" +
       "\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013sign" +
-      "ingRole\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001:\204\001\372\370\263\007\177\250\363\263\007\001\312\363\263\007u\302\364\263\007\031\n\003cli\022\022vaultTo" +
-      "kenCertX509\302\364\263\007\"\n\014json_gateway\022\022vaultTok" +
-      "enCertX509\302\364\263\007+\n\022terraform-provider\022\025vau" +
-      "lt_token_cert_x509Bm\n\031com.strongdm.api.p" +
-      "lumbingB\031SecretStoresTypesPlumbingZ5gith" +
-      "ub.com/strongdm/strongdm-sdk-go/v3/inter" +
-      "nal/v1;v1b\006proto3"
+      "ingRole\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
+      "\263\007\001:\213\001\372\370\263\007\205\001\250\363\263\007\001\312\363\263\007{\302\364\263\007\033\n\003cli\022\024vaultA" +
+      "ppRoleCertX509\302\364\263\007$\n\014json_gateway\022\024vault" +
+      "AppRoleCertX509\302\364\263\007-\n\022terraform-provider" +
+      "\022\027vault_approle_cert_x509\"\314\004\n\rVaultTLSSt" +
+      "ore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\t" +
+      "B.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\nca" +
+      "CertPath\022Q\n\020client_cert_path\030\005 \001(\tB7\362\370\263\007" +
+      "2\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016cli" +
+      "entCertPath\022O\n\017client_key_path\030\006 \001(\tB6\362\370" +
+      "\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rc" +
+      "lientKeyPath\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007(\260\363" +
+      "\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespace\022N" +
+      "\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312" +
+      "\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddress\022\"" +
+      "\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007" +
+      "_\250\363\263\007\001\312\363\263\007U\302\364\263\007\017\n\003cli\022\010vaultTLS\302\364\263\007\030\n\014js" +
+      "on_gateway\022\010vaultTLS\302\364\263\007\037\n\022terraform-pro" +
+      "vider\022\tvault_tls\"\344\006\n\024VaultTLSCertSSHStor" +
+      "e\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB" +
+      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB." +
+      "\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCe" +
+      "rtPath\022Q\n\020client_cert_path\030\005 \001(\tB7\362\370\263\0072\260" +
+      "\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clien" +
+      "tCertPath\022O\n\017client_key_path\030\006 \001(\tB6\362\370\263\007" +
+      "1\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rcli" +
+      "entKeyPath\022[\n\024issuedCertTTLMinutes\030\013 \001(\005" +
+      "B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gatewa" +
+      "y\022\024issuedCertTtlMinutes\022@\n\tnamespace\030\010 \001" +
+      "(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\t" +
+      "namespace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071" +
+      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserv" +
+      "erAddress\022J\n\014signing_role\030\n \001(\tB4\362\370\263\007/\260\363" +
+      "\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signin" +
+      "gRole\022O\n\017ssh_mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMoun" +
+      "tPoint\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:{\372\370\263\007v\250\363\263\007\001\312\363\263\007l\302\364\263\007\026\n\003cli\022\017vaultTLSC" +
+      "ertSSH\302\364\263\007\037\n\014json_gateway\022\017vaultTLSCertS" +
+      "SH\302\364\263\007(\n\022terraform-provider\022\022vault_tls_c" +
+      "ert_ssh\"\350\006\n\025VaultTLSCertX509Store\022\026\n\002id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363",
+      "\263\007\001\300\363\263\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263" +
+      "\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q" +
+      "\n\020client_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007#\302\364\263\007\036\n\014json_gateway\022\016clientCertPat" +
+      "h\022O\n\017client_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyPa" +
+      "th\022[\n\024issuedCertTTLMinutes\030\013 \001(\005B=\362\370\263\0078\260" +
+      "\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway\022\024issue" +
+      "dCertTtlMinutes\022@\n\tnamespace\030\010 \001(\tB-\362\370\263\007" +
+      "(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tnamespac" +
+      "e\022O\n\017pki_mount_point\030\t \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rpkiMountPoi" +
+      "nt\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserverAddre" +
+      "ss\022J\n\014signing_role\030\n \001(\tB4\362\370\263\007/\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signingRole\022\"" +
+      "\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:~\372\370\263\007" +
+      "y\250\363\263\007\001\312\363\263\007o\302\364\263\007\027\n\003cli\022\020vaultTLSCertX509\302" +
+      "\364\263\007 \n\014json_gateway\022\020vaultTLSCertX509\302\364\263\007" +
+      ")\n\022terraform-provider\022\023vault_tls_cert_x5" +
+      "09\"\352\002\n\017VaultTokenStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n" +
+      "\tnamespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014" +
+      "json_gateway\022\tnamespace\022N\n\016server_addres" +
+      "s\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json" +
+      "_gateway\022\rserverAddress\022\"\n\004tags\030\004 \001(\0132\010." +
+      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007" +
+      "\021\n\003cli\022\nvaultToken\302\364\263\007\032\n\014json_gateway\022\nv" +
+      "aultToken\302\364\263\007!\n\022terraform-provider\022\013vaul" +
+      "t_token\"\203\005\n\026VaultTokenCertSSHStore\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes\030\t \001(\005B" +
+      "=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_gateway" +
+      "\022\024issuedCertTtlMinutes\022@\n\tnamespace\030\005 \001(" +
+      "\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gateway\022\tn" +
+      "amespace\022N\n\016server_address\030\003 \001(\tB6\362\370\263\0071\260" +
+      "\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rserve" +
+      "rAddress\022J\n\014signing_role\030\007 \001(\tB4\362\370\263\007/\260\363\263" +
+      "\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022\013signing" +
+      "Role\022O\n\017ssh_mount_point\030\006 \001(\tB6\362\370\263\0071\260\363\263\007" +
+      "\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\rsshMount" +
+      "Point\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
+      "\001:\201\001\372\370\263\007|\250\363\263\007\001\312\363\263\007r\302\364\263\007\030\n\003cli\022\021vaultToke" +
+      "nCertSSH\302\364\263\007!\n\014json_gateway\022\021vaultTokenC" +
+      "ertSSH\302\364\263\007*\n\022terraform-provider\022\024vault_t" +
+      "oken_cert_ssh\"\207\005\n\027VaultTokenCertX509Stor" +
+      "e\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB" +
+      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022[\n\024issuedCertTTLMinutes" +
+      "\030\010 \001(\005B=\362\370\263\0078\260\363\263\007\001\300\363\263\007\001\312\363\263\007)\302\364\263\007$\n\014json_" +
+      "gateway\022\024issuedCertTtlMinutes\022@\n\tnamespa" +
+      "ce\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gat" +
+      "eway\022\tnamespace\022O\n\017pki_mount_point\030\006 \001(\t" +
+      "B6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatewa" +
+      "y\022\rpkiMountPoint\022N\n\016server_address\030\003 \001(\t" +
+      "B6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatewa" +
+      "y\022\rserverAddress\022J\n\014signing_role\030\007 \001(\tB4" +
+      "\362\370\263\007/\260\363\263\007\001\300\363\263\007\001\312\363\263\007 \302\364\263\007\033\n\014json_gateway\022" +
+      "\013signingRole\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001:\204\001\372\370\263\007\177\250\363\263\007\001\312\363\263\007u\302\364\263\007\031\n\003cli\022\022va" +
+      "ultTokenCertX509\302\364\263\007\"\n\014json_gateway\022\022vau" +
+      "ltTokenCertX509\302\364\263\007+\n\022terraform-provider" +
+      "\022\025vault_token_cert_x509Bm\n\031com.strongdm." +
+      "api.plumbingB\031SecretStoresTypesPlumbingZ" +
+      "5github.com/strongdm/strongdm-sdk-go/v3/" +
+      "internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56183,7 +57855,7 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_SecretStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretStore_descriptor,
-        new java.lang.String[] { "Aws", "AwsCertX509", "ActiveDirectory", "Azure", "CyberarkConjur", "CyberarkPam", "CyberarkPamExperimental", "Delinea", "Gcp", "GcpCertX509", "KeyfactorSsh", "KeyfactorX509", "StrongVault", "VaultAwsec2", "VaultAwsec2CertSsh", "VaultAwsec2CertX509", "VaultAwsiam", "VaultAwsiamCertSsh", "VaultAwsiamCertX509", "VaultAppRole", "VaultAppRoleCertSsh", "VaultAppRoleCertX509", "VaultTls", "VaultTlsCertSsh", "VaultTlsCertX509", "VaultToken", "VaultTokenCertSsh", "VaultTokenCertX509", "SecretStore", });
+        new java.lang.String[] { "Aws", "AwsCertX509", "ActiveDirectory", "Azure", "CyberarkConjur", "CyberarkPam", "CyberarkPamExperimental", "Delinea", "DelineaDsv", "Gcp", "GcpCertX509", "KeyfactorSsh", "KeyfactorX509", "StrongVault", "VaultAwsec2", "VaultAwsec2CertSsh", "VaultAwsec2CertX509", "VaultAwsiam", "VaultAwsiamCertSsh", "VaultAwsiamCertX509", "VaultAppRole", "VaultAppRoleCertSsh", "VaultAppRoleCertX509", "VaultTls", "VaultTlsCertSsh", "VaultTlsCertX509", "VaultToken", "VaultTokenCertSsh", "VaultTokenCertX509", "SecretStore", });
     internal_static_v1_AWSStore_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_AWSStore_fieldAccessorTable = new
@@ -56232,122 +57904,128 @@ public final class SecretStoresTypesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DelineaStore_descriptor,
         new java.lang.String[] { "Id", "Name", "ServerUrl", "TenantName", "Tags", });
-    internal_static_v1_GCPStore_descriptor =
+    internal_static_v1_DelineaDSVStore_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_v1_DelineaDSVStore_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_DelineaDSVStore_descriptor,
+        new java.lang.String[] { "Id", "Name", "Tenant", "Tld", "Tags", });
+    internal_static_v1_GCPStore_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_v1_GCPStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GCPStore_descriptor,
         new java.lang.String[] { "Id", "Name", "ProjectID", "Tags", });
     internal_static_v1_GCPCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_v1_GCPCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GCPCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "CaID", "CaPoolID", "IssuedCertTTLMinutes", "Location", "ProjectID", "Tags", });
     internal_static_v1_KeyfactorSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_v1_KeyfactorSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KeyfactorSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CaFilePath", "CertificateFilePath", "DefaultCertificateAuthorityName", "DefaultCertificateProfileName", "DefaultEndEntityProfileName", "EnrollmentCodeEnvVar", "EnrollmentUsernameEnvVar", "KeyFilePath", "ServerAddress", "Tags", });
     internal_static_v1_KeyfactorX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_v1_KeyfactorX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KeyfactorX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "CaFilePath", "CertificateFilePath", "DefaultCertificateAuthorityName", "DefaultCertificateProfileName", "DefaultEndEntityProfileName", "EnrollmentCodeEnvVar", "EnrollmentUsernameEnvVar", "KeyFilePath", "ServerAddress", "Tags", });
     internal_static_v1_StrongVaultStore_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_v1_StrongVaultStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_StrongVaultStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Tags", });
     internal_static_v1_VaultAWSEC2Store_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_v1_VaultAWSEC2Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSEC2Store_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultAWSEC2CertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_v1_VaultAWSEC2CertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSEC2CertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultAWSEC2CertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_v1_VaultAWSEC2CertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSEC2CertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultAWSIAMStore_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_v1_VaultAWSIAMStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSIAMStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultAWSIAMCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_v1_VaultAWSIAMCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSIAMCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultAWSIAMCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_v1_VaultAWSIAMCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAWSIAMCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultAppRoleStore_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_v1_VaultAppRoleStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultAppRoleCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_v1_VaultAppRoleCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultAppRoleCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_v1_VaultAppRoleCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTLSStore_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_v1_VaultTLSStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTLSCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_v1_VaultTLSCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTLSCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_v1_VaultTLSCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSCertX509Store_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "IssuedCertTTLMinutes", "Namespace", "PkiMountPoint", "ServerAddress", "SigningRole", "Tags", });
     internal_static_v1_VaultTokenStore_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_v1_VaultTokenStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTokenCertSSHStore_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_v1_VaultTokenCertSSHStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertSSHStore_descriptor,
         new java.lang.String[] { "Id", "Name", "IssuedCertTTLMinutes", "Namespace", "ServerAddress", "SigningRole", "SshMountPoint", "Tags", });
     internal_static_v1_VaultTokenCertX509Store_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_v1_VaultTokenCertX509Store_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenCertX509Store_descriptor,

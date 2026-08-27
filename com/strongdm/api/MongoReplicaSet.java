@@ -154,6 +154,16 @@ public class MongoReplicaSet implements Resource {
     this.proxyClusterId = in;
   }
 
+  private String region;
+  /** The AWS region to use for IAM (MONGODB-AWS) authentication. */
+  public String getRegion() {
+    return this.region;
+  }
+  /** The AWS region to use for IAM (MONGODB-AWS) authentication. */
+  public void setRegion(String in) {
+    this.region = in;
+  }
+
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {

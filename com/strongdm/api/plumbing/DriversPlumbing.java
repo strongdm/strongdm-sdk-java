@@ -283511,6 +283511,26 @@ public final class DriversPlumbing {
 
     /**
      * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    java.lang.String getRegion();
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
+
+    /**
+     * <pre>
      * If set, TLS must be used to connect to this resource.
      * </pre>
      *
@@ -283562,6 +283582,7 @@ public final class DriversPlumbing {
       authDatabase_ = "";
       hostname_ = "";
       password_ = "";
+      region_ = "";
       username_ = "";
     }
 
@@ -283632,6 +283653,12 @@ public final class DriversPlumbing {
             case 64: {
 
               tlsRequired_ = input.readBool();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              region_ = s;
               break;
             }
             case 262146: {
@@ -284271,6 +284298,52 @@ public final class DriversPlumbing {
       return portOverride_;
     }
 
+    public static final int REGION_FIELD_NUMBER = 10;
+    private volatile java.lang.Object region_;
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    @java.lang.Override
+    public java.lang.String getRegion() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        region_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        region_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int TLS_REQUIRED_FIELD_NUMBER = 8;
     private boolean tlsRequired_;
     /**
@@ -284367,6 +284440,9 @@ public final class DriversPlumbing {
       if (tlsRequired_ != false) {
         output.writeBool(8, tlsRequired_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, region_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
       }
@@ -284426,6 +284502,9 @@ public final class DriversPlumbing {
       if (tlsRequired_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, tlsRequired_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, region_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -284502,6 +284581,8 @@ public final class DriversPlumbing {
           != other.getPort()) return false;
       if (getPortOverride()
           != other.getPortOverride()) return false;
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
       if (getTlsRequired()
           != other.getTlsRequired()) return false;
       if (!getUsername()
@@ -284548,6 +284629,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPort();
       hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getPortOverride();
+      hash = (37 * hash) + REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getRegion().hashCode();
       hash = (37 * hash) + TLS_REQUIRED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getTlsRequired());
@@ -284718,6 +284801,8 @@ public final class DriversPlumbing {
 
         portOverride_ = 0;
 
+        region_ = "";
+
         tlsRequired_ = false;
 
         username_ = "";
@@ -284766,6 +284851,7 @@ public final class DriversPlumbing {
         result.password_ = password_;
         result.port_ = port_;
         result.portOverride_ = portOverride_;
+        result.region_ = region_;
         result.tlsRequired_ = tlsRequired_;
         result.username_ = username_;
         onBuilt();
@@ -284867,6 +284953,10 @@ public final class DriversPlumbing {
         }
         if (other.getPortOverride() != 0) {
           setPortOverride(other.getPortOverride());
+        }
+        if (!other.getRegion().isEmpty()) {
+          region_ = other.region_;
+          onChanged();
         }
         if (other.getTlsRequired() != false) {
           setTlsRequired(other.getTlsRequired());
@@ -286144,6 +286234,102 @@ public final class DriversPlumbing {
       public Builder clearPortOverride() {
         
         portOverride_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object region_ = "";
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return The region.
+       */
+      public java.lang.String getRegion() {
+        java.lang.Object ref = region_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          region_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return The bytes for region.
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @param value The region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegion() {
+        
+        region_ = getDefaultInstance().getRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @param value The bytes for region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        region_ = value;
         onChanged();
         return this;
       }
@@ -292885,6 +293071,26 @@ public final class DriversPlumbing {
 
     /**
      * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    java.lang.String getRegion();
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
+
+    /**
+     * <pre>
      * If set, TLS must be used to connect to this resource.
      * </pre>
      *
@@ -292936,6 +293142,7 @@ public final class DriversPlumbing {
       authDatabase_ = "";
       hostname_ = "";
       password_ = "";
+      region_ = "";
       username_ = "";
     }
 
@@ -293011,6 +293218,12 @@ public final class DriversPlumbing {
             case 72: {
 
               tlsRequired_ = input.readBool();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              region_ = s;
               break;
             }
             case 262146: {
@@ -293665,6 +293878,52 @@ public final class DriversPlumbing {
       return portOverride_;
     }
 
+    public static final int REGION_FIELD_NUMBER = 10;
+    private volatile java.lang.Object region_;
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    @java.lang.Override
+    public java.lang.String getRegion() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        region_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        region_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int TLS_REQUIRED_FIELD_NUMBER = 9;
     private boolean tlsRequired_;
     /**
@@ -293764,6 +294023,9 @@ public final class DriversPlumbing {
       if (tlsRequired_ != false) {
         output.writeBool(9, tlsRequired_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, region_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
       }
@@ -293827,6 +294089,9 @@ public final class DriversPlumbing {
       if (tlsRequired_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, tlsRequired_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, region_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -293905,6 +294170,8 @@ public final class DriversPlumbing {
           != other.getPort()) return false;
       if (getPortOverride()
           != other.getPortOverride()) return false;
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
       if (getTlsRequired()
           != other.getTlsRequired()) return false;
       if (!getUsername()
@@ -293954,6 +294221,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPort();
       hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getPortOverride();
+      hash = (37 * hash) + REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getRegion().hashCode();
       hash = (37 * hash) + TLS_REQUIRED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getTlsRequired());
@@ -294126,6 +294395,8 @@ public final class DriversPlumbing {
 
         portOverride_ = 0;
 
+        region_ = "";
+
         tlsRequired_ = false;
 
         username_ = "";
@@ -294175,6 +294446,7 @@ public final class DriversPlumbing {
         result.password_ = password_;
         result.port_ = port_;
         result.portOverride_ = portOverride_;
+        result.region_ = region_;
         result.tlsRequired_ = tlsRequired_;
         result.username_ = username_;
         onBuilt();
@@ -294279,6 +294551,10 @@ public final class DriversPlumbing {
         }
         if (other.getPortOverride() != 0) {
           setPortOverride(other.getPortOverride());
+        }
+        if (!other.getRegion().isEmpty()) {
+          region_ = other.region_;
+          onChanged();
         }
         if (other.getTlsRequired() != false) {
           setTlsRequired(other.getTlsRequired());
@@ -295603,6 +295879,102 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object region_ = "";
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return The region.
+       */
+      public java.lang.String getRegion() {
+        java.lang.Object ref = region_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          region_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return The bytes for region.
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @param value The region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegion() {
+        
+        region_ = getDefaultInstance().getRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 10 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @param value The bytes for region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        region_ = value;
+        onChanged();
+        return this;
+      }
+
       private boolean tlsRequired_ ;
       /**
        * <pre>
@@ -296047,6 +296419,26 @@ public final class DriversPlumbing {
 
     /**
      * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    java.lang.String getRegion();
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
+
+    /**
+     * <pre>
      * If set, TLS must be used to connect to this resource.
      * </pre>
      *
@@ -296098,6 +296490,7 @@ public final class DriversPlumbing {
       authDatabase_ = "";
       hostname_ = "";
       password_ = "";
+      region_ = "";
       username_ = "";
     }
 
@@ -296163,6 +296556,12 @@ public final class DriversPlumbing {
             case 48: {
 
               tlsRequired_ = input.readBool();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              region_ = s;
               break;
             }
             case 262146: {
@@ -296787,6 +297186,52 @@ public final class DriversPlumbing {
       return portOverride_;
     }
 
+    public static final int REGION_FIELD_NUMBER = 9;
+    private volatile java.lang.Object region_;
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    @java.lang.Override
+    public java.lang.String getRegion() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        region_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The AWS region to use for IAM (MONGODB-AWS) authentication.
+     * </pre>
+     *
+     * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        region_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int TLS_REQUIRED_FIELD_NUMBER = 6;
     private boolean tlsRequired_;
     /**
@@ -296880,6 +297325,9 @@ public final class DriversPlumbing {
       if (tlsRequired_ != false) {
         output.writeBool(6, tlsRequired_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, region_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
       }
@@ -296935,6 +297383,9 @@ public final class DriversPlumbing {
       if (tlsRequired_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, tlsRequired_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, region_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -297009,6 +297460,8 @@ public final class DriversPlumbing {
           .equals(other.getPassword())) return false;
       if (getPortOverride()
           != other.getPortOverride()) return false;
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
       if (getTlsRequired()
           != other.getTlsRequired()) return false;
       if (!getUsername()
@@ -297053,6 +297506,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPassword().hashCode();
       hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getPortOverride();
+      hash = (37 * hash) + REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getRegion().hashCode();
       hash = (37 * hash) + TLS_REQUIRED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getTlsRequired());
@@ -297221,6 +297676,8 @@ public final class DriversPlumbing {
 
         portOverride_ = 0;
 
+        region_ = "";
+
         tlsRequired_ = false;
 
         username_ = "";
@@ -297268,6 +297725,7 @@ public final class DriversPlumbing {
         result.hostname_ = hostname_;
         result.password_ = password_;
         result.portOverride_ = portOverride_;
+        result.region_ = region_;
         result.tlsRequired_ = tlsRequired_;
         result.username_ = username_;
         onBuilt();
@@ -297366,6 +297824,10 @@ public final class DriversPlumbing {
         }
         if (other.getPortOverride() != 0) {
           setPortOverride(other.getPortOverride());
+        }
+        if (!other.getRegion().isEmpty()) {
+          region_ = other.region_;
+          onChanged();
         }
         if (other.getTlsRequired() != false) {
           setTlsRequired(other.getTlsRequired());
@@ -298600,6 +299062,102 @@ public final class DriversPlumbing {
       public Builder clearPortOverride() {
         
         portOverride_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object region_ = "";
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return The region.
+       */
+      public java.lang.String getRegion() {
+        java.lang.Object ref = region_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          region_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return The bytes for region.
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @param value The region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegion() {
+        
+        region_ = getDefaultInstance().getRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The AWS region to use for IAM (MONGODB-AWS) authentication.
+       * </pre>
+       *
+       * <code>string region = 9 [deprecated = false, (.v1.field_options) = { ... }</code>
+       * @param value The bytes for region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        region_ = value;
         onChanged();
         return this;
       }
@@ -406414,7 +406972,7 @@ public final class DriversPlumbing {
       "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
       "\005\240\364\263\007\001:d\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007S\312\363\263\007N\302\364\263\007\r\n\003cli" +
       "\022\006memsql\302\364\263\007\026\n\014json_gateway\022\006memsql\302\364\263\007\034" +
-      "\n\022terraform-provider\022\006memsql\"\317\n\n\tMongoHo" +
+      "\n\022terraform-provider\022\006memsql\"\273\013\n\tMongoHo" +
       "st\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
       " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200" +
       "\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
@@ -406440,287 +406998,132 @@ public final class DriversPlumbing {
       "\364\263\007\000\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007" +
       "\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007" +
       "\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\000\022v\n\014tls_required\030\010 \001(\010B`\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007" +
-      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\000\022n\n\010username\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:n" +
-      "\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007]\312\363\263\007X\302\364\263\007\020\n\003cli\022\tmongoH" +
-      "ost\302\364\263\007\031\n\014json_gateway\022\tmongoHost\302\364\263\007 \n\022" +
-      "terraform-provider\022\nmongo_host\"\331\n\n\017Mongo" +
-      "LegacyHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004" +
-      "name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007he" +
-      "althy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006" +
-      "\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004t" +
-      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017sec" +
-      "ret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regre" +
-      "ss_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_in" +
-      "terface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n" +
-      "\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n" +
-      "\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263" +
+      "\005\240\364\263\007\000\022j\n\006region\030\n \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tl" +
+      "s_required\030\010 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030" +
+      "\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010us" +
+      "ername\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007" +
+      "\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:n\030\000\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007]\312\363\263\007X\302\364\263\007\020\n\003cli\022\tmongoHost\302\364\263\007\031\n\014js" +
+      "on_gateway\022\tmongoHost\302\364\263\007 \n\022terraform-pr" +
+      "ovider\022\nmongo_host\"\331\n\n\017MongoLegacyHost\022\030" +
+      "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\t" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(" +
+      "\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262" +
+      "\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132" +
+      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id" +
+      "\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 " +
+      "\001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_clust" +
+      "er_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207" +
+      "\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rauth_d" +
+      "atabase\030\002 \001(\tBa\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263" +
+      "\007\024\n\003cli\022\rauth-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010host" +
+      "name\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n" +
+      "\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\005 \001" +
+      "(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010pa" +
+      "ssword\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      "\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263" +
       "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022x\n\rauth_database\030\002 \001(\tBa\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rauth-database\362\370\263\007\005\320" +
-      "\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010" +
-      "password\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364" +
-      "\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001" +
-      "(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004po" +
-      "rt\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\003 \001(\005Ba\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-over" +
-      "ride\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\010 \001(\010B`\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-requ" +
-      "ired\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\004 \001(\tB\\\030\000\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007" +
-      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\001:r\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007a\312\363\263\007\\\210\364\263\007\001\302\364\263\007\014" +
-      "\n\003cli\022\005mongo\302\364\263\007\025\n\014json_gateway\022\005mongo\302\364" +
-      "\263\007\'\n\022terraform-provider\022\021mongo_legacy_ho" +
-      "st\"\201\014\n\025MongoLegacyReplicaset\022\030\n\002id\030\200\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terra" +
-      "form-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rauth_database\030\002 " +
-      "\001(\tBa\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\ra" +
-      "uth-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\202\001\n\022connect_to_re" +
-      "plica\030\010 \001(\010Bf\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007#\312\363\263\007\036\302\364\263\007\031" +
-      "\n\003cli\022\022connect-to-replica\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010h" +
-      "ostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263" +
-      "\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030" +
-      "\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022" +
-      "\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364" +
-      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005" +
-      "\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022v\n\014tls_required\030\t \001(\010B`\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005" +
-      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022n\n\010username\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:\216\001" +
-      "\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007}\312\363\263\007x\210\364\263\007\001\302\364\263\007\027\n\003cli\022\020m" +
-      "ongo-replicaset\302\364\263\007 \n\014json_gateway\022\020mong" +
-      "o-replicaset\302\364\263\007-\n\022terraform-provider\022\027m" +
-      "ongo_legacy_replicaset\"\356\013\n\017MongoReplicaS" +
-      "et\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
-      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200" +
-      "\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
-      "\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
-      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filte" +
-      "r\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030" +
-      "\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_c" +
-      "luster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdoma" +
-      "in\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rau" +
-      "th_database\030\002 \001(\tBa\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007" +
-      "\031\302\364\263\007\024\n\003cli\022\rauth-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\202\001\n" +
-      "\022connect_to_replica\030\010 \001(\010Bf\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007#\312\363\263\007\036\302\364\263\007\031\n\003cli\022\022connect-to-replica\362" +
-      "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022n\n\010password\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363" +
-      "\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004por" +
-      "t\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cl" +
-      "i\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\003 \001(\005" +
-      "Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport" +
-      "-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\t \001(" +
-      "\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls" +
-      "-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\004 \001(\tB\\\030" +
-      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010usernam" +
-      "e\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\001:\201\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007p\312\363\263\007k\302\364\263\007" +
-      "\026\n\003cli\022\017mongoReplicaSet\302\364\263\007\037\n\014json_gatew" +
-      "ay\022\017mongoReplicaSet\302\364\263\007\'\n\022terraform-prov" +
-      "ider\022\021mongo_replica_set\"\221\n\n\023MongoSharded" +
-      "Cluster\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
-      "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healt" +
-      "hy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263" +
-      "\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags" +
-      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret" +
-      "_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_" +
-      "filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_inter" +
-      "face\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020pr" +
-      "oxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsu" +
-      "bdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "x\n\rauth_database\030\002 \001(\tBa\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rauth-database\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363" +
-      "\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010pas" +
-      "sword\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
-      "\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022x\n\rport_overri" +
-      "de\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003c" +
-      "li\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_requi" +
-      "red\030\006 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003" +
-      "cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030" +
-      "\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022" +
-      "\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:\215\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007|\312" +
-      "\363\263\007w\302\364\263\007\032\n\003cli\022\023mongoshardedcluster\302\364\263\007#" +
-      "\n\014json_gateway\022\023mongoshardedcluster\302\364\263\007+" +
-      "\n\022terraform-provider\022\025mongo_sharded_clus" +
-      "ter\"\346\013\n\005Mysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n" +
-      "\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370" +
-      "\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$" +
-      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
-      "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\re" +
-      "gress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind" +
-      "_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001" +
-      "\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263" +
+      "\007\000\022v\n\014tls_required\030\010 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263" +
+      "\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022n\n\010username\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312" +
+      "\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:r\030\000\372\370" +
+      "\263\007\005\250\363\263\007\001\372\370\263\007a\312\363\263\007\\\210\364\263\007\001\302\364\263\007\014\n\003cli\022\005mongo" +
+      "\302\364\263\007\025\n\014json_gateway\022\005mongo\302\364\263\007\'\n\022terrafo" +
+      "rm-provider\022\021mongo_legacy_host\"\201\014\n\025Mongo" +
+      "LegacyReplicaset\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001" +
+      "\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007" +
+      "\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provide" +
+      "r\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#" +
+      "\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016b" +
+      "ind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364" +
+      "\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022x\n\rauth_database\030\002 \001(\tBa\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rauth-database" +
+      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\000\022\202\001\n\022connect_to_replica\030\010 \001(\010B" +
+      "f\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007#\312\363\263\007\036\302\364\263\007\031\n\003cli\022\022conne" +
+      "ct-to-replica\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(" +
+      "\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hos" +
+      "tname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\005 \001(\tB\\\030\000\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263" +
+      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025" +
+      "\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_" +
+      "override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364" +
+      "\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls" +
+      "_required\030\t \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302" +
+      "\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010use" +
+      "rname\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
+      "\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:\216\001\030\000\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007}\312\363\263\007x\210\364\263\007\001\302\364\263\007\027\n\003cli\022\020mongo-replica" +
+      "set\302\364\263\007 \n\014json_gateway\022\020mongo-replicaset" +
+      "\302\364\263\007-\n\022terraform-provider\022\027mongo_legacy_" +
+      "replicaset\"\332\014\n\017MongoReplicaSet\022\030\n\002id\030\200\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!ter" +
+      "raform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>" +
+      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rauth_database\030" +
+      "\002 \001(\tBa\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022" +
+      "\rauth-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\202\001\n\022connect_to_" +
+      "replica\030\010 \001(\010Bf\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007#\312\363\263\007\036\302\364\263" +
+      "\007\031\n\003cli\022\022connect-to-replica\362\370\263\007\005\320\364\263\007\000\362\370\263" +
       "\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n" +
       "\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302" +
       "\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362" +
       "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010passwor" +
-      "d\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
-      "i\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007" +
+      "d\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
+      "i\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
       "\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362" +
       "\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005" +
       "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263" +
+      "\240\364\263\007\000\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263" +
       "\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263" +
       "\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022\204\001\n\023require_native_auth\030\007 \001(\010Bg\030" +
-      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\003cli\022\023require" +
-      "-native-auth\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\240\001\n!use_azure_sin" +
-      "gle_server_usernames\030\n \001(\010Bu\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\0072\312\363\263\007-\302\364\263\007(\n\003cli\022!use-azure-single-s" +
-      "erver-usernames\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 " +
-      "\001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010u" +
-      "sername\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:a\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007P\312\363\263\007" +
-      "K\302\364\263\007\014\n\003cli\022\005mysql\302\364\263\007\025\n\014json_gateway\022\005m" +
-      "ysql\302\364\263\007\033\n\022terraform-provider\022\005mysql\"\364\006\n" +
-      "\007Neptune\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
-      "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007heal" +
-      "thy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364" +
-      "\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tag" +
-      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secre" +
-      "t_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress" +
-      "_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_inte" +
-      "rface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020p" +
-      "roxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\ts" +
-      "ubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      "\022n\n\010endpoint\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263" +
-      "\007\024\302\364\263\007\017\n\003cli\022\010endpoint\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
-      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port" +
-      "\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli" +
-      "\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\002 \001(\005B" +
-      "a\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-" +
-      "override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:g\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007V\312\363\263" +
-      "\007Q\302\364\263\007\016\n\003cli\022\007neptune\302\364\263\007\027\n\014json_gateway" +
-      "\022\007neptune\302\364\263\007\035\n\022terraform-provider\022\007nept" +
-      "une\"\327\013\n\nNeptuneIAM\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provi" +
-      "der\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n" +
-      "\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022u\n\naccess_key\030\004 \001(\tBa\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\raccess-key-id\362" +
-      "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\001\022n\n\010endpoint\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010endpoint\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302" +
-      "\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_overri" +
-      "de\030\002 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003c" +
-      "li\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006region\030\006 " +
-      "\001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006r" +
-      "egion\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010role_arn\030\007 \001(\tB\\\030\000\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010role-arn\362\370\263" +
-      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\001\022~\n\020role_external_id\030\010 \001(\tBd\030\000\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007!\312\363\263\007\034\302\364\263\007\027\n\003cli\022\020role-extern" +
-      "al-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\021secret_access_key\030\005 " +
-      "\001(\tBe\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021s" +
-      "ecret-access-key\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:q\030\000\372\370\263\007\005\250\363\263\007\001",
-      "\372\370\263\007`\312\363\263\007[\302\364\263\007\021\n\003cli\022\nneptuneiam\302\364\263\007\032\n\014j" +
-      "son_gateway\022\nneptuneiam\302\364\263\007!\n\022terraform-" +
-      "provider\022\013neptune_iam\"\314\t\n\nOktaGroups\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B" +
-      "<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263" +
-      "\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(" +
-      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster" +
-      "_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002" +
-      " \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021discove" +
-      "ry_enabled\030\006 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035" +
-      "\302\364\263\007\030\n\003cli\022\021discovery-enabled\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "j\n\006domain\030\001 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302" +
-      "\364\263\007\r\n\003cli\022\006domain\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\217\001\n\013group_na" +
-      "mes\030\007 \001(\tBz\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\034\312\363\263\007\027\302\364\263\007\022\n\003" +
-      "cli\022\013group-names\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\026\352\364\263\007\021disc" +
-      "overy-enabled\022|\n\017identity_set_id\030\003 \001(\tBc" +
-      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identi" +
-      "ty-set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\233\001\n\020privilege_levels" +
-      "\030\002 \001(\tB\200\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007!\312\363\263\007\034\302\364\263\007\027\n\003cl" +
-      "i\022\020privilege-levels\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\027\352\364\263\007\022d" +
-      "iscovery-disabled:q\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007`\312\363\263\007" +
-      "[\302\364\263\007\021\n\003cli\022\noktaGroups\302\364\263\007\032\n\014json_gatew" +
-      "ay\022\noktaGroups\302\364\263\007!\n\022terraform-provider\022" +
-      "\013okta_groups\"\270\n\n\006Oracle\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
+      "\007\005\240\364\263\007\000\022j\n\006region\030\n \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014t" +
+      "ls_required\030\t \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007" +
+      "\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010u" +
+      "sername\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263" +
+      "\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:\201\001\030\000\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007p\312\363\263\007k\302\364\263\007\026\n\003cli\022\017mongoReplicaSet\302" +
+      "\364\263\007\037\n\014json_gateway\022\017mongoReplicaSet\302\364\263\007\'" +
+      "\n\022terraform-provider\022\021mongo_replica_set\"" +
+      "\375\n\n\023MongoShardedCluster\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
       "\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
       "\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370" +
       "\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-" +
@@ -406731,131 +407134,69 @@ public final class DriversPlumbing {
       "\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n" +
       "\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005" +
       "\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263" +
-      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007" +
-      "\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030" +
-      "\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022" +
-      "\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\006 \001(\005Ba" +
-      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-o" +
-      "verride\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\007 \001(\010B" +
-      "`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-r" +
-      "equired\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rauth_database\030\002 \001(\tBa" +
+      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rauth-d" +
+      "atabase\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362" +
       "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\001:d\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007S\312\363\263\007N\302\364\263\007\r\n\003" +
-      "cli\022\006oracle\302\364\263\007\026\n\014json_gateway\022\006oracle\302\364" +
-      "\263\007\034\n\022terraform-provider\022\006oracle\"\311\n\n\tOrac" +
-      "leNNE\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030" +
-      "\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy" +
-      "\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001" +
-      "*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203" +
-      "\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_s" +
-      "tore_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_fi" +
-      "lter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interfa" +
-      "ce\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020prox" +
-      "y_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubd" +
-      "omain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n" +
-      "\010database\030\004 \001(\tB`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302" +
-      "\364\263\007\023\n\003cli\022\014service-name\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hos" +
-      "tname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
-      "\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 " +
-      "\001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010p" +
-      "assword\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\005 \001(\005BX\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022x\n\rport_override\030\006 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\370\263\007\005\240\364\263\007\000\022n\n\010password\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007" +
+      "\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\001\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
       "\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364" +
       "\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022v\n\014tls_required\030\007 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364" +
-      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031" +
-      "\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:n\030\000\372" +
-      "\370\263\007\005\250\363\263\007\001\372\370\263\007]\312\363\263\007X\302\364\263\007\020\n\003cli\022\toraclenne" +
-      "\302\364\263\007\031\n\014json_gateway\022\toraclenne\302\364\263\007 \n\022ter" +
-      "raform-provider\022\noracle_nne\"\313\n\n\010Postgres" +
-      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
-      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 " +
-      "\001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007" +
-      "\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_" +
-      "id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030" +
-      "\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200" +
-      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_clu" +
-      "ster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain" +
-      "\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010data" +
-      "base\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n" +
-      "\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001" +
-      "(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010ho" +
-      "stname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021override_database\030\007" +
-      " \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021" +
-      "override-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030" +
-      "\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022" +
-      "\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364" +
-      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005" +
-      "\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263" +
-      "\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:j\030" +
-      "\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007Y\312\363\263\007T\302\364\263\007\017\n\003cli\022\010postgre" +
-      "s\302\364\263\007\030\n\014json_gateway\022\010postgres\302\364\263\007\036\n\022ter" +
-      "raform-provider\022\010postgres\"\270\n\n\006Presto\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B" +
-      "<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263" +
-      "\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(" +
-      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster" +
-      "_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002" +
-      " \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database" +
-      "\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli" +
-      "\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\" +
-      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostna" +
-      "me\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\002 \001(\tB\\\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320" +
-      "\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\001\022f\n\004port\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263" +
-      "\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_ove" +
-      "rride\030\004 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024" +
-      "\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_re" +
-      "quired\030\007 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007" +
-      "\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010userna" +
-      "me\030\006 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003c" +
-      "li\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:d\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
-      "S\312\363\263\007N\302\364\263\007\r\n\003cli\022\006presto\302\364\263\007\026\n\014json_gate" +
-      "way\022\006presto\302\364\263\007\034\n\022terraform-provider\022\006pr" +
-      "esto\"\317\016\n\003RDP\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
+      "\263\007\000\022j\n\006region\030\t \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363" +
+      "\263\007\022\302\364\263\007\r\n\003cli\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_r" +
+      "equired\030\006 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263" +
+      "\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010usern" +
+      "ame\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
+      "cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:\215\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370" +
+      "\263\007|\312\363\263\007w\302\364\263\007\032\n\003cli\022\023mongoshardedcluster\302" +
+      "\364\263\007#\n\014json_gateway\022\023mongoshardedcluster\302" +
+      "\364\263\007+\n\022terraform-provider\022\025mongo_sharded_" +
+      "cluster\"\346\013\n\005Mysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provid" +
+      "er\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016" +
+      "bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320" +
+      "\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007" +
+      "\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363" +
+      "\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010pas" +
+      "sword\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
+      "\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005B" +
+      "X\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362" +
+      "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-overrid" +
+      "e\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023require_native_auth\030\007 \001(" +
+      "\010Bg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\003cli\022\023req" +
+      "uire-native-auth\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\240\001\n!use_azure" +
+      "_single_server_usernames\030\n \001(\010Bu\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\0072\312\363\263\007-\302\364\263\007(\n\003cli\022!use-azure-sing" +
+      "le-server-usernames\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010usernam" +
+      "e\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
+      "i\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:a\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007P" +
+      "\312\363\263\007K\302\364\263\007\014\n\003cli\022\005mysql\302\364\263\007\025\n\014json_gatewa" +
+      "y\022\005mysql\302\364\263\007\033\n\022terraform-provider\022\005mysql" +
+      "\"\364\006\n\007Neptune\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
       "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007" +
       "healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263" +
       "\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n" +
@@ -406866,244 +407207,86 @@ public final class DriversPlumbing {
       "&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320" +
       "\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022\220\001\n\031downgrade_nla_connections\030\006 \001(\010" +
-      "Bm\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\003cli\022\031down" +
-      "grade-nla-connections\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\245\001\n\031enab" +
-      "le_ephemeral_accounts\030\r \001(\010B\201\001\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\003cli\022\031enable-ephemeral" +
-      "-accounts\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\017\262\364\263\007\ngo_private\022" +
-      "n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007" +
-      "\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325\001\n#iden" +
-      "tity_alias_healthcheck_username\030\014 \001(\tB\247\001" +
-      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022#identi" +
-      "ty-alias-healthcheck-username\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362" +
-      "\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016identit" +
-      "y-alias\022|\n\017identity_set_id\030\013 \001(\tBc\030\000\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identity-set" +
-      "-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_required\030\n \001(\010Ba\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rlock-req" +
-      "uired\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263" +
-      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\001\022f\n\004port\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025" +
-      "\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_" +
-      "override\030\004 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364" +
-      "\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010use" +
-      "rname\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
-      "\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:[\030\000\372\370\263\007\005\250\363\263\007\001\372" +
-      "\370\263\007J\312\363\263\007E\302\364\263\007\n\n\003cli\022\003rdp\302\364\263\007\023\n\014json_gate" +
-      "way\022\003rdp\302\364\263\007\031\n\022terraform-provider\022\003rdp\"\365" +
-      "\016\n\007RDPCert\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004" +
-      "name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007he" +
-      "althy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006" +
-      "\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004t" +
-      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017sec" +
-      "ret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regre" +
-      "ss_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_in" +
-      "terface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n" +
-      "\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n" +
-      "\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022\247\001\n\014dc_hostnames\030\r \001(\tB\220\001\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014dc-hostnames\362\370\263\007\005\320" +
-      "\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016id" +
-      "entity-alias\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320" +
-      "\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022\325\001\n#identity_alias_healthcheck_user" +
-      "name\030\006 \001(\tB\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*" +
-      "\n\003cli\022#identity-alias-healthcheck-userna" +
-      "me\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007" +
-      "\023\352\364\263\007\016identity-alias\022|\n\017identity_set_id\030" +
-      "\005 \001(\tBc\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022" +
-      "\017identity-set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_requi" +
-      "red\030\013 \001(\010Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003" +
-      "cli\022\rlock-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\004 \001" +
-      "(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004po" +
-      "rt\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\003 \001(\005Ba\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-over" +
-      "ride\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022t\n\013server_fqdn\030\007 \001(\tB_\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\034\312\363\263\007\027\302\364\263\007\022\n\003cli\022\013server-fq" +
-      "dn\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\022d\n\003sid\030\014 \001(\tBW\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\024\312\363\263\007\017\302\364\263\007\n\n\003cli\022\003sid\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\247\001\n\010u" +
-      "sername\030\002 \001(\tB\224\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364" +
-      "\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\362\370\263\007\027\332\364\263\007\022le" +
-      "ased-credentials\362\370\263\007\027\352\364\263\007\022leased-credent" +
-      "ials:h\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007W\312\363\263\007R\302\364\263\007\016\n\003cli\022\007" +
-      "rdpCert\302\364\263\007\027\n\014json_gateway\022\007rdpCert\302\364\263\007\036" +
-      "\n\022terraform-provider\022\010rdp_cert\"\350\013\n\016RDSPo" +
-      "stgresIAM\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
-      "ame\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007hea" +
-      "lthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262" +
-      "\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004ta" +
-      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secr" +
-      "et_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regres" +
-      "s_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_int" +
-      "erface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020" +
-      "proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\t" +
-      "subdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007" +
-      "\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363" +
-      "\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hos" +
-      "tname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
-      "\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021override_d" +
-      "atabase\030\007 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263" +
-      "\007\030\n\003cli\022\021override-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004" +
-      "port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n" +
+      "\364\263\007\000\022n\n\010endpoint\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010endpoint\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004" +
+      "port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n" +
       "\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\005 " +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\002 " +
       "\001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rp" +
       "ort-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006region\030\003 \001(\tBZ" +
-      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006region" +
-      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023role_assumption_arn\030\n \001(\t" +
-      "Bg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\003cli\022\023role" +
-      "-assumption-arn\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 " +
-      "\001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010u" +
-      "sername\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:~\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007m\312\363\263\007" +
-      "h\302\364\263\007\025\n\003cli\022\016rdspostgresiam\302\364\263\007\036\n\014json_g" +
-      "ateway\022\016rdspostgresiam\302\364\263\007&\n\022terraform-p" +
-      "rovider\022\020rds_postgres_iam\"\363\t\n\017RabbitMQAM" +
-      "QP091\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030" +
-      "\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy" +
-      "\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001" +
-      "*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203" +
-      "\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_s" +
-      "tore_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_fi" +
-      "lter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interfa" +
-      "ce\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020prox" +
-      "y_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubd" +
-      "omain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n" +
-      "\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302" +
-      "\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010passwor" +
-      "d\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
-      "i\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007" +
-      "\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\003 \001(\005BX\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005" +
-      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022x\n\rport_override\030\002 \001(\005Ba\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263" +
-      "\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022v\n\014tls_required\030\010 \001(\010B`\030\000\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263" +
-      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022n\n\010username\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:" +
-      "\205\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007t\312\363\263\007o\302\364\263\007\030\n\003cli\022\021rabb" +
-      "itmq-amqp-091\302\364\263\007!\n\014json_gateway\022\021rabbit" +
-      "mq-amqp-091\302\364\263\007\'\n\022terraform-provider\022\021ra" +
-      "bbitmq_amqp_091\"\361\006\n\006RawTCP\022\030\n\002id\030\200\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terrafo" +
-      "rm-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname" +
-      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rpo" +
-      "rt_override\030\002 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007" +
-      "\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:e\030\000" +
-      "\372\370\263\007\005\250\363\263\007\001\372\370\263\007T\312\363\263\007O\302\364\263\007\r\n\003cli\022\006rawtcp\302\364" +
-      "\263\007\026\n\014json_gateway\022\006rawtcp\302\364\263\007\035\n\022terrafor" +
-      "m-provider\022\007raw_tcp\"\304\t\n\005Redis\022\030\n\002id\030\200\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terr" +
-      "aform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030" +
-      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB" +
-      "\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostn" +
-      "ame\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005" +
-      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\001\022f\n\004port\030\004 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:g\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
+      "V\312\363\263\007Q\302\364\263\007\016\n\003cli\022\007neptune\302\364\263\007\027\n\014json_gat" +
+      "eway\022\007neptune\302\364\263\007\035\n\022terraform-provider\022\007" +
+      "neptune\"\327\013\n\nNeptuneIAM\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-p" +
+      "rovider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\naccess_key\030\004 \001(\tBa\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\raccess-key" +
+      "-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\001\022n\n\010endpoint\030\001 \001(\tB\\\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010endpoint\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363" +
       "\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362" +
       "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_ov" +
       "erride\030\002 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007" +
       "\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_r" +
-      "equired\030\006 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263" +
-      "\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010usern" +
-      "ame\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
-      "cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:a\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263" +
-      "\007P\312\363\263\007K\302\364\263\007\014\n\003cli\022\005redis\302\364\263\007\025\n\014json_gate" +
-      "way\022\005redis\302\364\263\007\033\n\022terraform-provider\022\005red" +
-      "is\"\341\t\n\014RedisCluster\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
-      "\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230" +
-      "\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-prov" +
-      "ider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022." +
-      "\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364" +
-      "\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022n\n\010password\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031",
-      "\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004p" +
-      "ort\030\002 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003" +
-      "cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\003 \001" +
-      "(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rpo" +
-      "rt-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\006 " +
-      "\001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014t" +
-      "ls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\004 \001(\tB" +
-      "\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010usern" +
-      "ame\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\001:w\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007f\312\363\263\007a\302\364\263" +
-      "\007\023\n\003cli\022\014redisCluster\302\364\263\007\034\n\014json_gateway" +
-      "\022\014redisCluster\302\364\263\007#\n\022terraform-provider\022" +
-      "\rredis_cluster\"\313\n\n\010Redshift\022\030\n\002id\030\200\200\002 \001(" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006regio" +
+      "n\030\006 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cl" +
+      "i\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010role_arn\030\007 \001(\tB\\\030" +
+      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010role-ar",
+      "n\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\001\022~\n\020role_external_id\030\010 \001(\tBd\030" +
+      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007!\312\363\263\007\034\302\364\263\007\027\n\003cli\022\020role-ex" +
+      "ternal-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\021secret_access_ke" +
+      "y\030\005 \001(\tBe\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cl" +
+      "i\022\021secret-access-key\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:q\030\000\372\370\263\007\005\250" +
+      "\363\263\007\001\372\370\263\007`\312\363\263\007[\302\364\263\007\021\n\003cli\022\nneptuneiam\302\364\263\007" +
+      "\032\n\014json_gateway\022\nneptuneiam\302\364\263\007!\n\022terraf" +
+      "orm-provider\022\013neptune_iam\"\314\t\n\nOktaGroups" +
+      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
+      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 " +
+      "\001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007" +
+      "\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_" +
+      "id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030" +
+      "\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200" +
+      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_clu" +
+      "ster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain" +
+      "\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021dis" +
+      "covery_enabled\030\006 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312" +
+      "\363\263\007\035\302\364\263\007\030\n\003cli\022\021discovery-enabled\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022j\n\006domain\030\001 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363" +
+      "\263\007\022\302\364\263\007\r\n\003cli\022\006domain\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\217\001\n\013grou" +
+      "p_names\030\007 \001(\tBz\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\034\312\363\263\007\027\302\364\263" +
+      "\007\022\n\003cli\022\013group-names\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\026\352\364\263\007\021" +
+      "discovery-enabled\022|\n\017identity_set_id\030\003 \001" +
+      "(\tBc\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017id" +
+      "entity-set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\233\001\n\020privilege_le" +
+      "vels\030\002 \001(\tB\200\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007!\312\363\263\007\034\302\364\263\007\027" +
+      "\n\003cli\022\020privilege-levels\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\027\352\364" +
+      "\263\007\022discovery-disabled:q\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007`" +
+      "\312\363\263\007[\302\364\263\007\021\n\003cli\022\noktaGroups\302\364\263\007\032\n\014json_g" +
+      "ateway\022\noktaGroups\302\364\263\007!\n\022terraform-provi" +
+      "der\022\013okta_groups\"\270\n\n\006Oracle\022\030\n\002id\030\200\200\002 \001(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007" +
       "\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263" +
       "\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraf" +
@@ -407120,288 +407303,24 @@ public final class DriversPlumbing {
       "\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363" +
       "\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364" +
       "\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022\200\001\n\021override_database\030\007 \001(\010Be\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-data" +
-      "base\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007" +
-      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312" +
-      "\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_o" +
-      "verride\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263" +
-      "\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010user" +
-      "name\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n" +
-      "\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:j\030\000\372\370\263\007\005\250\363\263\007\001\372\370" +
-      "\263\007Y\312\363\263\007T\302\364\263\007\017\n\003cli\022\010redshift\302\364\263\007\030\n\014json_" +
-      "gateway\022\010redshift\302\364\263\007\036\n\022terraform-provid" +
-      "er\022\010redshift\"\341\013\n\013RedshiftIAM\022\030\n\002id\030\200\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terra" +
-      "form-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\ncluster_id\030\003 \001(\t" +
-      "B^\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\033\312\363\263\007\026\302\364\263\007\021\n\003cli\022\nclus" +
-      "ter-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370" +
-      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      "\022\200\001\n\021override_database\030\007 \001(\010Be\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-databas" +
-      "e\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rp" +
-      "ort_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263" +
-      "\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n" +
-      "\006region\030\002 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263" +
-      "\007\r\n\003cli\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023role_assum" +
-      "ption_arn\030\013 \001(\tBg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007\037\302" +
-      "\364\263\007\032\n\003cli\022\023role-assumption-arn\362\370\263\007\005\320\364\263\007\000" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      ":v\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007e\312\363\263\007`\302\364\263\007\023\n\003cli\022\014reds" +
-      "hift-iam\302\364\263\007\034\n\014json_gateway\022\014redshift-ia" +
-      "m\302\364\263\007\"\n\022terraform-provider\022\014redshift_iam" +
-      "\"\215\014\n\025RedshiftServerlessIAM\022\030\n\002id\030\200\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terrafo" +
-      "rm-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database" +
-      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022\200\001\n\021override_database\030\007 \001(\010Be\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-datab" +
-      "ase\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n" +
-      "\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312" +
-      "\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "j\n\006region\030\002 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302" +
-      "\364\263\007\r\n\003cli\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023role_ass" +
-      "umption_arn\030\013 \001(\tBg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007" +
-      "\037\302\364\263\007\032\n\003cli\022\023role-assumption-arn\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022p\n\tworkgroup\030\003 \001(\tB]\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032" +
-      "\312\363\263\007\025\302\364\263\007\020\n\003cli\022\tworkgroup\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:\231\001\030" +
-      "\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007\207\001\312\363\263\007\201\001\302\364\263\007\036\n\003cli\022\027redsh" +
-      "ift-serverless-iam\302\364\263\007\'\n\014json_gateway\022\027r" +
-      "edshift-serverless-iam\302\364\263\007-\n\022terraform-p" +
-      "rovider\022\027redshift_serverless_iam\"\313\014\n\tSQL" +
-      "Server\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name" +
-      "\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007health" +
-      "y\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007" +
-      "\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030" +
-      "\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_" +
-      "store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_f" +
-      "ilter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interf" +
-      "ace\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020pro" +
-      "xy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsub" +
-      "domain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\224" +
-      "\001\n\033allow_deprecated_encryption\030\t \001(\010Bo\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\003cli\022\033allow-de" +
-      "precated-encryption\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010databas" +
-      "e\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
-      "i\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB" +
-      "\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostn" +
+      "\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031" +
+      "\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004p" +
+      "ort\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003" +
+      "cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\006 \001" +
+      "(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rpo" +
+      "rt-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\007 " +
+      "\001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014t" +
+      "ls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 \001(\tB" +
+      "\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010usern" +
       "ame\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021override_database\030\010 \001(" +
-      "\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021ove" +
-      "rride-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001" +
-      "(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010pa" +
-      "ssword\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\007 \001(\005BX\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      "\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022j\n\006schema\030\006 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263" +
-      "\007\022\302\364\263\007\r\n\003cli\022\006schema\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010userna" +
-      "me\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003c" +
-      "li\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:f\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
-      "U\312\363\263\007P\302\364\263\007\014\n\003cli\022\005mssql\302\364\263\007\025\n\014json_gatew" +
-      "ay\022\005mssql\302\364\263\007 \n\022terraform-provider\022\nsql_" +
-      "server\"\331\r\n\020SQLServerAzureAD\022\030\n\002id\030\200\200\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraf" +
-      "orm-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\224\001\n\033allow_deprecated" +
-      "_encryption\030\n \001(\010Bo\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007,\312\363\263\007" +
-      "\'\302\364\263\007\"\n\003cli\022\033allow-deprecated-encryption" +
-      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022p\n\tclient_id\030\002 \001(\tB]\030\000\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\032\312\363\263\007\025\302\364\263\007\020\n\003cli\022\tclient-id\362\370\263\007\005\320" +
-      "\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\001\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010" +
-      "hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364" +
-      "\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021overrid" +
-      "e_database\030\010 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035" +
-      "\302\364\263\007\030\n\003cli\022\021override-database\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "f\n\004port\030\007 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263" +
-      "\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override" +
-      "\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli" +
-      "\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006schema\030\006 \001(" +
-      "\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006sch" +
-      "ema\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006secret\030\003 \001(\tBZ\030\000\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006secret\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\001\022p\n\ttenant_id\030\t \001(\tB]\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\312" +
-      "\363\263\007\025\302\364\263\007\020\n\003cli\022\ttenant-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:}\030\000\372" +
-      "\370\263\007\005\250\363\263\007\001\372\370\263\007l\312\363\263\007g\302\364\263\007\023\n\003cli\022\014mssqlAzur" +
-      "eAD\302\364\263\007\034\n\014json_gateway\022\014mssqlAzureAD\302\364\263\007" +
-      ")\n\022terraform-provider\022\023sql_server_azure_" +
-      "ad\"\300\023\n\023SQLServerKerberosAD\022\030\n\002id\030\200\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terrafo" +
-      "rm-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\224\001\n\033allow_deprecated_" +
-      "encryption\030\014 \001(\010Bo\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007,\312\363\263\007\'" +
-      "\302\364\263\007\"\n\003cli\022\033allow-deprecated-encryption\362" +
-      "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363" +
-      "\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325\001\n#id" +
-      "entity_alias_healthcheck_username\030\016 \001(\tB" +
-      "\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022#iden" +
-      "tity-alias-healthcheck-username\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016ident" +
-      "ity-alias\022|\n\017identity_set_id\030\r \001(\tBc\030\000\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identity-s" +
-      "et-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006keytab\030\003 \001(\tBZ\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006keytab\362\370\263\007\005\320\364" +
-      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\001\022r\n\nkrb_config\030\t \001(\tB^\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\033\312\363\263\007\026\302\364\263\007\021\n\003cli\022\nkrb-config\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
-      "\200\001\n\021override_database\030\010 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-database" +
-      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\017 \001(\tB\\\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\001\022f\n\004port\030\007 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020" +
-      "\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_overr" +
-      "ide\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003" +
-      "cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022h\n\005realm\030\013 " +
-      "\001(\tBY\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\312\363\263\007\021\302\364\263\007\014\n\003cli\022\005r" +
-      "ealm\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022j\n\006schema\030\006 \001(\tBZ\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006schema\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022r\n\nserver_spn\030\n \001(\tB^\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\033\312\363\263\007\026\302\364\263\007\021\n\003cli\022\nserver-spn\362\370\263\007\005\320\364\263\007\000\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\247" +
-      "\001\n\010username\030\002 \001(\tB\224\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263" +
-      "\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
-      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\362\370\263\007\027\332\364\263" +
-      "\007\022leased-credentials\362\370\263\007\027\352\364\263\007\022leased-cre" +
-      "dentials:\202\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007q\312\363\263\007l\302\364\263\007\024\n\003" +
-      "cli\022\rmssqlKerberos\302\364\263\007\035\n\014json_gateway\022\rm" +
-      "ssqlKerberos\302\364\263\007,\n\022terraform-provider\022\026s" +
-      "ql_server_kerberos_ad\"\315\014\n\003SSH\022\030\n\002id\030\200\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terr" +
-      "aform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030" +
-      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\232\001\n\036allow_deprecat" +
-      "ed_key_exchanges\030\006 \001(\010Br\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "/\312\363\263\007*\302\364\263\007%\n\003cli\022\036allow-deprecated-key-e" +
-      "xchanges\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname" +
-      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022n\n\010key_type\030\010 \001(\tB\\\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010key-type\362\370\263\007\005\320\364\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022x\n\rlock_required\030\013 \001(\010Ba\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rlock-required\362\370\263\007\005\320" +
-      "\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263" +
-      "\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022|\n\017port_for" +
-      "warding\030\005 \001(\010Bc\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263" +
-      "\007\026\n\003cli\022\017port-forwarding\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rpo" +
-      "rt_override\030\007 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007" +
-      "\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\n" +
-      "public_key\030\004 \001(\tB^\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\033\312\363\263\007\026" +
-      "\302\364\263\007\021\n\003cli\022\npublic-key\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022n\n\010user" +
-      "name\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n" +
-      "\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:[\030\000\372\370\263\007\005\250\363\263\007\001\372\370" +
-      "\263\007J\312\363\263\007E\302\364\263\007\n\n\003cli\022\003ssh\302\364\263\007\023\n\014json_gatew" +
-      "ay\022\003ssh\302\364\263\007\031\n\022terraform-provider\022\003ssh\"\372\016" +
-      "\n\007SSHCert\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\001:d\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007S\312\363\263\007N\302\364\263" +
+      "\007\r\n\003cli\022\006oracle\302\364\263\007\026\n\014json_gateway\022\006orac" +
+      "le\302\364\263\007\034\n\022terraform-provider\022\006oracle\"\311\n\n\t" +
+      "OracleNNE\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
       "ame\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007hea" +
       "lthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262" +
       "\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004ta" +
@@ -407412,44 +407331,192 @@ public final class DriversPlumbing {
       "proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\t" +
       "subdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007" +
       "\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022\232\001\n\036allow_deprecated_key_exchanges\030\005 \001" +
-      "(\010Br\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007/\312\363\263\007*\302\364\263\007%\n\003cli\022\036al" +
-      "low-deprecated-key-exchanges\362\370\263\007\005\320\364\263\007\000\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n" +
-      "\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024" +
-      "\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325\001\n#ident" +
-      "ity_alias_healthcheck_username\030\010 \001(\tB\247\001\030" +
-      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022#identit" +
-      "y-alias-healthcheck-username\362\370\263\007\005\320\364\263\007\000\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370" +
-      "\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016identity" +
-      "-alias\022|\n\017identity_set_id\030\007 \001(\tBc\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identity-set-" +
-      "id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010key_type\030\t \001(\tB\\\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010key-type\362\370\263\007\005\320" +
-      "\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022x\n\rlock_required\030\r \001(\010Ba\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rlock-required\362\370\263\007" +
-      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312" +
-      "\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022|\n\017port_f" +
-      "orwarding\030\004 \001(\010Bc\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302" +
-      "\364\263\007\026\n\003cli\022\017port-forwarding\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\r" +
-      "port_override\030\006 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363" +
-      "\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\247" +
+      "\000\022r\n\010database\030\004 \001(\tB`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363" +
+      "\263\007\030\302\364\263\007\023\n\003cli\022\014service-name\362\370\263\007\005\320\364\263\007\000\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n" +
+      "\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302" +
+      "\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010passwor" +
+      "d\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
+      "i\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007" +
+      "\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\005 \001(\005BX\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022x\n\rport_override\030\006 \001(\005Ba\030\000\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263" +
+      "\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000\022v\n\014tls_required\030\007 \001(\010B`\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263" +
+      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:" +
+      "n\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007]\312\363\263\007X\302\364\263\007\020\n\003cli\022\toracl" +
+      "enne\302\364\263\007\031\n\014json_gateway\022\toraclenne\302\364\263\007 \n" +
+      "\022terraform-provider\022\noracle_nne\"\313\n\n\010Post" +
+      "gres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201" +
+      "\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030" +
+      "\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*" +
+      "\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200" +
+      "\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_st" +
+      "ore_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_fil" +
+      "ter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interfac" +
+      "e\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy" +
+      "_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdo" +
+      "main\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007" +
+      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010" +
+      "database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364" +
+      "\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname" +
+      "\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli" +
+      "\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021override_databa" +
+      "se\030\007 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003c" +
+      "li\022\021override-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010passw" +
+      "ord\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
+      "cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363" +
+      "\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030" +
+      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263" +
+      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362" +
+      "\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007" +
+      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\001:j\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007Y\312\363\263\007T\302\364\263\007\017\n\003cli\022\010pos" +
+      "tgres\302\364\263\007\030\n\014json_gateway\022\010postgres\302\364\263\007\036\n" +
+      "\022terraform-provider\022\010postgres\"\270\n\n\006Presto" +
+      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
+      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 " +
+      "\001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007" +
+      "\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_" +
+      "id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030" +
+      "\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200" +
+      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_clu" +
+      "ster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain" +
+      "\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010data" +
+      "base\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n" +
+      "\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001" +
+      "(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010ho" +
+      "stname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\002 \001(\tB\\\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370" +
+      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\001\022f\n\004port\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport" +
+      "_override\030\004 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302" +
+      "\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tl" +
+      "s_required\030\007 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030" +
+      "\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010us" +
+      "ername\030\006 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007" +
+      "\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:d\030\000\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007S\312\363\263\007N\302\364\263\007\r\n\003cli\022\006presto\302\364\263\007\026\n\014json_" +
+      "gateway\022\006presto\302\364\263\007\034\n\022terraform-provider" +
+      "\022\006presto\"\317\016\n\003RDP\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001" +
+      "\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007" +
+      "\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provide" +
+      "r\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#" +
+      "\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016b" +
+      "ind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364" +
+      "\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022\220\001\n\031downgrade_nla_connections\030\006" +
+      " \001(\010Bm\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\003cli\022\031" +
+      "downgrade-nla-connections\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\245\001\n\031" +
+      "enable_ephemeral_accounts\030\r \001(\010B\201\001\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007*\312\363\263\007%\302\364\263\007 \n\003cli\022\031enable-ephem" +
+      "eral-accounts\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\017\262\364\263\007\ngo_priv" +
+      "ate\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031" +
+      "\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325\001\n#" +
+      "identity_alias_healthcheck_username\030\014 \001(" +
+      "\tB\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022#id" +
+      "entity-alias-healthcheck-username\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016ide" +
+      "ntity-alias\022|\n\017identity_set_id\030\013 \001(\tBc\030\000" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identity" +
+      "-set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_required\030\n \001(\010" +
+      "Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rlock" +
+      "-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030" +
+      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010passwor" +
+      "d\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rp" +
+      "ort_override\030\004 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263" +
+      "\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n" +
+      "\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302" +
+      "\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:[\030\000\372\370\263\007\005\250\363" +
+      "\263\007\001\372\370\263\007J\312\363\263\007E\302\364\263\007\n\n\003cli\022\003rdp\302\364\263\007\023\n\014json_" +
+      "gateway\022\003rdp\302\364\263\007\031\n\022terraform-provider\022\003r" +
+      "dp\"\365\016\n\007RDPCert\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O" +
+      "\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362" +
+      "\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022" +
+      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n" +
+      "\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\r" +
+      "egress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bin" +
+      "d_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007" +
+      "\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022\247\001\n\014dc_hostnames\030\r \001(\tB\220\001\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014dc-hostnames\362\370" +
+      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263" +
+      "\007\016identity-alias\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370" +
+      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022\325\001\n#identity_alias_healthcheck_" +
+      "username\030\006 \001(\tB\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302" +
+      "\364\263\007*\n\003cli\022#identity-alias-healthcheck-us" +
+      "ername\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\362\370\263\007\023\332\364\263\007\016identity-alias" +
+      "\362\370\263\007\023\352\364\263\007\016identity-alias\022|\n\017identity_set" +
+      "_id\030\005 \001(\tBc\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003" +
+      "cli\022\017identity-set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_r" +
+      "equired\030\013 \001(\010Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263" +
+      "\007\024\n\003cli\022\rlock-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port" +
+      "\030\004 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli" +
+      "\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\003 \001(\005B" +
+      "a\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-" +
+      "override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022t\n\013server_fqdn\030\007 \001(\tB" +
+      "_\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\034\312\363\263\007\027\302\364\263\007\022\n\003cli\022\013serve" +
+      "r-fqdn\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022d\n\003sid\030\014 \001(\tBW\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\024\312\363\263\007\017\302\364\263\007\n\n\003cli\022\003sid\362\370\263\007\005\320\364\263\007\000\362\370" +
+      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\247" +
       "\001\n\010username\030\002 \001(\tB\224\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263" +
       "\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
       "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\362\370\263\007\027\332\364\263" +
       "\007\022leased-credentials\362\370\263\007\027\352\364\263\007\022leased-cre" +
       "dentials:h\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007W\312\363\263\007R\302\364\263\007\016\n\003c" +
-      "li\022\007sshCert\302\364\263\007\027\n\014json_gateway\022\007sshCert\302" +
-      "\364\263\007\036\n\022terraform-provider\022\010ssh_cert\"\235\017\n\016S" +
-      "SHCustomerKey\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "li\022\007rdpCert\302\364\263\007\027\n\014json_gateway\022\007rdpCert\302" +
+      "\364\263\007\036\n\022terraform-provider\022\010rdp_cert\"\350\013\n\016R" +
+      "DSPostgresIAM\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n" +
       "\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370" +
       "\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$" +
@@ -407460,121 +407527,149 @@ public final class DriversPlumbing {
       "\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
       "\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
       "\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022\232\001\n\036allow_deprecated_key_exchanges" +
-      "\030\006 \001(\010Br\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007/\312\363\263\007*\302\364\263\007%\n\003cli" +
-      "\022\036allow-deprecated-key-exchanges\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312" +
-      "\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
-      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325\001\n#i" +
-      "dentity_alias_healthcheck_username\030\013 \001(\t" +
-      "B\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022#ide" +
-      "ntity-alias-healthcheck-username\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016iden" +
-      "tity-alias\022|\n\017identity_set_id\030\n \001(\tBc\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identity-" +
-      "set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_required\030\014 \001(\010B" +
-      "a\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rlock-" +
-      "required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022|\n\017port_forwarding\030\005 \001(\010Bc\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017port-forwarding\362\370" +
-      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\000\022x\n\rport_override\030\007 \001(\005Ba\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override" +
-      "\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000",
-      "\362\370\263\007\005\240\364\263\007\000\022t\n\013private_key\030\004 \001(\tB_\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\034\312\363\263\007\027\302\364\263\007\022\n\003cli\022\013private-key\362\370" +
-      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\001\022\247\001\n\010username\030\002 \001(\tB\224\001\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263" +
-      "\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\001\362\370\263\007\027\332\364\263\007\022leased-credentials\362\370\263\007\027\352\364\263\007\022" +
-      "leased-credentials:~\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007m\312\363\263" +
-      "\007h\302\364\263\007\025\n\003cli\022\016sshCustomerKey\302\364\263\007\036\n\014json_" +
-      "gateway\022\016sshCustomerKey\302\364\263\007&\n\022terraform-" +
-      "provider\022\020ssh_customer_key\"\372\013\n\013SSHPasswo" +
-      "rd\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
-      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200" +
-      "\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
-      "\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
-      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filte" +
-      "r\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030" +
-      "\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_c" +
-      "luster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdoma" +
-      "in\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\232\001\n\036a" +
-      "llow_deprecated_key_exchanges\030\006 \001(\010Br\030\000\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007/\312\363\263\007*\302\364\263\007%\n\003cli\022\036allow-dep" +
-      "recated-key-exchanges\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostn" +
-      "ame\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
-      "cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_required" +
-      "\030\n \001(\010Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli" +
-      "\022\rlock-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\004 " +
-      "\001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010p" +
-      "assword\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022|\n\017port_forwarding\030\005 \001(\010Bc\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017port-forwarding\362\370\263" +
-      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022x\n\rport_override\030\007 \001(\005Ba\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362" +
-      "\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\001:t\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007c\312\363\263\007^\302\364\263\007\022\n\003cli\022\013ssh" +
-      "Password\302\364\263\007\033\n\014json_gateway\022\013sshPassword" +
-      "\302\364\263\007\"\n\022terraform-provider\022\014ssh_password\"" +
-      "\377\013\n\013SingleStore\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022" +
-      "O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001" +
-      "\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider" +
-      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%" +
-      "\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n" +
-      "\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bi" +
-      "nd_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263" +
-      "\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007" +
-      "\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010passw" +
-      "ord\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
-      "cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030" +
-      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263" +
-      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362" +
-      "\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\000\022\204\001\n\023require_native_auth\030\007 \001(\010B" +
-      "g\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\003cli\022\023requi" +
-      "re-native-auth\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\240\001\n!use_azure_s" +
-      "ingle_server_usernames\030\t \001(\010Bu\030\000\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\0072\312\363\263\007-\302\364\263\007(\n\003cli\022!use-azure-single" +
-      "-server-usernames\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030" +
-      "\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022" +
-      "\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:t\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007c\312\363" +
-      "\263\007^\302\364\263\007\022\n\003cli\022\013singlestore\302\364\263\007\033\n\014json_ga" +
-      "teway\022\013singlestore\302\364\263\007\"\n\022terraform-provi" +
-      "der\022\014single_store\"\306\n\n\tSnowflake\022\030\n\002id\030\200\200" +
+      "\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n" +
+      "\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302" +
+      "\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021overri" +
+      "de_database\030\007 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007" +
+      "\035\302\364\263\007\030\n\003cli\022\021override-database\362\370\263\007\005\320\364\263\007\000" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      "\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364" +
+      "\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_overrid" +
+      "e\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cl" +
+      "i\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006region\030\003 \001" +
+      "(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006re" +
+      "gion\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023role_assumption_arn\030\n" +
+      " \001(\tBg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\003cli\022\023" +
+      "role-assumption-arn\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010usernam" +
+      "e\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
+      "i\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:~\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007m" +
+      "\312\363\263\007h\302\364\263\007\025\n\003cli\022\016rdspostgresiam\302\364\263\007\036\n\014js" +
+      "on_gateway\022\016rdspostgresiam\302\364\263\007&\n\022terrafo" +
+      "rm-provider\022\020rds_postgres_iam\"\363\t\n\017Rabbit" +
+      "MQAMQP091\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
+      "ame\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007hea" +
+      "lthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262" +
+      "\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004ta" +
+      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secr" +
+      "et_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regres" +
+      "s_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_int" +
+      "erface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020" +
+      "proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\t" +
+      "subdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007" +
+      "\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363" +
+      "\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010pas" +
+      "sword\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
+      "\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\003 \001(\005B" +
+      "X\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362" +
+      "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\002 \001(\005Ba\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-overrid" +
+      "e\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\010 \001(\010B`\030\000\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-require" +
+      "d\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\001:\205\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007t\312\363\263\007o\302\364\263\007\030\n\003cli\022\021" +
+      "rabbitmq-amqp-091\302\364\263\007!\n\014json_gateway\022\021ra" +
+      "bbitmq-amqp-091\302\364\263\007\'\n\022terraform-provider" +
+      "\022\021rabbitmq_amqp_091\"\361\006\n\006RawTCP\022\030\n\002id\030\200\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!ter" +
+      "raform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>" +
+      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\t" +
+      "B\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010host" +
+      "name\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370" +
+      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x" +
+      "\n\rport_override\030\002 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036" +
+      "\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      ":e\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007T\312\363\263\007O\302\364\263\007\r\n\003cli\022\006rawt" +
+      "cp\302\364\263\007\026\n\014json_gateway\022\006rawtcp\302\364\263\007\035\n\022terr" +
+      "aform-provider\022\007raw_tcp\"\304\t\n\005Redis\022\030\n\002id\030" +
+      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!" +
+      "terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id" +
+      "\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(" +
+      "\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 " +
+      "\001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010h" +
+      "ostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362" +
+      "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\001\022f\n\004port\030\004 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rpor" +
+      "t_override\030\002 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031" +
+      "\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014t" +
+      "ls_required\030\006 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007" +
+      "\030\302\364\263\007\023\n\003cli\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010u" +
+      "sername\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263" +
+      "\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:a\030\000\372\370\263\007\005\250\363\263\007" +
+      "\001\372\370\263\007P\312\363\263\007K\302\364\263\007\014\n\003cli\022\005redis\302\364\263\007\025\n\014json_" +
+      "gateway\022\005redis\302\364\263\007\033\n\022terraform-provider\022" +
+      "\005redis\"\341\t\n\014RedisCluster\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-" +
+      "provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263",
+      "\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263" +
+      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000\022n\n\010password\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
+      "f\n\004port\030\002 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263" +
+      "\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override" +
+      "\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli" +
+      "\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_require" +
+      "d\030\006 \001(\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cl" +
+      "i\022\014tls-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\004 " +
+      "\001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010u" +
+      "sername\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:w\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007f\312\363\263\007" +
+      "a\302\364\263\007\023\n\003cli\022\014redisCluster\302\364\263\007\034\n\014json_gat" +
+      "eway\022\014redisCluster\302\364\263\007#\n\022terraform-provi" +
+      "der\022\rredis_cluster\"\313\n\n\010Redshift\022\030\n\002id\030\200\200" +
       "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005" +
       "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007" +
       "\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!te" +
@@ -407591,82 +407686,581 @@ public final class DriversPlumbing {
       "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263" +
       "\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263" +
       "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\001\022" +
-      "x\n\rport_override\030\006 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\007\005\240\364\263\007\000\022\200\001\n\021override_database\030\007 \001(\010Be\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-" +
+      "database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password" +
+      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rpo" +
+      "rt_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007" +
+      "\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007" +
+      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010" +
+      "username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364" +
+      "\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:j\030\000\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007Y\312\363\263\007T\302\364\263\007\017\n\003cli\022\010redshift\302\364\263\007\030\n\014j" +
+      "son_gateway\022\010redshift\302\364\263\007\036\n\022terraform-pr" +
+      "ovider\022\010redshift\"\341\013\n\013RedshiftIAM\022\030\n\002id\030\200" +
+      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!t" +
+      "erraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030" +
+      "\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\t" +
+      "B>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\ncluster_id\030\003" +
+      " \001(\tB^\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\033\312\363\263\007\026\302\364\263\007\021\n\003cli\022\n" +
+      "cluster-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\" +
+      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010databa" +
+      "se\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320" +
+      "\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\000\022\200\001\n\021override_database\030\007 \001(\010Be\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-dat" +
+      "abase\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
+      "x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
       "\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007" +
       "\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022t\n\013private_key\030\t \001(\tB_\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\034\312\363\263\007\027\302\364\263\007\022\n\003cli\022\013private-key\362\370\263\007\005\320\364\263\007\000\362" +
-      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
-      "j\n\006schema\030\005 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302" +
-      "\364\263\007\r\n\003cli\022\006schema\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030" +
-      "\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022" +
-      "\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:m\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007\\\312\363" +
-      "\263\007W\302\364\263\007\020\n\003cli\022\tsnowflake\302\364\263\007\031\n\014json_gate" +
-      "way\022\tsnowflake\302\364\263\007\037\n\022terraform-provider\022" +
-      "\tsnowflake\"\274\t\n\tSnowsight\022\030\n\002id\030\200\200\002 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform" +
-      "-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\204\001\n\020connectToDefault\030\r \001(\010Bj" +
-      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\'\312\363\263\007\"\302\364\263\007\035\n\003cli\022\026connec" +
-      "t-to-default-acs\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\206\001\n\024healthche" +
-      "ck_username\030\013 \001(\tBh\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007%\312\363\263\007" +
-      " \302\364\263\007\033\n\003cli\022\024healthcheck_username\362\370\263\007\005\320\364" +
-      "\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001" +
+      "\000\022j\n\006region\030\002 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007" +
+      "\022\302\364\263\007\r\n\003cli\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023role_a" +
+      "ssumption_arn\030\013 \001(\tBg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363" +
+      "\263\007\037\302\364\263\007\032\n\003cli\022\023role-assumption-arn\362\370\263\007\005\320" +
+      "\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\000:v\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007e\312\363\263\007`\302\364\263\007\023\n\003cli\022\014" +
+      "redshift-iam\302\364\263\007\034\n\014json_gateway\022\014redshif" +
+      "t-iam\302\364\263\007\"\n\022terraform-provider\022\014redshift" +
+      "_iam\"\215\014\n\025RedshiftServerlessIAM\022\030\n\002id\030\200\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!ter" +
+      "raform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>" +
+      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\t" +
+      "B\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010data" +
+      "base\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022\200\001\n\021override_database\030\007 \001(\010Be\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-d" +
+      "atabase\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007" +
+      "\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364" +
+      "\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022j\n\006region\030\002 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363" +
+      "\263\007\022\302\364\263\007\r\n\003cli\022\006region\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023role" +
+      "_assumption_arn\030\013 \001(\tBg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$" +
+      "\312\363\263\007\037\302\364\263\007\032\n\003cli\022\023role-assumption-arn\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022p\n\tworkgroup\030\003 \001(\tB]\030\000\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\032\312\363\263\007\025\302\364\263\007\020\n\003cli\022\tworkgroup\362\370\263\007\005\320\364\263\007\000" +
+      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      ":\231\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007\207\001\312\363\263\007\201\001\302\364\263\007\036\n\003cli\022\027r" +
+      "edshift-serverless-iam\302\364\263\007\'\n\014json_gatewa" +
+      "y\022\027redshift-serverless-iam\302\364\263\007-\n\022terrafo" +
+      "rm-provider\022\027redshift_serverless_iam\"\313\014\n" +
+      "\tSQLServer\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004" +
+      "name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007he" +
+      "althy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006" +
+      "\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004t" +
+      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017sec" +
+      "ret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regre" +
+      "ss_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_in" +
+      "terface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n" +
+      "\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n" +
+      "\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022\224\001\n\033allow_deprecated_encryption\030\t \001(\010" +
+      "Bo\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007,\312\363\263\007\'\302\364\263\007\"\n\003cli\022\033allo" +
+      "w-deprecated-encryption\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010dat" +
+      "abase\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017" +
+      "\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 " +
+      "\001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010h" +
+      "ostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021override_database\030" +
+      "\010 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022" +
+      "\021override-database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password" +
+      "\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli" +
+      "\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\007 \001(\005BX\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320" +
+      "\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007" +
+      "\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022j\n\006schema\030\006 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006schema\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010us" +
+      "ername\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007" +
+      "\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:f\030\000\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007U\312\363\263\007P\302\364\263\007\014\n\003cli\022\005mssql\302\364\263\007\025\n\014json_g" +
+      "ateway\022\005mssql\302\364\263\007 \n\022terraform-provider\022\n" +
+      "sql_server\"\331\r\n\020SQLServerAzureAD\022\030\n\002id\030\200\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!te" +
+      "rraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210" +
+      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB" +
+      ">\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\224\001\n\033allow_deprec" +
+      "ated_encryption\030\n \001(\010Bo\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007," +
+      "\312\363\263\007\'\302\364\263\007\"\n\003cli\022\033allow-deprecated-encryp" +
+      "tion\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022p\n\tclient_id\030\002 \001(\tB]\030\000\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\032\312\363\263\007\025\302\364\263\007\020\n\003cli\022\tclient-id\362\370" +
+      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\001\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      "\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263" +
+      "\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\021ove" +
+      "rride_database\030\010 \001(\010Be\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\"\312" +
+      "\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-database\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022f\n\004port\030\007 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007" +
+      "\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_over" +
+      "ride\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n" +
+      "\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006schema\030" +
+      "\006 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022" +
+      "\006schema\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006secret\030\003 \001(\tBZ\030\000\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006secret\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\001\022p\n\ttenant_id\030\t \001(\tB]\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\032\312\363\263\007\025\302\364\263\007\020\n\003cli\022\ttenant-id\362\370\263\007\005\320\364\263\007\000\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:" +
+      "}\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007l\312\363\263\007g\302\364\263\007\023\n\003cli\022\014mssql" +
+      "AzureAD\302\364\263\007\034\n\014json_gateway\022\014mssqlAzureAD" +
+      "\302\364\263\007)\n\022terraform-provider\022\023sql_server_az" +
+      "ure_ad\"\300\023\n\023SQLServerKerberosAD\022\030\n\002id\030\200\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!ter" +
+      "raform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>" +
+      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\224\001\n\033allow_depreca" +
+      "ted_encryption\030\014 \001(\010Bo\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007,\312" +
+      "\363\263\007\'\302\364\263\007\"\n\003cli\022\033allow-deprecated-encrypt" +
+      "ion\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325\001" +
+      "\n#identity_alias_healthcheck_username\030\016 " +
+      "\001(\tB\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022#" +
+      "identity-alias-healthcheck-username\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016i" +
+      "dentity-alias\022|\n\017identity_set_id\030\r \001(\tBc" +
+      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identi" +
+      "ty-set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022j\n\006keytab\030\003 \001(\tBZ\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006keytab\362\370\263" +
+      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\001\022r\n\nkrb_config\030\t \001(\tB^\030\000\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\033\312\363\263\007\026\302\364\263\007\021\n\003cli\022\nkrb-config\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\001\022\200\001\n\021override_database\030\010 \001(\010Be\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\003cli\022\021override-data" +
+      "base\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\017 \001(\tB\\\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\001\022f\n\004port\030\007 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312" +
+      "\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_o" +
+      "verride\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263" +
+      "\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022h\n\005real" +
+      "m\030\013 \001(\tBY\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\312\363\263\007\021\302\364\263\007\014\n\003cl" +
+      "i\022\005realm\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022j\n\006schema\030\006 \001(\tBZ\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363\263\007\022\302\364\263\007\r\n\003cli\022\006schema\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022r\n\nserver_spn\030\n \001(\tB^\030\000\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\033\312\363\263\007\026\302\364\263\007\021\n\003cli\022\nserver-spn\362\370\263\007\005\320\364\263" +
+      "\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022\247\001\n\010username\030\002 \001(\tB\224\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\362\370\263\007" +
+      "\027\332\364\263\007\022leased-credentials\362\370\263\007\027\352\364\263\007\022leased" +
+      "-credentials:\202\001\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007q\312\363\263\007l\302\364\263" +
+      "\007\024\n\003cli\022\rmssqlKerberos\302\364\263\007\035\n\014json_gatewa" +
+      "y\022\rmssqlKerberos\302\364\263\007,\n\022terraform-provide" +
+      "r\022\026sql_server_kerberos_ad\"\315\014\n\003SSH\022\030\n\002id\030" +
+      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!" +
+      "terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id" +
+      "\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(" +
+      "\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\232\001\n\036allow_depr" +
+      "ecated_key_exchanges\030\006 \001(\010Br\030\000\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007/\312\363\263\007*\302\364\263\007%\n\003cli\022\036allow-deprecated-k" +
+      "ey-exchanges\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\t" +
+      "B\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010host" +
+      "name\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010key_type\030\010 \001(\tB\\\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010key-type\362\370\263\007" +
+      "\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022x\n\rlock_required\030\013 \001(\010Ba\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rlock-required\362\370" +
+      "\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022|\n\017port" +
+      "_forwarding\030\005 \001(\010Bc\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007" +
+      "\033\302\364\263\007\026\n\003cli\022\017port-forwarding\362\370\263\007\005\320\364\263\007\000\362\370" +
+      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x" +
+      "\n\rport_override\030\007 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036" +
+      "\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      "\022r\n\npublic_key\030\004 \001(\tB^\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\033\312" +
+      "\363\263\007\026\302\364\263\007\021\n\003cli\022\npublic-key\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
+      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022n\n\010" +
+      "username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364" +
+      "\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:[\030\000\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007J\312\363\263\007E\302\364\263\007\n\n\003cli\022\003ssh\302\364\263\007\023\n\014json_g" +
+      "ateway\022\003ssh\302\364\263\007\031\n\022terraform-provider\022\003ss" +
+      "h\"\372\016\n\007SSHCert\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n" +
+      "\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370" +
+      "\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$" +
+      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
+      "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\re" +
+      "gress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind" +
+      "_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001" +
+      "\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
+      "\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022\232\001\n\036allow_deprecated_key_exchanges" +
+      "\030\005 \001(\010Br\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007/\312\363\263\007*\302\364\263\007%\n\003cli" +
+      "\022\036allow-deprecated-key-exchanges\362\370\263\007\005\320\364\263" +
+      "\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312" +
+      "\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325\001\n#i" +
+      "dentity_alias_healthcheck_username\030\010 \001(\t" +
+      "B\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022#ide" +
+      "ntity-alias-healthcheck-username\362\370\263\007\005\320\364\263" +
+      "\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016iden" +
+      "tity-alias\022|\n\017identity_set_id\030\007 \001(\tBc\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017identity-" +
+      "set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010key_type\030\t \001(\tB\\\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010key-type\362\370" +
+      "\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022x\n\rlock_required\030\r \001(\010Ba\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rlock-required" +
+      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022|\n\017po" +
+      "rt_forwarding\030\004 \001(\010Bc\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363" +
+      "\263\007\033\302\364\263\007\026\n\003cli\022\017port-forwarding\362\370\263\007\005\320\364\263\007\000" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      "\022x\n\rport_override\030\006 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022\247\001\n\010username\030\002 \001(\tB\224\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\362\370\263\007" +
+      "\027\332\364\263\007\022leased-credentials\362\370\263\007\027\352\364\263\007\022leased" +
+      "-credentials:h\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007W\312\363\263\007R\302\364\263\007" +
+      "\016\n\003cli\022\007sshCert\302\364\263\007\027\n\014json_gateway\022\007sshC" +
+      "ert\302\364\263\007\036\n\022terraform-provider\022\010ssh_cert\"\235" +
+      "\017\n\016SSHCustomerKey\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provid" +
+      "er\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016" +
+      "bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320" +
+      "\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022\232\001\n\036allow_deprecated_key_excha" +
+      "nges\030\006 \001(\010Br\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007/\312\363\263\007*\302\364\263\007%\n" +
+      "\003cli\022\036allow-deprecated-key-exchanges\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370" +
+      "\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\325" +
+      "\001\n#identity_alias_healthcheck_username\030\013" +
+      " \001(\tB\247\001\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\0074\312\363\263\007/\302\364\263\007*\n\003cli\022" +
+      "#identity-alias-healthcheck-username\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\362\370\263\007\023\332\364\263\007\016identity-alias\362\370\263\007\023\352\364\263\007\016" +
+      "identity-alias\022|\n\017identity_set_id\030\n \001(\tB" +
+      "c\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017ident" +
+      "ity-set-id\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_required\030\014 " +
+      "\001(\010Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rl" +
+      "ock-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\030\000",
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022|\n\017port_forwarding\030\005 \001(\010Bc\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017port-forwardi" +
+      "ng\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\007 \001(\005Ba\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-over" +
+      "ride\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022t\n\013private_key\030\004 \001(\tB_\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\034\312\363\263\007\027\302\364\263\007\022\n\003cli\022\013private-k" +
+      "ey\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\001\022\247\001\n\010username\030\002 \001(\tB\224\001\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007" +
+      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\001\362\370\263\007\027\332\364\263\007\022leased-credentials\362\370\263\007\027\352" +
+      "\364\263\007\022leased-credentials:~\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
+      "m\312\363\263\007h\302\364\263\007\025\n\003cli\022\016sshCustomerKey\302\364\263\007\036\n\014j" +
+      "son_gateway\022\016sshCustomerKey\302\364\263\007&\n\022terraf" +
+      "orm-provider\022\020ssh_customer_key\"\372\013\n\013SSHPa" +
+      "ssword\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name" +
+      "\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007health" +
+      "y\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007" +
+      "\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030" +
+      "\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_" +
+      "store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_f" +
+      "ilter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interf" +
+      "ace\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020pro" +
+      "xy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsub" +
+      "domain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370" +
+      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\232" +
+      "\001\n\036allow_deprecated_key_exchanges\030\006 \001(\010B" +
+      "r\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007/\312\363\263\007*\302\364\263\007%\n\003cli\022\036allow" +
+      "-deprecated-key-exchanges\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010h" +
+      "ostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263" +
+      "\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rlock_requ" +
+      "ired\030\n \001(\010Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n" +
+      "\003cli\022\rlock-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010passwor" +
+      "d\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cl" +
+      "i\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007" +
+      "\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\003 \001(\005BX\030\000\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022|\n\017port_forwarding\030\005 \001(\010Bc\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\003cli\022\017port-forwardin" +
+      "g\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\007 \001(\005Ba\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-overr" +
+      "ide\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\001:t\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007c\312\363\263\007^\302\364\263\007\022\n\003cli\022" +
+      "\013sshPassword\302\364\263\007\033\n\014json_gateway\022\013sshPass" +
+      "word\302\364\263\007\"\n\022terraform-provider\022\014ssh_passw" +
+      "ord\"\377\013\n\013SingleStore\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
+      "\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230" +
+      "\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-prov" +
+      "ider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022." +
+      "\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010database\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031" +
+      "\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005" +
+      "\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010p" +
+      "assword\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263" +
+      "\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(" +
+      "\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004por" +
+      "t\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\005 \001(\005Ba\030\000\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-overr" +
+      "ide\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022\204\001\n\023require_native_auth\030\007 " +
+      "\001(\010Bg\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\003cli\022\023r" +
+      "equire-native-auth\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\240\001\n!use_azu" +
+      "re_single_server_usernames\030\t \001(\010Bu\030\000\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\0072\312\363\263\007-\302\364\263\007(\n\003cli\022!use-azure-si" +
+      "ngle-server-usernames\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010usern" +
+      "ame\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
+      "cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:t\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263" +
+      "\007c\312\363\263\007^\302\364\263\007\022\n\003cli\022\013singlestore\302\364\263\007\033\n\014jso" +
+      "n_gateway\022\013singlestore\302\364\263\007\"\n\022terraform-p" +
+      "rovider\022\014single_store\"\306\n\n\tSnowflake\022\030\n\002i" +
+      "d\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007" +
+      "\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v" +
+      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\t" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_" +
+      "id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 " +
+      "\001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010database\030" +
+      "\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022" +
+      "\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030" +
+      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostnam" +
+      "e\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364" +
+      "\263\007\001\022x\n\rport_override\030\006 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001" +
       "\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005" +
       "\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022w\n\014samlMetadata\030\001 \001(\tBa\030\000\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rsaml-metadata\362\370\263\007" +
-      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\001\022p\n\tsubdomain\030\002 \001(\tB]\030\000\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\032\312\363\263\007\025\302\364\263\007\020\n\003cli\022\tsubdomain\362\370\263\007\005\320\364\263\007\000" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      "\022p\n\tuse_https\030\016 \001(\010B]\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\312\363" +
-      "\263\007\025\302\364\263\007\020\n\003cli\022\tuse-https\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:m\030\000\372\370" +
-      "\263\007\005\250\363\263\007\001\372\370\263\007\\\312\363\263\007W\302\364\263\007\020\n\003cli\022\tsnowsight\302" +
-      "\364\263\007\031\n\014json_gateway\022\tsnowsight\302\364\263\007\037\n\022terr" +
-      "aform-provider\022\tsnowsight\"\320\010\n\006Sybase\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B" +
-      "<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263" +
-      "\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(" +
-      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster" +
-      "_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002" +
-      " \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname" +
-      "\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli" +
-      "\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\005 \001(\tB\\" +
-      "\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010passwo" +
-      "rd\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\004 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\r" +
-      "port_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363" +
-      "\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n" +
-      "\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024" +
-      "\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:d\030\000\372\370\263\007\005\250" +
-      "\363\263\007\001\372\370\263\007S\312\363\263\007N\302\364\263\007\r\n\003cli\022\006sybase\302\364\263\007\026\n\014j" +
-      "son_gateway\022\006sybase\302\364\263\007\034\n\022terraform-prov" +
-      "ider\022\006sybase\"\331\010\n\010SybaseIQ\022\030\n\002id\030\200\200\002 \001(\tB" +
+      "\240\364\263\007\000\022t\n\013private_key\030\t \001(\tB_\030\000\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\034\312\363\263\007\027\302\364\263\007\022\n\003cli\022\013private-key\362\370\263\007\005\320\364" +
+      "\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\001\022j\n\006schema\030\005 \001(\tBZ\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\312\363" +
+      "\263\007\022\302\364\263\007\r\n\003cli\022\006schema\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010usern" +
+      "ame\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
+      "cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:m\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263" +
+      "\007\\\312\363\263\007W\302\364\263\007\020\n\003cli\022\tsnowflake\302\364\263\007\031\n\014json_" +
+      "gateway\022\tsnowflake\302\364\263\007\037\n\022terraform-provi" +
+      "der\022\tsnowflake\"\274\t\n\tSnowsight\022\030\n\002id\030\200\200\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terra" +
+      "form-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\204\001\n\020connectToDefault\030\r \001" +
+      "(\010Bj\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\'\312\363\263\007\"\302\364\263\007\035\n\003cli\022\026co" +
+      "nnect-to-default-acs\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\206\001\n\024healt" +
+      "hcheck_username\030\013 \001(\tBh\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007%" +
+      "\312\363\263\007 \302\364\263\007\033\n\003cli\022\024healthcheck_username\362\370\263" +
+      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362" +
+      "\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022w\n\014samlMetadata\030\001 \001(\tBa\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rsaml-metadata" +
+      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\001\022p\n\tsubdomain\030\002 \001(\tB]\030\000\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\032\312\363\263\007\025\302\364\263\007\020\n\003cli\022\tsubdomain\362\370\263\007\005\320" +
+      "\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\000\022p\n\tuse_https\030\016 \001(\010B]\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\032\312\363\263\007\025\302\364\263\007\020\n\003cli\022\tuse-https\362\370\263\007\005\320\364\263\007\000\362\370" +
+      "\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:m" +
+      "\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007\\\312\363\263\007W\302\364\263\007\020\n\003cli\022\tsnowsi" +
+      "ght\302\364\263\007\031\n\014json_gateway\022\tsnowsight\302\364\263\007\037\n\022" +
+      "terraform-provider\022\tsnowsight\"\320\010\n\006Sybase" +
+      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
+      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 " +
+      "\001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007" +
+      "\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_" +
+      "id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030" +
+      "\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200" +
+      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_clu" +
+      "ster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain" +
+      "\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010host" +
+      "name\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n" +
+      "\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\005 \001" +
+      "(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010pa" +
+      "ssword\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\004 \001(\005BX\030\000\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      "\022x\n\rport_override\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022n\n\010username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312" +
+      "\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:d\030\000\372\370" +
+      "\263\007\005\250\363\263\007\001\372\370\263\007S\312\363\263\007N\302\364\263\007\r\n\003cli\022\006sybase\302\364\263\007" +
+      "\026\n\014json_gateway\022\006sybase\302\364\263\007\034\n\022terraform-" +
+      "provider\022\006sybase\"\331\010\n\010SybaseIQ\022\030\n\002id\030\200\200\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terr" +
+      "aform-provider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030" +
+      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB" +
+      "\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostn" +
+      "ame\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\005 \001(\tB\\\030\000\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005" +
+      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\001\022f\n\004port\030\004 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363" +
+      "\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_ov" +
+      "erride\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007" +
+      "\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010usern" +
+      "ame\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003" +
+      "cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:k\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263" +
+      "\007Z\312\363\263\007U\302\364\263\007\017\n\003cli\022\010sybaseIQ\302\364\263\007\030\n\014json_g" +
+      "ateway\022\010sybaseIQ\302\364\263\007\037\n\022terraform-provide" +
+      "r\022\tsybase_iq\"\330\010\n\010Teradata\022\030\n\002id\030\200\200\002 \001(\tB" +
       "\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362" +
       "\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001" +
       "\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terrafor" +
@@ -407680,112 +408274,85 @@ public final class DriversPlumbing {
       "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362" +
       "\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362" +
       "\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\000\022n\n\010password\030\005 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
+      "\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
       "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007" +
-      "\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\001\022f\n\004port\030\004 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302" +
+      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\001\022f\n\004port\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302" +
       "\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
       "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_overri" +
-      "de\030\003 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003c" +
+      "de\030\004 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003c" +
       "li\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263" +
       "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030" +
       "\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022" +
       "\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:k\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007Z\312\363" +
-      "\263\007U\302\364\263\007\017\n\003cli\022\010sybaseIQ\302\364\263\007\030\n\014json_gatew" +
-      "ay\022\010sybaseIQ\302\364\263\007\037\n\022terraform-provider\022\ts" +
-      "ybase_iq\"\330\010\n\010Teradata\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-pr" +
-      "ovider\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022.\n\016bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\005\320\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005" +
-      "\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263" +
-      "\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n" +
-      "\004port\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013" +
-      "\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\004" +
-      " \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\r" +
-      "port-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\002 \001(" +
-      "\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010use" +
-      "rname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:j\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007Y\312\363\263\007T\302" +
-      "\364\263\007\017\n\003cli\022\010teradata\302\364\263\007\030\n\014json_gateway\022\010" +
-      "teradata\302\364\263\007\036\n\022terraform-provider\022\010terad" +
-      "ata\"\304\t\n\005Trino\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n" +
-      "\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370" +
-      "\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provider\022$" +
-      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
-      "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\re" +
-      "gress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind" +
-      "_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001" +
-      "\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007\000\362\370\263" +
-      "\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n" +
-      "\010password\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302" +
-      "\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\005 " +
-      "\001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004p" +
-      "ort\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\004 \001(\005Ba\030\000" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport-ove" +
-      "rride\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\007 \001(\010B`\030" +
-      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls-req" +
-      "uired\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\006 \001(\tB\\\030\000\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010username\362\370\263" +
-      "\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000:a\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007P\312\363\263\007K\302\364\263\007\014\n\003cl" +
-      "i\022\005trino\302\364\263\007\025\n\014json_gateway\022\005trino\302\364\263\007\033\n" +
-      "\022terraform-provider\022\005trino\"\304\t\n\007Vertica\022\030" +
-      "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\t" +
-      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200\002 \001(" +
-      "\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262" +
-      "\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 \001(\0132" +
-      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id" +
-      "\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filter\030\205\200" +
-      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030\206\200\002 " +
-      "\001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_clust" +
-      "er_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdomain\030\207" +
-      "\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010databa" +
-      "se\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003c" +
-      "li\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\t" +
-      "B\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010host" +
-      "name\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007" +
-      "\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312" +
-      "\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_o" +
-      "verride\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263" +
-      "\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010user" +
-      "name\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n" +
-      "\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:g\030\000\372\370\263\007\005\250\363\263\007\001\372\370" +
-      "\263\007V\312\363\263\007Q\302\364\263\007\016\n\003cli\022\007vertica\302\364\263\007\027\n\014json_g" +
-      "ateway\022\007vertica\302\364\263\007\035\n\022terraform-provider" +
-      "\022\007verticaBc\n\031com.strongdm.api.plumbingB\017" +
-      "DriversPlumbingZ5github.com/strongdm/str" +
-      "ongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:j\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007Y\312\363" +
+      "\263\007T\302\364\263\007\017\n\003cli\022\010teradata\302\364\263\007\030\n\014json_gatew" +
+      "ay\022\010teradata\302\364\263\007\036\n\022terraform-provider\022\010t" +
+      "eradata\"\304\t\n\005Trino\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\001\022O\n\007healthy\030\202\200\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\030\262\364\263\007\023!terraform-provid" +
+      "er\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "#\n\regress_filter\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016" +
+      "bind_interface\030\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320" +
+      "\364\263\007\001\022&\n\020proxy_cluster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022S\n\tsubdomain\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010hostname\362\370\263\007\005\320\364\263\007" +
+      "\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000\022n\n\010password\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363" +
+      "\263\007\024\302\364\263\007\017\n\003cli\022\010password\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004por" +
+      "t\030\005 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cl" +
+      "i\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rport_override\030\004 \001(\005" +
+      "Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007\031\302\364\263\007\024\n\003cli\022\rport" +
+      "-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022v\n\014tls_required\030\007 \001(" +
+      "\010B`\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\003cli\022\014tls" +
+      "-required\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010username\030\006 \001(\tB\\\030" +
+      "\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010usernam" +
+      "e\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000:a\030\000\372\370\263\007\005\250\363\263\007\001\372\370\263\007P\312\363\263\007K\302\364\263\007\014" +
+      "\n\003cli\022\005trino\302\364\263\007\025\n\014json_gateway\022\005trino\302\364" +
+      "\263\007\033\n\022terraform-provider\022\005trino\"\304\t\n\007Verti" +
+      "ca\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
+      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022O\n\007healthy\030\202\200" +
+      "\002 \001(\010B<\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
+      "\263\007\030\262\364\263\007\023!terraform-provider\022$\n\004tags\030\203\200\002 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
+      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\regress_filte" +
+      "r\030\205\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022.\n\016bind_interface\030" +
+      "\206\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\022&\n\020proxy_c" +
+      "luster_id\030\210\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022S\n\tsubdoma" +
+      "in\030\207\200\002 \001(\tB>\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\320\364\263\007\001\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010da" +
+      "tabase\030\004 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007" +
+      "\017\n\003cli\022\010database\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010hostname\030\001" +
+      " \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010" +
+      "hostname\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010password\030\003 \001(\tB\\\030\000" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364\263\007\017\n\003cli\022\010password" +
+      "\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\030\000\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\025\312\363\263\007\020\302\364\263\007\013\n\003cli\022\004port\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022x\n\rpo" +
+      "rt_override\030\005 \001(\005Ba\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\036\312\363\263\007" +
+      "\031\302\364\263\007\024\n\003cli\022\rport-override\362\370\263\007\005\320\364\263\007\001\362\370\263\007" +
+      "\005\300\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022n\n\010" +
+      "username\030\002 \001(\tB\\\030\000\362\370\263\007\005\260\363\263\007\001\362\370\263\007\031\312\363\263\007\024\302\364" +
+      "\263\007\017\n\003cli\022\010username\362\370\263\007\005\320\364\263\007\000\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:g\030\000\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007V\312\363\263\007Q\302\364\263\007\016\n\003cli\022\007vertica\302\364\263\007\027\n\014js" +
+      "on_gateway\022\007vertica\302\364\263\007\035\n\022terraform-prov" +
+      "ider\022\007verticaBc\n\031com.strongdm.api.plumbi" +
+      "ngB\017DriversPlumbingZ5github.com/strongdm" +
+      "/strongdm-sdk-go/v3/internal/v1;v1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -408285,7 +408852,7 @@ public final class DriversPlumbing {
     internal_static_v1_MongoHost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoHost_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "EgressFilter", "BindInterface", "ProxyClusterId", "Subdomain", "AuthDatabase", "Hostname", "Password", "Port", "PortOverride", "TlsRequired", "Username", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "EgressFilter", "BindInterface", "ProxyClusterId", "Subdomain", "AuthDatabase", "Hostname", "Password", "Port", "PortOverride", "Region", "TlsRequired", "Username", });
     internal_static_v1_MongoLegacyHost_descriptor =
       getDescriptor().getMessageTypes().get(82);
     internal_static_v1_MongoLegacyHost_fieldAccessorTable = new
@@ -408303,13 +408870,13 @@ public final class DriversPlumbing {
     internal_static_v1_MongoReplicaSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoReplicaSet_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "EgressFilter", "BindInterface", "ProxyClusterId", "Subdomain", "AuthDatabase", "ConnectToReplica", "Hostname", "Password", "Port", "PortOverride", "TlsRequired", "Username", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "EgressFilter", "BindInterface", "ProxyClusterId", "Subdomain", "AuthDatabase", "ConnectToReplica", "Hostname", "Password", "Port", "PortOverride", "Region", "TlsRequired", "Username", });
     internal_static_v1_MongoShardedCluster_descriptor =
       getDescriptor().getMessageTypes().get(85);
     internal_static_v1_MongoShardedCluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoShardedCluster_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "EgressFilter", "BindInterface", "ProxyClusterId", "Subdomain", "AuthDatabase", "Hostname", "Password", "PortOverride", "TlsRequired", "Username", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "EgressFilter", "BindInterface", "ProxyClusterId", "Subdomain", "AuthDatabase", "Hostname", "Password", "PortOverride", "Region", "TlsRequired", "Username", });
     internal_static_v1_Mysql_descriptor =
       getDescriptor().getMessageTypes().get(86);
     internal_static_v1_Mysql_fieldAccessorTable = new

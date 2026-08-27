@@ -9144,6 +9144,61 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.DelineaDSVStore convertDelineaDSVStoreToPorcelain(
+      DelineaDSVStore plumbing) {
+    com.strongdm.api.DelineaDSVStore porcelain = new com.strongdm.api.DelineaDSVStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTenant((plumbing.getTenant()));
+    porcelain.setTld((plumbing.getTld()));
+    return porcelain;
+  }
+
+  public static DelineaDSVStore convertDelineaDSVStoreToPlumbing(
+      com.strongdm.api.DelineaDSVStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    DelineaDSVStore.Builder builder = DelineaDSVStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getTenant() != null) {
+      builder.setTenant((porcelain.getTenant()));
+    }
+    if (porcelain.getTld() != null) {
+      builder.setTld((porcelain.getTld()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.DelineaDSVStore> convertRepeatedDelineaDSVStoreToPorcelain(
+      Collection<DelineaDSVStore> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.DelineaDSVStore>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertDelineaDSVStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<DelineaDSVStore> convertRepeatedDelineaDSVStoreToPlumbing(
+      Collection<com.strongdm.api.DelineaDSVStore> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<DelineaDSVStore>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertDelineaDSVStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.DelineaStore convertDelineaStoreToPorcelain(
       DelineaStore plumbing) {
     com.strongdm.api.DelineaStore porcelain = new com.strongdm.api.DelineaStore();
@@ -16704,6 +16759,7 @@ public class Plumbing {
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -16743,6 +16799,9 @@ public class Plumbing {
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
     }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
@@ -16979,6 +17038,7 @@ public class Plumbing {
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -17020,6 +17080,9 @@ public class Plumbing {
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
     }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
@@ -17070,6 +17133,7 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setRegion((plumbing.getRegion()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -17109,6 +17173,9 @@ public class Plumbing {
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getProxyClusterId() != null) {
       builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
     }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
@@ -25409,6 +25476,9 @@ public class Plumbing {
     if (plumbing.hasDelinea()) {
       return convertDelineaStoreToPorcelain(plumbing.getDelinea());
     }
+    if (plumbing.hasDelineaDsv()) {
+      return convertDelineaDSVStoreToPorcelain(plumbing.getDelineaDsv());
+    }
     if (plumbing.hasGcp()) {
       return convertGCPStoreToPorcelain(plumbing.getGcp());
     }
@@ -25520,6 +25590,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.DelineaStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setDelinea(convertDelineaStoreToPlumbing((com.strongdm.api.DelineaStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.DelineaDSVStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setDelineaDsv(
+          convertDelineaDSVStoreToPlumbing((com.strongdm.api.DelineaDSVStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.GCPStore) {
