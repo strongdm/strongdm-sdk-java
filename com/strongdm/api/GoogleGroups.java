@@ -17,7 +17,11 @@
 
 package com.strongdm.api;
 
-public class MCPGatewayPAT implements Resource {
+/**
+ * GoogleGroups is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
+public class GoogleGroups implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -38,6 +42,26 @@ public class MCPGatewayPAT implements Resource {
     this.bindInterface = in;
   }
 
+  private boolean discoveryEnabled;
+  /** If true, configures discovery of the Google Workspace account to be run from a node. */
+  public boolean getDiscoveryEnabled() {
+    return this.discoveryEnabled;
+  }
+  /** If true, configures discovery of the Google Workspace account to be run from a node. */
+  public void setDiscoveryEnabled(boolean in) {
+    this.discoveryEnabled = in;
+  }
+
+  private String domain;
+  /** The primary domain of the Google Workspace account that owns the groups. */
+  public String getDomain() {
+    return this.domain;
+  }
+  /** The primary domain of the Google Workspace account that owns the groups. */
+  public void setDomain(String in) {
+    this.domain = in;
+  }
+
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
@@ -46,6 +70,16 @@ public class MCPGatewayPAT implements Resource {
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public void setEgressFilter(String in) {
     this.egressFilter = in;
+  }
+
+  private String groupEmails;
+  /** comma separated list of group email addresses to filter by. Supports wildcards (*) */
+  public String getGroupEmails() {
+    return this.groupEmails;
+  }
+  /** comma separated list of group email addresses to filter by. Supports wildcards (*) */
+  public void setGroupEmails(String in) {
+    this.groupEmails = in;
   }
 
   private boolean healthy;
@@ -68,6 +102,16 @@ public class MCPGatewayPAT implements Resource {
     this.id = in;
   }
 
+  private String identitySetId;
+  /** The ID of the identity set to use for identity connections. */
+  public String getIdentitySetId() {
+    return this.identitySetId;
+  }
+  /** The ID of the identity set to use for identity connections. */
+  public void setIdentitySetId(String in) {
+    this.identitySetId = in;
+  }
+
   private String name;
   /** Unique human-readable name of the Resource. */
   public String getName() {
@@ -78,30 +122,14 @@ public class MCPGatewayPAT implements Resource {
     this.name = in;
   }
 
-  private String password;
-  /** The password to authenticate with. */
-  public String getPassword() {
-    return this.password;
+  private String privilegeLevels;
+  /** The privilege levels specify which Groups are managed externally */
+  public String getPrivilegeLevels() {
+    return this.privilegeLevels;
   }
-  /** The password to authenticate with. */
-  public void setPassword(String in) {
-    this.password = in;
-  }
-
-  private int portOverride;
-  /**
-   * The local port used by clients to connect to this resource. It is automatically generated if
-   * not provided on create and may be re-generated on update by specifying a value of -1.
-   */
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-  /**
-   * The local port used by clients to connect to this resource. It is automatically generated if
-   * not provided on create and may be re-generated on update by specifying a value of -1.
-   */
-  public void setPortOverride(int in) {
-    this.portOverride = in;
+  /** The privilege levels specify which Groups are managed externally */
+  public void setPrivilegeLevels(String in) {
+    this.privilegeLevels = in;
   }
 
   private String proxyClusterId;
@@ -159,35 +187,5 @@ public class MCPGatewayPAT implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private String tlsCert;
-  /** Custom TLS certificate for upstream connection. */
-  public String getTlsCert() {
-    return this.tlsCert;
-  }
-  /** Custom TLS certificate for upstream connection. */
-  public void setTlsCert(String in) {
-    this.tlsCert = in;
-  }
-
-  private boolean tlsInsecure;
-  /** Skip TLS certificate verification for the upstream connection. */
-  public boolean getTlsInsecure() {
-    return this.tlsInsecure;
-  }
-  /** Skip TLS certificate verification for the upstream connection. */
-  public void setTlsInsecure(boolean in) {
-    this.tlsInsecure = in;
-  }
-
-  private String url;
-  /** The URL to dial to initiate a connection from the egress node to this resource. */
-  public String getUrl() {
-    return this.url;
-  }
-  /** The URL to dial to initiate a connection from the egress node to this resource. */
-  public void setUrl(String in) {
-    this.url = in;
   }
 }

@@ -11093,6 +11093,93 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.GoogleGroups convertGoogleGroupsToPorcelain(
+      GoogleGroups plumbing) {
+    com.strongdm.api.GoogleGroups porcelain = new com.strongdm.api.GoogleGroups();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDiscoveryEnabled((plumbing.getDiscoveryEnabled()));
+    porcelain.setDomain((plumbing.getDomain()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setGroupEmails((plumbing.getGroupEmails()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setIdentitySetId((plumbing.getIdentitySetId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPrivilegeLevels((plumbing.getPrivilegeLevels()));
+    porcelain.setProxyClusterId((plumbing.getProxyClusterId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static GoogleGroups convertGoogleGroupsToPlumbing(
+      com.strongdm.api.GoogleGroups porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GoogleGroups.Builder builder = GoogleGroups.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    builder.setDiscoveryEnabled(porcelain.getDiscoveryEnabled());
+    if (porcelain.getDomain() != null) {
+      builder.setDomain((porcelain.getDomain()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getGroupEmails() != null) {
+      builder.setGroupEmails((porcelain.getGroupEmails()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getIdentitySetId() != null) {
+      builder.setIdentitySetId((porcelain.getIdentitySetId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPrivilegeLevels() != null) {
+      builder.setPrivilegeLevels((porcelain.getPrivilegeLevels()));
+    }
+    if (porcelain.getProxyClusterId() != null) {
+      builder.setProxyClusterId((porcelain.getProxyClusterId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.GoogleGroups> convertRepeatedGoogleGroupsToPorcelain(
+      Collection<GoogleGroups> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.GoogleGroups>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertGoogleGroupsToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GoogleGroups> convertRepeatedGoogleGroupsToPlumbing(
+      Collection<com.strongdm.api.GoogleGroups> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<GoogleGroups>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertGoogleGroupsToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.GoogleSpanner convertGoogleSpannerToPorcelain(
       GoogleSpanner plumbing) {
     com.strongdm.api.GoogleSpanner porcelain = new com.strongdm.api.GoogleSpanner();
@@ -14730,7 +14817,6 @@ public class Plumbing {
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
-    porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
@@ -14757,9 +14843,6 @@ public class Plumbing {
       builder.setEgressFilter((porcelain.getEgressFilter()));
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname((porcelain.getHostname()));
-    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
@@ -14815,7 +14898,6 @@ public class Plumbing {
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
-    porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setOauthAuthEndpoint((plumbing.getOauthAuthEndpoint()));
@@ -14847,9 +14929,6 @@ public class Plumbing {
       builder.setEgressFilter((porcelain.getEgressFilter()));
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname((porcelain.getHostname()));
-    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
@@ -14920,7 +14999,6 @@ public class Plumbing {
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
-    porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setOauthAuthEndpoint((plumbing.getOauthAuthEndpoint()));
@@ -14951,9 +15029,6 @@ public class Plumbing {
       builder.setEgressFilter((porcelain.getEgressFilter()));
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname((porcelain.getHostname()));
-    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
@@ -15021,7 +15096,6 @@ public class Plumbing {
     porcelain.setBindInterface((plumbing.getBindInterface()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
-    porcelain.setHostname((plumbing.getHostname()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
@@ -15049,9 +15123,6 @@ public class Plumbing {
       builder.setEgressFilter((porcelain.getEgressFilter()));
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname((porcelain.getHostname()));
-    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
@@ -22465,6 +22536,9 @@ public class Plumbing {
     if (plumbing.hasGoogleGkeUserImpersonation()) {
       return convertGoogleGKEUserImpersonationToPorcelain(plumbing.getGoogleGkeUserImpersonation());
     }
+    if (plumbing.hasGoogleGroups()) {
+      return convertGoogleGroupsToPorcelain(plumbing.getGoogleGroups());
+    }
     if (plumbing.hasGoogleSpanner()) {
       return convertGoogleSpannerToPorcelain(plumbing.getGoogleSpanner());
     }
@@ -22985,6 +23059,12 @@ public class Plumbing {
       builder.setGoogleGkeUserImpersonation(
           convertGoogleGKEUserImpersonationToPlumbing(
               (com.strongdm.api.GoogleGKEUserImpersonation) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.GoogleGroups) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setGoogleGroups(
+          convertGoogleGroupsToPlumbing((com.strongdm.api.GoogleGroups) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.GoogleSpanner) {

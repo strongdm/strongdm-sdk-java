@@ -58,16 +58,6 @@ public class MCPGatewayNoAuth implements Resource {
     this.healthy = in;
   }
 
-  private String hostname;
-  /** The host to dial to initiate a connection from the egress node to this resource. */
-  public String getHostname() {
-    return this.hostname;
-  }
-  /** The host to dial to initiate a connection from the egress node to this resource. */
-  public void setHostname(String in) {
-    this.hostname = in;
-  }
-
   private String id;
   /** Unique identifier of the Resource. */
   public String getId() {
