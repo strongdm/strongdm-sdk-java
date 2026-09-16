@@ -9570,6 +9570,33 @@ public final class AccessRequestsPlumbing {
      * <code>.v1.OktaGroupPrivileges oktaGroups = 3 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.AccessRequestsPlumbing.OktaGroupPrivilegesOrBuilder getOktaGroupsOrBuilder();
+
+    /**
+     * <pre>
+     * Google Group privileges. Values are Google Group email addresses.
+     * </pre>
+     *
+     * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the googleGroups field is set.
+     */
+    boolean hasGoogleGroups();
+    /**
+     * <pre>
+     * Google Group privileges. Values are Google Group email addresses.
+     * </pre>
+     *
+     * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+     * @return The googleGroups.
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges getGoogleGroups();
+    /**
+     * <pre>
+     * Google Group privileges. Values are Google Group email addresses.
+     * </pre>
+     *
+     * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivilegesOrBuilder getGoogleGroupsOrBuilder();
   }
   /**
    * <pre>
@@ -9655,6 +9682,19 @@ public final class AccessRequestsPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(oktaGroups_);
                 oktaGroups_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder subBuilder = null;
+              if (googleGroups_ != null) {
+                subBuilder = googleGroups_.toBuilder();
+              }
+              googleGroups_ = input.readMessage(com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(googleGroups_);
+                googleGroups_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9807,6 +9847,44 @@ public final class AccessRequestsPlumbing {
       return getOktaGroups();
     }
 
+    public static final int GOOGLEGROUPS_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges googleGroups_;
+    /**
+     * <pre>
+     * Google Group privileges. Values are Google Group email addresses.
+     * </pre>
+     *
+     * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the googleGroups field is set.
+     */
+    @java.lang.Override
+    public boolean hasGoogleGroups() {
+      return googleGroups_ != null;
+    }
+    /**
+     * <pre>
+     * Google Group privileges. Values are Google Group email addresses.
+     * </pre>
+     *
+     * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+     * @return The googleGroups.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges getGoogleGroups() {
+      return googleGroups_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.getDefaultInstance() : googleGroups_;
+    }
+    /**
+     * <pre>
+     * Google Group privileges. Values are Google Group email addresses.
+     * </pre>
+     *
+     * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivilegesOrBuilder getGoogleGroupsOrBuilder() {
+      return getGoogleGroups();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9830,6 +9908,9 @@ public final class AccessRequestsPlumbing {
       if (oktaGroups_ != null) {
         output.writeMessage(3, getOktaGroups());
       }
+      if (googleGroups_ != null) {
+        output.writeMessage(4, getGoogleGroups());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9850,6 +9931,10 @@ public final class AccessRequestsPlumbing {
       if (oktaGroups_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getOktaGroups());
+      }
+      if (googleGroups_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGoogleGroups());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9881,6 +9966,11 @@ public final class AccessRequestsPlumbing {
         if (!getOktaGroups()
             .equals(other.getOktaGroups())) return false;
       }
+      if (hasGoogleGroups() != other.hasGoogleGroups()) return false;
+      if (hasGoogleGroups()) {
+        if (!getGoogleGroups()
+            .equals(other.getGoogleGroups())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9903,6 +9993,10 @@ public final class AccessRequestsPlumbing {
       if (hasOktaGroups()) {
         hash = (37 * hash) + OKTAGROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getOktaGroups().hashCode();
+      }
+      if (hasGoogleGroups()) {
+        hash = (37 * hash) + GOOGLEGROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGoogleGroups().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10059,6 +10153,12 @@ public final class AccessRequestsPlumbing {
           oktaGroups_ = null;
           oktaGroupsBuilder_ = null;
         }
+        if (googleGroupsBuilder_ == null) {
+          googleGroups_ = null;
+        } else {
+          googleGroups_ = null;
+          googleGroupsBuilder_ = null;
+        }
         return this;
       }
 
@@ -10099,6 +10199,11 @@ public final class AccessRequestsPlumbing {
           result.oktaGroups_ = oktaGroups_;
         } else {
           result.oktaGroups_ = oktaGroupsBuilder_.build();
+        }
+        if (googleGroupsBuilder_ == null) {
+          result.googleGroups_ = googleGroups_;
+        } else {
+          result.googleGroups_ = googleGroupsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10156,6 +10261,9 @@ public final class AccessRequestsPlumbing {
         }
         if (other.hasOktaGroups()) {
           mergeOktaGroups(other.getOktaGroups());
+        }
+        if (other.hasGoogleGroups()) {
+          mergeGoogleGroups(other.getGoogleGroups());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10649,6 +10757,161 @@ public final class AccessRequestsPlumbing {
           oktaGroups_ = null;
         }
         return oktaGroupsBuilder_;
+      }
+
+      private com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges googleGroups_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivilegesOrBuilder> googleGroupsBuilder_;
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the googleGroups field is set.
+       */
+      public boolean hasGoogleGroups() {
+        return googleGroupsBuilder_ != null || googleGroups_ != null;
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       * @return The googleGroups.
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges getGoogleGroups() {
+        if (googleGroupsBuilder_ == null) {
+          return googleGroups_ == null ? com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.getDefaultInstance() : googleGroups_;
+        } else {
+          return googleGroupsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setGoogleGroups(com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges value) {
+        if (googleGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          googleGroups_ = value;
+          onChanged();
+        } else {
+          googleGroupsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setGoogleGroups(
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder builderForValue) {
+        if (googleGroupsBuilder_ == null) {
+          googleGroups_ = builderForValue.build();
+          onChanged();
+        } else {
+          googleGroupsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeGoogleGroups(com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges value) {
+        if (googleGroupsBuilder_ == null) {
+          if (googleGroups_ != null) {
+            googleGroups_ =
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.newBuilder(googleGroups_).mergeFrom(value).buildPartial();
+          } else {
+            googleGroups_ = value;
+          }
+          onChanged();
+        } else {
+          googleGroupsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearGoogleGroups() {
+        if (googleGroupsBuilder_ == null) {
+          googleGroups_ = null;
+          onChanged();
+        } else {
+          googleGroups_ = null;
+          googleGroupsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder getGoogleGroupsBuilder() {
+        
+        onChanged();
+        return getGoogleGroupsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivilegesOrBuilder getGoogleGroupsOrBuilder() {
+        if (googleGroupsBuilder_ != null) {
+          return googleGroupsBuilder_.getMessageOrBuilder();
+        } else {
+          return googleGroups_ == null ?
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.getDefaultInstance() : googleGroups_;
+        }
+      }
+      /**
+       * <pre>
+       * Google Group privileges. Values are Google Group email addresses.
+       * </pre>
+       *
+       * <code>.v1.GoogleGroupPrivileges googleGroups = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivilegesOrBuilder> 
+          getGoogleGroupsFieldBuilder() {
+        if (googleGroupsBuilder_ == null) {
+          googleGroupsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivilegesOrBuilder>(
+                  getGoogleGroups(),
+                  getParentForChildren(),
+                  isClean());
+          googleGroups_ = null;
+        }
+        return googleGroupsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12827,6 +13090,714 @@ public final class AccessRequestsPlumbing {
 
   }
 
+  public interface GoogleGroupPrivilegesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.GoogleGroupPrivileges)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the groups.
+     */
+    java.util.List<java.lang.String>
+        getGroupsList();
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of groups.
+     */
+    int getGroupsCount();
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The groups at the given index.
+     */
+    java.lang.String getGroups(int index);
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the groups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getGroupsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code v1.GoogleGroupPrivileges}
+   */
+  public static final class GoogleGroupPrivileges extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.GoogleGroupPrivileges)
+      GoogleGroupPrivilegesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GoogleGroupPrivileges.newBuilder() to construct.
+    private GoogleGroupPrivileges(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GoogleGroupPrivileges() {
+      groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GoogleGroupPrivileges();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GoogleGroupPrivileges(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                groups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              groups_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          groups_ = groups_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_GoogleGroupPrivileges_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_GoogleGroupPrivileges_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder.class);
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList groups_;
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the groups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @return The count of groups.
+     */
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The groups at the given index.
+     */
+    public java.lang.String getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <pre>
+     * The google groups, as group email addresses
+     * </pre>
+     *
+     * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the groups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getGroupsBytes(int index) {
+      return groups_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groups_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < groups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(groups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getGroupsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges other = (com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges) obj;
+
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.GoogleGroupPrivileges}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.GoogleGroupPrivileges)
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivilegesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_GoogleGroupPrivileges_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_GoogleGroupPrivileges_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.class, com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.internal_static_v1_GoogleGroupPrivileges_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges build() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges buildPartial() {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges result = new com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          groups_ = groups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.groups_ = groups_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges) {
+          return mergeFrom((com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges other) {
+        if (other == com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges.getDefaultInstance()) return this;
+        if (!other.groups_.isEmpty()) {
+          if (groups_.isEmpty()) {
+            groups_ = other.groups_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureGroupsIsMutable();
+            groups_.addAll(other.groups_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groups_ = new com.google.protobuf.LazyStringArrayList(groups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the groups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getGroupsList() {
+        return groups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return The count of groups.
+       */
+      public int getGroupsCount() {
+        return groups_.size();
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The groups at the given index.
+       */
+      public java.lang.String getGroups(int index) {
+        return groups_.get(index);
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the groups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getGroupsBytes(int index) {
+        return groups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The groups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGroupsIsMutable();
+        groups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGroupsIsMutable();
+        groups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param values The groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, groups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroups() {
+        groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The google groups, as group email addresses
+       * </pre>
+       *
+       * <code>repeated string groups = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the groups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureGroupsIsMutable();
+        groups_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.GoogleGroupPrivileges)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.GoogleGroupPrivileges)
+    private static final com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges();
+    }
+
+    public static com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GoogleGroupPrivileges>
+        PARSER = new com.google.protobuf.AbstractParser<GoogleGroupPrivileges>() {
+      @java.lang.Override
+      public GoogleGroupPrivileges parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GoogleGroupPrivileges(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GoogleGroupPrivileges> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GoogleGroupPrivileges> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.AccessRequestsPlumbing.GoogleGroupPrivileges getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AccessRequestConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.AccessRequestConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -14087,7 +15058,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -14099,7 +15070,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated int getResourceIdsCount();
@@ -14110,7 +15081,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -14122,7 +15093,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -14356,7 +15327,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @return A list containing the resourceIds.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -14370,7 +15341,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @return The count of resourceIds.
      */
     @java.lang.Deprecated public int getResourceIdsCount() {
@@ -14383,7 +15354,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @param index The index of the element to return.
      * @return The resourceIds at the given index.
      */
@@ -14397,7 +15368,7 @@ public final class AccessRequestsPlumbing {
      *
      * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
      * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-     *     See access_requests.proto;l=309
+     *     See access_requests.proto;l=327
      * @param index The index of the value to return.
      * @return The bytes of the resourceIds at the given index.
      */
@@ -15002,7 +15973,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @return A list containing the resourceIds.
        */
       @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -15016,7 +15987,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @return The count of resourceIds.
        */
       @java.lang.Deprecated public int getResourceIdsCount() {
@@ -15029,7 +16000,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @param index The index of the element to return.
        * @return The resourceIds at the given index.
        */
@@ -15043,7 +16014,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @param index The index of the value to return.
        * @return The bytes of the resourceIds at the given index.
        */
@@ -15058,7 +16029,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @param index The index to set the value at.
        * @param value The resourceIds to set.
        * @return This builder for chaining.
@@ -15080,7 +16051,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @param value The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -15101,7 +16072,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @param values The resourceIds to add.
        * @return This builder for chaining.
        */
@@ -15120,7 +16091,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResourceIds() {
@@ -15136,7 +16107,7 @@ public final class AccessRequestsPlumbing {
        *
        * <code>repeated string resource_ids = 1 [deprecated = true, (.v1.field_options) = { ... }</code>
        * @deprecated v1.RequestAccessRequestConfig.resource_ids is deprecated.
-       *     See access_requests.proto;l=309
+       *     See access_requests.proto;l=327
        * @param value The bytes of the resourceIds to add.
        * @return This builder for chaining.
        */
@@ -15693,6 +16664,11 @@ public final class AccessRequestsPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_OktaGroupPrivileges_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_GoogleGroupPrivileges_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_GoogleGroupPrivileges_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccessRequestConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15754,45 +16730,48 @@ public final class AccessRequestsPlumbing {
       "legesMessageB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private\022" +
       "@\n\035privileges_requirement_status\030\t \001(\tB\031" +
       "\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:\020\372\370\263\007\013\250\363\263\007\001\322\363\263" +
-      "\007\001*\"\334\001\n\021PrivilegesMessage\0228\n\nkubernetes\030" +
+      "\007\001*\"\231\002\n\021PrivilegesMessage\0228\n\nkubernetes\030" +
       "\001 \001(\0132\030.v1.KubernetesPrivilegesB\n\362\370\263\007\005\260\363" +
       "\263\007\001\0229\n\013entraGroups\030\002 \001(\0132\030.v1.EntraGroup" +
       "PrivilegesB\n\362\370\263\007\005\260\363\263\007\001\0227\n\noktaGroups\030\003 \001" +
-      "(\0132\027.v1.OktaGroupPrivilegesB\n\362\370\263\007\005\260\363\263\007\001:" +
-      "\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"M\n\024Kubernetes" +
-      "Privileges\022\032\n\006groups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031" +
-      "\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"M\n\024EntraGroupP" +
-      "rivileges\022\032\n\006groups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372" +
-      "\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"L\n\023OktaGroupPri" +
-      "vileges\022\032\n\006groups\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263" +
-      "\007\024\250\363\263\007\001\322\363\263\007\ngo_private\"\303\001\n\023AccessRequest" +
-      "Config\022$\n\013resource_id\030\001 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
-      "\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstar" +
-      "t_from\030\003 \001(\0132\032.google.protobuf.Timestamp" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001*\"\352\003\n\032RequestAccessRe" +
-      "questConfig\022\'\n\014resource_ids\030\001 \003(\tB\021\030\001\362\370\263" +
-      "\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022:\n\nstart_from\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010duration\030\004 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022\221\002\n\014access_rules\030\005 \001(\tB\372\001\362\370\263\007" +
-      "\364\001\260\363\263\007\001\312\363\263\007\310\001\352\363\263\007\014access_rules\362\363\263\007\021\n\002go\022" +
-      "\013AccessRules\362\363\263\007\031\n\ngo_private\022\013AccessRul" +
-      "es\362\363\263\007\033\n\014go_terraform\022\013AccessRules\362\363\263\007\030\n" +
-      "\004java\022\020List<AccessRule>\362\363\263\007\032\n\006csharp\022\020Li" +
-      "st<AccessRule>\362\363\263\007\"\n\014json_gateway\022\022model" +
-      "s.AccessRules\272\364\263\007\027accessRulesDiffSuppres" +
-      "s\320\364\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private2\331\001\n\016Ac" +
-      "cessRequests\022o\n\004List\022\034.v1.AccessRequestL" +
-      "istRequest\032\035.v1.AccessRequestListRespons" +
-      "e\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/access-req" +
-      "uests\032V\312\371\263\007\022\302\371\263\007\rAccessRequest\312\371\263\007\010\322\371\263\007\003" +
-      "aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
-      "der\312\371\263\007\005\350\371\263\007\001B\222\001\n\031com.strongdm.api.plumb" +
-      "ingB\026AccessRequestsPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
-      "v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provid" +
-      "erb\006proto3"
+      "(\0132\027.v1.OktaGroupPrivilegesB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      ";\n\014googleGroups\030\004 \001(\0132\031.v1.GoogleGroupPr" +
+      "ivilegesB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_" +
+      "private\"M\n\024KubernetesPrivileges\022\032\n\006group" +
+      "s\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
+      "rivate\"M\n\024EntraGroupPrivileges\022\032\n\006groups" +
+      "\030\001 \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_pr" +
+      "ivate\"L\n\023OktaGroupPrivileges\022\032\n\006groups\030\001" +
+      " \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priv" +
+      "ate\"N\n\025GoogleGroupPrivileges\022\032\n\006groups\030\001" +
+      " \003(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_priv" +
+      "ate\"\303\001\n\023AccessRequestConfig\022$\n\013resource_" +
+      "id\030\001 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006reason\030\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(\0132\032.goog" +
+      "le.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010dur" +
+      "ation\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\020\372\370\263\007\013\250\363\263\007\001\322\363\263\007\001" +
+      "*\"\352\003\n\032RequestAccessRequestConfig\022\'\n\014reso" +
+      "urce_ids\030\001 \003(\tB\021\030\001\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\032\n\006rea" +
+      "son\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nstart_from\030\003 \001(" +
+      "\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\034\n\010duration\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\221\002\n\014acce" +
+      "ss_rules\030\005 \001(\tB\372\001\362\370\263\007\364\001\260\363\263\007\001\312\363\263\007\310\001\352\363\263\007\014a" +
+      "ccess_rules\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\n" +
+      "go_private\022\013AccessRules\362\363\263\007\033\n\014go_terrafo" +
+      "rm\022\013AccessRules\362\363\263\007\030\n\004java\022\020List<AccessR" +
+      "ule>\362\363\263\007\032\n\006csharp\022\020List<AccessRule>\362\363\263\007\"" +
+      "\n\014json_gateway\022\022models.AccessRules\272\364\263\007\027a" +
+      "ccessRulesDiffSuppress\320\364\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322" +
+      "\363\263\007\ngo_private2\331\001\n\016AccessRequests\022o\n\004Lis" +
+      "t\022\034.v1.AccessRequestListRequest\032\035.v1.Acc" +
+      "essRequestListResponse\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\030\252\363\263\007\023/v1/access-requests\032V\312\371\263\007\022\302\371\263\007\rAc" +
+      "cessRequest\312\371\263\007\010\322\371\263\007\003aq-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030" +
+      "\312\371\263\007\023!terraform-provider\312\371\263\007\005\350\371\263\007\001B\222\001\n\031c" +
+      "om.strongdm.api.plumbingB\026AccessRequests" +
+      "PlumbingZ5github.com/strongdm/strongdm-s" +
+      "dk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242" +
+      "\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15838,7 +16817,7 @@ public final class AccessRequestsPlumbing {
     internal_static_v1_PrivilegesMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_PrivilegesMessage_descriptor,
-        new java.lang.String[] { "Kubernetes", "EntraGroups", "OktaGroups", });
+        new java.lang.String[] { "Kubernetes", "EntraGroups", "OktaGroups", "GoogleGroups", });
     internal_static_v1_KubernetesPrivileges_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_v1_KubernetesPrivileges_fieldAccessorTable = new
@@ -15857,14 +16836,20 @@ public final class AccessRequestsPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_OktaGroupPrivileges_descriptor,
         new java.lang.String[] { "Groups", });
-    internal_static_v1_AccessRequestConfig_descriptor =
+    internal_static_v1_GoogleGroupPrivileges_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_v1_GoogleGroupPrivileges_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_GoogleGroupPrivileges_descriptor,
+        new java.lang.String[] { "Groups", });
+    internal_static_v1_AccessRequestConfig_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_v1_AccessRequestConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRequestConfig_descriptor,
         new java.lang.String[] { "ResourceId", "Reason", "StartFrom", "Duration", });
     internal_static_v1_RequestAccessRequestConfig_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_v1_RequestAccessRequestConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RequestAccessRequestConfig_descriptor,

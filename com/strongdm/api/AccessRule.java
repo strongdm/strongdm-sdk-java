@@ -148,6 +148,7 @@ public class AccessRule {
   public static class Privileges {
     private K8sPrivileges k8s;
     private EntraGroupsPrivileges entraGroups;
+    private GoogleGroupsPrivileges googleGroups;
 
     public void setK8s(K8sPrivileges k8sPrivileges) {
       this.k8s = k8sPrivileges;
@@ -163,6 +164,14 @@ public class AccessRule {
 
     public EntraGroupsPrivileges getEntraGroups() {
       return this.entraGroups;
+    }
+
+    public void setGoogleGroups(GoogleGroupsPrivileges googleGroupsPrivileges) {
+      this.googleGroups = googleGroupsPrivileges;
+    }
+
+    public GoogleGroupsPrivileges getGoogleGroups() {
+      return this.googleGroups;
     }
   }
 
@@ -207,6 +216,46 @@ public class AccessRule {
   }
 
   public static class EntraGroupsPrivileges {
+    private ArrayList<String> groups = new ArrayList<String>();
+
+    public List<String> getGroups() {
+      return this.groups;
+    }
+
+    public String getGroup(int index) {
+      return this.groups.get(index);
+    }
+
+    public int getGroupsCount() {
+      return this.groups.size();
+    }
+
+    public void setGroup(int index, String v) {
+      this.groups.set(index, v);
+    }
+
+    public void removeGroup(int index) {
+      this.groups.remove(index);
+    }
+
+    public void addGroup(String v) {
+      this.groups.add(v);
+    }
+
+    public void addAllGroups(Collection<String> v) {
+      this.groups.addAll(v);
+    }
+
+    public void setGroups(Collection<String> in) {
+      this.groups = new ArrayList<>(in);
+    }
+
+    public void clearGroups() {
+      this.groups.clear();
+    }
+  }
+
+  public static class GoogleGroupsPrivileges {
     private ArrayList<String> groups = new ArrayList<String>();
 
     public List<String> getGroups() {

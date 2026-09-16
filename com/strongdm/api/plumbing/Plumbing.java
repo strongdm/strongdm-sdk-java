@@ -319,6 +319,31 @@ public class Plumbing {
                   }
                   privileges.setEntraGroups(entraGroupsPrivileges);
                   break;
+                case "googleGroups":
+                  JSONObject jsonGoogleGroupsPrivileges =
+                      jsonPrivileges.getJSONObject("googleGroups");
+                  com.strongdm.api.AccessRule.GoogleGroupsPrivileges googleGroupsPrivileges =
+                      new com.strongdm.api.AccessRule.GoogleGroupsPrivileges();
+                  for (Iterator<String> googleGroupsPrivilegeKeyIterator =
+                          jsonGoogleGroupsPrivileges.keys();
+                      googleGroupsPrivilegeKeyIterator.hasNext(); ) {
+                    String googleGroupsPrivilegeKey = googleGroupsPrivilegeKeyIterator.next();
+                    switch (googleGroupsPrivilegeKey) {
+                      case "groups":
+                        JSONArray groups = jsonGoogleGroupsPrivileges.getJSONArray("groups");
+                        for (int j = 0; j < groups.length(); j++) {
+                          googleGroupsPrivileges.addGroup(groups.getString(j));
+                        }
+                        break;
+                      default:
+                        throw new UnknownException(
+                            "unknown googleGroups privileges field '"
+                                + googleGroupsPrivilegeKey
+                                + "', please upgrade your SDK");
+                    }
+                  }
+                  privileges.setGoogleGroups(googleGroupsPrivileges);
+                  break;
                 default:
                   throw new UnknownException(
                       "unknown privileges field '" + privilegeKey + "', please upgrade your SDK");
@@ -469,6 +494,31 @@ public class Plumbing {
                   }
                 }
                 privileges.setEntraGroups(entraGroupsPrivileges);
+                break;
+              case "googleGroups":
+                JSONObject jsonGoogleGroupsPrivileges =
+                    jsonPrivileges.getJSONObject("googleGroups");
+                com.strongdm.api.AccessRule.GoogleGroupsPrivileges googleGroupsPrivileges =
+                    new com.strongdm.api.AccessRule.GoogleGroupsPrivileges();
+                for (Iterator<String> googleGroupsPrivilegeKeyIterator =
+                        jsonGoogleGroupsPrivileges.keys();
+                    googleGroupsPrivilegeKeyIterator.hasNext(); ) {
+                  String googleGroupsPrivilegeKey = googleGroupsPrivilegeKeyIterator.next();
+                  switch (googleGroupsPrivilegeKey) {
+                    case "groups":
+                      JSONArray groups = jsonGoogleGroupsPrivileges.getJSONArray("groups");
+                      for (int j = 0; j < groups.length(); j++) {
+                        googleGroupsPrivileges.addGroup(groups.getString(j));
+                      }
+                      break;
+                    default:
+                      throw new UnknownException(
+                          "unknown googleGroups privileges field '"
+                              + googleGroupsPrivilegeKey
+                              + "', please upgrade your SDK");
+                  }
+                }
+                privileges.setGoogleGroups(googleGroupsPrivileges);
                 break;
               default:
                 throw new UnknownException(
