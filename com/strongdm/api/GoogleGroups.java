@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * GoogleGroups is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class GoogleGroups implements Resource {
   private String bindInterface;
   /**
@@ -53,11 +49,17 @@ public class GoogleGroups implements Resource {
   }
 
   private String domain;
-  /** The primary domain of the Google Workspace account that owns the groups. */
+  /**
+   * The Google Workspace domain that owns the groups. Only groups whose email address is at this
+   * exact domain are discovered; add one resource per secondary domain.
+   */
   public String getDomain() {
     return this.domain;
   }
-  /** The primary domain of the Google Workspace account that owns the groups. */
+  /**
+   * The Google Workspace domain that owns the groups. Only groups whose email address is at this
+   * exact domain are discovered; add one resource per secondary domain.
+   */
   public void setDomain(String in) {
     this.domain = in;
   }
