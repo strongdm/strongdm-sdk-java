@@ -4123,6 +4123,16 @@ public final class OrganizationHistoryPlumbing {
      * <code>.v1.LogConfig log_config = 32 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfigOrBuilder getLogConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Indicates if the Organization has AI Agent controls enabled.
+     * </pre>
+     *
+     * <code>bool peer_policies_enabled = 33 [(.v1.field_options) = { ... }</code>
+     * @return The peerPoliciesEnabled.
+     */
+    boolean getPeerPoliciesEnabled();
   }
   /**
    * Protobuf type {@code v1.Organization}
@@ -5450,6 +5460,21 @@ public final class OrganizationHistoryPlumbing {
       return logConfig_ == null ? com.strongdm.api.plumbing.OrganizationHistoryPlumbing.LogConfig.getDefaultInstance() : logConfig_;
     }
 
+    public static final int PEER_POLICIES_ENABLED_FIELD_NUMBER = 33;
+    private boolean peerPoliciesEnabled_ = false;
+    /**
+     * <pre>
+     * Indicates if the Organization has AI Agent controls enabled.
+     * </pre>
+     *
+     * <code>bool peer_policies_enabled = 33 [(.v1.field_options) = { ... }</code>
+     * @return The peerPoliciesEnabled.
+     */
+    @java.lang.Override
+    public boolean getPeerPoliciesEnabled() {
+      return peerPoliciesEnabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5559,6 +5584,9 @@ public final class OrganizationHistoryPlumbing {
       }
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(32, getLogConfig());
+      }
+      if (peerPoliciesEnabled_ != false) {
+        output.writeBool(33, peerPoliciesEnabled_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5678,6 +5706,10 @@ public final class OrganizationHistoryPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32, getLogConfig());
       }
+      if (peerPoliciesEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(33, peerPoliciesEnabled_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5775,6 +5807,8 @@ public final class OrganizationHistoryPlumbing {
         if (!getLogConfig()
             .equals(other.getLogConfig())) return false;
       }
+      if (getPeerPoliciesEnabled()
+          != other.getPeerPoliciesEnabled()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5869,6 +5903,9 @@ public final class OrganizationHistoryPlumbing {
         hash = (37 * hash) + LOG_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getLogConfig().hashCode();
       }
+      hash = (37 * hash) + PEER_POLICIES_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPeerPoliciesEnabled());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6011,6 +6048,7 @@ public final class OrganizationHistoryPlumbing {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        bitField1_ = 0;
         name_ = "";
         createdAt_ = null;
         if (createdAtBuilder_ != null) {
@@ -6067,6 +6105,7 @@ public final class OrganizationHistoryPlumbing {
           logConfigBuilder_.dispose();
           logConfigBuilder_ = null;
         }
+        peerPoliciesEnabled_ = false;
         return this;
       }
 
@@ -6094,6 +6133,7 @@ public final class OrganizationHistoryPlumbing {
       public com.strongdm.api.plumbing.OrganizationHistoryPlumbing.Organization buildPartial() {
         com.strongdm.api.plumbing.OrganizationHistoryPlumbing.Organization result = new com.strongdm.api.plumbing.OrganizationHistoryPlumbing.Organization(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
         onBuilt();
         return result;
       }
@@ -6216,6 +6256,13 @@ public final class OrganizationHistoryPlumbing {
           to_bitField0_ |= 0x00000020;
         }
         result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartial1(com.strongdm.api.plumbing.OrganizationHistoryPlumbing.Organization result) {
+        int from_bitField1_ = bitField1_;
+        if (((from_bitField1_ & 0x00000001) != 0)) {
+          result.peerPoliciesEnabled_ = peerPoliciesEnabled_;
+        }
       }
 
       @java.lang.Override
@@ -6395,6 +6442,9 @@ public final class OrganizationHistoryPlumbing {
         }
         if (other.hasLogConfig()) {
           mergeLogConfig(other.getLogConfig());
+        }
+        if (other.getPeerPoliciesEnabled() != false) {
+          setPeerPoliciesEnabled(other.getPeerPoliciesEnabled());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6594,6 +6644,11 @@ public final class OrganizationHistoryPlumbing {
                 bitField0_ |= 0x80000000;
                 break;
               } // case 258
+              case 264: {
+                peerPoliciesEnabled_ = input.readBool();
+                bitField1_ |= 0x00000001;
+                break;
+              } // case 264
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6610,6 +6665,7 @@ public final class OrganizationHistoryPlumbing {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private java.lang.Object name_ = "";
       /**
@@ -9721,6 +9777,50 @@ public final class OrganizationHistoryPlumbing {
           logConfig_ = null;
         }
         return logConfigBuilder_;
+      }
+
+      private boolean peerPoliciesEnabled_ ;
+      /**
+       * <pre>
+       * Indicates if the Organization has AI Agent controls enabled.
+       * </pre>
+       *
+       * <code>bool peer_policies_enabled = 33 [(.v1.field_options) = { ... }</code>
+       * @return The peerPoliciesEnabled.
+       */
+      @java.lang.Override
+      public boolean getPeerPoliciesEnabled() {
+        return peerPoliciesEnabled_;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization has AI Agent controls enabled.
+       * </pre>
+       *
+       * <code>bool peer_policies_enabled = 33 [(.v1.field_options) = { ... }</code>
+       * @param value The peerPoliciesEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPeerPoliciesEnabled(boolean value) {
+
+        peerPoliciesEnabled_ = value;
+        bitField1_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates if the Organization has AI Agent controls enabled.
+       * </pre>
+       *
+       * <code>bool peer_policies_enabled = 33 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPeerPoliciesEnabled() {
+        bitField1_ = (bitField1_ & ~0x00000001);
+        peerPoliciesEnabled_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13852,7 +13952,7 @@ public final class OrganizationHistoryPlumbing {
       "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0222\n" +
       "\014organization\030\003 \001(\0132\020.v1.OrganizationB\n\362" +
       "\370\263\007\005\260\363\263\007\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!terrafo" +
-      "rm-provider\"\227\r\n\014Organization\022\030\n\004name\030\001 \001" +
+      "rm-provider\"\321\r\n\014Organization\022\030\n\004name\030\001 \001" +
       "(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.goo" +
       "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nup" +
       "dated_at\030\003 \001(\0132\032.google.protobuf.Timesta" +
@@ -13893,41 +13993,42 @@ public final class OrganizationHistoryPlumbing {
       "\001(\010B\n\362\370\263\007\005\260\363\263\007\001\022%\n\017discard_replays\030\036 \001(\010" +
       "B\014\030\001\362\370\263\007\005\260\363\263\007\001\022$\n\016public_key_pem\030\037 \001(\tB\014" +
       "\030\001\362\370\263\007\005\260\363\263\007\001\022-\n\nlog_config\030  \001(\0132\r.v1.Lo" +
-      "gConfigB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263" +
-      "\007\023!terraform-provider\"\306\002\n\tLogConfig\022!\n\rl" +
-      "ocal_storage\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rlocal_" +
-      "encoder\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014local_forma" +
-      "t\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021local_tcp_address" +
-      "\030\004 \001(\tB)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017LocalT" +
-      "CPAddress\022%\n\021local_socket_path\030\005 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022\036\n\npublic_key\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\0228\n\ncategories\030\007 \001(\0132\030.v1.LogCategoryCon" +
-      "figMapB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\360\003\n\024LogCa" +
-      "tegoryConfigMap\022/\n\007entries\030\001 \003(\0132\036.v1.Lo" +
-      "gCategoryConfigMap.Entry\032[\n\005Entry\022\014\n\004nam" +
-      "e\030\001 \001(\t\022%\n\006config\030\002 \001(\0132\025.v1.LogCategory" +
-      "Config:\035\372\370\263\007\030\322\363\263\007\001*\322\363\263\007\r!json_gateway:\311\002" +
-      "\372\370\263\007\303\002\312\363\263\007\245\002\352\363\263\007\027log_category_config_map" +
-      "\362\363\263\007\032\n\002go\022\024LogCategoryConfigMap\362\363\263\007\"\n\ngo" +
-      "_private\022\024LogCategoryConfigMap\362\363\263\007$\n\014go_" +
-      "terraform\022\024LogCategoryConfigMap\362\363\263\0070\n\004ja" +
-      "va\022(java.util.Map<String, LogCategoryCon" +
-      "fig>\362\363\263\007/\n\006csharp\022%Dictionary<string, Lo" +
-      "gCategoryConfig>\362\363\263\007,\n\014json_gateway\022\034map" +
-      "[string]LogCategoryConfig\322\363\263\007\001*\322\363\263\007\r!jso" +
-      "n_gateway\"o\n\021LogCategoryConfig\022\"\n\016remote" +
-      "_encoder\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\026remote_dis" +
-      "card_replays\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263" +
-      "\007\0012\332\001\n\023OrganizationHistory\022{\n\004List\022\".v1." +
-      "OrganizationHistoryListRequest\032#.v1.Orga" +
-      "nizationHistoryListResponse\"*\202\371\263\007%\242\363\263\007\003g" +
-      "et\252\363\263\007\030/v1/organization-history\032F\312\371\263\007A\302\371" +
-      "\263\007\031OrganizationHistoryRecord\312\371\263\007\001*\312\371\263\007\023!" +
-      "terraform-provider\330\371\263\007\001B\222\001\n\031com.strongdm" +
-      ".api.plumbingB\033OrganizationHistoryPlumbi" +
-      "ngZ5github.com/strongdm/strongdm-sdk-go/" +
-      "v3/internal/v1;v1\302\222\264\007\036\242\214\264\007\001*\242\214\264\007\023!terraf" +
-      "orm-providerb\006proto3"
+      "gConfigB\n\362\370\263\007\005\260\363\263\007\001\0228\n\025peer_policies_ena" +
+      "bled\030! \001(\010B\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:(\372" +
+      "\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!terraform-provider\"" +
+      "\306\002\n\tLogConfig\022!\n\rlocal_storage\030\001 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022!\n\rlocal_encoder\030\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022 \n\014local_format\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n" +
+      "\021local_tcp_address\030\004 \001(\tB)\362\370\263\007$\260\363\263\007\001\312\363\263\007" +
+      "\032\302\364\263\007\025\n\002go\022\017LocalTCPAddress\022%\n\021local_soc" +
+      "ket_path\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\npublic_key" +
+      "\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0228\n\ncategories\030\007 \001(\0132\030" +
+      ".v1.LogCategoryConfigMapB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"\360\003\n\024LogCategoryConfigMap\022/\n\007ent" +
+      "ries\030\001 \003(\0132\036.v1.LogCategoryConfigMap.Ent" +
+      "ry\032[\n\005Entry\022\014\n\004name\030\001 \001(\t\022%\n\006config\030\002 \001(" +
+      "\0132\025.v1.LogCategoryConfig:\035\372\370\263\007\030\322\363\263\007\001*\322\363\263" +
+      "\007\r!json_gateway:\311\002\372\370\263\007\303\002\312\363\263\007\245\002\352\363\263\007\027log_c" +
+      "ategory_config_map\362\363\263\007\032\n\002go\022\024LogCategory" +
+      "ConfigMap\362\363\263\007\"\n\ngo_private\022\024LogCategoryC" +
+      "onfigMap\362\363\263\007$\n\014go_terraform\022\024LogCategory" +
+      "ConfigMap\362\363\263\0070\n\004java\022(java.util.Map<Stri" +
+      "ng, LogCategoryConfig>\362\363\263\007/\n\006csharp\022%Dic" +
+      "tionary<string, LogCategoryConfig>\362\363\263\007,\n" +
+      "\014json_gateway\022\034map[string]LogCategoryCon" +
+      "fig\322\363\263\007\001*\322\363\263\007\r!json_gateway\"o\n\021LogCatego" +
+      "ryConfig\022\"\n\016remote_encoder\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022*\n\026remote_discard_replays\030\002 \001(\010B\n\362\370" +
+      "\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\332\001\n\023OrganizationHis" +
+      "tory\022{\n\004List\022\".v1.OrganizationHistoryLis" +
+      "tRequest\032#.v1.OrganizationHistoryListRes" +
+      "ponse\"*\202\371\263\007%\242\363\263\007\003get\252\363\263\007\030/v1/organizatio" +
+      "n-history\032F\312\371\263\007A\302\371\263\007\031OrganizationHistory" +
+      "Record\312\371\263\007\001*\312\371\263\007\023!terraform-provider\330\371\263\007" +
+      "\001B\222\001\n\031com.strongdm.api.plumbingB\033Organiz" +
+      "ationHistoryPlumbingZ5github.com/strongd" +
+      "m/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\036" +
+      "\242\214\264\007\001*\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13960,7 +14061,7 @@ public final class OrganizationHistoryPlumbing {
     internal_static_v1_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Organization_descriptor,
-        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackRange", "DeviceTrustEnabled", "DeviceTrustProvider", "EnforceSingleSession", "DiscardReplays", "PublicKeyPem", "LogConfig", });
+        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", "LoopbackRange", "DeviceTrustEnabled", "DeviceTrustProvider", "EnforceSingleSession", "DiscardReplays", "PublicKeyPem", "LogConfig", "PeerPoliciesEnabled", });
     internal_static_v1_LogConfig_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_LogConfig_fieldAccessorTable = new

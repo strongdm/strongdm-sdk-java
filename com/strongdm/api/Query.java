@@ -212,6 +212,22 @@ public class Query {
     this.identityAliasUsername = in;
   }
 
+  private Initiator initiator;
+  /**
+   * Who established the connection to the resource, as classified by the local StrongDM client.
+   * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+   */
+  public Initiator getInitiator() {
+    return this.initiator;
+  }
+  /**
+   * Who established the connection to the resource, as classified by the local StrongDM client.
+   * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+   */
+  public void setInitiator(Initiator in) {
+    this.initiator = in;
+  }
+
   private String metadataJson;
   /** Driver specific metadata associated with this query. */
   public String getMetadataJson() {

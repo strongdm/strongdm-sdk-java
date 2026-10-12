@@ -6202,6 +6202,17 @@ public final class Options {
      * @return The expectFile.
      */
     boolean getExpectFile();
+
+    /**
+     * <pre>
+     * nullable makes the SDKs return null for this singular message field when
+     * it is not set, instead of an empty message.
+     * </pre>
+     *
+     * <code>bool nullable = 1941326;</code>
+     * @return The nullable.
+     */
+    boolean getNullable();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -6719,6 +6730,22 @@ public final class Options {
       return expectFile_;
     }
 
+    public static final int NULLABLE_FIELD_NUMBER = 1941326;
+    private boolean nullable_ = false;
+    /**
+     * <pre>
+     * nullable makes the SDKs return null for this singular message field when
+     * it is not set, instead of an empty message.
+     * </pre>
+     *
+     * <code>bool nullable = 1941326;</code>
+     * @return The nullable.
+     */
+    @java.lang.Override
+    public boolean getNullable() {
+      return nullable_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6783,6 +6810,9 @@ public final class Options {
       }
       for (int i = 0; i < conditions_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941325, conditions_.getRaw(i));
+      }
+      if (nullable_ != false) {
+        output.writeBool(1941326, nullable_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -6869,6 +6899,10 @@ public final class Options {
         size += dataSize;
         size += 4 * getConditionsList().size();
       }
+      if (nullable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941326, nullable_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6919,6 +6953,8 @@ public final class Options {
           .equals(other.getConditionsList())) return false;
       if (getExpectFile()
           != other.getExpectFile()) return false;
+      if (getNullable()
+          != other.getNullable()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6980,6 +7016,9 @@ public final class Options {
       hash = (37 * hash) + EXPECT_FILE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExpectFile());
+      hash = (37 * hash) + NULLABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getNullable());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7161,6 +7200,7 @@ public final class Options {
         conditions_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         expectFile_ = false;
+        nullable_ = false;
         return this;
       }
 
@@ -7248,6 +7288,9 @@ public final class Options {
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.expectFile_ = expectFile_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.nullable_ = nullable_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -7361,6 +7404,9 @@ public final class Options {
         }
         if (other.getExpectFile() != false) {
           setExpectFile(other.getExpectFile());
+        }
+        if (other.getNullable() != false) {
+          setNullable(other.getNullable());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7476,6 +7522,11 @@ public final class Options {
                 conditions_.add(s);
                 break;
               } // case 15530602
+              case 15530608: {
+                nullable_ = input.readBool();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 15530608
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8659,6 +8710,53 @@ public final class Options {
       public Builder clearExpectFile() {
         bitField0_ = (bitField0_ & ~0x00008000);
         expectFile_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean nullable_ ;
+      /**
+       * <pre>
+       * nullable makes the SDKs return null for this singular message field when
+       * it is not set, instead of an empty message.
+       * </pre>
+       *
+       * <code>bool nullable = 1941326;</code>
+       * @return The nullable.
+       */
+      @java.lang.Override
+      public boolean getNullable() {
+        return nullable_;
+      }
+      /**
+       * <pre>
+       * nullable makes the SDKs return null for this singular message field when
+       * it is not set, instead of an empty message.
+       * </pre>
+       *
+       * <code>bool nullable = 1941326;</code>
+       * @param value The nullable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNullable(boolean value) {
+
+        nullable_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * nullable makes the SDKs return null for this singular message field when
+       * it is not set, instead of an empty message.
+       * </pre>
+       *
+       * <code>bool nullable = 1941326;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNullable() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        nullable_ = false;
         onChanged();
         return this;
       }
@@ -12927,7 +13025,7 @@ java.lang.String defaultValue) {
       "Options\022#\n\031terraform_datasource_only\030\273\276v" +
       " \001(\010:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"W\n\014OneofOp" +
       "tions\022\027\n\rcommon_fields\030\205\277v \003(\t\022\025\n\013filter" +
-      "_name\030\206\277v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\245" +
+      "_name\030\206\277v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\271" +
       "\004\n\014FieldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010" +
       "iterable\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\n" +
       "write_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022" +
@@ -12939,46 +13037,47 @@ java.lang.String defaultValue) {
       "ustomOptions\022D\n\022read_only_override\030\300\276v \003" +
       "(\0132&.v1.FieldOptions.ReadOnlyOverrideEnt" +
       "ry\022\023\n\tcondition\030\313\276v \001(\t\022\024\n\nconditions\030\315\276" +
-      "v \003(\t\022\025\n\013expect_file\030\314\276v \001(\010\0327\n\025ReadOnly" +
-      "OverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"^\n\013EnumOp" +
-      "tions\022\021\n\007targets\030\322\276v \003(\t\022#\n\006custom\030\271\276v \001" +
-      "(\0132\021.v1.CustomOptions:\027\372\370\263\007\022\322\363\263\007\r!json_g" +
-      "ateway\"\217\005\n\rCustomOptions\022\023\n\tconverter\030\275\276" +
-      "v \001(\t\022O\n\027porcelain_type_override\030\276\276v \003(\013" +
-      "2,.v1.CustomOptions.PorcelainTypeOverrid" +
-      "eEntry\022O\n\027porcelain_name_override\030\310\276v \003(" +
-      "\0132,.v1.CustomOptions.PorcelainNameOverri" +
-      "deEntry\022B\n\020comment_override\030\323\276v \003(\0132&.v1" +
-      ".CustomOptions.CommentOverrideEntry\022H\n\023d" +
-      "eprecated_override\030\300\276v \003(\0132).v1.CustomOp" +
-      "tions.DeprecatedOverrideEntry\022\035\n\023terrafo" +
-      "rm_elem_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276v \001(\010" +
-      "\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032PorcelainNameO" +
-      "verrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverri" +
-      "deEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:" +
-      "\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\rTerraformDoc" +
-      "s\022\037\n\025resource_example_path\030\264\276v \001(\t\022\"\n\030da" +
-      "ta_source_example_path\030\265\276v \001(\t:\027\372\370\263\007\022\322\363\263" +
-      "\007\r!json_gateway:E\n\014file_options\022\034.google" +
-      ".protobuf.FileOptions\030\250\302v \001(\0132\017.v1.FileO" +
-      "ptions:N\n\017service_options\022\037.google.proto" +
-      "buf.ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceO" +
-      "ptions:K\n\016method_options\022\036.google.protob" +
-      "uf.MethodOptions\030\220\277v \001(\0132\021.v1.MethodOpti" +
-      "ons:N\n\017message_options\022\037.google.protobuf" +
-      ".MessageOptions\030\217\277v \001(\0132\022.v1.MessageOpti" +
-      "ons:H\n\roneof_options\022\035.google.protobuf.O" +
-      "neofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:H\n" +
-      "\rfield_options\022\035.google.protobuf.FieldOp" +
-      "tions\030\216\277v \001(\0132\020.v1.FieldOptions:E\n\014enum_" +
-      "options\022\034.google.protobuf.EnumOptions\030\206\277" +
-      "v \001(\0132\017.v1.EnumOptionsBR\n\031com.strongdm.a" +
-      "pi.plumbingZ5github.com/strongdm/strongd" +
-      "m-sdk-go/v3/internal/v1;v1b\006proto3"
+      "v \003(\t\022\025\n\013expect_file\030\314\276v \001(\010\022\022\n\010nullable" +
+      "\030\316\276v \001(\010\0327\n\025ReadOnlyOverrideEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!js" +
+      "on_gateway\"^\n\013EnumOptions\022\021\n\007targets\030\322\276v" +
+      " \003(\t\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOption" +
+      "s:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOpt" +
+      "ions\022\023\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_t" +
+      "ype_override\030\276\276v \003(\0132,.v1.CustomOptions." +
+      "PorcelainTypeOverrideEntry\022O\n\027porcelain_" +
+      "name_override\030\310\276v \003(\0132,.v1.CustomOptions" +
+      ".PorcelainNameOverrideEntry\022B\n\020comment_o" +
+      "verride\030\323\276v \003(\0132&.v1.CustomOptions.Comme" +
+      "ntOverrideEntry\022H\n\023deprecated_override\030\300" +
+      "\276v \003(\0132).v1.CustomOptions.DeprecatedOver" +
+      "rideEntry\022\035\n\023terraform_elem_type\030\277\276v \001(\t" +
+      "\022\022\n\010unstable\030\301\276v \001(\010\032<\n\032PorcelainTypeOve" +
+      "rrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\032<\n\032PorcelainNameOverrideEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverr" +
+      "ideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\0329\n\027DeprecatedOverrideEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gat" +
+      "eway\"m\n\rTerraformDocs\022\037\n\025resource_exampl" +
+      "e_path\030\264\276v \001(\t\022\"\n\030data_source_example_pa" +
+      "th\030\265\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014f" +
+      "ile_options\022\034.google.protobuf.FileOption" +
+      "s\030\250\302v \001(\0132\017.v1.FileOptions:N\n\017service_op" +
+      "tions\022\037.google.protobuf.ServiceOptions\030\231" +
+      "\277v \001(\0132\022.v1.ServiceOptions:K\n\016method_opt" +
+      "ions\022\036.google.protobuf.MethodOptions\030\220\277v" +
+      " \001(\0132\021.v1.MethodOptions:N\n\017message_optio" +
+      "ns\022\037.google.protobuf.MessageOptions\030\217\277v " +
+      "\001(\0132\022.v1.MessageOptions:H\n\roneof_options" +
+      "\022\035.google.protobuf.OneofOptions\030\205\277v \001(\0132" +
+      "\020.v1.OneofOptions:H\n\rfield_options\022\035.goo" +
+      "gle.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.F" +
+      "ieldOptions:E\n\014enum_options\022\034.google.pro" +
+      "tobuf.EnumOptions\030\206\277v \001(\0132\017.v1.EnumOptio" +
+      "nsBR\n\031com.strongdm.api.plumbingZ5github." +
+      "com/strongdm/strongdm-sdk-go/v3/internal" +
+      "/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13020,7 +13119,7 @@ java.lang.String defaultValue) {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Porcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformComputed", "Custom", "ReadOnlyOverride", "Condition", "Conditions", "ExpectFile", });
+        new java.lang.String[] { "Porcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformComputed", "Custom", "ReadOnlyOverride", "Condition", "Conditions", "ExpectFile", "Nullable", });
     internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor =
       internal_static_v1_FieldOptions_descriptor.getNestedTypes().get(0);
     internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable = new

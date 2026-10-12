@@ -13861,6 +13861,53 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.Initiator convertInitiatorToPorcelain(Initiator plumbing) {
+    com.strongdm.api.Initiator porcelain = new com.strongdm.api.Initiator();
+    porcelain.setAiAgent((plumbing.getAiAgent()));
+    porcelain.setTrusted((plumbing.getTrusted()));
+    porcelain.setType((plumbing.getType()));
+    porcelain.setVersion((plumbing.getVersion()));
+    return porcelain;
+  }
+
+  public static Initiator convertInitiatorToPlumbing(com.strongdm.api.Initiator porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Initiator.Builder builder = Initiator.newBuilder();
+    if (porcelain.getAiAgent() != null) {
+      builder.setAiAgent((porcelain.getAiAgent()));
+    }
+    builder.setTrusted(porcelain.getTrusted());
+    if (porcelain.getType() != null) {
+      builder.setType((porcelain.getType()));
+    }
+    if (porcelain.getVersion() != null) {
+      builder.setVersion((porcelain.getVersion()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Initiator> convertRepeatedInitiatorToPorcelain(
+      Collection<Initiator> plumbings) {
+    if (plumbings == null) {
+      return new ArrayList<com.strongdm.api.Initiator>();
+    }
+    return plumbings.stream()
+        .map(plumbing -> convertInitiatorToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Initiator> convertRepeatedInitiatorToPlumbing(
+      Collection<com.strongdm.api.Initiator> porcelains) {
+    if (porcelains == null) {
+      return new ArrayList<Initiator>();
+    }
+    return porcelains.stream()
+        .map(porcelain -> convertInitiatorToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.KeyValueEngine convertKeyValueEngineToPorcelain(
       KeyValueEngine plumbing) {
     com.strongdm.api.KeyValueEngine porcelain = new com.strongdm.api.KeyValueEngine();
@@ -20395,6 +20442,9 @@ public class Plumbing {
     porcelain.setEncrypted((plumbing.getEncrypted()));
     porcelain.setId((plumbing.getId()));
     porcelain.setIdentityAliasUsername((plumbing.getIdentityAliasUsername()));
+    if (plumbing.hasInitiator()) {
+      porcelain.setInitiator(Plumbing.convertInitiatorToPorcelain(plumbing.getInitiator()));
+    }
     porcelain.setMetadataJson((plumbing.getMetadataJson()));
     porcelain.setQueryBody((plumbing.getQueryBody()));
     porcelain.setQueryCategory((plumbing.getQueryCategory()));
@@ -20457,6 +20507,9 @@ public class Plumbing {
     }
     if (porcelain.getIdentityAliasUsername() != null) {
       builder.setIdentityAliasUsername((porcelain.getIdentityAliasUsername()));
+    }
+    if (porcelain.getInitiator() != null) {
+      builder.setInitiator(Plumbing.convertInitiatorToPlumbing(porcelain.getInitiator()));
     }
     if (porcelain.getMetadataJson() != null) {
       builder.setMetadataJson((porcelain.getMetadataJson()));

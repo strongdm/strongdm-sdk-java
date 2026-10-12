@@ -2993,6 +2993,36 @@ public final class QueriesPlumbing {
      */
     com.google.protobuf.ByteString
         getMetadataJsonBytes();
+
+    /**
+     * <pre>
+     * Who established the connection to the resource, as classified by the local StrongDM client.
+     * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+     * </pre>
+     *
+     * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+     * @return Whether the initiator field is set.
+     */
+    boolean hasInitiator();
+    /**
+     * <pre>
+     * Who established the connection to the resource, as classified by the local StrongDM client.
+     * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+     * </pre>
+     *
+     * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+     * @return The initiator.
+     */
+    com.strongdm.api.plumbing.QueriesPlumbing.Initiator getInitiator();
+    /**
+     * <pre>
+     * Who established the connection to the resource, as classified by the local StrongDM client.
+     * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+     * </pre>
+     *
+     * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.QueriesPlumbing.InitiatorOrBuilder getInitiatorOrBuilder();
   }
   /**
    * <pre>
@@ -4399,6 +4429,47 @@ public final class QueriesPlumbing {
       }
     }
 
+    public static final int INITIATOR_FIELD_NUMBER = 32;
+    private com.strongdm.api.plumbing.QueriesPlumbing.Initiator initiator_;
+    /**
+     * <pre>
+     * Who established the connection to the resource, as classified by the local StrongDM client.
+     * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+     * </pre>
+     *
+     * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+     * @return Whether the initiator field is set.
+     */
+    @java.lang.Override
+    public boolean hasInitiator() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Who established the connection to the resource, as classified by the local StrongDM client.
+     * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+     * </pre>
+     *
+     * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+     * @return The initiator.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.QueriesPlumbing.Initiator getInitiator() {
+      return initiator_ == null ? com.strongdm.api.plumbing.QueriesPlumbing.Initiator.getDefaultInstance() : initiator_;
+    }
+    /**
+     * <pre>
+     * Who established the connection to the resource, as classified by the local StrongDM client.
+     * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+     * </pre>
+     *
+     * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.QueriesPlumbing.InitiatorOrBuilder getInitiatorOrBuilder() {
+      return initiator_ == null ? com.strongdm.api.plumbing.QueriesPlumbing.Initiator.getDefaultInstance() : initiator_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4505,6 +4576,9 @@ public final class QueriesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataJson_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 31, metadataJson_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeMessage(32, getInitiator());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4617,6 +4691,10 @@ public final class QueriesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataJson_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, metadataJson_);
       }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, getInitiator());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4712,6 +4790,11 @@ public final class QueriesPlumbing {
           .equals(other.getIdentityAliasUsername())) return false;
       if (!getMetadataJson()
           .equals(other.getMetadataJson())) return false;
+      if (hasInitiator() != other.hasInitiator()) return false;
+      if (hasInitiator()) {
+        if (!getInitiator()
+            .equals(other.getInitiator())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4800,6 +4883,10 @@ public final class QueriesPlumbing {
       hash = (53 * hash) + getIdentityAliasUsername().hashCode();
       hash = (37 * hash) + METADATA_JSON_FIELD_NUMBER;
       hash = (53 * hash) + getMetadataJson().hashCode();
+      if (hasInitiator()) {
+        hash = (37 * hash) + INITIATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getInitiator().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4944,6 +5031,7 @@ public final class QueriesPlumbing {
           getAccountTagsFieldBuilder();
           getCompletedAtFieldBuilder();
           getCaptureFieldBuilder();
+          getInitiatorFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5005,6 +5093,11 @@ public final class QueriesPlumbing {
         clientIp_ = "";
         identityAliasUsername_ = "";
         metadataJson_ = "";
+        initiator_ = null;
+        if (initiatorBuilder_ != null) {
+          initiatorBuilder_.dispose();
+          initiatorBuilder_ = null;
+        }
         return this;
       }
 
@@ -5149,6 +5242,12 @@ public final class QueriesPlumbing {
         }
         if (((from_bitField0_ & 0x40000000) != 0)) {
           result.metadataJson_ = metadataJson_;
+        }
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.initiator_ = initiatorBuilder_ == null
+              ? initiator_
+              : initiatorBuilder_.build();
+          to_bitField0_ |= 0x00000040;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -5333,6 +5432,9 @@ public final class QueriesPlumbing {
           metadataJson_ = other.metadataJson_;
           bitField0_ |= 0x40000000;
           onChanged();
+        }
+        if (other.hasInitiator()) {
+          mergeInitiator(other.getInitiator());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -5527,6 +5629,13 @@ public final class QueriesPlumbing {
                 bitField0_ |= 0x40000000;
                 break;
               } // case 250
+              case 258: {
+                input.readMessage(
+                    getInitiatorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x80000000;
+                break;
+              } // case 258
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8727,6 +8836,172 @@ public final class QueriesPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.plumbing.QueriesPlumbing.Initiator initiator_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.QueriesPlumbing.Initiator, com.strongdm.api.plumbing.QueriesPlumbing.Initiator.Builder, com.strongdm.api.plumbing.QueriesPlumbing.InitiatorOrBuilder> initiatorBuilder_;
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       * @return Whether the initiator field is set.
+       */
+      public boolean hasInitiator() {
+        return ((bitField0_ & 0x80000000) != 0);
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       * @return The initiator.
+       */
+      public com.strongdm.api.plumbing.QueriesPlumbing.Initiator getInitiator() {
+        if (initiatorBuilder_ == null) {
+          return initiator_ == null ? com.strongdm.api.plumbing.QueriesPlumbing.Initiator.getDefaultInstance() : initiator_;
+        } else {
+          return initiatorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setInitiator(com.strongdm.api.plumbing.QueriesPlumbing.Initiator value) {
+        if (initiatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          initiator_ = value;
+        } else {
+          initiatorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setInitiator(
+          com.strongdm.api.plumbing.QueriesPlumbing.Initiator.Builder builderForValue) {
+        if (initiatorBuilder_ == null) {
+          initiator_ = builderForValue.build();
+        } else {
+          initiatorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeInitiator(com.strongdm.api.plumbing.QueriesPlumbing.Initiator value) {
+        if (initiatorBuilder_ == null) {
+          if (((bitField0_ & 0x80000000) != 0) &&
+            initiator_ != null &&
+            initiator_ != com.strongdm.api.plumbing.QueriesPlumbing.Initiator.getDefaultInstance()) {
+            getInitiatorBuilder().mergeFrom(value);
+          } else {
+            initiator_ = value;
+          }
+        } else {
+          initiatorBuilder_.mergeFrom(value);
+        }
+        if (initiator_ != null) {
+          bitField0_ |= 0x80000000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearInitiator() {
+        bitField0_ = (bitField0_ & ~0x80000000);
+        initiator_ = null;
+        if (initiatorBuilder_ != null) {
+          initiatorBuilder_.dispose();
+          initiatorBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.QueriesPlumbing.Initiator.Builder getInitiatorBuilder() {
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return getInitiatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.QueriesPlumbing.InitiatorOrBuilder getInitiatorOrBuilder() {
+        if (initiatorBuilder_ != null) {
+          return initiatorBuilder_.getMessageOrBuilder();
+        } else {
+          return initiator_ == null ?
+              com.strongdm.api.plumbing.QueriesPlumbing.Initiator.getDefaultInstance() : initiator_;
+        }
+      }
+      /**
+       * <pre>
+       * Who established the connection to the resource, as classified by the local StrongDM client.
+       * Absent when the initiator was not recorded or the organization does not have AI Agent controls.
+       * </pre>
+       *
+       * <code>.v1.Initiator initiator = 32 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.QueriesPlumbing.Initiator, com.strongdm.api.plumbing.QueriesPlumbing.Initiator.Builder, com.strongdm.api.plumbing.QueriesPlumbing.InitiatorOrBuilder> 
+          getInitiatorFieldBuilder() {
+        if (initiatorBuilder_ == null) {
+          initiatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.QueriesPlumbing.Initiator, com.strongdm.api.plumbing.QueriesPlumbing.Initiator.Builder, com.strongdm.api.plumbing.QueriesPlumbing.InitiatorOrBuilder>(
+                  getInitiator(),
+                  getParentForChildren(),
+                  isClean());
+          initiator_ = null;
+        }
+        return initiatorBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8786,6 +9061,1092 @@ public final class QueriesPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.plumbing.QueriesPlumbing.Query getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InitiatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.Initiator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+     * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+     * client could not determine the initiator.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+     * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+     * client could not determine the initiator.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <pre>
+     * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+     * Empty unless type is "ai_agent".
+     * </pre>
+     *
+     * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+     * @return The aiAgent.
+     */
+    java.lang.String getAiAgent();
+    /**
+     * <pre>
+     * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+     * Empty unless type is "ai_agent".
+     * </pre>
+     *
+     * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for aiAgent.
+     */
+    com.google.protobuf.ByteString
+        getAiAgentBytes();
+
+    /**
+     * <pre>
+     * The version of the AI Agent, when it could be determined.
+     * </pre>
+     *
+     * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     * The version of the AI Agent, when it could be determined.
+     * </pre>
+     *
+     * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+
+    /**
+     * <pre>
+     * Indicates whether the initiator detection is trusted, meaning it cannot be spoofed by the end user.
+     * </pre>
+     *
+     * <code>bool trusted = 4 [(.v1.field_options) = { ... }</code>
+     * @return The trusted.
+     */
+    boolean getTrusted();
+  }
+  /**
+   * <pre>
+   * An Initiator describes who established the connection to the resource, as classified by
+   * the local StrongDM client.
+   * </pre>
+   *
+   * Protobuf type {@code v1.Initiator}
+   */
+  public static final class Initiator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.Initiator)
+      InitiatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Initiator.newBuilder() to construct.
+    private Initiator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Initiator() {
+      type_ = "";
+      aiAgent_ = "";
+      version_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Initiator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_Initiator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_Initiator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.QueriesPlumbing.Initiator.class, com.strongdm.api.plumbing.QueriesPlumbing.Initiator.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <pre>
+     * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+     * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+     * client could not determine the initiator.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+     * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+     * client could not determine the initiator.
+     * </pre>
+     *
+     * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AI_AGENT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object aiAgent_ = "";
+    /**
+     * <pre>
+     * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+     * Empty unless type is "ai_agent".
+     * </pre>
+     *
+     * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+     * @return The aiAgent.
+     */
+    @java.lang.Override
+    public java.lang.String getAiAgent() {
+      java.lang.Object ref = aiAgent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        aiAgent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+     * Empty unless type is "ai_agent".
+     * </pre>
+     *
+     * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for aiAgent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAiAgentBytes() {
+      java.lang.Object ref = aiAgent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        aiAgent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
+    /**
+     * <pre>
+     * The version of the AI Agent, when it could be determined.
+     * </pre>
+     *
+     * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The version of the AI Agent, when it could be determined.
+     * </pre>
+     *
+     * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRUSTED_FIELD_NUMBER = 4;
+    private boolean trusted_ = false;
+    /**
+     * <pre>
+     * Indicates whether the initiator detection is trusted, meaning it cannot be spoofed by the end user.
+     * </pre>
+     *
+     * <code>bool trusted = 4 [(.v1.field_options) = { ... }</code>
+     * @return The trusted.
+     */
+    @java.lang.Override
+    public boolean getTrusted() {
+      return trusted_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aiAgent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, aiAgent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
+      }
+      if (trusted_ != false) {
+        output.writeBool(4, trusted_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aiAgent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, aiAgent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
+      }
+      if (trusted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, trusted_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.QueriesPlumbing.Initiator)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.QueriesPlumbing.Initiator other = (com.strongdm.api.plumbing.QueriesPlumbing.Initiator) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getAiAgent()
+          .equals(other.getAiAgent())) return false;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (getTrusted()
+          != other.getTrusted()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + AI_AGENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAiAgent().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
+      hash = (37 * hash) + TRUSTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTrusted());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.QueriesPlumbing.Initiator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An Initiator describes who established the connection to the resource, as classified by
+     * the local StrongDM client.
+     * </pre>
+     *
+     * Protobuf type {@code v1.Initiator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.Initiator)
+        com.strongdm.api.plumbing.QueriesPlumbing.InitiatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_Initiator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_Initiator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.QueriesPlumbing.Initiator.class, com.strongdm.api.plumbing.QueriesPlumbing.Initiator.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.QueriesPlumbing.Initiator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        aiAgent_ = "";
+        version_ = "";
+        trusted_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_Initiator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.QueriesPlumbing.Initiator getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.Initiator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.QueriesPlumbing.Initiator build() {
+        com.strongdm.api.plumbing.QueriesPlumbing.Initiator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.QueriesPlumbing.Initiator buildPartial() {
+        com.strongdm.api.plumbing.QueriesPlumbing.Initiator result = new com.strongdm.api.plumbing.QueriesPlumbing.Initiator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.strongdm.api.plumbing.QueriesPlumbing.Initiator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.aiAgent_ = aiAgent_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.trusted_ = trusted_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.QueriesPlumbing.Initiator) {
+          return mergeFrom((com.strongdm.api.plumbing.QueriesPlumbing.Initiator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.QueriesPlumbing.Initiator other) {
+        if (other == com.strongdm.api.plumbing.QueriesPlumbing.Initiator.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAiAgent().isEmpty()) {
+          aiAgent_ = other.aiAgent_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getTrusted() != false) {
+          setTrusted(other.getTrusted());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                aiAgent_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                version_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                trusted_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+       * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+       * client could not determine the initiator.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+       * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+       * client could not determine the initiator.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+       * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+       * client could not determine the initiator.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+       * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+       * client could not determine the initiator.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The kind of initiator, one of the InitiatorType constants: "ai_agent" when a supported AI
+       * Agent was detected, "human" when no supported AI Agent was detected, or "unknown" when the
+       * client could not determine the initiator.
+       * </pre>
+       *
+       * <code>string type = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object aiAgent_ = "";
+      /**
+       * <pre>
+       * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+       * Empty unless type is "ai_agent".
+       * </pre>
+       *
+       * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+       * @return The aiAgent.
+       */
+      public java.lang.String getAiAgent() {
+        java.lang.Object ref = aiAgent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          aiAgent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+       * Empty unless type is "ai_agent".
+       * </pre>
+       *
+       * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for aiAgent.
+       */
+      public com.google.protobuf.ByteString
+          getAiAgentBytes() {
+        java.lang.Object ref = aiAgent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          aiAgent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+       * Empty unless type is "ai_agent".
+       * </pre>
+       *
+       * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The aiAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAiAgent(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        aiAgent_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+       * Empty unless type is "ai_agent".
+       * </pre>
+       *
+       * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAiAgent() {
+        aiAgent_ = getDefaultInstance().getAiAgent();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A stable identifier of the AI Agent that established the connection, e.g. "claude-code".
+       * Empty unless type is "ai_agent".
+       * </pre>
+       *
+       * <code>string ai_agent = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for aiAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAiAgentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        aiAgent_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <pre>
+       * The version of the AI Agent, when it could be determined.
+       * </pre>
+       *
+       * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The version of the AI Agent, when it could be determined.
+       * </pre>
+       *
+       * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The version of the AI Agent, when it could be determined.
+       * </pre>
+       *
+       * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        version_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The version of the AI Agent, when it could be determined.
+       * </pre>
+       *
+       * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The version of the AI Agent, when it could be determined.
+       * </pre>
+       *
+       * <code>string version = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        version_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private boolean trusted_ ;
+      /**
+       * <pre>
+       * Indicates whether the initiator detection is trusted, meaning it cannot be spoofed by the end user.
+       * </pre>
+       *
+       * <code>bool trusted = 4 [(.v1.field_options) = { ... }</code>
+       * @return The trusted.
+       */
+      @java.lang.Override
+      public boolean getTrusted() {
+        return trusted_;
+      }
+      /**
+       * <pre>
+       * Indicates whether the initiator detection is trusted, meaning it cannot be spoofed by the end user.
+       * </pre>
+       *
+       * <code>bool trusted = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The trusted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrusted(boolean value) {
+
+        trusted_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates whether the initiator detection is trusted, meaning it cannot be spoofed by the end user.
+       * </pre>
+       *
+       * <code>bool trusted = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrusted() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        trusted_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.Initiator)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Initiator)
+    private static final com.strongdm.api.plumbing.QueriesPlumbing.Initiator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.QueriesPlumbing.Initiator();
+    }
+
+    public static com.strongdm.api.plumbing.QueriesPlumbing.Initiator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Initiator>
+        PARSER = new com.google.protobuf.AbstractParser<Initiator>() {
+      @java.lang.Override
+      public Initiator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Initiator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Initiator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.QueriesPlumbing.Initiator getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12186,6 +13547,11 @@ java.lang.String defaultValue) {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Query_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_Initiator_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Initiator_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_QueryCapture_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12215,7 +13581,7 @@ java.lang.String defaultValue) {
       "\030\002 \003(\0132\t.v1.QueryB\n\362\370\263\007\005\270\363\263\007\001\022M\n\nrate_li" +
       "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB\"\362\370\263\007\035\260" +
       "\363\263\007\001\262\364\263\007\001*\262\364\263\007\r!json_gateway:#\372\370\263\007\036\322\363\263\007\001" +
-      "*\322\363\263\007\023!terraform-provider\"\311\n\n\005Query\022\026\n\002i" +
+      "*\322\363\263\007\023!terraform-provider\"\374\n\n\005Query\022\026\n\002i" +
       "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccount_id\030\002 \001(\tB" +
       "\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resource_id\030\003 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022\036\n\nquery_body\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010" +
@@ -12248,32 +13614,38 @@ java.lang.String defaultValue) {
       "\007\035\260\363\263\007\001\312\363\263\007\023\302\364\263\007\016\n\002go\022\010ClientIP\022+\n\027ident" +
       "ity_alias_username\030\036 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022=\n\r" +
       "metadata_json\030\037 \001(\tB&\362\370\263\007!\260\363\263\007\001\312\363\263\007\027\302\364\263\007" +
-      "\022\n\002go\022\014MetadataJSON:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263" +
-      "\007\023!terraform-provider\"\231\005\n\014QueryCapture\022\031" +
-      "\n\005width\030\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006height\030\002 \001(" +
-      "\005B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007command\030\003 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\0222\n\003env\030\004 \003(\0132\031.v1.QueryCapture.EnvEnt" +
-      "ryB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\035\n\tfile_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tfile_" +
-      "size\030\007 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016client_command" +
-      "\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\027\n\003pod\030\t \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\035\n\tcontainer\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016re" +
-      "quest_method\030\013 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\013reques" +
-      "t_uri\030\014 \001(\tB$\362\370\263\007\037\260\363\263\007\001\312\363\263\007\025\302\364\263\007\020\n\002go\022\nR" +
-      "equestURI\022 \n\014request_body\030\r \001(\014B\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022&\n\022impersonation_user\030\016 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022(\n\024impersonation_groups\030\017 \003(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022$\n\020privilege_groups\030\020 \003(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\032*\n\010EnvEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!terraform" +
-      "-provider2\221\001\n\007Queries\022R\n\004List\022\024.v1.Query" +
-      "ListRequest\032\025.v1.QueryListResponse\"\035\202\371\263\007" +
-      "\030\242\363\263\007\003get\252\363\263\007\013/v1/queries\0322\312\371\263\007-\302\371\263\007\005Que" +
-      "ry\312\371\263\007\001*\312\371\263\007\023!terraform-provider\330\371\263\007\001B\206\001" +
-      "\n\031com.strongdm.api.plumbingB\017QueriesPlum" +
-      "bingZ5github.com/strongdm/strongdm-sdk-g" +
-      "o/v3/internal/v1;v1\302\222\264\007\036\242\214\264\007\001*\242\214\264\007\023!terr" +
-      "aform-providerb\006proto3"
+      "\022\n\002go\022\014MetadataJSON\0221\n\tinitiator\030  \001(\0132\r" +
+      ".v1.InitiatorB\017\362\370\263\007\n\260\363\263\007\001\360\364\263\007\001:(\372\370\263\007#\250\363\263" +
+      "\007\001\322\363\263\007\001*\322\363\263\007\023!terraform-provider\"\276\001\n\tIni" +
+      "tiator\022\030\n\004type\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0223\n\010ai_a" +
+      "gent\030\002 \001(\tB!\362\370\263\007\034\260\363\263\007\001\312\363\263\007\022\302\364\263\007\r\n\002go\022\007AI" +
+      "Agent\022\033\n\007version\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007tr" +
+      "usted\030\004 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001" +
+      "*\322\363\263\007\023!terraform-provider\"\231\005\n\014QueryCaptu" +
+      "re\022\031\n\005width\030\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006height\030" +
+      "\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007command\030\003 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\0222\n\003env\030\004 \003(\0132\031.v1.QueryCapture.En" +
+      "vEntryB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004type\030\005 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\035\n\tfile_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tf" +
+      "ile_size\030\007 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016client_com" +
+      "mand\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\027\n\003pod\030\t \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022\035\n\tcontainer\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"" +
+      "\n\016request_method\030\013 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\013re" +
+      "quest_uri\030\014 \001(\tB$\362\370\263\007\037\260\363\263\007\001\312\363\263\007\025\302\364\263\007\020\n\002g" +
+      "o\022\nRequestURI\022 \n\014request_body\030\r \001(\014B\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022&\n\022impersonation_user\030\016 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022(\n\024impersonation_groups\030\017 \003(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022$\n\020privilege_groups\030\020 \003(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\032*\n\010EnvEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001:(\372\370\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!terra" +
+      "form-provider2\221\001\n\007Queries\022R\n\004List\022\024.v1.Q" +
+      "ueryListRequest\032\025.v1.QueryListResponse\"\035" +
+      "\202\371\263\007\030\242\363\263\007\003get\252\363\263\007\013/v1/queries\0322\312\371\263\007-\302\371\263\007" +
+      "\005Query\312\371\263\007\001*\312\371\263\007\023!terraform-provider\330\371\263\007" +
+      "\001B\206\001\n\031com.strongdm.api.plumbingB\017Queries" +
+      "PlumbingZ5github.com/strongdm/strongdm-s" +
+      "dk-go/v3/internal/v1;v1\302\222\264\007\036\242\214\264\007\001*\242\214\264\007\023!" +
+      "terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12301,9 +13673,15 @@ java.lang.String defaultValue) {
     internal_static_v1_Query_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Query_descriptor,
-        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", "Capture", "SourceIp", "AuthenticationId", "Target", "AuthzJson", "ClientIp", "IdentityAliasUsername", "MetadataJson", });
-    internal_static_v1_QueryCapture_descriptor =
+        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", "Capture", "SourceIp", "AuthenticationId", "Target", "AuthzJson", "ClientIp", "IdentityAliasUsername", "MetadataJson", "Initiator", });
+    internal_static_v1_Initiator_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_Initiator_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_Initiator_descriptor,
+        new java.lang.String[] { "Type", "AiAgent", "Version", "Trusted", });
+    internal_static_v1_QueryCapture_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_v1_QueryCapture_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_QueryCapture_descriptor,
