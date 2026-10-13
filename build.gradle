@@ -7,8 +7,9 @@ plugins {
 }
 
 def grpcVersion = '1.82.2'
+def guavaVersion = '33.7.2-jre'
 def jsonVersion = '20250517'
-def nettyVersion = '4.1.136.Final'
+def nettyVersion = '4.1.138.Final'
 def protobufVersion = '3.25.8'
 def releaseVersion = System.getenv('JAVA_SDK_VERSION')
 
@@ -55,6 +56,10 @@ dependencies {
     runtimeOnly "io.netty:netty-codec-http:${nettyVersion}"
     runtimeOnly "io.netty:netty-codec-http2:${nettyVersion}"
     runtimeOnly "io.netty:netty-handler:${nettyVersion}"
+
+    // grpc-api's transitive Guava (33.5.0-android) carries a known CVE; same
+    // explicit-pin approach as Netty so scanners see the patched version
+    runtimeOnly "com.google.guava:guava:${guavaVersion}"
 
     // grpc-protobuf's transitive protobuf-java (< 3.25.5) carries known CVEs
     implementation "com.google.protobuf:protobuf-java:${protobufVersion}"
