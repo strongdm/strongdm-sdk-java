@@ -22,8 +22,6 @@ public final class Permission {
   public static final String ACCESS_REQUEST_REQUESTER = "accessrequest:requester";
   public static final String ACCOUNT_GROUP_READ = "accountgroup:read";
   public static final String ACCOUNT_GROUP_WRITE = "accountgroup:write";
-  public static final String ADMIN_ROLE_READ = "adminrole:read";
-  public static final String ADMIN_ROLE_WRITE = "adminrole:write";
   public static final String APPROVAL_FLOW_EDIT = "approvalflow:edit";
   public static final String APPROVAL_FLOW_LIST = "approvalflow:list";
   public static final String BILLING_READ = "billing:read";
@@ -80,6 +78,8 @@ public final class Permission {
   public static final String ORG_EDIT_SETTINGS = "organization:edit_settings";
   public static final String ORG_LIST_CHILDREN = "organization:list_children";
   public static final String ORG_VIEW_SETTINGS = "organization:view_settings";
+  public static final String PERMISSION_SET_READ = "permissionset:read";
+  public static final String PERMISSION_SET_WRITE = "permissionset:write";
   public static final String POLICY_READ = "policy:read";
   public static final String POLICY_WRITE = "policy:write";
   public static final String RELAY_CREATE = "relay:create";

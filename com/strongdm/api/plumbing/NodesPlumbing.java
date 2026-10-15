@@ -23179,6 +23179,26 @@ public final class NodesPlumbing {
      */
     com.strongdm.api.plumbing.NodesPlumbing.NodeMaintenanceWindowOrBuilder getMaintenanceWindowsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * The certificate authority used to enroll the AI Router's serving certificate.
+     * </pre>
+     *
+     * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+     * @return The certificateAuthorityId.
+     */
+    java.lang.String getCertificateAuthorityId();
+    /**
+     * <pre>
+     * The certificate authority used to enroll the AI Router's serving certificate.
+     * </pre>
+     *
+     * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for certificateAuthorityId.
+     */
+    com.google.protobuf.ByteString
+        getCertificateAuthorityIdBytes();
   }
   /**
    * <pre>
@@ -23204,6 +23224,7 @@ public final class NodesPlumbing {
       name_ = "";
       address_ = "";
       maintenanceWindows_ = java.util.Collections.emptyList();
+      certificateAuthorityId_ = "";
     }
 
     @java.lang.Override
@@ -23471,6 +23492,53 @@ public final class NodesPlumbing {
       return maintenanceWindows_.get(index);
     }
 
+    public static final int CERTIFICATE_AUTHORITY_ID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object certificateAuthorityId_ = "";
+    /**
+     * <pre>
+     * The certificate authority used to enroll the AI Router's serving certificate.
+     * </pre>
+     *
+     * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+     * @return The certificateAuthorityId.
+     */
+    @java.lang.Override
+    public java.lang.String getCertificateAuthorityId() {
+      java.lang.Object ref = certificateAuthorityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateAuthorityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The certificate authority used to enroll the AI Router's serving certificate.
+     * </pre>
+     *
+     * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for certificateAuthorityId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCertificateAuthorityIdBytes() {
+      java.lang.Object ref = certificateAuthorityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        certificateAuthorityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -23500,6 +23568,9 @@ public final class NodesPlumbing {
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         output.writeMessage(5, maintenanceWindows_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateAuthorityId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, certificateAuthorityId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -23525,6 +23596,9 @@ public final class NodesPlumbing {
       for (int i = 0; i < maintenanceWindows_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, maintenanceWindows_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateAuthorityId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, certificateAuthorityId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -23554,6 +23628,8 @@ public final class NodesPlumbing {
       }
       if (!getMaintenanceWindowsList()
           .equals(other.getMaintenanceWindowsList())) return false;
+      if (!getCertificateAuthorityId()
+          .equals(other.getCertificateAuthorityId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -23579,6 +23655,8 @@ public final class NodesPlumbing {
         hash = (37 * hash) + MAINTENANCE_WINDOWS_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindowsList().hashCode();
       }
+      hash = (37 * hash) + CERTIFICATE_AUTHORITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateAuthorityId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -23739,6 +23817,7 @@ public final class NodesPlumbing {
           maintenanceWindowsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        certificateAuthorityId_ = "";
         return this;
       }
 
@@ -23800,6 +23879,9 @@ public final class NodesPlumbing {
               ? tags_
               : tagsBuilder_.build();
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.certificateAuthorityId_ = certificateAuthorityId_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -23892,6 +23974,11 @@ public final class NodesPlumbing {
             }
           }
         }
+        if (!other.getCertificateAuthorityId().isEmpty()) {
+          certificateAuthorityId_ = other.certificateAuthorityId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -23953,6 +24040,11 @@ public final class NodesPlumbing {
                 }
                 break;
               } // case 42
+              case 50: {
+                certificateAuthorityId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -24723,6 +24815,98 @@ public final class NodesPlumbing {
           maintenanceWindows_ = null;
         }
         return maintenanceWindowsBuilder_;
+      }
+
+      private java.lang.Object certificateAuthorityId_ = "";
+      /**
+       * <pre>
+       * The certificate authority used to enroll the AI Router's serving certificate.
+       * </pre>
+       *
+       * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+       * @return The certificateAuthorityId.
+       */
+      public java.lang.String getCertificateAuthorityId() {
+        java.lang.Object ref = certificateAuthorityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateAuthorityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The certificate authority used to enroll the AI Router's serving certificate.
+       * </pre>
+       *
+       * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for certificateAuthorityId.
+       */
+      public com.google.protobuf.ByteString
+          getCertificateAuthorityIdBytes() {
+        java.lang.Object ref = certificateAuthorityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          certificateAuthorityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The certificate authority used to enroll the AI Router's serving certificate.
+       * </pre>
+       *
+       * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The certificateAuthorityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        certificateAuthorityId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The certificate authority used to enroll the AI Router's serving certificate.
+       * </pre>
+       *
+       * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateAuthorityId() {
+        certificateAuthorityId_ = getDefaultInstance().getCertificateAuthorityId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The certificate authority used to enroll the AI Router's serving certificate.
+       * </pre>
+       *
+       * <code>string certificate_authority_id = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for certificateAuthorityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        certificateAuthorityId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25722,36 +25906,37 @@ public final class NodesPlumbing {
       "maintenance_windows\030\005 \003(\0132\031.v1.NodeMaint" +
       "enanceWindowB<\362\370\263\0077\260\363\263\007\001\312\363\263\007-\302\364\263\007(\n\022terr" +
       "aform-provider\022\022maintenance_window:\n\372\370\263\007" +
-      "\005\250\363\263\007\001J\004\010\006\020\007\"\341\001\n\010AIRouter\022\026\n\002id\030\001 \001(\tB\n\362" +
+      "\005\250\363\263\007\001J\004\010\006\020\007\"\217\002\n\010AIRouter\022\026\n\002id\030\001 \001(\tB\n\362" +
       "\370\263\007\005\260\363\263\007\001\022\030\n\004name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\007a" +
       "ddress\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\004 " +
       "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022B\n\023maintenance" +
       "_windows\030\005 \003(\0132\031.v1.NodeMaintenanceWindo" +
-      "wB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_private" +
-      "\"\266\001\n\025NodeMaintenanceWindow\022!\n\rcron_sched" +
-      "ule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_idlenes" +
-      "s\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263\007E\362\363\263\007" +
-      "\036\n\022terraform-provider\022\010TypeList\372\363\263\007\035node" +
-      "MaintenanceWindowElemType2\370\004\n\005Nodes\022U\n\006C" +
-      "reate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCr" +
-      "eateResponse\"\034\202\371\263\007\027\242\363\263\007\004post\252\363\263\007\t/v1/nod" +
-      "es\022P\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeG" +
-      "etResponse\" \202\371\263\007\033\242\363\263\007\003get\252\363\263\007\016/v1/nodes/" +
-      "{id}\022Y\n\006Update\022\025.v1.NodeUpdateRequest\032\026." +
-      "v1.NodeUpdateResponse\" \202\371\263\007\033\242\363\263\007\003put\252\363\263\007" +
-      "\016/v1/nodes/{id}\022\\\n\006Delete\022\025.v1.NodeDelet" +
-      "eRequest\032\026.v1.NodeDeleteResponse\"#\202\371\263\007\036\242" +
-      "\363\263\007\006delete\252\363\263\007\016/v1/nodes/{id}\022N\n\004List\022\023." +
-      "v1.NodeListRequest\032\024.v1.NodeListResponse" +
-      "\"\033\202\371\263\007\026\242\363\263\007\003get\252\363\263\007\t/v1/nodes\022\226\001\n\010TCPPro" +
-      "be\022\027.v1.NodeTCPProbeRequest\032\030.v1.NodeTCP" +
-      "ProbeResponse\"W\202\371\263\007R\242\363\263\007\004post\252\363\263\007\023/v1/no" +
-      "des/tcp-probe\312\363\263\007,\302\364\263\007\020\n\004java\022\010tcpProbe\302" +
-      "\364\263\007\022\n\006csharp\022\010TCPProbe\032$\312\371\263\007\037\302\371\263\007\004Node\312\371" +
-      "\263\007\001*\312\371\263\007\004!cli\322\371\263\007\002n-Ba\n\031com.strongdm.api" +
-      ".plumbingB\rNodesPlumbingZ5github.com/str" +
-      "ongdm/strongdm-sdk-go/v3/internal/v1;v1b" +
-      "\006proto3"
+      "wB\n\362\370\263\007\005\260\363\263\007\001\022,\n\030certificate_authority_i" +
+      "d\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\031\372\370\263\007\024\250\363\263\007\001\322\363\263\007\ngo_p" +
+      "rivate\"\266\001\n\025NodeMaintenanceWindow\022!\n\rcron" +
+      "_schedule\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020require_i" +
+      "dleness\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263\007\001\312\363\263" +
+      "\007E\362\363\263\007\036\n\022terraform-provider\022\010TypeList\372\363\263" +
+      "\007\035nodeMaintenanceWindowElemType2\370\004\n\005Node" +
+      "s\022U\n\006Create\022\025.v1.NodeCreateRequest\032\026.v1." +
+      "NodeCreateResponse\"\034\202\371\263\007\027\242\363\263\007\004post\252\363\263\007\t/" +
+      "v1/nodes\022P\n\003Get\022\022.v1.NodeGetRequest\032\023.v1" +
+      ".NodeGetResponse\" \202\371\263\007\033\242\363\263\007\003get\252\363\263\007\016/v1/" +
+      "nodes/{id}\022Y\n\006Update\022\025.v1.NodeUpdateRequ" +
+      "est\032\026.v1.NodeUpdateResponse\" \202\371\263\007\033\242\363\263\007\003p" +
+      "ut\252\363\263\007\016/v1/nodes/{id}\022\\\n\006Delete\022\025.v1.Nod" +
+      "eDeleteRequest\032\026.v1.NodeDeleteResponse\"#" +
+      "\202\371\263\007\036\242\363\263\007\006delete\252\363\263\007\016/v1/nodes/{id}\022N\n\004L" +
+      "ist\022\023.v1.NodeListRequest\032\024.v1.NodeListRe" +
+      "sponse\"\033\202\371\263\007\026\242\363\263\007\003get\252\363\263\007\t/v1/nodes\022\226\001\n\010" +
+      "TCPProbe\022\027.v1.NodeTCPProbeRequest\032\030.v1.N" +
+      "odeTCPProbeResponse\"W\202\371\263\007R\242\363\263\007\004post\252\363\263\007\023" +
+      "/v1/nodes/tcp-probe\312\363\263\007,\302\364\263\007\020\n\004java\022\010tcp" +
+      "Probe\302\364\263\007\022\n\006csharp\022\010TCPProbe\032$\312\371\263\007\037\302\371\263\007\004" +
+      "Node\312\371\263\007\001*\312\371\263\007\004!cli\322\371\263\007\002n-Ba\n\031com.strong" +
+      "dm.api.plumbingB\rNodesPlumbingZ5github.c" +
+      "om/strongdm/strongdm-sdk-go/v3/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25862,7 +26047,7 @@ public final class NodesPlumbing {
     internal_static_v1_AIRouter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AIRouter_descriptor,
-        new java.lang.String[] { "Id", "Name", "Address", "Tags", "MaintenanceWindows", });
+        new java.lang.String[] { "Id", "Name", "Address", "Tags", "MaintenanceWindows", "CertificateAuthorityId", });
     internal_static_v1_NodeMaintenanceWindow_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_v1_NodeMaintenanceWindow_fieldAccessorTable = new
